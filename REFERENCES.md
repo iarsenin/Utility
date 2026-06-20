@@ -28,6 +28,7 @@ This file records the starting literature map. It is not yet a finished bibliogr
 - Hayashi, "Meta-preference, endogenous preference formation and dynamic choice," SSRN working paper. SSRN page: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4862887
 - Robson, Whitehead, and Robalino, "Adaptive Utility," Journal of Economic Behavior and Organization, 2023. https://ideas.repec.org/a/eee/jeborg/v211y2023icp60-81.html
 - Sadowski and Sarver, "Adaptive Preferences: An Evolutionary Model of Non-Expected Utility and Ambiguity Aversion," Journal of Economic Theory, 2024. https://ideas.repec.org/a/eee/jetheo/v218y2024ics0022053124000462.html
+- Lachaab, Ansari, Jedidi, and Trabelsi, "Modeling Preference Evolution in Discrete Choice Models: A Bayesian State-Space Approach," Quantitative Marketing and Economics, 2006. https://ideas.repec.org/a/kap/qmktec/v4y2006i1p57-81.html
 
 ## Recommender Systems and Preference Manipulation
 
@@ -40,6 +41,8 @@ This file records the starting literature map. It is not yet a finished bibliogr
 - Social drivers and algorithmic mechanisms on digital media, PMC overview. https://pmc.ncbi.nlm.nih.gov/articles/PMC11373151/
 - Kalra, "Social Media Algorithms versus Preferences in a large-scale RCT," working paper. https://www.isid.ac.in/~acegd/acegd2024/papers/AarushiKalra.pdf
 - Acemoglu and coauthors, "AI and Social Media: A Political Economy Perspective," MIT working paper. https://economics.mit.edu/sites/default/files/2025-05/AI%20and%20Social%20Media%20-%20A%20Political%20Economy%20Perspective.pdf
+- Guess et al., "How Do Social Media Feed Algorithms Affect Attitudes and Behavior in an Election Campaign?", Science, 2023. https://www.science.org/doi/10.1126/science.abp9364
+- Allcott, Braghieri, Eichmeyer, and Gentzkow, "The Welfare Effects of Social Media," American Economic Review, 2020. https://www.aeaweb.org/articles?id=10.1257/aer.20190658
 
 ## Welfare With Adaptive or Endogenous Preferences
 
@@ -51,3 +54,8 @@ This file records the starting literature map. It is not yet a finished bibliogr
 ## Mathematical Tools For Fast-Slow Limits
 
 - Fenichel, "Geometric Singular Perturbation Theory for Ordinary Differential Equations," Journal of Differential Equations, 1979. https://doi.org/10.1016/0022-0396(79)90152-9
+
+## Empirical Tools For Timescale Estimation
+
+- Hamaker, Kuiper, and Grasman, "A Critique of the Cross-Lagged Panel Model," Psychological Methods, 2015. https://doi.org/10.1037/a0038889
+- Mulder and Hamaker, "Three Extensions of the Random Intercept Cross-Lagged Panel Model," Structural Equation Modeling, 2021. https://doi.org/10.1080/10705511.2020.1784738

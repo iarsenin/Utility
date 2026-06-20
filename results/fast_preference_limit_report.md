@@ -23,8 +23,9 @@ the slow economy becomes:
 d z / dt = H(z, Phi(z, m), BR(Phi(z, m), z, m), m)
 ```
 
-Preferences no longer behave like a slowly selected trait. They behave like an
-instantaneous state constraint.
+Preferences no longer behave like a slowly selected trait unless the
+adaptation law itself is heterogeneous. They behave like an instantaneous
+state constraint.
 
 ## Cross-Model Numerical Readout
 
@@ -67,8 +68,9 @@ state.
 
 Fast prosocial adaptation gives cooperation `1.0000`.
 Fast conflict adaptation gives cooperation `0`.
-Thus the material Nash prediction survives only when the fast preference
-attractor itself points to material self-interest.
+Thus the material-payoff Nash prediction is invariant only when the
+fast preference attractor points to the same best responses as the
+material payoff game.
 
 ### Platform Control
 
@@ -92,18 +94,19 @@ guardrail chooses exposure `0.0500`.
 1. **Attractor Replacement**: with a unique fast preference attractor, utility
    is no longer a primitive or a selected type; it is the graph of a fast
    response map `Phi(z, m)`.
-2. **Darwinian Selection Loses Its Preference Target**: selection can change
-   population size or select adaptation rules, but it cannot select among
-   preference types that are instantly reset by the fast law.
-3. **Material Nash Need Not Survive**: actions are Nash only with respect to
-   instantaneous adapted preferences. They need not be Nash in the material
-   payoff game.
+2. **Selection Target Shift**: selection can change population size or
+   select adaptation rules, but it cannot select among preference types
+   that are instantly reset by a common fast law.
+3. **Nash Object Shift**: Nash remains a fixed-point method. The fixed
+   point is computed in the fast-adapted preference game and need not
+   coincide with the Nash equilibrium of the material payoff game.
 4. **Ex Post Welfare Becomes Fragile**: if final preferences adapt to the
    reached state, final-preference Pareto comparisons can validate the path
    that produced those preferences.
-5. **Only Meta-Objects Survive**: invariant welfare/equilibrium claims must be
-   stated over adaptation laws, admissible transition kernels, initial or
-   meta-preferences, material fitness, or constitutional constraints.
+5. **Only Meta-Objects Remain Invariant**: welfare/equilibrium claims
+   must be stated over adaptation laws, admissible transition kernels,
+   initial or meta-preferences, material fitness, or constitutional
+   constraints.
 
 ## Research Verdict
 

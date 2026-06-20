@@ -116,6 +116,11 @@ and
 d E[F_t] / dt < 0
 ```
 
-## Conjecture 3: Nash Is Incomplete
+## Conjecture 3: The Nash Object Expands
 
-When preference states are endogenous, a Nash equilibrium of actions can be dynamically unstable because the transition kernel changes the future game. The natural fixed point is a Nash equilibrium of the expanded game where strategies include preference-transition policies.
+When preference states are endogenous, Nash equilibrium remains the relevant
+fixed-point concept. What changes is the game to which the concept is applied.
+A Nash equilibrium of the material action game can be dynamically unstable
+because the transition kernel changes the future game. The natural fixed point
+is a Nash equilibrium of the expanded or reduced game where preference-transition
+laws are part of the state or strategy environment.

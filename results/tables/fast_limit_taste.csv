@@ -1,7 +1,7 @@
 scenario,finite_rate,initial_theta,finite_final_theta,fast_limit_theta,finite_final_fitness,fast_limit_fitness,selection_can_move_preferences,note
 no_fast_preference_law,0.0,0.35006946695581853,0.013959480837699469,,2.73404537857365,,True,No active fast preference law; the model reduces to selection over inherited tastes.
-weak_algorithmic_adaptation,0.04,0.35006946695581853,0.19456725711537162,0.6050535928607133,2.2497706008761185,1.3416948186641664,False,Unique fast attractor; Darwinian selection has no preference variation left to sort.
-strong_algorithmic_adaptation,0.18,0.35006946695581853,0.961444695123645,0.9615384615385665,0.7900473956518288,0.7899191313486815,False,Unique fast attractor; Darwinian selection has no preference variation left to sort.
+weak_algorithmic_adaptation,0.04,0.35006946695581853,0.19456725711537162,0.6050535928607133,2.2497706008761185,1.3416948186641664,False,Unique fast attractor; selection over theta has no remaining preference variation unless adaptation laws differ.
+strong_algorithmic_adaptation,0.18,0.35006946695581853,0.961444695123645,0.9615384615385665,0.7900473956518288,0.7899191313486815,False,Unique fast attractor; selection over theta has no remaining preference variation unless adaptation laws differ.
 selection_invariance_s0.20,0.18,0.35,,0.9615384615385665,,0.9460232191452069,False,Same fast attractor across selection strengths; only realized fitness changes.
 selection_invariance_s0.60,0.18,0.35,,0.9615384615385665,,0.8466528750837157,False,Same fast attractor across selection strengths; only realized fitness changes.
 selection_invariance_s1.00,0.18,0.35,,0.9615384615385665,,0.7577203988029131,False,Same fast attractor across selection strengths; only realized fitness changes.

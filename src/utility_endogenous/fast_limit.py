@@ -131,7 +131,10 @@ def taste_fast_limit(params: TasteDriftParams) -> FastTasteLimit:
         mean_fitness=biological_fitness(theta_star, params),
         subjective_satisfaction=cobb_douglas_satisfaction(theta_star),
         selection_can_move_preferences=False,
-        note="Unique fast attractor; Darwinian selection has no preference variation left to sort.",
+        note=(
+            "Unique fast attractor; selection over theta has no remaining "
+            "preference variation unless adaptation laws differ."
+        ),
     )
 
 

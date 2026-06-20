@@ -247,9 +247,11 @@ In one-dimensional taste dynamics with monotone platform drift toward `theta_H` 
 
 Use: formalizes "AI-speed preference capture can overpower Darwinian selection."
 
-### Proposition 4: Nash Incompleteness
+### Proposition 4: Nash Object Shift
 
-An action profile that is a Nash equilibrium at `theta_t` need not be dynamically stable under `K_m`; stability requires a fixed point of the joint action-preference operator.
+An action profile that is a Nash equilibrium of the material game need not be
+a Nash equilibrium of the fast-adapted preference game. Stability requires a
+fixed point of the joint or reduced action-preference operator.
 
 Use: bridges Nash equilibrium to endogenous utility.
 

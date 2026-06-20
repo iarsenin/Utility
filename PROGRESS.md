@@ -92,6 +92,24 @@ Numerical readout:
 - In the Prisoner's Dilemma model, fast prosocial adaptation yields full cooperation even though cooperation is not material Nash.
 - In the platform model, the limit depends on transition-cost scaling: steady penalties vanish after the boundary layer, while boundary-layer penalties can block capture.
 
+### Timescale And Survival Correction
+
+Added `docs/10_timescales_and_survival.md`, `src/utility_endogenous/timescale_variants.py`, and `scripts/run_timescale_variants.py`.
+
+Correction:
+
+- Nash equilibrium is a fixed-point method, not an object that survives or fails. The material-payoff Nash prediction is invariant only when fast preference closure preserves the material best-response correspondence.
+- Darwinian selection is an update operator, not a conclusion. In the `T_pref -> 0` limit, it acts on whatever remains heterogeneous after fast closure: populations, adaptation laws, institutions, or resistance to adaptation.
+- We should not assume institutions or population are slower than preferences. Their speeds should be estimated or varied.
+
+New numerical readout:
+
+- Fixed exposure `m = 0.05` induces `theta = 0.50` and survives.
+- Fixed exposure `m = 0.80` induces `theta ~= 0.94` and goes extinct.
+- Myopic institutions select exposure around `m = 0.645`, induce `theta ~= 0.928`, and go extinct under all tested speed orderings.
+- Survival-aware institutions select `m = 0.030`, induce `theta = 0.375`, and survive.
+- The answer to "what survives?" can be "none" if all admissible institutions induce negative long-run growth after fast preference closure.
+
 ### Current Conjectures
 
 1. If preference-transition technology is fast relative to biological or material selection, current subjective welfare can rise while fitness falls.
@@ -108,6 +126,7 @@ Numerical readout:
 - Begin a formal note for the preference-laundering theorem.
 - Map the exact difference from Kleinberg, Mullainathan, and Raghavan's engagement-optimization model.
 - Prove the fast-preference singular-limit theorem before committing to the platform-specific paper spine.
+- Extend the long-run survival model to allow competition among institutional regimes and empirically estimated timescale priors.
 
 ### Open Questions
 

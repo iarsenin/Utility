@@ -6,8 +6,8 @@ This note deliberately backs away from the platform-specific framing. The
 mathematical question is:
 
 ```text
-What remains of Nash equilibrium, Darwinian selection, and welfare when utility
-functions adapt infinitely fast?
+How do Nash fixed points, Darwinian selection, and welfare analysis change when
+utility functions adapt infinitely fast?
 ```
 
 Let `T` be the preference-adaptation timescale. The limit of interest is:
@@ -16,8 +16,9 @@ Let `T` be the preference-adaptation timescale. The limit of interest is:
 T -> 0
 ```
 
-relative to the timescale of resources, population turnover, institutions, and
-biological or material selection.
+relative to other measured or hypothesized timescales. We should not assume
+that resources, population turnover, or institutions are slower. Their speeds
+are parameters to estimate or vary.
 
 ## Literature Position
 
@@ -42,9 +43,10 @@ preference adaptation is itself fast
 ```
 
 If preferences are instantly reset by experience, institutions, or an adaptive
-utility law, then Darwinian selection may no longer act on preferences directly.
-It acts on slower objects: adaptation rules, institutions, platform policies,
-biological types that resist adaptation, or population size.
+utility law, then selection over preference states may no longer be the right
+object. Selection acts on whatever remains heterogeneous after fast closure:
+adaptation rules, institutions, platform policies, biological types that resist
+adaptation, population shares, or whole economic systems.
 
 ### Adaptive Utility
 
@@ -72,7 +74,7 @@ a in BR(theta, z, m)
 where:
 
 - `theta` is the preference state;
-- `z` is the slow economic or population state;
+- `z` is the other economic or population state;
 - `a` is an action or Nash profile induced by current preferences;
 - `m` is an institution, environment, or platform rule.
 
@@ -88,7 +90,7 @@ If this critical set has a unique attracting branch:
 theta = Phi(z, m)
 ```
 
-then the reduced economy is:
+then the reduced economy, conditional on the chosen timescale for `z`, is:
 
 ```text
 d z / dt = H(z, Phi(z, m), BR(Phi(z, m), z, m), m)
@@ -119,7 +121,7 @@ a in BR(theta, z, m)
 This preserves Nash-style reasoning, but only on the fast-adapted preference
 state.
 
-### Axiom F3: Slow Selection Acts After Fast Closure
+### Axiom F3: Selection Acts On The Post-Closure State
 
 Material or Darwinian selection evaluates the action induced by the fast
 preference state:
@@ -128,8 +130,9 @@ preference state:
 fitness = F(z, Phi(z, m), BR(Phi(z, m), z, m), m)
 ```
 
-Selection does not get to choose among preference states if the fast subsystem
-has already collapsed them to `Phi(z, m)`.
+Selection does not choose among preference states if the fast subsystem has
+already collapsed them to a common `Phi(z, m)`. It can still select among
+adaptation laws, institutions, or populations that induce different `Phi`.
 
 ### Axiom F4: Welfare Domain Must Include the Transition Law
 
@@ -157,35 +160,36 @@ This result is invariant to the specific cardinal form of `U`, as long as local
 choices are represented by a preference state and the fast subsystem is
 contractive.
 
-### Result 2: Darwinian Selection Loses Its Preference Target
+### Result 2: Selection Target Shift
 
 In the ordinary indirect evolutionary approach, preference types survive because
 they induce fitness-improving behavior. In the fast limit with a unique
-attractor, all types are reset to the same adapted preference state before slow
-selection acts.
+attractor, all types governed by the same adaptation law are reset to the same
+adapted preference state before the selection operator is applied.
 
 Therefore:
 
 ```text
-selection over theta disappears
+selection over theta is degenerate
 ```
 
 and is replaced by:
 
 ```text
-selection over adaptation laws, institutions, or biological resistance to adaptation
+selection over adaptation laws, institutions, populations, or resistance to adaptation
 ```
 
-This is the most interesting extreme conclusion so far.
+This is the most interesting extreme conclusion so far. The Darwinian question
+becomes: which induced systems have nonnegative long-run growth?
 
-### Result 3: Material Nash Need Not Survive
+### Result 3: Nash Object Shift
 
 In the material Prisoner's Dilemma, universal defection is the Nash prediction.
 But if preferences adapt instantly to a prosocial state, the action profile can
 be cooperative even though cooperation is not a Nash equilibrium of the material
 payoff game.
 
-What survives is weaker:
+Nash remains the fixed-point method. The fixed-point problem has moved:
 
 ```text
 actions are Nash with respect to fast-adapted preferences
@@ -196,6 +200,9 @@ not:
 ```text
 actions are Nash with respect to material payoffs
 ```
+
+The material-payoff Nash prediction is invariant only if fast preference closure
+preserves the material best-response correspondence.
 
 ### Result 4: Final-Preference Pareto Becomes Too Weak
 
@@ -270,6 +277,38 @@ Main findings:
   - if speed-squared costs scale as `1/T`, any nonzero instantaneous jump has
     infinite cost, making preferences effectively rigid.
 
+## Timescale Variants
+
+The script:
+
+```bash
+python3 scripts/run_timescale_variants.py
+```
+
+writes:
+
+- `results/timescale_variant_report.md`
+- `results/tables/timescale_variant_paths.csv`
+- `results/tables/timescale_variant_summary.csv`
+- `results/tables/timescale_fixed_rule_survival.csv`
+- `results/tables/timescale_estimates.csv`
+
+This pass keeps `T_pref -> 0` but varies institution and population speeds.
+The key result is that long-run survival is not determined by subjective
+satisfaction, and not by material Nash alone. It is determined by the growth
+rate of the whole induced system after fast preference closure.
+
+In the current calibration:
+
+- fixed exposure `m = 0.05` induces `theta = 0.50` and survives;
+- fixed exposure `m = 0.80` induces `theta ~= 0.94` and goes extinct;
+- all-fast myopic institutions reach extinction quickly;
+- all-fast survival-aware institutions choose lower exposure and survive.
+
+The answer can be "none": if every admissible institution induces negative
+growth after fast closure, no preference type or economic system survives in
+the long run.
+
 ## Research Repositioning
 
 The platform-control model should now be treated as one application of a more
@@ -292,8 +331,8 @@ Possible core theorem:
 ```text
 In an endogenous-preference economy with a globally attracting fast preference
 subsystem, the slow equilibrium is determined by the critical manifold of
-preference adaptation. Darwinian selection over preference states and material
-Nash equilibrium survive only under additional invariance conditions.
+preference adaptation. Selection over preference states and material-payoff Nash
+predictions are invariant only under additional conditions.
 ```
 
 The next technical target is to prove this theorem cleanly for a finite action
