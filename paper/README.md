@@ -8,5 +8,6 @@ notes, model results, and literature checks.
   long-run survival, and welfare non-invariance.
 - `article_draft_v0_math.md`: same draft with display equations converted to
   Markdown/LaTeX math for easier reading.
-- `article_draft_v0_codex.md`: Codex-app reading edition with flowing
-  paragraphs and Unicode equation blocks that do not require LaTeX rendering.
+- `article_draft_v0_codex.md`: current reader-facing Codex edition. It
+  expands the draft into a fuller article, introduces each model before the
+  equations, and uses boxed Unicode displays with dot notation for derivatives.

@@ -118,6 +118,11 @@ Markdown/LaTeX display equations.
 Added `paper/article_draft_v0_codex.md` as the Codex-app reading copy with
 flowing paragraphs and Unicode equation blocks.
 
+Updated `paper/article_draft_v0_codex.md` to reader-facing draft v0.2.
+This version expands the article prose, introduces the model intuition before
+the equations, replaces slash-style derivatives with dot notation, and displays
+key equations in boxed Unicode blocks for easier reading in Codex.
+
 Purpose:
 
 - Give a single readable manuscript for comments.
