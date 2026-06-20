@@ -82,19 +82,46 @@ best responses, selected equilibria, and material outcomes change.
 
 Summary:
 
-| Route | Best-response invariance | Equilibrium shift | Material loss under proxy selection |
-| --- | ---: | ---: | ---: |
-| Neutral control | 1.0000 | 0.0000 | n/a |
-| Random strategic distortion | 0.3126 | 0.5044 | n/a |
-| Proxy aligned with material welfare | n/a | 0.3766 | 0.0432 |
-| Proxy independent of material welfare | n/a | 0.7244 | 0.5758 |
-| Proxy misaligned with material welfare | n/a | 0.9730 | 0.9706 |
+| Route | Mixed BR invariance | Pure-endpoint BR check | Equilibrium shift | Material loss under proxy selection |
+| --- | ---: | ---: | ---: | ---: |
+| Neutral control | 1.0000 | 1.0000 | 0.0000 | n/a |
+| Random strategic distortion | 0.0762 | 0.3126 | 0.5044 | n/a |
+| Proxy aligned with material welfare | n/a | n/a | 0.3766 | 0.0432 |
+| Proxy independent of material welfare | n/a | n/a | 0.7244 | 0.5758 |
+| Proxy misaligned with material welfare | n/a | n/a | 0.9730 | 0.9706 |
 
 This is a better check than our previous simulations because the bad result is
 not automatic. If the preference-generating proxy is aligned with material
 welfare, material loss becomes rare. If the proxy is independent or misaligned,
 loss becomes common. The current one-dimensional platform model is therefore a
 misalignment application, not a universal theorem.
+
+Pass 4 corrected the audit to distinguish the theorem-aligned mixed
+best-response diagnostic from the weaker pure-endpoint check. Proposition 1 is
+about mixed opponent profiles, so `0.0762` is the relevant invariance rate for
+the random strategic route; `0.3126` records only agreement against pure
+opponent actions.
+
+Pass 5 added a sensitivity audit:
+
+```bash
+python3 scripts/run_model_selection_sensitivity.py
+```
+
+It writes:
+
+- `results/model_selection_sensitivity_report.md`
+- `results/tables/model_selection_sensitivity.csv`
+- `results/figures/model_selection_sensitivity.svg`
+
+The sensitivity audit varies the random strategic distortion scale and the
+noise around an otherwise material-aligned proxy. At distortion scale `0`,
+mixed best-response invariance is `1.0000` and equilibrium shift is `0.0000`.
+At scale `4`, mixed best-response invariance is `0.0313` and equilibrium shift
+is `0.7153`. With exact proxy alignment, material loss is `0.0000` even though
+selected equilibria shift in `0.3647` of games. The sensitivity check therefore
+separates three objects: changed subjective games, selected-equilibrium shifts,
+and material losses.
 
 ## Revised Core Claim
 

@@ -1,0 +1,14 @@
+family,parameter,value,games,mixed_br_invariance_rate,equilibrium_shift_rate,material_loss_rate,mean_loss_when_loss
+strategic_distortion_scale,distortion_scale,0.0,3000,1.0,0.0,,
+strategic_distortion_scale,distortion_scale,0.125,3000,0.211,0.10866666666666666,,
+strategic_distortion_scale,distortion_scale,0.25,3000,0.18066666666666667,0.21933333333333332,,
+strategic_distortion_scale,distortion_scale,0.5,3000,0.14033333333333334,0.363,,
+strategic_distortion_scale,distortion_scale,1.0,3000,0.08133333333333333,0.5176666666666667,,
+strategic_distortion_scale,distortion_scale,2.0,3000,0.053,0.6366666666666667,,
+strategic_distortion_scale,distortion_scale,4.0,3000,0.03133333333333333,0.7153333333333334,,
+aligned_proxy_noise,noise_weight,0.0,3000,,0.36466666666666664,0.0,
+aligned_proxy_noise,noise_weight,0.1,3000,,0.36633333333333334,0.014666666666666666,0.06489166528490395
+aligned_proxy_noise,noise_weight,0.25,3000,,0.398,0.047,0.16850204636221539
+aligned_proxy_noise,noise_weight,0.5,3000,,0.41833333333333333,0.10933333333333334,0.30857811364635473
+aligned_proxy_noise,noise_weight,1.0,3000,,0.5193333333333333,0.2853333333333333,0.6722712874746444
+aligned_proxy_noise,noise_weight,2.0,3000,,0.6193333333333333,0.399,0.9095839332642888

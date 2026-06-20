@@ -344,7 +344,7 @@
     <h2>3. Environment</h2>
     <p>The main model is a finite game with a fast preference state. Let \(N=\{1,\ldots,n\}\) be the finite set of players, \(A_i\) player \(i\)'s finite action set, and \(A=\prod_i A_i\) the set of action profiles. An action profile is \(a=(a_i,a_{-i})\).</p>
 
-    <p>The slow material environment is \(E\in\mathcal E\). The closure law is \(\ell\in\mathcal L\). A closure law can be a habit technology, a cultural transmission rule, an institutional regime, a platform policy, or a susceptibility type. In the platform application below, the platform's feasible rules \(I\in\mathcal I\) are treated as particular closure laws.</p>
+    <p>The slow material environment is \(E\in\mathcal E\). The closure law is \(\ell\in\mathcal L\). A closure law can be a habit technology, a cultural transmission rule, an institutional regime, a platform policy, or a susceptibility type. In the platform application below, the platform's feasible rules \(r\in\mathcal R\) are treated as particular closure laws.</p>
 
     <p>Each player has two payoff objects. The subjective utility \(U_i\) is the representation the player maximizes. The material payoff \(\pi_i\) is the payoff used for growth, survival, or material evaluation. These are not assumed to coincide.</p>
 
@@ -426,6 +426,10 @@
     <h2>4. Fast Preference Closure</h2>
     <p>The first result is a reduction statement. In the fast limit, the analyst should not carry \(\theta\) as an independent slow state unless the fast subsystem is nonunique, cyclic, or otherwise fails to close.</p>
 
+    <div class="note">
+      <strong>Maintained assumptions.</strong> The formal results use a unique stable closure, boundary-layer timing, and state-only preference dynamics; scalar material comparisons also require an explicit equilibrium-selection rule and an exogenous material evaluator. Later selection equations are restricted to a finite active set, and the random-game audits are stress tests of the logic rather than empirical distributions of platform environments.
+    </div>
+
     <div class="theorem">
       <span class="theorem-title">Lemma 1. Fast Closure For A Fixed Slow State</span>
       <p>Fix a slow environment \(E\) and closure law \(\ell\). Suppose the fast subsystem \(T_\theta\dot{\theta}=H(\theta;E,\ell)\) has a unique globally attracting fixed point \(\theta_\ell^\star(E)\). Then, after the initial fast adjustment and in the limit \(T_\theta\to 0\), any equilibrium analysis conducted at that slow state is represented by the reduced subjective game \(\Gamma_\ell^\star(E)\). The preference state is no longer an independent slow primitive; it is the induced object \(\theta_\ell^\star(E)\).</p>
@@ -440,7 +444,25 @@
     <h2>5. Nash Equilibrium After Closure</h2>
     <p>Nash equilibrium is a mathematical fixed-point concept. Endogenous preferences change its inputs, not the fixed-point method. What changes is the payoff object that generates best responses.</p>
 
-    <p>Let \(X_{-i}=\prod_{j\ne i}\Delta(A_j)\). For the reduced subjective game, player \(i\)'s mixed best-response correspondence is:</p>
+    <p>Let \(X_{-i}=\prod_{j\ne i}\Delta(A_j)\). For a mixed profile \(x=(x_i,x_{-i})\), write \(x(a)=\prod_j x_j(a_j)\). The expected subjective and material payoffs are:</p>
+
+    <div class="equation">
+      <span class="label">Expected Payoffs</span>
+      \[
+      \begin{aligned}
+        \bar U_{i,\ell}(x_i,x_{-i};E)
+        &=
+        \sum_{a\in A} x(a)\,
+        U_i(a;\theta_{i,\ell}^\star(E),E,\ell),\\
+        \bar\pi_{i,\ell}(x_i,x_{-i};E)
+        &=
+        \sum_{a\in A} x(a)\,
+        \pi_i(a;E,\ell).
+      \end{aligned}
+      \]
+    </div>
+
+    <p>The reduced subjective game therefore gives player \(i\)'s mixed best-response correspondence:</p>
 
     <div class="equation">
       <span class="label">Subjective Best Response After Closure</span>
@@ -448,10 +470,7 @@
         BR_{i,\ell}^\star(x_{-i};E)
         =
         \arg\max_{x_i\in\Delta(A_i)}
-        \mathbb E_{x_i,x_{-i}}
-        \left[
-          U_i(a;\theta_{i,\ell}^\star(E),E,\ell)
-        \right].
+        \bar U_{i,\ell}(x_i,x_{-i};E).
       \]
     </div>
 
@@ -463,10 +482,7 @@
         BR_{i,\ell}^\pi(x_{-i};E)
         =
         \arg\max_{x_i\in\Delta(A_i)}
-        \mathbb E_{x_i,x_{-i}}
-        \left[
-          \pi_i(a;E,\ell)
-        \right].
+        \bar\pi_{i,\ell}(x_i,x_{-i};E).
       \]
     </div>
 
@@ -477,30 +493,37 @@
 
     <p class="proof"><strong>Proof sketch.</strong> Mixed Nash equilibria are fixed points of mixed best-response correspondences. If all correspondences are identical, their fixed-point sets are identical. Differences away from equilibrium need not change a particular Nash set, which is why the proposition is stated as a sufficient condition and an invariance discipline rather than as a converse theorem for one fixed game.</p>
 
-    <p>A useful sufficient condition is strategic irrelevance. If, for every \(i\), \(\alpha_i(a_{-i})\) is independent of \(i\)'s own action and \(\beta_i>0\), then:</p>
+    <p>The neutral benchmark has an exact counterpart. Some preference movements can change subjective representation without changing strategic incentives.</p>
 
-    <div class="equation">
-      <span class="label">Strategically Irrelevant Transformation</span>
+    <div class="theorem">
+      <span class="theorem-title">Corollary 1. Strategically Irrelevant Closure</span>
+      <p>Suppose that for every player \(i\) there exist \(\beta_i>0\) and \(\alpha_i(a_{-i};E,\ell)\), independent of \(a_i\), such that:</p>
+
       \[
-        U_i(a_i,a_{-i};\theta_{i,\ell}^\star,E,\ell)
+        U_i(a_i,a_{-i};\theta_{i,\ell}^\star(E),E,\ell)
         =
-        \alpha_i(a_{-i})
+        \alpha_i(a_{-i};E,\ell)
         +
-        \beta_i\,\pi_i(a_i,a_{-i};E,\ell)
+        \beta_i\,\pi_i(a_i,a_{-i};E,\ell).
       \]
+
+      <p>Then \(BR_{i,\ell}^\star(x_{-i};E)=BR_{i,\ell}^\pi(x_{-i};E)\) for every \(x_{-i}\in X_{-i}\), and therefore the mixed Nash equilibrium sets coincide: \(NE(\Gamma_\ell^\star(E))=NE(\Gamma_\ell^\pi(E))\).</p>
     </div>
 
-    <p>preserves player \(i\)'s conditional ranking over own actions. A fast preference movement of this form can be real, large, and psychologically meaningful while leaving Nash predictions unchanged. By contrast, any closure that changes a conditional own-action ranking changes a best-response correspondence away from indifference boundaries.</p>
+    <p class="proof"><strong>Proof.</strong> Fix \(x_{-i}\). The expected \(\alpha_i\) term is a weighted average over \(a_{-i}\), so it is constant in \(x_i\). The multiplier \(\beta_i>0\) preserves the argmax of expected material payoff. Thus the mixed best-response correspondences coincide for every opponent profile, and Proposition 1 gives equality of Nash sets.</p>
+
+    <p>By contrast, any closure that changes a conditional own-action ranking changes a best-response correspondence away from indifference boundaries.</p>
 
     <div class="takeaway">
-      <strong>Takeaway.</strong> Nash remains the method. Material Nash predictions are preserved only under a rank-preservation condition.
+      <strong>Takeaway.</strong> Nash remains the method. Material Nash predictions are preserved when closure preserves mixed best-response correspondences.
     </div>
   </section>
 
   <section>
     <h2>6. A Finite-Game Stress Test</h2>
-    <p>The proposition suggests a non-trivial check. If the argument is correct, a neutral transformation should preserve best responses, while strategic preference closure should often change equilibrium predictions. If material harm is conditional rather than automatic, an aligned platform proxy should produce much less material loss than an independent or misaligned proxy.</p>
+    <p>The proposition suggests a non-trivial check. If the argument is correct, a neutral transformation should preserve best responses, while strategic preference closure can change equilibrium predictions in the random-game audit when it alters mixed best responses. If material harm is conditional rather than automatic, an aligned platform proxy should produce much less material loss than an independent or misaligned proxy.</p>
 
+    <h3>Main Stress Test</h3>
     <p>To check that the argument is not driven by the scalar application, the analysis uses a finite-game stress test. It generates 5,000 random two-player, two-action games per route. Fast preference closure is represented as a payoff transformation. The routes are:</p>
 
     <ul>
@@ -511,57 +534,78 @@
       <li><strong>Proxy misaligned:</strong> the proxy is approximately the negative of material welfare.</li>
     </ul>
 
-    <p>Material payoffs are drawn independently from the uniform distribution on \([-1,1]\). In the strategic routes, the selected outcome is represented as a distribution over the four action profiles. If pure equilibria exist, the selection rule chooses a pure equilibrium using the relevant ranking payoff; otherwise the code uses the mixed equilibrium when it is interior and a uniform fallback when the mixed formula is degenerate. A selected-distribution shift is recorded when the \(L^1\) distance between selected distributions exceeds 0.25. In the proxy routes, the closure-intensity grid is \(\{0,0.25,0.75,1.5,3.0\}\). Material loss is the difference between the maximum material evaluator attainable on that grid and the material evaluator at the proxy-maximizing law. The replication files are <code>results/tables/model_selection_summary.csv</code> and <code>results/tables/model_selection_proxy_routes.csv</code>.</p>
+    <p>Material payoffs are drawn independently from the uniform distribution on \([-1,1]\). In the strategic routes, the selected outcome is represented as a distribution over the four action profiles. If pure equilibria exist, the selection rule chooses a pure equilibrium using the relevant ranking payoff; otherwise the code uses the mixed equilibrium when it is interior and a uniform fallback when the mixed formula is degenerate. A selected-distribution shift is recorded when the \(L^1\) distance between selected distributions exceeds 0.25. The best-response diagnostic now uses the theorem-aligned test: in a two-action game, each player's expected payoff difference is affine in the opponent's mixing probability, and the subjective and material signs must agree for every point in that interval. The weaker pure-endpoint check asks only whether they agree at the two pure opponent actions. In the proxy routes, the closure-intensity grid is \(\{0,0.25,0.75,1.5,3.0\}\). Material loss is the difference between the maximum material evaluator attainable on that grid and the material evaluator at the proxy-maximizing law. The replication files are <code>results/tables/model_selection_summary.csv</code> and <code>results/tables/model_selection_proxy_routes.csv</code>.</p>
 
     <figure>
       <img src="../results/figures/model_selection_fast_closure_audit.svg" alt="Finite-game stress test bar chart">
-      <figcaption><strong>Figure 1.</strong> Fast-closure stress test in random finite games. The first two bars report selected-equilibrium shift rates; the last three bars report material-loss rates under proxy choice. The neutral route is a sanity control: best responses and equilibria are preserved. The proxy routes show that material loss depends sharply on alignment.</figcaption>
+      <figcaption><strong>Figure 1.</strong> Fast-closure stress test in random finite games. The bars report selected-equilibrium shift rates for the neutral and random-strategic routes and material-loss rates under proxy choice for the three proxy routes. The table below adds the theorem-aligned mixed best-response diagnostic. The neutral route is a sanity control; the proxy routes illustrate how material loss depends on alignment.</figcaption>
     </figure>
 
+    <p>The first diagnostic is the one used by Proposition 1; the second reports the weaker test one would get by checking only pure opponent actions.</p>
+
+    <p><strong>Table 1A. Best-response diagnostics.</strong></p>
     <table>
       <thead>
         <tr>
           <th>Route</th>
-          <th class="num">Best-response invariance</th>
-          <th class="num">Equilibrium shift</th>
-          <th class="num">Material loss under proxy choice</th>
+          <th class="num">Mixed BR</th>
+          <th class="num">Endpoint BR</th>
+          <th class="num">Outcome shift</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>Neutral control</td>
           <td class="num">1.0000</td>
+          <td class="num">1.0000</td>
           <td class="num">0.0000</td>
-          <td class="num">n/a</td>
         </tr>
         <tr>
           <td>Random strategic closure</td>
+          <td class="num">0.0762</td>
           <td class="num">0.3126</td>
           <td class="num">0.5044</td>
-          <td class="num">n/a</td>
         </tr>
+      </tbody>
+    </table>
+
+    <p><strong>Table 1B. Proxy-choice diagnostics.</strong></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Route</th>
+          <th class="num">Outcome shift</th>
+          <th class="num">Proxy loss</th>
+        </tr>
+      </thead>
+      <tbody>
         <tr>
           <td>Proxy aligned with material welfare</td>
-          <td class="num">n/a</td>
           <td class="num">0.3766</td>
           <td class="num">0.0432</td>
         </tr>
         <tr>
           <td>Proxy independent of material welfare</td>
-          <td class="num">n/a</td>
           <td class="num">0.7244</td>
           <td class="num">0.5758</td>
         </tr>
         <tr>
           <td>Proxy misaligned with material welfare</td>
-          <td class="num">n/a</td>
           <td class="num">0.9730</td>
           <td class="num">0.9706</td>
         </tr>
       </tbody>
     </table>
 
-    <p>The aligned-proxy control is the important number. It prevents the paper from claiming that fast endogenous preferences mechanically imply material decline. When the preference-generating proxy is close to material welfare, material loss is uncommon in this stress test. When the proxy is independent or misaligned, material loss becomes common. The theory therefore points to a conditional empirical question: what objective or transition law actually generates the preference closure?</p>
+    <p>The mixed best-response number is deliberately stricter than the pure-endpoint check. Random strategic closure preserves all mixed best-response correspondences in only 7.62 percent of games, even though it passes the weaker pure-action endpoint check in 31.26 percent. That gap matters: the theorem is about correspondences over mixed opponent profiles, not just rankings against pure actions. The aligned-proxy control is the other important number. It prevents the paper from claiming that fast endogenous preferences mechanically imply material decline. When the preference-generating proxy is close to material welfare, material loss is uncommon in this stress test. When the proxy is independent or misaligned, material loss becomes common in this stress test. The theory therefore points to a conditional empirical question: what objective or transition law actually generates the preference closure?</p>
+
+    <h3>Sensitivity Checks</h3>
+    <p>A sensitivity audit reinforces the conditional reading. With distortion scale \(0\), the subjective and material games coincide: mixed best-response invariance is \(1.0000\) and selected-equilibrium shift is \(0.0000\). At scale \(4\), invariance is \(0.0313\) and shift is \(0.7153\). With exact proxy alignment, material loss is \(0.0000\) even though selected-equilibrium shift is \(0.3647\). Figure 2 carries the rest of the grid. The point is subtle but central: strategic distortion changes games; material loss rises as alignment erodes; equilibrium movement is not itself material loss.</p>
+
+    <figure>
+      <img src="../results/figures/model_selection_sensitivity.svg" alt="Finite-game sensitivity checks">
+      <figcaption><strong>Figure 2.</strong> Sensitivity checks in random finite games. In this sensitivity grid, larger strategic distortions lower mixed best-response invariance and raise selected-equilibrium shifts. Noisier material-aligned proxies raise material loss, while exact alignment can move equilibria without lowering the specified material evaluator.</figcaption>
+    </figure>
 
     <p>The next question is therefore not whether selection still matters, but what objects remain for selection once preference states have already closed.</p>
   </section>
@@ -570,7 +614,7 @@
     <h2>7. Selection After Closure</h2>
     <p>Material selection is also a method, not a conclusion. It evaluates material consequences and changes the weights of types, populations, institutions, or systems. The fast-preference limit changes the type space that remains available for selection.</p>
 
-    <p>Each closure law \(\ell\in\mathcal L\) induces a closure map \(\theta_\ell^\star(E)\), a reduced subjective game \(\Gamma_\ell^\star(E)\), an equilibrium selection \(\sigma_\ell(E)\), and a material evaluator \(G_\ell(E)=M(\sigma_\ell(E),E,\ell)\). For the selection equation, restrict attention to a finite active set of closure laws with shares \(n_\ell\ge 0\) and \(\sum_\ell n_\ell=1\). A standard material selection equation is:</p>
+    <p>Each closure law \(\ell\in\mathcal L\) induces a closure map \(\theta_\ell^\star(E)\), a reduced subjective game \(\Gamma_\ell^\star(E)\), an equilibrium selection \(\sigma_\ell(E)\), and a material evaluator \(G_\ell(E)=M(\sigma_\ell(E),E,\ell)\). For the selection equation, restrict attention to a finite active set \(\mathcal L_0\subseteq\mathcal L\) with shares \(n_\ell\ge 0\) for \(\ell\in\mathcal L_0\) and \(\sum_{\ell\in\mathcal L_0} n_\ell=1\). A standard material selection equation is:</p>
 
     <div class="equation">
       <span class="label">Selection Over Closure Laws</span>
@@ -579,8 +623,9 @@
         =
         n_\ell
         \left(G_\ell(E)-\bar G(E)\right),
+        \qquad \ell\in\mathcal L_0,
         \qquad
-        \bar G(E)=\sum_{k\in\mathcal L} n_k G_k(E) .
+        \bar G(E)=\sum_{k\in\mathcal L_0} n_k G_k(E) .
       \]
     </div>
 
@@ -611,18 +656,18 @@
 
   <section>
     <h2>8. Platform Control As Application</h2>
-    <p>The platform case gives the closure map an institutional owner. An ordinary environment may shape preferences incidentally; a platform can optimize over the transition environment itself. Formally, a platform chooses a rule \(I\) from a feasible set \(\mathcal I\), and each \(I\) is a closure law in the general set \(\mathcal L\). The choice affects the fast closure map, which affects the reduced subjective game, which affects material outcomes. The platform may optimize a proxy \(V\), such as engagement, retention, time-on-platform, revenue, or some learned response objective. Material welfare or survival is represented separately by \(G\).</p>
+    <p>The platform case gives the closure map an institutional owner. An ordinary environment may shape preferences incidentally; a platform can optimize over the transition environment itself. Formally, a platform chooses a rule \(r\) from a feasible set \(\mathcal R\), and each \(r\) is a closure law in the general set \(\mathcal L\). The choice affects the fast closure map, which affects the reduced subjective game, which affects material outcomes. The platform may optimize a proxy \(V\), such as engagement, retention, time-on-platform, revenue, or some learned response objective. Material welfare or survival is represented separately by \(G\).</p>
 
     <div class="equation">
       <span class="label">Platform-Induced Closure</span>
       \[
-        I
+        r
         \longmapsto
-        \theta_I^\star(E)
+        \theta_r^\star(E)
         \longmapsto
-        \sigma_I(E)\in NE\!\left(\Gamma_I^\star(E)\right)
+        \sigma_r(E)\in NE\!\left(\Gamma_r^\star(E)\right)
         \longmapsto
-        \bigl(V(I),G(I)\bigr).
+        \bigl(V(r),G(r)\bigr).
       \]
     </div>
 
@@ -631,7 +676,7 @@
     <div class="equation">
       <span class="label">Proxy Choice</span>
       \[
-        I^V \in \arg\max_{I\in\mathcal I} V(I).
+        r^V \in \arg\max_{r\in\mathcal R} V(r).
       \]
     </div>
 
@@ -640,18 +685,18 @@
     <div class="equation">
       <span class="label">Material Choice</span>
       \[
-        I^G \in \arg\max_{I\in\mathcal I} G(I).
+        r^G \in \arg\max_{r\in\mathcal R} G(r).
       \]
     </div>
 
     <div class="theorem">
       <span class="theorem-title">Proposition 2. Proxy Alignment</span>
-      <p>If proxy maximizers are always material maximizers, \(\arg\max_{I\in\mathcal I} V(I)\subseteq \arg\max_{I\in\mathcal I} G(I)\), then proxy choice produces no material loss relative to the feasible set. A sufficient condition is strict ordinal equivalence of \(V\) and \(G\) on \(\mathcal I\). If the rankings differ, there exist feasible sets for which proxy choice selects a materially inferior closure law.</p>
+      <p>If proxy maximizers are always material maximizers, \(\arg\max_{r\in\mathcal R} V(r)\subseteq \arg\max_{r\in\mathcal R} G(r)\), then proxy choice produces no material loss relative to the feasible set. A sufficient condition is strict ordinal equivalence of \(V\) and \(G\) on \(\mathcal R\). If the rankings differ, there exist feasible sets for which proxy choice selects a materially inferior closure law.</p>
     </div>
 
-    <p class="proof"><strong>Proof sketch.</strong> If every proxy maximizer is also a material maximizer, then any selected \(I^V\) attains the feasible maximum of \(G\). Strict ordinal equivalence implies this inclusion. If rankings differ, choose a feasible set containing two environments \(I_1,I_2\) such that \(V(I_1)>V(I_2)\) but \(G(I_1)<G(I_2)\). Then proxy maximization can select \(I_1\) and lose material payoff relative to \(I_2\).</p>
+    <p class="proof"><strong>Proof sketch.</strong> If every proxy maximizer is also a material maximizer, then any selected \(r^V\) attains the feasible maximum of \(G\). Strict ordinal equivalence implies this inclusion. If rankings differ, choose a feasible set containing two rules \(r_1,r_2\) such that \(V(r_1)>V(r_2)\) but \(G(r_1)<G(r_2)\). Then proxy maximization can select \(r_1\) and lose material payoff relative to \(r_2\).</p>
 
-    <p>In the finite-game stress test, losses are common under independent and misaligned proxies. That computational result is not part of the proposition; it is evidence that the alignment condition is doing real work.</p>
+    <p>Equilibrium shifts are not necessarily material losses. A rule can change the induced subjective game and the selected equilibrium while preserving the material criterion if the proxy remains aligned with the evaluator. Material loss requires misalignment with the chosen evaluator, not merely movement in behavior. In the finite-game stress test, losses are common under independent and misaligned proxies; that result is a computational illustration, not part of the proposition.</p>
 
     <p>The application is not just "engagement is not welfare." The endogenous-preference step is essential because the platform's rule changes future utility representations, not only current choices. A platform that learns how to make users prefer the next state can then cite those induced preferences as evidence of satisfaction. The model says that material evaluation and welfare analysis must inspect the transition law, not only final revealed preference.</p>
   </section>
@@ -780,19 +825,19 @@
     <h2>12. Empirical Discipline: Timescales And Exposure-Outcome Associations</h2>
     <p>The theory does not require the analyst to assume which real-world clocks are slow. It implies a measurement program: estimate preference or exposure timescales, compare them with material and demographic variables, and ask whether exposure-outcome associations have the sign and scale predicted by a proposed closure mechanism.</p>
 
-    <p>The empirical exercise uses the World Bank World Development Indicators API as a first macro diagnostic. It is not a causal estimate of social media or AI effects. It checks two claims needed for the paper's empirical discipline: digital exposure proxies move on measurable timescales, and exposure-outcome associations should be measured rather than assumed.</p>
+    <p>The empirical exercise uses the World Bank World Development Indicators API as a first macro diagnostic. It is not a causal estimate of social media or AI effects, and it does not observe preference closure. Its value is narrower: it shows how to put exposure proxies and material outcomes on measured clocks, and it supplies a baseline against which stronger microdata designs would have to improve.</p>
 
     <p>The WDI analysis uses country-year data for 1990-2024, with suicide mortality available in the downloaded API pull for 2000-2021. The indicators are internet users, mobile subscriptions, GDP per capita, life expectancy, fertility, and suicide mortality.</p>
 
     <h3>Timescale Measurement</h3>
-    <p>For internet adoption, define \(I_{c,t}\) as individuals using the Internet in country \(c\) and year \(t\), measured in percent of population. For consecutive annual observations with a remaining non-user gap above five percentage points, the annual remaining-gap closure speed is:</p>
+    <p>For internet adoption, define \(D_{c,t}\) as individuals using the Internet in country \(c\) and year \(t\), measured in percent of population. For consecutive annual observations with a remaining non-user gap above five percentage points, the annual remaining-gap closure speed is:</p>
 
     <div class="equation">
       <span class="label">Internet Gap Closure</span>
       \[
         s_{c,t}
         =
-        \frac{\max\{0,I_{c,t+1}-I_{c,t}\}}{100-I_{c,t}},
+        \frac{\max\{0,D_{c,t+1}-D_{c,t}\}}{100-D_{c,t}},
         \qquad
         h_{c,t}
         =
@@ -804,20 +849,20 @@
 
     <figure>
       <img src="../results/figures/empirical_wdi_timescales.svg" alt="WDI timescale bar chart">
-      <figcaption><strong>Figure 2.</strong> Observed country-level WDI timescales. Internet and mobile adoption traverse their observed ranges faster than GDP per capita, life expectancy, and fertility in this diagnostic. Suicide mortality is volatile and therefore not a clean slow-state proxy.</figcaption>
+      <figcaption><strong>Figure 3.</strong> Observed country-level WDI timescales. Internet and mobile adoption traverse their observed ranges faster than GDP per capita, life expectancy, and fertility in this diagnostic. Suicide mortality is volatile and therefore not a clean slow-state proxy.</figcaption>
     </figure>
 
     <p>The median country-level internet remaining-gap half-life is 19.70 years across 210 countries with usable rising annual pairs. The median 10-90 traversal is 15 years for internet users and 12 years for mobile subscriptions, compared with 25 years for logged GDP per capita, 26 years for life expectancy, and 25 years for fertility.</p>
 
     <h3>Exposure-Outcome Association</h3>
-    <p>The WDI exercise is not an alignment test in the structural sense. It is a prototype for the measurement problem: exposure variables and material outcomes can be put on common horizons, and their associations can be estimated. The internet regressor is the one-year adoption change scaled in 10 percentage point units:</p>
+    <p>The WDI exercise is not an alignment test in the structural sense. It is a prototype for the measurement problem: exposure variables and material outcomes can be put on common horizons, and their associations can be estimated before the analyst asserts which clock dominates. The internet regressor is the one-year adoption change scaled in 10 percentage point units:</p>
 
     <div class="equation">
       <span class="label">Scaled Internet Change</span>
       \[
-        dI^{10}_{c,t}
+        dD^{10}_{c,t}
         =
-        \frac{I_{c,t}-I_{c,t-1}}{10}.
+        \frac{D_{c,t}-D_{c,t-1}}{10}.
       \]
     </div>
 
@@ -841,8 +886,8 @@
         \Delta_h y_{c,t}
         &=
         \alpha
-        +\beta\,dI^{10}_{c,t}
-        +\gamma_1 I_{c,t-1}
+        +\beta\,dD^{10}_{c,t}
+        +\gamma_1 \frac{D_{c,t-1}}{100}
         +\gamma_2 \log GDPpc_{c,t-1}  \\
         &\quad
         +\gamma_3 y_{c,t-1}
@@ -852,11 +897,11 @@
       \]
     </div>
 
-    <p>The fits include lag controls, year fixed effects, and country-clustered standard errors. The lagged internet control enters as a 0-1 share. The specification does not include country fixed effects. For the GDP-per-capita outcome, the lagged outcome and lagged log GDP per capita coincide, so the lag is included only once.</p>
+    <p>The fits include lag controls, year fixed effects, and country-clustered standard errors. Since \(D_{c,t}\) is measured in percent, the lagged internet control enters as \(D_{c,t-1}/100\), a 0-1 share. The specification does not include country fixed effects. For the GDP-per-capita outcome, the lagged outcome and lagged log GDP per capita coincide, so the lag is included only once.</p>
 
     <figure>
       <img src="../results/figures/empirical_wdi_alignment_coefficients.svg" alt="WDI exposure-outcome coefficient chart">
-      <figcaption><strong>Figure 3.</strong> First-difference WDI exposure-outcome associations. Coefficients are per 10 percentage point jump in internet users, with country-clustered 95 percent intervals. Each outcome panel uses its own vertical scale, so visual heights are not comparable across panels. These are associations conditional on controls, not causal estimates.</figcaption>
+      <figcaption><strong>Figure 4.</strong> First-difference WDI exposure-outcome associations. Coefficients are per 10 percentage point jump in internet users, with country-clustered 95 percent intervals. Each outcome panel uses its own vertical scale, so visual heights are not comparable across panels. These are associations conditional on controls, not causal estimates.</figcaption>
     </figure>
 
     <table>
@@ -914,7 +959,7 @@
       </tbody>
     </table>
 
-    <p>The estimates are mixed and do not support a simple harm narrative. Internet adoption jumps are positively associated with GDP per capita growth at short horizons in this diagnostic; life expectancy coefficients are small and imprecise; fertility coefficients are positive; suicide mortality coefficients are negative at short horizons. Since suicide mortality is an adverse proxy, a negative coefficient is directionally favorable. The WDI exercise does not measure platform-induced preference closure. It shows how the paper's measurement question can be disciplined empirically: exposure proxies, outcome proxies, and their relative timescales can be measured rather than assumed.</p>
+    <p>The estimates are mixed and do not support a simple harm narrative. Internet adoption jumps are positively associated with GDP per capita growth at short horizons in this diagnostic; life expectancy coefficients are small and imprecise; fertility coefficients are positive; suicide mortality coefficients are negative at short horizons. Since suicide mortality is an adverse proxy, a negative coefficient is opposite the simple harm narrative. The WDI exercise therefore plays a deliberately modest role. It does not test whether platforms produce preferences. It shows how the paper's measurement question can be disciplined empirically: exposure proxies, outcome proxies, and their relative timescales can be measured rather than assumed, and a proposed mechanism must survive that measurement rather than merely sound plausible.</p>
 
     <div class="warning note">
       <strong>Identification warning.</strong> WDI country aggregates do not observe preference states. Internet use is an exposure proxy. The dependent variable is differenced, but the specification does not include country fixed effects. First differences and year fixed effects do not remove endogenous rollout, policy shocks, wars, health shocks, country-specific trends, or selection into adoption. The empirical section is a diagnostic and calibration target; it does not identify the platform-control mechanism.
@@ -942,7 +987,7 @@
 
     <p>That single change reorganizes three familiar ideas. Nash equilibrium remains the fixed-point method, but it is computed in the reduced subjective game induced by fast preference closure. Material selection remains a growth-based evaluation method, but it acts on adaptation laws, institutions, populations, or systems that remain heterogeneous after closure. Welfare analysis remains possible, but it must evaluate transition laws or preference paths rather than only allocations under final preferences.</p>
 
-    <p>The most unsettling implication is also the most disciplined one. Material harm is not a theorem of speed alone. It becomes possible, and in the stress test common, when the preference-generating operator is independent of or misaligned with the material evaluator and the resulting closure changes best-response behavior. The theory is testable because it does not predict harm from speed alone; it predicts that the alignment of the closure law becomes the object that must be measured.</p>
+    <p>The most unsettling implication is also the most disciplined one. Material harm is not a theorem of speed alone. It becomes possible, and in the stress test common, when the preference-generating operator is independent of or misaligned with the material evaluator and the resulting closure changes best-response behavior. The framework yields testable restrictions once a closure law, exposure proxy, and material evaluator are specified: the alignment of those objects becomes the thing to measure.</p>
   </section>
 
   <section class="refs">

@@ -16,8 +16,9 @@ notes, model results, and literature checks.
   unreliable for formulas.
 - `article_v1.html`: current main article draft. It reorganizes the paper
   around the finite-game fast-closure model, uses MathJax equations, includes
-  the finite-game stress test and WDI measurement diagnostic, and incorporates
-  three Modeller -> Writer -> Editor review rounds.
+  the finite-game stress test, sensitivity audit, and WDI measurement
+  diagnostic, and incorporates five agent review rounds. Rounds 4 and 5 use
+  the sequence Modeller -> Writer -> Editor -> Writer.
 
 For any reader-facing article update, render the HTML and inspect screenshots
 before reporting the draft as ready.

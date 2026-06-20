@@ -19,6 +19,9 @@ Current expected files after running:
 - `tables/model_selection_summary.csv`
 - `tables/model_selection_proxy_routes.csv`
 - `figures/model_selection_fast_closure_audit.svg`
+- `model_selection_sensitivity_report.md`
+- `tables/model_selection_sensitivity.csv`
+- `figures/model_selection_sensitivity.svg`
 - `tables/empirical_wdi_coverage.csv`
 - `tables/empirical_wdi_country_gap_closure.csv`
 - `tables/empirical_wdi_timescales.csv`

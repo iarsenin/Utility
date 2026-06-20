@@ -18,18 +18,19 @@ For proxy routes, each adaptation law is a value of `lambda` in `[0, 0.25, 0.75,
 
 ## Summary
 
-| route | games | br_invariance_rate | equilibrium_shift_rate | proxy_material_loss_rate | proxy_gain_material_loss_rate | all_regimes_negative_rate | mean_material_loss_when_proxy_wins | median_material_loss_when_proxy_wins |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| neutral_control | 5000 | 1.0000 | 0.0000 |  |  |  |  |  |
-| strategic_random_distortion | 5000 | 0.3126 | 0.5044 |  |  |  |  |  |
-| proxy_aligned | 5000 |  | 0.3766 | 0.0432 | 0.0400 | 0.0680 | 0.1482 | 0.1196 |
-| proxy_independent | 5000 |  | 0.7244 | 0.5758 | 0.5694 | 0.1240 | 1.0965 | 1.0209 |
-| proxy_misaligned | 5000 |  | 0.9730 | 0.9706 | 0.9706 | 0.1870 | 1.5092 | 1.4907 |
+| route | games | br_invariance_rate | pure_br_invariance_rate | equilibrium_shift_rate | proxy_material_loss_rate | proxy_gain_material_loss_rate | all_regimes_negative_rate | mean_material_loss_when_proxy_wins | median_material_loss_when_proxy_wins |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| neutral_control | 5000 | 1.0000 | 1.0000 | 0.0000 |  |  |  |  |  |
+| strategic_random_distortion | 5000 | 0.0762 | 0.3126 | 0.5044 |  |  |  |  |  |
+| proxy_aligned | 5000 |  |  | 0.3766 | 0.0432 | 0.0400 | 0.0680 | 0.1482 | 0.1196 |
+| proxy_independent | 5000 |  |  | 0.7244 | 0.5758 | 0.5694 | 0.1240 | 1.0965 | 1.0209 |
+| proxy_misaligned | 5000 |  |  | 0.9730 | 0.9706 | 0.9706 | 0.1870 | 1.5092 | 1.4907 |
 
 ## Readout
 
-- Neutral preference movement preserved best-response correspondences in `1.0000` of games, which is the intended sanity check.
-- Random strategic preference closure changed the selected equilibrium in `0.5044` of games and preserved best-response correspondences in only `0.3126` of games.
+- Neutral preference movement preserved mixed best-response correspondences in `1.0000` of games, which is the intended sanity check.
+- Random strategic preference closure changed the selected equilibrium in `0.5044` of games and preserved mixed best-response correspondences in only `0.0762` of games.
+- The older pure-action endpoint check gives `0.3126` for random strategic closure; this is weaker than the all-mixed condition in Proposition 1 and should not be described as full best-response invariance.
 - When the proxy was aligned with material welfare, the platform-selected law lost material payoff in `0.0432` of games.
 - When the proxy was independent, material loss occurred in `0.5758` of games, so a loss result does not require an explicitly anti-material proxy.
 - When the proxy was misaligned, material loss occurred in `0.9706` of games; this is the route closest to the current one-dimensional platform model.

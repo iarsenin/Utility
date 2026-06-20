@@ -27,6 +27,7 @@ class RouteSummary:
     route: str
     games: int
     br_invariance_rate: float | None
+    pure_br_invariance_rate: float | None
     equilibrium_shift_rate: float | None
     proxy_material_loss_rate: float | None
     proxy_gain_material_loss_rate: float | None
@@ -96,6 +97,78 @@ def br_correspondence_invariant(
         ):
             return False
     return True
+
+
+def action_zero_difference_endpoints(payoffs: PayoffVector, player: int) -> tuple[float, float]:
+    """Payoff difference for action 0 vs. action 1 at opponent probabilities 0 and 1."""
+    if player == 0:
+        return payoffs[1] - payoffs[3], payoffs[0] - payoffs[2]
+    return payoffs[2] - payoffs[3], payoffs[0] - payoffs[1]
+
+
+def affine_value(endpoints: tuple[float, float], opponent_zero_probability: float) -> float:
+    low, high = endpoints
+    return low + (high - low) * opponent_zero_probability
+
+
+def affine_roots_in_unit_interval(endpoints: tuple[float, float]) -> list[float]:
+    low, high = endpoints
+    slope = high - low
+    if abs(slope) <= EPSILON:
+        return []
+    root = -low / slope
+    if -EPSILON <= root <= 1.0 + EPSILON:
+        return [min(1.0, max(0.0, root))]
+    return []
+
+
+def sign(value: float) -> int:
+    if value > EPSILON:
+        return 1
+    if value < -EPSILON:
+        return -1
+    return 0
+
+
+def affine_best_responses_identical(
+    material_endpoints: tuple[float, float],
+    subjective_endpoints: tuple[float, float],
+) -> bool:
+    breakpoints = sorted(
+        {
+            0.0,
+            1.0,
+            *affine_roots_in_unit_interval(material_endpoints),
+            *affine_roots_in_unit_interval(subjective_endpoints),
+        }
+    )
+    probes = list(breakpoints)
+    probes.extend(
+        (left + right) / 2.0
+        for left, right in zip(breakpoints, breakpoints[1:], strict=False)
+        if right - left > EPSILON
+    )
+    for probability in probes:
+        if sign(affine_value(material_endpoints, probability)) != sign(
+            affine_value(subjective_endpoints, probability)
+        ):
+            return False
+    return True
+
+
+def mixed_br_correspondence_invariant(
+    material_1: PayoffVector,
+    material_2: PayoffVector,
+    subjective_1: PayoffVector,
+    subjective_2: PayoffVector,
+) -> bool:
+    return affine_best_responses_identical(
+        action_zero_difference_endpoints(material_1, 0),
+        action_zero_difference_endpoints(subjective_1, 0),
+    ) and affine_best_responses_identical(
+        action_zero_difference_endpoints(material_2, 1),
+        action_zero_difference_endpoints(subjective_2, 1),
+    )
 
 
 def pure_nash(payoff_1: PayoffVector, payoff_2: PayoffVector) -> list[Profile]:
@@ -195,7 +268,8 @@ def proxy_vector(
 
 def strategic_route_summary(games: int, seed: int, neutral: bool) -> RouteSummary:
     rng = random.Random(seed)
-    invariant_count = 0
+    pure_invariant_count = 0
+    mixed_invariant_count = 0
     shift_count = 0
 
     for _ in range(games):
@@ -213,7 +287,9 @@ def strategic_route_summary(games: int, seed: int, neutral: bool) -> RouteSummar
         subjective_1 = scale_add(material_1, 1.0, distortion_1)
         subjective_2 = scale_add(material_2, 1.0, distortion_2)
         if br_correspondence_invariant(material_1, material_2, subjective_1, subjective_2):
-            invariant_count += 1
+            pure_invariant_count += 1
+        if mixed_br_correspondence_invariant(material_1, material_2, subjective_1, subjective_2):
+            mixed_invariant_count += 1
 
         material_eq = selected_equilibrium(material_1, material_2, material_1, material_2)
         # Use material payoffs for equilibrium selection in this diagnostic so
@@ -230,7 +306,8 @@ def strategic_route_summary(games: int, seed: int, neutral: bool) -> RouteSummar
     return RouteSummary(
         route=route,
         games=games,
-        br_invariance_rate=invariant_count / games,
+        br_invariance_rate=mixed_invariant_count / games,
+        pure_br_invariance_rate=pure_invariant_count / games,
         equilibrium_shift_rate=shift_count / games,
         proxy_material_loss_rate=None,
         proxy_gain_material_loss_rate=None,
@@ -338,6 +415,7 @@ def proxy_route_summary(rows: list[dict[str, float | int | str | bool]]) -> Rout
         route=route,
         games=games,
         br_invariance_rate=None,
+        pure_br_invariance_rate=None,
         equilibrium_shift_rate=sum(row["equilibrium_shift"] is True for row in rows) / games,
         proxy_material_loss_rate=sum(row["proxy_material_loss"] is True for row in rows) / games,
         proxy_gain_material_loss_rate=sum(row["proxy_gain_material_loss"] is True for row in rows)

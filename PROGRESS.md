@@ -252,6 +252,64 @@ through a local server. Screenshots are saved in `results/figures/`:
 - `article_v1_visual_qa_wdi_equations_fixed.png`
 - `article_v1_visual_qa_formal_equations_fixed.png`
 
+### Article v1 Passes 4 And 5
+
+Completed two additional agent passes using the requested sequence:
+
+```text
+Modeller -> Writer -> Editor -> Writer
+```
+
+The round logs are:
+
+- `docs/agent_rounds/round_4_modeller.md`
+- `docs/agent_rounds/round_4_writer.md`
+- `docs/agent_rounds/round_4_editor.md`
+- `docs/agent_rounds/round_4_writer_final.md`
+- `docs/agent_rounds/round_5_modeller.md`
+- `docs/agent_rounds/round_5_writer.md`
+- `docs/agent_rounds/round_5_editor.md`
+- `docs/agent_rounds/round_5_writer_final.md`
+
+Pass 4 corrected the finite-game audit so that the reported best-response
+invariance statistic matches Proposition 1. The old `0.3126` number is now
+classified as a weaker pure-endpoint diagnostic. The theorem-aligned mixed
+best-response invariance rate for random strategic closure is `0.0762`, while
+the selected-equilibrium shift rate remains `0.5044`.
+
+Pass 5 added `scripts/run_model_selection_sensitivity.py`, which writes
+`results/model_selection_sensitivity_report.md`,
+`results/tables/model_selection_sensitivity.csv`, and
+`results/figures/model_selection_sensitivity.svg`. The sensitivity audit shows
+that strategic distortion scale and proxy-alignment noise move the results in
+the expected directions, while exact proxy alignment can shift equilibria with
+zero material loss.
+
+Article updates from these passes:
+
+- Added explicit expected payoff notation before Proposition 1.
+- Added Corollary 1 proving that strategically irrelevant closure preserves
+  mixed best responses and mixed Nash equilibrium sets.
+- Renamed platform rules from `I` to `r` and internet exposure from `I_{c,t}`
+  to `D_{c,t}` to avoid notation collision.
+- Fixed the WDI regression units by writing the lagged internet control as
+  `D_{c,t-1}/100`.
+- Added a maintained-assumptions note before the closure lemma.
+- Split the finite-game diagnostics into narrower tables and added a
+  sensitivity figure.
+- Localized robustness and material-harm claims to the stress-test design,
+  proxy alignment, and the specified material evaluator.
+
+Pass 5 visual QA was performed in the Codex in-app browser through a local
+server. Screenshots are saved in `results/figures/`:
+
+- `article_v1_pass5_visual_qa_top.png`
+- `article_v1_pass5_visual_qa_assumptions_corollary.png`
+- `article_v1_pass5_visual_qa_corollary.png`
+- `article_v1_pass5_visual_qa_stress_tables.png`
+- `article_v1_pass5_visual_qa_sensitivity.png`
+- `article_v1_pass5_visual_qa_wdi_equation.png`
+
 ### Next Actions
 
 - Tighten proof sketches into complete proof blocks or an appendix.
