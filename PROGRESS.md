@@ -128,6 +128,12 @@ box-drawing equation frames because Codex displayed the right border as a
 distracting pipe-like character. Formula displays now use plain quote blocks
 with no side borders.
 
+Updated the Codex draft to v0.4. Replaced abstract variable names with
+reader-facing mnemonics: `P` for preferences, `E` for economic/material state,
+`I` for institutions/environment, `A` for actions, and `N` for population or
+survival mass. Replaced underscore time markers with Unicode subscripts such as
+`Pₜ`, and rewrote formula labels to avoid code-like parameter names.
+
 Purpose:
 
 - Give a single readable manuscript for comments.

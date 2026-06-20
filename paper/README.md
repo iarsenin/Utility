@@ -10,5 +10,5 @@ notes, model results, and literature checks.
   Markdown/LaTeX math for easier reading.
 - `article_draft_v0_codex.md`: current reader-facing Codex edition. It
   expands the draft into a fuller article, introduces each model before the
-  equations, and uses simple Unicode display quotes with dot notation for
-  derivatives.
+  equations, and uses mnemonic variables, Unicode time subscripts, simple
+  display quotes, and dot notation for derivatives.
