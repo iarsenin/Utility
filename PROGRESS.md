@@ -115,6 +115,8 @@ New numerical readout:
 Added `paper/article_draft_v0.md`.
 Added `paper/article_draft_v0_math.md` as the preferred reading copy with
 Markdown/LaTeX display equations.
+Added `paper/article_draft_v0_codex.md` as the Codex-app reading copy with
+flowing paragraphs and Unicode equation blocks.
 
 Purpose:
 
