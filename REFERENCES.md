@@ -1,0 +1,40 @@
+# References and Source Map
+
+This file records the starting literature map. It is not yet a finished bibliography.
+
+## Utility Representation and Revealed Preference
+
+- von Neumann and Morgenstern utility theory: expected utility representation under completeness, transitivity, continuity, and independence.
+- Samuelson, Houthakker, Afriat, Varian: revealed preference and the recovery of utility from choice data.
+- Hal Varian, "Revealed Preference": https://people.ischool.berkeley.edu/~hal/Papers/2005/revpref.pdf
+
+## Endogenous Preferences
+
+- Samuel Bowles, "Endogenous Preferences: The Cultural Consequences of Markets and Other Economic Institutions," Journal of Economic Literature, 1998. RePEc entry: https://econpapers.repec.org/RePEc:aea:jeclit:v:36:y:1998:i:1:p:75-111
+- Bernheim endogenous-preferences research agenda: https://bernheim.people.stanford.edu/research-fields/endogenous-preferences
+- Bisin and Verdier cultural transmission work is a likely bridge to formal dynamic preference evolution.
+
+## Evolution of Preferences
+
+- Dekel, Ely, and Yilankaya, "Evolution of Preferences," Review of Economic Studies, 2007. Oxford page: https://academic.oup.com/restud/article-abstract/74/3/685/1563303
+- IDEAS/RePEc entry: https://ideas.repec.org/a/oup/restud/v74y2007i3p685-704.html
+- Ely and Yilankaya, "Nash Equilibrium and the Evolution of Preferences," Journal of Economic Theory, 2001. IDEAS entry: https://ideas.repec.org/a/eee/jetheo/v97y2001i2p255-272.html
+- Alger and Weibull-style preference evolution and kinship models should be added in the next literature pass.
+
+## Dynamic Choice, Meta-Preferences, and Chosen Preferences
+
+- Bernheim, Braghieri, Martinez-Marquina, and Zuckerman, "A Theory of Chosen Preferences," American Economic Review, 2021. AEA page: https://www.aeaweb.org/articles?id=10.1257/aer.20190390
+- Hayashi, "Meta-preference, endogenous preference formation and dynamic choice," SSRN working paper. SSRN page: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4862887
+
+## Recommender Systems and Preference Manipulation
+
+- Ashton and Franklin, "Solutions to preference manipulation in recommender systems require knowledge of meta-preferences," arXiv, 2022. https://arxiv.org/abs/2209.11801
+- Knight First Amendment Institute, "Understanding Social Media Recommendation Algorithms." https://knightcolumbia.org/content/understanding-social-media-recommendation-algorithms
+- Social drivers and algorithmic mechanisms on digital media, PMC overview. https://pmc.ncbi.nlm.nih.gov/articles/PMC11373151/
+- Kalra, "Social Media Algorithms versus Preferences in a large-scale RCT," working paper. https://www.isid.ac.in/~acegd/acegd2024/papers/AarushiKalra.pdf
+- Acemoglu and coauthors, "AI and Social Media: A Political Economy Perspective," MIT working paper. https://economics.mit.edu/sites/default/files/2025-05/AI%20and%20Social%20Media%20-%20A%20Political%20Economy%20Perspective.pdf
+
+## Welfare With Adaptive or Endogenous Preferences
+
+- Recent constitutional-political-economy discussion: "Endogenous preferences: a challenge to constitutional political economy." https://link.springer.com/article/10.1007/s10602-023-09417-w
+- The project needs a separate note on adaptive preferences, autonomy, and welfare criteria.

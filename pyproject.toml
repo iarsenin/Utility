@@ -1,0 +1,9 @@
+[project]
+name = "utility-endogenous"
+version = "0.1.0"
+description = "Research models for endogenous utility functions in algorithmic economies"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.ruff]
+line-length = 100
