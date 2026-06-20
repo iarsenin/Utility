@@ -123,6 +123,11 @@ This version expands the article prose, introduces the model intuition before
 the equations, replaces slash-style derivatives with dot notation, and displays
 key equations in boxed Unicode blocks for easier reading in Codex.
 
+Updated the Codex draft again to v0.3 after visual review. Removed the
+box-drawing equation frames because Codex displayed the right border as a
+distracting pipe-like character. Formula displays now use plain quote blocks
+with no side borders.
+
 Purpose:
 
 - Give a single readable manuscript for comments.

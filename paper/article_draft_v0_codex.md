@@ -2,25 +2,21 @@
 
 ## When Utility Adapts Faster Than Selection
 
-Codex reading draft v0.2
+Codex reading draft v0.3
 
 Status: reader-facing working draft for comments. This is not a final manuscript. It is written to make the argument readable, expose weak points, and give us a concrete object to revise.
 
-Formatting note: this version is optimized for the Codex app Markdown viewer. Equations use Unicode notation and boxed display blocks instead of LaTeX, so they should remain readable even when math rendering is unavailable.
+Formatting note: this version is optimized for the Codex app Markdown viewer. Equations use Unicode notation and simple display quotes instead of LaTeX or box-drawing characters, so they should remain readable even when math rendering is unavailable.
 
 ## Abstract
 
 Economic theory usually begins after preferences have been specified. A preference relation or utility function is treated as primitive, exogenous, or at least slow-moving relative to the allocation problem under study. This paper studies the opposite limiting case. Let θ be a preference state, let z be the ordinary economic state, and let m be an institution, platform rule, cultural environment, or adaptation law. Suppose preferences adapt on timescale T_θ and take the singular limit T_θ → 0.
 
-> ╭────────────────────────────────╮
-> │            T_θ → 0              │
-> ╰────────────────────────────────╯
+> T_θ → 0
 
 In that limit, preferences are not slowly selected traits. They are fast state variables pinned to the attracting set of the preference-adaptation system. If the attracting set is a single branch, preferences close onto a map:
 
-> ╭────────────────────────────────╮
-> │          θ = Φ(z, m)            │
-> ╰────────────────────────────────╯
+> θ = Φ(z, m)
 
 Nash equilibrium and Darwinian selection do not disappear. They remain valid mathematical operators. What changes is the state space on which they operate. Nash fixed points are computed in the fast-adapted subjective game. Darwinian or material selection acts only on variables that remain heterogeneous after fast preference closure: populations, institutions, adaptation laws, resistance parameters, or whole induced systems. This produces a sharp separation between subjective rationality, material payoff, final preference satisfaction, and long-run survival. In calibrated toy models, myopic institutions can induce preference attractors that are locally satisfying and engagement-maximizing but imply negative long-run growth and extinction. Survival-aware institutions choose different exposure rules and survive. The paper argues that welfare economics with fast endogenous utility must evaluate allocation-preference paths, transition kernels, or meta-preferences, not final preferences alone.
 
@@ -38,23 +34,17 @@ Let θ_t denote the preference state that locally represents an agent's utility 
 
 The extreme limit is:
 
-> ╭────────────────────────────────╮
-> │            T_θ → 0              │
-> ╰────────────────────────────────╯
+> T_θ → 0
 
 This limit is false as a literal description of human life. It is useful as a mathematical microscope. Extreme cases expose which concepts are invariant and which concepts were artifacts of treating preferences as slow.
 
 The central result is a reduction. If the fast preference subsystem has a unique attracting branch, then θ is no longer an independent slow state. It is pinned to:
 
-> ╭────────────────────────────────╮
-> │          θ_t = Φ(z_t, m_t)      │
-> ╰────────────────────────────────╯
+> θ_t = Φ(z_t, m_t)
 
 Utility is then evaluated as:
 
-> ╭────────────────────────────────────────╮
-> │      U_t(·) = U(· ; Φ(z_t, m_t))        │
-> ╰────────────────────────────────────────╯
+> U_t(·) = U(· ; Φ(z_t, m_t))
 
 Actions are best responses in this reduced subjective game. Material selection evaluates the material consequences of those best responses. Welfare analysis must decide whether to evaluate the path by initial preferences, final preferences, meta-preferences, material growth, constitutional restrictions on preference transitions, or the whole history.
 
@@ -92,51 +82,37 @@ There are four moving parts.
 
 The first is the preference state θ. This is not necessarily a complete psychological description. It is the state variable that determines the local utility representation used by the agent.
 
-> ╭────────────────────────────────╮
-> │            θ_t ∈ Θ              │
-> ╰────────────────────────────────╯
+> θ_t ∈ Θ
 
 The second is the ordinary economic state z. This can include resources, technology, wealth, demographics, social capital, health, reproductive state, or any other non-preference variable.
 
-> ╭────────────────────────────────╮
-> │            z_t ∈ Z              │
-> ╰────────────────────────────────╯
+> z_t ∈ Z
 
 The third is the institutional or environmental rule m. This can be a platform policy, recommender algorithm, school, family regime, cultural environment, legal rule, firm strategy, or preference-transition technology.
 
-> ╭────────────────────────────────╮
-> │            m_t ∈ M              │
-> ╰────────────────────────────────╯
+> m_t ∈ M
 
 The fourth is the action a. Agents choose actions according to current subjective utility, not necessarily according to material payoff.
 
-> ╭─────────────────────────────────────────────╮
-> │       a_t ∈ BR(θ_t, z_t, m_t)                │
-> ╰─────────────────────────────────────────────╯
+> a_t ∈ BR(θ_t, z_t, m_t)
 
 The utility representation is:
 
-> ╭─────────────────────────────────────────────╮
-> │       U = U(x, a ; θ_t)                      │
-> ╰─────────────────────────────────────────────╯
+> U = U(x, a ; θ_t)
 
 Material payoff, reproductive success, survival, or objective growth is written separately:
 
-> ╭─────────────────────────────────────────────╮
-> │       F = F(z_t, θ_t, a_t, m_t)              │
-> ╰─────────────────────────────────────────────╯
+> F = F(z_t, θ_t, a_t, m_t)
 
 This separation is the whole point. Subjective utility is what the agent maximizes. Material payoff is what the environment selects.
 
 The dynamic system is:
 
-> ╭─────────────────────────────────────────────╮
-> │       T_θ · θ̇ = G(θ, z, a, m)               │
-> │             ż = H(z, θ, a, m)               │
-> │       T_m · ṁ = R(m, z, θ, a)               │
-> │       T_n · ṅ = n · g(z, θ, a, m)           │
-> │             a ∈ BR(θ, z, m)                 │
-> ╰─────────────────────────────────────────────╯
+> T_θ · θ̇ = G(θ, z, a, m)
+> ż = H(z, θ, a, m)
+> T_m · ṁ = R(m, z, θ, a)
+> T_n · ṅ = n · g(z, θ, a, m)
+> a ∈ BR(θ, z, m)
 
 Here T_θ is the preference-adaptation timescale, T_m is the institutional timescale, and T_n is the population or survival timescale. The dot over a variable denotes a time derivative. For example, θ̇ is the time derivative of θ.
 
@@ -144,29 +120,21 @@ Only T_θ is sent to zero. The other speeds are left open. In empirical work the
 
 Taking T_θ → 0 gives the fast-closure condition:
 
-> ╭─────────────────────────────────────────────╮
-> │       G(θ, z, BR(θ, z, m), m) = 0            │
-> ╰─────────────────────────────────────────────╯
+> G(θ, z, BR(θ, z, m), m) = 0
 
 Define the fast attracting set:
 
-> ╭────────────────────────────────────────────────╮
-> │ A(z,m) = { θ : G(θ,z,BR(θ,z,m),m) = 0 }         │
-> ╰────────────────────────────────────────────────╯
+> A(z,m) = { θ : G(θ,z,BR(θ,z,m),m) = 0 }
 
 When the attracting set is a single stable branch, write:
 
-> ╭────────────────────────────────╮
-> │          θ = Φ(z, m)            │
-> ╰────────────────────────────────╯
+> θ = Φ(z, m)
 
 The reduced economy is then:
 
-> ╭────────────────────────────────────────────────────╮
-> │ ż = H(z, Φ(z,m), BR(Φ(z,m), z, m), m)              │
-> │ T_m · ṁ = R(m, z, Φ(z,m), BR(Φ(z,m), z, m))        │
-> │ T_n · ṅ = n · g(z, Φ(z,m), BR(Φ(z,m), z, m), m)    │
-> ╰────────────────────────────────────────────────────╯
+> ż = H(z, Φ(z,m), BR(Φ(z,m), z, m), m)
+> T_m · ṁ = R(m, z, Φ(z,m), BR(Φ(z,m), z, m))
+> T_n · ṅ = n · g(z, Φ(z,m), BR(Φ(z,m), z, m), m)
 
 This is the core mathematical object of the paper. The economy is no longer an economy with fixed preferences. It is an economy on a preference-adaptation manifold.
 
@@ -178,11 +146,9 @@ Assume that for each relevant pair (z,m), the fast preference equation has a sta
 
 In compact form:
 
-> ╭────────────────────────────────────────────╮
-> │      Full economy with θ as a state         │
-> │                  ↓ T_θ → 0                  │
-> │      Reduced economy with θ = Φ(z,m)        │
-> ╰────────────────────────────────────────────╯
+> Full economy with θ as a state
+> ↓ T_θ → 0
+> Reduced economy with θ = Φ(z,m)
 
 The economics is more important than the mathematical technique. A utility function is usually treated as a primitive input to choice. In the fast limit it becomes an output of the adaptation system. The agent still maximizes utility, but the utility being maximized is itself pinned by the surrounding environment.
 
@@ -194,31 +160,23 @@ It is tempting to say that Nash equilibrium fails in this model. That would be w
 
 Let π_i be player i's material payoff. Let U_i be player i's subjective utility. A material-payoff Nash equilibrium satisfies:
 
-> ╭────────────────────────────────────────────╮
-> │   aᵢ ∈ argmax_b πᵢ(b, a₋ᵢ, z, m)           │
-> ╰────────────────────────────────────────────╯
+> aᵢ ∈ argmax_b πᵢ(b, a₋ᵢ, z, m)
 
 A fast-adapted subjective Nash equilibrium satisfies:
 
-> ╭────────────────────────────────────────────────────╮
-> │ aᵢ ∈ argmax_b Uᵢ(b, a₋ᵢ, z, Φᵢ(z,m), m)             │
-> ╰────────────────────────────────────────────────────╯
+> aᵢ ∈ argmax_b Uᵢ(b, a₋ᵢ, z, Φᵢ(z,m), m)
 
 These coincide only if fast preference closure preserves the material best-response correspondence:
 
-> ╭────────────────────────────────────────────────────╮
-> │ argmax_b Uᵢ(b, a₋ᵢ, z, Φᵢ(z,m), m)                  │
-> │        = argmax_b πᵢ(b, a₋ᵢ, z, m)                  │
-> ╰────────────────────────────────────────────────────╯
+> argmax_b Uᵢ(b, a₋ᵢ, z, Φᵢ(z,m), m)
+> = argmax_b πᵢ(b, a₋ᵢ, z, m)
 
 When this invariance condition fails, the material Nash prediction is not robust to fast endogenous preferences. That is not a failure of Nash equilibrium. It is a failure to specify which payoff function agents are optimizing.
 
 The clean statement is:
 
-> ╭────────────────────────────────────────────────────╮
-> │ Nash survives as a method.                          │
-> │ The Nash object changes from π to U(· ; Φ(z,m)).     │
-> ╰────────────────────────────────────────────────────╯
+> Nash survives as a method.
+> The Nash object changes from π to U(· ; Φ(z,m)).
 
 This distinction matters because many economic arguments silently slide between subjective utility and material payoff. In an endogenous-preference economy, that slide is no longer harmless.
 
@@ -228,31 +186,23 @@ Darwinian selection also survives as a method. It is an update operator over wha
 
 In the indirect evolutionary preference literature, the usual chain is:
 
-> ╭────────────────────────────────────────────╮
-> │        θ → a(θ) → material payoff          │
-> ╰────────────────────────────────────────────╯
+> θ → a(θ) → material payoff
 
 Different preferences induce different behavior. Different behavior produces different material payoff. Selection changes the distribution of preferences.
 
 The fast limit can erase the first link. If all agents share the same adaptation law and the attracting branch is unique, then initial differences in θ vanish before selection evaluates material consequences:
 
-> ╭────────────────────────────────────────────╮
-> │        θ_initial → Φ(z,m) → a(Φ) → g        │
-> ╰────────────────────────────────────────────╯
+> θ_initial → Φ(z,m) → a(Φ) → g
 
 Selection over initial preference states becomes degenerate. Selection instead acts on whatever remains heterogeneous:
 
-> ╭────────────────────────────────────────────────────╮
-> │ adaptation law j → Φ_j(z,m) → g_j(z, Φ_j(z,m), m)   │
-> ╰────────────────────────────────────────────────────╯
+> adaptation law j → Φ_j(z,m) → g_j(z, Φ_j(z,m), m)
 
 The selected object may therefore be an adaptation law, an institution, a recommender policy, a cultural rule, a biological resistance parameter, or a whole induced system. It need not be an instantaneous utility function.
 
 The extreme conclusion is uncomfortable but mathematically straightforward. If every admissible regime induces negative long-run growth after fast closure, then selection does not rescue the system by finding a better preference state:
 
-> ╭────────────────────────────────────────────╮
-> │        g_j(z, Φ_j(z,m), m) < 0 for all j    │
-> ╰────────────────────────────────────────────╯
+> g_j(z, Φ_j(z,m), m) < 0 for all j
 
 In that case the Darwinian answer to "which preferences survive?" can be "none." More precisely, no preference-generating regime in the admissible class survives.
 
@@ -264,10 +214,8 @@ Suppose a mechanism moves an agent from preference state θ_0 to preference stat
 
 The problem is:
 
-> ╭────────────────────────────────────────────╮
-> │       produce θ_1 → satisfy θ_1             │
-> │              → cite θ_1 as welfare          │
-> ╰────────────────────────────────────────────╯
+> produce θ_1 → satisfy θ_1
+> → cite θ_1 as welfare
 
 Call this preference laundering. It is not a claim that final preferences are always illegitimate. It is a claim that final preferences cannot be the only welfare object when the evaluated mechanism helps produce them.
 
@@ -288,71 +236,51 @@ The first model is deliberately small. It is not meant to be psychologically com
 
 There is one preference state θ between zero and one. Low θ means the agent is oriented toward an offline or embodied good. High θ means the agent is oriented toward an online, artificial, or platform-mediated good.
 
-> ╭────────────────────────────────────────────╮
-> │  θ = 0: offline/embodied orientation        │
-> │  θ = 1: online/artificial orientation       │
-> ╰────────────────────────────────────────────╯
+> θ = 0: offline/embodied orientation
+> θ = 1: online/artificial orientation
 
 Given θ, the agent allocates attention a between the two goods. The subjective problem is Cobb-Douglas:
 
-> ╭────────────────────────────────────────────╮
-> │ max_a  θ log(a) + (1 − θ) log(1 − a)        │
-> ╰────────────────────────────────────────────╯
+> max_a  θ log(a) + (1 − θ) log(1 − a)
 
 The solution is:
 
-> ╭────────────────────────────────╮
-> │            a*(θ) = θ            │
-> ╰────────────────────────────────╯
+> a*(θ) = θ
 
 The environment chooses exposure m. Exposure pulls θ upward; an anchoring force pulls θ downward. The preference dynamic is:
 
-> ╭────────────────────────────────────────────────╮
-> │ θ̇ = exposure(θ,m) · (1 − θ) − anchor · θ        │
-> ╰────────────────────────────────────────────────╯
+> θ̇ = exposure(θ,m) · (1 − θ) − anchor · θ
 
 In the fast limit, θ̇ = 0. The preference state is pinned by:
 
-> ╭────────────────────────────────────────────────╮
-> │ exposure(θ,m) · (1 − θ) = anchor · θ            │
-> ╰────────────────────────────────────────────────╯
+> exposure(θ,m) · (1 − θ) = anchor · θ
 
 In the fixed-exposure case, exposure(θ,m) = m, so:
 
-> ╭────────────────────────────────╮
-> │        θ = m / (m + anchor)     │
-> ╰────────────────────────────────╯
+> θ = m / (m + anchor)
 
 Material growth is assumed to decline when θ becomes too high:
 
-> ╭────────────────────────────────────────────────────╮
-> │ g(θ) = baseline + offline_growth · (1 − θ)          │
-> │        − high_theta_penalty · θ²                    │
-> ╰────────────────────────────────────────────────────╯
+> g(θ) = baseline + offline_growth · (1 − θ)
+> − high_theta_penalty · θ²
 
 This is a reduced-form survival penalty, not a claim about a single biological channel. It represents any long-run cost that rises when attention, social capital, reproduction, physical resilience, or institutional maintenance are displaced by the high-θ good.
 
 The survival condition is:
 
-> ╭────────────────────────────────────────────────╮
-> │       survival ⇔ g(m / (m + anchor)) ≥ 0        │
-> ╰────────────────────────────────────────────────╯
+> survival ⇔ g(m / (m + anchor)) ≥ 0
 
 The current calibration gives a simple frontier. Low exposure survives:
 
-> ╭────────────────────────────────╮
-> │       m = 0.05                  │
-> │       θ = 0.50                  │
-> │       g(θ) = 0.1325             │
-> ╰────────────────────────────────╯
+> m = 0.05
+> θ = 0.50
+> g(θ) = 0.1325
 
 High exposure does not:
 
-> ╭────────────────────────────────╮
-> │       m = 0.80                  │
-> │       θ ≈ 0.9412                │
-> │       g(θ) ≈ −0.7778            │
-> ╰────────────────────────────────╯
+> m = 0.80
+> θ ≈ 0.9412
+> g(θ) ≈ −0.7778
 
 The point is the separation. The agent's final subjective allocation is internally coherent: a*(θ) = θ. But the induced state can be materially nonviable. Final preference satisfaction and long-run survival can point in opposite directions.
 
@@ -362,9 +290,7 @@ The second model connects the project to the indirect evolutionary preference li
 
 Players choose cooperation C or defection D. Material payoffs π have the usual Prisoner's Dilemma ranking: defection is materially tempting. Subjective utility adds a social preference term λ and possibly a norm bonus for cooperation:
 
-> ╭────────────────────────────────────────────╮
-> │       Uᵢ = πᵢ + λᵢ πⱼ + norm_bonus · 1{C}   │
-> ╰────────────────────────────────────────────╯
+> Uᵢ = πᵢ + λᵢ πⱼ + norm_bonus · 1{C}
 
 Agents choose actions according to U. Growth or selection is determined by π.
 
@@ -378,15 +304,11 @@ In the finite-speed simulations:
 
 In the fast limit, λ is pinned directly to the adaptation target. A prosocial fast attractor gives:
 
-> ╭────────────────────────────────╮
-> │            λ = 1.10             │
-> ╰────────────────────────────────╯
+> λ = 1.10
 
 and the model yields cooperation. A conflict-oriented fast attractor gives:
 
-> ╭────────────────────────────────╮
-> │            λ = −0.25            │
-> ╰────────────────────────────────╯
+> λ = −0.25
 
 and the model yields defection.
 
@@ -400,38 +322,28 @@ The one-dimensional taste model treated exposure m as fixed. Here m is chosen by
 
 The only maintained limiting assumption is:
 
-> ╭────────────────────────────────╮
-> │            T_θ → 0              │
-> ╰────────────────────────────────╯
+> T_θ → 0
 
 Other timescales are varied:
 
-> ╭────────────────────────────────────────────╮
-> │       T_algorithm / T_population            │
-> │       T_action / T_population               │
-> │       T_culture / T_population              │
-> ╰────────────────────────────────────────────╯
+> T_algorithm / T_population
+> T_action / T_population
+> T_culture / T_population
 
 A myopic institution chooses exposure to maximize engagement net of exposure cost:
 
-> ╭────────────────────────────────────────────╮
-> │ platform_value = θ − exposure_cost · m²     │
-> ╰────────────────────────────────────────────╯
+> platform_value = θ − exposure_cost · m²
 
 A survival-aware institution gives weight to material growth:
 
-> ╭────────────────────────────────────────────────╮
-> │ platform_value = θ − exposure_cost · m²          │
-> │                  + survival_weight · g(θ)        │
-> ╰────────────────────────────────────────────────╯
+> platform_value = θ − exposure_cost · m²
+> + survival_weight · g(θ)
 
 Under the current calibration, the myopic institution chooses:
 
-> ╭────────────────────────────────╮
-> │       m ≈ 0.645                 │
-> │       θ ≈ 0.928                 │
-> │       g(θ) ≈ −0.745             │
-> ╰────────────────────────────────╯
+> m ≈ 0.645
+> θ ≈ 0.928
+> g(θ) ≈ −0.745
 
 The result is extinction under every tested speed ordering. The date of extinction changes:
 
@@ -442,11 +354,9 @@ The result is extinction under every tested speed ordering. The date of extincti
 
 The survival-aware institution chooses:
 
-> ╭────────────────────────────────╮
-> │       m = 0.030                 │
-> │       θ = 0.375                 │
-> │       g(θ) = 0.316              │
-> ╰────────────────────────────────╯
+> m = 0.030
+> θ = 0.375
+> g(θ) = 0.316
 
 and survives.
 
@@ -458,17 +368,13 @@ The theory should not assume that institutions, algorithms, culture, behavior, o
 
 A minimal reduced-form estimate starts with an observed or latent state y_t:
 
-> ╭────────────────────────────────────────────╮
-> │       y_(t+1) = α + ρ y_t + β exposure_t    │
-> │                 + error_t                  │
-> ╰────────────────────────────────────────────╯
+> y_(t+1) = α + ρ y_t + β exposure_t
+> + error_t
 
 The implied speed and half-life are:
 
-> ╭────────────────────────────────╮
-> │       speed = −log(ρ) / Δt      │
-> │       half_life = log(2)/speed  │
-> ╰────────────────────────────────╯
+> speed = −log(ρ) / Δt
+> half_life = log(2)/speed
 
 This is only a diagnostic. Observed choices are noisy proxies for latent preferences, and the same behavior can reflect preference change, belief change, constraint change, or attention change.
 
@@ -484,11 +390,9 @@ Allcott, Braghieri, Eichmeyer, and Gentzkow's Facebook deactivation experiment p
 
 The empirical target for this project is not the vague claim "social media changes preferences." The target is:
 
-> ╭────────────────────────────────────────────────────╮
-> │ Estimate the relative speeds of preference closure, │
-> │ institutional adaptation, behavioral response,      │
-> │ and population or exit dynamics.                   │
-> ╰────────────────────────────────────────────────────╯
+> Estimate the relative speeds of preference closure,
+> institutional adaptation, behavioral response,
+> and population or exit dynamics.
 
 Those estimates determine which limiting model is relevant.
 
@@ -504,12 +408,10 @@ The institutional model shows that myopic exposure optimization can generate ext
 
 The invariant lesson across all three models is:
 
-> ╭────────────────────────────────────────────────────╮
-> │ Fast preferences turn utility into a response map.  │
-> │ Equilibrium is computed after that map closes.      │
-> │ Selection acts on what remains heterogeneous.       │
-> │ Welfare cannot rest on final preferences alone.     │
-> ╰────────────────────────────────────────────────────╯
+> Fast preferences turn utility into a response map.
+> Equilibrium is computed after that map closes.
+> Selection acts on what remains heterogeneous.
+> Welfare cannot rest on final preferences alone.
 
 ## 13. What Is Potentially Novel
 
@@ -524,20 +426,16 @@ The following claims are not novel:
 
 The potentially novel contribution is the combined singular-limit structure:
 
-> ╭────────────────────────────────────────────────────╮
-> │ fast preference closure                             │
-> │ + Nash object shift                                 │
-> │ + selection target shift                            │
-> │ + long-run survival frontier                        │
-> │ + welfare non-invariance                            │
-> ╰────────────────────────────────────────────────────╯
+> fast preference closure
+> + Nash object shift
+> + selection target shift
+> + long-run survival frontier
+> + welfare non-invariance
 
 This also clarifies the title. "Endogenous Utility" is too broad. Better titles are:
 
-> ╭────────────────────────────────────────────────╮
-> │     When Utility Adapts Faster Than Selection    │
-> │     The Singular Limit Of Endogenous Preferences │
-> ╰────────────────────────────────────────────────╯
+> When Utility Adapts Faster Than Selection
+> The Singular Limit Of Endogenous Preferences
 
 ## 14. Theorem Targets
 
@@ -545,37 +443,27 @@ The draft currently contains theorem candidates, not finished proofs. The next t
 
 Proposition 1: Fast Preference Closure. If the fast subsystem has a globally attracting, normally hyperbolic branch θ = Φ(z,m), then as T_θ → 0, the full economy converges after a boundary layer to the reduced economy on that branch.
 
-> ╭────────────────────────────────────────────╮
-> │       θ_t ≈ Φ(z_t, m_t) after closure       │
-> ╰────────────────────────────────────────────╯
+> θ_t ≈ Φ(z_t, m_t) after closure
 
 Proposition 2: Material Nash Invariance. The Nash equilibria of the fast-adapted subjective game coincide with the Nash equilibria of the material payoff game if and only if fast preference closure preserves the material best-response correspondence.
 
-> ╭────────────────────────────────────────────╮
-> │       BR_U(Φ(z,m), z, m) = BR_π(z,m)        │
-> ╰────────────────────────────────────────────╯
+> BR_U(Φ(z,m), z, m) = BR_π(z,m)
 
 Proposition 3: Selection Target Shift. If all individuals share a common fast adaptation law with unique attractor Φ(z,m), then selection over initial preference states is degenerate in the fast limit. If adaptation laws differ by type j, selection acts on:
 
-> ╭────────────────────────────────────────────╮
-> │        j → Φ_j(z,m) → g_j(z, Φ_j(z,m), m)   │
-> ╰────────────────────────────────────────────╯
+> j → Φ_j(z,m) → g_j(z, Φ_j(z,m), m)
 
 Proposition 4: Long-Run Survival Frontier. In the one-dimensional fixed-rule model, survival occurs if and only if:
 
-> ╭────────────────────────────────────────────╮
-> │        g(m / (m + anchor)) ≥ 0              │
-> ╰────────────────────────────────────────────╯
+> g(m / (m + anchor)) ≥ 0
 
 If a myopic institution chooses an exposure outside the survival set, the induced system goes extinct.
 
 Proposition 5: Welfare Non-Invariance. For a sufficiently rich preference state space and transition technology, there exist two paths A and B such that initial-preference welfare, final-preference welfare, meta-preference welfare, and material welfare do not all agree.
 
-> ╭────────────────────────────────────────────╮
-> │        A ≻_(θ0) B                           │
-> │        B ≻_(θ1) A                           │
-> │        rank_g(A) ≠ rank_g(B)                │
-> ╰────────────────────────────────────────────╯
+> A ≻_(θ0) B
+> B ≻_(θ1) A
+> rank_g(A) ≠ rank_g(B)
 
 This proposition would formalize the preference-laundering problem.
 
