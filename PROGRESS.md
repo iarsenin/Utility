@@ -81,8 +81,8 @@ Preliminary conclusion:
 
 - This direction is more fundamental than the platform-only framing.
 - Let preference adaptation occur on timescale `T` and take `T -> 0`. If the fast preference subsystem has a unique attracting branch `theta = Phi(z, m)`, utility is replaced by the critical manifold of preference adaptation.
-- Darwinian selection over preference states disappears in the unique-attractor limit; selection can only act on slow objects such as adaptation rules, institutions, biological resistance, or population size.
-- Material Nash equilibrium need not survive. The surviving Nash object is best response to the fast-adapted preference state, not necessarily to material payoffs.
+- In the unique-attractor limit, selection over initial preference states becomes degenerate; material selection acts on objects that remain heterogeneous after closure, such as adaptation rules, institutions, biological resistance, or population size.
+- The Nash operator is applied to the fast-adapted subjective game. The material-payoff Nash prediction is invariant only when fast preference closure preserves material best responses.
 - Final-preference welfare is too weak in this limit because a path can create the preferences that endorse it.
 
 Numerical readout:
@@ -98,7 +98,7 @@ Added `docs/10_timescales_and_survival.md`, `src/utility_endogenous/timescale_va
 
 Correction:
 
-- Nash equilibrium is a fixed-point method, not an object that survives or fails. The material-payoff Nash prediction is invariant only when fast preference closure preserves the material best-response correspondence.
+- Nash equilibrium is a fixed-point method. The material-payoff Nash prediction is invariant only when fast preference closure preserves the material best-response correspondence.
 - Darwinian selection is an update operator, not a conclusion. In the `T_pref -> 0` limit, it acts on whatever remains heterogeneous after fast closure: populations, adaptation laws, institutions, or resistance to adaptation.
 - We should not assume institutions or population are slower than preferences. Their speeds should be estimated or varied.
 
@@ -146,6 +146,15 @@ Clarified the abstract definition of `P^star`: it is the stable preference
 state induced by economic state `E` and institution `I` after fast adjustment,
 not an optimum. Visual QA screenshot:
 `results/figures/article_draft_v0_html_preview_abstract_pstar.jpg`.
+
+Updated the HTML reader draft to v0.7 with a residue-removal and argument-order
+pass. The draft now states the model primitives first: subjective best response
+and material selection are fixed operators, while the preference state is
+endogenous. The Nash and Darwinian-selection sections now distinguish the
+operator from the payoff or state object without arguing against earlier
+conversation notes. Visual QA screenshots:
+`results/figures/article_draft_v0_html_preview_logic_pass.jpg` and
+`results/figures/article_draft_v0_html_preview_logic_pass_equations.jpg`.
 
 Purpose:
 

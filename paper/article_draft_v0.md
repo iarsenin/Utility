@@ -6,6 +6,10 @@ Draft v0.1
 Project: Endogenous Utility Research Program
 Status: working draft for internal reading and comments
 
+Reader note: the current formula-safe reader copy is
+`paper/article_draft_v0.html`. This Markdown copy is retained as a plain source
+backup.
+
 ## Abstract
 
 Economic theory usually treats utility functions as primitive, fixed, or slow
@@ -14,12 +18,14 @@ happens at the opposite extreme. Suppose preference states adapt on a timescale
 `T_pref`, and take the singular limit `T_pref -> 0` relative to other economic,
 institutional, and population processes. In that limit, preferences are not
 slowly selected traits. They are fast state variables pinned to an attracting
-manifold of the preference-adaptation system. Nash equilibrium and Darwinian
-selection remain valid mathematical operators, but the state space on which they
-operate changes. Nash fixed points are computed in the reduced game induced by
-fast-adapted preferences, and material or Darwinian selection acts only on
-variables that remain heterogeneous after fast closure: populations, adaptation
-laws, institutions, or resistance to adaptation. The result is a sharp
+manifold of the preference-adaptation system. The model keeps two operators
+fixed: subjective best response, which defines Nash equilibria in the induced
+game, and material growth or Darwinian selection, which evaluates realized
+consequences. The endogenous object is the preference state. After fast
+closure, equilibrium is computed in the subjective game induced by the fast
+preference branch, and selection acts on variables that remain heterogeneous
+after closure: populations, adaptation laws, institutions, or resistance to
+adaptation. The result is a sharp
 separation between local subjective rationality, material payoff, final
 preference satisfaction, and long-run survival. In calibrated toy models,
 myopic institutions can induce preference attractors that are locally
@@ -57,10 +63,11 @@ preference adaptation occurs on timescale `T_pref`. What happens as:
 T_pref -> 0?
 ```
 
-The question is not whether Nash equilibrium "survives." Nash equilibrium is a
-fixed-point method. Nor is the question whether Darwinian selection "survives."
-Selection is an update operator. The question is what these operators are
-applied to after preference states have adjusted infinitely fast.
+The fixed operators are subjective best response, used to define Nash
+equilibria in the induced game, and material growth or Darwinian selection,
+used to evaluate realized consequences. The endogenous object is `theta_t`, the
+preference state. The question is what these operators are applied to after
+preference states have adjusted infinitely fast.
 
 The central answer is a singular reduction. If the fast preference subsystem has
 a unique attracting branch:
@@ -321,10 +328,9 @@ argmax_b pi_i(b, a_-i, z, m)
 for every player and relevant state. When the condition fails, the equilibrium
 method remains Nash, but the equilibrium prediction differs.
 
-This is not a failure of game theory. It is a warning against silently switching
-between subjective utility and material payoff. If agents maximize subjective
-utility but selection evaluates material payoff, the relevant Nash object is
-subjective. The relevant survival object is material.
+The fixed-point method is unchanged; the payoff object has changed. If agents
+maximize subjective utility but selection evaluates material payoff, the
+relevant Nash object is subjective. The relevant survival object is material.
 
 ### 4.2 Selection Target Shift
 
@@ -509,10 +515,9 @@ lambda = -0.25,
 
 the model yields defection.
 
-The lesson is not that Nash disappears. The lesson is that the material
-Prisoner's Dilemma and the fast-adapted subjective game have different Nash
-objects. Material defection is not invariant to a fast preference map that makes
-cooperation subjectively optimal.
+The material Prisoner's Dilemma and the fast-adapted subjective game have
+different Nash objects. Material defection is not invariant to a fast
+preference map that makes cooperation subjectively optimal.
 
 ## 7. Institutional Timescales And Long-Run Survival
 

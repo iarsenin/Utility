@@ -189,7 +189,7 @@
   <header>
     <h1>The Singular Limit Of Endogenous Preferences</h1>
     <p class="subtitle">When Utility Adapts Faster Than Selection</p>
-    <p class="meta">HTML reader draft v0.6. Working draft for comments, not a final manuscript.</p>
+    <p class="meta">HTML reader draft v0.7. Working draft for comments, not a final manuscript.</p>
   </header>
 
   <section class="abstract">
@@ -202,7 +202,7 @@
     <div class="equation"><span class="equation-label">Fast preference closure</span>\[
       P = P^\star(E,I).
     \]</div>
-    <p>Nash equilibrium and Darwinian selection do not disappear. They remain valid mathematical operators. What changes is the state space on which they operate. Nash fixed points are computed in the fast-adapted subjective game. Darwinian or material selection acts only on variables that remain heterogeneous after fast preference closure: populations, institutions, adaptation laws, resistance parameters, or whole induced systems.</p>
+    <p>The model keeps two operators fixed. Agents choose best responses under current subjective preferences, which defines Nash equilibria in the induced game. Material growth or Darwinian selection evaluates the realized consequences. The endogenous object is the preference state. After fast closure, equilibrium is computed in the subjective game induced by \(P^\star(E,I)\), and selection acts on variables that remain heterogeneous after closure: populations, institutions, adaptation laws, resistance parameters, or whole induced systems.</p>
   </section>
 
   <section>
@@ -212,6 +212,7 @@
     <p>The modern digital environment weakens that defense. Recommender systems and social platforms observe behavior, choose exposure, adapt in real time, and shape future behavior. AI-mediated experiences may make this loop faster and more individualized. The important theoretical point is not any particular psychological claim about one generation or one platform. The point is that a utility function may itself be a fast-moving state variable inside the economic mechanism.</p>
     <p>This paper asks a deliberately extreme question: what remains of standard equilibrium, selection, and welfare reasoning if preference adaptation is infinitely fast relative to the rest of the economy?</p>
     <p>Let \(P_t\) denote the preference state that locally represents an agent's utility function at time \(t\). Let \(E_t\) denote material, demographic, technological, or social states. Let \(I_t\) denote an institution, algorithm, platform rule, cultural environment, or adaptation law. Preferences adapt according to a dynamic equation. The economy also has action choices, material payoffs, institutional rules, and population dynamics.</p>
+    <div class="note"><strong>Model discipline.</strong> The fixed operators are subjective best response, used to define Nash equilibria in the induced game, and material growth or Darwinian selection, used to evaluate realized consequences. The endogenous object is \(P_t\), the preference state. The limit studies what happens when \(P_t\) adjusts before the other modeled variables move appreciably.</div>
     <div class="equation"><span class="equation-label">Singular limit</span>\[
       T_P \to 0 .
     \]</div>
@@ -227,8 +228,8 @@
     <p>The paper makes five claims.</p>
     <ol>
       <li>In the fast limit with a unique attracting preference branch, utility is replaced by a fast-response map.</li>
-      <li>Nash equilibrium remains the equilibrium method, but the relevant game changes.</li>
-      <li>Darwinian selection remains the selection method, but the selected object changes.</li>
+      <li>The Nash operator is applied to the fast-adapted subjective game, not automatically to the material-payoff game.</li>
+      <li>The selection operator acts on whatever remains heterogeneous after fast preference closure.</li>
       <li>Final-preference welfare is unstable when the evaluated mechanism can produce the preferences used to evaluate it.</li>
       <li>Timescale ordering should be measured or varied rather than assumed.</li>
     </ol>
@@ -239,7 +240,7 @@
     <p>The claim that preferences are endogenous is not new. Stigler and Becker argued that many apparent changes in tastes can be represented by stable deeper preferences and changing consumption capital. Becker and Murphy modeled rational addiction. Becker and Mulligan studied endogenous time preference. Rozen provided foundations for intrinsic habit formation. Bowles surveyed how markets and institutions shape preferences. Bisin and Verdier built cultural transmission models in which preference traits evolve through family and socialization. Bernheim, Braghieri, Martinez-Marquina, and Zuckerman modeled chosen preferences. Hayashi develops welfare analysis with meta-preferences and investment in future preferences.</p>
     <p>The closest mathematical economics literature is the indirect evolutionary preference literature. In that tradition, agents act according to subjective preferences, while material payoffs determine evolutionary success. Sandholm's two-speed model is especially important because behavior adjusts quickly while the distribution of preference types evolves slowly.</p>
     <p>This paper changes the location of the fast variable. In the limit studied here, preference adaptation itself is fast. The inherited or current preference state is not the slow object being selected. Instead, it closes onto an attracting map before slower material selection can sort it.</p>
-    <p>The contribution here, if it survives further proof and literature review, is narrow. It is not "preferences are endogenous." It is the combination of fast preference closure, Nash object shift, selection target shift, survival frontiers, and welfare non-invariance in a single mathematical economics frame.</p>
+    <p>The contribution here, conditional on further proof and literature review, is narrow. It is not "preferences are endogenous." It is the combination of fast preference closure, Nash object shift, selection target shift, survival frontiers, and welfare non-invariance in a single mathematical economics frame.</p>
   </section>
 
   <section>
@@ -317,12 +318,12 @@
 
   <section>
     <h2>5. Nash Equilibrium After Fast Closure</h2>
-    <p>Nash equilibrium is a fixed-point concept. It remains available. What changes is the game to which the fixed-point concept is applied.</p>
-    <p>Let \(\Pi_i\) be player \(i\)'s material payoff. A material-payoff Nash equilibrium satisfies:</p>
+    <p>After fast closure, there are two distinct games that should not be silently identified. One is the material-payoff game. The other is the subjective game induced by the fast preference branch \(P^\star(E,I)\). The Nash operator can be applied to either game; the economic interpretation depends on which payoff object agents actually optimize.</p>
+    <p>Let \(\Pi_i\) be player \(i\)'s material payoff. A Nash equilibrium of the material-payoff game satisfies:</p>
     <div class="equation"><span class="equation-label">Material-payoff Nash</span>\[
       A_i \in \arg\max_b \Pi_i(b,A_{-i},E,I).
     \]</div>
-    <p>A fast-adapted subjective Nash equilibrium satisfies:</p>
+    <p>A Nash equilibrium of the fast-adapted subjective game satisfies:</p>
     <div class="equation"><span class="equation-label">Fast-adapted subjective Nash</span>\[
       A_i \in \arg\max_b
       U_i\bigl(b,A_{-i},E,P_i^\star(E,I),I\bigr).
@@ -333,17 +334,17 @@
       =
       \arg\max_b \Pi_i(b,A_{-i},E,I).
     \]</div>
-    <p>When this condition fails, the material Nash prediction is not robust to fast endogenous preferences. This is not a failure of Nash equilibrium. It is a failure to specify which payoff function agents are optimizing.</p>
+    <p>When this condition fails, the material-payoff Nash prediction is not robust to fast endogenous preferences. The fixed-point method is unchanged; the payoff object has changed.</p>
   </section>
 
   <section>
     <h2>6. Darwinian Selection After Fast Closure</h2>
-    <p>Darwinian selection also survives as a method. It is an update operator over whatever entities reproduce, persist, imitate, expand, or avoid exit. The difficult question is what selection can still select after preferences adapt infinitely fast.</p>
-    <p>In the indirect evolutionary preference literature, the usual chain is:</p>
+    <p>Selection is represented by a material growth operator \(G\) over entities that reproduce, persist, imitate, expand, or avoid exit. In the fast-limit economy, \(G\) acts after preference closure, so the selected object is determined by what remains heterogeneous at that slower scale.</p>
+    <p>In the indirect evolutionary preference literature, the usual chain selects preference types through the behavior they induce:</p>
     <div class="equation"><span class="equation-label">Ordinary indirect evolution</span>\[
       P \longrightarrow A(P) \longrightarrow \text{material payoff}.
     \]</div>
-    <p>The fast limit can erase the first link. If all agents share the same adaptation law and the attracting branch is unique, then initial differences in \(P\) vanish before selection evaluates material consequences:</p>
+    <p>The fast limit changes the first link. If all agents share the same adaptation law and the attracting branch is unique, then initial differences in \(P\) vanish before selection evaluates material consequences:</p>
     <div class="equation"><span class="equation-label">Fast closure before selection</span>\[
       P_{\text{initial}}
       \longrightarrow
@@ -361,7 +362,7 @@
       \longrightarrow
       G_j\bigl(E,P_j^\star(E,I),I\bigr).
     \]</div>
-    <p>If every admissible regime induces negative long-run growth after fast closure, selection does not rescue the system by finding a better preference state:</p>
+    <p>If every admissible regime induces negative long-run growth after fast closure, the long-run state has no internally surviving regime:</p>
     <div class="equation"><span class="equation-label">No surviving regime</span>\[
       G_j\bigl(E,P_j^\star(E,I),I\bigr)<0
       \quad \text{for all } j.
@@ -510,7 +511,7 @@
 
   <section>
     <h2>14. Limitations And Risks</h2>
-    <p>The main risk is overclaiming. Endogenous preferences are a large existing literature. The paper should not imply that economists forgot preferences can change. The correct claim is about a specific limiting regime and its consequences for equilibrium, selection, and welfare objects.</p>
+    <p>The main risk is overclaiming. Endogenous preferences are a large existing literature. The correct claim is about a specific limiting regime and its consequences for equilibrium, selection, and welfare objects.</p>
     <p>The second risk is that the toy models are too easy. A model where exposure increases \(p\) and high \(p\) reduces growth will naturally generate a survival frontier. The proof burden is to show that the qualitative object shift is invariant across richer models, not to overinterpret a calibration.</p>
     <p>The third risk is welfare ambiguity. The draft can show that final preferences are insufficient, but it cannot simply replace them with biological fitness without argument. Material survival is one criterion, not a complete welfare theory.</p>
     <p>The fourth risk is empirical identification. Preference change is hard to distinguish from belief change, constraint change, attention change, and measurement error. The empirical section should therefore focus on timescale estimation and model discrimination, not sweeping claims about psychology.</p>
@@ -518,7 +519,7 @@
 
   <section>
     <h2>15. Conclusion</h2>
-    <p>This draft began with an extreme premise: utility adapts infinitely fast. The premise is not literally true, but the limit is analytically useful. It reveals that once preferences are fast state variables, utility becomes a response map rather than a primitive. Nash equilibrium still applies, but to the fast-adapted subjective game. Darwinian selection still applies, but to the variables that remain heterogeneous after preference closure. Welfare analysis cannot rely on final preferences alone because the mechanism being evaluated may have produced those preferences.</p>
+    <p>This draft began with an extreme premise: utility adapts infinitely fast. The premise is a limiting case, not a literal empirical claim, but the limit is analytically useful. It reveals that once preferences are fast state variables, utility becomes a response map rather than a primitive. Best-response equilibrium is evaluated in the fast-adapted subjective game. Material selection ranks the institutions, adaptation laws, population states, and induced systems that remain after preference closure. Welfare analysis cannot rely on final preferences alone because the mechanism being evaluated may have produced those preferences.</p>
     <p>The strongest current version of the paper is not a broad essay on endogenous utility. It is a mathematical economics paper about the singular limit of endogenous preferences. The technical spine is fast closure. The conceptual payoffs are the Nash object shift, the selection target shift, and welfare non-invariance. The applied spine is the survival frontier of preference-generating institutions.</p>
   </section>
 
