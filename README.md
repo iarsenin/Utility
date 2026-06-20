@@ -57,3 +57,17 @@ This is bootstrap version 0.1. The repo currently contains:
 - two initial model families:
   - algorithmic preference drift with Darwinian selection,
   - indirect evolutionary Prisoner's Dilemma with mutable social preferences.
+
+## Research Planning Docs
+
+Start here for the current research direction:
+
+- `docs/05_research_synthesis_v1.md`
+- `docs/06_formal_research_plan.md`
+- `docs/07_paper_outline_v1.md`
+- `references/literature_matrix.md`
+
+Next model specs:
+
+- `models/platform_preference_control.md`
+- `models/revealed_preference_with_drift.md`

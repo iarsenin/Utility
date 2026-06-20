@@ -20,6 +20,25 @@
 - Even when selection against high online orientation is made much stronger, the chosen high-persuasion parameters still move the population near `0.96`; this is a useful stress case, not a proof.
 - In the Prisoner's Dilemma model, prosocial preference drift restores near-full cooperation; conflict-oriented drift collapses cooperation.
 
+### Research Planning Pass
+
+- Added `docs/05_research_synthesis_v1.md`.
+- Added `docs/06_formal_research_plan.md`.
+- Added `docs/07_paper_outline_v1.md`.
+- Added `references/literature_matrix.md` and `references/bibliography.bib`.
+- Added model specs for:
+  - platform preference control,
+  - revealed preference with drifting tastes.
+
+### Source-Grounded Finding
+
+The literature already has endogenous preferences through consumption capital, habit, addiction, time preference, cultural transmission, indirect evolution, chosen preferences, and meta-preferences. The novel wedge is not "preferences can change." It is:
+
+```text
+algorithmic and AI systems can optimize the preference-transition kernel K_m
+at a much faster timescale than culture or biological selection.
+```
+
 ### Current Conjectures
 
 1. If preference-transition technology is fast relative to biological or material selection, current subjective welfare can rise while fitness falls.
@@ -29,10 +48,10 @@
 
 ### Next Actions
 
-- Inspect first simulation outputs for knife-edge assumptions.
-- Add proposition sketches to `docs/02_axioms_v0.md`.
-- Add richer platform-agent model with platform best response.
-- Create a BibTeX file once the core reference list stabilizes.
+- Prove or falsify the timescale-dominance proposition in `docs/06_formal_research_plan.md`.
+- Implement `models/platform_preference_control.md`.
+- Create phase diagrams for plasticity, selection strength, platform bias, and exposure cost.
+- Begin a formal note for the preference-laundering theorem.
 
 ### Open Questions
 

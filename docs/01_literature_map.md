@@ -74,3 +74,12 @@ allocation mechanism + preference-transition technology + selection criterion
 ```
 
 The project will be successful if it produces even one clean theorem showing that a familiar welfare or equilibrium conclusion reverses once `K(theta' | theta, action, institution)` is endogenous.
+
+## 7. Current Source-Grounded Synthesis
+
+See `docs/05_research_synthesis_v1.md` for the current research synthesis and `references/literature_matrix.md` for the working source map. The core positioning is:
+
+```text
+not endogenous preferences alone,
+but fast, strategic, platform-controlled preference transition.
+```

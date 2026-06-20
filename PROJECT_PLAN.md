@@ -93,18 +93,30 @@ Target a theory-forward paper with a provocative applied motivation:
 - Run initial toy simulations.
 - Commit and push to GitHub.
 
-### Milestone 1: First Formal Note
+Status: complete.
+
+### Milestone 1: Research Plan v1
+
+- Produce source-grounded research synthesis.
+- Write formal model hierarchy.
+- Identify theorem candidates.
+- Write first paper outline.
+- Build a literature matrix and bibliography seed.
+
+Status: complete as of `docs/05_research_synthesis_v1.md`, `docs/06_formal_research_plan.md`, and `docs/07_paper_outline_v1.md`.
+
+### Milestone 2: First Formal Note
 
 - Convert axioms into proposition-ready notation.
 - Prove a simple "preference laundering" result: if utilities can be altered cheaply enough, final-preference Pareto comparisons are not invariant.
 - Prove a timescale result: if preference plasticity dominates fitness selection, population mean taste can move opposite to Darwinian fitness gradient.
 
-### Milestone 2: Model Deepening
+### Milestone 3: Model Deepening
 
 - Add a platform objective and solve for Markov-perfect or stationary equilibria.
 - Compare welfare under biological fitness, current subjective utility, and meta-preference criteria.
 
-### Milestone 3: Empirical Anchors
+### Milestone 4: Empirical Anchors
 
 - Identify datasets and proxies for rapid preference movement:
   - time-use,
@@ -120,3 +132,19 @@ Target a theory-forward paper with a provocative applied motivation:
 - Every iteration updates `PROGRESS.md`.
 - Claims are tagged as `conjecture`, `simulation`, `proposition`, or `empirical hypothesis`.
 - Strange conclusions are allowed, but only if the assumptions are explicit.
+
+## Current Research Bet
+
+The first publishable paper should not merely argue that preferences are endogenous. That is already known. The sharper contribution is:
+
+```text
+AI and social-media systems act as fast, strategic preference-transition technologies.
+```
+
+The formal model should therefore focus on:
+
+- local utility representation,
+- a preference transition kernel `K_m`,
+- material or Darwinian fitness `F`,
+- platform or institutional policy `m`,
+- welfare comparisons over allocation-preference paths.
