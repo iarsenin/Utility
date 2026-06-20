@@ -196,19 +196,74 @@ Research decision: promote a generic finite-game fast-closure theorem to the
 core paper route. Keep platform preference control as the main application. Use
 the one-dimensional taste model as exposition, not as the central proof.
 
+### Article v1 And Agent Review Loop
+
+Added `paper/article_v1.html` as the current main article draft.
+
+The article is organized around the finite-game fast-preference closure model:
+
+```text
+closure law ell
+-> theta_ell^star(E)
+-> reduced subjective game Gamma_ell^star(E)
+-> selected mixed equilibrium sigma_ell(E)
+-> material evaluator G_ell(E)
+-> selection or platform choice
+```
+
+The article incorporates three Modeller -> Writer -> Editor review rounds,
+logged in `docs/agent_rounds/`. The final Round 3 structural blocker concerned
+mixed-strategy Nash: Proposition 1 originally stated best-response invariance
+only against pure opponent profiles. It has been repaired to use mixed
+opponent profiles and expected payoffs over `Delta(A_i)`.
+
+Current article claims:
+
+- Fast closure is a fixed-slow-state closure lemma, not a full moving-slow
+  singular perturbation theorem.
+- Nash equilibrium remains the method; material Nash predictions are preserved
+  only when mixed best-response correspondences are preserved.
+- Material selection acts on closure laws or induced systems when initial
+  preference states are erased by common unique fast closure.
+- Platform control is an application in which platform rules are closure laws.
+  Material loss is conditional on proxy/material alignment.
+- Welfare comparisons based only on final induced preferences are not invariant
+  when the transition law produces those preferences.
+
+Added a World Bank WDI diagnostic pipeline:
+
+- `src/utility_endogenous/empirical_wdi.py`
+- `scripts/run_empirical_wdi.py`
+- raw cached WDI JSON in `data/raw/`
+- processed panels in `data/processed/`
+- WDI tables and SVG figures in `results/`
+
+The WDI section is explicitly a measurement prototype. It measures digital
+exposure timescales and exposure-outcome associations. It does not identify
+platform-induced preference closure.
+
+Visual QA for `paper/article_v1.html` was performed in the Codex in-app browser
+through a local server. Screenshots are saved in `results/figures/`:
+
+- `article_v1_visual_qa_top.png`
+- `article_v1_visual_qa_formal_equations.png`
+- `article_v1_visual_qa_stress_test.png`
+- `article_v1_visual_qa_wdi_equations.png`
+- `article_v1_visual_qa_wdi_equations_fixed.png`
+- `article_v1_visual_qa_formal_equations_fixed.png`
+
 ### Next Actions
 
-- Reorganize the article around the finite-game singular-limit theorem.
-- Prove material Nash invariance via equality of best-response correspondences.
-- Prove generic object shift for payoff transformations that are not
-  strategically irrelevant.
+- Tighten proof sketches into complete proof blocks or an appendix.
+- Prove a formal non-neutral closure result beyond the numerical stress test.
 - Prove the timescale-dominance proposition in `docs/06_formal_research_plan.md`.
 - Derive the platform-control first-order or threshold condition.
 - Replace the myopic platform with a forward-looking platform or regulator.
 - Tighten welfare language around initial preferences, final preferences, meta-preferences, and fitness.
 - Begin a formal note for the preference-laundering theorem.
 - Map the exact difference from Kleinberg, Mullainathan, and Raghavan's engagement-optimization model.
-- Prove the fast-preference singular-limit theorem before committing to the platform-specific paper spine.
+- Extend the fixed-slow-state closure lemma into a full moving-slow-state
+  singular perturbation theorem, if the paper keeps leaning on that language.
 - Extend the long-run survival model to allow competition among institutional regimes and empirically estimated timescale priors.
 
 ### Open Questions

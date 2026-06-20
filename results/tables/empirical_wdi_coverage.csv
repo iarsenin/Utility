@@ -1,0 +1,7 @@
+indicator_code,indicator_slug,indicator_label,role,observations,countries,countries_with_10plus_observations,first_year,last_year
+IT.NET.USER.ZS,internet_users_pct,Individuals using the Internet,digital exposure proxy,6214,213,204,1990,2024
+IT.CEL.SETS.P2,mobile_subscriptions_per_100,Mobile cellular subscriptions,digital infrastructure proxy,7029,214,212,1990,2024
+NY.GDP.PCAP.KD,gdp_pc_constant,GDP per capita,material proxy,7096,213,210,1990,2024
+SP.DYN.LE00.IN,life_expectancy,Life expectancy at birth,material proxy,7595,217,217,1990,2024
+SP.DYN.TFRT.IN,fertility_rate,Fertility rate,demographic adjustment proxy,7595,217,217,1990,2024
+SH.STA.SUIC.P5,suicide_mortality,Suicide mortality rate,mental-health material proxy,4070,185,185,2000,2021

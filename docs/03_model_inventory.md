@@ -114,33 +114,37 @@ building in a one-dimensional survival frontier.
 Material game:
 
 ```text
-Pi_i(a_i, a_-i)
+pi_i(a; E, ell)
 ```
 
 Fast preference closure:
 
 ```text
-P = P^star(E, I)
+theta_ell^star(E)
 ```
 
 Subjective game:
 
 ```text
-U_i(a_i, a_-i; P^star(E, I), I)
+Gamma_ell^star(E)
+  = <N, {A_i}, {U_i(.; theta_{i,ell}^star(E), E, ell)}>
 ```
 
 Reduced equilibrium:
 
 ```text
-a in NE(U(P^star(E, I), I))
+sigma_ell(E) in NE(Gamma_ell^star(E))
 ```
 
 Material Nash predictions are invariant only when:
 
 ```text
-BR_U(P^star(E, I), E, I) = BR_Pi(E, I)
+BR_star(x_-i; E, ell) = BR_pi(x_-i; E, ell)
+for every mixed opponent profile x_-i.
 ```
 
 Status: promoted to the main theorem route after the model-selection audit in
 `docs/11_model_selection_audit.md`. Platform control should be treated as the
-main application of this finite-game core.
+main application of this finite-game core. The current article uses an explicit
+equilibrium selector `sigma_ell(E)` and material evaluator `G_ell(E)` to handle
+mixed equilibria and material comparison after closure.

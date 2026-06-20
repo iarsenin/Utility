@@ -1,0 +1,23 @@
+{
+  "end_year": 2024,
+  "generated_utc": "2026-06-20T18:13:00.588794+00:00",
+  "indicator_codes": [
+    "IT.NET.USER.ZS",
+    "IT.CEL.SETS.P2",
+    "NY.GDP.PCAP.KD",
+    "SP.DYN.LE00.IN",
+    "SP.DYN.TFRT.IN",
+    "SH.STA.SUIC.P5"
+  ],
+  "raw_files": [
+    "data/raw/wdi_IT_NET_USER_ZS_1990_2024.json",
+    "data/raw/wdi_IT_CEL_SETS_P2_1990_2024.json",
+    "data/raw/wdi_NY_GDP_PCAP_KD_1990_2024.json",
+    "data/raw/wdi_SP_DYN_LE00_IN_1990_2024.json",
+    "data/raw/wdi_SP_DYN_TFRT_IN_1990_2024.json",
+    "data/raw/wdi_SH_STA_SUIC_P5_1990_2024.json"
+  ],
+  "start_year": 1990,
+  "wdi_lastupdated": "2026-04-08",
+  "world_bank_api": "https://api.worldbank.org/v2"
+}

@@ -14,3 +14,10 @@ notes, model results, and literature checks.
 - `article_draft_v0_codex.md`: plain-text backup retained for continuity. Use
   the HTML file for reading and comments because the Markdown viewer has been
   unreliable for formulas.
+- `article_v1.html`: current main article draft. It reorganizes the paper
+  around the finite-game fast-closure model, uses MathJax equations, includes
+  the finite-game stress test and WDI measurement diagnostic, and incorporates
+  three Modeller -> Writer -> Editor review rounds.
+
+For any reader-facing article update, render the HTML and inspect screenshots
+before reporting the draft as ready.

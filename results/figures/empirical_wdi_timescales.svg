@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="380" viewBox="0 0 900 380">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="32" y="34" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#18212f">Observed WDI Timescales</text>
+<text x="32" y="56" font-family="Arial, sans-serif" font-size="13" fill="#465366">Median years to traverse 10-90% of each country-specific observed range</text>
+<line x1="245.0" y1="60" x2="245.0" y2="328" stroke="#d9dee8" stroke-width="1"/>
+<text x="245.0" y="352" font-family="Arial, sans-serif" font-size="11" fill="#596579" text-anchor="middle">0</text>
+<line x1="346.7" y1="60" x2="346.7" y2="328" stroke="#d9dee8" stroke-width="1"/>
+<text x="346.6666666666667" y="352" font-family="Arial, sans-serif" font-size="11" fill="#596579" text-anchor="middle">5</text>
+<line x1="448.3" y1="60" x2="448.3" y2="328" stroke="#d9dee8" stroke-width="1"/>
+<text x="448.33333333333337" y="352" font-family="Arial, sans-serif" font-size="11" fill="#596579" text-anchor="middle">10</text>
+<line x1="550.0" y1="60" x2="550.0" y2="328" stroke="#d9dee8" stroke-width="1"/>
+<text x="550.0" y="352" font-family="Arial, sans-serif" font-size="11" fill="#596579" text-anchor="middle">15</text>
+<line x1="651.7" y1="60" x2="651.7" y2="328" stroke="#d9dee8" stroke-width="1"/>
+<text x="651.6666666666667" y="352" font-family="Arial, sans-serif" font-size="11" fill="#596579" text-anchor="middle">20</text>
+<line x1="753.3" y1="60" x2="753.3" y2="328" stroke="#d9dee8" stroke-width="1"/>
+<text x="753.3333333333333" y="352" font-family="Arial, sans-serif" font-size="11" fill="#596579" text-anchor="middle">25</text>
+<line x1="855.0" y1="60" x2="855.0" y2="328" stroke="#d9dee8" stroke-width="1"/>
+<text x="855.0" y="352" font-family="Arial, sans-serif" font-size="11" fill="#596579" text-anchor="middle">30</text>
+<text x="550.0" y="370" font-family="Arial, sans-serif" font-size="12" fill="#596579" text-anchor="middle">years</text>
+<text x="32" y="90" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#18212f">Mobile cellular subscriptions</text>
+<text x="32" y="107" font-family="Arial, sans-serif" font-size="11" fill="#667085">digital infrastructure proxy</text>
+<rect x="245" y="80" width="244.0" height="20" rx="3" fill="#2f6fbb"/>
+<text x="497.0" y="95" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#18212f">12.0</text>
+<text x="32" y="132" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#18212f">Individuals using the Internet</text>
+<text x="32" y="149" font-family="Arial, sans-serif" font-size="11" fill="#667085">digital exposure proxy</text>
+<rect x="245" y="122" width="305.0" height="20" rx="3" fill="#319b7b"/>
+<text x="558.0" y="137" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#18212f">15.0</text>
+<text x="32" y="174" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#18212f">Suicide mortality rate</text>
+<text x="32" y="191" font-family="Arial, sans-serif" font-size="11" fill="#667085">mental-health material proxy</text>
+<rect x="245" y="164" width="305.0" height="20" rx="3" fill="#c9822b"/>
+<text x="558.0" y="179" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#18212f">15.0</text>
+<text x="32" y="216" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#18212f">GDP per capita</text>
+<text x="32" y="233" font-family="Arial, sans-serif" font-size="11" fill="#667085">material proxy</text>
+<rect x="245" y="206" width="508.3" height="20" rx="3" fill="#8b5fbf"/>
+<text x="761.3333333333333" y="221" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#18212f">25.0</text>
+<text x="32" y="258" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#18212f">Fertility rate</text>
+<text x="32" y="275" font-family="Arial, sans-serif" font-size="11" fill="#667085">demographic adjustment proxy</text>
+<rect x="245" y="248" width="508.3" height="20" rx="3" fill="#c84f4f"/>
+<text x="761.3333333333333" y="263" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#18212f">25.0</text>
+<text x="32" y="300" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#18212f">Life expectancy at birth</text>
+<text x="32" y="317" font-family="Arial, sans-serif" font-size="11" fill="#667085">material proxy</text>
+<rect x="245" y="290" width="528.7" height="20" rx="3" fill="#4b8a8f"/>
+<text x="781.6666666666666" y="305" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#18212f">26.0</text>
+</svg>

@@ -1,0 +1,7 @@
+indicator_code,indicator_slug,indicator_label,role,transform_for_timescale,countries_with_10_90_traversal,median_10_90_traversal_years,p25_10_90_traversal_years,p75_10_90_traversal_years,countries_with_annual_pairs,median_abs_annual_change,p75_abs_annual_change,countries_with_gap_closure,median_annual_gap_closure_speed,median_remaining_gap_half_life_years
+IT.NET.USER.ZS,internet_users_pct,Individuals using the Internet,digital exposure proxy,level,206,15.0,12.0,17.0,210,1.508346396604793,3.5657787719586977,210,0.03375940045231196,19.699489259168537
+IT.CEL.SETS.P2,mobile_subscriptions_per_100,Mobile cellular subscriptions,digital infrastructure proxy,level,212,12.0,9.0,16.0,213,2.666699634217011,7.011339284302281,,,
+NY.GDP.PCAP.KD,gdp_pc_constant,GDP per capita,material proxy,log,209,25.0,18.0,28.0,211,0.03037806064961135,0.05210817260569467,,,
+SP.DYN.LE00.IN,life_expectancy,Life expectancy at birth,material proxy,level,217,26.0,23.0,29.0,217,0.29699999999999704,0.5060000000000002,,,
+SP.DYN.TFRT.IN,fertility_rate,Fertility rate,demographic adjustment proxy,level,217,25.0,20.0,28.0,217,0.050000000000000044,0.08800000000000008,,,
+SH.STA.SUIC.P5,suicide_mortality,Suicide mortality rate,mental-health material proxy,level,184,15.0,10.0,18.0,185,0.23000000000000043,0.6299999999999999,,,
