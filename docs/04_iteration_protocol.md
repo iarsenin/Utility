@@ -26,6 +26,17 @@ Each research iteration should update this repository in a way that makes the st
    - `theorem candidate`: looks analytically provable.
 3. Commit with a message that names the model or theorem.
 
+## Article Draft QA
+
+For any article draft intended for the user to read:
+
+1. Prefer HTML with MathJax for formulas when formulas are central.
+2. Avoid fragile Unicode math ornamentation in the reader copy.
+3. Render the article in a browser or the target reader.
+4. Take a screenshot of the rendered page.
+5. Inspect the screenshot for formula rendering, line wrapping, and visual
+   artifacts before reporting the draft as ready.
+
 ## Evidence Standard
 
 Bizarre conclusions are welcome only if:

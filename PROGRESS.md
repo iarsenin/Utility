@@ -134,6 +134,14 @@ reader-facing mnemonics: `P` for preferences, `E` for economic/material state,
 survival mass. Replaced underscore time markers with Unicode subscripts such as
 `Pₜ`, and rewrote formula labels to avoid code-like parameter names.
 
+Added `paper/article_draft_v0.html` as the preferred reader copy. This version
+uses HTML plus MathJax for formulas, avoiding fragile Markdown and Unicode
+equation rendering. Going forward, any article draft intended for reading must
+be rendered visually and checked with a screenshot before being reported as
+ready. Visual QA screenshots for this pass are in:
+`results/figures/article_draft_v0_html_preview_equation.jpg` and
+`results/figures/article_draft_v0_html_preview_complex.jpg`.
+
 Purpose:
 
 - Give a single readable manuscript for comments.

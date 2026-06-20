@@ -8,7 +8,9 @@ notes, model results, and literature checks.
   long-run survival, and welfare non-invariance.
 - `article_draft_v0_math.md`: same draft with display equations converted to
   Markdown/LaTeX math for easier reading.
-- `article_draft_v0_codex.md`: current reader-facing Codex edition. It
-  expands the draft into a fuller article, introduces each model before the
-  equations, and uses mnemonic variables, Unicode time subscripts, simple
-  display quotes, and dot notation for derivatives.
+- `article_draft_v0.html`: preferred reader copy. It uses HTML and MathJax so
+  formulas render as actual equations instead of fragile Markdown/Unicode
+  approximations.
+- `article_draft_v0_codex.md`: plain-text backup retained for continuity. Use
+  the HTML file for reading and comments because the Markdown viewer has been
+  unreliable for formulas.
