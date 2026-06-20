@@ -323,7 +323,9 @@
       \]
     </div>
 
-    <p>The first implication is conceptual but formal: Nash equilibrium remains the fixed-point method, but the game to which it is applied is the reduced subjective game. The second implication is a selection result: if all initial preference states in a class converge to the same fast closure, selection cannot distinguish among those initial states after closure. It can distinguish only among closure laws or institutions that induce different reduced games. The third implication is a conditional welfare result: fast preference closure does not imply material harm by itself; material loss depends on the alignment between the objective that generates preferences and the material evaluator.</p>
+    <p>The formal results follow this order. Lemma 1 gives the fast-closure reduction. Proposition 1 identifies a sufficient mixed best-response condition under which the reduced subjective game and the material benchmark game have the same Nash set. Proposition 2 shows how strict subjective and material maximizers can diverge after closure, and Example 1 gives a two-action construction in which the Nash set itself changes. Theorem 1 then shifts material selection from initial preference states to closure-equivalence classes and surviving closure laws. Proposition 3 applies the same logic to platform rule choice: material loss follows from proxy/material misalignment on the feasible rule set, not from preference endogeneity alone.</p>
+
+    <p>The paper therefore separates three operators that are often collapsed: subjective equilibrium, material evaluation, and material selection. Fast preference closure changes the object passed into the equilibrium operator; it does not by itself determine the material or welfare conclusion.</p>
 
     <p>Recommender systems and AI-mediated environments are useful applications because they can choose exposure rules that affect future utility representations. They are not the paper's formal object. The formal object is a finite normal-form game with a fast preference state, subjective payoffs, material payoffs, and selection over closure laws.</p>
   </section>
@@ -492,22 +494,24 @@
 
     <div class="theorem">
       <span class="theorem-title">Proposition 2. Best-Response Non-Invariance Test</span>
-      <p>Suppose that for some player \(i\), two actions \(a_i,b_i\), and opponent mixed profile \(x_{-i}\), the subjective and material payoff differences have opposite signs. With \(\Delta^U_{i,\ell}\) and \(\Delta^\pi_{i,\ell}\) denoting the expected payoff difference between \(a_i\) and \(b_i\) under subjective and material payoffs, respectively:</p>
+      <p>Suppose that for some player \(i\), actions \(a_i,b_i\in A_i\), and opponent mixed profile \(x_{-i}\), action \(a_i\) is the unique material best response and action \(b_i\ne a_i\) is the unique subjective best response:</p>
       <div class="equation">
-        <span class="label">Ranking Reversal</span>
+        <span class="label">Strict Maximizer Reversal</span>
         \[
           \begin{aligned}
-          &\Delta^U_{i,\ell}(a_i,b_i;x_{-i},E) \\
-          &\qquad {}\times
-          \Delta^\pi_{i,\ell}(a_i,b_i;x_{-i},E)
-          <0 .
+          \{a_i\}
+          &=
+          BR_{i,\ell}^\pi(x_{-i};E),\\
+          \{b_i\}
+          &=
+          BR_{i,\ell}^\star(x_{-i};E).
           \end{aligned}
         \]
       </div>
-      <p>Then \(BR_{i,\ell}^\star(x_{-i};E)\ne BR_{i,\ell}^\pi(x_{-i};E)\). Hence the mixed best-response correspondence invariance condition in Proposition 1 fails. Nash sets may still coincide in special games; the proposition identifies failure of the robust invariance discipline, not a necessary-and-sufficient Nash-set separation.</p>
+      <p>Then \(BR_{i,\ell}^\star(x_{-i};E)\ne BR_{i,\ell}^\pi(x_{-i};E)\). Hence the mixed best-response correspondence invariance condition in Proposition 1 fails. Nash sets may still coincide in special games; the proposition identifies failure of the robust invariance discipline, not a necessary-and-sufficient Nash-set separation. In a two-action choice set this condition is equivalent to a strict subjective/material ranking reversal between the two actions.</p>
     </div>
 
-    <p class="proof"><strong>Proof.</strong> See Appendix A.5. The strict sign reversal gives different argmax correspondences at the same mixed opponent profile.</p>
+    <p class="proof"><strong>Proof.</strong> See Appendix A.5. The two correspondences are distinct singleton sets at the same mixed opponent profile.</p>
 
     <div class="theorem">
       <span class="theorem-title">Example 1. A Two-Action Nash-Set Change</span>
@@ -537,13 +541,13 @@
     <h2>6. Selection After Closure</h2>
     <p>Material selection is an evaluation operator. The fast limit changes the object evaluated by that operator. Let \(Q_\ell\) be a set of initial preference states associated with closure law \(\ell\), and let \(C_\ell(E,q)\) denote the post-closure preference state reached from initial state \(q\in Q_\ell\). Under unique closure, \(C_\ell(E,q)=\theta_\ell^\star(E)\) for all \(q\in Q_\ell\).</p>
 
-    <p>For an initial state \(q\), write \(\Gamma_\ell^\star(E;q)\) for the reduced subjective game obtained from the post-closure state \(C_\ell(E,q)\). Under common unique closure, \(\Gamma_\ell^\star(E;q)=\Gamma_\ell^\star(E)\) for every \(q\in Q_\ell\). Define an equivalence relation \(q\sim_E q'\) if \(C_\ell(E,q)=C_\ell(E,q')\). Initial states in the same equivalence class induce the same reduced subjective game.</p>
+    <p>For an initial state \(q\), write \(\Gamma_\ell^\star(E;q)\) for the reduced subjective game obtained from the post-closure state \(C_\ell(E,q)\). Under common unique closure, \(\Gamma_\ell^\star(E;q)=\Gamma_\ell^\star(E)\) for every \(q\in Q_\ell\). Define an equivalence relation \(q\sim_{E,\ell} q'\) if \(C_\ell(E,q)=C_\ell(E,q')\). Initial states in the same equivalence class induce the same reduced subjective game.</p>
 
     <p>A material selection rule is <em>post-closure admissible</em> if it depends on the initial state \(q\) only through the reduced game, selected post-closure play, and the material evaluator. Equivalently, it can be written as \(S(q;E,\ell)=\Phi(\Gamma_\ell^\star(E;q),E,\ell)\), or, after specifying an equilibrium-selection rule, as \(S(q;E,\ell)=M(\sigma(\Gamma_\ell^\star(E;q)),E,\ell)\). Direct observability or direct reward of the pre-closure state \(q\) is outside this theorem.</p>
 
     <div class="theorem">
       <span class="theorem-title">Theorem 1. Selection Target Shift</span>
-      <p>Fix \(E\) and \(\ell\). If \(q\sim_E q'\), then the initial states \(q\) and \(q'\) induce the same reduced subjective game and the same Nash set. Consequently, every post-closure admissible material selection rule is constant on each closure-equivalence class. Under common unique closure, all \(q\in Q_\ell\) lie in one equivalence class, so selection over initial preference states is degenerate in the \(T_\theta\to 0\) limit.</p>
+      <p>Fix \(E\) and \(\ell\). If \(q\sim_{E,\ell} q'\), then the initial states \(q\) and \(q'\) induce the same reduced subjective game and the same Nash set. Consequently, every post-closure admissible material selection rule is constant on each closure-equivalence class. Under common unique closure, all \(q\in Q_\ell\) lie in one equivalence class, so selection over initial preference states is degenerate in the \(T_\theta\to 0\) limit.</p>
     </div>
 
     <p class="proof"><strong>Proof.</strong> See Appendix A.6. The closure map identifies which initial states remain distinguishable after the fast adjustment.</p>
@@ -585,7 +589,7 @@
 
     <div class="theorem">
       <span class="theorem-title">Proposition 3. Proxy Alignment</span>
-      <p>For a fixed feasible set \(\mathcal R\), if \(\arg\max_{r\in\mathcal R}V(r)\subseteq\arg\max_{r\in\mathcal R}G(r)\), then every proxy-maximizing platform rule attains the feasible maximum of the material evaluator. A sufficient condition is strict ordinal equivalence of \(V\) and \(G\) on \(\mathcal R\). Conversely, if there exist two rules \(r_1,r_2\) with \(V(r_1)>V(r_2)\) and \(G(r_1)<G(r_2)\), then on the feasible set \(\{r_1,r_2\}\), proxy maximization selects a materially inferior closure law.</p>
+      <p>For a fixed feasible set \(\mathcal R\), if \(\arg\max_{r\in\mathcal R}V(r)\subseteq\arg\max_{r\in\mathcal R}G(r)\), then every proxy-maximizing platform rule attains the feasible maximum of the material evaluator. A sufficient condition is that \(V\) and \(G\) have the same maximizer set on \(\mathcal R\); strict ordinal equivalence is sufficient when it preserves the relevant maximizers. Conversely, if there exist two rules \(r_1,r_2\) with \(V(r_1)>V(r_2)\) and \(G(r_1)&lt;G(r_2)\), then on the feasible set \(\{r_1,r_2\}\), proxy maximization selects a materially inferior closure law.</p>
     </div>
 
     <p class="proof"><strong>Proof.</strong> See Appendix A.7. The first part is a fixed-feasible-set alignment result; the second is a two-rule reversal construction.</p>
@@ -701,13 +705,13 @@
     <p>For fixed \(x_{-i}\), expected subjective payoff equals the expected opponent-only term plus \(\beta_i\) times expected material payoff. The opponent-only term does not vary with \(x_i\), and \(\beta_i>0\) preserves the ordering of all \(x_i\). Therefore the subjective and material argmax sets coincide at every \(x_{-i}\). Proposition 1 gives equality of mixed Nash sets.</p>
 
     <h3>A.5 Proof Of Proposition 2</h3>
-    <p>The displayed strict sign reversal means one of the two actions is strictly better under expected material payoff and the other is strictly better under expected subjective payoff at the same opponent mixed profile. A correspondence containing the material maximizer cannot be identical to one containing the subjective maximizer. Thus mixed best-response invariance fails.</p>
+    <p>At the same opponent mixed profile, \(BR_{i,\ell}^\pi(x_{-i};E)=\{a_i\}\) and \(BR_{i,\ell}^\star(x_{-i};E)=\{b_i\}\), with \(a_i\ne b_i\). The two singleton correspondences are therefore not equal. Thus mixed best-response invariance fails. In a two-action choice set, a strict subjective/material ranking reversal between the two actions is exactly this strict-maximizer reversal.</p>
 
     <h3>A.6 Proof Of Theorem 1</h3>
-    <p>If \(q\sim_E q'\), the closure map gives \(C_\ell(E,q)=C_\ell(E,q')\). Thus every player's subjective payoff table is the same under the two initial states, so \(\Gamma_\ell^\star(E;q)=\Gamma_\ell^\star(E;q')\) and their Nash sets coincide. For any post-closure admissible selection rule \(S(q;E,\ell)=\Phi(\Gamma_\ell^\star(E;q),E,\ell)\), the argument of \(\Phi\) is identical for \(q\) and \(q'\), so \(S(q;E,\ell)=S(q';E,\ell)\). The same conclusion holds for the equilibrium-selection form \(S(q;E,\ell)=M(\sigma(\Gamma_\ell^\star(E;q)),E,\ell)\). In the unique-closure case, every initial state in \(Q_\ell\) maps to \(\theta_\ell^\star(E)\), so \(Q_\ell\) is one equivalence class and initial preference-state selection is degenerate. A model that directly observes or rewards the pre-closure state \(q\) violates post-closure admissibility and is not covered by the theorem.</p>
+    <p>If \(q\sim_{E,\ell} q'\), the closure map gives \(C_\ell(E,q)=C_\ell(E,q')\). Thus every player's subjective payoff table is the same under the two initial states, so \(\Gamma_\ell^\star(E;q)=\Gamma_\ell^\star(E;q')\) and their Nash sets coincide. For any post-closure admissible selection rule \(S(q;E,\ell)=\Phi(\Gamma_\ell^\star(E;q),E,\ell)\), the argument of \(\Phi\) is identical for \(q\) and \(q'\), so \(S(q;E,\ell)=S(q';E,\ell)\). The same conclusion holds for the equilibrium-selection form \(S(q;E,\ell)=M(\sigma(\Gamma_\ell^\star(E;q)),E,\ell)\). In the unique-closure case, every initial state in \(Q_\ell\) maps to \(\theta_\ell^\star(E)\), so \(Q_\ell\) is one equivalence class and initial preference-state selection is degenerate. A model that directly observes or rewards the pre-closure state \(q\) violates post-closure admissibility and is not covered by the theorem.</p>
 
     <h3>A.7 Proof Of Proposition 3</h3>
-    <p>Fix \(\mathcal R\). If \(\arg\max_{\mathcal R} V\subseteq\arg\max_{\mathcal R} G\), then every proxy maximizer \(r^V\) is also a material maximizer, so \(G(r^V)=\max_{r\in\mathcal R}G(r)\). Strict ordinal equivalence on \(\mathcal R\) is sufficient because it preserves all strict rankings and therefore makes the proxy and material maximizer sets coincide. For the reversal construction, suppose there exist \(r_1,r_2\) with \(V(r_1)>V(r_2)\) and \(G(r_1)<G(r_2)\). On the feasible set \(\{r_1,r_2\}\), proxy choice selects \(r_1\), while material choice selects \(r_2\). The proxy-maximizing rule is therefore materially inferior on that feasible set.</p>
+    <p>Fix \(\mathcal R\). If \(\arg\max_{\mathcal R} V\subseteq\arg\max_{\mathcal R} G\), then every proxy maximizer \(r^V\) is also a material maximizer, so \(G(r^V)=\max_{r\in\mathcal R}G(r)\). Equality of maximizer sets is a direct sufficient condition. Strict ordinal equivalence is also sufficient when it preserves the relevant maximizers and ties on \(\mathcal R\). For the reversal construction, suppose there exist \(r_1,r_2\) with \(V(r_1)>V(r_2)\) and \(G(r_1)&lt;G(r_2)\). On the feasible set \(\{r_1,r_2\}\), proxy choice selects \(r_1\), while material choice selects \(r_2\). The proxy-maximizing rule is therefore materially inferior on that feasible set.</p>
   </section>
 
   <section class="refs">

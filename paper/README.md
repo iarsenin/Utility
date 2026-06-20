@@ -22,6 +22,10 @@ notes, model results, and literature checks.
   game theory, platform/proxy application, welfare interpretation, and WDI
   empirical appendix, with status notes that separate theorem, simulation, and
   diagnostic evidence.
+- `arxiv_submission.pdf`: archive-style PDF generated from
+  `working_paper_v1.html` after the Round 10 edits. It is a self-contained
+  reader copy for arXiv/working-paper circulation; the HTML remains the
+  editable source until a later LaTeX conversion.
 - `geb_submission_v1.html`: narrower Games and Economic Behavior-facing
   version. It removes the WDI appendix from the main manuscript and centers the
   finite-game theorem spine: fast closure, mixed best-response invariance,

@@ -302,22 +302,22 @@
   </section>
 
   <section>
-    <h2>Status Note</h2>
-    <p>This working paper is deliberately broader than the journal-submission version. It keeps three layers visible: the finite-game theory, the platform/proxy application, and an empirical appendix using WDI diagnostics. The WDI evidence is included to discipline timescale claims and to show what must eventually be measured; it is not presented as causal evidence for preference closure or platform manipulation.</p>
+    <h2>Version Note</h2>
+    <p>This working paper is deliberately broader than the journal-submission version. It keeps three layers visible for readers: the finite-game theory, the platform/proxy application, and an empirical appendix using WDI diagnostics. The WDI appendix disciplines timescale claims and illustrates what must eventually be measured; it is not causal evidence for preference closure or platform manipulation. The GEB-facing version excludes this appendix and keeps the journal submission theorem-led.</p>
 
     <table>
       <thead>
         <tr>
           <th>Layer</th>
           <th>Role in the paper</th>
-          <th>Status</th>
+          <th>Interpretation</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>Formal finite-game model</td>
           <td>Defines fast preference closure, reduced subjective games, Nash invariance, and selection after closure.</td>
-          <td>Theorem spine of the project; proof appendix still needs conversion from sketches to final submission form.</td>
+          <td>Theorem spine of the paper; formal claims are stated with proof arguments in the text.</td>
         </tr>
         <tr>
           <td>Computational stress test</td>
@@ -337,7 +337,7 @@
         <tr>
           <td>Welfare interpretation</td>
           <td>Shows why final-preference welfare is not invariant when policy can produce final preferences.</td>
-          <td>Conceptual implication; not yet a complete welfare criterion.</td>
+          <td>Conceptual implication; the paper identifies the welfare domain without imposing a complete welfare criterion.</td>
         </tr>
       </tbody>
     </table>
@@ -485,7 +485,7 @@
       <p>Fix a slow environment \(E\) and closure law \(\ell\). Suppose the fast subsystem \(T_\theta\dot{\theta}=H(\theta;E,\ell)\) has a unique globally attracting fixed point \(\theta_\ell^\star(E)\). Then, after the initial fast adjustment and in the limit \(T_\theta\to 0\), any equilibrium analysis conducted at that slow state is represented by the reduced subjective game \(\Gamma_\ell^\star(E)\). The preference state is no longer an independent slow primitive; it is the induced object \(\theta_\ell^\star(E)\).</p>
     </div>
 
-    <p class="proof"><strong>Proof sketch.</strong> Fix \(E\) and \(\ell\). On the fast time \(s=t/T_\theta\), the preference subsystem is \(d\theta/ds=H(\theta;E,\ell)\). Global attraction implies that every initial state in the relevant basin converges to \(\theta_\ell^\star(E)\) as \(s\to\infty\). Thus, along any sequence \(T_\theta\downarrow 0\) observed after the fast boundary layer and before the slow state changes, the payoff table used for play converges pointwise to \(U_i(\cdot;\theta_{i,\ell}^\star(E),E,\ell)\). Since action sets are finite, this limiting payoff table defines the reduced game \(\Gamma_\ell^\star(E)\), and any Nash calculation after adjustment is a Nash calculation in that game.</p>
+    <p class="proof"><strong>Proof.</strong> Fix \(E\) and \(\ell\). On the fast time \(s=t/T_\theta\), the preference subsystem is \(d\theta/ds=H(\theta;E,\ell)\). Global attraction implies that every initial state in the relevant basin converges to \(\theta_\ell^\star(E)\) as \(s\to\infty\). Thus, along any sequence \(T_\theta\downarrow 0\) observed after the fast boundary layer and before the slow state changes, the payoff table used for play converges pointwise to \(U_i(\cdot;\theta_{i,\ell}^\star(E),E,\ell)\). Since action sets are finite, this limiting payoff table defines the reduced game \(\Gamma_\ell^\star(E)\), and any Nash calculation after adjustment is a Nash calculation in that game.</p>
 
     <p>The lemma is a closure result, not a welfare result. It identifies the payoff object that agents optimize after fast adjustment; whether that object is materially adaptive or normatively acceptable is a separate question. A full moving-slow-state singular perturbation theorem would require additional uniform attraction, compactness, smoothness, and a specified law of motion for \(E\) and \(\ell\).</p>
   </section>
@@ -537,11 +537,11 @@
     </div>
 
     <div class="theorem">
-      <span class="theorem-title">Proposition 1. A Sufficient Nash-Invariance Condition</span>
+      <span class="theorem-title">Proposition 1. Mixed Best-Response Invariance</span>
       <p>If \(BR_{i,\ell}^\star(x_{-i};E)=BR_{i,\ell}^\pi(x_{-i};E)\) for every player \(i\) and every mixed opponent profile \(x_{-i}\in X_{-i}\), then the mixed Nash equilibrium sets of \(\Gamma_\ell^\star(E)\) and \(\Gamma_\ell^\pi(E)\) coincide. For a single fixed game this condition is sufficient, not necessary: off-equilibrium best responses may differ while the Nash set happens to remain the same. The condition is the natural invariance test when the analyst wants predictions to survive changes in equilibrium selection, feasible restrictions, or opponent profiles.</p>
     </div>
 
-    <p class="proof"><strong>Proof sketch.</strong> Mixed Nash equilibria are fixed points of mixed best-response correspondences. If all correspondences are identical, their fixed-point sets are identical. Differences away from equilibrium need not change a particular Nash set, which is why the proposition is stated as a sufficient condition and an invariance discipline rather than as a converse theorem for one fixed game.</p>
+    <p class="proof"><strong>Proof.</strong> Mixed Nash equilibria are fixed points of mixed best-response correspondences. If all correspondences are identical, their fixed-point sets are identical. Differences away from equilibrium need not change a particular Nash set, which is why the proposition is stated as a sufficient condition and an invariance discipline rather than as a converse theorem for one fixed game.</p>
 
     <p>The neutral benchmark has an exact counterpart. Some preference movements can change subjective representation without changing strategic incentives.</p>
 
@@ -566,22 +566,24 @@
 
     <div class="theorem">
       <span class="theorem-title">Proposition 2. Best-Response Non-Invariance Test</span>
-      <p>Suppose that for some player \(i\), two actions \(a_i,b_i\), and opponent mixed profile \(x_{-i}\), the subjective and material payoff differences have opposite signs. With \(\Delta^U_{i,\ell}\) and \(\Delta^\pi_{i,\ell}\) denoting the expected payoff difference between \(a_i\) and \(b_i\) under subjective and material payoffs, respectively:</p>
+      <p>Suppose that for some player \(i\), actions \(a_i,b_i\in A_i\), and opponent mixed profile \(x_{-i}\), action \(a_i\) is the unique material best response and action \(b_i\ne a_i\) is the unique subjective best response:</p>
       <div class="equation">
-        <span class="label">Ranking Reversal</span>
+        <span class="label">Strict Maximizer Reversal</span>
         \[
           \begin{aligned}
-          &\Delta^U_{i,\ell}(a_i,b_i;x_{-i},E) \\
-          &\qquad {}\times
-          \Delta^\pi_{i,\ell}(a_i,b_i;x_{-i},E)
-          <0 .
+          \{a_i\}
+          &=
+          BR_{i,\ell}^\pi(x_{-i};E),\\
+          \{b_i\}
+          &=
+          BR_{i,\ell}^\star(x_{-i};E).
           \end{aligned}
         \]
       </div>
-      <p>Then \(BR_{i,\ell}^\star(x_{-i};E)\ne BR_{i,\ell}^\pi(x_{-i};E)\). The mixed best-response invariance condition fails, although Nash sets may still coincide in special games.</p>
+      <p>Then \(BR_{i,\ell}^\star(x_{-i};E)\ne BR_{i,\ell}^\pi(x_{-i};E)\). The mixed best-response invariance condition fails, although Nash sets may still coincide in special games. In a two-action choice set this condition is equivalent to a strict subjective/material ranking reversal between the two actions.</p>
     </div>
 
-    <p class="proof"><strong>Proof sketch.</strong> The strict sign reversal makes one action strictly better under expected material payoff and the other strictly better under expected subjective payoff at the same opponent profile. The two argmax correspondences therefore cannot be identical.</p>
+    <p class="proof"><strong>Proof.</strong> At the same opponent mixed profile, the material and subjective best-response correspondences are distinct singleton sets. They therefore cannot be identical. In a two-action choice set, a strict subjective/material ranking reversal between the two actions is exactly this strict-maximizer reversal.</p>
 
     <div class="theorem">
       <span class="theorem-title">Example 1. A Two-Action Nash-Set Change</span>
@@ -740,10 +742,10 @@
 
     <div class="theorem">
       <span class="theorem-title">Theorem 1. Selection Target Shift</span>
-      <p>Fix \(E\) and \(\ell\). Let \(Q_\ell\) be a set of initial preference states, and let \(C_\ell(E,q)\) be the post-closure state reached from \(q\in Q_\ell\). Write \(\Gamma_\ell^\star(E;q)\) for the reduced subjective game generated by \(C_\ell(E,q)\). If \(q\sim_E q'\), meaning \(C_\ell(E,q)=C_\ell(E,q')\), then \(q\) and \(q'\) induce the same reduced subjective game and the same Nash set. Consequently, every material selection rule that depends on \(q\) only through post-closure play, for example \(S(q;E,\ell)=M(\sigma(\Gamma_\ell^\star(E;q)),E,\ell)\), is constant on each closure-equivalence class. Under common unique closure, all \(q\in Q_\ell\) lie in one equivalence class, so selection over initial preference states is degenerate in the \(T_\theta\to 0\) limit.</p>
+      <p>Fix \(E\) and \(\ell\). Let \(Q_\ell\) be a set of initial preference states, and let \(C_\ell(E,q)\) be the post-closure state reached from \(q\in Q_\ell\). Write \(\Gamma_\ell^\star(E;q)\) for the reduced subjective game generated by \(C_\ell(E,q)\). Define \(q\sim_{E,\ell}q'\) if \(C_\ell(E,q)=C_\ell(E,q')\). A material selection rule is post-closure admissible if it depends on \(q\) only through the reduced game, selected post-closure play, and the material evaluator; for example, \(S(q;E,\ell)=M(\sigma(\Gamma_\ell^\star(E;q)),E,\ell)\). If \(q\sim_{E,\ell}q'\), then \(q\) and \(q'\) induce the same reduced subjective game and the same Nash set. Consequently, every post-closure admissible material selection rule is constant on each closure-equivalence class. Under common unique closure, all \(q\in Q_\ell\) lie in one equivalence class, so selection over initial preference states is degenerate in the \(T_\theta\to 0\) limit.</p>
     </div>
 
-    <p class="proof"><strong>Proof sketch.</strong> If \(q\sim_E q'\), the closure map gives \(C_\ell(E,q)=C_\ell(E,q')\). The payoff table in the reduced subjective game is therefore identical under the two initial states, so their Nash sets coincide. A post-closure admissible selection rule receives the same reduced game and selected play as input, so it gives the same evaluation. Direct reward of the pre-closure state \(q\) is outside this theorem. Only heterogeneity that survives closure, such as different laws \(\ell\), can be selected.</p>
+    <p class="proof"><strong>Proof.</strong> If \(q\sim_{E,\ell} q'\), the closure map gives \(C_\ell(E,q)=C_\ell(E,q')\). The payoff table in the reduced subjective game is therefore identical under the two initial states, so their Nash sets coincide. A post-closure admissible selection rule receives the same reduced game and selected play as input, so it gives the same evaluation. Direct reward of the pre-closure state \(q\) is outside this theorem. Only heterogeneity that survives closure, such as different laws \(\ell\), can be selected.</p>
 
     <p>This result is a target shift, not a denial of selection. In a slow-preference model, selection may act on preference types. In a fast-preference model with common closure, selection acts on the machinery that produces preferences.</p>
   </section>
@@ -785,10 +787,10 @@
 
     <div class="theorem">
       <span class="theorem-title">Proposition 3. Proxy Alignment</span>
-      <p>For a fixed feasible set \(\mathcal R\), if proxy maximizers are always material maximizers, \(\arg\max_{r\in\mathcal R} V(r)\subseteq \arg\max_{r\in\mathcal R} G(r)\), then proxy choice produces no material loss relative to that feasible set. A sufficient condition is strict ordinal equivalence of \(V\) and \(G\) on \(\mathcal R\). Conversely, if there exist two rules \(r_1,r_2\) with \(V(r_1)>V(r_2)\) and \(G(r_1)<G(r_2)\), then on the feasible set \(\{r_1,r_2\}\), proxy choice selects a materially inferior closure law.</p>
+      <p>For a fixed feasible set \(\mathcal R\), if proxy maximizers are always material maximizers, \(\arg\max_{r\in\mathcal R} V(r)\subseteq \arg\max_{r\in\mathcal R} G(r)\), then proxy choice produces no material loss relative to that feasible set. A sufficient condition is that \(V\) and \(G\) have the same maximizer set on \(\mathcal R\); strict ordinal equivalence is sufficient when it preserves the relevant maximizers. Conversely, if there exist two rules \(r_1,r_2\) with \(V(r_1)>V(r_2)\) and \(G(r_1)&lt;G(r_2)\), then on the feasible set \(\{r_1,r_2\}\), proxy choice selects a materially inferior closure law.</p>
     </div>
 
-    <p class="proof"><strong>Proof sketch.</strong> If every proxy maximizer is also a material maximizer on \(\mathcal R\), then any selected \(r^V\) attains the feasible maximum of \(G\). Strict ordinal equivalence implies this inclusion. For the reversal construction, restrict the feasible set to two rules \(r_1,r_2\) such that \(V(r_1)>V(r_2)\) but \(G(r_1)<G(r_2)\). Then proxy maximization selects \(r_1\) and loses material payoff relative to \(r_2\).</p>
+    <p class="proof"><strong>Proof.</strong> If every proxy maximizer is also a material maximizer on \(\mathcal R\), then any selected \(r^V\) attains the feasible maximum of \(G\). Equality of maximizer sets is a direct sufficient condition. Strict ordinal equivalence is also sufficient when it preserves the relevant maximizers and ties on \(\mathcal R\). For the reversal construction, restrict the feasible set to two rules \(r_1,r_2\) such that \(V(r_1)>V(r_2)\) but \(G(r_1)&lt;G(r_2)\). Then proxy maximization selects \(r_1\) and loses material payoff relative to \(r_2\).</p>
 
     <p>Equilibrium shifts are not necessarily material losses. A rule can change the induced subjective game and the selected equilibrium while preserving the material criterion if the proxy remains aligned with the evaluator. Material loss requires misalignment with the chosen evaluator, not merely movement in behavior. In the finite-game stress test, losses are common under independent and misaligned proxies; that result is a computational illustration, not part of the proposition.</p>
 

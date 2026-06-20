@@ -377,6 +377,57 @@ The mobile Proposition 2 equation initially overflowed; it was fixed by using
 compact payoff-difference notation and by adding horizontal-overflow protection
 to equation boxes.
 
+### Archive PDF And Rounds 8-10
+
+Generated `paper/arxiv_submission.pdf` from `paper/working_paper_v1.html` as
+the archive-style working-paper artifact. The PDF is a reader copy for
+arXiv/working-paper circulation; the HTML remains the editable source until a
+later LaTeX conversion.
+
+Completed three additional editing cycles after generating the first PDF:
+
+```text
+Round 8: Modeller -> Writer -> Editor -> Writer
+Round 9: Modeller -> Writer -> Editor -> Writer
+Round 10: Modeller -> Writer -> Editor -> Writer
+```
+
+The round logs are:
+
+- `docs/agent_rounds/round_8_modeller.md`
+- `docs/agent_rounds/round_8_writer.md`
+- `docs/agent_rounds/round_8_editor.md`
+- `docs/agent_rounds/round_8_writer_final.md`
+- `docs/agent_rounds/round_9_modeller.md`
+- `docs/agent_rounds/round_9_writer.md`
+- `docs/agent_rounds/round_9_editor.md`
+- `docs/agent_rounds/round_9_writer_final.md`
+- `docs/agent_rounds/round_10_modeller.md`
+- `docs/agent_rounds/round_10_writer.md`
+- `docs/agent_rounds/round_10_editor.md`
+- `docs/agent_rounds/round_10_writer_final.md`
+
+Round 8 cleaned archive-facing language and proof labels. Round 9 added a
+theorem-map paragraph to the GEB introduction and renamed the working-paper
+front note to "Version Note." Round 10 fixed a real theorem hygiene issue:
+Proposition 2 is now a strict-maximizer non-invariance result rather than an
+overbroad pairwise ranking-reversal claim for arbitrary finite action sets.
+Theorem 1 now uses \(q\sim_{E,\ell}q'\), and Proposition 3 uses maximizer-set
+alignment as the core sufficient condition.
+
+The final PDF was regenerated after the Round 10 edits, and the first-page
+thumbnail is saved as `results/figures/arxiv_submission.pdf.png`.
+
+Round 10 visual QA screenshots are saved in `results/figures/`:
+
+- `working_paper_v1_round10_qa_prop2.png`
+- `working_paper_v1_round10_qa_theorem1.png`
+- `working_paper_v1_round10_qa_prop3.png`
+- `working_paper_v1_round10_qa_tables.png`
+- `working_paper_v1_round10_qa_wdi_appendix.png`
+- `geb_submission_v1_round10_qa_prop2.png`
+- `geb_submission_v1_round10_qa_prop3.png`
+
 ### Next Actions
 
 - Convert `paper/geb_submission_v1.html` to a LaTeX/PDF submission package with
