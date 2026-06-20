@@ -73,6 +73,25 @@ Preliminary conclusion:
 - Potentially novel: a mathematical economics model in which a platform chooses the preference-transition kernel `K_m`, producing a four-way split between platform value, final subjective utility, initial-preference welfare, and material/fitness welfare.
 - Closest current threats: Kleinberg-Mullainathan-Raghavan on engagement optimization, Jiang et al. on recommender feedback loops, and Khosrowi-Beck on recommender welfare foundations.
 
+### Fast Preference Limit Pass
+
+Added `docs/09_fast_preference_limit.md`, `src/utility_endogenous/fast_limit.py`, and `scripts/run_fast_limit.py`.
+
+Preliminary conclusion:
+
+- This direction is more fundamental than the platform-only framing.
+- Let preference adaptation occur on timescale `T` and take `T -> 0`. If the fast preference subsystem has a unique attracting branch `theta = Phi(z, m)`, utility is replaced by the critical manifold of preference adaptation.
+- Darwinian selection over preference states disappears in the unique-attractor limit; selection can only act on slow objects such as adaptation rules, institutions, biological resistance, or population size.
+- Material Nash equilibrium need not survive. The surviving Nash object is best response to the fast-adapted preference state, not necessarily to material payoffs.
+- Final-preference welfare is too weak in this limit because a path can create the preferences that endorse it.
+
+Numerical readout:
+
+- Strong taste adaptation has fast attractor `theta ~= 0.9615`; the finite AI-speed simulation converges to the same value.
+- Selection strength from `0.20` to `5.00` leaves that fast attractor unchanged, while realized fitness falls.
+- In the Prisoner's Dilemma model, fast prosocial adaptation yields full cooperation even though cooperation is not material Nash.
+- In the platform model, the limit depends on transition-cost scaling: steady penalties vanish after the boundary layer, while boundary-layer penalties can block capture.
+
 ### Current Conjectures
 
 1. If preference-transition technology is fast relative to biological or material selection, current subjective welfare can rise while fitness falls.
@@ -88,6 +107,7 @@ Preliminary conclusion:
 - Tighten welfare language around initial preferences, final preferences, meta-preferences, and fitness.
 - Begin a formal note for the preference-laundering theorem.
 - Map the exact difference from Kleinberg, Mullainathan, and Raghavan's engagement-optimization model.
+- Prove the fast-preference singular-limit theorem before committing to the platform-specific paper spine.
 
 ### Open Questions
 

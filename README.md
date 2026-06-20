@@ -59,6 +59,17 @@ The script writes:
 - `results/figures/platform_inversion_heatmap.svg`
 - `results/tables/iteration_*.csv`
 
+Run the fast preference limit experiment:
+
+```bash
+python3 scripts/run_fast_limit.py
+```
+
+The script writes:
+
+- `results/fast_preference_limit_report.md`
+- `results/tables/fast_limit_*.csv`
+
 ## Current Status
 
 This is bootstrap version 0.1. The repo currently contains:
@@ -78,6 +89,7 @@ Start here for the current research direction:
 - `docs/06_formal_research_plan.md`
 - `docs/07_paper_outline_v1.md`
 - `docs/08_novelty_check_v1.md`
+- `docs/09_fast_preference_limit.md`
 - `references/literature_matrix.md`
 
 Next model specs:
@@ -85,4 +97,4 @@ Next model specs:
 - `models/platform_preference_control.md`
 - `models/revealed_preference_with_drift.md`
 
-Current research decision: center the first paper on platform-controlled preference transitions, while using taste drift and indirect evolutionary games as benchmark sections.
+Current research decision: treat platform-controlled preference transitions as one application of the broader fast-preference-limit program. The next proof target is a singular-limit theorem for utility functions that adapt faster than selection.

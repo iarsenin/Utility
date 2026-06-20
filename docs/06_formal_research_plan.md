@@ -1,5 +1,10 @@
 # Formal Research Plan
 
+Status note: this plan now has a new priority from
+`docs/09_fast_preference_limit.md`: prove the `T -> 0` singular-limit theorem
+before committing the first paper to the platform-control model. The platform
+model remains a key application.
+
 ## 1. Core Mathematical Environment
 
 Time is discrete, `t = 0, 1, 2, ...`. There is a population distribution `mu_t` over preference states `theta in Theta`.

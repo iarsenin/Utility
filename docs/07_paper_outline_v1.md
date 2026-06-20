@@ -1,5 +1,10 @@
 # Paper Outline v1
 
+Status note: this outline predates the fast-preference-limit pass in
+`docs/09_fast_preference_limit.md`. Platform-controlled preference transition
+remains important, but it should now be treated as an application of a broader
+singular-limit framework rather than as the only candidate spine.
+
 ## Working Title
 
 Endogenous Utility at AI Speed: Preference Dynamics, Platform Control, and Welfare Failure

@@ -1,0 +1,5 @@
+scenario,finite_rate,initial_lambda,finite_final_lambda,fast_limit_lambda,finite_final_cooperation,fast_limit_cooperation,fast_limit_material_payoff,material_nash,note
+fixed_preferences_selection_only,0.0,0.2502149677179403,0.08035640009316149,,0.00042332979765344754,,,,No active fast preference law; this is the inherited-preference benchmark.
+prosocial_institution,0.055,0.2502149677179403,1.0826670492459547,1.1,1.0,1.0,3.0,False,Fast preference adaptation pins the social motive before material selection acts.
+conflict_algorithm,0.085,0.2502149677179403,-0.24965203951521786,-0.25,1.511215863771019e-293,0,1.0,True,Fast preference adaptation pins the social motive before material selection acts.
+knife_edge_mixed_fast_preference,0.1,0.2502149677179403,0.34033893793941394,0.38,0.2744761066804921,0.3792121446745475,2.5168485786981902,False,Fast preference adaptation pins the social motive before material selection acts.
