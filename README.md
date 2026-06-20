@@ -97,6 +97,7 @@ This is bootstrap version 0.1. The repo currently contains:
 
 Start here for the current research direction:
 
+- `paper/article_draft_v0_math.md`
 - `paper/article_draft_v0.md`
 - `docs/05_research_synthesis_v1.md`
 - `docs/06_formal_research_plan.md`

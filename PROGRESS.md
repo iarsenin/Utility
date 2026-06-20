@@ -113,6 +113,8 @@ New numerical readout:
 ### Article Draft v0
 
 Added `paper/article_draft_v0.md`.
+Added `paper/article_draft_v0_math.md` as the preferred reading copy with
+Markdown/LaTeX display equations.
 
 Purpose:
 
