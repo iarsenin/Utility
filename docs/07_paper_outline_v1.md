@@ -66,7 +66,22 @@ Definition: Endogenous-preference equilibrium.
 Proposition: Static model is the degenerate-K special case.
 ```
 
-## Section 4: One-Dimensional Taste Drift
+## Updated Research Decision
+
+After three implementation iterations, the paper should center on platform-controlled preference transition. The one-dimensional taste model and the indirect evolutionary Prisoner's Dilemma remain in the paper, but as benchmark/proposition sections rather than the main contribution.
+
+The current strongest result is:
+
+```text
+A platform that optimizes engagement and predictability chooses a preference-transition
+policy that shifts the population toward platform-oriented tastes. In broad parameter
+regions this raises platform value while lowering material fitness and the initial self's
+evaluation of the induced allocation.
+```
+
+The simulation version appears in `results/research_iteration_report.md`; the next step is to prove the threshold condition analytically.
+
+## Section 4: Benchmark 1, One-Dimensional Taste Drift
 
 Use the online/offline model:
 
@@ -95,7 +110,15 @@ even when fitness is lower there.
 
 This is the "fitness-utility inversion" section.
 
-## Section 5: Indirect Evolutionary Game With Preference Mutation
+Iteration result:
+
+```text
+35/42 sweep cells show the fitness-utility inversion criterion.
+```
+
+Role in paper: transparent theorem candidate, not the centerpiece.
+
+## Section 5: Benchmark 2, Indirect Evolutionary Game With Preference Mutation
 
 Start from Prisoner's Dilemma or a generic symmetric game.
 
@@ -124,7 +147,15 @@ The dynamic stability of an action outcome depends on the preference-transition 
 not only on Nash equilibrium of the material game.
 ```
 
-## Section 6: Platform Control
+Iteration result:
+
+```text
+12/36 sweep cells produce high-cooperation reversal.
+```
+
+Role in paper: bridge to indirect evolutionary preference theory.
+
+## Section 6: Main Model, Platform Control
 
 Introduce platform objective:
 
@@ -145,6 +176,22 @@ The platform may optimally choose a transition law that increases current subjec
 satisfaction and engagement while lowering material fitness or preference autonomy.
 ```
 
+Iteration result:
+
+```text
+49/108 sweep cells show platform inversion: taste capture,
+fitness loss, and initial-preference loss.
+```
+
+Policy comparative static:
+
+```text
+A weak autonomy penalty barely changes exposure, but a calibrated guardrail
+prevents capture in the current model.
+```
+
+This section should receive the most formal attention.
+
 ## Section 7: Welfare
 
 Show the welfare conflict:
@@ -157,6 +204,14 @@ Candidate proposition:
 
 ```text
 Ex post Pareto efficiency is not invariant to preference-transition technologies.
+```
+
+Additional simulation-backed trilemma:
+
+```text
+no platform: fitness can improve while initial-preference value falls;
+unregulated platform: platform value rises while fitness and initial-preference value fall;
+guardrail: moderate intervention can preserve initial-preference value and fitness.
 ```
 
 Policy interpretation:

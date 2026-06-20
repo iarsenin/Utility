@@ -47,6 +47,18 @@ The script writes:
 - `results/tables/endogenous_taste_summary.csv`
 - `results/tables/indirect_evolution_summary.csv`
 
+Run the three-iteration research sprint:
+
+```bash
+python3 scripts/run_research_iterations.py
+```
+
+The script writes:
+
+- `results/research_iteration_report.md`
+- `results/figures/platform_inversion_heatmap.svg`
+- `results/tables/iteration_*.csv`
+
 ## Current Status
 
 This is bootstrap version 0.1. The repo currently contains:
@@ -71,3 +83,5 @@ Next model specs:
 
 - `models/platform_preference_control.md`
 - `models/revealed_preference_with_drift.md`
+
+Current research decision: center the first paper on platform-controlled preference transitions, while using taste drift and indirect evolutionary games as benchmark sections.

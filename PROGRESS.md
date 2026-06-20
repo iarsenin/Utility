@@ -39,6 +39,30 @@ algorithmic and AI systems can optimize the preference-transition kernel K_m
 at a much faster timescale than culture or biological selection.
 ```
 
+### Three-Iteration Research Sprint
+
+Completed three major iterations in `scripts/run_research_iterations.py`.
+
+Iteration 1: one-dimensional taste drift.
+
+- Benchmark reproduced: with degenerate `K`, mean taste is stable; with selection only, taste moves toward the fitness-favored offline state.
+- Endogenous modification: AI-speed transition pushes mean online/artificial taste from about `0.35` to `0.96` while fitness falls.
+- Verdict: useful theorem candidate, too reduced-form to carry the paper.
+
+Iteration 2: indirect evolutionary Prisoner's Dilemma.
+
+- Benchmark reproduced: material payoff selection pushes cooperation nearly to zero.
+- Endogenous modification: preference mutation toward prosocial types restores cooperation; mutation toward conflict collapses it.
+- Verdict: strong bridge to the literature, not novel enough unless platform incentives choose the mutation law.
+
+Iteration 3: platform preference control.
+
+- Benchmark reproduced: no-platform selection increases fitness but can move taste away from the initial optimum.
+- Endogenous modification: a myopic platform chooses exposure, raising mean online/artificial taste from about `0.35` to `0.79` while fitness falls by about `1.02`.
+- Parameter sweep: `49/108` platform cells show taste capture, fitness loss, and initial-preference loss.
+- Guardrail result: a calibrated autonomy penalty prevents capture and improves fitness; a weak penalty barely changes platform behavior.
+- Verdict: this is the first paper's core candidate.
+
 ### Current Conjectures
 
 1. If preference-transition technology is fast relative to biological or material selection, current subjective welfare can rise while fitness falls.
@@ -48,9 +72,10 @@ at a much faster timescale than culture or biological selection.
 
 ### Next Actions
 
-- Prove or falsify the timescale-dominance proposition in `docs/06_formal_research_plan.md`.
-- Implement `models/platform_preference_control.md`.
-- Create phase diagrams for plasticity, selection strength, platform bias, and exposure cost.
+- Prove the timescale-dominance proposition in `docs/06_formal_research_plan.md`.
+- Derive the platform-control first-order or threshold condition.
+- Replace the myopic platform with a forward-looking platform or regulator.
+- Tighten welfare language around initial preferences, final preferences, meta-preferences, and fitness.
 - Begin a formal note for the preference-laundering theorem.
 
 ### Open Questions

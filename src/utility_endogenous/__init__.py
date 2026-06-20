@@ -3,4 +3,5 @@
 __all__ = [
     "endogenous_taste",
     "indirect_evolution",
+    "platform_control",
 ]

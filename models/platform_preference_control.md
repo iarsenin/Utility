@@ -112,3 +112,24 @@ This is the cleanest place to formalize the paper's "satisfied by preferences it
    - selection strength `s`,
    - exposure cost,
    - predictability return `rho`.
+
+## Implementation Status
+
+Implemented in `src/utility_endogenous/platform_control.py` and run through `scripts/run_research_iterations.py`.
+
+Current named results:
+
+- no-platform selection benchmark: fitness rises, but taste is pulled almost to zero;
+- fixed high exposure: taste capture occurs and fitness falls;
+- myopic platform with low exposure cost: the platform chooses repeated moderate exposure and produces taste capture;
+- high exposure cost: capture weakens sharply;
+- weak autonomy penalty: insufficient;
+- calibrated guardrail: prevents capture and improves fitness in the current calibration.
+
+Current sweep result:
+
+```text
+49/108 parameter cells show platform inversion.
+```
+
+This is now the main candidate model for the first paper.
