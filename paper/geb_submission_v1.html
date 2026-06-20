@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fast Preference Closure</title>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+        processEscapes: true,
+        tags: 'ams'
+      },
+      chtml: {
+        scale: 1.03,
+        linebreaks: { automatic: true }
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <style>
+    :root {
+      --ink: #151719;
+      --muted: #5d6673;
+      --rule: #d9dee7;
+      --soft: #f6f8fb;
+      --box: #fbfcfe;
+      --accent: #235f73;
+      --accent-soft: #e8f3f6;
+      --theorem: #f8fbf5;
+      --theorem-rule: #78a55a;
+      --warning: #fff8ed;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #ffffff;
+      color: var(--ink);
+      font-family: Charter, "Iowan Old Style", Georgia, serif;
+      font-size: 19px;
+      line-height: 1.62;
+    }
+
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 48px 30px 86px;
+    }
+
+    header {
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 34px;
+      padding-bottom: 26px;
+    }
+
+    h1, h2, h3, h4, .meta, .subtitle, .label, table, figcaption, .takeaway, .note, .theorem-title {
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    h1, h2, h3, h4 {
+      color: #101418;
+      line-height: 1.22;
+    }
+
+    h1 {
+      font-size: clamp(2.25rem, 6vw, 4.35rem);
+      letter-spacing: 0;
+      margin: 0 0 12px;
+    }
+
+    h2 {
+      border-top: 1px solid var(--rule);
+      font-size: 1.58rem;
+      margin: 46px 0 15px;
+      padding-top: 26px;
+    }
+
+    h3 {
+      font-size: 1.14rem;
+      margin: 30px 0 9px;
+    }
+
+    h4 {
+      font-size: 1rem;
+      margin: 22px 0 7px;
+    }
+
+    p {
+      margin: 0 0 16px;
+    }
+
+    a {
+      color: #1e6078;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+    }
+
+    ul, ol {
+      margin: 0 0 18px 1.25rem;
+      padding: 0;
+    }
+
+    li {
+      margin: 5px 0;
+    }
+
+    .subtitle {
+      color: var(--accent);
+      font-size: 1.25rem;
+      font-weight: 650;
+      margin: 0 0 16px;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin: 0 0 6px;
+    }
+
+    .abstract {
+      background: var(--soft);
+      border-left: 4px solid var(--accent);
+      margin: 24px 0 34px;
+      padding: 19px 23px 17px;
+    }
+
+    .abstract h2 {
+      border-top: 0;
+      font-size: 1.24rem;
+      margin: 0 0 10px;
+      padding: 0;
+    }
+
+    .note, .takeaway {
+      background: var(--accent-soft);
+      border: 1px solid #c7e0e7;
+      color: #173b49;
+      font-size: 0.96rem;
+      line-height: 1.5;
+      margin: 22px 0;
+      padding: 14px 16px;
+    }
+
+    .warning {
+      background: var(--warning);
+      border-color: #ecd3aa;
+      color: #593b12;
+    }
+
+    .equation {
+      background: var(--box);
+      border: 1px solid var(--rule);
+      border-left: 4px solid var(--accent);
+      margin: 22px auto;
+      max-width: 900px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding: 14px 18px 12px;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .equation .label {
+      color: var(--muted);
+      display: block;
+      font-size: 0.79rem;
+      font-weight: 720;
+      letter-spacing: 0.03em;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    .equation mjx-container[jax="CHTML"][display="true"] {
+      margin: 0.2em 0;
+      max-width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      text-align: center !important;
+    }
+
+    .theorem {
+      background: var(--theorem);
+      border: 1px solid #d9e8ce;
+      border-left: 4px solid var(--theorem-rule);
+      margin: 24px 0;
+      padding: 15px 18px 13px;
+    }
+
+    .theorem-title {
+      color: #385928;
+      display: block;
+      font-size: 0.91rem;
+      font-weight: 750;
+      letter-spacing: 0.01em;
+      margin-bottom: 8px;
+    }
+
+    .proof {
+      color: #2d343b;
+      font-size: 0.96em;
+    }
+
+    .proof strong {
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    figure {
+      margin: 28px 0 30px;
+    }
+
+    figure img {
+      border: 1px solid var(--rule);
+      display: block;
+      height: auto;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    figcaption {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.45;
+      margin-top: 8px;
+    }
+
+    table {
+      border-collapse: collapse;
+      font-size: 0.92rem;
+      line-height: 1.4;
+      margin: 18px 0 24px;
+      width: 100%;
+    }
+
+    th, td {
+      border-bottom: 1px solid var(--rule);
+      padding: 9px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: #26313c;
+      font-weight: 720;
+    }
+
+    .num {
+      font-variant-numeric: tabular-nums;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .small {
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.48;
+    }
+
+    .refs p {
+      font-size: 0.94rem;
+      line-height: 1.42;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 720px) {
+      body {
+        font-size: 17px;
+      }
+
+      main {
+        padding: 30px 18px 60px;
+      }
+
+      .equation {
+        padding: 12px 12px 10px;
+      }
+
+      table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Fast Preference Closure</h1>
+    <p class="subtitle">Endogenous utility, Nash equilibrium, and selection in finite games</p>
+    <p class="meta">June 20, 2026.</p>
+    <p class="meta"><strong>JEL codes:</strong> C72, D01, D11, D83, D91. <strong>Keywords:</strong> endogenous preferences, Nash equilibrium, evolutionary preferences, material payoff, singular perturbation, selection.</p>
+  </header>
+
+  <section class="abstract">
+    <h2>Abstract</h2>
+    <p>This paper studies finite games in which the utility representation used for play is generated by a fast preference state. For each fixed slow environment and closure law, the fast state converges to an attracting branch, inducing a reduced subjective game. Nash equilibrium is then computed in that induced game, while material payoff is evaluated separately. All formal results are fixed-\(E\), fixed-\(\ell\) comparative statics after the fast boundary layer. The paper gives a mixed best-response condition under which Nash sets of the reduced subjective and material benchmark games are invariant to fast closure, shows that selection over initial preference states becomes degenerate for material selection rules that observe only post-closure play, and identifies closure laws as the remaining objects of material selection. A platform-control application shows that material loss is not implied by preference endogeneity alone; it depends on the alignment between the proxy used to choose closure laws and the material evaluator. Computational finite-game audits illustrate the sharpness of the invariance condition.</p>
+  </section>
+
+  <section>
+    <h2>1. Introduction</h2>
+    <p>In a standard finite game, payoffs are primitives. The players optimize those payoffs, and Nash equilibrium is a fixed point of the induced best-response correspondences. In many economic applications, however, the utility representation that guides play is itself produced by previous exposure, habit, socialization, institutional rules, or recommendation technologies. The question in this paper is what happens in the limiting case in which that preference-producing state adjusts faster than the other state variables of the game.</p>
+
+    <p>The model separates subjective utility from material payoff. Subjective utility is the representation players maximize. Material payoff is the criterion used for survival, growth, welfare accounting, or external evaluation. A closure law maps a slow environment into a fast preference state; that state then induces the subjective game in which players choose mixed strategies. Material payoff is evaluated only after the induced game is solved.</p>
+
+    <p>The contribution is not the claim that preferences are endogenous. That claim is familiar from habit formation, addiction, cultural transmission, advertising, identity, and indirect evolutionary preferences. The contribution is the operator order in the fast-preference limit. In indirect evolutionary preference models, subjective preferences determine play and are then selected by material payoff over a slower evolutionary process. Here, for each fixed slow state, subjective preferences first close under a fast law; material selection then operates on the closure laws, institutions, or transition rules that remain heterogeneous after closure.</p>
+
+    <div class="equation">
+      <span class="label">Operator Order</span>
+      \[
+        \ell
+        \longmapsto
+        \theta_\ell^\star(E)
+        \longmapsto
+        \Gamma_\ell^\star(E)
+        \longmapsto
+        NE\!\left(\Gamma_\ell^\star(E)\right)
+        \longmapsto
+        G_\ell(E).
+      \]
+    </div>
+
+    <p>The first implication is conceptual but formal: Nash equilibrium remains the fixed-point method, but the game to which it is applied is the reduced subjective game. The second implication is a selection result: if all initial preference states in a class converge to the same fast closure, selection cannot distinguish among those initial states after closure. It can distinguish only among closure laws or institutions that induce different reduced games. The third implication is a conditional welfare result: fast preference closure does not imply material harm by itself; material loss depends on the alignment between the objective that generates preferences and the material evaluator.</p>
+
+    <p>Recommender systems and AI-mediated environments are useful applications because they can choose exposure rules that affect future utility representations. They are not the paper's formal object. The formal object is a finite normal-form game with a fast preference state, subjective payoffs, material payoffs, and selection over closure laws.</p>
+  </section>
+
+  <section>
+    <h2>2. Related Work</h2>
+    <p>The paper is closest to indirect evolutionary preferences and two-speed dynamics. In that literature, subjective preferences determine behavior, while material payoffs determine which preferences survive. The present paper keeps the same subjective/material distinction but reverses the timing of the preference object: preferences close before equilibrium is computed and before material selection evaluates outcomes.</p>
+
+    <p>The analysis also relates to endogenous-preference models in consumer theory, cultural transmission, identity, addiction, chosen preferences, and adaptive utility. Those literatures make preferences depend on history, institutions, or choice. The limiting exercise here is narrower: given a fast preference subsystem and a finite game, characterize the reduced game, the conditions for Nash-set invariance, and the objects on which selection can act after closure.</p>
+
+    <p>Finally, the platform application connects to work on recommender systems, engagement objectives, and feedback loops. The paper does not assume that platform objectives are harmful. It asks which formal condition prevents harm: if the proxy used to choose closure laws is aligned with the material evaluator, proxy choice is materially harmless on the feasible set; if proxy and material rankings reverse on some pair of rules, there is a two-rule feasible set on which proxy choice selects a materially inferior closure law.</p>
+  </section>
+
+  <section>
+    <h2>3. Model</h2>
+    <p>Let \(N=\{1,\ldots,n\}\) be a finite set of players, \(A_i\) player \(i\)'s finite action set, and \(A=\prod_i A_i\). A mixed strategy for player \(i\) is \(x_i\in\Delta(A_i)\), and \(X=\prod_i\Delta(A_i)\) is the set of mixed profiles. The slow environment is \(E\in\mathcal E\). A closure law is \(\ell\in\mathcal L\).</p>
+
+    <p>Player \(i\)'s subjective utility is \(U_i(a;\theta_i,E,\ell)\), where \(\theta_i\in\Theta_i\) is the preference state. Player \(i\)'s material payoff is \(\pi_i(a;E,\ell)\). The material payoff need not equal the subjective utility representation.</p>
+
+    <div class="equation">
+      <span class="label">Payoff Objects</span>
+      \[
+        U_i(a;\theta_i,E,\ell)
+        \quad\text{and}\quad
+        \pi_i(a;E,\ell).
+      \]
+    </div>
+
+    <p>The preference state follows a fast dynamic. With \(\theta=(\theta_1,\ldots,\theta_n)\), write:</p>
+
+    <div class="equation">
+      <span class="label">Fast Preference Dynamics</span>
+      \[
+        T_\theta \dot{\theta}
+        =
+        H(\theta;E,\ell).
+      \]
+    </div>
+
+    <p>The maintained boundary-layer assumption is fixed-state closure. All formal results below are fixed-\(E\), fixed-\(\ell\) comparative statics after the fast boundary layer. For each active \((E,\ell)\), the fast subsystem has a unique globally attracting fixed point \(\theta_\ell^\star(E)\). A moving-slow-state model would require additional tracking assumptions; Appendix A.1 records that possible extension, but no result in the paper depends on it.</p>
+
+    <div class="equation">
+      <span class="label">Closure Branch</span>
+      \[
+        H(\theta_\ell^\star(E);E,\ell)=0,
+        \qquad
+        \theta(t)\to\theta_\ell^\star(E)
+        \ \text{on the fast clock.}
+      \]
+    </div>
+
+    <p>The reduced subjective game induced by closure law \(\ell\) at environment \(E\) is:</p>
+
+    <div class="equation">
+      <span class="label">Reduced Subjective Game</span>
+      \[
+        \Gamma_\ell^\star(E)
+        =
+        \Bigl(N,\{A_i\}_{i\in N},
+        \{\,U_i(\cdot;\theta_{i,\ell}^\star(E),E,\ell)\,\}_{i\in N}\Bigr).
+      \]
+    </div>
+
+    <p>The material benchmark game uses material payoffs:</p>
+
+    <div class="equation">
+      <span class="label">Material Benchmark Game</span>
+      \[
+        \Gamma_\ell^\pi(E)
+        =
+        \Bigl(N,\{A_i\}_{i\in N},
+        \{\,\pi_i(\cdot;E,\ell)\,\}_{i\in N}\Bigr).
+      \]
+    </div>
+
+    <p>When a scalar material comparison is needed, fix an equilibrium-selection rule \(\sigma_\ell(E)\in NE(\Gamma_\ell^\star(E))\) and a material evaluator \(M:X\times\mathcal E\times\mathcal L\to\mathbb R\). Then:</p>
+
+    <div class="equation">
+      <span class="label">Scalar Material Evaluation</span>
+      \[
+        G_\ell(E)
+        =
+        M\!\left(\sigma_\ell(E),E,\ell\right).
+      \]
+    </div>
+
+    <p>Set-valued equilibrium statements below do not depend on \(\sigma\). Scalar material comparisons do.</p>
+  </section>
+
+  <section>
+    <h2>4. Fast Closure And Reduced Games</h2>
+    <div class="theorem">
+      <span class="theorem-title">Lemma 1. Fast Closure For A Fixed Slow State</span>
+      <p>Fix \(E\) and \(\ell\). Suppose \(T_\theta\dot{\theta}=H(\theta;E,\ell)\) has a unique globally attracting fixed point \(\theta_\ell^\star(E)\). Then, after the boundary-layer adjustment and in the limit \(T_\theta\to 0\), equilibrium analysis at \((E,\ell)\) is represented by the reduced subjective game \(\Gamma_\ell^\star(E)\). The preference state is not an independent slow primitive at that point; it is the induced object \(\theta_\ell^\star(E)\).</p>
+    </div>
+
+    <p class="proof"><strong>Proof.</strong> See Appendix A.2. The point is that the boundary-layer limit replaces the pre-adjustment preference state by the attracting branch before equilibrium is computed.</p>
+
+    <div class="takeaway">
+      <strong>Interpretation.</strong> The lemma is not a welfare result. It identifies the game solved after fast adjustment.
+    </div>
+  </section>
+
+  <section>
+    <h2>5. Nash Invariance And Non-Invariance</h2>
+    <p>Let \(X_{-i}=\prod_{j\ne i}\Delta(A_j)\). For \(x=(x_i,x_{-i})\), write \(x(a)=\prod_j x_j(a_j)\). Expected subjective and material payoffs are:</p>
+
+    <div class="equation">
+      <span class="label">Expected Payoffs</span>
+      \[
+      \begin{aligned}
+        \bar U_{i,\ell}(x_i,x_{-i};E)
+        &=
+        \sum_{a\in A}x(a)\,
+        U_i(a;\theta_{i,\ell}^\star(E),E,\ell),\\
+        \bar\pi_{i,\ell}(x_i,x_{-i};E)
+        &=
+        \sum_{a\in A}x(a)\,
+        \pi_i(a;E,\ell).
+      \end{aligned}
+      \]
+    </div>
+
+    <p>The corresponding mixed best-response correspondences are:</p>
+
+    <div class="equation">
+      <span class="label">Best Responses</span>
+      \[
+      \begin{aligned}
+        BR_{i,\ell}^\star(x_{-i};E)
+        &=
+        \arg\max_{x_i\in\Delta(A_i)}
+        \bar U_{i,\ell}(x_i,x_{-i};E),\\
+        BR_{i,\ell}^\pi(x_{-i};E)
+        &=
+        \arg\max_{x_i\in\Delta(A_i)}
+        \bar\pi_{i,\ell}(x_i,x_{-i};E).
+      \end{aligned}
+      \]
+    </div>
+
+    <div class="theorem">
+      <span class="theorem-title">Proposition 1. Mixed Best-Response Invariance</span>
+      <p>If \(BR_{i,\ell}^\star(x_{-i};E)=BR_{i,\ell}^\pi(x_{-i};E)\) for every player \(i\) and every mixed opponent profile \(x_{-i}\in X_{-i}\), then \(NE(\Gamma_\ell^\star(E))=NE(\Gamma_\ell^\pi(E))\). For one fixed game, the condition is sufficient but not necessary.</p>
+    </div>
+
+    <p class="proof"><strong>Proof.</strong> See Appendix A.3. Equality of all mixed best-response correspondences gives equality of their fixed-point sets.</p>
+
+    <div class="theorem">
+      <span class="theorem-title">Corollary 1. Strategically Irrelevant Closure</span>
+      <p>Suppose that for every player \(i\) there exist \(\beta_i>0\) and \(\alpha_i(a_{-i};E,\ell)\), independent of \(a_i\), such that:</p>
+      <div class="equation">
+        <span class="label">Opponent-Only Transformation</span>
+        \[
+          U_i(a_i,a_{-i};\theta_{i,\ell}^\star(E),E,\ell)
+          =
+          \alpha_i(a_{-i};E,\ell)
+          +
+          \beta_i\,\pi_i(a_i,a_{-i};E,\ell).
+        \]
+      </div>
+      <p>Then \(NE(\Gamma_\ell^\star(E))=NE(\Gamma_\ell^\pi(E))\).</p>
+    </div>
+
+    <p class="proof"><strong>Proof.</strong> For fixed \(x_{-i}\), the expected \(\alpha_i\) term is constant in \(x_i\). Multiplication by \(\beta_i>0\) preserves the argmax over \(x_i\). Hence subjective and material best-response correspondences coincide for every \(x_{-i}\), and Proposition 1 applies.</p>
+
+    <div class="theorem">
+      <span class="theorem-title">Proposition 2. Best-Response Non-Invariance Test</span>
+      <p>Suppose that for some player \(i\), two actions \(a_i,b_i\), and opponent mixed profile \(x_{-i}\), the subjective and material payoff differences have opposite signs. With \(\Delta^U_{i,\ell}\) and \(\Delta^\pi_{i,\ell}\) denoting the expected payoff difference between \(a_i\) and \(b_i\) under subjective and material payoffs, respectively:</p>
+      <div class="equation">
+        <span class="label">Ranking Reversal</span>
+        \[
+          \begin{aligned}
+          &\Delta^U_{i,\ell}(a_i,b_i;x_{-i},E) \\
+          &\qquad {}\times
+          \Delta^\pi_{i,\ell}(a_i,b_i;x_{-i},E)
+          <0 .
+          \end{aligned}
+        \]
+      </div>
+      <p>Then \(BR_{i,\ell}^\star(x_{-i};E)\ne BR_{i,\ell}^\pi(x_{-i};E)\). Hence the mixed best-response correspondence invariance condition in Proposition 1 fails. Nash sets may still coincide in special games; the proposition identifies failure of the robust invariance discipline, not a necessary-and-sufficient Nash-set separation.</p>
+    </div>
+
+    <p class="proof"><strong>Proof.</strong> See Appendix A.5. The strict sign reversal gives different argmax correspondences at the same mixed opponent profile.</p>
+
+    <div class="theorem">
+      <span class="theorem-title">Example 1. A Two-Action Nash-Set Change</span>
+      <p>Let two players each choose \(A\) or \(B\). For both players and every opponent action, let material payoff satisfy:</p>
+      <div class="equation">
+        <span class="label">Material Dominance</span>
+        \[
+          \pi_i(A,a_{-i};E,\ell)=1,
+          \qquad
+          \pi_i(B,a_{-i};E,\ell)=0 .
+        \]
+      </div>
+      <p>The material benchmark game has the unique Nash equilibrium \((A,A)\). Suppose the closure-law family contains a law \(\ell\) whose attracting branch induces the subjective representation:</p>
+      <div class="equation">
+        <span class="label">Post-Closure Subjective Dominance</span>
+        \[
+          U_i(A,a_{-i};\theta_{i,\ell}^\star(E),E,\ell)=0,
+          \qquad
+          U_i(B,a_{-i};\theta_{i,\ell}^\star(E),E,\ell)=1 .
+        \]
+      </div>
+      <p>Then \(B\) is strictly dominant in the reduced subjective game, so \(NE(\Gamma_\ell^\star(E))=\{(B,B)\}\), while \(NE(\Gamma_\ell^\pi(E))=\{(A,A)\}\). The example is deliberately minimal: no equilibrium-selection issue is needed for fast closure to change the Nash set.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>6. Selection After Closure</h2>
+    <p>Material selection is an evaluation operator. The fast limit changes the object evaluated by that operator. Let \(Q_\ell\) be a set of initial preference states associated with closure law \(\ell\), and let \(C_\ell(E,q)\) denote the post-closure preference state reached from initial state \(q\in Q_\ell\). Under unique closure, \(C_\ell(E,q)=\theta_\ell^\star(E)\) for all \(q\in Q_\ell\).</p>
+
+    <p>For an initial state \(q\), write \(\Gamma_\ell^\star(E;q)\) for the reduced subjective game obtained from the post-closure state \(C_\ell(E,q)\). Under common unique closure, \(\Gamma_\ell^\star(E;q)=\Gamma_\ell^\star(E)\) for every \(q\in Q_\ell\). Define an equivalence relation \(q\sim_E q'\) if \(C_\ell(E,q)=C_\ell(E,q')\). Initial states in the same equivalence class induce the same reduced subjective game.</p>
+
+    <p>A material selection rule is <em>post-closure admissible</em> if it depends on the initial state \(q\) only through the reduced game, selected post-closure play, and the material evaluator. Equivalently, it can be written as \(S(q;E,\ell)=\Phi(\Gamma_\ell^\star(E;q),E,\ell)\), or, after specifying an equilibrium-selection rule, as \(S(q;E,\ell)=M(\sigma(\Gamma_\ell^\star(E;q)),E,\ell)\). Direct observability or direct reward of the pre-closure state \(q\) is outside this theorem.</p>
+
+    <div class="theorem">
+      <span class="theorem-title">Theorem 1. Selection Target Shift</span>
+      <p>Fix \(E\) and \(\ell\). If \(q\sim_E q'\), then the initial states \(q\) and \(q'\) induce the same reduced subjective game and the same Nash set. Consequently, every post-closure admissible material selection rule is constant on each closure-equivalence class. Under common unique closure, all \(q\in Q_\ell\) lie in one equivalence class, so selection over initial preference states is degenerate in the \(T_\theta\to 0\) limit.</p>
+    </div>
+
+    <p class="proof"><strong>Proof.</strong> See Appendix A.6. The closure map identifies which initial states remain distinguishable after the fast adjustment.</p>
+
+    <p>Theorem 1 proves degeneracy within closure-equivalence classes. Selection over laws is a separate post-closure object. To compare laws, specify a finite active set \(\mathcal L_0\subseteq\mathcal L\), an equilibrium-selection rule, a material evaluator \(G_\ell(E)=M(\sigma_\ell(E),E,\ell)\), and a population dynamic or institutional choice rule. For example, if \(n_\ell\ge 0\) is the share of law \(\ell\), with \(\sum_{\ell\in\mathcal L_0} n_\ell=1\), a standard material selection equation is:</p>
+
+    <div class="equation">
+      <span class="label">Selection Over Closure Laws</span>
+      \[
+        \dot n_\ell
+        =
+        n_\ell\left(G_\ell(E)-\bar G(E)\right),
+        \qquad
+        \bar G(E)=\sum_{k\in\mathcal L_0} n_kG_k(E).
+      \]
+    </div>
+
+    <p>The scalar equation is not the definition of Theorem 1. It is one possible post-closure selection equation obtained after the law-level objects have been specified.</p>
+  </section>
+
+  <section>
+    <h2>7. Platform Proxy Choice</h2>
+    <p>A platform application gives closure laws an institutional interpretation. Let a platform choose a rule \(r\in\mathcal R\). Each rule induces a closure law, a reduced subjective game, and a selected mixed equilibrium. The platform evaluates rules using a proxy \(V(r)\), while the analyst evaluates material consequences using \(G(r)\).</p>
+
+    <div class="equation">
+      <span class="label">Platform Rule As Closure Law</span>
+      \[
+        r
+        \longmapsto
+        \theta_r^\star(E)
+        \longmapsto
+        \sigma_r(E)\in NE\!\left(\Gamma_r^\star(E)\right)
+        \longmapsto
+        \bigl(V(r),G(r)\bigr).
+      \]
+    </div>
+
+    <p>The platform chooses \(r^V\in\arg\max_{r\in\mathcal R}V(r)\). A material planner would choose \(r^G\in\arg\max_{r\in\mathcal R}G(r)\).</p>
+
+    <div class="theorem">
+      <span class="theorem-title">Proposition 3. Proxy Alignment</span>
+      <p>For a fixed feasible set \(\mathcal R\), if \(\arg\max_{r\in\mathcal R}V(r)\subseteq\arg\max_{r\in\mathcal R}G(r)\), then every proxy-maximizing platform rule attains the feasible maximum of the material evaluator. A sufficient condition is strict ordinal equivalence of \(V\) and \(G\) on \(\mathcal R\). Conversely, if there exist two rules \(r_1,r_2\) with \(V(r_1)>V(r_2)\) and \(G(r_1)<G(r_2)\), then on the feasible set \(\{r_1,r_2\}\), proxy maximization selects a materially inferior closure law.</p>
+    </div>
+
+    <p class="proof"><strong>Proof.</strong> See Appendix A.7. The first part is a fixed-feasible-set alignment result; the second is a two-rule reversal construction.</p>
+
+    <p>The result is exact and conditional. Preference endogeneity and equilibrium movement do not imply material loss. Loss arises when the proxy that selects closure laws is not aligned with the material evaluator on the feasible set.</p>
+  </section>
+
+  <section>
+    <h2>8. Computational Stress Test</h2>
+    <p>The random finite-game audit is a stress test of the invariance condition, not evidence needed for the theorems. The audit generates 5,000 random two-player, two-action games per route. A neutral route applies strategically irrelevant preference movement. A strategic route adds random payoff distortions. Three proxy routes choose closure laws from an intensity grid using noisy material-aligned, independent, or misaligned proxy objectives.</p>
+
+    <p><strong>Simulation design.</strong> The replication entry point is <code>python3 scripts/run_model_selection_audit.py</code>, with seed <code>20260620</code>. Material payoff entries are drawn independently from the uniform distribution on \([-1,1]\). For routes with multiple equilibria, the selected pure equilibrium maximizes the relevant ranking payoff; if no pure equilibrium is available, the script uses the interior mixed equilibrium when it lies in the unit square and otherwise falls back to the uniform distribution. An outcome shift is counted when the distance between the selected material and subjective outcome distributions exceeds \(0.25\). For a reported rate \(p\) with \(N=5{,}000\), the Monte Carlo standard error is \(\sqrt{p(1-p)/N}\), which is at most \(0.0071\).</p>
+
+    <figure>
+      <img src="../results/figures/model_selection_fast_closure_audit.svg" alt="Finite-game stress test bar chart">
+      <figcaption><strong>Figure 1.</strong> Finite-game stress test. Neutral closure preserves best responses and selected outcomes. Random strategic closure often changes the reduced game. Proxy-choice loss is small under aligned proxies and large under independent or misaligned proxies.</figcaption>
+    </figure>
+
+    <p>The key diagnostic is mixed best-response invariance, because Proposition 1 is a statement about all mixed opponent profiles. The pure-endpoint check is weaker.</p>
+
+    <p><strong>Table 1A. Best-response diagnostics.</strong></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Route</th>
+          <th class="num">Mixed BR</th>
+          <th class="num">Endpoint BR</th>
+          <th class="num">Outcome shift</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Neutral control</td>
+          <td class="num">1.0000</td>
+          <td class="num">1.0000</td>
+          <td class="num">0.0000</td>
+        </tr>
+        <tr>
+          <td>Random strategic closure</td>
+          <td class="num">0.0762</td>
+          <td class="num">0.3126</td>
+          <td class="num">0.5044</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><strong>Table 1B. Proxy-choice diagnostics.</strong></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Route</th>
+          <th class="num">Outcome shift</th>
+          <th class="num">Proxy loss</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Noisy proxy aligned with material welfare</td>
+          <td class="num">0.3766</td>
+          <td class="num">0.0432</td>
+        </tr>
+        <tr>
+          <td>Proxy independent of material welfare</td>
+          <td class="num">0.7244</td>
+          <td class="num">0.5758</td>
+        </tr>
+        <tr>
+          <td>Proxy misaligned with material welfare</td>
+          <td class="num">0.9730</td>
+          <td class="num">0.9706</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="note">Table 1B uses noisy approximate alignment in the first row. Proposition 3 gives zero material loss only under exact maximizer-set alignment, \(\arg\max_{\mathcal R}V\subseteq\arg\max_{\mathcal R}G\).</p>
+
+    <p>Random strategic closure preserves full mixed best-response correspondences in only 7.62 percent of the simulated games, although it passes the weaker pure-endpoint check in 31.26 percent. Exact strategic irrelevance is therefore a sharp condition in this audit. On the proxy side, the route labelled material-aligned is noisy and approximate, not the exact maximizer-set alignment in Proposition 3; its positive loss is therefore not a contradiction of the proposition. The pattern is still the one Proposition 3 isolates: loss is small under approximate alignment and large when the proxy is independent or misaligned.</p>
+
+    <figure>
+      <img src="../results/figures/model_selection_sensitivity.svg" alt="Finite-game sensitivity checks">
+      <figcaption><strong>Figure 2.</strong> Sensitivity checks. Larger strategic distortions lower mixed best-response invariance and raise selected-equilibrium shifts. Noisier material-aligned proxies raise material loss, while exact alignment can move equilibria without lowering the material evaluator.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>9. Welfare And Interpretation</h2>
+    <p>The model separates three questions that are often compressed. First, which utility representation is used for play? In the fast limit, it is the representation induced by closure. Second, are equilibrium predictions materially invariant? They are guaranteed to be invariant when fast closure preserves mixed best-response correspondences. Third, is the induced transition materially or normatively acceptable? That depends on the material evaluator, meta-preferences, or admissible transition laws.</p>
+
+    <p>Final-preference welfare is not invariant when the process being evaluated also produces the final preferences. An allocation path can be attractive according to the induced terminal utility representation and unattractive according to initial preferences, material payoff, or a meta-preference over how preferences are changed. The paper does not select a welfare criterion. It shows why a criterion must specify whether it evaluates allocations, terminal preferences, transition laws, or paths.</p>
+
+    <p>Empirically, the framework points to two measurements: the speed of preference or exposure adjustment relative to the relevant slow variables, and the alignment between the proxy that induces closure and the material evaluator. A broader working-paper version retains a macro timescale diagnostic for this purpose. The present submission keeps that diagnostic outside the main argument.</p>
+  </section>
+
+  <section>
+    <h2>10. Conclusion</h2>
+    <p>When preferences close faster than the rest of the economic state, utility is no longer the object that closes the model. It is the object closed by the model.</p>
+
+    <p>In finite games, the limiting object is a reduced subjective game. Nash equilibrium is computed in that game. Material payoff is evaluated separately. Nash sets of the reduced subjective and material benchmark games are robustly preserved when fast closure preserves mixed best-response correspondences. Under common unique closure, selection over initial preference states is degenerate; selection acts instead on closure laws, institutions, or transition rules that produce different reduced games. Platform proxy choice is one application of this logic: material loss is a theorem of proxy/material misalignment, not of preference endogeneity alone.</p>
+  </section>
+
+  <section>
+    <h2>Appendix A. Proof Details</h2>
+    <h3>A.1 Remark On Moving Slow States</h3>
+    <p>The main text uses fixed-slow-state boundary-layer closure. A moving-slow-state extension would require additional uniform attraction and regularity assumptions: for example, compact active sets, local Lipschitz continuity of \(H\) in \(\theta\), a unique uniformly attracting branch \(\theta_\ell^\star(E)\), a Lipschitz slow path \(E(t)\), and fixed \(\ell\) between discrete institutional revisions. Under such assumptions, standard singular perturbation arguments would support tracking of \(\theta_\ell^\star(E(t))\) after the initial boundary layer on finite slow-time intervals away from discontinuities of \(\ell\). The paper does not use this as a theorem; the formal results require only fixed-state closure.</p>
+
+    <h3>A.2 Proof Of Lemma 1</h3>
+    <p>Fix \(E\) and \(\ell\). On the fast time \(s=t/T_\theta\), the preference subsystem is \(d\theta/ds=H(\theta;E,\ell)\). By the maintained attraction assumption, every initial state in the relevant basin converges to \(\theta_\ell^\star(E)\) as \(s\to\infty\). Thus, along any sequence \(T_\theta\downarrow 0\) observed after the boundary layer and before \(E\) or \(\ell\) changes, the payoff table used for play converges pointwise to \(U_i(\cdot;\theta_{i,\ell}^\star(E),E,\ell)\) for each player \(i\). Because action sets are finite, pointwise convergence of the payoff table is enough to define the limiting reduced finite game \(\Gamma_\ell^\star(E)\). Nash equilibrium analysis after fast adjustment is therefore Nash equilibrium analysis in that reduced game.</p>
+
+    <h3>A.3 Proof Of Proposition 1</h3>
+    <p>For every finite game, a mixed Nash equilibrium is a profile \(x\in X\) such that \(x_i\in BR_i(x_{-i})\) for every player \(i\). If \(BR_{i,\ell}^\star(\cdot;E)=BR_{i,\ell}^\pi(\cdot;E)\) for all \(i\), then the set of profiles satisfying the subjective fixed-point condition is exactly the set satisfying the material fixed-point condition. Hence the Nash sets coincide. The condition is not necessary because equality of fixed-point sets does not require equality of correspondences at profiles that are not fixed points.</p>
+
+    <h3>A.4 Proof Of Corollary 1</h3>
+    <p>For fixed \(x_{-i}\), expected subjective payoff equals the expected opponent-only term plus \(\beta_i\) times expected material payoff. The opponent-only term does not vary with \(x_i\), and \(\beta_i>0\) preserves the ordering of all \(x_i\). Therefore the subjective and material argmax sets coincide at every \(x_{-i}\). Proposition 1 gives equality of mixed Nash sets.</p>
+
+    <h3>A.5 Proof Of Proposition 2</h3>
+    <p>The displayed strict sign reversal means one of the two actions is strictly better under expected material payoff and the other is strictly better under expected subjective payoff at the same opponent mixed profile. A correspondence containing the material maximizer cannot be identical to one containing the subjective maximizer. Thus mixed best-response invariance fails.</p>
+
+    <h3>A.6 Proof Of Theorem 1</h3>
+    <p>If \(q\sim_E q'\), the closure map gives \(C_\ell(E,q)=C_\ell(E,q')\). Thus every player's subjective payoff table is the same under the two initial states, so \(\Gamma_\ell^\star(E;q)=\Gamma_\ell^\star(E;q')\) and their Nash sets coincide. For any post-closure admissible selection rule \(S(q;E,\ell)=\Phi(\Gamma_\ell^\star(E;q),E,\ell)\), the argument of \(\Phi\) is identical for \(q\) and \(q'\), so \(S(q;E,\ell)=S(q';E,\ell)\). The same conclusion holds for the equilibrium-selection form \(S(q;E,\ell)=M(\sigma(\Gamma_\ell^\star(E;q)),E,\ell)\). In the unique-closure case, every initial state in \(Q_\ell\) maps to \(\theta_\ell^\star(E)\), so \(Q_\ell\) is one equivalence class and initial preference-state selection is degenerate. A model that directly observes or rewards the pre-closure state \(q\) violates post-closure admissibility and is not covered by the theorem.</p>
+
+    <h3>A.7 Proof Of Proposition 3</h3>
+    <p>Fix \(\mathcal R\). If \(\arg\max_{\mathcal R} V\subseteq\arg\max_{\mathcal R} G\), then every proxy maximizer \(r^V\) is also a material maximizer, so \(G(r^V)=\max_{r\in\mathcal R}G(r)\). Strict ordinal equivalence on \(\mathcal R\) is sufficient because it preserves all strict rankings and therefore makes the proxy and material maximizer sets coincide. For the reversal construction, suppose there exist \(r_1,r_2\) with \(V(r_1)>V(r_2)\) and \(G(r_1)<G(r_2)\). On the feasible set \(\{r_1,r_2\}\), proxy choice selects \(r_1\), while material choice selects \(r_2\). The proxy-maximizing rule is therefore materially inferior on that feasible set.</p>
+  </section>
+
+  <section class="refs">
+    <h2>References</h2>
+    <p>Adomavicius, Gediminas, Jesse C. Bockstedt, Shawn P. Curley, and Jingjing Zhang. "Do Recommender Systems Manipulate Consumer Preferences? A Study of Anchoring Effects." <em>Information Systems Research</em> 24(4), 2013, 956-975. <a href="https://ideas.repec.org/a/inm/orisre/v24y2013i4p956-975.html">Record</a>.</p>
+    <p>Ashton, Hal, and Matija Franklin. "Solutions to Preference Manipulation in Recommender Systems Require Knowledge of Meta-Preferences." 2022. <a href="https://arxiv.org/abs/2209.11801">arXiv</a>.</p>
+    <p>Bernheim, B. Douglas, Debraj Ray, and Sevin Yeltekin. "Poverty and Self-Control." <em>Econometrica</em> 83(5), 2015, 1877-1911. <a href="https://bernheim.people.stanford.edu/publications/poverty-and-self-control">Record</a>.</p>
+    <p>Bernheim, B. Douglas, Luca Braghieri, Alejandro Martinez-Marquina, and David Zuckerman. "A Theory of Chosen Preferences." <em>American Economic Review</em> 111(2), 2021, 720-754. <a href="https://www.aeaweb.org/articles?id=10.1257/aer.20190390">Record</a>.</p>
+    <p>Bisin, Alberto, and Thierry Verdier. "The Economics of Cultural Transmission and the Dynamics of Preferences." <em>Journal of Economic Theory</em> 97(2), 2001, 298-319. <a href="https://eprints.soton.ac.uk/33480/">Record</a>.</p>
+    <p>Bowles, Samuel. "Endogenous Preferences: The Cultural Consequences of Markets and Other Economic Institutions." <em>Journal of Economic Literature</em> 36(1), 1998, 75-111. <a href="https://ideas.repec.org/a/aea/jeclit/v36y1998i1p75-111.html">Record</a>.</p>
+    <p>Chaney, Allison J. B., Brandon M. Stewart, and Barbara E. Engelhardt. "How Algorithmic Confounding in Recommendation Systems Increases Homogeneity and Decreases Utility." RecSys, 2018, 224-232. <a href="https://arxiv.org/abs/1710.11214">arXiv</a>.</p>
+    <p>Dekel, Eddie, Jeffrey C. Ely, and Okan Yilankaya. "Evolution of Preferences." <em>Review of Economic Studies</em> 74(3), 2007, 685-704. <a href="https://cet.econ.northwestern.edu/dekel/pdf/evolution%20of-preferences.pdf">PDF</a>.</p>
+    <p>Ely, Jeffrey C., and Okan Yilankaya. "Nash Equilibrium and the Evolution of Preferences." <em>Journal of Economic Theory</em> 97(2), 2001, 255-272. <a href="https://ideas.repec.org/a/eee/jetheo/v97y2001i2p255-272.html">Record</a>.</p>
+    <p>Fenichel, Neil. "Geometric Singular Perturbation Theory for Ordinary Differential Equations." <em>Journal of Differential Equations</em> 31(1), 1979, 53-98. <a href="https://link.springer.com/chapter/10.1007/BFb0095239">Reference</a>.</p>
+    <p>Heifetz, Aviad, Chris Shannon, and Yossi Spiegel. "What to Maximize if You Must." <em>Journal of Economic Theory</em> 133(1), 2007, 31-57. <a href="https://eml.berkeley.edu/~cshannon/wp/what.pdf">PDF</a>.</p>
+    <p>Jiang, Ray, Silvia Chiappa, Tor Lattimore, Andras Gyorgy, and Pushmeet Kohli. "Degenerate Feedback Loops in Recommender Systems." AIES, 2019. <a href="https://arxiv.org/abs/1902.10730">arXiv</a>.</p>
+    <p>Kleinberg, Jon, Sendhil Mullainathan, and Manish Raghavan. "The Challenge of Understanding What Users Want: Inconsistent Preferences and Engagement Optimization." <em>Management Science</em> 70(9), 2024, 6336-6355. <a href="https://arxiv.org/abs/2202.11776">arXiv</a>.</p>
+    <p>Robson, Arthur J., Lorne A. Whitehead, and Nikolaus Robalino. "Adaptive Utility." <em>Journal of Economic Behavior and Organization</em> 211, 2023, 60-81. <a href="https://www.sfu.ca/~robson/ROWHRO.pdf">PDF</a>.</p>
+    <p>Sadowski, Philipp, and Todd Sarver. "Adaptive Preferences: An Evolutionary Model of Non-Expected Utility and Ambiguity Aversion." <em>Journal of Economic Theory</em> 218, 2024, 105840. <a href="https://ideas.repec.org/a/eee/jetheo/v218y2024ics0022053124000462.html">Record</a>.</p>
+    <p>Sandholm, William H. "Preference Evolution, Two-Speed Dynamics, and Rapid Social Change." <em>Review of Economic Dynamics</em> 4(3), 2001, 637-679. <a href="https://ideas.repec.org/a/red/issued/v4y2001i3p637-679.html">Record</a>.</p>
+    <p>Stigler, George J., and Gary S. Becker. "De Gustibus Non Est Disputandum." <em>American Economic Review</em> 67(2), 1977, 76-90. <a href="https://econpapers.repec.org/RePEc:aea:aecrev:v:67:y:1977:i:2:p:76-90">Record</a>.</p>
+  </section>
+</main>
+</body>
+</html>

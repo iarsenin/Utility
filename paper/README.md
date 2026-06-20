@@ -14,11 +14,21 @@ notes, model results, and literature checks.
 - `article_draft_v0_codex.md`: plain-text backup retained for continuity. Use
   the HTML file for reading and comments because the Markdown viewer has been
   unreliable for formulas.
-- `article_v1.html`: current main article draft. It reorganizes the paper
-  around the finite-game fast-closure model, uses MathJax equations, includes
-  the finite-game stress test, sensitivity audit, and WDI measurement
-  diagnostic, and incorporates five agent review rounds. Rounds 4 and 5 use
-  the sequence Modeller -> Writer -> Editor -> Writer.
+- `article_v1.html`: integrated article draft from the first five agent review
+  rounds. It remains useful as a record of the full project before the venue
+  split.
+- `working_paper_v1.html`: broad working-paper version for circulation,
+  comments, seminar discussion, and project development. It keeps the finite
+  game theory, platform/proxy application, welfare interpretation, and WDI
+  empirical appendix, with status notes that separate theorem, simulation, and
+  diagnostic evidence.
+- `geb_submission_v1.html`: narrower Games and Economic Behavior-facing
+  version. It removes the WDI appendix from the main manuscript and centers the
+  finite-game theorem spine: fast closure, mixed best-response invariance,
+  best-response non-invariance, selection-target shift, proxy alignment, and a
+  compact computational stress test.
+- `venue_strategy.md`: venue plan and boundary between the working-paper and
+  GEB-facing versions.
 
 For any reader-facing article update, render the HTML and inspect screenshots
 before reporting the draft as ready.

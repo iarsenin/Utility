@@ -310,9 +310,78 @@ server. Screenshots are saved in `results/figures/`:
 - `article_v1_pass5_visual_qa_sensitivity.png`
 - `article_v1_pass5_visual_qa_wdi_equation.png`
 
+### Working Paper And GEB Submission Split
+
+Created two venue-specific manuscripts:
+
+- `paper/working_paper_v1.html`: broad working-paper version for circulation,
+  comments, seminar discussion, and project development.
+- `paper/geb_submission_v1.html`: narrower Games and Economic Behavior-facing
+  version centered on the finite-game theorem package.
+
+Added `paper/venue_strategy.md` to record the publication path, GEB positioning,
+and the boundary between the broad working paper and journal-submission draft.
+
+Completed two more venue-focused review rounds:
+
+```text
+Round 6: Modeller -> Writer -> Editor -> Writer
+Round 7: Modeller -> Writer -> Editor -> Writer
+```
+
+The round logs are:
+
+- `docs/agent_rounds/round_6_geb_modeller.md`
+- `docs/agent_rounds/round_6_geb_writer.md`
+- `docs/agent_rounds/round_6_geb_editor.md`
+- `docs/agent_rounds/round_6_geb_writer_final.md`
+- `docs/agent_rounds/round_7_geb_modeller.md`
+- `docs/agent_rounds/round_7_geb_writer.md`
+- `docs/agent_rounds/round_7_geb_editor.md`
+- `docs/agent_rounds/round_7_geb_writer_final.md`
+
+GEB-facing changes:
+
+- Removed WDI and broad macro diagnostics from the GEB manuscript.
+- Made the formal scope fixed-\(E\), fixed-\(\ell\) comparative statics after
+  the fast boundary layer.
+- Added an analytic best-response non-invariance proposition and a two-action
+  example where fast closure changes the Nash set.
+- Restricted the selection-target-shift theorem to post-closure admissible
+  material selection rules, so direct reward of the pre-closure state is
+  outside the theorem.
+- Split exact proxy alignment from noisy approximate alignment in the simulation
+  route.
+- Added simulation replication details: entry point, seed, payoff distribution,
+  selection convention, shift threshold, and Monte Carlo standard-error formula.
+
+Working-paper changes:
+
+- Retained WDI as an empirical appendix and measurement agenda, not causal
+  evidence.
+- Imported the Round 7 theorem refinements so the working paper and GEB draft
+  share the same formal spine.
+- Kept the broader AI/social-media motivation and welfare interpretation in the
+  working-paper version only.
+
+Visual QA for the split drafts was performed through a local server and
+headless browser capture. Screenshots are saved in `results/figures/`:
+
+- `geb_submission_v1_visual_qa_top.png`
+- `geb_submission_v1_visual_qa_prop2_example.png`
+- `geb_submission_v1_visual_qa_tables.png`
+- `geb_submission_v1_visual_qa_mobile_prop2.png`
+- `working_paper_v1_visual_qa_empirical_appendix.png`
+
+The mobile Proposition 2 equation initially overflowed; it was fixed by using
+compact payoff-difference notation and by adding horizontal-overflow protection
+to equation boxes.
+
 ### Next Actions
 
-- Tighten proof sketches into complete proof blocks or an appendix.
+- Convert `paper/geb_submission_v1.html` to a LaTeX/PDF submission package with
+  journal-standard theorem environments and bibliography management.
+- Tighten proof sketches into final proof blocks during the LaTeX conversion.
 - Prove a formal non-neutral closure result beyond the numerical stress test.
 - Prove the timescale-dominance proposition in `docs/06_formal_research_plan.md`.
 - Derive the platform-control first-order or threshold condition.
