@@ -29,6 +29,10 @@ This file records the starting literature map. It is not yet a finished bibliogr
 ## Recommender Systems and Preference Manipulation
 
 - Ashton and Franklin, "Solutions to preference manipulation in recommender systems require knowledge of meta-preferences," arXiv, 2022. https://arxiv.org/abs/2209.11801
+- Kleinberg, Mullainathan, and Raghavan, "The Challenge of Understanding What Users Want: Inconsistent Preferences and Engagement Optimization," Management Science, 2024. https://pubsonline.informs.org/doi/10.1287/mnsc.2022.03683
+- Jiang, Chiappa, Lattimore, Gyorgy, and Kohli, "Degenerate Feedback Loops in Recommender Systems," AIES, 2019. https://arxiv.org/abs/1902.10730
+- Adomavicius, Bockstedt, Curley, and Zhang, "Do Recommender Systems Manipulate Consumer Preferences? A Study of Anchoring Effects," Information Systems Research, 2013. https://doi.org/10.1287/isre.2013.0497
+- Franklin, Ashton, Gorman, and Armstrong, "Recognising the importance of preference change: A call for a coordinated multidisciplinary research effort in the age of AI," arXiv, 2022. https://arxiv.org/abs/2203.10525
 - Knight First Amendment Institute, "Understanding Social Media Recommendation Algorithms." https://knightcolumbia.org/content/understanding-social-media-recommendation-algorithms
 - Social drivers and algorithmic mechanisms on digital media, PMC overview. https://pmc.ncbi.nlm.nih.gov/articles/PMC11373151/
 - Kalra, "Social Media Algorithms versus Preferences in a large-scale RCT," working paper. https://www.isid.ac.in/~acegd/acegd2024/papers/AarushiKalra.pdf
@@ -36,5 +40,6 @@ This file records the starting literature map. It is not yet a finished bibliogr
 
 ## Welfare With Adaptive or Endogenous Preferences
 
+- Khosrowi and Beck, "Like It or Not: Recommender Systems Lack a Coherent Normative Foundation," preprint/forthcoming FAccT 2026. https://philsci-archive.pitt.edu/29368/
 - Recent constitutional-political-economy discussion: "Endogenous preferences: a challenge to constitutional political economy." https://link.springer.com/article/10.1007/s10602-023-09417-w
 - The project needs a separate note on adaptive preferences, autonomy, and welfare criteria.

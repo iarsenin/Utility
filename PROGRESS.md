@@ -63,6 +63,16 @@ Iteration 3: platform preference control.
 - Guardrail result: a calibrated autonomy penalty prevents capture and improves fitness; a weak penalty barely changes platform behavior.
 - Verdict: this is the first paper's core candidate.
 
+### Novelty Check
+
+Added `docs/08_novelty_check_v1.md`.
+
+Preliminary conclusion:
+
+- Not novel: endogenous preferences, recommender feedback loops, engagement-welfare divergence, AI preference manipulation, or welfare trouble under endogenous preferences.
+- Potentially novel: a mathematical economics model in which a platform chooses the preference-transition kernel `K_m`, producing a four-way split between platform value, final subjective utility, initial-preference welfare, and material/fitness welfare.
+- Closest current threats: Kleinberg-Mullainathan-Raghavan on engagement optimization, Jiang et al. on recommender feedback loops, and Khosrowi-Beck on recommender welfare foundations.
+
 ### Current Conjectures
 
 1. If preference-transition technology is fast relative to biological or material selection, current subjective welfare can rise while fitness falls.
@@ -77,6 +87,7 @@ Iteration 3: platform preference control.
 - Replace the myopic platform with a forward-looking platform or regulator.
 - Tighten welfare language around initial preferences, final preferences, meta-preferences, and fitness.
 - Begin a formal note for the preference-laundering theorem.
+- Map the exact difference from Kleinberg, Mullainathan, and Raghavan's engagement-optimization model.
 
 ### Open Questions
 

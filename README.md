@@ -77,6 +77,7 @@ Start here for the current research direction:
 - `docs/05_research_synthesis_v1.md`
 - `docs/06_formal_research_plan.md`
 - `docs/07_paper_outline_v1.md`
+- `docs/08_novelty_check_v1.md`
 - `references/literature_matrix.md`
 
 Next model specs:
