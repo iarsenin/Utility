@@ -142,6 +142,11 @@ ready. Visual QA screenshots for this pass are in:
 `results/figures/article_draft_v0_html_preview_equation.jpg` and
 `results/figures/article_draft_v0_html_preview_complex.jpg`.
 
+Clarified the abstract definition of `P^star`: it is the stable preference
+state induced by economic state `E` and institution `I` after fast adjustment,
+not an optimum. Visual QA screenshot:
+`results/figures/article_draft_v0_html_preview_abstract_pstar.jpg`.
+
 Purpose:
 
 - Give a single readable manuscript for comments.
