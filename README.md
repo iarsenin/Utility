@@ -107,6 +107,7 @@ Start here for the current research direction:
 - `docs/08_novelty_check_v1.md`
 - `docs/09_fast_preference_limit.md`
 - `docs/10_timescales_and_survival.md`
+- `docs/11_model_selection_audit.md`
 - `references/literature_matrix.md`
 
 Next model specs:

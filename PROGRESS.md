@@ -170,8 +170,38 @@ Purpose:
 3. A Nash equilibrium of actions is not enough. In an endogenous-preference economy, equilibrium must include the preference-transition policy or institution.
 4. Platform objectives can become an alternative selection criterion, creating a conflict between survival fitness and engagement fitness.
 
+### Model Selection Audit
+
+Added `docs/11_model_selection_audit.md`,
+`src/utility_endogenous/model_selection_audit.py`, and
+`scripts/run_model_selection_audit.py`.
+
+The audit deliberately moved away from the one-dimensional taste/platform
+models. It generated 5,000 random finite games per route and treated fast
+preference closure as a payoff transformation.
+
+Key readout:
+
+- Neutral strategically irrelevant preference movement preserved best-response
+  correspondences in `1.0000` of games and shifted equilibria in `0.0000`.
+- Random strategic preference closure preserved best-response correspondences
+  in only `0.3126` of games and shifted selected equilibria in `0.5044`.
+- If a platform proxy is aligned with material welfare, proxy-selected material
+  loss is rare: `0.0432`.
+- If the proxy is independent, proxy-selected material loss is common: `0.5758`.
+- If the proxy is misaligned, proxy-selected material loss is nearly generic:
+  `0.9706`.
+
+Research decision: promote a generic finite-game fast-closure theorem to the
+core paper route. Keep platform preference control as the main application. Use
+the one-dimensional taste model as exposition, not as the central proof.
+
 ### Next Actions
 
+- Reorganize the article around the finite-game singular-limit theorem.
+- Prove material Nash invariance via equality of best-response correspondences.
+- Prove generic object shift for payoff transformations that are not
+  strategically irrelevant.
 - Prove the timescale-dominance proposition in `docs/06_formal_research_plan.md`.
 - Derive the platform-control first-order or threshold condition.
 - Replace the myopic platform with a forward-looking platform or regulator.

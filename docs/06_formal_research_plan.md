@@ -2,8 +2,10 @@
 
 Status note: this plan now has a new priority from
 `docs/09_fast_preference_limit.md`: prove the `T -> 0` singular-limit theorem
-before committing the first paper to the platform-control model. The platform
-model remains a key application.
+before committing the first paper to the platform-control model. The
+model-selection audit in `docs/11_model_selection_audit.md` promotes a generic
+finite-game fast-closure theorem to the core route. The platform model remains a
+key application.
 
 ## 1. Core Mathematical Environment
 
@@ -107,7 +109,38 @@ where `Pi` might be engagement, advertising revenue, ideology, market share, or 
 
 ## 4. Model Hierarchy
 
-### M0: Static Utility Benchmark
+### M0: Generic Finite-Game Fast Closure
+
+Purpose: make the `T_P -> 0` theorem independent of the one-dimensional platform
+story.
+
+Material payoffs:
+
+```text
+Pi_i(a_i, a_-i, E, I)
+```
+
+Fast preference branch:
+
+```text
+P = P^star(E, I)
+```
+
+Subjective payoffs:
+
+```text
+U_i(a_i, a_-i, E, P^star(E, I), I)
+```
+
+Target propositions:
+
+- the reduced game is the subjective game induced by `P^star`;
+- material Nash predictions are invariant exactly when material and subjective
+  best-response correspondences coincide;
+- if the fast branch is common and unique, selection over initial preference
+  states is degenerate and selection acts on adaptation laws or institutions.
+
+### M0b: Static Utility Benchmark
 
 Purpose: establish that the framework nests ordinary utility representation.
 

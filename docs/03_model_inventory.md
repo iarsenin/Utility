@@ -105,3 +105,42 @@ theta_child = alpha theta_parent
 ```
 
 The key comparative static is `gamma / generation_length`.
+
+## Model E: Generic Finite-Game Fast Closure
+
+Purpose: provide the core theorem route for the `T_P -> 0` limit without
+building in a one-dimensional survival frontier.
+
+Material game:
+
+```text
+Pi_i(a_i, a_-i)
+```
+
+Fast preference closure:
+
+```text
+P = P^star(E, I)
+```
+
+Subjective game:
+
+```text
+U_i(a_i, a_-i; P^star(E, I), I)
+```
+
+Reduced equilibrium:
+
+```text
+a in NE(U(P^star(E, I), I))
+```
+
+Material Nash predictions are invariant only when:
+
+```text
+BR_U(P^star(E, I), E, I) = BR_Pi(E, I)
+```
+
+Status: promoted to the main theorem route after the model-selection audit in
+`docs/11_model_selection_audit.md`. Platform control should be treated as the
+main application of this finite-game core.
