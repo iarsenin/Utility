@@ -32,6 +32,7 @@ That separation is where the strange results should live.
 - `results/`: generated reports, figures, and tables.
 - `references/`: bibliography notes and paper summaries.
 - `notebooks/`: exploratory notebooks, when needed.
+- `paper/`: readable article drafts assembled from the research program.
 
 ## Quick Start
 
@@ -96,6 +97,7 @@ This is bootstrap version 0.1. The repo currently contains:
 
 Start here for the current research direction:
 
+- `paper/article_draft_v0.md`
 - `docs/05_research_synthesis_v1.md`
 - `docs/06_formal_research_plan.md`
 - `docs/07_paper_outline_v1.md`

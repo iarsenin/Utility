@@ -110,6 +110,17 @@ New numerical readout:
 - Survival-aware institutions select `m = 0.030`, induce `theta = 0.375`, and survive.
 - The answer to "what survives?" can be "none" if all admissible institutions induce negative long-run growth after fast preference closure.
 
+### Article Draft v0
+
+Added `paper/article_draft_v0.md`.
+
+Purpose:
+
+- Give a single readable manuscript for comments.
+- Reframe the project around the fast-preference singular limit rather than the platform-only model.
+- Keep theorem candidates clearly separated from simulation results.
+- Preserve the correction that Nash equilibrium and Darwinian selection are methods/operators; what changes is the state space on which they operate.
+
 ### Current Conjectures
 
 1. If preference-transition technology is fast relative to biological or material selection, current subjective welfare can rise while fitness falls.
