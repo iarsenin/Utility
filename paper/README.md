@@ -23,9 +23,10 @@ notes, model results, and literature checks.
   empirical appendix, with status notes that separate theorem, simulation, and
   diagnostic evidence.
 - `arxiv_submission.pdf`: archive-style PDF generated from
-  `working_paper_v1.html` after the Round 10 edits. It is a self-contained
-  reader copy for arXiv/working-paper circulation; the HTML remains the
-  editable source until a later LaTeX conversion.
+  `working_paper_v1.html` and regenerated after the Round 14 reader-facing
+  edits. It is a 30-page self-contained reader copy for arXiv/working-paper
+  circulation; the HTML remains the editable source until a later LaTeX
+  conversion.
 - `geb_submission_v1.html`: narrower Games and Economic Behavior-facing
   version. It removes the WDI appendix from the main manuscript and centers the
   finite-game theorem spine: fast closure, mixed best-response invariance,
@@ -36,3 +37,14 @@ notes, model results, and literature checks.
 
 For any reader-facing article update, render the HTML and inspect screenshots
 before reporting the draft as ready.
+
+Latest visual QA artifacts for the Round 14 reading pass are in
+`results/figures/`:
+
+- `geb_submission_v1_round14_qa_top.png`
+- `geb_submission_v1_round14_qa_intro_order.png`
+- `geb_submission_v1_round14_qa_nash.png`
+- `geb_submission_v1_round14_qa_stress.png`
+- `working_paper_v1_round14_qa_top.png`
+- `working_paper_v1_round14_qa_invariant_table.png`
+- `arxiv_submission.pdf.png`

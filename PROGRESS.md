@@ -428,6 +428,86 @@ Round 10 visual QA screenshots are saved in `results/figures/`:
 - `geb_submission_v1_round10_qa_prop2.png`
 - `geb_submission_v1_round10_qa_prop3.png`
 
+### Reader-Facing Revision Rounds 11-14
+
+Completed four additional editing cycles in response to the request that the
+abstract and article read less like a high-formal math note and more like a
+rigorous paper with conclusions stated upfront:
+
+```text
+Round 11: Modeller -> Writer -> Editor -> Writer
+Round 12: Modeller -> Writer -> Editor -> Writer
+Round 13: Modeller -> Writer -> Editor -> Writer
+Round 14: Modeller -> Writer -> Editor -> Writer
+```
+
+The new round logs are:
+
+- `docs/agent_rounds/round_11_modeller.md`
+- `docs/agent_rounds/round_11_writer.md`
+- `docs/agent_rounds/round_11_editor.md`
+- `docs/agent_rounds/round_11_writer_final.md`
+- `docs/agent_rounds/round_12_modeller.md`
+- `docs/agent_rounds/round_12_writer.md`
+- `docs/agent_rounds/round_12_editor.md`
+- `docs/agent_rounds/round_12_writer_final.md`
+- `docs/agent_rounds/round_13_modeller.md`
+- `docs/agent_rounds/round_13_writer.md`
+- `docs/agent_rounds/round_13_editor.md`
+- `docs/agent_rounds/round_13_writer_final.md`
+- `docs/agent_rounds/round_14_modeller.md`
+- `docs/agent_rounds/round_14_writer.md`
+- `docs/agent_rounds/round_14_editor.md`
+
+Main changes:
+
+- Rewrote the GEB abstract to state the result first: in the fast-preference
+  limit, Nash equilibrium is computed in the post-closure subjective game, not
+  necessarily in the material-payoff game.
+- Added section-level bridges and interpretation blocks across the GEB body so
+  the model, Nash invariance, selection-target shift, platform application,
+  stress test, welfare discussion, and conclusion all tell the reader what is
+  being proved before the notation does the work.
+- Added a compact survival/change table in the GEB introduction distinguishing
+  what survives from what changes for Nash equilibrium, material payoff,
+  material selection, and welfare.
+- Corrected reader-facing prose that could have made mixed best-response
+  invariance sound necessary. The final language says it is a strong sufficient
+  condition for Nash-set agreement with the material benchmark; Proposition 1
+  remains sufficient but not necessary for one fixed game.
+- Replaced "sharp" and other over-strong wording around the finite-game audit
+  with "restrictive" and "in this audit" language, keeping the simulation as a
+  stress test rather than empirical platform evidence.
+- Tightened platform and welfare language so material loss is tied to
+  proxy/material misalignment on the feasible rule set, while welfare claims
+  remain explicitly criterion-dependent.
+- Updated the working paper in parallel where the same interpretation or
+  sufficiency language mattered, while preserving its broader Version Note and
+  WDI diagnostic appendix.
+
+The archive PDF was regenerated from `paper/working_paper_v1.html` after the
+Round 14 edits. The regenerated PDF has 30 pages, and its refreshed first-page
+thumbnail is saved as `results/figures/arxiv_submission.pdf.png`.
+
+Round 14 visual QA was performed through the local server and headless Chrome
+after MathJax rendering. Screenshots are saved in `results/figures/`:
+
+- `geb_submission_v1_round14_qa_top.png`
+- `geb_submission_v1_round14_qa_intro_order.png`
+- `geb_submission_v1_round14_qa_nash.png`
+- `geb_submission_v1_round14_qa_stress.png`
+- `working_paper_v1_round14_qa_top.png`
+- `working_paper_v1_round14_qa_invariant_table.png`
+
+Validation:
+
+- `paper/geb_submission_v1.html` and `paper/working_paper_v1.html` parse with
+  Python's `HTMLParser`.
+- Manuscript phrase audit found no remaining targeted overclaim triggers such
+  as "only under," "only when," "sharp," "welfare concern," or
+  "Darwinian or material" in the paper HTML files.
+- Round 14 editor passed the manuscripts with no required final writer edits.
+
 ### Next Actions
 
 - Convert `paper/geb_submission_v1.html` to a LaTeX/PDF submission package with

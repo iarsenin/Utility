@@ -298,7 +298,7 @@
 
   <section class="abstract">
     <h2>Abstract</h2>
-    <p>Economic models usually treat utility as an input to choice. This paper studies the opposite limiting case: a preference state adapts so quickly that, before the rest of the economy moves, utility has already been produced by the environment. In finite games with subjective utility distinct from material payoff, the limit \(T_\theta\to 0\) pins preferences to a fast attracting branch \(\theta_\ell^\star(E)\) induced by a closure law \(\ell\). The induced object is a reduced subjective game. Nash equilibrium still applies, but to that game rather than automatically to the material-payoff game. Material selection still applies, but to the adaptation laws, institutions, resistance parameters, or induced systems that remain heterogeneous after closure. The paper gives a closure lemma, a best-response invariance condition, a selection-target-shift theorem, and a platform-control application in which material loss depends on the alignment between the preference-generating proxy and the material evaluator. The point is not that fast endogenous preferences mechanically cause harm. It is that they move utility from the primitive side of the model to the closure side of the model.</p>
+    <p>Economic models usually treat utility as an input to choice. This paper studies the opposite limiting case: a preference state adapts so quickly that, before the rest of the economy moves, utility has already been produced by the slow environment together with the closure law. In finite games with subjective utility distinct from material payoff, the limit \(T_\theta\to 0\) pins preferences to a fast attracting branch \(\theta_\ell^\star(E)\) induced by a closure law \(\ell\). The formal comparative statics hold \(E\) and \(\ell\) fixed through the fast boundary layer. The induced object is a reduced subjective game. Nash equilibrium still applies, but to that game rather than automatically to the material-payoff game; mixed best-response invariance is a strong sufficient condition for agreement with the material benchmark. Material selection still applies, but to the adaptation laws, institutions, resistance parameters, or induced systems that remain heterogeneous after closure. The paper gives a closure lemma, a selection-target-shift theorem, and a platform-control application in which material loss depends on the alignment between the preference-generating proxy and the material evaluator. The point is not that fast endogenous preferences mechanically cause harm. It is that they move utility from the primitive side of the model to the closure side of the model.</p>
   </section>
 
   <section>
@@ -351,7 +351,7 @@
 
     <p>A recommender system is the clean contemporary example. It does not only solve a static prediction problem of the form "what does this user want now?" It can choose the sequence of exposures that changes what the user will want next. If the future preference state is then treated as ordinary revealed preference, the mechanism has helped produce the standard by which it is judged.</p>
 
-    <p>This paper studies the reverse clock. Suppose the preference state adapts faster than the other state variables in the model. The motivating examples are digital and AI-mediated environments in which observation, exposure, updating, and future behavior form a short-cycle loop. The formal question is more general: what happens to Nash equilibrium, material selection, and welfare when the preference state closes before the slower economy moves?</p>
+    <p>This paper studies the reverse clock. Suppose the preference state adapts faster than the other state variables in the model. The motivating examples are digital and AI-mediated environments in which observation, exposure, updating, and future behavior form a short-cycle loop. The formal question is more general: what happens to Nash equilibrium, material selection, and welfare when the preference state closes before the slower economy moves? In the comparative statics below, the slow environment \(E\) and the closure law \(\ell\) are held fixed while the fast preference state crosses the boundary layer.</p>
 
     <p>The limit is deliberately extreme. Let \(T_\theta\) be the adjustment timescale of the preference state \(\theta\). The central comparative-static exercise is:</p>
 
@@ -392,6 +392,8 @@
 
   <section>
     <h2>3. Environment</h2>
+    <p>The formal setup keeps four objects separate: the finite game, the fast preference state, the subjective utility representation used for play, and the material payoff used for evaluation or selection.</p>
+
     <p>The main model is a finite game with a fast preference state. Let \(N=\{1,\ldots,n\}\) be the finite set of players, \(A_i\) player \(i\)'s finite action set, and \(A=\prod_i A_i\) the set of action profiles. An action profile is \(a=(a_i,a_{-i})\).</p>
 
     <p>The slow material environment is \(E\in\mathcal E\). The closure law is \(\ell\in\mathcal L\). A closure law can be a habit technology, a cultural transmission rule, an institutional regime, a platform policy, or a susceptibility type. In the platform application below, the platform's feasible rules \(r\in\mathcal R\) are treated as particular closure laws.</p>
@@ -487,6 +489,10 @@
 
     <p class="proof"><strong>Proof.</strong> Fix \(E\) and \(\ell\). On the fast time \(s=t/T_\theta\), the preference subsystem is \(d\theta/ds=H(\theta;E,\ell)\). Global attraction implies that every initial state in the relevant basin converges to \(\theta_\ell^\star(E)\) as \(s\to\infty\). Thus, along any sequence \(T_\theta\downarrow 0\) observed after the fast boundary layer and before the slow state changes, the payoff table used for play converges pointwise to \(U_i(\cdot;\theta_{i,\ell}^\star(E),E,\ell)\). Since action sets are finite, this limiting payoff table defines the reduced game \(\Gamma_\ell^\star(E)\), and any Nash calculation after adjustment is a Nash calculation in that game.</p>
 
+    <div class="takeaway">
+      <strong>What this says.</strong> In the fast limit, the analyst solves the game generated after preference adjustment. The lemma does not settle welfare; it tells us which payoff table players are using.
+    </div>
+
     <p>The lemma is a closure result, not a welfare result. It identifies the payoff object that agents optimize after fast adjustment; whether that object is materially adaptive or normatively acceptable is a separate question. A full moving-slow-state singular perturbation theorem would require additional uniform attraction, compactness, smoothness, and a specified law of motion for \(E\) and \(\ell\).</p>
   </section>
 
@@ -541,7 +547,11 @@
       <p>If \(BR_{i,\ell}^\star(x_{-i};E)=BR_{i,\ell}^\pi(x_{-i};E)\) for every player \(i\) and every mixed opponent profile \(x_{-i}\in X_{-i}\), then the mixed Nash equilibrium sets of \(\Gamma_\ell^\star(E)\) and \(\Gamma_\ell^\pi(E)\) coincide. For a single fixed game this condition is sufficient, not necessary: off-equilibrium best responses may differ while the Nash set happens to remain the same. The condition is the natural invariance test when the analyst wants predictions to survive changes in equilibrium selection, feasible restrictions, or opponent profiles.</p>
     </div>
 
-    <p class="proof"><strong>Proof.</strong> Mixed Nash equilibria are fixed points of mixed best-response correspondences. If all correspondences are identical, their fixed-point sets are identical. Differences away from equilibrium need not change a particular Nash set, which is why the proposition is stated as a sufficient condition and an invariance discipline rather than as a converse theorem for one fixed game.</p>
+    <p class="proof"><strong>Proof.</strong> Mixed Nash equilibria are fixed points of mixed best-response correspondences. If all correspondences are identical, their fixed-point sets are identical. Differences away from equilibrium need not change a particular Nash set, which is why the proposition is stated as a sufficient condition rather than as a converse theorem for one fixed game.</p>
+
+    <div class="takeaway">
+      <strong>Plain implication.</strong> A strong sufficient condition for unchanged Nash predictions is that fast endogenous preferences leave every player's best responses unchanged. The fixed-point method survives; mixed best-response preservation is the theorem-aligned comparison with the material benchmark.
+    </div>
 
     <p>The neutral benchmark has an exact counterpart. Some preference movements can change subjective representation without changing strategic incentives.</p>
 
@@ -584,6 +594,10 @@
     </div>
 
     <p class="proof"><strong>Proof.</strong> At the same opponent mixed profile, the material and subjective best-response correspondences are distinct singleton sets. They therefore cannot be identical. In a two-action choice set, a strict subjective/material ranking reversal between the two actions is exactly this strict-maximizer reversal.</p>
+
+    <div class="takeaway">
+      <strong>Plain implication.</strong> If closure makes a player strictly choose a different action than material payoff would choose at the same opponent profile, the strong invariance test fails. The proposition identifies the failure; the following example shows a case where the Nash set itself changes.
+    </div>
 
     <div class="theorem">
       <span class="theorem-title">Example 1. A Two-Action Nash-Set Change</span>
@@ -747,6 +761,10 @@
 
     <p class="proof"><strong>Proof.</strong> If \(q\sim_{E,\ell} q'\), the closure map gives \(C_\ell(E,q)=C_\ell(E,q')\). The payoff table in the reduced subjective game is therefore identical under the two initial states, so their Nash sets coincide. A post-closure admissible selection rule receives the same reduced game and selected play as input, so it gives the same evaluation. Direct reward of the pre-closure state \(q\) is outside this theorem. Only heterogeneity that survives closure, such as different laws \(\ell\), can be selected.</p>
 
+    <div class="takeaway">
+      <strong>What this says.</strong> Selection is still available, but it cannot act on initial preference differences that fast closure has erased. It acts on the mechanisms that continue to produce different reduced games.
+    </div>
+
     <p>This result is a target shift, not a denial of selection. In a slow-preference model, selection may act on preference types. In a fast-preference model with common closure, selection acts on the machinery that produces preferences.</p>
   </section>
 
@@ -792,7 +810,11 @@
 
     <p class="proof"><strong>Proof.</strong> If every proxy maximizer is also a material maximizer on \(\mathcal R\), then any selected \(r^V\) attains the feasible maximum of \(G\). Equality of maximizer sets is a direct sufficient condition. Strict ordinal equivalence is also sufficient when it preserves the relevant maximizers and ties on \(\mathcal R\). For the reversal construction, restrict the feasible set to two rules \(r_1,r_2\) such that \(V(r_1)>V(r_2)\) but \(G(r_1)&lt;G(r_2)\). Then proxy maximization selects \(r_1\) and loses material payoff relative to \(r_2\).</p>
 
-    <p>Equilibrium shifts are not necessarily material losses. A rule can change the induced subjective game and the selected equilibrium while preserving the material criterion if the proxy remains aligned with the evaluator. Material loss requires misalignment with the chosen evaluator, not merely movement in behavior. In the finite-game stress test, losses are common under independent and misaligned proxies; that result is a computational illustration, not part of the proposition.</p>
+    <div class="takeaway">
+      <strong>Plain implication.</strong> Platform-driven preference change is not automatically a material loss. The loss claim needs proxy/material misalignment on the feasible set of rules.
+    </div>
+
+    <p>Equilibrium shifts are not necessarily material losses. A rule can change the induced subjective game and the selected equilibrium while preserving the material criterion if the proxy remains aligned with the evaluator. The relevant loss condition is proxy/material misalignment on the feasible rule set, not merely movement in behavior. In the finite-game stress test, losses are common under independent and misaligned proxies; that result is a computational illustration, not part of the proposition.</p>
 
     <p>The application is not just "engagement is not welfare." The endogenous-preference step is essential because the platform's rule changes future utility representations, not only current choices. A platform that learns how to make users prefer the next state can then cite those induced preferences as evidence of satisfaction. The model says that material evaluation and welfare analysis must inspect the transition law, not only final revealed preference.</p>
   </section>
@@ -895,7 +917,7 @@
         </tr>
         <tr>
           <td>Nash sets of subjective and material games</td>
-          <td>Conditional. They survive only under best-response preservation.</td>
+          <td>Conditional. Mixed best-response preservation is a sufficient condition for agreement.</td>
         </tr>
         <tr>
           <td>Material selection</td>
@@ -1070,7 +1092,7 @@
 
     <p>Second, equilibrium multiplicity matters. The finite-game audit uses an explicit equilibrium-selection convention for simulation. The theory statements above are set-valued where possible, but welfare and material comparisons in richer models will require either set-valued evaluation or a selection rule.</p>
 
-    <p>Third, the empirical proxy is crude. Internet users and mobile subscriptions are not preference states. They are macro exposure variables. A sharper empirical program would use individual panels, feed experiments, deactivation experiments, recommender-rule changes, or repeated elicitation of choice elasticities.</p>
+    <p>Third, the empirical proxy is crude. Internet users and mobile subscriptions are not preference states. They are macro exposure variables. A more precise empirical program would use individual panels, feed experiments, deactivation experiments, recommender-rule changes, or repeated elicitation of choice elasticities.</p>
 
     <p>Fourth, the model does not prove that social media or AI makes people materially worse off. It shows where such a claim would have to enter: in the alignment between the preference-generating operator and the material or normative criterion.</p>
 
@@ -1079,11 +1101,11 @@
 
   <section>
     <h2>14. Conclusion</h2>
-    <p>When utility adapts on the fastest clock, utility is not the primitive that closes the model. It is the object closed by the model.</p>
+    <p>When preference adjustment is the fastest clock, utility is no longer primitive. It is produced by the slow environment together with the closure law.</p>
 
-    <p>That single change reorganizes three familiar ideas. Nash equilibrium remains the fixed-point method, but it is computed in the reduced subjective game induced by fast preference closure. Material selection remains a growth-based evaluation method, but it acts on adaptation laws, institutions, populations, or systems that remain heterogeneous after closure. Welfare analysis remains possible, but it must evaluate transition laws or preference paths rather than only allocations under final preferences.</p>
+    <p>That single change reorganizes three familiar ideas. Nash equilibrium remains the fixed-point method, but it is computed in the reduced subjective game induced by fast preference closure. Material selection remains a material-comparison method, but it acts on adaptation laws, institutions, populations, or systems that remain heterogeneous after closure. Welfare analysis remains possible, but it must evaluate transition laws or preference paths rather than only allocations under final preferences.</p>
 
-    <p>The most unsettling implication is also the most disciplined one. Material harm is not a theorem of speed alone. It becomes possible, and in the stress test common, when the preference-generating operator is independent of or misaligned with the material evaluator and the resulting closure changes best-response behavior. The framework yields testable restrictions once a closure law, exposure proxy, and material evaluator are specified: the alignment of those objects becomes the thing to measure.</p>
+    <p>The central implication is also the disciplined one. Material harm is not a theorem of speed alone. It becomes possible, and in the stress test common, when the preference-generating rule is independent of or misaligned with the material evaluator on the feasible rule set. Best-response movement is one mechanism through which rule choice can matter, not an additional theorem-level requirement. The framework yields testable restrictions once a closure law, exposure proxy, and material evaluator are specified: the alignment of those objects becomes the thing to measure.</p>
   </section>
 
   <section class="refs">
