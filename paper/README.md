@@ -92,6 +92,8 @@ Latest combined-manuscript QA artifacts are in `results/figures/`:
 - `combined_v1_qa_social_feedback.png`
 - `combined_v1_qa_hysteresis.png`
 - `combined_v1_qa_appendix.png`
+- `combined_v1_formula_explanations_model.png`
+- `combined_v1_formula_explanations_eq17.png`
 
 The five merge review notes are:
 

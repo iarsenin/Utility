@@ -440,6 +440,8 @@
       \]
     </div>
 
+    <p class="small"><strong>Why this form.</strong> Equation (1) is not a behavioral law. It is an accounting order. It keeps five objects separate that are often collapsed: the rule that forms preferences, the preference state selected by that rule, the game induced by that state, the Nash set of that game, and the material evaluation of the selected outcome.</p>
+
     <p>With Equation (1) in mind, the result can be stated without suspense. Nash equilibrium remains the solution concept. What changes is the payoff table to which Nash equilibrium is applied. Material selection remains a method of comparison. What changes is the object being compared: once initial preference differences have been erased by fast closure, the remaining post-closure selection problem is over laws, institutions, or environments that still produce different games.</p>
 
     <p><strong>Table 2. What survives in the fast-preference limit.</strong></p>
@@ -518,6 +520,8 @@
       \]
     </div>
 
+    <p class="small"><strong>Why this form.</strong> The side-by-side notation is the minimal way to keep choice and evaluation separate. \(U_i\) is the representation player \(i\) maximizes; \(\pi_i\) is the material criterion used by the analyst or selection process. They may coincide, but the model does not build that equality in.</p>
+
     <p>The preference state follows a fast dynamic. The function \(H\) is the fast adjustment rule, or vector field. The optional input \(\zeta\) records fast-clock exposure or transition inputs, such as a temporary social-media shock; if there is no such input, suppress \(\zeta\). A zero of \(H\) is a fixed point of the preference process. The dot in \(\dot\theta\) denotes a time derivative, and the parameter \(T_\theta\) is the preference-adjustment timescale. Sending \(T_\theta\to 0\) means that preferences settle before the slower variables move. With \(\theta=(\theta_1,\ldots,\theta_n)\), Equation (3) writes the fast law:</p>
 
     <div class="equation">
@@ -528,6 +532,8 @@
         H(\theta;E,\ell,\zeta).
       \]
     </div>
+
+    <p class="small"><strong>Why this form.</strong> The equation is deliberately general. Writing the timescale as \(T_\theta\dot\theta\) makes the fast-limit exercise explicit: as \(T_\theta\) becomes small, the preference state moves quickly relative to the slow economic state. The vector field \(H\) is left abstract so the finite-game results do not depend on a particular psychological or social mechanism.</p>
 
     <p>The maintained fast-adjustment assumption is fixed-state closure. During the fast adjustment, \(E\), \(\ell\), and the relevant input \(\zeta\) are held fixed or varied only as specified by the closure experiment. Let \(q\) denote the initial preference state at the start of the fast adjustment. When the fast limit exists, the closure map \(C_\ell(E,q,\zeta)\) records the selected post-adjustment preference state. The common unique-closure case is the special case in which the closure map is independent of \(q\) and \(\zeta\); then it can be written as the branch \(\theta_\ell^\star(E)\). Equation (4) records both objects.</p>
 
@@ -548,6 +554,8 @@
       \]
     </div>
 
+    <p class="small"><strong>Why this form.</strong> The map \(C_\ell\) is written as a fast-time limit because it must allow both clean unique convergence and path-dependent branch selection. The initial state \(q\) and input \(\zeta\) are included precisely so later hysteresis examples are not forced into the unique-closure notation.</p>
+
     <p>The formal results in Sections 4 through 7 are stated in the unique-closure notation because that is the clean benchmark. The branch-selected notation matters when the fast process has multiple stable fixed points, as in the social-feedback model in Section 8. A moving-slow-state model would require additional tracking assumptions; Appendix A.1 records that possible extension, but no result in the paper depends on it.</p>
 
     <div class="equation">
@@ -559,6 +567,8 @@
         \ \text{on the fast clock.}
       \]
     </div>
+
+    <p class="small"><strong>Why this form.</strong> A zero of \(H\) is a stationary preference state. The convergence clause adds stability: the branch is not merely a mathematical solution of \(H=0\), but the state reached by the fast adjustment from the relevant initial conditions.</p>
 
     <p>The notation \(\theta_{i,\ell}^\star(E)\) means player \(i\)'s component of the unique settled preference vector \(\theta_\ell^\star(E)\). More generally, \(C_{i,\ell}(E,q,\zeta)\) is player \(i\)'s component of the branch-selected closure map. The reduced subjective game is the ordinary finite game obtained after replacing the pre-adjustment preference state by the post-closure state. Equation (6) defines the branch-selected version and then the unique-closure abbreviation used in the main theorems:</p>
 
@@ -578,6 +588,8 @@
       \]
     </div>
 
+    <p class="small"><strong>Why this form.</strong> This is the standard normal-form game object after substituting post-closure preferences into utility. The branch-selected version is the general object; the shorter \(\Gamma_\ell^\star(E)\) is used when the closure branch is unique and independent of \(q\) and \(\zeta\).</p>
+
     <p>Equation (7) defines the material benchmark game. It has the same players and actions as Equation (6), but it uses material payoffs instead of subjective utility:</p>
 
     <div class="equation">
@@ -590,6 +602,8 @@
       \]
     </div>
 
+    <p class="small"><strong>Why this form.</strong> The benchmark keeps the strategic environment fixed and changes only the payoff table used for evaluation. That isolation is useful: any difference between \(\Gamma_\ell^\star(E)\) and \(\Gamma_\ell^\pi(E)\) comes from subjective/material payoff divergence, not from changing the set of players or actions.</p>
+
     <p>For any game \(\Gamma\), write \(NE(\Gamma)\) for its Nash set, the set of self-consistent mixed-strategy profiles. Some results compare sets of equilibria and do not need a single selected outcome. When a scalar material comparison is needed, fix an equilibrium-selection rule \(\sigma_\ell(E)\in NE(\Gamma_\ell^\star(E))\) and a material evaluator \(M:X\times\mathcal E\times\mathcal L\to\mathbb R\). Equation (8) defines the scalar material value:</p>
 
     <div class="equation">
@@ -600,6 +614,8 @@
         M\!\left(\sigma_\ell(E),E,\ell\right).
       \]
     </div>
+
+    <p class="small"><strong>Why this form.</strong> Nash equilibria can be set-valued, so scalar comparisons need two extra ingredients: a selection rule \(\sigma_\ell\) and a material evaluator \(M\). The paper keeps them explicit to avoid hiding welfare or survival assumptions inside the equilibrium concept.</p>
 
     <p>Set-valued equilibrium statements below do not depend on \(\sigma\). Scalar material comparisons do.</p>
   </section>
@@ -642,6 +658,8 @@
       \]
     </div>
 
+    <p class="small"><strong>Why this form.</strong> Expected payoff is written by summing over pure action profiles and weighting each profile by its mixed-strategy probability \(x(a)\). This is the standard finite-game extension from pure payoffs to mixed strategies, and it is needed because Nash equilibrium may be mixed.</p>
+
     <p>A best response is any strategy that maximizes payoff against the opponents' mixed profile. It is called a correspondence rather than a function because ties can produce several best responses. The corresponding mixed best-response correspondences are:</p>
 
     <div class="equation">
@@ -659,6 +677,8 @@
       \end{aligned}
       \]
     </div>
+
+    <p class="small"><strong>Why this form.</strong> The \(\arg\max\) form is the definition of optimal response. The comparison must range over all mixed opponent profiles \(x_{-i}\), not only pure profiles, because equality of Nash sets in mixed games is governed by mixed best-response correspondences.</p>
 
     <div class="theorem">
       <span class="theorem-title">Proposition 1. Mixed Best-Response Invariance</span>
@@ -684,6 +704,7 @@
           \beta_i\,\pi_i(a_i,a_{-i};E,\ell).
         \]
       </div>
+      <p class="small"><strong>Why this form.</strong> This is the familiar positive affine transformation that preserves a player's own action ranking, except that the additive term may depend on the opponent's action. Because that additive term is independent of \(a_i\), it drops out of player \(i\)'s best-response problem.</p>
       <p>Then \(NE(\Gamma_\ell^\star(E))=NE(\Gamma_\ell^\pi(E))\).</p>
     </div>
 
@@ -705,6 +726,7 @@
           \end{aligned}
         \]
       </div>
+      <p class="small"><strong>Why this form.</strong> The strict singleton condition is a diagnostic for a genuine ranking reversal. It rules out ambiguity from ties: at the same opponent profile, subjective utility and material payoff point to different unique actions.</p>
       <p>Then \(BR_{i,\ell}^\star(x_{-i};E)\ne BR_{i,\ell}^\pi(x_{-i};E)\). Hence the mixed best-response correspondence invariance condition in Proposition 1 fails. Nash sets may still coincide in special games; the proposition identifies failure of the strong invariance test, not a necessary-and-sufficient Nash-set separation. In a two-action choice set this condition is equivalent to a strict subjective/material ranking reversal between the two actions.</p>
     </div>
 
@@ -725,6 +747,7 @@
           \pi_i(B,a_{-i};E,\ell)=0 .
         \]
       </div>
+      <p class="small"><strong>Why this form.</strong> The example uses strict material dominance to remove strategic distractions. If \(A\) materially dominates regardless of what the opponent does, the material benchmark has the clean equilibrium \((A,A)\).</p>
       <p>The material benchmark game has the unique Nash equilibrium \((A,A)\). Suppose the closure-law family contains a law \(\ell\) whose attracting branch induces the subjective representation:</p>
       <div class="equation">
         <span class="label">Post-Closure Subjective Dominance</span>
@@ -734,6 +757,7 @@
           U_i(B,a_{-i};\theta_{i,\ell}^\star(E),E,\ell)=1 .
         \]
       </div>
+      <p class="small"><strong>Why this form.</strong> The subjective table reverses the material dominance relation as starkly as possible. That makes the example a minimal proof of possibility: fast closure alone can change the game being solved.</p>
       <p>Then \(B\) is strictly dominant in the reduced subjective game, so \(NE(\Gamma_\ell^\star(E))=\{(B,B)\}\), while \(NE(\Gamma_\ell^\pi(E))=\{(A,A)\}\). The example is deliberately minimal: no equilibrium-selection issue is needed for fast closure to change the Nash set.</p>
     </div>
   </section>
@@ -772,6 +796,8 @@
       \]
     </div>
 
+    <p class="small"><strong>Why this form.</strong> This is the standard replicator equation, used here only as a canonical material-selection example. Closure laws with above-average material value grow in share; below-average laws shrink. The theorem does not require this exact dynamic, but it makes concrete what post-closure selection over laws can look like.</p>
+
     <p>The scalar equation is not the definition of Theorem 1. It is one possible post-closure selection equation obtained after the law-level objects have been specified.</p>
   </section>
 
@@ -791,6 +817,8 @@
         \bigl(V(r),G(r)\bigr).
       \]
     </div>
+
+    <p class="small"><strong>Why this form.</strong> The display is a composition of maps rather than a dynamic equation. It records the institutional chain: a platform rule induces a preference state, the preference state induces a subjective game, the subjective game yields selected play, and that play can be scored by both platform proxy \(V\) and material evaluator \(G\).</p>
 
     <p>The platform chooses \(r^V\in\arg\max_{r\in\mathcal R}V(r)\). A material planner would choose \(r^G\in\arg\max_{r\in\mathcal R}G(r)\).</p>
 
@@ -860,6 +888,8 @@
       \]
     </div>
 
+    <p class="small"><strong>Why this form.</strong> Equation (17) uses a standard smooth-threshold structure. The inner bracket is the total field acting on agent \(i\): baseline taste \(h_i\), socially observed taste \(\eta\sum_j W_{ij}m_j\), and direct exposure \(\phi_i z\). The parameter \(\beta\) controls how sharply tastes respond to that field. The \(\tanh\) function is chosen because it maps any total field into \([-1,1]\), gives a smooth logit/Ising-style response, and permits clean critical-threshold calculations. The dynamic \(T_m\dot m_i=-m_i+\tanh(\cdot)\) is a leaky adjustment rule: current taste decays toward the target taste implied by the current field. The second line is simply the fixed-point condition after fast adjustment has settled.</p>
+
     <p>A temporary shock is modeled as part of the closure experiment: it is either held long enough for the fast subsystem to settle, or varied slowly relative to the fast clock. The fixed-point equation is deliberately borrowed from logit social interactions, smooth threshold models, and Ising-style mean-field models. The interpretation here is narrower than a general theory of fashion. The selected fixed point \(m=C_\ell(E,q,\zeta)\) is the preference state that closes before the strategic game is solved.</p>
 
     <p>To embed this closure state in the finite game, let \(F_i\in A_i\) be agent \(i\)'s fashion-coded action and let \(\nu_i^0(a;E,\ell)\) be the baseline payoff representation before the social-feedback taste term. One simple embedding is:</p>
@@ -879,6 +909,8 @@
       \]
     </div>
 
+    <p class="small"><strong>Why this form.</strong> The linear term \(\lambda_i m_i\mathbf 1\{a_i=F_i\}\) is the simplest way to let the settled taste state affect later choice. If \(m_i\) rises, the fashion-coded action \(F_i\) becomes more attractive; if \(m_i\) falls, it becomes less attractive. The rest of utility, \(\nu_i^0\), is left unrestricted so the example isolates the role of the social-feedback taste component.</p>
+
     <p>Other embeddings are possible. This one is enough to show how a social-feedback closure state changes the payoff table of the later game: after \(m\) is selected, the reduced subjective game is obtained by substituting that \(m\) into \(U_i\). The propositions below are therefore conditional model results about this closure law, not empirical claims about every fashion cycle, social-media platform, or AI-mediated environment.</p>
 
     <div class="theorem">
@@ -892,6 +924,8 @@
         \beta\eta\rho(W)&lt;1.
       \]
     </div>
+
+    <p class="small"><strong>Why this form.</strong> The spectral radius \(\rho(W)\) measures the strongest network feedback direction. Multiplying by \(\beta\eta\) gives the maximal local gain of one round of social reinforcement. If that gain is below one, the closure map is a contraction: feedback dies out rather than amplifying itself.</p>
 
     <p>The product \(\beta\eta\rho(W)\) is the model's local feedback gain for taste reinforcement. It plays the role of a reproduction number: responsiveness times social reinforcement times network amplification. Below one, one round of imitation does not create enough new taste movement to sustain itself. Targeted exposure can still matter, but its effect is single-valued and reversible in this closure law.</p>
 
@@ -909,6 +943,8 @@
       \]
     </div>
 
+    <p class="small"><strong>Why this form.</strong> The expression comes from differentiating the fixed-point equation with respect to the exposure field \(z\). The inverse \((I-\beta\eta DW)^{-1}\) is the social multiplier: a direct exposure effect \(D\phi\) is repeatedly fed through the network feedback matrix \(\beta\eta DW\). The formula is a local derivative, not a prediction that adoption shares can exceed one.</p>
+
     <p>The matrix \(D\) measures local flexibility. Tastes near the extremes \(-1\) and \(1\) are less responsive; tastes near zero are more responsive. The inverse term is the amplification channel. This is the formal version of the claim that a targeted exposure field has the largest marginal effect when the audience is near a tipping surface.</p>
 
     <p>The mean-field case is the cleanest microscope for persistent fashion. Let \(m\) be the average taste state, \(J\) the strength of average social reinforcement, and \(b=h+z\) the total field. The closure equation becomes:</p>
@@ -920,6 +956,8 @@
       \]
     </div>
 
+    <p class="small"><strong>Why this form.</strong> The mean-field equation collapses the network into one average taste state. The parameter \(J\) replaces the network feedback term, and \(b=h+z\) collects baseline and temporary exposure fields. This simplification sacrifices heterogeneity but makes the tipping and hysteresis geometry exact.</p>
+
     <p>If \(\beta J\le 1\), the mean-field closure has one stable state. If \(\beta J>1\), it has a hysteresis window. Define the spinodal taste level \(m_s\) and critical field \(B_c\) by:</p>
 
     <div class="equation">
@@ -930,6 +968,8 @@
         B_c=Jm_s-\frac{\operatorname{arctanh}(m_s)}{\beta}.
       \]
     </div>
+
+    <p class="small"><strong>Why this form.</strong> These expressions are the fold, or spinodal, conditions of the mean-field fixed-point curve. At the boundary of the hysteresis window, the \(\tanh\) curve is tangent to the forty-five-degree line. Solving that tangency gives \(m_s\), and substituting it back into the fixed-point equation gives the critical field \(B_c\).</p>
 
     <div class="theorem">
       <span class="theorem-title">Proposition 6. Hysteresis And Persistent Fashion</span>
@@ -948,6 +988,8 @@
         B_c-h&lt; z_{\max}.
       \]
     </div>
+
+    <p class="small"><strong>Why this form.</strong> The first inequality puts the no-shock baseline inside the hysteresis window, where both low and high stable branches exist. The second says the admissible shock budget is large enough to cross the upper critical field from baseline \(h\). Together they describe when a temporary shock can select a new stable branch without needing to remain permanently present.</p>
 
     <div class="theorem">
       <span class="theorem-title">Proposition 7. Temporary Exposure, Persistent Material Loss</span>

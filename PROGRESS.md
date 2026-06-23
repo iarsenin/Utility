@@ -762,6 +762,38 @@ Combined visual QA screenshots:
 - `combined_v1_qa_hysteresis.png`
 - `combined_v1_qa_appendix.png`
 
+### Combined Manuscript Formula-Explanation Pass
+
+Added a formula-by-formula explanation pass to
+`paper/combined_fast_preference_closure_v1.html`.
+
+Main edit:
+
+- Every displayed equation now has a nearby "Why this form" explanation unless
+  it is embedded in the text as a theorem statement.
+- The pass is especially explicit for Equation (17), the network
+  social-feedback closure law. It now explains the total-field structure,
+  the role of \(h_i\), \(W_{ij}\), \(\eta\), \(\phi_i z\), and \(\beta\),
+  why \(\tanh\) is used, and why the dynamic takes the leaky-adjustment form
+  \(T_m\dot m_i=-m_i+\tanh(\cdot)\).
+- The social taste embedding, subcritical spectral-radius condition, local
+  influence multiplier, mean-field reduction, critical-field formula, and
+  persistent-loss window now each include short motivation for the chosen
+  formula.
+
+Validation:
+
+- HTML parse passed.
+- The draft still has 23 displayed equation blocks.
+- The draft now has 23 "Why this form" explanation blocks.
+- Browser render check found 444 MathJax containers and no raw display
+  delimiters.
+
+Formula-explanation QA screenshots:
+
+- `combined_v1_formula_explanations_model.png`
+- `combined_v1_formula_explanations_eq17.png`
+
 ### Next Actions
 
 - Decide whether `paper/combined_fast_preference_closure_v1.html` becomes the
