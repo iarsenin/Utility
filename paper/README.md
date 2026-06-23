@@ -56,3 +56,12 @@ also in `results/figures/`:
 - `geb_submission_v1_round17_qa_intro_terms.png`
 - `geb_submission_v1_round17_qa_model.png`
 - `geb_submission_v1_round17_qa_nash.png`
+
+Latest formula-numbering and non-specialist readability QA artifacts after the
+Round 18-21 pass are also in `results/figures/`:
+
+- `geb_submission_v1_round21_qa_top.png`
+- `geb_submission_v1_round21_qa_intro_formula_number.png`
+- `geb_submission_v1_round21_qa_model_formula_numbers.png`
+- `geb_submission_v1_round21_qa_material_scalar.png`
+- `geb_submission_v1_round21_qa_nash.png`

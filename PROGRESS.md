@@ -562,6 +562,58 @@ Validation:
 - Visual inspection confirmed that the abstract, term table, and formula boxes
   render cleanly in HTML.
 
+### Formula Numbering And Non-Specialist Readability Rounds 18-21
+
+Completed four further editing cycles on `paper/geb_submission_v1.html` after
+the article still expected too much notation guessing from the reader.
+
+The round logs are:
+
+- `docs/editorial_rounds/round_18_objective_and_numbering.md`
+- `docs/editorial_rounds/round_19_reader_agent.md`
+- `docs/editorial_rounds/round_20_rigor_agent.md`
+- `docs/editorial_rounds/round_21_production_check.md`
+
+Main changes:
+
+- Updated `docs/agent_objective_function.md` with role-specific objectives for
+  the modeller/rigor agent, writer/reader agent, and editor/production agent.
+- Added visible equation numbering to every display formula in the GEB HTML.
+- Switched MathJax display tagging to `tags: 'none'` so CSS counters are the
+  single numbering system.
+- Rewrote the abstract to define \(E\), \(\ell\), \(\theta_\ell^\star(E)\),
+  \(\Gamma_\ell^\star(E)\), Nash set, and mixed best-response invariance before
+  relying on those terms.
+- Expanded the introduction glossary with the slow environment, action profile,
+  settled preference state, Nash set, and scalar material value.
+- Reintroduced the first formal display as Equation (1), explicitly holding the
+  slow environment \(E\) fixed while the closure law \(\ell\) maps to the
+  settled preference state, reduced game, Nash set, and material value.
+- Expanded the model section so \(a\), \(H\), \(\dot\theta\), \(T_\theta\),
+  \(\theta_{i,\ell}^\star(E)\), and \(NE(\Gamma)\) are defined before their
+  key displays.
+- Replaced unexplained boundary-layer wording in the main text with plain
+  "fast adjustment" language; the singular-perturbation term now appears only
+  in the appendix with an immediate explanation.
+
+Round 21 visual QA was performed through the local server and headless Chrome
+after MathJax rendering. Screenshots are saved in `results/figures/`:
+
+- `geb_submission_v1_round21_qa_top.png`
+- `geb_submission_v1_round21_qa_intro_formula_number.png`
+- `geb_submission_v1_round21_qa_model_formula_numbers.png`
+- `geb_submission_v1_round21_qa_material_scalar.png`
+- `geb_submission_v1_round21_qa_nash.png`
+
+Validation:
+
+- `paper/geb_submission_v1.html` parses with Python's `HTMLParser`.
+- The manuscript has 15 `.equation` blocks, 15 labels, and balanced source
+  display-math delimiters.
+- Rendered text has no `fixed-E` or `fixed-l` residue.
+- Visual inspection confirmed that formula numbers, equation boxes, and the
+  abstract/model/Nash formula sections render cleanly.
+
 ### Next Actions
 
 - Convert `paper/geb_submission_v1.html` to a LaTeX/PDF submission package with

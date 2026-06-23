@@ -10,7 +10,7 @@
         inlineMath: [['\\(', '\\)']],
         displayMath: [['\\[', '\\]']],
         processEscapes: true,
-        tags: 'ams'
+        tags: 'none'
       },
       chtml: {
         scale: 1.03,
@@ -47,6 +47,7 @@
     }
 
     main {
+      counter-reset: equation;
       max-width: 980px;
       margin: 0 auto;
       padding: 48px 30px 86px;
@@ -157,12 +158,26 @@
       background: var(--box);
       border: 1px solid var(--rule);
       border-left: 4px solid var(--accent);
+      counter-increment: equation;
       margin: 22px auto;
       max-width: 900px;
       overflow-x: auto;
       overflow-y: hidden;
-      padding: 14px 18px 12px;
+      padding: 14px 62px 12px 18px;
+      position: relative;
       -webkit-overflow-scrolling: touch;
+    }
+
+    .equation::after {
+      color: var(--muted);
+      content: "(" counter(equation) ")";
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.9rem;
+      font-weight: 650;
+      position: absolute;
+      right: 18px;
+      top: 50%;
+      transform: translateY(-50%);
     }
 
     .equation .label {
@@ -276,7 +291,11 @@
       }
 
       .equation {
-        padding: 12px 12px 10px;
+        padding: 12px 44px 10px 12px;
+      }
+
+      .equation::after {
+        right: 12px;
       }
 
       table {
@@ -299,14 +318,14 @@
     <h2>Abstract</h2>
     <p>This paper studies finite games in which the utility used for choice is not fixed in advance. A fast preference-formation process first produces the utility representation that players use. Players then choose a Nash equilibrium in that induced subjective game. Material payoff is kept separate and is used afterward to evaluate survival, welfare, or institutional success. The model therefore has two payoff tables: one that players maximize and one that the analyst or selection process uses to judge consequences.</p>
 
-    <p>Formally, for each fixed slow environment \(E\) and closure law \(\ell\), the preference state \(\theta\) moves on a fast clock and converges to an attracting state \(\theta_\ell^\star(E)\). This produces a reduced subjective game \(\Gamma_\ell^\star(E)\). The first result is a reduction: after the fast adjustment, equilibrium analysis is analysis of this reduced game. The second result gives a strong sufficient condition under which this subjective Nash set agrees with the material-payoff Nash set: the players' mixed best-response correspondences are identical under subjective and material payoffs. When that condition fails, the equilibrium prediction can change; a two-action example shows the Nash set moving from one action profile to another.</p>
+    <p>Formally, \(E\) denotes the slow economic environment and \(\ell\) denotes the preference-formation rule, or closure law. During the fast adjustment, \(E\) and \(\ell\) are held constant while the preference state \(\theta\) moves. The limiting preference state is written \(\theta_\ell^\star(E)\), and it produces a reduced subjective game \(\Gamma_\ell^\star(E)\). The first result is a reduction: after the fast adjustment, equilibrium analysis is analysis of this reduced game. The second result gives a strong sufficient condition under which the subjective and material games have the same Nash set, meaning the same collection of self-consistent mixed-strategy outcomes. The condition is plain: for every possible mixed behavior of the other players, each player must have the same set of optimal responses under subjective utility and material payoff. Formally, the mixed best-response correspondences are identical. When that condition fails, the equilibrium prediction can change; a two-action example shows the Nash set moving from one action profile to another.</p>
 
     <p>The third result concerns selection. If many initial preference states all close to the same final utility representation, then a material selection rule that observes only post-closure play cannot distinguish those initial states. The remaining selection problem is over what still differs after closure: laws, institutions, platform rules, or environments. A platform application makes the material-evaluation issue concrete. Preference change by itself is not a material loss. Loss follows when the proxy that chooses the preference-producing rule is misaligned with the material evaluator. Random finite-game audits illustrate that exact best-response preservation is restrictive and that proxy losses in this audit are small under approximate alignment but large under independent or reversed proxy objectives.</p>
   </section>
 
   <section>
     <h2>1. Introduction</h2>
-    <p>In a standard finite game, each player chooses an action from a finite list. The model gives each player a payoff table, and the players choose strategies. A Nash equilibrium is a self-consistent outcome: given what everyone else is doing, no player wants to change. In the standard formulation, the payoff table is part of the primitives of the model.</p>
+    <p>In a standard finite game, each player chooses an action from a finite list. The model gives each player a payoff table, and the players choose strategies. A Nash equilibrium is a self-consistent outcome: given what everyone else is doing, no player wants to change. A mixed strategy is a probability distribution over actions; a Nash set is the collection of all self-consistent mixed profiles. In the standard formulation, the payoff table is part of the primitives of the model.</p>
 
     <p>This paper changes one part of that setup. The payoff table used for choice is allowed to be produced by a preference-formation process. The motivating cases are familiar: habit, socialization, identity, advertising, cultural transmission, recommender systems, and AI-mediated environments can all affect what a person comes to value. The limiting question is deliberately sharp: what if that preference-producing process is much faster than the other economic state variables?</p>
 
@@ -324,6 +343,11 @@
       </thead>
       <tbody>
         <tr>
+          <td>Slow environment</td>
+          <td>The background economic state held constant while preferences settle.</td>
+          <td>\(E\)</td>
+        </tr>
+        <tr>
           <td>Preference state</td>
           <td>The current taste or utility representation that guides choice.</td>
           <td>\(\theta\)</td>
@@ -332,6 +356,16 @@
           <td>Closure law</td>
           <td>The mechanism that makes preferences settle, such as a habit rule, cultural rule, or platform rule.</td>
           <td>\(\ell\)</td>
+        </tr>
+        <tr>
+          <td>Settled preference state</td>
+          <td>The preference state reached after fast adjustment under law \(\ell\) in environment \(E\).</td>
+          <td>\(\theta_\ell^\star(E)\)</td>
+        </tr>
+        <tr>
+          <td>Action profile</td>
+          <td>The list of pure actions chosen by all players.</td>
+          <td>\(a=(a_i)_{i\in N}\in A\)</td>
         </tr>
         <tr>
           <td>Subjective utility</td>
@@ -348,10 +382,22 @@
           <td>The game that remains after fast preferences have settled.</td>
           <td>\(\Gamma_\ell^\star(E)\)</td>
         </tr>
+        <tr>
+          <td>Nash set</td>
+          <td>The set of self-consistent mixed-strategy outcomes of a game.</td>
+          <td>\(NE(\Gamma)\)</td>
+        </tr>
+        <tr>
+          <td>Material value</td>
+          <td>The scalar material score assigned after an equilibrium is selected.</td>
+          <td>\(G_\ell(E)\)</td>
+        </tr>
       </tbody>
     </table>
 
-    <p>The contribution is not the claim that preferences are endogenous. That claim is familiar from habit formation, addiction, cultural transmission, advertising, identity, and indirect evolutionary preferences. The contribution is the timing in the fast-preference limit. In indirect evolutionary preference models, subjective preferences determine play and are then selected by material payoff over a slower evolutionary process. Here, for each fixed slow state, subjective preferences first close under a fast law; material selection then operates on the closure laws, institutions, or transition rules that remain heterogeneous after closure.</p>
+    <p>The contribution is not the claim that preferences are endogenous. That claim is familiar from habit formation, addiction, cultural transmission, advertising, identity, and indirect evolutionary preferences. The contribution is the timing in the fast-preference limit. In indirect evolutionary preference models, subjective preferences determine play and are then selected by material payoff over a slower evolutionary process. Here, holding the slow environment \(E\) and the closure law \(\ell\) constant during fast adjustment, subjective preferences first close under a fast law; material selection then operates on the closure laws, institutions, or transition rules that remain heterogeneous after closure.</p>
+
+    <p>For a fixed slow environment \(E\), Equation (1) summarizes the order of operations. Read it from left to right: choose a closure law \(\ell\); let preferences settle to \(\theta_\ell^\star(E)\); form the reduced subjective game \(\Gamma_\ell^\star(E)\); compute its Nash equilibria \(NE(\Gamma_\ell^\star(E))\); then evaluate the selected outcome by material value \(G_\ell(E)\).</p>
 
     <div class="equation">
       <span class="label">Order Of Analysis</span>
@@ -368,7 +414,7 @@
       \]
     </div>
 
-    <p>With that order in mind, the result can be stated without suspense. Nash equilibrium remains the solution concept. What changes is the payoff table to which Nash equilibrium is applied. Material selection remains a method of comparison. What changes is the object being compared: once initial preference differences have been erased by fast closure, the remaining post-closure selection problem is over laws, institutions, or environments that still produce different games.</p>
+    <p>With Equation (1) in mind, the result can be stated without suspense. Nash equilibrium remains the solution concept. What changes is the payoff table to which Nash equilibrium is applied. Material selection remains a method of comparison. What changes is the object being compared: once initial preference differences have been erased by fast closure, the remaining post-closure selection problem is over laws, institutions, or environments that still produce different games.</p>
 
     <table>
       <thead>
@@ -402,7 +448,9 @@
       </tbody>
     </table>
 
-    <p>The formal results follow this order. Lemma 1 gives the fast-closure reduction: after the fast boundary layer, the analyst solves the induced subjective game. Proposition 1 gives a sufficient mixed best-response condition under which the reduced subjective game and the material benchmark game have the same Nash set. Proposition 2 shows how strict subjective and material maximizers can diverge after closure, and Example 1 gives a two-action construction in which the Nash set itself changes. Theorem 1 then shifts material selection from initial preference states to closure-equivalence classes and surviving closure laws. Proposition 3 applies the same logic to platform rule choice: material loss follows from proxy/material misalignment on the feasible rule set, not from preference endogeneity alone.</p>
+    <p>The formal results follow this order. Lemma 1 gives the fast-closure reduction: after the short fast-adjustment period, the analyst solves the induced subjective game. Proposition 1 gives a sufficient condition under which the reduced subjective game and the material benchmark game have the same Nash set: every player has the same optimal responses under both payoff tables, for every possible mixed behavior of the other players. Proposition 2 shows how strict subjective and material maximizers can diverge after closure, and Example 1 gives a two-action construction in which the Nash set itself changes.</p>
+
+    <p>Theorem 1 introduces a closure-equivalence class, meaning a group of initial preference states that close to the same final utility representation. It says that a material selection rule observing only post-closure play cannot distinguish states inside such a class. Selection then moves to what still differs after closure: closure laws, institutions, or environments. Proposition 3 applies the same logic to platform rule choice: material loss follows from proxy/material misalignment on the feasible rule set, not from preference endogeneity alone.</p>
 
     <p>The paper therefore separates three steps that are often collapsed: subjective equilibrium, material evaluation, and material selection. Fast preference closure changes the game sent into the equilibrium step; it does not by itself determine the material or welfare conclusion.</p>
 
@@ -422,9 +470,9 @@
     <h2>3. Model</h2>
     <p>The model has four moving parts. First, there is a finite game: each player has a finite set of actions. Second, there is a fast preference state that determines the utility representation used for choice. Third, there is subjective utility, which players maximize. Fourth, there is material payoff, which is used for evaluation or selection. The point of the notation is to keep these objects separate.</p>
 
-    <p>Let \(N=\{1,\ldots,n\}\) be a finite set of players, \(A_i\) player \(i\)'s finite action set, and \(A=\prod_i A_i\). A mixed strategy is a probability distribution over actions: \(x_i\in\Delta(A_i)\). A mixed profile \(x\in X=\prod_i\Delta(A_i)\) records all players' mixed strategies. The slow environment is \(E\in\mathcal E\). The closure law is \(\ell\in\mathcal L\).</p>
+    <p>Let \(N=\{1,\ldots,n\}\) be a finite set of players, \(A_i\) player \(i\)'s finite action set, and \(A=\prod_i A_i\) the set of pure action profiles. A pure action profile is \(a=(a_i)_{i\in N}\in A\). A mixed strategy is a probability distribution over actions: \(x_i\in\Delta(A_i)\). A mixed profile \(x\in X=\prod_i\Delta(A_i)\) records all players' mixed strategies. The slow environment is \(E\in\mathcal E\). The closure law is \(\ell\in\mathcal L\).</p>
 
-    <p>Player \(i\)'s subjective utility is \(U_i(a;\theta_i,E,\ell)\), where \(\theta_i\in\Theta_i\) is the preference state. Player \(i\)'s material payoff is \(\pi_i(a;E,\ell)\). The material payoff need not equal the subjective utility representation.</p>
+    <p>Player \(i\)'s subjective utility is \(U_i(a;\theta_i,E,\ell)\), where \(\theta_i\in\Theta_i\) is player \(i\)'s preference state. Player \(i\)'s material payoff is \(\pi_i(a;E,\ell)\). Equation (2) displays the two payoff objects side by side. The material payoff need not equal the subjective utility representation.</p>
 
     <div class="equation">
       <span class="label">Payoff Objects</span>
@@ -435,7 +483,7 @@
       \]
     </div>
 
-    <p>The preference state follows a fast dynamic. The parameter \(T_\theta\) is the preference-adjustment timescale. Sending \(T_\theta\to 0\) means that preferences settle before the slower variables move. With \(\theta=(\theta_1,\ldots,\theta_n)\), write:</p>
+    <p>The preference state follows a fast dynamic. The function \(H\) is the fast adjustment rule, or vector field. A zero of \(H\) is a fixed point of the preference process. The dot in \(\dot\theta\) denotes a time derivative, and the parameter \(T_\theta\) is the preference-adjustment timescale. Sending \(T_\theta\to 0\) means that preferences settle before the slower variables move. With \(\theta=(\theta_1,\ldots,\theta_n)\), Equation (3) writes the fast law:</p>
 
     <div class="equation">
       <span class="label">Fast Preference Dynamics</span>
@@ -446,7 +494,7 @@
       \]
     </div>
 
-    <p>The maintained boundary-layer assumption is fixed-state closure. During the fast adjustment, \(E\) and \(\ell\) are held fixed. For each active \((E,\ell)\), the fast subsystem has a unique globally attracting fixed point \(\theta_\ell^\star(E)\). All formal results below are fixed-\(E\), fixed-\(\ell\) comparative statics after that boundary layer. A moving-slow-state model would require additional tracking assumptions; Appendix A.1 records that possible extension, but no result in the paper depends on it.</p>
+    <p>The maintained fast-adjustment assumption is fixed-state closure. During the fast adjustment, \(E\) and \(\ell\) are held fixed: the environment and the preference-formation rule do not move while \(\theta\) settles. For each active pair \((E,\ell)\), the fast subsystem has a unique globally attracting fixed point \(\theta_\ell^\star(E)\). In plain words, from any relevant initial preference state, the fast process converges to the same settled state. Equation (4) records this closure branch. The formal results compare the games obtained after that fast adjustment. A moving-slow-state model would require additional tracking assumptions; Appendix A.1 records that possible extension, but no result in the paper depends on it.</p>
 
     <div class="equation">
       <span class="label">Closure Branch</span>
@@ -458,7 +506,7 @@
       \]
     </div>
 
-    <p>The reduced subjective game induced by closure law \(\ell\) at environment \(E\) is the ordinary finite game obtained after replacing the pre-adjustment preference state by \(\theta_\ell^\star(E)\):</p>
+    <p>The notation \(\theta_{i,\ell}^\star(E)\) means player \(i\)'s component of the settled preference vector \(\theta_\ell^\star(E)\). The reduced subjective game induced by closure law \(\ell\) at environment \(E\) is the ordinary finite game obtained after replacing the pre-adjustment preference state by \(\theta_\ell^\star(E)\). Equation (5) defines that game:</p>
 
     <div class="equation">
       <span class="label">Reduced Subjective Game</span>
@@ -470,7 +518,7 @@
       \]
     </div>
 
-    <p>The material benchmark game has the same players and actions, but it uses material payoffs instead of subjective utility:</p>
+    <p>Equation (6) defines the material benchmark game. It has the same players and actions as Equation (5), but it uses material payoffs instead of subjective utility:</p>
 
     <div class="equation">
       <span class="label">Material Benchmark Game</span>
@@ -482,7 +530,7 @@
       \]
     </div>
 
-    <p>Some results compare sets of equilibria and do not need a single selected outcome. When a scalar material comparison is needed, fix an equilibrium-selection rule \(\sigma_\ell(E)\in NE(\Gamma_\ell^\star(E))\) and a material evaluator \(M:X\times\mathcal E\times\mathcal L\to\mathbb R\). Then:</p>
+    <p>For any game \(\Gamma\), write \(NE(\Gamma)\) for its Nash set, the set of self-consistent mixed-strategy profiles. Some results compare sets of equilibria and do not need a single selected outcome. When a scalar material comparison is needed, fix an equilibrium-selection rule \(\sigma_\ell(E)\in NE(\Gamma_\ell^\star(E))\) and a material evaluator \(M:X\times\mathcal E\times\mathcal L\to\mathbb R\). Equation (7) defines the scalar material value:</p>
 
     <div class="equation">
       <span class="label">Scalar Material Evaluation</span>
@@ -501,11 +549,11 @@
     <p>This section performs the first reduction. If the preference state reaches a unique attracting branch before play is analyzed, the analyst can replace the pre-adjustment preference state with the post-closure utility representation and solve the resulting subjective game.</p>
 
     <div class="theorem">
-      <span class="theorem-title">Lemma 1. Fast Closure For A Fixed Slow State</span>
-      <p>Fix \(E\) and \(\ell\). Suppose \(T_\theta\dot{\theta}=H(\theta;E,\ell)\) has a unique globally attracting fixed point \(\theta_\ell^\star(E)\). Then, after the boundary-layer adjustment and in the limit \(T_\theta\to 0\), equilibrium analysis at \((E,\ell)\) is represented by the reduced subjective game \(\Gamma_\ell^\star(E)\). The preference state is not an independent slow primitive at that point; it is the induced object \(\theta_\ell^\star(E)\).</p>
+      <span class="theorem-title">Lemma 1. Fast Closure With The Slow Environment Held Constant</span>
+      <p>Fix \(E\) and \(\ell\). Suppose \(T_\theta\dot{\theta}=H(\theta;E,\ell)\) has a unique globally attracting fixed point \(\theta_\ell^\star(E)\). Then, after the fast preference adjustment and in the limit \(T_\theta\to 0\), equilibrium analysis at \((E,\ell)\) is represented by the reduced subjective game \(\Gamma_\ell^\star(E)\). The preference state is not an independent slow primitive at that point; it is the induced object \(\theta_\ell^\star(E)\).</p>
     </div>
 
-    <p class="proof"><strong>Proof.</strong> See Appendix A.2. The point is that the boundary-layer limit replaces the pre-adjustment preference state by the attracting branch before equilibrium is computed.</p>
+    <p class="proof"><strong>Proof.</strong> See Appendix A.2. The point is that the fast-adjustment limit replaces the pre-adjustment preference state by the attracting branch before equilibrium is computed.</p>
 
     <div class="takeaway">
       <strong>What this says.</strong> Once fast adjustment is complete, the analyst can stop tracking the initial preference state and solve the game generated by the attracting post-closure state. The lemma does not say whether that game is good or bad; it says which game is being played.
@@ -802,10 +850,10 @@
   <section>
     <h2>Appendix A. Proof Details</h2>
     <h3>A.1 Remark On Moving Slow States</h3>
-    <p>The main text uses fixed-slow-state boundary-layer closure. A moving-slow-state extension would require additional uniform attraction and regularity assumptions: for example, compact active sets, local Lipschitz continuity of \(H\) in \(\theta\), a unique uniformly attracting branch \(\theta_\ell^\star(E)\), a Lipschitz slow path \(E(t)\), and fixed \(\ell\) between discrete institutional revisions. Under such assumptions, standard singular perturbation arguments would support tracking of \(\theta_\ell^\star(E(t))\) after the initial boundary layer on finite slow-time intervals away from discontinuities of \(\ell\). The paper does not use this as a theorem; the formal results require only fixed-state closure.</p>
+    <p>The main text holds \(E\) and \(\ell\) constant during the fast preference adjustment. In singular perturbation language, this is a fixed-slow-state boundary-layer closure: a short initial fast period is analyzed while the slow variables do not move. A moving-slow-state extension would require additional uniform attraction and regularity assumptions: for example, compact active sets, local Lipschitz continuity of \(H\) in \(\theta\), a unique uniformly attracting branch \(\theta_\ell^\star(E)\), a Lipschitz slow path \(E(t)\), and fixed \(\ell\) between discrete institutional revisions. Under such assumptions, standard singular perturbation arguments would support tracking of \(\theta_\ell^\star(E(t))\) after the initial fast-adjustment period on finite slow-time intervals away from discontinuities of \(\ell\). The paper does not use this as a theorem; the formal results require only fixed-state closure.</p>
 
     <h3>A.2 Proof Of Lemma 1</h3>
-    <p>Fix \(E\) and \(\ell\). On the fast time \(s=t/T_\theta\), the preference subsystem is \(d\theta/ds=H(\theta;E,\ell)\). By the maintained attraction assumption, every initial state in the relevant basin converges to \(\theta_\ell^\star(E)\) as \(s\to\infty\). Thus, along any sequence \(T_\theta\downarrow 0\) observed after the boundary layer and before \(E\) or \(\ell\) changes, the payoff table used for play converges pointwise to \(U_i(\cdot;\theta_{i,\ell}^\star(E),E,\ell)\) for each player \(i\). Because action sets are finite, pointwise convergence of the payoff table is enough to define the limiting reduced finite game \(\Gamma_\ell^\star(E)\). Nash equilibrium analysis after fast adjustment is therefore Nash equilibrium analysis in that reduced game.</p>
+    <p>Fix \(E\) and \(\ell\). On the fast time \(s=t/T_\theta\), the preference subsystem is \(d\theta/ds=H(\theta;E,\ell)\). By the maintained attraction assumption, every initial state in the relevant basin converges to \(\theta_\ell^\star(E)\) as \(s\to\infty\). Thus, along any sequence \(T_\theta\downarrow 0\) observed after the short fast-adjustment period and before \(E\) or \(\ell\) changes, the payoff table used for play converges pointwise to \(U_i(\cdot;\theta_{i,\ell}^\star(E),E,\ell)\) for each player \(i\). Because action sets are finite, pointwise convergence of the payoff table is enough to define the limiting reduced finite game \(\Gamma_\ell^\star(E)\). Nash equilibrium analysis after fast adjustment is therefore Nash equilibrium analysis in that reduced game.</p>
 
     <h3>A.3 Proof Of Proposition 1</h3>
     <p>For every finite game, a mixed Nash equilibrium is a profile \(x\in X\) such that \(x_i\in BR_i(x_{-i})\) for every player \(i\). If \(BR_{i,\ell}^\star(\cdot;E)=BR_{i,\ell}^\pi(\cdot;E)\) for all \(i\), then the set of profiles satisfying the subjective fixed-point condition is exactly the set satisfying the material fixed-point condition. Hence the Nash sets coincide. The condition is not necessary because equality of fixed-point sets does not require equality of correspondences at profiles that are not fixed points.</p>
