@@ -48,3 +48,11 @@ Latest visual QA artifacts for the Round 14 reading pass are in
 - `working_paper_v1_round14_qa_top.png`
 - `working_paper_v1_round14_qa_invariant_table.png`
 - `arxiv_submission.pdf.png`
+
+Latest GEB readability QA artifacts after the Round 15-17 editorial pass are
+also in `results/figures/`:
+
+- `geb_submission_v1_round17_qa_top.png`
+- `geb_submission_v1_round17_qa_intro_terms.png`
+- `geb_submission_v1_round17_qa_model.png`
+- `geb_submission_v1_round17_qa_nash.png`

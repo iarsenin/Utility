@@ -508,6 +508,60 @@ Validation:
   "Darwinian or material" in the paper HTML files.
 - Round 14 editor passed the manuscripts with no required final writer edits.
 
+### GEB Readability Revision Rounds 15-17
+
+Completed three additional editorial rounds on `paper/geb_submission_v1.html`
+after the abstract still failed to make the model and results clear to a
+highly educated general reader.
+
+The round logs are:
+
+- `docs/editorial_rounds/round_15_plain_setup.md`
+- `docs/editorial_rounds/round_16_concept_flow.md`
+- `docs/editorial_rounds/round_17_rigor_sweep.md`
+
+Main changes:
+
+- Rewrote the GEB abstract so it starts with the model in plain words:
+  finite games, utility used for choice, fast preference formation, subjective
+  Nash play, and separate material evaluation.
+- Stated the core results in the abstract in reader order: fast reduction to a
+  post-closure subjective game, a strong sufficient mixed-best-response
+  invariance condition, possible Nash-set change, selection target shift, and
+  proxy/material misalignment in the platform application.
+- Rewrote the start of the introduction to define finite games, payoff tables,
+  and Nash equilibrium before introducing endogenous utility.
+- Added a term table for preference state, closure law, subjective utility,
+  material payoff, and the reduced subjective game.
+- Expanded the model section so finite games, mixed strategies, the fast
+  preference timescale, closure laws, reduced subjective games, material
+  benchmark games, and scalar material evaluation are introduced before the
+  formulas.
+- Reframed the Nash section by explaining that Nash equilibrium is a
+  consistency condition rather than a welfare claim.
+- Reframed selection, platform proxies, and welfare in plainer language while
+  preserving the theorem restrictions.
+- Ran a rigor sweep to avoid making the mixed-best-response condition sound
+  necessary and to keep Proposition 3 framed as a material-evaluation result,
+  not a complete welfare theorem.
+
+Round 17 visual QA was performed through the local server and headless Chrome
+after MathJax rendering. Screenshots are saved in `results/figures/`:
+
+- `geb_submission_v1_round17_qa_top.png`
+- `geb_submission_v1_round17_qa_intro_terms.png`
+- `geb_submission_v1_round17_qa_model.png`
+- `geb_submission_v1_round17_qa_nash.png`
+
+Validation:
+
+- `paper/geb_submission_v1.html` parses with Python's `HTMLParser`.
+- Manuscript phrase audit found no new overclaim in the targeted terms; the
+  remaining hits are the deliberate "deliberately sharp" motivating phrase and
+  Proposition 2's "not a necessary-and-sufficient" caveat.
+- Visual inspection confirmed that the abstract, term table, and formula boxes
+  render cleanly in HTML.
+
 ### Next Actions
 
 - Convert `paper/geb_submission_v1.html` to a LaTeX/PDF submission package with
