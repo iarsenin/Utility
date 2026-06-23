@@ -794,6 +794,53 @@ Formula-explanation QA screenshots:
 - `combined_v1_formula_explanations_model.png`
 - `combined_v1_formula_explanations_eq17.png`
 
+### Combined Manuscript Numbering And Numerical-Style Pass
+
+Completed three additional review/editing rounds on
+`paper/combined_fast_preference_closure_v1.html`.
+
+Round logs:
+
+- `docs/agent_rounds/combined_round_6_modeller_numbering_palette.md`
+- `docs/agent_rounds/combined_round_7_writer_numerical_integration.md`
+- `docs/agent_rounds/combined_round_8_editor_production.md`
+
+Main edits:
+
+- Automated theorem-like labels with CSS counters by result type. The rendered
+  manuscript now has 7 propositions, 1 lemma, 1 corollary, 1 example, and 1
+  theorem, with no hand-numbered theorem titles.
+- Automated figure captions and table titles with CSS counters. The source no
+  longer contains hand-numbered `<strong>Figure ...</strong>` or
+  `<strong>Table ...</strong>` prefixes.
+- Added a shared chart palette across the social-feedback and finite-game SVG
+  generation scripts.
+- Rewrote the Section 9 bridge so the computational audits are explicitly
+  connected to the formal propositions.
+- Clarified that the finite-game simulation uses a noisy approximately aligned
+  proxy, not the exact alignment condition of Proposition 3.
+- Added reader-facing interpretation around the local influence multiplier,
+  calibrated hysteresis flip, random parameter audit, and Section 9 synthesis.
+
+Validation:
+
+- Re-ran `scripts/run_fashion_meme_analysis.py`.
+- Re-ran `scripts/run_model_selection_audit.py`.
+- Re-ran `scripts/run_model_selection_sensitivity.py`.
+- `python3 -m py_compile` passed for the modified analysis/generation scripts.
+- HTML parse passed.
+- Render check found 446 MathJax containers, 23 equation blocks, 5 figures, 8
+  table titles, and 11 theorem-like blocks.
+- `git diff --check` passed.
+
+Round 8 visual QA screenshots:
+
+- `combined_v1_round8_numbering.png`
+- `combined_v1_round8_section9_bridge.png`
+- `combined_v1_round8_social_figures.png`
+- `combined_v1_round8_finite_figures.png`
+- `combined_v1_round8_sensitivity_figure.png`
+
 ### Next Actions
 
 - Decide whether `paper/combined_fast_preference_closure_v1.html` becomes the

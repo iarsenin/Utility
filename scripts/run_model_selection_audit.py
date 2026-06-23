@@ -18,6 +18,18 @@ if str(SRC) not in sys.path:
 from utility_endogenous.model_selection_audit import RouteSummary, run_model_selection_audit
 
 
+CHART_BG = "#ffffff"
+CHART_INK = "#18212f"
+CHART_MUTED = "#526173"
+CHART_AXIS = "#9aa4b2"
+CHART_GRID = "#e3e8ef"
+CHART_TEAL = "#236f73"
+CHART_AMBER = "#b7791f"
+CHART_BLUE = "#2f5f9f"
+CHART_RED = "#a64b3c"
+CHART_VIOLET = "#6b5a8e"
+
+
 def write_csv(path: Path, rows: list[dict[str, object]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     if not rows:
@@ -71,7 +83,7 @@ def write_model_selection_svg(path: Path, summaries: list[RouteSummary]) -> None
                     "route": summary.route,
                     "metric": "Equilibrium shift rate",
                     "value": summary.equilibrium_shift_rate,
-                    "color": "#319b7b",
+                    "color": CHART_TEAL,
                 }
                 if summary.route == "neutral_control"
                 else {
@@ -79,20 +91,25 @@ def write_model_selection_svg(path: Path, summaries: list[RouteSummary]) -> None
                     "route": summary.route,
                     "metric": "Equilibrium shift rate",
                     "value": summary.equilibrium_shift_rate,
-                    "color": "#c9822b",
+                    "color": CHART_AMBER,
                 }
             )
         elif summary.route.startswith("proxy_"):
+            route_labels = {
+                "proxy_aligned": "Noisy approx. aligned proxy",
+                "proxy_independent": "Independent proxy",
+                "proxy_misaligned": "Misaligned proxy",
+            }
             rows.append(
                 {
-                    "label": summary.route.replace("proxy_", "Proxy "),
+                    "label": route_labels[summary.route],
                     "route": summary.route,
                     "metric": "Material loss rate",
                     "value": summary.proxy_material_loss_rate,
                     "color": {
-                        "proxy_aligned": "#319b7b",
-                        "proxy_independent": "#c9822b",
-                        "proxy_misaligned": "#c84f4f",
+                        "proxy_aligned": CHART_TEAL,
+                        "proxy_independent": CHART_AMBER,
+                        "proxy_misaligned": CHART_RED,
                     }[summary.route],
                 }
             )
@@ -109,27 +126,27 @@ def write_model_selection_svg(path: Path, summaries: list[RouteSummary]) -> None
     axis_max = 1.0
     elements = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
-        '<rect width="100%" height="100%" fill="#ffffff"/>',
+        f'<rect width="100%" height="100%" fill="{CHART_BG}"/>',
         svg_text(
             32,
             34,
             "Finite-Game Fast-Closure Audit",
             font_size=22,
             font_weight=700,
-            fill="#18212f",
+            fill=CHART_INK,
         ),
         svg_text(
             32,
             58,
             "5,000 random two-player games per route; neutral route is the sanity control",
             font_size=13,
-            fill="#465366",
+            fill=CHART_MUTED,
         ),
     ]
     for tick in [0.0, 0.25, 0.5, 0.75, 1.0]:
         x = margin_left + chart_width * tick / axis_max
         elements.append(
-            f'<line x1="{x:.1f}" y1="{margin_top - 14}" x2="{x:.1f}" y2="{height - margin_bottom + 4}" stroke="#d9dee8" stroke-width="1"/>'
+            f'<line x1="{x:.1f}" y1="{margin_top - 14}" x2="{x:.1f}" y2="{height - margin_bottom + 4}" stroke="{CHART_GRID}" stroke-width="1"/>'
         )
         elements.append(
             svg_text(
@@ -137,7 +154,7 @@ def write_model_selection_svg(path: Path, summaries: list[RouteSummary]) -> None
                 height - margin_bottom + 30,
                 f"{tick:.2f}".rstrip("0").rstrip("."),
                 font_size=11,
-                fill="#596579",
+                fill=CHART_MUTED,
                 text_anchor="middle",
             )
         )
@@ -148,8 +165,8 @@ def write_model_selection_svg(path: Path, summaries: list[RouteSummary]) -> None
         label = str(row["label"]).replace("_", " ").title()
         metric = str(row["metric"])
         color = str(row["color"])
-        elements.append(svg_text(32, y + 19, label, font_size=13, font_weight=700, fill="#18212f"))
-        elements.append(svg_text(32, y + 38, metric, font_size=11, fill="#667085"))
+        elements.append(svg_text(32, y + 19, label, font_size=13, font_weight=700, fill=CHART_INK))
+        elements.append(svg_text(32, y + 38, metric, font_size=11, fill=CHART_MUTED))
         elements.append(
             f'<rect x="{margin_left}" y="{y + 10}" width="{max(bar_width, 1):.1f}" height="24" rx="3" fill="{color}"/>'
         )
@@ -161,7 +178,7 @@ def write_model_selection_svg(path: Path, summaries: list[RouteSummary]) -> None
                 f"{value:.3f}",
                 font_size=12,
                 font_weight=700,
-                fill="#18212f",
+                fill=CHART_INK,
             )
         )
     elements.append(
@@ -170,7 +187,7 @@ def write_model_selection_svg(path: Path, summaries: list[RouteSummary]) -> None
             height - 12,
             "rate",
             font_size=12,
-            fill="#596579",
+            fill=CHART_MUTED,
             text_anchor="middle",
         )
     )

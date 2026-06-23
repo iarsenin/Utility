@@ -18,7 +18,7 @@ This sensitivity check asks whether the finite-game stress-test message is tied 
 | 2.0000 | 3000 | 0.0530 | 0.6367 |
 | 4.0000 | 3000 | 0.0313 | 0.7153 |
 
-## Aligned Proxy Noise
+## Approximate Aligned Proxy Noise
 
 | value | games | equilibrium_shift_rate | material_loss_rate | mean_loss_when_loss |
 | --- | --- | --- | --- | --- |

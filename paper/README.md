@@ -102,3 +102,18 @@ The five merge review notes are:
 - `docs/agent_rounds/combined_round_3_writer.md`
 - `docs/agent_rounds/combined_round_4_editor.md`
 - `docs/agent_rounds/combined_round_5_production.md`
+
+Latest combined-manuscript numbering, numerical-integration, and chart-style
+QA artifacts are in `results/figures/`:
+
+- `combined_v1_round8_numbering.png`
+- `combined_v1_round8_section9_bridge.png`
+- `combined_v1_round8_social_figures.png`
+- `combined_v1_round8_finite_figures.png`
+- `combined_v1_round8_sensitivity_figure.png`
+
+The additional three review notes are:
+
+- `docs/agent_rounds/combined_round_6_modeller_numbering_palette.md`
+- `docs/agent_rounds/combined_round_7_writer_numerical_integration.md`
+- `docs/agent_rounds/combined_round_8_editor_production.md`

@@ -29,6 +29,18 @@ from utility_endogenous.model_selection_audit import (  # noqa: E402
 )
 
 
+CHART_BG = "#ffffff"
+CHART_INK = "#18212f"
+CHART_MUTED = "#526173"
+CHART_AXIS = "#9aa4b2"
+CHART_GRID = "#e3e8ef"
+CHART_TEAL = "#236f73"
+CHART_AMBER = "#b7791f"
+CHART_BLUE = "#2f5f9f"
+CHART_RED = "#a64b3c"
+CHART_VIOLET = "#6b5a8e"
+
+
 def write_csv(path: Path, rows: list[dict[str, object]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     if not rows:
@@ -229,34 +241,34 @@ def write_svg(path: Path, rows: list[dict[str, object]]) -> None:
 
     elements = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
-        '<rect width="100%" height="100%" fill="#ffffff"/>',
+        f'<rect width="100%" height="100%" fill="{CHART_BG}"/>',
         svg_text(
             34,
             38,
             "Finite-Game Sensitivity Checks",
             font_size=22,
             font_weight=700,
-            fill="#18212f",
+            fill=CHART_INK,
         ),
         svg_text(
             34,
             62,
             "3,000 random games per grid point; rates on vertical axes",
             font_size=13,
-            fill="#465366",
+            fill=CHART_MUTED,
         ),
     ]
     for panel_left in (left_1, left_2):
         elements.extend(
             [
-                f'<line x1="{panel_left}" y1="{top}" x2="{panel_left}" y2="{top + panel_h}" stroke="#9aa4b2"/>',
-                f'<line x1="{panel_left}" y1="{top + panel_h}" x2="{panel_left + panel_w}" y2="{top + panel_h}" stroke="#9aa4b2"/>',
+                f'<line x1="{panel_left}" y1="{top}" x2="{panel_left}" y2="{top + panel_h}" stroke="{CHART_AXIS}"/>',
+                f'<line x1="{panel_left}" y1="{top + panel_h}" x2="{panel_left + panel_w}" y2="{top + panel_h}" stroke="{CHART_AXIS}"/>',
             ]
         )
         for tick in (0.0, 0.25, 0.5, 0.75, 1.0):
             y = top + panel_h * (1 - tick)
             elements.append(
-                f'<line x1="{panel_left - 5}" y1="{y:.1f}" x2="{panel_left + panel_w}" y2="{y:.1f}" stroke="#e3e7ee"/>'
+                f'<line x1="{panel_left - 5}" y1="{y:.1f}" x2="{panel_left + panel_w}" y2="{y:.1f}" stroke="{CHART_GRID}"/>'
             )
             elements.append(
                 svg_text(
@@ -264,13 +276,13 @@ def write_svg(path: Path, rows: list[dict[str, object]]) -> None:
                     y + 4,
                     f"{tick:.2f}".rstrip("0").rstrip("."),
                     font_size=11,
-                    fill="#596579",
+                    fill=CHART_MUTED,
                     text_anchor="end",
                 )
             )
 
-    elements.append(svg_text(left_1, 84, "Strategic distortion scale", font_size=14, font_weight=700))
-    elements.append(svg_text(left_2, 84, "Aligned proxy noise", font_size=14, font_weight=700))
+    elements.append(svg_text(left_1, 84, "Strategic distortion scale", font_size=14, font_weight=700, fill=CHART_INK))
+    elements.append(svg_text(left_2, 84, "Approx. aligned proxy noise", font_size=14, font_weight=700, fill=CHART_INK))
 
     br_points = map_points(left_1, strategic, "mixed_br_invariance_rate")
     shift_points = map_points(left_1, strategic, "equilibrium_shift_rate")
@@ -278,20 +290,20 @@ def write_svg(path: Path, rows: list[dict[str, object]]) -> None:
     proxy_shift_points = map_points(left_2, aligned, "equilibrium_shift_rate")
     elements.extend(
         [
-            polyline(br_points, "#2c7a7b"),
-            polyline(shift_points, "#c9822b"),
-            polyline(loss_points, "#c84f4f"),
-            polyline(proxy_shift_points, "#5c6bc0"),
-            *circle_markers(br_points, "#2c7a7b"),
-            *circle_markers(shift_points, "#c9822b"),
-            *circle_markers(loss_points, "#c84f4f"),
-            *circle_markers(proxy_shift_points, "#5c6bc0"),
-            svg_text(left_1 + 12, top + 18, "mixed BR invariance", font_size=11, fill="#2c7a7b"),
-            svg_text(left_1 + 12, top + 36, "equilibrium shift", font_size=11, fill="#c9822b"),
-            svg_text(left_2 + 12, top + 18, "material loss", font_size=11, fill="#c84f4f"),
-            svg_text(left_2 + 12, top + 36, "equilibrium shift", font_size=11, fill="#5c6bc0"),
-            svg_text(left_1 + panel_w / 2, height - 28, "distortion scale", font_size=12, fill="#596579", text_anchor="middle"),
-            svg_text(left_2 + panel_w / 2, height - 28, "noise weight", font_size=12, fill="#596579", text_anchor="middle"),
+            polyline(br_points, CHART_TEAL),
+            polyline(shift_points, CHART_AMBER),
+            polyline(loss_points, CHART_RED),
+            polyline(proxy_shift_points, CHART_BLUE),
+            *circle_markers(br_points, CHART_TEAL),
+            *circle_markers(shift_points, CHART_AMBER),
+            *circle_markers(loss_points, CHART_RED),
+            *circle_markers(proxy_shift_points, CHART_BLUE),
+            svg_text(left_1 + 12, top + 18, "mixed BR invariance", font_size=11, fill=CHART_TEAL),
+            svg_text(left_1 + 12, top + 36, "equilibrium shift", font_size=11, fill=CHART_AMBER),
+            svg_text(left_2 + 12, top + 18, "material loss", font_size=11, fill=CHART_RED),
+            svg_text(left_2 + 12, top + 36, "equilibrium shift", font_size=11, fill=CHART_BLUE),
+            svg_text(left_1 + panel_w / 2, height - 28, "distortion scale", font_size=12, fill=CHART_MUTED, text_anchor="middle"),
+            svg_text(left_2 + panel_w / 2, height - 28, "noise weight", font_size=12, fill=CHART_MUTED, text_anchor="middle"),
         ]
     )
     elements.append("</svg>")
@@ -324,7 +336,7 @@ def build_report(rows: list[dict[str, object]], games: int, seed: int) -> str:
                 ],
             ),
             "",
-            "## Aligned Proxy Noise",
+            "## Approximate Aligned Proxy Noise",
             "",
             markdown_table(
                 aligned,

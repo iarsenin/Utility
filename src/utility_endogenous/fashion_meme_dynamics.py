@@ -18,6 +18,17 @@ import random
 
 EPSILON = 1e-10
 
+CHART_BG = "#ffffff"
+CHART_INK = "#18212f"
+CHART_MUTED = "#526173"
+CHART_AXIS = "#9aa4b2"
+CHART_GRID = "#e3e8ef"
+CHART_TEAL = "#236f73"
+CHART_AMBER = "#b7791f"
+CHART_BLUE = "#2f5f9f"
+CHART_RED = "#a64b3c"
+CHART_VIOLET = "#6b5a8e"
+
 
 @dataclass(frozen=True)
 class FixedPoint:
@@ -470,43 +481,43 @@ def write_mean_field_hysteresis_svg(
 
     elements = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
-        '<rect width="100%" height="100%" fill="#ffffff"/>',
-        svg_text(34, 34, "Mean-Field Fashion Closure Has Hysteresis", font_size=22, font_weight=700, fill="#18212f"),
+        f'<rect width="100%" height="100%" fill="{CHART_BG}"/>',
+        svg_text(34, 34, "Mean-Field Fashion Closure Has Hysteresis", font_size=22, font_weight=700, fill=CHART_INK),
         svg_text(
             34,
             58,
             f"m = tanh(beta(Jm+b)); beta={beta:.1f}, J={social_feedback:.1f}, material field h={material_field:.2f}",
             font_size=13,
-            fill="#526173",
+            fill=CHART_MUTED,
         ),
     ]
     for tick in [-0.3, -0.15, 0.0, 0.15, 0.3]:
         x = sx(tick)
-        elements.append(f'<line x1="{x:.1f}" y1="{margin_top}" x2="{x:.1f}" y2="{height-margin_bottom}" stroke="#e3e8ef"/>')
-        elements.append(svg_text(x, height - 38, f"{tick:.2f}", font_size=12, fill="#526173", text_anchor="middle"))
+        elements.append(f'<line x1="{x:.1f}" y1="{margin_top}" x2="{x:.1f}" y2="{height-margin_bottom}" stroke="{CHART_GRID}"/>')
+        elements.append(svg_text(x, height - 38, f"{tick:.2f}", font_size=12, fill=CHART_MUTED, text_anchor="middle"))
     for tick in [-1.0, -0.5, 0.0, 0.5, 1.0]:
         y = sy(tick)
-        elements.append(f'<line x1="{margin_left}" y1="{y:.1f}" x2="{width-margin_right}" y2="{y:.1f}" stroke="#e3e8ef"/>')
-        elements.append(svg_text(62, y + 4, f"{tick:.1f}", font_size=12, fill="#526173", text_anchor="end"))
-    elements.append(polyline(stable_points, "#236f76", 3.0))
-    elements.append(polyline(unstable_points, "#c66b2e", 2.0, "6 5"))
-    elements.append(polyline(up_path, "#1f4e9d", 3.0))
-    elements.append(polyline(down_path, "#8b3fa8", 3.0, "4 4"))
+        elements.append(f'<line x1="{margin_left}" y1="{y:.1f}" x2="{width-margin_right}" y2="{y:.1f}" stroke="{CHART_GRID}"/>')
+        elements.append(svg_text(62, y + 4, f"{tick:.1f}", font_size=12, fill=CHART_MUTED, text_anchor="end"))
+    elements.append(polyline(stable_points, CHART_TEAL, 3.0))
+    elements.append(polyline(unstable_points, CHART_AMBER, 2.0, "6 5"))
+    elements.append(polyline(up_path, CHART_BLUE, 3.0))
+    elements.append(polyline(down_path, CHART_VIOLET, 3.0, "4 4"))
     elements.append(
-        f'<circle cx="{sx(material_field):.1f}" cy="{sy(up_path[0][1]):.1f}" r="5" fill="#1f4e9d"/>'
+        f'<circle cx="{sx(material_field):.1f}" cy="{sy(up_path[0][1]):.1f}" r="5" fill="{CHART_BLUE}"/>'
     )
     elements.append(
-        f'<circle cx="{sx(material_field + shock_size):.1f}" cy="{sy(up_path[-1][1]):.1f}" r="5" fill="#1f4e9d"/>'
+        f'<circle cx="{sx(material_field + shock_size):.1f}" cy="{sy(up_path[-1][1]):.1f}" r="5" fill="{CHART_BLUE}"/>'
     )
     elements.append(
-        f'<circle cx="{sx(material_field):.1f}" cy="{sy(down_path[-1][1]):.1f}" r="5" fill="#8b3fa8"/>'
+        f'<circle cx="{sx(material_field):.1f}" cy="{sy(down_path[-1][1]):.1f}" r="5" fill="{CHART_VIOLET}"/>'
     )
-    elements.append(svg_text(width / 2, height - 12, "total fashion field b = h + z", font_size=13, fill="#26313c", text_anchor="middle"))
-    elements.append(svg_text(18, height / 2, "adoption / taste m", font_size=13, fill="#26313c", transform=f"rotate(-90 18 {height/2})", text_anchor="middle"))
-    elements.append(svg_text(625, 104, "stable closure branches", font_size=12, fill="#236f76", font_weight=700))
-    elements.append(svg_text(625, 125, "unstable separator", font_size=12, fill="#c66b2e", font_weight=700))
-    elements.append(svg_text(625, 146, "shock up", font_size=12, fill="#1f4e9d", font_weight=700))
-    elements.append(svg_text(625, 167, "shock removed", font_size=12, fill="#8b3fa8", font_weight=700))
+    elements.append(svg_text(width / 2, height - 12, "total fashion field b = h + z", font_size=13, fill=CHART_INK, text_anchor="middle"))
+    elements.append(svg_text(18, height / 2, "adoption / taste m", font_size=13, fill=CHART_INK, transform=f"rotate(-90 18 {height/2})", text_anchor="middle"))
+    elements.append(svg_text(625, 104, "stable closure branches", font_size=12, fill=CHART_TEAL, font_weight=700))
+    elements.append(svg_text(625, 125, "unstable separator", font_size=12, fill=CHART_AMBER, font_weight=700))
+    elements.append(svg_text(625, 146, "shock up", font_size=12, fill=CHART_BLUE, font_weight=700))
+    elements.append(svg_text(625, 167, "shock removed", font_size=12, fill=CHART_VIOLET, font_weight=700))
     elements.append("</svg>")
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text("\n".join(elements) + "\n", encoding="utf-8")
@@ -537,28 +548,28 @@ def write_network_multiplier_svg(path: Path, rows: list[NetworkMultiplierRow]) -
     peripheral = [(row.eta, row.peripheral_response) for row in rows]
     elements = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
-        '<rect width="100%" height="100%" fill="#ffffff"/>',
-        svg_text(34, 34, "Influence Multiplier Near The Fashion Critical Point", font_size=22, font_weight=700, fill="#18212f"),
-        svg_text(34, 58, "Linear response to one targeted influencer field on a heterogeneous attention network", font_size=13, fill="#526173"),
+        f'<rect width="100%" height="100%" fill="{CHART_BG}"/>',
+        svg_text(34, 34, "Influence Multiplier Near The Fashion Critical Point", font_size=22, font_weight=700, fill=CHART_INK),
+        svg_text(34, 58, "Linear response to one targeted influencer field on a heterogeneous attention network", font_size=13, fill=CHART_MUTED),
     ]
     for tick in [0.0, 0.2, 0.4, 0.6, 0.8]:
         x = sx(tick)
-        elements.append(f'<line x1="{x:.1f}" y1="{margin_top}" x2="{x:.1f}" y2="{height-margin_bottom}" stroke="#e3e8ef"/>')
-        elements.append(svg_text(x, height - 38, f"{tick:.1f}", font_size=12, fill="#526173", text_anchor="middle"))
+        elements.append(f'<line x1="{x:.1f}" y1="{margin_top}" x2="{x:.1f}" y2="{height-margin_bottom}" stroke="{CHART_GRID}"/>')
+        elements.append(svg_text(x, height - 38, f"{tick:.1f}", font_size=12, fill=CHART_MUTED, text_anchor="middle"))
     for fraction in [0.0, 0.25, 0.5, 0.75, 1.0]:
         y_value = y_max * fraction
         y = sy(y_value)
-        elements.append(f'<line x1="{margin_left}" y1="{y:.1f}" x2="{width-margin_right}" y2="{y:.1f}" stroke="#e3e8ef"/>')
-        elements.append(svg_text(58, y + 4, f"{y_value:.0f}", font_size=12, fill="#526173", text_anchor="end"))
-    elements.append(polyline(central, "#1f4e9d", 3.2))
-    elements.append(polyline(peripheral, "#c66b2e", 3.2))
+        elements.append(f'<line x1="{margin_left}" y1="{y:.1f}" x2="{width-margin_right}" y2="{y:.1f}" stroke="{CHART_GRID}"/>')
+        elements.append(svg_text(58, y + 4, f"{y_value:.0f}", font_size=12, fill=CHART_MUTED, text_anchor="end"))
+    elements.append(polyline(central, CHART_BLUE, 3.2))
+    elements.append(polyline(peripheral, CHART_AMBER, 3.2))
     for row in rows:
-        elements.append(f'<circle cx="{sx(row.eta):.1f}" cy="{sy(row.central_response):.1f}" r="4" fill="#1f4e9d"/>')
-        elements.append(f'<circle cx="{sx(row.eta):.1f}" cy="{sy(row.peripheral_response):.1f}" r="4" fill="#c66b2e"/>')
-    elements.append(svg_text(650, 116, "central target", font_size=13, fill="#1f4e9d", font_weight=700))
-    elements.append(svg_text(650, 140, "peripheral target", font_size=13, fill="#c66b2e", font_weight=700))
-    elements.append(svg_text(width / 2, height - 12, "social reinforcement eta", font_size=13, fill="#26313c", text_anchor="middle"))
-    elements.append(svg_text(18, height / 2, "aggregate response", font_size=13, fill="#26313c", transform=f"rotate(-90 18 {height/2})", text_anchor="middle"))
+        elements.append(f'<circle cx="{sx(row.eta):.1f}" cy="{sy(row.central_response):.1f}" r="4" fill="{CHART_BLUE}"/>')
+        elements.append(f'<circle cx="{sx(row.eta):.1f}" cy="{sy(row.peripheral_response):.1f}" r="4" fill="{CHART_AMBER}"/>')
+    elements.append(svg_text(650, 116, "central target", font_size=13, fill=CHART_BLUE, font_weight=700))
+    elements.append(svg_text(650, 140, "peripheral target", font_size=13, fill=CHART_AMBER, font_weight=700))
+    elements.append(svg_text(width / 2, height - 12, "social reinforcement eta", font_size=13, fill=CHART_INK, text_anchor="middle"))
+    elements.append(svg_text(18, height / 2, "aggregate response", font_size=13, fill=CHART_INK, transform=f"rotate(-90 18 {height/2})", text_anchor="middle"))
     elements.append("</svg>")
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text("\n".join(elements) + "\n", encoding="utf-8")
@@ -566,10 +577,10 @@ def write_network_multiplier_svg(path: Path, rows: list[NetworkMultiplierRow]) -
 
 def write_phase_audit_svg(path: Path, summary: PhaseAuditSummary) -> None:
     rows = [
-        ("Subcritical unique closure", summary.subcritical_unique_rate, "#287c6f"),
-        ("Hysteresis possible", summary.hysteresis_possible_rate, "#c9822b"),
-        ("Temporary shock flips state", summary.temporary_shock_flip_rate, "#1f4e9d"),
-        ("Flip is material loss", summary.material_loss_flip_rate, "#b84545"),
+        ("Subcritical unique closure", summary.subcritical_unique_rate, CHART_TEAL),
+        ("Hysteresis possible", summary.hysteresis_possible_rate, CHART_AMBER),
+        ("Temporary shock flips state", summary.temporary_shock_flip_rate, CHART_BLUE),
+        ("Flip is material loss", summary.material_loss_flip_rate, CHART_RED),
     ]
     width = 920
     margin_left = 260
@@ -580,26 +591,26 @@ def write_phase_audit_svg(path: Path, summary: PhaseAuditSummary) -> None:
     chart_width = width - margin_left - margin_right
     elements = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
-        '<rect width="100%" height="100%" fill="#ffffff"/>',
-        svg_text(34, 34, "Random Parameter Audit", font_size=22, font_weight=700, fill="#18212f"),
+        f'<rect width="100%" height="100%" fill="{CHART_BG}"/>',
+        svg_text(34, 34, "Random Parameter Audit", font_size=22, font_weight=700, fill=CHART_INK),
         svg_text(
             34,
             58,
             f"{summary.draws:,} mean-field economies; temporary positive meme shock z <= {summary.shock_size:.2f}",
             font_size=13,
-            fill="#526173",
+            fill=CHART_MUTED,
         ),
     ]
     for tick in [0.0, 0.25, 0.5, 0.75, 1.0]:
         x = margin_left + chart_width * tick
-        elements.append(f'<line x1="{x:.1f}" y1="{margin_top-16}" x2="{x:.1f}" y2="{height-58}" stroke="#e3e8ef"/>')
-        elements.append(svg_text(x, height - 30, f"{tick:.2f}".rstrip("0").rstrip("."), font_size=12, fill="#526173", text_anchor="middle"))
+        elements.append(f'<line x1="{x:.1f}" y1="{margin_top-16}" x2="{x:.1f}" y2="{height-58}" stroke="{CHART_GRID}"/>')
+        elements.append(svg_text(x, height - 30, f"{tick:.2f}".rstrip("0").rstrip("."), font_size=12, fill=CHART_MUTED, text_anchor="middle"))
     for index, (label, value, color) in enumerate(rows):
         y = margin_top + index * row_height
-        elements.append(svg_text(34, y + 24, label, font_size=13, fill="#18212f", font_weight=700))
+        elements.append(svg_text(34, y + 24, label, font_size=13, fill=CHART_INK, font_weight=700))
         elements.append(f'<rect x="{margin_left}" y="{y+7}" width="{chart_width*value:.1f}" height="30" rx="3" fill="{color}"/>')
-        elements.append(svg_text(margin_left + chart_width * value + 10, y + 27, f"{value:.3f}", font_size=12, fill="#18212f", font_weight=700))
-    elements.append(svg_text(width / 2, height - 8, "rate", font_size=13, fill="#26313c", text_anchor="middle"))
+        elements.append(svg_text(margin_left + chart_width * value + 10, y + 27, f"{value:.3f}", font_size=12, fill=CHART_INK, font_weight=700))
+    elements.append(svg_text(width / 2, height - 8, "rate", font_size=13, fill=CHART_INK, text_anchor="middle"))
     elements.append("</svg>")
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text("\n".join(elements) + "\n", encoding="utf-8")
@@ -661,4 +672,3 @@ def run_fashion_meme_analysis(root: Path) -> dict[str, object]:
             figures / "fashion_phase_audit.svg",
         ],
     }
-
