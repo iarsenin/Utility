@@ -5,6 +5,7 @@ This directory contains human-readable model specifications. Executable implemen
 Current model notes:
 
 - `algorithmic_taste_drift.md`
+- `fashion_meme_closure.md`
 - `indirect_evolutionary_pd.md`
 - `platform_preference_control.md`
 - `revealed_preference_with_drift.md`

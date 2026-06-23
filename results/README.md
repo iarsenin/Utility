@@ -28,7 +28,19 @@ Current expected files after running:
 - `tables/empirical_wdi_alignment_fits.csv`
 - `figures/empirical_wdi_timescales.svg`
 - `figures/empirical_wdi_alignment_coefficients.svg`
+- `fashion_meme_report.md`
+- `tables/fashion_threshold_summary.csv`
+- `tables/fashion_hysteresis_path.csv`
+- `tables/fashion_mean_field_branches.csv`
+- `tables/fashion_network_multipliers.csv`
+- `tables/fashion_phase_audit_summary.csv`
+- `figures/fashion_mean_field_hysteresis.svg`
+- `figures/fashion_network_multiplier.svg`
+- `figures/fashion_phase_audit.svg`
 
 Do not treat generated toy outputs as empirical claims. They are mechanism checks.
 The WDI outputs are diagnostic exposure/outcome associations and timescale
 measures, not causal estimates of platform-induced preference closure.
+The fashion/meme closure outputs are also mechanism checks: they show
+criticality, amplification, and hysteresis in a stylized closure law, not an
+estimate for any specific platform or social network.

@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fashion, Memes, And Fast Preference Closure</title>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+        processEscapes: true,
+        tags: 'none'
+      },
+      chtml: {
+        scale: 1.03,
+        linebreaks: { automatic: true }
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <style>
+    :root {
+      --ink: #151719;
+      --muted: #5d6673;
+      --rule: #d9dee7;
+      --soft: #f6f8fb;
+      --box: #fbfcfe;
+      --accent: #236f76;
+      --accent-soft: #e8f3f2;
+      --theorem: #f7fbf4;
+      --theorem-rule: #75a857;
+      --warning: #fff8ed;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #ffffff;
+      color: var(--ink);
+      font-family: Charter, "Iowan Old Style", Georgia, serif;
+      font-size: 19px;
+      line-height: 1.62;
+    }
+
+    main {
+      counter-reset: equation;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 48px 30px 86px;
+    }
+
+    header {
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 34px;
+      padding-bottom: 26px;
+    }
+
+    h1, h2, h3, h4, .meta, .subtitle, .label, table, figcaption, .takeaway, .note, .theorem-title {
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    h1, h2, h3, h4 {
+      color: #101418;
+      line-height: 1.22;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5.6vw, 4.1rem);
+      letter-spacing: 0;
+      margin: 0 0 12px;
+    }
+
+    h2 {
+      border-top: 1px solid var(--rule);
+      font-size: 1.55rem;
+      margin: 46px 0 15px;
+      padding-top: 26px;
+    }
+
+    h3 {
+      font-size: 1.12rem;
+      margin: 28px 0 9px;
+    }
+
+    p {
+      margin: 0 0 16px;
+    }
+
+    a {
+      color: #1e6078;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+    }
+
+    ul, ol {
+      margin: 0 0 18px 1.25rem;
+      padding: 0;
+    }
+
+    li {
+      margin: 5px 0;
+    }
+
+    .subtitle {
+      color: var(--accent);
+      font-size: 1.22rem;
+      font-weight: 650;
+      margin: 0 0 16px;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin: 0 0 6px;
+    }
+
+    .abstract {
+      background: var(--soft);
+      border-left: 4px solid var(--accent);
+      margin: 24px 0 34px;
+      padding: 19px 23px 17px;
+    }
+
+    .abstract h2 {
+      border-top: 0;
+      font-size: 1.24rem;
+      margin: 0 0 10px;
+      padding: 0;
+    }
+
+    .note, .takeaway {
+      background: var(--accent-soft);
+      border: 1px solid #c7e0dc;
+      color: #173f42;
+      font-size: 0.96rem;
+      line-height: 1.5;
+      margin: 22px 0;
+      padding: 14px 16px;
+    }
+
+    .warning {
+      background: var(--warning);
+      border-color: #ecd3aa;
+      color: #593b12;
+    }
+
+    .equation {
+      background: var(--box);
+      border: 1px solid var(--rule);
+      border-left: 4px solid var(--accent);
+      counter-increment: equation;
+      margin: 22px auto;
+      max-width: 900px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding: 14px 62px 12px 18px;
+      position: relative;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .equation::after {
+      color: var(--muted);
+      content: "(" counter(equation) ")";
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.9rem;
+      font-weight: 650;
+      position: absolute;
+      right: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .equation .label {
+      color: var(--muted);
+      display: block;
+      font-size: 0.79rem;
+      font-weight: 720;
+      letter-spacing: 0.03em;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    .equation mjx-container[jax="CHTML"][display="true"] {
+      margin: 0.2em 0;
+      max-width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      text-align: center !important;
+    }
+
+    .theorem {
+      background: var(--theorem);
+      border: 1px solid #d9e8ce;
+      border-left: 4px solid var(--theorem-rule);
+      margin: 24px 0;
+      padding: 15px 18px 13px;
+    }
+
+    .theorem-title {
+      color: #385928;
+      display: block;
+      font-size: 0.91rem;
+      font-weight: 750;
+      letter-spacing: 0.01em;
+      margin-bottom: 8px;
+    }
+
+    figure {
+      margin: 28px 0 30px;
+    }
+
+    figure img {
+      border: 1px solid var(--rule);
+      display: block;
+      height: auto;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    figcaption {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.45;
+      margin-top: 8px;
+    }
+
+    table {
+      border-collapse: collapse;
+      font-size: 0.92rem;
+      line-height: 1.4;
+      margin: 18px 0 24px;
+      width: 100%;
+    }
+
+    th, td {
+      border-bottom: 1px solid var(--rule);
+      padding: 9px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: #26313c;
+      font-weight: 720;
+    }
+
+    .num {
+      font-variant-numeric: tabular-nums;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .small {
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.48;
+    }
+
+    .refs p {
+      font-size: 0.94rem;
+      line-height: 1.42;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 720px) {
+      body {
+        font-size: 17px;
+      }
+
+      main {
+        padding: 30px 18px 60px;
+      }
+
+      .equation {
+        padding: 12px 44px 10px 12px;
+      }
+
+      .equation::after {
+        right: 12px;
+      }
+
+      table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Fashion, Memes, And Fast Preference Closure</h1>
+    <p class="subtitle">A standalone extension candidate for endogenous utility</p>
+    <p class="meta">June 23, 2026. Separate research module; not yet incorporated into the GEB article.</p>
+    <p class="meta"><strong>Keywords:</strong> endogenous preferences, fashion, memes, influencers, social interactions, cascades, hysteresis, recommender feedback.</p>
+  </header>
+
+  <section class="abstract">
+    <h2>Executive Summary</h2>
+    <p>This note asks whether fashion, influencers, memes, and online bubbles can be modeled as a fast preference-formation process. The answer is yes, using familiar social-interaction mathematics in a new role. The key object is the feedback loop: exposure changes tastes, changed tastes make a fashion look more common, and perceived commonness feeds back into tastes. Below a critical social-feedback threshold, that loop dies out and the preference state is unique: fashion shocks move tastes continuously and reversibly. Above the threshold, the same environment can support more than one self-consistent taste state. A temporary meme or influencer shock can then move the population from one stable taste state to another, and the new taste state can persist after the shock disappears.</p>
+
+    <p>The model is a binary social-interactions closure law. Each agent's settled taste depends on a baseline field, an attention-weighted average of others' tastes, and an external fashion or meme field. In the mean-field version, the key equation is \(m=\tanh(\beta(Jm+b))\). The sharp result is a hysteresis threshold. Hysteresis means memory: removing the shock does not necessarily undo its effect. When \(\beta J>1\), there is a nonzero critical field \(B_c\). A temporary shock that pushes the total field strictly past \(B_c\) can flip the settled preference state, provided the initial state is on the low branch and the baseline field remains inside the hysteresis window after the shock is removed.</p>
+
+    <p>The computational audit illustrates the mechanism. In a calibrated example, the positive shock needed to flip the state is \(0.2135\), and the tested shock size is \(0.35\), so the flip is persistent. In 6,000 random mean-field economies, \(26.98\%\) have a hysteresis window, \(15.40\%\) are flippable by a temporary shock of size \(0.35\), and \(4.10\%\) flip in a direction that lowers a deliberately simple material evaluator. This is not an empirical estimate or a welfare estimate. It is a mechanism result.</p>
+  </section>
+
+  <section>
+    <h2>1. Why This Setup</h2>
+    <p>The motivating idea is simple. A person may come to want something because it is fashionable, endorsed, viral, or repeatedly encountered. That is not only imitation of choices. It can be a change in the utility representation used for later choice.</p>
+
+    <p>The literature already has the pieces. Leibenstein models bandwagon demand: demand rises because others consume the good. Banerjee and Bikhchandani, Hirshleifer, and Welch model herding, fads, and cascades through sequential inference. Granovetter, Watts, Morris, and Young model threshold contagion. Brock and Durlauf model logit choice with social interactions and multiple equilibria. Bernheim, Becker and Murphy, Akerlof, and Akerlof and Kranton show how conformity, social environment, and identity can enter utility. Pesendorfer models fashion cycles. Kempe, Kleinberg, and Tardos and Domingos and Richardson formalize influence and viral targeting in networks. Recommender-system papers show how platform exposure can create feedback loops in behavior, beliefs, or preferences.</p>
+
+    <p>The move here is to put these pieces inside the fast-preference framework. Fashion, influencers, memes, and bubbles become inputs into the closure law that produces post-adjustment preferences.</p>
+
+    <div class="takeaway">
+      <strong>What is old and what is new.</strong> The social-interaction, threshold, and network-diffusion mechanisms are not new. The candidate contribution is the interpretation: use those mechanisms as fast utility-closure laws, then ask which settled preference state exists before the slower economic game is evaluated.
+    </div>
+
+    <p><strong>Table 1. Objects in the fashion-closure model.</strong></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Plain object</th>
+          <th>Formal role</th>
+          <th>Interpretation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Fashion or meme</td>
+          <td>\(z\)</td>
+          <td>An external salience field, trend, campaign, or platform exposure shock.</td>
+        </tr>
+        <tr>
+          <td>Influencer reach</td>
+          <td>\(\phi\)</td>
+          <td>Who receives the external field directly.</td>
+        </tr>
+        <tr>
+          <td>Social attention</td>
+          <td>\(W\)</td>
+          <td>Whose tastes each agent observes or weights.</td>
+        </tr>
+        <tr>
+          <td>Social reinforcement</td>
+          <td>\(\eta\) or \(J\)</td>
+          <td>How strongly perceived popularity feeds back into taste.</td>
+        </tr>
+        <tr>
+          <td>Responsiveness</td>
+          <td>\(\beta\)</td>
+          <td>How sharply tastes react to the combined field.</td>
+        </tr>
+        <tr>
+          <td>Settled taste state</td>
+          <td>\(m^\star\)</td>
+          <td>The preference state after fast closure.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>2. The Closure Law</h2>
+    <p>There are \(n\) agents. Agent \(i\)'s settled taste intensity is \(m_i\in[-1,1]\). Positive \(m_i\) means the agent favors adoption of a fashion-coded action; negative \(m_i\) means rejection. The vector \(m=(m_1,\ldots,m_n)\) is the post-closure preference state.</p>
+
+    <p>The baseline field \(h_i\) is the non-fashion component of taste. The attention matrix \(W\) records social exposure: \(W_{ij}\) is how much agent \(i\) attends to agent \(j\). The scalar \(z\) is a meme, influencer, or platform shock. The exposure loading \(\phi_i\) says how strongly agent \(i\) receives that shock. Equation (1) is the fast closure law.</p>
+
+    <div class="equation">
+      <span class="label">Network Fashion Closure</span>
+      \[
+        m_i
+        =
+        \tanh\!\left(
+          \beta\left[
+            h_i+\eta\sum_j W_{ij}m_j+\phi_i z
+          \right]
+        \right).
+      \]
+    </div>
+
+    <p>Equation (1) is deliberately familiar. It is a logit social-interactions model, a smooth threshold model, and an Ising-style fixed point. The interpretation here is different: the fixed point is the preference representation that closes before the economic game is solved.</p>
+
+    <div class="takeaway">
+      <strong>Plain meaning.</strong> A fashion state is self-consistent when the tastes generated by exposure and social feedback are exactly the tastes that agents end up holding.
+    </div>
+  </section>
+
+  <section>
+    <h2>3. Result: Below Criticality, No Bubble</h2>
+    <p>The first result says when the fashion process behaves nicely. Let \(\rho(W)\) denote the spectral radius of the nonnegative attention matrix. The product \(\beta\eta\rho(W)\) is the fashion reproduction number: responsiveness times social reinforcement times network amplification. The loop is weak when one round of social imitation dies out. It becomes critical when one round of imitation creates enough new taste movement to reinforce itself.</p>
+
+    <div class="theorem">
+      <span class="theorem-title">Result 1. Subcritical Unique Closure</span>
+      <p>If \(\beta\eta\rho(W)&lt;1\), then Equation (1) has a unique settled taste state. Meme and influencer shocks move the taste state continuously. When the shock is removed, there is no hysteresis in the closure law itself.</p>
+    </div>
+
+    <div class="equation">
+      <span class="label">Subcritical Condition</span>
+      \[
+        \beta\eta\rho(W)&lt;1.
+      \]
+    </div>
+
+    <p>Equation (2) is the no-bubble region. It does not mean influencers have no effect. It means the effect is single-valued and bounded. In the subcritical region, the model behaves like ordinary comparative statics.</p>
+  </section>
+
+  <section>
+    <h2>4. Result: Near Criticality, Influencers Get Amplified</h2>
+    <p>At a stable fixed point \(m^\star\), define \(D=\operatorname{diag}(1-(m_i^\star)^2)\). The matrix \(D\) measures local flexibility: tastes near the extremes \(-1\) or \(1\) are less responsive, while tastes near zero are more responsive. Equation (3) gives the local response of the settled taste vector to a small fashion shock. These responses are derivatives: they measure marginal amplification near a fixed point, not adoption shares or probabilities.</p>
+
+    <div class="theorem">
+      <span class="theorem-title">Result 2. Near-Critical Influence Multiplier</span>
+      <p>At a stable fixed point, a small fashion or influencer field is amplified by the social multiplier in Equation (3). As \(\beta\eta\rho(DW)\) approaches one from below, the local response can become large and concentrated along central attention directions.</p>
+    </div>
+
+    <div class="equation">
+      <span class="label">Local Influence Multiplier</span>
+      \[
+        \frac{\partial m^\star}{\partial z}
+        =
+        \beta\left(I-\beta\eta D W\right)^{-1}D\phi.
+      \]
+    </div>
+
+    <p>The inverse matrix in Equation (3) is the social multiplier. This is the formal version of "influencers matter most when the audience is near a tipping surface." The numerical table below uses the clean benchmark \(D=I\), so the threshold column is \(\beta\eta\rho(W)\).</p>
+
+    <figure>
+      <img src="../results/figures/fashion_network_multiplier.svg" alt="Network influence multiplier">
+      <figcaption><strong>Figure 1.</strong> Linear response to a small targeted influencer field on a heterogeneous attention network. The central target's effect rises sharply as social reinforcement approaches the critical threshold. The peripheral target remains small. These are local derivatives, not bounded adoption shares.</figcaption>
+    </figure>
+
+    <p><strong>Table 2. Local network influence multipliers.</strong> The responses are aggregate local derivatives to a unit targeted field, not bounded adoption shares.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Social reinforcement \(\eta\)</th>
+          <th class="num">\(\beta\eta\rho(W)\)</th>
+          <th class="num">Central response</th>
+          <th class="num">Peripheral response</th>
+          <th class="num">Ratio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>0.60</td><td class="num">0.6900</td><td class="num">62.5018</td><td class="num">1.1627</td><td class="num">53.7580</td></tr>
+        <tr><td>0.72</td><td class="num">0.8280</td><td class="num">134.6366</td><td class="num">1.1659</td><td class="num">115.4749</td></tr>
+        <tr><td>0.80</td><td class="num">0.9200</td><td class="num">321.1234</td><td class="num">1.1697</td><td class="num">274.5388</td></tr>
+        <tr><td>0.84</td><td class="num">0.9660</td><td class="num">792.8966</td><td class="num">1.1758</td><td class="num">674.3661</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>5. Result: Above Criticality, Fashion Can Lock In</h2>
+    <p>The mean-field case is the cleanest microscope. Instead of many agents and a network, there is one average fashion state \(m\). This loses heterogeneity but makes the tipping logic exact. The baseline plus meme field is \(b=h+z\), where \(h\) is the baseline field and \(z\) is the temporary fashion shock. The closure equation becomes Equation (4).</p>
+
+    <div class="equation">
+      <span class="label">Mean-Field Fashion Closure</span>
+      \[
+        m=\tanh\!\left(\beta(Jm+b)\right).
+      \]
+    </div>
+
+    <p>If \(\beta J\le 1\), Equation (4) has one stable closure. If \(\beta J>1\), the model has a hysteresis window. Define the spinodal adoption level \(m_s\) and the critical field \(B_c\) by Equation (5).</p>
+
+    <div class="equation">
+      <span class="label">Critical Fashion Field</span>
+      \[
+        m_s=\sqrt{1-\frac{1}{\beta J}},
+        \qquad
+        B_c=Jm_s-\frac{\operatorname{arctanh}(m_s)}{\beta}.
+      \]
+    </div>
+
+    <div class="theorem">
+      <span class="theorem-title">Result 3. Hysteresis And Persistent Fashion</span>
+      <p>If \(\beta J>1\), then for every total field \(b\) with \(|b|&lt;B_c\), Equation (4) has two stable closures separated by an unstable closure. Starting on the low branch, a temporary positive shock that pushes \(b\) strictly above \(B_c\) eliminates that branch. If the shock is then removed and the baseline field lies inside \((-B_c,B_c)\), the path remains on the high branch.</p>
+    </div>
+
+    <figure>
+      <img src="../results/figures/fashion_mean_field_hysteresis.svg" alt="Mean-field hysteresis">
+      <figcaption><strong>Figure 2.</strong> Stable and unstable closure branches for \(m=\tanh(\beta(Jm+b))\), with \(\beta=2.0\), \(J=0.8\), and baseline field \(h=-0.08\). A positive shock pushes the path from the low branch to the high branch. Removing the shock leaves the system in the high branch's basin; the low branch can also remain stable inside the hysteresis window.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>6. Result: A Temporary Shock Can Create A Material Loss</h2>
+    <p>To ask whether the induced taste state is good by some criterion other than the induced taste itself, evaluate the final state with a simple outside yardstick. Let that material evaluator be \(G(m)=hm\). If \(h&lt;0\), the material evaluator favors the low-fashion state. This evaluator is intentionally minimal. It is not a welfare theorem. It is a diagnostic showing that a preference state can persist even when an outside material yardstick ranks it lower.</p>
+
+    <div class="equation">
+      <span class="label">Material-Loss Window</span>
+      \[
+        |h|&lt;B_c
+        \quad\text{and}\quad
+        B_c-h&lt; z_{\max}.
+      \]
+    </div>
+
+    <div class="theorem">
+      <span class="theorem-title">Result 4. Temporary Meme, Persistent Loss</span>
+      <p>If Equation (6) holds, \(h&lt;0\), and the initial condition is on the low stable branch, then a temporary positive meme or influencer shock of size less than \(z_{\max}\) can move the system to the high stable branch. After the shock disappears, the new taste state persists along that path and lowers \(G\).</p>
+    </div>
+
+    <p>In the calibrated example, \(\beta=2.0\), \(J=0.8\), and \(h=-0.08\). The critical field is \(B_c=0.1335\). Starting from the low branch, the positive shock needed to force a jump is \(B_c-h=0.2135\). The tested shock size is \(0.35\), so the flip occurs and persists after the shock is removed.</p>
+
+    <p><strong>Table 3. Calibrated mean-field flip.</strong></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Quantity</th>
+          <th class="num">Value</th>
+          <th>Plain meaning</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>\(\beta J\)</td><td class="num">1.6000</td><td>Above the critical value one.</td></tr>
+        <tr><td>\(B_c\)</td><td class="num">0.1335</td><td>Critical total field needed to destroy one branch.</td></tr>
+        <tr><td>Shock needed</td><td class="num">0.2135</td><td>Positive shock required from baseline \(h=-0.08\).</td></tr>
+        <tr><td>Shock tested</td><td class="num">0.3500</td><td>Large enough to flip the state.</td></tr>
+        <tr><td>Low branch at baseline</td><td class="num">-0.9282</td><td>Initial settled taste state.</td></tr>
+        <tr><td>High branch at baseline</td><td class="num">0.8166</td><td>Persistent settled taste state after shock removal.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>7. Random Parameter Audit</h2>
+    <p>The random audit samples 6,000 mean-field economies. It is not an empirical estimate of social media, fashion, or AI. It is a robustness check for the mechanism: how often does a broad parameter draw contain the mathematical ingredients for persistent fashion flips?</p>
+
+    <figure>
+      <img src="../results/figures/fashion_phase_audit.svg" alt="Random parameter audit">
+      <figcaption><strong>Figure 3.</strong> Random parameter audit. Roughly half the sampled economies are subcritical and therefore unique. About \(26.98\%\) have a hysteresis window. About \(15.40\%\) can be flipped by a temporary shock of size \(0.35\). About \(4.10\%\) flip in a direction that lowers the simple material evaluator.</figcaption>
+    </figure>
+
+    <p><strong>Table 4. Random parameter audit.</strong> These rates describe a simulated parameter draw, not frequencies in real platforms or societies.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Audit statistic</th>
+          <th class="num">Rate</th>
+          <th>Interpretation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Subcritical unique closure</td><td class="num">0.4865</td><td>Fashion adjustment is single-valued and reversible.</td></tr>
+        <tr><td>Hysteresis possible</td><td class="num">0.2698</td><td>Two stable taste states can coexist.</td></tr>
+        <tr><td>Temporary shock flips state</td><td class="num">0.1540</td><td>A shock of size \(0.35\) can create persistent taste change.</td></tr>
+        <tr><td>Flip is material loss</td><td class="num">0.0410</td><td>The persistent flip lowers the toy material evaluator.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>8. Interpretation</h2>
+    <p>The model gives a disciplined interpretation of fashion-induced preference change. Influencers and memes do not need to be permanently present to have permanent effects. If the social-feedback system is above criticality, the shock can select a new stable closure state. After that, ordinary social reinforcement sustains the new preferences.</p>
+
+    <p>This also explains why "preference manipulation" is not simply "exposure changed behavior." In the subcritical region, exposure effects are continuous and reversible. The stronger claim begins only above criticality, where the closure law is multi-valued and history-dependent.</p>
+
+    <div class="takeaway">
+      <strong>Potential contribution to the main article.</strong> The fashion/meme module would add a concrete mechanism for the abstract closure law \(\ell\). It would say: one familiar class of social-interaction closure laws has a critical threshold. Below it, fast preference adaptation is reversible comparative statics. Above it, temporary exposure can select a persistent preference branch and can lower a stated material evaluator.
+    </div>
+  </section>
+
+  <section>
+    <h2>9. What This Does Not Yet Claim</h2>
+    <ul>
+      <li>It is not an empirical estimate of TikTok, Instagram, AI companions, or any specific platform.</li>
+      <li>It does not prove that every fashion shock is harmful.</li>
+      <li>It does not identify the true welfare criterion; the material evaluator is deliberately simple.</li>
+      <li>Persistent loss requires the initial state to be on the low branch and the temporary shock to cross the critical field strictly.</li>
+      <li>It does not replace the finite-game Nash analysis. It supplies a richer closure law that can feed into that analysis.</li>
+      <li>It does not require irrational agents. The same math is compatible with social utility, bounded information, threshold behavior, or logit mistakes.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>10. Next Tests</h2>
+    <p>The module is promising enough to develop further. The next step would be to connect the fashion closure state \(m^\star\) to a finite strategic game, so that the main article's Nash object is explicitly induced by the fashion closure. After that, we can test whether the criticality result survives richer action sets, snob effects, heterogenous baseline fields, and platform policies that choose \(z\) dynamically.</p>
+
+    <p>Empirically, the key measurements would be the social-feedback reproduction number, the persistence of taste states after exposure removal, and whether central exposure targets have disproportionate effects near criticality. Those are measurement questions, not settled here.</p>
+  </section>
+
+  <section class="refs">
+    <h2>References</h2>
+    <p>Bikhchandani, Sushil, David Hirshleifer, and Ivo Welch. "A Theory of Fads, Fashion, Custom, and Cultural Change as Informational Cascades." <em>Journal of Political Economy</em> 100(5), 1992, 992-1026. <a href="https://snap.stanford.edu/class/cs224w-readings/bikhchandani92fads.pdf">PDF</a>.</p>
+    <p>Brock, William A., and Steven N. Durlauf. "Discrete Choice with Social Interactions." <em>Review of Economic Studies</em> 68(2), 2001, 235-260. <a href="https://hceconomics.uchicago.edu/sites/default/files/pdf/events/Brock_Durlauf_2001_REStud_v68-N2.pdf">PDF</a>.</p>
+    <p>Chaney, Allison J. B., Brandon M. Stewart, and Barbara E. Engelhardt. "How Algorithmic Confounding in Recommendation Systems Increases Homogeneity and Decreases Utility." RecSys, 2018. <a href="https://arxiv.org/abs/1710.11214">arXiv</a>.</p>
+    <p>Granovetter, Mark. "Threshold Models of Collective Behavior." <em>American Journal of Sociology</em> 83(6), 1978, 1420-1443. <a href="https://www2.cs.siu.edu/~hexmoor/classes/CS539-F10/Collective-Behavior.pdf">PDF</a>.</p>
+    <p>Jiang, Ray, Silvia Chiappa, Tor Lattimore, Andras Gyorgy, and Pushmeet Kohli. "Degenerate Feedback Loops in Recommender Systems." AIES, 2019. <a href="https://arxiv.org/abs/1902.10730">arXiv</a>.</p>
+    <p>Kempe, David, Jon Kleinberg, and Eva Tardos. "Maximizing the Spread of Influence through a Social Network." KDD, 2003. <a href="https://www.cs.cornell.edu/home/kleinber/kdd03-inf.pdf">PDF</a>.</p>
+    <p>Kleinberg, Jon, Sendhil Mullainathan, and Manish Raghavan. "The Challenge of Understanding What Users Want: Inconsistent Preferences and Engagement Optimization." <em>Management Science</em> 70(9), 2024, 6336-6355. <a href="https://arxiv.org/abs/2202.11776">arXiv</a>.</p>
+    <p>Leibenstein, Harvey. "Bandwagon, Snob, and Veblen Effects in the Theory of Consumers' Demand." <em>Quarterly Journal of Economics</em> 64(2), 1950, 183-207. <a href="https://gwern.net/doc/sociology/1950-leibenstein.pdf">PDF</a>.</p>
+    <p>Morris, Stephen. "Contagion." <em>Review of Economic Studies</em> 67(1), 2000, 57-78. <a href="https://snap.stanford.edu/class/cs224w-readings/morris98contagion.pdf">PDF</a>.</p>
+    <p>Watts, Duncan J. "A Simple Model of Global Cascades on Random Networks." <em>PNAS</em> 99(9), 2002, 5766-5771. <a href="https://www.stat.berkeley.edu/~aldous/260-FMIE/Papers/watts.pdf">PDF</a>.</p>
+  </section>
+</main>
+</body>
+</html>

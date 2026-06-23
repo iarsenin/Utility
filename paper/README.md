@@ -32,6 +32,10 @@ notes, model results, and literature checks.
   finite-game theorem spine: fast closure, mixed best-response invariance,
   best-response non-invariance, selection-target shift, proxy alignment, and a
   compact computational stress test.
+- `fashion_meme_closure_presentation.html`: standalone extension-candidate
+  presentation on fashion, influencers, memes, bubbles, and fast preference
+  closure. It is intentionally separate from the GEB article until the results
+  and interpretation are accepted.
 - `venue_strategy.md`: venue plan and boundary between the working-paper and
   GEB-facing versions.
 
@@ -65,3 +69,12 @@ Round 18-21 pass are also in `results/figures/`:
 - `geb_submission_v1_round21_qa_model_formula_numbers.png`
 - `geb_submission_v1_round21_qa_material_scalar.png`
 - `geb_submission_v1_round21_qa_nash.png`
+
+Latest fashion/meme closure presentation QA artifacts are in
+`results/figures/` after rendering:
+
+- `fashion_meme_presentation_round5_top.png`
+- `fashion_meme_presentation_round5_first_formula.png`
+- `fashion_meme_presentation_round5_multiplier.png`
+- `fashion_meme_presentation_round5_hysteresis.png`
+- `fashion_meme_presentation_round5_material_loss.png`

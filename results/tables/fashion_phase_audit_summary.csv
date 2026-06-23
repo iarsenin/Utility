@@ -1,0 +1,2 @@
+draws,shock_size,subcritical_unique_rate,hysteresis_possible_rate,temporary_shock_flip_rate,material_loss_flip_rate,mean_positive_shock_needed_when_flippable,median_positive_shock_needed_when_flippable
+6000,0.35,0.4865,0.2698333333333333,0.154,0.041,0.16062007324286537,0.15956579752439715

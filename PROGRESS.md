@@ -614,6 +614,89 @@ Validation:
 - Visual inspection confirmed that formula numbers, equation boxes, and the
   abstract/model/Nash formula sections render cleanly.
 
+### Fashion, Influencer, Meme, And Bubble Closure Module
+
+Built a standalone extension candidate that is not yet incorporated into the
+GEB article. The module asks whether fashion, influencers, memes, and online
+bubbles can be modeled as a fast preference-formation process.
+
+Core files:
+
+- `references/fashion_meme_literature.md`
+- `models/fashion_meme_closure.md`
+- `src/utility_endogenous/fashion_meme_dynamics.py`
+- `scripts/run_fashion_meme_analysis.py`
+- `results/fashion_meme_report.md`
+- `paper/fashion_meme_closure_presentation.html`
+
+Generated outputs:
+
+- `results/tables/fashion_threshold_summary.csv`
+- `results/tables/fashion_hysteresis_path.csv`
+- `results/tables/fashion_mean_field_branches.csv`
+- `results/tables/fashion_network_multipliers.csv`
+- `results/tables/fashion_phase_audit_summary.csv`
+- `results/figures/fashion_mean_field_hysteresis.svg`
+- `results/figures/fashion_network_multiplier.svg`
+- `results/figures/fashion_phase_audit.svg`
+
+Main result:
+
+- A familiar social-interactions closure law can be used as a fast
+  utility-closure law.
+- Below the critical feedback threshold, the closure is unique and reversible.
+- Near the threshold, local influencer multipliers can become large and
+  centrality-dependent.
+- Above the threshold, the mean-field closure has hysteresis: a temporary shock
+  can move the system from the low branch to the high branch and the new
+  preference state can persist after the shock disappears.
+- With the toy material evaluator \(G(m)=hm\), a persistent flip can be a
+  material loss when the initial state is on the low branch, \(h<0\), and the
+  temporary shock strictly crosses the critical field.
+
+Numerical results:
+
+- Calibrated case: \(\beta=2.0\), \(J=0.8\), \(h=-0.08\); critical field
+  \(B_c=0.1335\); positive shock needed \(0.2135\); tested shock \(0.35\), so
+  the flip persists.
+- Random audit: 6,000 mean-field economies; 48.65 percent subcritical unique
+  closure, 26.98 percent hysteresis possible, 15.40 percent flippable by a
+  temporary shock of size 0.35, and 4.10 percent flip in a direction that lowers
+  the toy material evaluator.
+- Network multiplier audit: central targeted response rises sharply as
+  \(\beta\eta\rho(W)\) approaches one from below; this is a local derivative,
+  not a bounded adoption share.
+
+Five editorial/review rounds:
+
+- `docs/agent_rounds/fashion_round_1_modeller.md`
+- `docs/agent_rounds/fashion_round_2_literature.md`
+- `docs/agent_rounds/fashion_round_3_writer.md`
+- `docs/agent_rounds/fashion_round_4_editor.md`
+- `docs/agent_rounds/fashion_round_5_production.md`
+
+Key review edits:
+
+- Narrowed novelty: the social-interaction and threshold math is not new; the
+  candidate contribution is embedding those mechanisms as fast
+  preference-closure laws.
+- Added an old/new framing box.
+- Defined criticality, hysteresis, and the material evaluator in plain language.
+- Added a numbered Result 2 for the local network influence multiplier.
+- Added table numbers and captions.
+- Tightened the material-loss result to require starting on the low branch and
+  strict threshold crossing.
+- Fixed a browser rendering issue caused by raw less-than signs inside TeX
+  source embedded in HTML.
+
+Round 5 visual QA screenshots:
+
+- `fashion_meme_presentation_round5_top.png`
+- `fashion_meme_presentation_round5_first_formula.png`
+- `fashion_meme_presentation_round5_multiplier.png`
+- `fashion_meme_presentation_round5_hysteresis.png`
+- `fashion_meme_presentation_round5_material_loss.png`
+
 ### Next Actions
 
 - Convert `paper/geb_submission_v1.html` to a LaTeX/PDF submission package with
