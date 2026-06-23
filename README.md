@@ -84,19 +84,31 @@ The script writes:
 
 ## Current Status
 
-This is bootstrap version 0.1. The repo currently contains:
+The live manuscript direction is now the combined fast-preference/social-feedback paper:
 
-- a first axiomatic frame for endogenous preferences,
-- a literature map with canonical and current entry points,
-- a project plan and progress ledger,
-- two initial model families:
-  - algorithmic preference drift with Darwinian selection,
-  - indirect evolutionary Prisoner's Dilemma with mutable social preferences.
+- `paper/combined_fast_preference_closure_v1.html`
+
+It combines the finite-game fast-closure theorem spine with a worked
+social-feedback closure law for fashion, influencers, memes, bubbles, and
+platform exposure. The key formal object is now the branch-selection map:
+
+```text
+(ell, q, zeta) -> C_ell(E, q, zeta) -> Gamma^star_{ell,q,zeta}(E) -> NE -> G
+```
+
+The older GEB and fashion presentation drafts remain in `paper/` as source
+history.
 
 ## Research Planning Docs
 
 Start here for the current research direction:
 
+- `paper/combined_fast_preference_closure_v1.html`
+- `docs/agent_rounds/combined_round_1_modeller.md`
+- `docs/agent_rounds/combined_round_2_literature.md`
+- `docs/agent_rounds/combined_round_3_writer.md`
+- `docs/agent_rounds/combined_round_4_editor.md`
+- `docs/agent_rounds/combined_round_5_production.md`
 - `paper/article_draft_v0.html`
 - `paper/article_draft_v0_codex.md`
 - `paper/article_draft_v0_math.md`

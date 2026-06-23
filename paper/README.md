@@ -36,6 +36,11 @@ notes, model results, and literature checks.
   presentation on fashion, influencers, memes, bubbles, and fast preference
   closure. It is intentionally separate from the GEB article until the results
   and interpretation are accepted.
+- `combined_fast_preference_closure_v1.html`: current integrated manuscript.
+  It combines the GEB-style fast-preference/Nash/selection paper with the
+  fashion/meme social-feedback closure mechanism. The standalone GEB and
+  fashion files remain preserved as source drafts, but this combined file is
+  now the main reader copy for the merged direction.
 - `venue_strategy.md`: venue plan and boundary between the working-paper and
   GEB-facing versions.
 
@@ -78,3 +83,20 @@ Latest fashion/meme closure presentation QA artifacts are in
 - `fashion_meme_presentation_round5_multiplier.png`
 - `fashion_meme_presentation_round5_hysteresis.png`
 - `fashion_meme_presentation_round5_material_loss.png`
+
+Latest combined-manuscript QA artifacts are in `results/figures/`:
+
+- `combined_v1_qa_top.png`
+- `combined_v1_qa_closure_map.png`
+- `combined_v1_qa_model_closure.png`
+- `combined_v1_qa_social_feedback.png`
+- `combined_v1_qa_hysteresis.png`
+- `combined_v1_qa_appendix.png`
+
+The five merge review notes are:
+
+- `docs/agent_rounds/combined_round_1_modeller.md`
+- `docs/agent_rounds/combined_round_2_literature.md`
+- `docs/agent_rounds/combined_round_3_writer.md`
+- `docs/agent_rounds/combined_round_4_editor.md`
+- `docs/agent_rounds/combined_round_5_production.md`

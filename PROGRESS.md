@@ -697,9 +697,77 @@ Round 5 visual QA screenshots:
 - `fashion_meme_presentation_round5_hysteresis.png`
 - `fashion_meme_presentation_round5_material_loss.png`
 
+### Combined Fast-Preference And Social-Feedback Manuscript
+
+Merged the GEB-facing fast-preference/Nash/selection article with the
+fashion/meme closure module into:
+
+- `paper/combined_fast_preference_closure_v1.html`
+
+The combined structure is now:
+
+1. General finite-game fast-preference framework.
+2. Nash invariance and non-invariance results.
+3. Selection after closure and platform proxy choice.
+4. Social-feedback closure law as the main worked mechanism.
+5. Computational audits for both social-feedback criticality and finite-game
+   strategic invariance.
+6. Welfare interpretation, conclusion, and proof appendices.
+
+Key formal repair during the merge:
+
+- Introduced the branch-selection closure map
+  \(C_\ell(E,q,\zeta)\), where \(q\) is the initial preference state and
+  \(\zeta\) is a fast exposure or transition input.
+- Preserved \(\theta_\ell^\star(E)\) as the unique-closure abbreviation.
+- Added the branch-selected reduced game
+  \(\Gamma_{\ell,q,\zeta}^\star(E)\).
+- Embedded the social-feedback state \(m_i\) into subjective utility via a
+  simple fashion-coded action term.
+- Added explicit social-feedback fast dynamics
+  \(T_m\dot m_i=-m_i+\tanh(\cdot)\).
+
+Five merge review cycles were logged:
+
+- `docs/agent_rounds/combined_round_1_modeller.md`
+- `docs/agent_rounds/combined_round_2_literature.md`
+- `docs/agent_rounds/combined_round_3_writer.md`
+- `docs/agent_rounds/combined_round_4_editor.md`
+- `docs/agent_rounds/combined_round_5_production.md`
+
+Notes on process:
+
+- The first two merge passes used live subagents.
+- The remaining three were documented local role passes because the subagent
+  thread pool remained capped after earlier completed agents.
+
+Validation:
+
+- Re-ran `scripts/run_fashion_meme_analysis.py`.
+- Re-ran `scripts/run_model_selection_audit.py`.
+- `paper/combined_fast_preference_closure_v1.html` parses with Python's
+  `HTMLParser`.
+- `git diff --check` passes.
+- Raw less-than TeX checks passed for the known problematic patterns
+  `<B_c`, `< z`, `<0`, `<1`, `B_c-h<`, and `|h|<`.
+- Browser QA found 392 rendered MathJax containers, 23 equation blocks, 5
+  figures, and 8 tables, with no raw display delimiters.
+
+Combined visual QA screenshots:
+
+- `combined_v1_qa_top.png`
+- `combined_v1_qa_closure_map.png`
+- `combined_v1_qa_model_closure.png`
+- `combined_v1_qa_social_feedback.png`
+- `combined_v1_qa_hysteresis.png`
+- `combined_v1_qa_appendix.png`
+
 ### Next Actions
 
-- Convert `paper/geb_submission_v1.html` to a LaTeX/PDF submission package with
+- Decide whether `paper/combined_fast_preference_closure_v1.html` becomes the
+  working-paper source, the GEB-facing source, or a broad working paper from
+  which a shorter GEB submission is later carved out.
+- Convert the selected source manuscript to a LaTeX/PDF submission package with
   journal-standard theorem environments and bibliography management.
 - Tighten proof sketches into final proof blocks during the LaTeX conversion.
 - Prove a formal non-neutral closure result beyond the numerical stress test.
