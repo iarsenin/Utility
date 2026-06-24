@@ -865,3 +865,42 @@ Round 8 visual QA screenshots:
 - What is the right welfare criterion: initial preferences, long-run preferences, meta-preferences, biological fitness, or constitutional constraints?
 - Should "preference autonomy" be modeled as a constraint on the transition kernel `K`?
 - Can we derive a clean impossibility theorem without importing psychology?
+
+### Narrative Pivot And Local Rendering Pass
+
+Completed a narrative pivot of `paper/combined_fast_preference_closure_v1.html`
+on June 24, 2026.
+
+Main edits:
+
+- Reframed the article around preference-fitness wedges rather than a
+  formula-first exposition.
+- Removed self-referential scaffolding such as "this paper will show" /
+  "the paper's main object" style prose from the article body.
+- Added a permanent agent rule rejecting "song about the song" meta-commentary.
+- Kept theorem statements and proofs in appendices while making the main text
+  explain low fertility, loneliness, dating retreat, fashion/status cascades,
+  and AI risk/repair in plainer language.
+- Moved detailed simulation tables and sensitivity material into Appendix C.
+- Added simulation replication details: scripts, seeds, sample sizes, random
+  draws, proxy conventions, selection rules, and Monte Carlo error scale.
+- Vendored MathJax locally under `vendor/mathjax` and changed the combined
+  article to load `../vendor/mathjax/es5/tex-chtml.js` instead of jsDelivr.
+  This removes the immediate external network request that could produce
+  connection errors when reading the local file.
+
+Validation:
+
+- HTML parse passed.
+- Internal anchors resolve.
+- All immediate `src`/stylesheet assets are local and present.
+- No immediate external scripts, stylesheets, or images remain.
+- Equation/theorem/figure/table counts: 15 / 11 / 5 / 8.
+- `git diff --check` passed.
+
+Browser note:
+
+- Programmatic inspection of the existing in-app `file://` tab was blocked by
+  Browser Use URL policy. Source-level connection checks were completed
+  instead, and the obvious external-load cause was removed by vendoring
+  MathJax.

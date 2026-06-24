@@ -2,12 +2,15 @@
 
 ## Primary Objective
 
-Produce a mathematically rigorous article that can be followed by a highly
-educated reader who is not already a specialist in Nash equilibrium, singular
-perturbation, or evolutionary preference theory.
+Produce a mathematically rigorous article with a narrative main text and a
+formal appendix. The main text should explain what the framework helps us see
+about real puzzles: low fertility, loneliness, retreat from dating and sex,
+algorithmic preference formation, fashion/status cascades, and AI companions or
+assistants. The appendix should carry the theorem statements, notation, and
+proofs.
 
-The article should be readable without becoming informal, and rigorous without
-becoming opaque.
+The article should be readable without becoming informal, insightful without
+becoming speculative, and rigorous without becoming opaque.
 
 ## Reader Model
 
@@ -24,6 +27,10 @@ economic language, but may not know:
 - singular limits;
 - indirect evolutionary preference models;
 - post-closure admissibility.
+
+The reader should not be asked to infer the value of the framework from the
+formulas. The article must state what puzzle is being clarified, what the model
+explains, and what it does not explain.
 
 ## Hard Requirements
 
@@ -44,16 +51,31 @@ economic language, but may not know:
    preferences, material payoff, and transition-law evaluation are distinct.
 10. Do not over-correct by removing mathematical content, weakening theorem
     statements, or replacing formal claims with impressionistic prose.
+11. Put theorem statements and proofs in a formal appendix unless a short
+    formula is essential to the main narrative.
+12. In the main text, use examples before notation: fertility, loneliness,
+    sex/dating retreat, social-media preference closure, and AI companions.
+13. Keep "fitness" criterion-explicit. It may mean reproduction, survival,
+    material payoff, health, or institutional continuity, depending on the
+    example. Do not imply that reproduction is the only human value.
+14. Include positive AI use cases. The point is not "AI corrupts preferences";
+    it is that AI can either close preferences around engagement proxies or
+    scaffold more reflective, long-run, socially connected preferences.
+15. Avoid self-referential scaffolding. Do not write sentences that narrate the
+    paper's own plan, object, or contribution when a direct substantive claim
+    can be made. No "this paper will show," "the main text uses," or "the
+    framework suggests" phrasing unless it is unavoidable in front/back matter.
+    Do not sing a song about the song.
 
 ## Editing Sequence
 
 Each cycle should check the draft in this order:
 
-1. Setup: can a reader state the model after reading the abstract and first
-   page?
-2. Notation: is each symbol introduced before it appears in a display?
-3. Results: are theorem implications stated in plain language before and after
-   the formal block?
+1. Value: can a reader say what puzzle the paper clarifies after the abstract
+   and first page?
+2. Narrative: do examples motivate the model before the appendix math appears?
+3. Formal discipline: do main-text claims match the appendix theorem
+   statements?
 4. Rigor: did the prose accidentally overstate a sufficient condition,
    simulation result, or welfare interpretation?
 5. Rendering: do formula numbers, equations, tables, and theorem boxes render
@@ -63,8 +85,8 @@ Each cycle should check the draft in this order:
 
 ### Modeller / Rigor Agent
 
-Preserve the mathematics while making assumptions explicit. Check especially
-that:
+Persona: exact, skeptical, and allergic to overclaiming. Preserve the
+mathematics while making assumptions explicit. Check especially that:
 
 - \(E\) is introduced as the slow economic environment before it appears;
 - \(\ell\) is introduced as the preference-formation or closure law before it
@@ -73,9 +95,16 @@ that:
   introduced before their first display;
 - Proposition 1 remains sufficient, not necessary;
 - Proposition 3 remains a feasible-set proxy/material alignment result;
-- simulations are described as audits or stress tests, not empirical estimates.
+- simulations are described as audits or stress tests, not empirical estimates;
+- claims about fertility, loneliness, sex, and AI companionship are framed as
+  applications of the formal lens, not as proven causal explanations;
+- the theorem/proof material is complete enough in the appendix that the main
+  text can be narrative without becoming hand-wavy.
 
 ### Writer / Reader Agent
+
+Persona: intellectually ambitious, clear, and interested in surprising but
+solid implications.
 
 Maximize reader comprehension subject to mathematical accuracy. The article
 should tell the reader, in ordinary language, what the model is doing before it
@@ -86,7 +115,14 @@ follow.
 The writer may simplify sentences but must not simplify theorem claims into
 false claims.
 
+The writer should actively look for the paper's central insight: fast
+preference closure can make revealed desire, long-run welfare, and fitness pull
+apart while still leaving Nash equilibrium and selection as valid methods.
+
 ### Editor / Production Agent
+
+Persona: journal editor with a good ear for flow, contribution, and reader
+patience.
 
 Make the document readable as a published article. Check sequence, definitions,
 formula numbering, visual display, and unwanted residue from earlier drafts.
@@ -99,3 +135,11 @@ The editor should reject:
   model;
 - jargon before definition, especially "boundary layer," "closure-equivalence
   class," and "mixed best-response correspondence."
+
+The editor should also reject a dry formal sequence that hides the contribution.
+The main text should read as a paper about important phenomena, supported by a
+formal appendix, not as an appendix with an introduction attached.
+
+The editor should also reject meta-commentary that tells the reader what the
+article is about to do instead of doing it. Replace it with the actual claim,
+mechanism, limit, or implication.

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fast Preference Closure And Social Feedback</title>
+  <title>Fast Preference Closure And Fitness Wedges</title>
   <script>
     window.MathJax = {
       tex: {
@@ -18,7 +18,7 @@
       }
     };
   </script>
-  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <script defer src="../vendor/mathjax/es5/tex-chtml.js"></script>
   <style>
     :root {
       --ink: #151719;
@@ -183,10 +183,11 @@
     .equation .label {
       color: var(--muted);
       display: block;
-      font-size: 0.79rem;
-      font-weight: 720;
-      letter-spacing: 0.03em;
-      margin-bottom: 6px;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.72rem;
+      font-weight: 750;
+      letter-spacing: 0.06em;
+      margin-bottom: 4px;
       text-transform: uppercase;
     }
 
@@ -206,45 +207,17 @@
       padding: 15px 18px 13px;
     }
 
-    .theorem[data-kind="Lemma"] {
-      counter-increment: lemma;
-    }
+    .theorem[data-kind="Lemma"] { counter-increment: lemma; }
+    .theorem[data-kind="Proposition"] { counter-increment: proposition; }
+    .theorem[data-kind="Corollary"] { counter-increment: corollary; }
+    .theorem[data-kind="Theorem"] { counter-increment: theorem; }
+    .theorem[data-kind="Example"] { counter-increment: example; }
 
-    .theorem[data-kind="Proposition"] {
-      counter-increment: proposition;
-    }
-
-    .theorem[data-kind="Corollary"] {
-      counter-increment: corollary;
-    }
-
-    .theorem[data-kind="Theorem"] {
-      counter-increment: theorem;
-    }
-
-    .theorem[data-kind="Example"] {
-      counter-increment: example;
-    }
-
-    .theorem[data-kind="Lemma"] .theorem-title::before {
-      content: "Lemma " counter(lemma) ". ";
-    }
-
-    .theorem[data-kind="Proposition"] .theorem-title::before {
-      content: "Proposition " counter(proposition) ". ";
-    }
-
-    .theorem[data-kind="Corollary"] .theorem-title::before {
-      content: "Corollary " counter(corollary) ". ";
-    }
-
-    .theorem[data-kind="Theorem"] .theorem-title::before {
-      content: "Theorem " counter(theorem) ". ";
-    }
-
-    .theorem[data-kind="Example"] .theorem-title::before {
-      content: "Example " counter(example) ". ";
-    }
+    .theorem[data-kind="Lemma"] .theorem-title::before { content: "Lemma " counter(lemma) ". "; }
+    .theorem[data-kind="Proposition"] .theorem-title::before { content: "Proposition " counter(proposition) ". "; }
+    .theorem[data-kind="Corollary"] .theorem-title::before { content: "Corollary " counter(corollary) ". "; }
+    .theorem[data-kind="Theorem"] .theorem-title::before { content: "Theorem " counter(theorem) ". "; }
+    .theorem[data-kind="Example"] .theorem-title::before { content: "Example " counter(example) ". "; }
 
     .theorem-title {
       color: #385928;
@@ -260,12 +233,9 @@
       font-size: 0.96em;
     }
 
-    .proof strong {
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
     figure {
-      margin: 28px 0 30px;
+      counter-increment: figure;
+      margin: 26px 0;
     }
 
     figure img {
@@ -274,10 +244,6 @@
       height: auto;
       max-width: 100%;
       width: 100%;
-    }
-
-    figure {
-      counter-increment: figure;
     }
 
     figcaption {
@@ -350,7 +316,7 @@
       }
 
       .equation {
-        padding: 12px 44px 10px 12px;
+        padding-right: 48px;
       }
 
       .equation::after {
@@ -367,392 +333,402 @@
 <body>
 <main>
   <header>
-    <h1>Fast Preference Closure And Social Feedback</h1>
-    <p class="subtitle">Endogenous utility, Nash equilibrium, selection, and fashion-driven preference formation</p>
-    <p class="meta">June 23, 2026. Combined working draft.</p>
-    <p class="meta"><strong>JEL codes:</strong> C72, D01, D11, D83, D91. <strong>Keywords:</strong> endogenous preferences, Nash equilibrium, social interactions, fashion, memes, recommender systems, material payoff, selection.</p>
+    <h1>Fast Preference Closure and Fitness Wedges</h1>
+    <p class="subtitle">Endogenous utility, social feedback, AI-mediated taste formation, and the separation between wanting, welfare, and survival</p>
+    <p class="meta">June 24, 2026</p>
+    <p class="meta"><strong>JEL codes:</strong> C72, D01, D11, D83, D91, J13. <strong>Keywords:</strong> endogenous preferences, fast utility, fertility, loneliness, recommender systems, AI companions, Nash equilibrium, material payoff, selection.</p>
   </header>
 
   <section class="abstract">
     <h2>Abstract</h2>
-    <p>This paper studies finite games in which the utility used for choice is not fixed in advance. A fast preference-formation process first produces the utility representation that players use. Players then choose a Nash equilibrium in that induced subjective game. Material payoff is kept separate and is used afterward to evaluate survival, welfare, or institutional success. The model therefore has two payoff tables: one that players maximize and one that the analyst or selection process uses to judge consequences.</p>
+    <p>Many contemporary puzzles have the same uncomfortable structure. People sincerely choose, endorse, or drift into patterns that appear to weaken ordinary material objectives: lower fertility in rich societies, loneliness amid constant connection, retreat from dating and sex, status games that consume attention, and digital environments that satisfy momentary wants while reducing health, friendship, or reproduction. Call this a preference-fitness wedge: what people sincerely want after preference formation diverges from the slower criterion being evaluated.</p>
 
-    <p>The motivating mechanism is social feedback. Fashions, influencers, memes, bubbles, and recommender systems are modeled as changing what people come to want by changing what is visible and socially reinforced. The paper treats these forces as possible closure laws, not as loose psychology. A worked social-feedback closure shows a sharp threshold: below criticality, exposure has a unique reversible effect; above criticality, temporary exposure can select a persistent preference branch.</p>
+    <p>The model separates three objects that are often collapsed: the utility representation people maximize, the material or fitness criterion used to evaluate consequences, and the rule that forms preferences. Fitness is application-relative: reproduction in fertility examples, health and social capacity in loneliness examples, and continuity in institutional examples. A fast preference-formation process first produces the utility representation. Players then choose a Nash equilibrium in the induced subjective game. The central wedge is therefore not between "true" and "false" preferences; it is between the process that makes preferences feel locally compelling and the slower criteria by which lives, populations, and institutions persist.</p>
 
-    <p>Formally, \(E\) denotes the slow economic environment and \(\ell\) denotes the preference-formation rule, or closure law. During the fast adjustment, \(E\) and \(\ell\) are held constant while the preference state \(\theta\) moves. The closure map is \(C_\ell(E,q,\zeta)\), where \(q\) is the initial preference state and \(\zeta\) is any fast exposure or transition input. In the unique-closure case this collapses to \(\theta_\ell^\star(E)\), which produces a reduced subjective game \(\Gamma_\ell^\star(E)\). The first general result is a reduction: after the fast adjustment, equilibrium analysis is analysis of the reduced game. The second gives a strong sufficient condition under which the subjective and material games have the same Nash set, meaning the same collection of self-consistent mixed-strategy outcomes. The condition is plain: for every possible mixed behavior of the other players, each player must have the same set of optimal responses under subjective utility and material payoff.</p>
+    <p>Four facts organize the argument. First, after fast preference adjustment, equilibrium analysis is analysis of the reduced subjective game. Second, agreement with a material-payoff benchmark is guaranteed under a strong best-response invariance condition; without such invariance, agreement is not generally warranted. Third, if many initial preference states close to the same induced utility representation, selection over those initial states becomes weak, so closure laws, institutions, platforms, and environments become the relevant objects. Fourth, preference change is not automatically harmful. Material loss requires a proxy that selects preference-forming rules misaligned with the material evaluator.</p>
 
-    <p>The third general result concerns selection. If many initial preference states all close to the same final utility representation, then a material selection rule that observes only post-closure play cannot distinguish those initial states. The remaining selection problem is over what still differs after closure: laws, institutions, platform rules, or environments. A platform application makes the material-evaluation issue concrete. Preference change by itself is not a material loss. Loss follows when the proxy that chooses the preference-producing rule is misaligned with the material evaluator.</p>
-
-    <p>The social-feedback closure gives the abstract theory a concrete mechanism. In the mean-field case \(m=\tanh(\beta(Jm+b))\), if \(\beta J>1\), a temporary fashion or meme shock that crosses a critical field can move tastes from one stable branch to another. In a calibrated example, the positive shock needed is \(0.2135\), and a shock of \(0.35\) selects the high stable branch in the model. Numerical audits then separate two facts: exact Nash invariance is restrictive in random games, and social-feedback closure can be reversible or history-dependent depending on criticality.</p>
+    <p>Low fertility, loneliness, dating retreat, fashion cascades, and AI companionship can then be studied as possible preference-fitness wedges. AI sharpens both sides of the argument: it can close preferences around engagement and dependency, or it can scaffold goals users endorse outside the immediate choice moment. The policy question is not whether preferences change. It is which systems shape them, how quickly, by what proxy, and whether they build or erode the capacities that make human and institutional life continue.</p>
   </section>
 
   <section>
-    <h2>1. Introduction</h2>
-    <p>In a standard finite game, each player chooses an action from a finite list. The model gives each player a payoff table, and the players choose strategies. A Nash equilibrium is a self-consistent outcome: given what everyone else is doing, no player wants to change. A mixed strategy is a probability distribution over actions; a Nash set is the collection of all self-consistent mixed profiles. In the standard formulation, the payoff table is part of the primitives of the model.</p>
+    <h2>1. Why Fast Preferences Matter</h2>
+    <p>Economics usually earns its power by treating preferences as given. That move is often reasonable. If tastes change slowly, the analyst can study prices, constraints, games, and institutions while holding utility fixed. The welfare question can then be asked in the familiar way: given what people want, which allocations are efficient or desirable?</p>
 
-    <p>This paper changes one part of that setup. The payoff table used for choice is allowed to be produced by a preference-formation process. The motivating cases are familiar: habit, socialization, identity, advertising, cultural transmission, recommender systems, and AI-mediated environments can all affect what a person comes to value. The limiting question is deliberately sharp: what if that preference-producing process is much faster than the other economic state variables?</p>
+    <p>The time scale has changed. Social media, recommender systems, dating apps, creator markets, online status games, and now AI companions or assistants do not merely satisfy preferences. They can help produce the preferences that later appear in choice data. They can do so quickly, experimentally, and at population scale. Once that is true, revealed preference becomes an output of a system rather than a primitive of the system.</p>
 
-    <p>The concrete mechanism studied later is social feedback. Fashions, influencers, memes, and online bubbles can be represented as exposure fields that alter tastes while social reinforcement makes those altered tastes appear more common. This is not a new theory of fads by itself; bandwagon demand, social interactions, threshold contagion, and influence diffusion are established literatures. The move here is to use those mechanisms as fast utility-closure laws and then ask which game is played after closure.</p>
+    <p>The novelty is not the claim that preferences are endogenous. That claim has a long tradition. The novelty is the fast-limit question: if preference formation is much faster than the economic, demographic, or institutional process being evaluated, what survives equilibrium analysis, what can selection still act on, and when does revealed utility cease to be a reliable guide to the material criterion?</p>
 
-    <p>The sequence is direct. Preferences settle first. Players then optimize using the settled subjective utility representation. The analyst then evaluates the material consequences of the resulting play. This order is the paper's main object.</p>
-
-    <p>The model separates subjective utility from material payoff. Subjective utility is the representation players maximize. Material payoff is the criterion used for survival, growth, welfare accounting, or external evaluation. A closure law is the rule or dynamic that says where the fast preference state settles, given the slow environment. Once that state settles, it induces the subjective game in which players choose strategies. Material payoff is evaluated only after that induced game is solved.</p>
-
-    <p class="table-title"><strong>Main objects and plain-language meanings.</strong></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Term</th>
-          <th>Plain meaning</th>
-          <th>Formal object</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Slow environment</td>
-          <td>The background economic state held constant while preferences settle.</td>
-          <td>\(E\)</td>
-        </tr>
-        <tr>
-          <td>Preference state</td>
-          <td>The current taste or utility representation that guides choice.</td>
-          <td>\(\theta\)</td>
-        </tr>
-        <tr>
-          <td>Initial preference state</td>
-          <td>The fast-clock starting point, which can matter when several stable branches exist.</td>
-          <td>\(q=\theta(0)\)</td>
-        </tr>
-        <tr>
-          <td>Closure input</td>
-          <td>A fast exposure or transition input, such as a temporary meme or platform shock.</td>
-          <td>\(\zeta\)</td>
-        </tr>
-        <tr>
-          <td>Closure law</td>
-          <td>The mechanism that makes preferences settle, such as a habit rule, cultural rule, or platform rule.</td>
-          <td>\(\ell\)</td>
-        </tr>
-        <tr>
-          <td>Closure map</td>
-          <td>The post-adjustment preference state selected from initial state \(q\) under input \(\zeta\).</td>
-          <td>\(C_\ell(E,q,\zeta)\)</td>
-        </tr>
-        <tr>
-          <td>Settled preference state</td>
-          <td>The unique closure branch, when the fast process erases dependence on \(q\) and \(\zeta\).</td>
-          <td>\(\theta_\ell^\star(E)\)</td>
-        </tr>
-        <tr>
-          <td>Action profile</td>
-          <td>The list of pure actions chosen by all players.</td>
-          <td>\(a=(a_i)_{i\in N}\in A\)</td>
-        </tr>
-        <tr>
-          <td>Subjective utility</td>
-          <td>The payoff players actually maximize when choosing.</td>
-          <td>\(U_i(a;\theta_i,E,\ell)\)</td>
-        </tr>
-        <tr>
-          <td>Material payoff</td>
-          <td>The external evaluator: survival, growth, welfare accounting, or another material criterion.</td>
-          <td>\(\pi_i(a;E,\ell)\)</td>
-        </tr>
-        <tr>
-          <td>Reduced subjective game</td>
-          <td>The game that remains after fast preferences have settled.</td>
-          <td>\(\Gamma_\ell^\star(E)\)</td>
-        </tr>
-        <tr>
-          <td>Nash set</td>
-          <td>The set of self-consistent mixed-strategy outcomes of a game.</td>
-          <td>\(NE(\Gamma)\)</td>
-        </tr>
-        <tr>
-          <td>Material value</td>
-          <td>The scalar material score assigned after an equilibrium is selected.</td>
-          <td>\(G_\ell(E)\)</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p>The contribution is not the claim that preferences are endogenous. That claim is familiar from habit formation, addiction, cultural transmission, advertising, identity, and indirect evolutionary preferences. The contribution is the timing in the fast-preference limit. In indirect evolutionary preference models, subjective preferences determine play and are then selected by material payoff over a slower evolutionary process. Here, holding the slow environment \(E\) and the closure law \(\ell\) constant during fast adjustment, subjective preferences first close under a fast law; material selection then operates on the closure laws, institutions, or transition rules that remain heterogeneous after closure.</p>
+    <p>The issue matters because some of the most visible social trends look like preferences moving away from old fitness and welfare anchors. Fertility has fallen across most OECD countries; the <a href="#ref-oecd">OECD</a> reports that the average total fertility rate fell from 3.3 children per woman in 1960 to 1.5 in 2022. <a href="#ref-ueda">Ueda et al. (2020)</a> find that sexual inactivity increased among young US adults from 2000 to 2018, especially among younger men. The <a href="#ref-surgeon-general">US Surgeon General's advisory</a> treats loneliness and isolation as major health risks. None of these facts has a single cause, and none should be reduced to a moral panic about technology. But together they raise a mathematical question: how can a society contain many sincere, utility-maximizing choices that do not reproduce the society, thicken friendship, or preserve health?</p>
 
     <div class="takeaway">
-      <strong>Running example.</strong> A social-feedback closure law can be subcritical or supercritical. Below the critical feedback threshold, exposure moves preferences continuously and reversibly. Above it, temporary exposure can select a persistent preference branch. This example will return after the general results as the paper's main worked closure law.
+      <strong>Core mechanism.</strong> A fast preference-formation environment can make locally attractive utility states that are not aligned with slower material, reproductive, health, or institutional objectives. The local utility is not fake. Local utility and long-run fitness are different objects, and modern preference technology can move the first faster than the second can discipline it.
     </div>
 
-    <p>For a fixed slow environment \(E\), Equation (1) summarizes the order of operations. Read it from left to right: choose a closure law \(\ell\) and a closure experiment \((q,\zeta)\); let preferences settle to \(C_\ell(E,q,\zeta)\); form the reduced subjective game \(\Gamma_{\ell,q,\zeta}^\star(E)\); compute its Nash equilibria; then evaluate the selected outcome by material value. In the unique-closure case, the dependence on \(q\) and \(\zeta\) is suppressed and the familiar notation \(\theta_\ell^\star(E)\), \(\Gamma_\ell^\star(E)\), and \(G_\ell(E)\) is used.</p>
+    <p>Fast preference change also creates a positive possibility. If preferences can be shaped quickly, then beneficial preference scaffolding is possible. AI could help people practice goals they endorse on reflection: sleep, exercise, friendship, craft, parenting readiness, sobriety, learning, reconciliation, or more honest romantic search. The danger is not preference change. The danger is preference change chosen by a proxy that rewards attention, dependency, status anxiety, or short-run comfort while ignoring the slower capacities people need to live well.</p>
+  </section>
 
-    <div class="equation">
-      <span class="label">Order Of Analysis</span>
-      \[
-        (\ell,q,\zeta)
-        \longmapsto
-        C_\ell(E,q,\zeta)
-        \longmapsto
-        \Gamma_{\ell,q,\zeta}^\star(E)
-        \longmapsto
-        NE\!\left(\Gamma_{\ell,q,\zeta}^\star(E)\right)
-        \longmapsto
-        G_{\ell,q,\zeta}(E).
-      \]
-    </div>
+  <section>
+    <h2>2. The Lens In Plain Language</h2>
+    <p>There are three layers. The first is <em>subjective utility</em>: what a person or player maximizes at the moment of choice. The second is <em>material value</em>: the outside criterion, such as health, reproduction, friendship, wealth, learning, or institutional continuity. The third is the <em>closure law</em>: the process that makes a person settle into one utility representation rather than another.</p>
 
-    <p class="small"><strong>Why this form.</strong> Equation (1) is not a behavioral law. It is an accounting order. It keeps five objects separate that are often collapsed: the rule that forms preferences, the preference state selected by that rule, the game induced by that state, the Nash set of that game, and the material evaluation of the selected outcome.</p>
+    <p>In an ordinary model, utility sits at the beginning. Here, utility sits in the middle. Something forms it. Then it guides choice. Then the consequences are evaluated.</p>
 
-    <p>With Equation (1) in mind, the result can be stated without suspense. Nash equilibrium remains the solution concept. What changes is the payoff table to which Nash equilibrium is applied. Material selection remains a method of comparison. What changes is the object being compared: once initial preference differences have been erased by fast closure, the remaining post-closure selection problem is over laws, institutions, or environments that still produce different games.</p>
-
-    <p class="table-title"><strong>What survives in the fast-preference limit.</strong></p>
+    <p class="table-title"><strong>The three objects that must be kept separate.</strong></p>
     <table>
       <thead>
         <tr>
           <th>Object</th>
-          <th>What survives</th>
-          <th>What changes</th>
+          <th>Question it answers</th>
+          <th>Examples</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Nash equilibrium</td>
-          <td>The fixed-point method.</td>
-          <td>The payoff table may be the branch-selected post-closure subjective game.</td>
+          <td>Subjective utility</td>
+          <td>What feels worth choosing now?</td>
+          <td>Scrolling, avoiding rejection, pursuing status, joining a trend, talking to an AI companion, investing in a relationship.</td>
         </tr>
         <tr>
-          <td>Material payoff</td>
-          <td>The external evaluator remains well defined.</td>
-          <td>It need not be what players maximize.</td>
+          <td>Material or fitness value</td>
+          <td>What makes the person, group, or institution persist?</td>
+          <td>Health, fertility, durable friendship, household formation, skill accumulation, trust, solvency, civic continuity.</td>
         </tr>
         <tr>
-          <td>Selection</td>
-          <td>Selection can still compare material consequences.</td>
-          <td>Under common closure, a rule that observes only post-closure play cannot distinguish initial states that induce the same reduced game.</td>
-        </tr>
-        <tr>
-          <td>Welfare</td>
-          <td>The analyst may impose a welfare criterion.</td>
-          <td>Final revealed preference is not by itself decisive when the process also produces final preference.</td>
+          <td>Closure law</td>
+          <td>What process makes the subjective utility settle where it does?</td>
+          <td>Social comparison, habit, recommender exposure, parental norms, peer status, AI coaching, AI companionship.</td>
         </tr>
       </tbody>
     </table>
 
-    <div class="takeaway">
-      <strong>Assumptions versus conclusions.</strong> The paper assumes a fast preference subsystem, a stated closure law, and separate subjective and material payoff objects. It does not assume that fast preference change is harmful. The conclusions are conditional: fast closure determines which subjective game is played; Nash invariance requires preservation of best responses; selection over initial tastes becomes weak when closure maps them to the same post-closure state; and social-feedback laws can be reversible or history-dependent depending on criticality.
+    <p>A person can be perfectly consistent after closure. Once the preference state has settled, choosing according to it is ordinary optimization. Nash equilibrium also remains ordinary: it is still a consistency condition on choices. What changes is the game to which Nash equilibrium is applied. The game is no longer built from fixed primitive utility. It is built from utility produced by the closure process.</p>
+
+    <p>In words, the finite-game results are:</p>
+    <ul>
+      <li><strong>Fast closure result:</strong> after fast preference adjustment, players optimize in the induced subjective game.</li>
+      <li><strong>Nash invariance result:</strong> the induced game is guaranteed to have the same Nash predictions as the material-payoff game under the strong sufficient condition that closure preserves every player's best responses.</li>
+      <li><strong>Selection result:</strong> if different initial tastes all close to the same final utility, selection over those initial tastes is weakened; analysis must then examine the closure laws, platforms, institutions, or environments that form tastes.</li>
+      <li><strong>Proxy result:</strong> preference shaping is harmful relative to a criterion. If the proxy choosing the closure law is aligned with the material evaluator, it can help. If it is misaligned, it can produce stable, sincerely wanted losses.</li>
+    </ul>
+
+    <p>The intellectual neighborhood is broad. <a href="#ref-stigler-becker">Stigler and Becker</a> showed how stable preferences can coexist with changing shadow prices, while <a href="#ref-becker-murphy">Becker and Murphy</a> model habit-like dynamics in rational addiction. <a href="#ref-bowles">Bowles</a>, <a href="#ref-bisin">Bisin and Verdier</a>, and <a href="#ref-bernheim-chosen">Bernheim et al.</a> study endogenous, transmitted, or chosen preferences. <a href="#ref-dekel">Dekel, Ely, and Yilankaya</a> ask which preferences survive evolutionary selection. Recommender-system work studies preference manipulation, feedback loops, algorithmic confounding, and engagement incentives (<a href="#ref-adomavicius">Adomavicius et al.</a>; <a href="#ref-jiang">Jiang et al.</a>; <a href="#ref-chaney">Chaney, Stewart, and Engelhardt</a>; <a href="#ref-kleinberg">Kleinberg, Mullainathan, and Raghavan</a>). The fast-limit question is narrower: when preference formation is much faster than the rest of the economy, what remains invariant, what must be studied as a selected object, and how can revealed utility diverge from a chosen material evaluator?</p>
+  </section>
+
+  <section>
+    <h2>3. Puzzles The Lens Clarifies</h2>
+    <p>No single model substitutes for empirical demography, sociology, psychology, or medicine. The recurring candidate pattern is a fitness wedge: a locally attractive preference state is produced by a fast environment and then persists even when it weakens a slower material criterion.</p>
+
+    <p class="table-title"><strong>Preference-fitness wedges in contemporary examples.</strong></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Puzzle</th>
+          <th>Fast closure mechanism</th>
+          <th>Possible material criterion weakened</th>
+          <th>Mechanism</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Low fertility</td>
+          <td>Status comparison, intensive parenting norms, career clocks, housing and education races.</td>
+          <td>Population replacement, kin networks, old-age support, institutional continuity.</td>
+          <td>Shows one mechanism by which childbearing can become locally dominated when population continuity is the evaluator.</td>
+        </tr>
+        <tr>
+          <td>Loneliness amid connection</td>
+          <td>Low-friction digital contact, avoidance of rejection, algorithmic entertainment, weakened offline practice.</td>
+          <td>Health, friendship, trust, resilience, civic association.</td>
+          <td>Separates momentary relief from the capacity to sustain embodied relationships.</td>
+        </tr>
+        <tr>
+          <td>Retreat from dating and sex</td>
+          <td>Digital substitutes, safety norms, pornography, games, dating-app discouragement, fear of reputational error.</td>
+          <td>Pair bonding, fertility, emotional development, household formation.</td>
+          <td>Shows how risk avoidance can be locally rational while reducing future opportunity and skill.</td>
+        </tr>
+        <tr>
+          <td>Status and appearance cascades</td>
+          <td>Lookmaxxing, cosmetic trends, influencer comparison, metrics that make rank salient.</td>
+          <td>Attention, self-respect, financial resources, mental health.</td>
+          <td>Models persistent branch selection: a temporary social shock can create a new stable taste state.</td>
+        </tr>
+        <tr>
+          <td>AI companions and assistants</td>
+          <td>Always-available empathy, memory, personalization, low rejection, behavioral coaching.</td>
+          <td>Can weaken or strengthen human relationships, self-regulation, and agency.</td>
+          <td>Identifies the design question: bridge to real capacities or replace them.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Low fertility is a clean example if population continuity is the evaluator. The <a href="#ref-oecd">OECD</a> emphasizes that fertility decisions depend on economic security, costs, norms, labor markets, family policy, and personal conditions. Work on family ideals and comparison motives argues that norms about parenting and parental status competition can push households toward higher investment per child and lower fertility (<a href="#ref-aassve">Aassve et al. 2024</a>; <a href="#ref-mahler">Mahler, Tertilt, and Yum 2025</a>). One candidate closure chain is: visible comparison raises the perceived standard of adequate parenting; another child becomes locally costly in utility; postponement or one-child choices become individually reasonable; from the standpoint of a population-continuity evaluator, replacement and kin-network density weaken; the new norm may then make the high-investment, low-fertility state easier to reproduce socially. This chain is testable; it is not asserted as the dominant empirical cause.</p>
+
+    <p>The loneliness puzzle has a different shape. Digital connection can provide comfort, entertainment, and community. It can also become a substitute for the awkward practice required to maintain human relationships. The <a href="#ref-surgeon-general">Surgeon General's advisory</a> defines social connection broadly, including the structure, function, and quality of relationships, and treats lacking connection as a serious health issue. One testable chain is: low-friction mediated contact reduces the immediate cost of solitude; solitary or semi-social routines become locally rewarding; offline practice may decay; future offline interaction becomes harder; the person may sincerely prefer the substitute even if health, friendship, and resilience decline. The empirical question is whether a digital or AI-mediated closure law builds human social capacity or closes preferences around less demanding substitutes.</p>
+
+    <p>The retreat from dating and sex is not just loneliness with different vocabulary. <a href="#ref-ueda">Ueda et al. (2020)</a> document a decline in sexual activity among young adults, but no single technology cause is required for the mechanism. Dating involves rejection risk, ambiguity, embodied timing, reputational fear, app-market discouragement, and imperfect feedback. If pornography, games, parasocial intimacy, or low-risk online interaction become safer substitutes, lower dating effort can be locally optimal. If that effort reduction then erodes confidence, meeting opportunities, and relationship skill, the fast utility of avoidance can become self-confirming.</p>
+
+    <div class="note warning">
+      <strong>Limits.</strong> Low fertility is not morally wrong by definition. No individual has a duty to reproduce inside this model. Online life is not bad by definition, and AI companions are not necessarily harmful. "Fitness" is a criterion chosen for an application. In fertility it may mean replacement; in loneliness it may mean health and social capacity; in institutions it may mean continuity. The narrower claim is that when preference formation is fast, revealed desire alone cannot settle the welfare or survival question.
     </div>
-
-    <p>The formal results follow this order. Lemma 1 gives the fast-closure reduction: after the short fast-adjustment period, the analyst solves the induced subjective game. Proposition 1 gives a sufficient condition under which the reduced subjective game and the material benchmark game have the same Nash set: every player has the same optimal responses under both payoff tables, for every possible mixed behavior of the other players. Proposition 2 shows how strict subjective and material maximizers can diverge after closure, and Example 1 gives a two-action construction in which the Nash set itself changes.</p>
-
-    <p>Theorem 1 introduces a closure-equivalence class, meaning a group of initial preference states that close to the same final utility representation. It says that a material selection rule observing only post-closure play cannot distinguish states inside such a class. Selection then moves to what still differs after closure: closure laws, institutions, or environments. Proposition 3 applies the same logic to platform rule choice: material loss follows from proxy/material misalignment on the feasible rule set, not from preference endogeneity alone.</p>
-
-    <p>The worked social-feedback section then specializes \(\ell\). It shows that a familiar logit/threshold closure law has a criticality boundary. Below the boundary, fast preference change is reversible comparative statics. Above it, temporary fashion or meme exposure can create persistent preferences and can lower a stated material evaluator.</p>
-
-    <p>The paper therefore separates three steps that are often collapsed: subjective equilibrium, material evaluation, and material selection. Fast preference closure changes the game sent into the equilibrium step; it does not by itself determine the material or welfare conclusion.</p>
-
-    <p>Recommender systems and AI-mediated environments are useful applications because they can choose exposure rules that affect future utility representations. They are not the paper's formal object. The formal claims are conditional comparative statics, not empirical claims about any particular platform or technology. The formal object is a finite normal-form game with a fast preference state, subjective payoffs, material payoffs, and selection over closure laws.</p>
   </section>
 
   <section>
-    <h2>2. Related Work</h2>
-    <p><strong>Stable preferences and endogenous preferences.</strong> The stable-preference benchmark is associated with the Stigler-Becker view that economists can often treat tastes as fixed and explain behavior through prices, incomes, constraints, and household production. A large endogenous-preference literature relaxes that benchmark through habit, addiction, culture, institutions, identity, chosen preferences, and adaptive utility. This paper does not claim that endogenous preferences are new. It studies a specific timing limit: preferences close quickly before the game is solved.</p>
+    <h2>4. AI As Risk And Repair</h2>
+    <p>AI can act as a personalized closure law. A recommender system chooses exposure. A companion system chooses tone, memory, empathy, and availability. A coaching system chooses prompts, reminders, and interpretations of a user's goals. These systems can shift what feels easy, meaningful, embarrassing, urgent, or rewarding.</p>
 
-    <p><strong>Indirect evolutionary preferences and two-speed dynamics.</strong> The paper is closest to indirect evolutionary preferences and two-speed dynamics. In that literature, subjective preferences determine behavior, while material payoffs determine which preferences survive. The present paper keeps the same subjective/material distinction but interposes a fast preference-closure stage before play and material selection. The limiting exercise is narrow: given a fast preference subsystem and a finite game, characterize the reduced game, the conditions for Nash-set invariance, and the objects on which selection can act after closure.</p>
+    <p>The negative case is familiar: optimize engagement, and the system may discover content or interaction styles that the user repeatedly chooses but later regrets. <a href="#ref-kleinberg">Kleinberg, Mullainathan, and Raghavan</a> formalize a related point: engagement can fail to track what users want when momentary choices are inconsistent with broader welfare. Recommender-system reviews and audits emphasize that recommendation can shape choices, concentration, diversity, and welfare (<a href="#ref-ai-recommendations">Calvano et al.</a>; <a href="#ref-jiang">Jiang et al.</a>; <a href="#ref-chaney">Chaney, Stewart, and Engelhardt</a>). In fast-closure terms, the system may be changing the utility representation that generates the next revealed preference.</p>
 
-    <p><strong>Social feedback, cascades, and influence.</strong> The social-feedback mechanism deliberately borrows established mathematics from bandwagon demand, conformity, threshold contagion, social interactions, information cascades, and influence diffusion. The contribution is not the claim that fashion or herding is new. The new object is their role as a map from a pre-choice environment to the utility representation used in a later game. A meme, influencer, or recommender shock enters as an input to the closure law; the resulting fixed point or selected branch becomes the utility representation used in that game.</p>
+    <p>The positive case is just as important. If AI can shape preferences, it can help make fast utilities more reflective relative to a specified evaluator. A well-designed AI system could make the long-run object more salient at the moment of choice. It could help a lonely person practice initiating real contact, help a student begin the next hour of work, help a patient act on a prior sleep goal instead of scrolling, help a couple de-escalate conflict, or help a prospective parent navigate fear without romanticizing hardship. Companion-AI research already frames the design fork: replacement and deskilling are risks, but systems can also be designed to support human relationships, social motivation, and social skill (<a href="#ref-ai-companions">Malfacini 2025</a>; <a href="#ref-hbs-ai">De Freitas et al. 2024</a>).</p>
 
-    <p><strong>Recommender systems and proxy objectives.</strong> The platform application connects to work on recommender systems, engagement objectives, and feedback loops. The paper does not estimate any real platform effect and does not assume that platform objectives are harmful. It asks which formal condition prevents harm: if the proxy used to choose closure laws is aligned with the material evaluator, proxy choice is materially harmless on the feasible set; if proxy and material rankings reverse on some pair of rules, there is a two-rule feasible set on which proxy choice selects a materially inferior closure law.</p>
+    <p class="table-title"><strong>Two AI closure designs.</strong></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Design target</th>
+          <th>Fast utility it creates</th>
+          <th>Likely long-run effect</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Engagement closure</td>
+          <td>"Stay here; this is easier, safer, more stimulating, and always responsive."</td>
+          <td>Can increase dependency, isolation, sleep loss, status anxiety, and opportunity decay.</td>
+        </tr>
+        <tr>
+          <td>Scaffolding closure</td>
+          <td>"Use this interaction to become more capable outside the system."</td>
+          <td>Can build social skill, health, learning, reflection, and durable agency.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>This is why the proxy-alignment result matters. A change in preference is not a loss by definition. A changed equilibrium is not a loss by definition. The material claim requires a proxy statement. If the system selects interactions because they increase watch time, dependency, or subscription retention, the induced preferences may drift away from health, friendship, or family formation. If the system selects interactions because they advance a specified material evaluator, the same fast-preference technology can improve that evaluator.</p>
+
+    <p>Operationally, the difference is measurable. A scaffolding design should treat off-platform action as success, measure capacity rather than retention, support user-endorsed long-run goals, reduce dependency on the system, and regard exit into human relationships or ordinary competence as a good outcome. The evaluator should be grounded in reflective endorsement, revisable consent, and observable capacity gains, not merely in a designer's moralized objective. Engagement closure treats the next session as success. Scaffolding closure treats the user's expanded life outside the system as success.</p>
+
+    <div class="takeaway">
+      <strong>Selection implication.</strong> When closure is very fast, selection pressure need not restore alignment by acting on initial tastes. The selection theorem shows that initial taste differences become hard to distinguish after common closure. The next question is therefore which environments, institutions, platforms, and AI systems repeatedly form tastes.
+    </div>
   </section>
 
   <section>
-    <h2>3. Model</h2>
-    <p>The model has four moving parts. First, there is a finite game: each player has a finite set of actions. Second, there is a fast preference state that determines the utility representation used for choice. Third, there is subjective utility, which players maximize. Fourth, there is material payoff, which is used for evaluation or selection. The point of the notation is to keep these objects separate.</p>
+    <h2>5. The Social-Feedback Mechanism</h2>
+    <p>The worked mechanism is social feedback. A taste becomes more attractive when it appears common, admired, safe, or high-status. This covers fashion in the ordinary sense, but also memes, body norms, ideological cascades, dating norms, parenting standards, and platform-mediated visibility. The mechanism connects to classic models of herd behavior, informational cascades, fashion cycles, threshold contagion, and social interactions (<a href="#ref-granovetter">Granovetter</a>; <a href="#ref-banerjee">Banerjee</a>; <a href="#ref-bikhchandani">Bikhchandani, Hirshleifer, and Welch</a>; <a href="#ref-pesendorfer">Pesendorfer</a>; <a href="#ref-brock-durlauf">Brock and Durlauf</a>; <a href="#ref-watts">Watts</a>).</p>
 
-    <p>Let \(N=\{1,\ldots,n\}\) be a finite set of players, \(A_i\) player \(i\)'s finite action set, and \(A=\prod_i A_i\) the set of pure action profiles. A pure action profile is \(a=(a_i)_{i\in N}\in A\). A mixed strategy is a probability distribution over actions: \(x_i\in\Delta(A_i)\). A mixed profile \(x\in X=\prod_i\Delta(A_i)\) records all players' mixed strategies. The slow environment is \(E\in\mathcal E\). The closure law is \(\ell\in\mathcal L\).</p>
+    <p>The mechanism has two regimes. Below a critical feedback threshold, exposure has a unique and reversible effect. A recommendation, influencer, or meme can move tastes, but when the shock disappears the preference state moves back. Above the threshold, the same kind of temporary exposure can move the system to a different stable branch. At that point the shock no longer needs to remain present. History has selected a new preference state.</p>
 
-    <p>Player \(i\)'s subjective utility is \(U_i(a;\theta_i,E,\ell)\), where \(\theta_i\in\Theta_i\) is player \(i\)'s preference state. Player \(i\)'s material payoff is \(\pi_i(a;E,\ell)\). Equation (2) displays the two payoff objects side by side. The material payoff need not equal the subjective utility representation. The notation allows \(\ell\) to enter material payoff directly, for example if an institution changes costs or information as well as preferences; in applications where the law affects material outcomes only through behavior, the direct \(\ell\)-argument can be suppressed.</p>
+    <p>This avoids an unhelpful binary. Many preference changes are ordinary learning or exploration. Some are persistent branch changes. The empirical question is which regime a given domain is in. Does exposure merely inform? Does it temporarily nudge? Or does it help select a new self-reinforcing taste equilibrium?</p>
+
+    <p>The same feedback field looks different across applications. Parenting standards can be the field in fertility, perceived rejection and status can be the field in dating, body norms can be the field in appearance cascades, and responsiveness cues can be the field in AI companionship. The empirical evaluator is supplied domain by domain.</p>
+  </section>
+
+  <section>
+    <h2>6. Computational Audits</h2>
+    <p>The computations are mechanism audits, not empirical estimates. They check whether the formal conditions are knife-edge or visible in simple simulations. Two results matter.</p>
+
+    <p>First, social feedback can turn a temporary exposure shock into a persistent preference state. In the mean-field example below, the shock does not need to remain present. It moves the system across a fold; once the system is in the high branch's basin, removing the shock does not restore the old taste state.</p>
+
+    <figure>
+      <img src="../results/figures/fashion_mean_field_hysteresis.svg" alt="Mean-field hysteresis">
+      <figcaption>Stable and unstable closure branches for the mean-field social-feedback model, with \(\beta=2.0\), \(J=0.8\), and baseline field \(h=-0.08\). A positive shock moves the path from the low branch to the high branch. Removing the shock leaves the system in the high branch's basin; the low branch still exists mathematically inside the hysteresis window, but this path does not return to it without another perturbation.</figcaption>
+    </figure>
+
+    <p>Second, the finite-game audit separates three questions that are often blurred. Fast closure can change Nash predictions; that change can be strategically irrelevant or material; and material loss depends on the proxy selecting the closure law. Random strategic closure often changes the reduced game, while a noisy but approximately aligned proxy produces much less material loss than independent or misaligned proxy choice.</p>
+
+    <figure>
+      <img src="../results/figures/model_selection_fast_closure_audit.svg" alt="Finite-game stress test bar chart">
+      <figcaption>Finite-game stress test. The neutral route has zero selected-outcome shift, while random strategic closure often changes the reduced game. Proxy-choice material loss in this audit is small under a noisy approximately aligned proxy and large under independent or misaligned proxies. Best-response preservation is reported in Appendix C.</figcaption>
+    </figure>
+
+    <p>The detailed tables, network multiplier audit, random-parameter audit, and sensitivity checks are collected in Appendix C. Fast utility can be perfectly coherent as utility and still fail a material evaluator; whether it does so depends on the closure law and the proxy that selects it.</p>
+  </section>
+
+  <section>
+    <h2>7. What To Measure</h2>
+    <p>The empirical tests are speed, alignment, and reversibility.</p>
+
+    <p>Do not force fast closure onto every domain. If preferences move slowly relative to the economic choice, reverse after exposure, or are shaped by a proxy aligned with the material evaluator, standard preference-as-given analysis may be adequate. Fast closure matters most when those checks fail.</p>
+
+    <p>The first research design is a speed test. If exposure changes stated values, attention, search, or habits only slowly, ordinary preference-as-given analysis may be adequate. If the movement occurs over days, weeks, or a few interaction cycles, the closure law itself becomes an economic object. Randomized exposure, platform rollouts, sudden recommendation changes, local outages, and cohort timing can all help estimate whether preferences move on the fast side of the relevant economic decision.</p>
+
+    <p>The second design is a reversibility test. A nudge that disappears when exposure disappears is different from a branch change that persists after the shock ends. Post-shock follow-up is therefore not a secondary detail; it is the key test of hysteresis. The same logic applies to AI companions or coaching systems: does the interaction leave the user more able to act outside the system, or more dependent on the system for the action to occur?</p>
+
+    <p>The third design is a proxy audit. For recommender systems and AI products, the empirical question is not only what users click, but what objective selected the experience that formed the next preference. Engagement, retention, stated satisfaction, reflected goals, health, friendship, and skill accumulation can point in different directions. The model suggests looking for preference-fitness wedges where these proxies disagree.</p>
+
+    <p class="table-title"><strong>Diagnostics suggested by the model.</strong></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Diagnostic</th>
+          <th>Empirical question</th>
+          <th>Why it matters</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Preference speed</td>
+          <td>How quickly do stated values, attention, habits, and social norms move after exposure?</td>
+          <td>Fast movement makes closure analysis relevant.</td>
+        </tr>
+        <tr>
+          <td>Proxy alignment</td>
+          <td>Does the system optimize engagement, retention, stated satisfaction, reflected goals, health, or social capacity?</td>
+          <td>Preference change is harmful only relative to a criterion.</td>
+        </tr>
+        <tr>
+          <td>Substitution versus complementarity</td>
+          <td>Does digital or AI interaction replace human relationships or help people form them?</td>
+          <td>The same AI companion can be a bridge or a sink.</td>
+        </tr>
+        <tr>
+          <td>Hysteresis</td>
+          <td>After a shock ends, do preferences return, or does a new branch persist?</td>
+          <td>Persistent branch changes require different policy tools than reversible nudges.</td>
+        </tr>
+        <tr>
+          <td>Capacity effects</td>
+          <td>Does the closure law build skills and opportunities, or erode them?</td>
+          <td>Fitness often depends on capacities, not just current choices.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>8. Conclusion</h2>
+    <p>People can be sincere, consistent, and locally utility-maximizing while the preference-formation environment moves utility away from slower survival and welfare criteria. That possibility is not a refutation of economics. It moves one object: utility is no longer only a primitive; it is also an endogenous state.</p>
+
+    <p>The result is not anti-technology. A system that shapes preferences can be destructive, neutral, or beneficial. It depends on the closure law and the proxy selecting it. AI may make the problem sharper because it can personalize preference formation in real time. It may also make the solution sharper because it can help people practice the goals they endorse outside the immediate choice moment.</p>
+
+    <p>The discipline is separation. Do not confuse subjective utility with material value. Do not confuse Nash equilibrium with welfare. Do not confuse preference change with harm. Do not confuse revealed preference with a primitive when the environment has just helped produce it. The diagnostic question is whether a case is ordinary choice under fixed preferences, reversible influence, persistent closure, or proxy-selected preference formation.</p>
+  </section>
+
+  <section>
+    <h2>Appendix A. Formal Model And General Results</h2>
+    <h3>A.1 Primitives</h3>
+    <p>There is a finite set of players \(N=\{1,\ldots,n\}\). Player \(i\) has a finite action set \(A_i\), and \(A=\prod_i A_i\). The slow economic environment is \(E\). A closure law is denoted by \(\ell\). Player \(i\)'s subjective utility is \(U_i(a;\theta_i,E,\ell)\), where \(\theta_i\) is the preference state used for choice. The material payoff or evaluator is \(\pi_i(a;E,\ell)\). The two payoff objects may coincide, but the model does not assume they do.</p>
 
     <div class="equation">
-      <span class="label">Payoff Objects</span>
+      <span class="label">Subjective And Material Payoffs</span>
       \[
-        U_i(a;\theta_i,E,\ell)
-        \quad\text{and}\quad
+        U_i(a;\theta_i,E,\ell),
+        \qquad
         \pi_i(a;E,\ell).
       \]
     </div>
 
-    <p class="small"><strong>Why this form.</strong> The side-by-side notation is the minimal way to keep choice and evaluation separate. \(U_i\) is the representation player \(i\) maximizes; \(\pi_i\) is the material criterion used by the analyst or selection process. They may coincide, but the model does not build that equality in.</p>
-
-    <p>The preference state follows a fast dynamic. The function \(H\) is the fast adjustment rule, or vector field. The optional input \(\zeta\) records fast-clock exposure or transition inputs, such as a temporary social-media shock; if there is no such input, suppress \(\zeta\). A zero of \(H\) is a fixed point of the preference process. The dot in \(\dot\theta\) denotes a time derivative, and the parameter \(T_\theta\) is the preference-adjustment timescale. Sending \(T_\theta\to 0\) means that preferences settle before the slower variables move. With \(\theta=(\theta_1,\ldots,\theta_n)\), Equation (3) writes the fast law:</p>
+    <p>The preference state follows a fast dynamic. The dot denotes a derivative with respect to ordinary time, \(T_\theta>0\) is the preference-adjustment timescale, \(H\) is the fast vector field, and \(\zeta\) is a fast exposure or transition input.</p>
 
     <div class="equation">
       <span class="label">Fast Preference Dynamics</span>
       \[
-        T_\theta \dot{\theta}
-        =
-        H(\theta;E,\ell,\zeta).
+        T_\theta \dot{\theta}=H(\theta;E,\ell,\zeta).
       \]
     </div>
 
-    <p class="small"><strong>Why this form.</strong> The equation is deliberately general. Writing the timescale as \(T_\theta\dot\theta\) makes the fast-limit exercise explicit: as \(T_\theta\) becomes small, the preference state moves quickly relative to the slow economic state. The vector field \(H\) is left abstract so the finite-game results do not depend on a particular psychological or social mechanism.</p>
-
-    <p>The maintained fast-adjustment assumption is fixed-state closure. During the fast adjustment, \(E\) and \(\ell\) are held fixed; \(\zeta\) is either fixed or specified as the fast input path for the closure experiment. Let \(q\) denote the initial preference state at the start of the fast adjustment. When the fast limit exists, the closure map \(C_\ell(E,q,\zeta)\) records the selected post-adjustment preference state. The common unique-closure case is the special case in which the closure map is independent of \(q\) and \(\zeta\); then it can be written as the branch \(\theta_\ell^\star(E)\). Equation (4) records both objects.</p>
+    <p>During the fast adjustment, \(E\) and \(\ell\) are held fixed; \(\zeta\) is either fixed or specified as the fast input path. Let \(q\) be the initial preference state. The closure map is the selected post-adjustment preference state.</p>
 
     <div class="equation">
       <span class="label">Closure Map And Unique Branch</span>
       \[
       \begin{aligned}
         C_\ell(E,q,\zeta)
-        &=
+        &amp;=
         \lim_{s\to\infty}\theta(s;q,E,\ell,\zeta),\\
         \theta_\ell^\star(E)
-        &=
+        &amp;=
         C_\ell(E,q,\zeta)
         \quad
         \text{for all relevant }(q,\zeta)
-        \text{ under unique closure.}
+        \quad
+        \text{in the unique-closure case.}
       \end{aligned}
       \]
     </div>
 
-    <p class="small"><strong>Why this form.</strong> The map \(C_\ell\) is written as a fast-time limit because it must allow both clean unique convergence and path-dependent branch selection. The initial state \(q\) and input \(\zeta\) are included precisely so later hysteresis examples are not forced into the unique-closure notation.</p>
-
-    <p>The formal results in Sections 4 through 7 are stated in the unique-closure notation because that is the clean benchmark. The branch-selected notation matters when the fast process has multiple stable fixed points, as in the social-feedback model in Section 8. A moving-slow-state model would require additional tracking assumptions; Appendix A.1 records that possible extension, but no result in the paper depends on it.</p>
-
-    <div class="equation">
-      <span class="label">Unique Closure Fixed Point</span>
-      \[
-        H(\theta_\ell^\star(E);E,\ell,\zeta)=0,
-        \qquad
-        \theta(t)\to\theta_\ell^\star(E)
-        \ \text{on the fast clock.}
-      \]
-    </div>
-
-    <p class="small"><strong>Why this form.</strong> A zero of \(H\) is a stationary preference state. The convergence clause adds stability: the branch is not merely a mathematical solution of \(H=0\), but the state reached by the fast adjustment from the relevant initial conditions.</p>
-
-    <p>The notation \(\theta_{i,\ell}^\star(E)\) means player \(i\)'s component of the unique settled preference vector \(\theta_\ell^\star(E)\). More generally, \(C_{i,\ell}(E,q,\zeta)\) is player \(i\)'s component of the branch-selected closure map. The reduced subjective game is the ordinary finite game obtained after replacing the pre-adjustment preference state by the post-closure state. Equation (6) defines the branch-selected version and then the unique-closure abbreviation used in the main theorems:</p>
+    <p>Write \(C_{i,\ell}(E,q,\zeta)\) for player \(i\)'s component of \(C_\ell(E,q,\zeta)\). The reduced subjective game is the finite game obtained after substituting the post-closure preference state into subjective utility.</p>
 
     <div class="equation">
       <span class="label">Reduced Subjective Game</span>
       \[
-      \begin{aligned}
         \Gamma_{\ell,q,\zeta}^\star(E)
-        &=
-        \Bigl(N,\{A_i\}_{i\in N},
-        \{\,U_i(\cdot;C_{i,\ell}(E,q,\zeta),E,\ell)\,\}_{i\in N}\Bigr),\\
-        \Gamma_\ell^\star(E)
-        &=
-        \Bigl(N,\{A_i\}_{i\in N},
-        \{\,U_i(\cdot;\theta_{i,\ell}^\star(E),E,\ell)\,\}_{i\in N}\Bigr).
-      \end{aligned}
-      \]
-    </div>
-
-    <p class="small"><strong>Why this form.</strong> This is the standard normal-form game object after substituting post-closure preferences into utility. The branch-selected version is the general object; the shorter \(\Gamma_\ell^\star(E)\) is used when the closure branch is unique and independent of \(q\) and \(\zeta\).</p>
-
-    <p>Equation (7) defines the material benchmark game. It has the same players and actions as Equation (6), but it uses material payoffs instead of subjective utility:</p>
-
-    <div class="equation">
-      <span class="label">Material Benchmark Game</span>
-      \[
-        \Gamma_\ell^\pi(E)
         =
-        \Bigl(N,\{A_i\}_{i\in N},
-        \{\,\pi_i(\cdot;E,\ell)\,\}_{i\in N}\Bigr).
+        \left(N,(A_i)_{i\in N},
+        \left(U_i(\cdot;C_{i,\ell}(E,q,\zeta),E,\ell)\right)_{i\in N}\right).
       \]
     </div>
 
-    <p class="small"><strong>Why this form.</strong> The benchmark keeps the strategic environment fixed and changes only the payoff table used for evaluation. That isolation is useful: any difference between \(\Gamma_\ell^\star(E)\) and \(\Gamma_\ell^\pi(E)\) comes from subjective/material payoff divergence, not from changing the set of players or actions.</p>
-
-    <p>For any game \(\Gamma\), write \(NE(\Gamma)\) for its Nash set, the set of self-consistent mixed-strategy profiles. Some results compare sets of equilibria and do not need a single selected outcome. When a scalar material comparison is needed, fix an equilibrium-selection rule \(\sigma_\ell(E)\in NE(\Gamma_\ell^\star(E))\) and a material evaluator \(M:X\times\mathcal E\times\mathcal L\to\mathbb R\). Equation (8) defines the scalar material value:</p>
-
-    <div class="equation">
-      <span class="label">Scalar Material Evaluation</span>
-      \[
-        G_\ell(E)
-        =
-        M\!\left(\sigma_\ell(E),E,\ell\right).
-      \]
-    </div>
-
-    <p class="small"><strong>Why this form.</strong> Nash equilibria can be set-valued, so scalar comparisons need two extra ingredients: a selection rule \(\sigma_\ell\) and a material evaluator \(M\). The paper keeps them explicit to avoid hiding welfare or survival assumptions inside the equilibrium concept.</p>
-
-    <p>Set-valued equilibrium statements below do not depend on \(\sigma\). Scalar material comparisons do.</p>
-  </section>
-
-  <section>
-    <h2>4. Fast Closure And Reduced Games</h2>
-    <p>This section performs the first reduction. If the preference state reaches a unique attracting branch before play is analyzed, the analyst can replace the pre-adjustment preference state with the post-closure utility representation and solve the resulting subjective game.</p>
+    <p>In the unique-closure benchmark, \(\Gamma_\ell^\star(E)\) is shorthand for the same reduced subjective game with \(C_{i,\ell}(E,q,\zeta)=\theta_{i,\ell}^\star(E)\) for every player and every relevant initial state.</p>
 
     <div class="theorem" data-kind="Lemma">
       <span class="theorem-title">Fast Closure With The Slow Environment Held Constant</span>
-      <p>Fix \(E\), \(\ell\), and the relevant input \(\zeta\). In the unique-closure benchmark, suppose \(T_\theta\dot{\theta}=H(\theta;E,\ell,\zeta)\) has a unique globally attracting fixed point \(\theta_\ell^\star(E)\) on the relevant input class. Then, after the fast preference adjustment and in the limit \(T_\theta\to 0\), equilibrium analysis at \((E,\ell)\) is represented by the reduced subjective game \(\Gamma_\ell^\star(E)\). More generally, if the fast limit from initial state \(q\) exists and equals \(C_\ell(E,q,\zeta)\), then equilibrium analysis for that closure experiment is represented by \(\Gamma_{\ell,q,\zeta}^\star(E)\). The preference state is not an independent slow primitive at that point; it is the induced closure object.</p>
+      <p>Fix \(E\), \(\ell\), and the relevant input \(\zeta\). In the unique-closure benchmark, suppose the fast preference dynamic has a unique globally attracting fixed point \(\theta_\ell^\star(E)\) on the relevant input class. Then, after the fast preference adjustment and in the limit \(T_\theta\to0\), equilibrium analysis at \((E,\ell)\) is represented by the reduced subjective game \(\Gamma_\ell^\star(E)\). More generally, if the fast limit from initial state \(q\) exists and equals \(C_\ell(E,q,\zeta)\), equilibrium analysis for that closure experiment is represented by \(\Gamma_{\ell,q,\zeta}^\star(E)\).</p>
     </div>
 
-    <p class="proof"><strong>Proof.</strong> See Appendix A.2. The point is that the fast-adjustment limit replaces the pre-adjustment preference state by the attracting branch, or selected branch, before equilibrium is computed.</p>
+    <p class="proof"><strong>Proof.</strong> On the fast time \(s=t/T_\theta\), the preference subsystem is \(d\theta/ds=H(\theta;E,\ell,\zeta)\). Under unique closure, every initial state in the relevant basin converges to \(\theta_\ell^\star(E)\). Thus the payoff table used for play converges pointwise to \(U_i(\cdot;\theta_{i,\ell}^\star(E),E,\ell)\) for every player. Because action sets are finite, the limiting finite game is well defined. The branch-selected case is identical with \(C_\ell(E,q,\zeta)\) replacing \(\theta_\ell^\star(E)\).</p>
 
-    <div class="takeaway">
-      <strong>What this says.</strong> Once fast adjustment is complete, the analyst can stop tracking the initial preference state and solve the game generated by the attracting post-closure state. The lemma does not say whether that game is good or bad; it says which game is being played.
-    </div>
-  </section>
+    <h3>A.2 Nash Invariance</h3>
+    <p>Let \(X_i=\Delta(A_i)\) be player \(i\)'s mixed-strategy simplex and \(X=\prod_iX_i\). For \(x=(x_i,x_{-i})\), write \(x(a)=\prod_jx_j(a_j)\). The expected subjective and material payoffs are:</p>
 
-  <section>
-    <h2>5. Nash Invariance And Non-Invariance</h2>
-    <p>Nash equilibrium is not a welfare claim. It is a consistency condition on players' choices: each player is optimizing against the others. In this paper, Nash equilibrium is computed in the reduced subjective game because subjective utility is what players maximize. The open question is whether that subjective equilibrium prediction agrees with the material-payoff benchmark. A selection-robust sufficient condition is that fast closure leaves every player's mixed best responses unchanged.</p>
-
-    <p>Let \(X_{-i}=\prod_{j\ne i}\Delta(A_j)\). For \(x=(x_i,x_{-i})\), write \(x(a)=\prod_j x_j(a_j)\). Expected subjective and material payoffs are:</p>
+    <p>For compact notation, this subsection writes the unique-closure case using \(\theta_{i,\ell}^\star(E)\). In a branch-selected experiment, replace \(\theta_{i,\ell}^\star(E)\) everywhere by the realized closure component \(C_{i,\ell}(E,q,\zeta)\). The best-response argument is unchanged once the realized reduced game is fixed.</p>
 
     <div class="equation">
       <span class="label">Expected Payoffs</span>
       \[
       \begin{aligned}
         \bar U_{i,\ell}(x_i,x_{-i};E)
-        &=
+        &amp;=
         \sum_{a\in A}x(a)\,
         U_i(a;\theta_{i,\ell}^\star(E),E,\ell),\\
         \bar\pi_{i,\ell}(x_i,x_{-i};E)
-        &=
-        \sum_{a\in A}x(a)\,
-        \pi_i(a;E,\ell).
+        &amp;=
+        \sum_{a\in A}x(a)\,\pi_i(a;E,\ell).
       \end{aligned}
       \]
     </div>
 
-    <p class="small"><strong>Why this form.</strong> Expected payoff is written by summing over pure action profiles and weighting each profile by its mixed-strategy probability \(x(a)\). This is the standard finite-game extension from pure payoffs to mixed strategies, and it is needed because Nash equilibrium may be mixed.</p>
-
-    <p>A best response is any strategy that maximizes payoff against the opponents' mixed profile. It is called a correspondence rather than a function because ties can produce several best responses. The corresponding mixed best-response correspondences are:</p>
+    <p>The material benchmark game uses the same players and actions, but evaluates play by \(\pi_i\) rather than post-closure subjective utility. For any finite game \(\Gamma\), let \(NE(\Gamma)\) denote its mixed Nash equilibrium set.</p>
 
     <div class="equation">
-      <span class="label">Best Responses</span>
+      <span class="label">Material Benchmark Game</span>
+      \[
+        \Gamma_\ell^\pi(E)
+        =
+        \left(N,(A_i)_{i\in N},
+        \left(\pi_i(\cdot;E,\ell)\right)_{i\in N}\right).
+      \]
+    </div>
+
+    <p>Define subjective and material best-response correspondences by maximizing these expected payoffs over \(X_i\).</p>
+
+    <div class="equation">
+      <span class="label">Best-Response Correspondences</span>
       \[
       \begin{aligned}
         BR_{i,\ell}^\star(x_{-i};E)
-        &=
-        \arg\max_{x_i\in\Delta(A_i)}
+        &amp;=
+        \arg\max_{x_i\in X_i}
         \bar U_{i,\ell}(x_i,x_{-i};E),\\
         BR_{i,\ell}^\pi(x_{-i};E)
-        &=
-        \arg\max_{x_i\in\Delta(A_i)}
+        &amp;=
+        \arg\max_{x_i\in X_i}
         \bar\pi_{i,\ell}(x_i,x_{-i};E).
       \end{aligned}
       \]
     </div>
 
-    <p class="small"><strong>Why this form.</strong> The \(\arg\max\) form is the definition of optimal response. The comparison must range over all mixed opponent profiles \(x_{-i}\), not only pure profiles, because equality of Nash sets in mixed games is governed by mixed best-response correspondences.</p>
-
     <div class="theorem" data-kind="Proposition">
       <span class="theorem-title">Mixed Best-Response Invariance</span>
-      <p>If \(BR_{i,\ell}^\star(x_{-i};E)=BR_{i,\ell}^\pi(x_{-i};E)\) for every player \(i\) and every mixed opponent profile \(x_{-i}\in X_{-i}\), then \(NE(\Gamma_\ell^\star(E))=NE(\Gamma_\ell^\pi(E))\). For one fixed game, the condition is sufficient but not necessary.</p>
+      <p>If \(BR_{i,\ell}^\star(x_{-i};E)=BR_{i,\ell}^\pi(x_{-i};E)\) for every player \(i\) and every mixed opponent profile \(x_{-i}\in X_{-i}\), then the subjective reduced game and the material benchmark game have the same mixed Nash equilibrium set. For a fixed game, the condition is sufficient but not necessary.</p>
     </div>
 
-    <p class="proof"><strong>Proof.</strong> See Appendix A.3. Equality of all mixed best-response correspondences gives equality of their fixed-point sets.</p>
-
-    <div class="takeaway">
-      <strong>Plain implication.</strong> If fast closure only relabels utility without changing what any player wants to do against any mixed opponent profile, then the subjective and material games have the same Nash equilibria. This is the clean case in which endogenous utility does not change strategic prediction.
-    </div>
+    <p class="proof"><strong>Proof.</strong> A mixed Nash equilibrium is exactly a fixed point of the players' best-response correspondences. If every player's subjective and material best-response correspondences are equal at every opponent mixed profile, the two fixed-point sets are identical.</p>
 
     <div class="theorem" data-kind="Corollary">
       <span class="theorem-title">Strategically Irrelevant Closure</span>
-      <p>Suppose that for every player \(i\) there exist \(\beta_i>0\) and \(\alpha_i(a_{-i};E,\ell)\), independent of \(a_i\), such that:</p>
+      <p>Suppose that for every player \(i\) there exist \(\beta_i>0\) and \(\alpha_i(a_{-i};E,\ell)\), independent of \(a_i\), such that</p>
       <div class="equation">
         <span class="label">Opponent-Only Transformation</span>
         \[
@@ -760,253 +736,111 @@
           =
           \alpha_i(a_{-i};E,\ell)
           +
-          \beta_i\,\pi_i(a_i,a_{-i};E,\ell).
+          \beta_i\pi_i(a_i,a_{-i};E,\ell).
         \]
       </div>
-      <p class="small"><strong>Why this form.</strong> This is the familiar positive affine transformation that preserves a player's own action ranking, except that the additive term may depend on the opponent's action. Because that additive term is independent of \(a_i\), it drops out of player \(i\)'s best-response problem.</p>
-      <p>Then \(NE(\Gamma_\ell^\star(E))=NE(\Gamma_\ell^\pi(E))\).</p>
+      <p>Then the subjective and material mixed Nash sets coincide.</p>
     </div>
 
-    <p class="proof"><strong>Proof.</strong> For fixed \(x_{-i}\), the expected \(\alpha_i\) term is constant in \(x_i\). Multiplication by \(\beta_i>0\) preserves the argmax over \(x_i\). Hence subjective and material best-response correspondences coincide for every \(x_{-i}\), and Proposition 1 applies.</p>
+    <p class="proof"><strong>Proof.</strong> For fixed \(x_{-i}\), the expected \(\alpha_i\) term is constant in \(x_i\). Multiplication by \(\beta_i>0\) preserves the ordering of all own mixed strategies. Therefore subjective and material best responses coincide everywhere, and Proposition 1 applies.</p>
 
     <div class="theorem" data-kind="Proposition">
       <span class="theorem-title">Best-Response Non-Invariance Test</span>
-      <p>Suppose that for some player \(i\), actions \(a_i,b_i\in A_i\), and opponent mixed profile \(x_{-i}\), action \(a_i\) is the unique material best response and action \(b_i\ne a_i\) is the unique subjective best response:</p>
-      <div class="equation">
-        <span class="label">Strict Maximizer Reversal</span>
-        \[
-          \begin{aligned}
-          \{a_i\}
-          &=
-          BR_{i,\ell}^\pi(x_{-i};E),\\
-          \{b_i\}
-          &=
-          BR_{i,\ell}^\star(x_{-i};E).
-          \end{aligned}
-        \]
-      </div>
-      <p class="small"><strong>Why this form.</strong> The strict singleton condition is a diagnostic for a genuine ranking reversal. It rules out ambiguity from ties: at the same opponent profile, subjective utility and material payoff point to different unique actions.</p>
-      <p>Then \(BR_{i,\ell}^\star(x_{-i};E)\ne BR_{i,\ell}^\pi(x_{-i};E)\). Hence the mixed best-response correspondence invariance condition in Proposition 1 fails. Nash sets may still coincide in special games; the proposition identifies failure of the strong invariance test, not a necessary-and-sufficient Nash-set separation. In a two-action choice set this condition is equivalent to a strict subjective/material ranking reversal between the two actions.</p>
+      <p>If for some player \(i\), actions \(a_i,b_i\), and opponent mixed profile \(x_{-i}\), action \(a_i\) is the unique material best response while \(b_i\ne a_i\) is the unique subjective best response, then mixed best-response invariance fails. Nash sets may still coincide in special games, but the strong invariance test fails.</p>
     </div>
 
-    <p class="proof"><strong>Proof.</strong> See Appendix A.5. The two correspondences are distinct singleton sets at the same mixed opponent profile.</p>
-
-    <div class="takeaway">
-      <strong>Plain implication.</strong> If closure makes a player strictly prefer a different action than material payoff would recommend at the same opponent profile, the strong invariance test fails. The proposition does not claim every such failure changes the Nash set; Example 1 shows a minimal case where it does.
-    </div>
+    <p class="proof"><strong>Proof.</strong> At the same opponent mixed profile, the two best-response correspondences are distinct singleton sets.</p>
 
     <div class="theorem" data-kind="Example">
       <span class="theorem-title">A Two-Action Nash-Set Change</span>
-      <p>Let two players each choose \(A\) or \(B\). For both players and every opponent action, let material payoff satisfy:</p>
-      <div class="equation">
-        <span class="label">Material Dominance</span>
-        \[
-          \pi_i(A,a_{-i};E,\ell)=1,
-          \qquad
-          \pi_i(B,a_{-i};E,\ell)=0 .
-        \]
-      </div>
-      <p class="small"><strong>Why this form.</strong> The example uses strict material dominance to remove strategic distractions. If \(A\) materially dominates regardless of what the opponent does, the material benchmark has the clean equilibrium \((A,A)\).</p>
-      <p>The material benchmark game has the unique Nash equilibrium \((A,A)\). Suppose the closure-law family contains a law \(\ell\) whose attracting branch induces the subjective representation:</p>
-      <div class="equation">
-        <span class="label">Post-Closure Subjective Dominance</span>
-        \[
-          U_i(A,a_{-i};\theta_{i,\ell}^\star(E),E,\ell)=0,
-          \qquad
-          U_i(B,a_{-i};\theta_{i,\ell}^\star(E),E,\ell)=1 .
-        \]
-      </div>
-      <p class="small"><strong>Why this form.</strong> The subjective table reverses the material dominance relation as starkly as possible. That makes the example a minimal proof of possibility: fast closure alone can change the game being solved.</p>
-      <p>Then \(B\) is strictly dominant in the reduced subjective game, so \(NE(\Gamma_\ell^\star(E))=\{(B,B)\}\), while \(NE(\Gamma_\ell^\pi(E))=\{(A,A)\}\). The example is deliberately minimal: no equilibrium-selection issue is needed for fast closure to change the Nash set.</p>
+      <p>Let two players each choose \(A\) or \(B\). For both players and every opponent action, material payoff satisfies \(\pi_i(A,a_{-i})=1\) and \(\pi_i(B,a_{-i})=0\). Subjective post-closure payoff reverses the ranking: \(U_i(A,a_{-i})=0\) and \(U_i(B,a_{-i})=1\). Then \((A,A)\) is the unique material Nash equilibrium and \((B,B)\) is the unique subjective Nash equilibrium.</p>
     </div>
-  </section>
 
-  <section>
-    <h2>6. Selection After Closure</h2>
-    <p>Selection means a rule that compares outcomes by their material consequences and favors some types, laws, or institutions over others. In the usual indirect-evolutionary picture, material payoff can select among preference types. The fast limit changes that target. If fast closure sends different initial preference states to the same post-closure utility representation, those initial differences no longer show up in play. A selection rule that observes only the reduced game and its material consequences has nothing left to select among inside that collapsed class.</p>
+    <h3>A.3 Selection And Proxy Choice</h3>
+    <p>Two initial preference states are closure-equivalent at \((E,\ell,\zeta)\) if they induce the same closed preference state.</p>
 
-    <p>Fix the relevant closure input \(\zeta\). Let \(Q_\ell\) be a set of initial preference states associated with closure law \(\ell\), and let \(C_\ell(E,q,\zeta)\) denote the post-closure preference state reached from initial state \(q\in Q_\ell\). Under unique closure, \(C_\ell(E,q,\zeta)=\theta_\ell^\star(E)\) for all \(q\in Q_\ell\) and all relevant \(\zeta\).</p>
+    <div class="equation">
+      <span class="label">Closure Equivalence</span>
+      \[
+        q\sim_{E,\ell,\zeta}q'
+        \quad\Longleftrightarrow\quad
+        C_\ell(E,q,\zeta)=C_\ell(E,q',\zeta).
+      \]
+    </div>
 
-    <p>For an initial state \(q\), write \(\Gamma_\ell^\star(E;q,\zeta)\) for the reduced subjective game obtained from the post-closure state \(C_\ell(E,q,\zeta)\). Under common unique closure, \(\Gamma_\ell^\star(E;q,\zeta)=\Gamma_\ell^\star(E)\) for every \(q\in Q_\ell\). Define an equivalence relation \(q\sim_{E,\ell,\zeta} q'\) if \(C_\ell(E,q,\zeta)=C_\ell(E,q',\zeta)\). Initial states in the same equivalence class induce the same reduced subjective game.</p>
+    <p>An admissible post-closure selection rule observes an initial preference state only through the reduced subjective game, the selected Nash set, the material evaluator, and the slow environment. Formally, write:</p>
 
-    <p>A material selection rule is <em>post-closure admissible</em> if it depends on the initial state \(q\) only through the reduced game, selected post-closure play, and the material evaluator. Equivalently, it can be written as \(S(q;E,\ell,\zeta)=\Phi(\Gamma_\ell^\star(E;q,\zeta),E,\ell)\), or, after specifying an equilibrium-selection rule, as \(S(q;E,\ell,\zeta)=M(\sigma(\Gamma_\ell^\star(E;q,\zeta)),E,\ell)\). Direct observability or direct reward of the pre-closure state \(q\) is outside this theorem. This restriction is important: the theorem is about selection that sees the post-closure economy, not selection that separately rewards the historical origin of preferences.</p>
+    <div class="equation">
+      <span class="label">Post-Closure Selection Rule</span>
+      \[
+        S(q)
+        =
+        \Phi\!\left(
+          NE(\Gamma^\star_{\ell,q,\zeta}(E)),
+          \pi(\cdot;E,\ell),
+          E,\ell
+        \right).
+      \]
+    </div>
 
     <div class="theorem" data-kind="Theorem">
       <span class="theorem-title">Selection Target Shift</span>
-      <p>Fix \(E\), \(\ell\), and \(\zeta\). If \(q\sim_{E,\ell,\zeta} q'\), then the initial states \(q\) and \(q'\) induce the same reduced subjective game and the same Nash set. Consequently, every post-closure admissible material selection rule is constant on each closure-equivalence class. Under common unique closure, all \(q\in Q_\ell\) lie in one equivalence class, so selection over initial preference states is degenerate in the \(T_\theta\to 0\) limit.</p>
+      <p>Fix \(E\), \(\ell\), and \(\zeta\). If \(q\sim_{E,\ell,\zeta}q'\), then the two initial states induce the same reduced subjective game and the same Nash set. Consequently, every admissible post-closure selection rule \(S\) is constant on each closure-equivalence class. Under common unique closure, selection over initial preference states is degenerate in the \(T_\theta\to0\) limit.</p>
     </div>
 
-    <p class="proof"><strong>Proof.</strong> See Appendix A.6. The closure map identifies which initial states remain distinguishable after the fast adjustment.</p>
+    <p class="proof"><strong>Proof.</strong> Closure equivalence gives the same closed preference state, hence the same subjective payoff table and reduced game. Any post-closure admissible selection rule receives the same argument for \(q\) and \(q'\), so it gives the same value.</p>
 
-    <div class="takeaway">
-      <strong>What this says.</strong> Selection has not vanished. It has lost leverage over initial preference states that fast closure makes observationally identical to the post-closure selection rule. The surviving selection problem is over whatever still differs after closure, such as closure laws, institutions, or transition rules.
-    </div>
-
-    <p>To compare closure laws, specify a finite active set \(\mathcal L_0\subseteq\mathcal L\), an equilibrium-selection rule, a material evaluator \(G_\ell(E)=M(\sigma_\ell(E),E,\ell)\), and a population dynamic or institutional choice rule. For example, if \(n_\ell\ge 0\) is the share of law \(\ell\), with \(\sum_{\ell\in\mathcal L_0} n_\ell=1\), a standard material selection equation is:</p>
-
-    <div class="equation">
-      <span class="label">Selection Over Closure Laws</span>
-      \[
-        \dot n_\ell
-        =
-        n_\ell\left(G_\ell(E)-\bar G(E)\right),
-        \qquad
-        \bar G(E)=\sum_{k\in\mathcal L_0} n_kG_k(E).
-      \]
-    </div>
-
-    <p class="small"><strong>Why this form.</strong> This is the standard replicator equation, used here only as a canonical material-selection example. Closure laws with above-average material value grow in share; below-average laws shrink. The theorem does not require this exact dynamic, but it makes concrete what post-closure selection over laws can look like.</p>
-
-    <p>The scalar equation is not the definition of Theorem 1. It is one possible post-closure selection equation obtained after the law-level objects have been specified.</p>
-  </section>
-
-  <section>
-    <h2>7. Platform Proxy Choice</h2>
-    <p>A platform application gives closure laws an institutional interpretation. A platform rule can be read as an exposure rule, ranking rule, recommendation rule, or interface rule that helps determine future preferences. Let a platform choose a rule \(r\in\mathcal R\). Each rule induces a closure law, a reduced subjective game, and a selected mixed equilibrium. The platform evaluates rules using a proxy \(V(r)\), such as engagement or retention. The analyst evaluates material consequences using \(G(r)\), such as welfare, health, survival, or another explicitly stated criterion.</p>
-
-    <div class="equation">
-      <span class="label">Platform Rule As Closure Law</span>
-      \[
-        r
-        \longmapsto
-        \theta_r^\star(E)
-        \longmapsto
-        \sigma_r(E)\in NE\!\left(\Gamma_r^\star(E)\right)
-        \longmapsto
-        \bigl(V(r),G(r)\bigr).
-      \]
-    </div>
-
-    <p class="small"><strong>Why this form.</strong> The display is a composition of maps rather than a dynamic equation. It records the institutional chain: a platform rule induces a preference state, the preference state induces a subjective game, the subjective game yields selected play, and that play can be scored by both platform proxy \(V\) and material evaluator \(G\).</p>
-
-    <p>The platform chooses \(r^V\in\arg\max_{r\in\mathcal R}V(r)\). A material planner would choose \(r^G\in\arg\max_{r\in\mathcal R}G(r)\).</p>
+    <p>For institutional choice, let a rule \(r\in\mathcal R\) induce a closed preference state, a reduced subjective game, selected play, a platform proxy \(V(r)\), and a material evaluator \(G(r)\). A platform chooses \(r^V\in\arg\max_{\mathcal R}V(r)\), while a material planner would choose \(r^G\in\arg\max_{\mathcal R}G(r)\).</p>
 
     <div class="theorem" data-kind="Proposition">
       <span class="theorem-title">Proxy Alignment</span>
-      <p>For a fixed feasible set \(\mathcal R\), if \(\arg\max_{r\in\mathcal R}V(r)\subseteq\arg\max_{r\in\mathcal R}G(r)\), then every proxy-maximizing platform rule attains the feasible maximum of the material evaluator. A sufficient condition is that \(V\) and \(G\) have the same maximizer set on \(\mathcal R\); strict ordinal equivalence is sufficient when it preserves the relevant maximizers. Conversely, if there exist two rules \(r_1,r_2\) with \(V(r_1)>V(r_2)\) and \(G(r_1)&lt;G(r_2)\), then on the feasible set \(\{r_1,r_2\}\), proxy maximization selects a materially inferior closure law.</p>
+      <p>For a fixed feasible set \(\mathcal R\), if \(\arg\max_{r\in\mathcal R}V(r)\subseteq\arg\max_{r\in\mathcal R}G(r)\), then every proxy-maximizing rule attains the feasible maximum of the material evaluator. Conversely, if there exist \(r_1,r_2\in\mathcal R\) with \(V(r_1)>V(r_2)\) and \(G(r_1)&lt;G(r_2)\), then on the feasible set \(\{r_1,r_2\}\), proxy maximization selects a materially inferior closure law.</p>
     </div>
 
-    <p class="proof"><strong>Proof.</strong> See Appendix A.7. The first part is a fixed-feasible-set alignment result; the second is a two-rule reversal construction.</p>
-
-    <div class="takeaway">
-      <strong>Plain implication.</strong> A platform can change preferences and behavior without lowering the stated material evaluator if its proxy selects material maximizers. The danger begins when the proxy that chooses the preference-producing rule ranks feasible rules differently from the material criterion.
-    </div>
-
-    <p>The result is exact and conditional. Preference endogeneity and equilibrium movement do not imply material loss. Loss arises when the proxy that selects closure laws is not aligned with the material evaluator on the feasible set.</p>
+    <p class="proof"><strong>Proof.</strong> The first claim follows directly from the inclusion of maximizer sets. The converse is the two-rule feasible set construction.</p>
   </section>
 
   <section>
-    <h2>8. Social Feedback As A Closure Law</h2>
-    <p>The preceding sections treat the closure law \(\ell\) abstractly. This section gives one concrete family: preference closure driven by social exposure. The economic interpretation is simple. A person sees a fashion, meme, influencer, or repeated platform recommendation. That exposure changes the person's taste state. The new taste state also changes what others observe as popular, which feeds back into their taste states. The fixed point of that loop is the post-closure preference vector used in the reduced game.</p>
-
-    <p>There are \(n\) agents. Agent \(i\)'s settled taste intensity is \(m_i\in[-1,1]\). Positive \(m_i\) means attraction to a fashion-coded action, while negative \(m_i\) means rejection. The baseline field \(h_i\) is the non-fashion component of taste. The nonnegative attention matrix \(W\) records social exposure: \(W_{ij}\) is the weight agent \(i\) places on agent \(j\)'s taste. The parameter \(\eta\ge 0\) is social reinforcement, \(\beta>0\) is responsiveness, \(z\) is a temporary meme or platform field, and \(\phi_i\) is agent \(i\)'s exposure loading. In the notation of the general model, the closure input \(\zeta\) is the scalar field \(z\) or the temporary path of that field.</p>
-
-    <p class="table-title"><strong>Objects in the social-feedback closure.</strong></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Object</th>
-          <th>Meaning</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>\(m_i\)</td><td>Settled taste intensity of agent \(i\).</td></tr>
-        <tr><td>\(h_i\)</td><td>Baseline taste field before the temporary meme or influencer shock.</td></tr>
-        <tr><td>\(W_{ij}\)</td><td>Attention weight from agent \(i\) to agent \(j\).</td></tr>
-        <tr><td>\(\eta\)</td><td>Strength of social reinforcement.</td></tr>
-        <tr><td>\(\beta\)</td><td>Responsiveness of tastes to the total field.</td></tr>
-        <tr><td>\(z\)</td><td>Temporary fashion, meme, or platform exposure field.</td></tr>
-        <tr><td>\(\phi_i\)</td><td>Loading of agent \(i\) on that exposure field.</td></tr>
-        <tr><td>\(T_m\)</td><td>Fast timescale for social-feedback preference adjustment.</td></tr>
-        <tr><td>\(F_i\)</td><td>Fashion-coded action in agent \(i\)'s action set.</td></tr>
-      </tbody>
-    </table>
-
-    <p>The network fast dynamic and its fixed point are:</p>
+    <h2>Appendix B. Social-Feedback Closure</h2>
+    <p>There are \(n\) agents with settled taste intensities \(m_i\in[-1,1]\). The baseline field is \(h_i\), the nonnegative attention matrix is \(W\), social reinforcement is \(\eta\), responsiveness is \(\beta\), a temporary exposure field is \(z\), and exposure loading is \(\phi_i\). The fast social-feedback closure law is:</p>
 
     <div class="equation">
-      <span class="label">Network Social-Feedback Dynamics And Closure</span>
+      <span class="label">Network Social-Feedback Closure</span>
       \[
-      \begin{aligned}
         T_m\dot m_i
-        &=
-        -m_i+
-        \tanh\!\left(
-          \beta\left[
-            h_i+\eta\sum_j W_{ij}m_j+\phi_i z
-          \right]
-        \right),\\
-        m_i
-        &=
-        \tanh\!\left(
-          \beta\left[
-            h_i+\eta\sum_j W_{ij}m_j+\phi_i z
-          \right]
-        \right).
-      \end{aligned}
-      \]
-    </div>
-
-    <p class="small"><strong>Why this form.</strong> Equation (17) uses a standard smooth-threshold structure. The inner bracket is the total field acting on agent \(i\): baseline taste \(h_i\), socially observed taste \(\eta\sum_j W_{ij}m_j\), and direct exposure \(\phi_i z\). The parameter \(\beta\) controls how sharply tastes respond to that field. The \(\tanh\) function is chosen because it maps any total field into \([-1,1]\), gives a smooth logit/Ising-style response, and permits clean critical-threshold calculations. The dynamic \(T_m\dot m_i=-m_i+\tanh(\cdot)\) is a leaky adjustment rule: current taste decays toward the target taste implied by the current field. The second line is simply the fixed-point condition after fast adjustment has settled.</p>
-
-    <p>A temporary shock is modeled as part of the closure experiment: it is either held long enough for the fast subsystem to settle, or varied slowly relative to the fast clock. The fixed-point equation is deliberately borrowed from logit social interactions, smooth threshold models, and Ising-style mean-field models. The interpretation here is narrower than a general theory of fashion. The selected fixed point \(m=C_\ell(E,q,\zeta)\) is the preference state that closes before the strategic game is solved.</p>
-
-    <p>To embed this closure state in the finite game, let \(F_i\in A_i\) be agent \(i\)'s fashion-coded action and let \(\nu_i^0(a;E,\ell)\) be the baseline payoff representation before the social-feedback taste term. One simple embedding is:</p>
-
-    <div class="equation">
-      <span class="label">Social Taste Embedding In Utility</span>
-      \[
-        \theta_i=m_i,
-        \qquad
-        U_i(a;m,E,\ell)
         =
-        \nu_i^0(a;E,\ell)
+        -m_i
         +
-        \lambda_i m_i\,\mathbf 1\{a_i=F_i\},
-        \qquad
-        \lambda_i>0.
+        \tanh\!\left(\beta\left[h_i+\eta\sum_{j=1}^n W_{ij}m_j+\phi_i z\right]\right).
       \]
     </div>
-
-    <p class="small"><strong>Why this form.</strong> The linear term \(\lambda_i m_i\mathbf 1\{a_i=F_i\}\) is the simplest way to let the settled taste state affect later choice. If \(m_i\) rises, the fashion-coded action \(F_i\) becomes more attractive; if \(m_i\) falls, it becomes less attractive. The rest of utility, \(\nu_i^0\), is left unrestricted so the example isolates the role of the social-feedback taste component.</p>
-
-    <p>Other embeddings are possible. This one is enough to show how a social-feedback closure state changes the payoff table of the later game: after \(m\) is selected, the reduced subjective game is obtained by substituting that \(m\) into \(U_i\). The propositions below are therefore conditional model results about this closure law, not empirical claims about every fashion cycle, social-media platform, or AI-mediated environment.</p>
 
     <div class="theorem" data-kind="Proposition">
       <span class="theorem-title">Subcritical Social-Feedback Closure</span>
       <p>If \(\beta\eta\rho(W)&lt;1\), where \(\rho(W)\) is the spectral radius of \(W\), then the network social-feedback closure has a unique settled taste state. Small changes in \(z\) move that state continuously. When \(z\) is removed, the closure law itself has no hysteresis.</p>
     </div>
 
-    <div class="equation">
-      <span class="label">Subcritical Social-Feedback Condition</span>
-      \[
-        \beta\eta\rho(W)&lt;1.
-      \]
-    </div>
+    <p class="proof"><strong>Proof.</strong> The right-hand side fixed-point map is a contraction in a weighted sup norm under the spectral-radius condition. Banach's fixed-point theorem gives a unique fixed point and continuous dependence on \(z\). Hysteresis requires multiple stable branches, which contraction excludes.</p>
 
-    <p class="small"><strong>Why this form.</strong> The spectral radius \(\rho(W)\) measures the strongest network feedback direction. Multiplying by \(\beta\eta\) gives the maximal local gain of one round of social reinforcement. If that gain is below one, the closure map is a contraction: feedback dies out rather than amplifying itself.</p>
-
-    <p>The product \(\beta\eta\rho(W)\) is the model's local feedback gain for taste reinforcement. It plays the role of a reproduction number: responsiveness times social reinforcement times network amplification. Below one, one round of imitation does not create enough new taste movement to sustain itself. Targeted exposure can still matter, but its effect is single-valued and reversible in this closure law.</p>
-
-    <div class="theorem" data-kind="Proposition">
-      <span class="theorem-title">Near-Critical Influence Multiplier</span>
-      <p>At a stable fixed point \(m^\star\), let \(D=\operatorname{diag}(1-(m_i^\star)^2)\). If \(I-\beta\eta D W\) is invertible, the local response of settled preferences to a small exposure field is given by the social multiplier below. As \(\beta\eta\rho(DW)\) approaches one from below, the response can become large and concentrated along central attention directions to which \(D\phi\) has nonzero projection.</p>
-    </div>
+    <p>At a stable fixed point \(m^\star\), define \(D=\operatorname{diag}(1-(m_i^\star)^2)\). Differentiating the fixed-point equation with respect to the exposure field gives the local multiplier:</p>
 
     <div class="equation">
       <span class="label">Local Influence Multiplier</span>
       \[
         \frac{\partial m^\star}{\partial z}
         =
-        \beta\left(I-\beta\eta D W\right)^{-1}D\phi.
+        \left(I-\beta\eta DW\right)^{-1}\beta D\phi.
       \]
     </div>
 
-    <p class="small"><strong>Why this form.</strong> The expression comes from differentiating the fixed-point equation with respect to the exposure field \(z\). The inverse \((I-\beta\eta DW)^{-1}\) is the social multiplier: a direct exposure effect \(D\phi\) is repeatedly fed through the network feedback matrix \(\beta\eta DW\). The formula is a local derivative, not a prediction that adoption shares can exceed one.</p>
+    <div class="theorem" data-kind="Proposition">
+      <span class="theorem-title">Near-Critical Influence Multiplier</span>
+      <p>If \(I-\beta\eta DW\) is invertible, the local response of settled preferences to a small exposure field is given by the multiplier above. As \(\beta\eta\rho(DW)\) approaches one from below, the response can become large and concentrated along central attention directions to which \(D\phi\) has nonzero projection.</p>
+    </div>
 
-    <p>The matrix \(D\) measures local flexibility. Tastes near the extremes \(-1\) and \(1\) are less responsive; tastes near zero are more responsive. The inverse term is the amplification channel. This is the formal version of the claim that a targeted exposure field has the largest marginal effect when the audience is near a tipping surface.</p>
+    <p class="proof"><strong>Proof.</strong> Differentiate \(m=F(m,z)\) with respect to \(z\) and rearrange. The inverse becomes large as the relevant eigenvalue of \(\beta\eta DW\) approaches one from below.</p>
 
-    <p>The mean-field case is the cleanest microscope for persistent fashion. Let \(m\) be the average taste state, \(J\) the strength of average social reinforcement, and \(b=h+z\) the total field. The closure equation becomes:</p>
+    <p>The mean-field case sets all agents equal. Let \(m\) be average taste, \(J\) average reinforcement, and \(b=h+z\) the total field.</p>
 
     <div class="equation">
       <span class="label">Mean-Field Social-Feedback Closure</span>
@@ -1015,9 +849,7 @@
       \]
     </div>
 
-    <p class="small"><strong>Why this form.</strong> The mean-field equation collapses the network into one average taste state. The parameter \(J\) replaces the network feedback term, and \(b=h+z\) collects baseline and temporary exposure fields. This simplification sacrifices heterogeneity but makes the tipping and hysteresis geometry exact.</p>
-
-    <p>If \(\beta J\le 1\), the mean-field closure has one stable state. If \(\beta J>1\), it has a hysteresis window. Define the fold, or spinodal, taste level \(m_s\) and critical field \(B_c\) by:</p>
+    <p>If \(\beta J>1\), define the fold, or spinodal, taste level \(m_s\) and critical field \(B_c\) by:</p>
 
     <div class="equation">
       <span class="label">Critical Exposure Field</span>
@@ -1028,53 +860,47 @@
       \]
     </div>
 
-    <p class="small"><strong>Why this form.</strong> These expressions are the fold, or spinodal, conditions of the mean-field fixed-point curve. At the boundary of the hysteresis window, the \(\tanh\) curve is tangent to the forty-five-degree line. Solving that tangency gives \(m_s\), and substituting it back into the fixed-point equation gives the critical field \(B_c\).</p>
-
     <div class="theorem" data-kind="Proposition">
       <span class="theorem-title">Hysteresis And Persistent Fashion</span>
-      <p>If \(\beta J>1\), then for every total field \(b\) with \(|b|&lt;B_c\), the mean-field closure has two stable taste states separated by an unstable state. Starting on the low branch, a temporary positive shock that pushes \(b\) strictly above \(B_c\) eliminates that branch. If the shock is then removed and the baseline field lies inside \((-B_c,B_c)\), the path remains on the high branch.</p>
+      <p>If \(\beta J>1\), then for every total field \(b\) with \(|b|&lt;B_c\), the mean-field closure has two stable taste states separated by an unstable state. Starting on the low branch, a temporary positive shock that pushes \(b\) strictly above \(B_c\) eliminates that branch. If the shock is held long enough on the fast time scale for the state to enter the high branch's post-shock basin, and if the shock is then removed while the baseline field lies inside \((-B_c,B_c)\), the path remains on the high branch.</p>
     </div>
 
-    <p>Hysteresis means memory. Removing the shock need not undo its effect because the system has moved to a different stable preference branch. This is the point at which "exposure changed behavior" becomes a stronger claim: exposure changed the closure state from which later behavior is evaluated.</p>
+    <p class="proof"><strong>Proof.</strong> Folds occur where the mean-field fixed-point curve is tangent to the forty-five-degree line. The tangency condition gives \(\beta J(1-m_s^2)=1\), and substitution gives \(B_c\). A shock past the fold removes the low branch. If the state evolves long enough under the shocked field to enter the basin that maps to the high branch after removal, the high branch remains stable inside the hysteresis window.</p>
 
-    <p>To compare the induced taste state with an outside yardstick, use the simple material evaluator \(G(m)=hm\). If \(h&lt;0\), the evaluator favors the low-fashion state. This evaluator is intentionally minimal. It is not a welfare theorem; it is a diagnostic showing that a persistent taste branch can be bad by a stated material criterion even though it is stable under the induced preference process.</p>
+    <p>Using the simple material evaluator \(G(m)=hm\), persistent material loss is possible when the baseline field favors the low branch and a temporary shock can cross the upper fold.</p>
 
     <div class="equation">
       <span class="label">Persistent-Loss Window</span>
       \[
-        |h|&lt;B_c
-        \quad\text{and}\quad
-        B_c-h&lt; z_{\max}.
+        |h|&lt;B_c,
+        \qquad
+        B_c-h&lt;z_{\max}.
       \]
     </div>
 
-    <p class="small"><strong>Why this form.</strong> The first inequality puts the no-shock baseline inside the hysteresis window, where both low and high stable branches exist. The second says the admissible shock budget is large enough to cross the upper critical field from baseline \(h\). Together they describe when a temporary shock can select a new stable branch without needing to remain permanently present.</p>
-
     <div class="theorem" data-kind="Proposition">
       <span class="theorem-title">Temporary Exposure, Persistent Material Loss</span>
-      <p>If the persistent-loss window holds, \(h&lt;0\), and the initial condition is on the low stable branch, then any temporary positive exposure shock \(z\in(B_c-h,z_{\max})\) can move the system to the high stable branch. After the shock disappears, the new taste state persists along that path and lowers \(G\).</p>
+      <p>If the persistent-loss window holds, \(h&lt;0\), and the initial condition is on the low stable branch, then any temporary positive exposure shock \(z\in(B_c-h,z_{\max})\) can move the system to the high stable branch when held long enough on the fast time scale. After the shock disappears, the new taste state persists along that path and lowers \(G\).</p>
     </div>
+
+    <p class="proof"><strong>Proof.</strong> The inequalities put the baseline inside the hysteresis window and allow a shock to cross the upper critical field. The fast-time holding condition gives the basin transition described in Proposition 7. When \(h&lt;0\), the material evaluator ranks lower \(m\) above higher \(m\). The shock path ends on the high branch, so it lowers \(G\) relative to the initial low branch.</p>
   </section>
 
   <section>
-    <h2>9. Computational And Mechanism Audits</h2>
-    <p>The computations do two different jobs. The social-feedback audit checks the mechanism in Section 8: below criticality the closure is reversible, while above criticality temporary exposure can select a persistent branch. The finite-game audit checks the strategic results in Sections 5 through 7: exact best-response invariance is restrictive, and proxy alignment is the formal condition that prevents material loss from rule choice. The propositions give exact conditions; the audits ask how those conditions behave in calibrated examples and random stress tests.</p>
+    <h2>Appendix C. Numerical Details</h2>
+    <p>The computations are illustrative mechanism checks. They use a single figure palette throughout: teal marks stability, invariance, or alignment; red marks material loss; blue marks exposure or equilibrium movement; amber marks comparison cases, instability, or strategic distortion; violet marks return paths after shock removal.</p>
 
-    <div class="takeaway">
-      <p><strong>How to read the audits.</strong> The numerical section is not a separate empirical claim. It is a set of stress tests for the formal argument. Figure 1 and Table 4 audit the near-critical multiplier in Proposition 5. Figure 2 and Table 5 audit the hysteresis logic in Propositions 6 and 7. Figure 3 asks how often the social-feedback mechanism appears in a broad parameter draw. Figure 4 and Table 7 audit the best-response invariance condition in Proposition 1. Table 8 and Figure 5 audit the proxy-alignment condition in Proposition 3. The figures use one restrained palette rather than separate local color schemes: teal marks stability, invariance, or alignment; red is reserved for material loss; blue marks the main exposure or equilibrium movement; amber marks comparison cases, instability, or strategic distortion; violet marks the return path after shock removal.</p>
-    </div>
+    <p>Replication entry points are <code>scripts/run_fashion_meme_analysis.py</code>, <code>scripts/run_model_selection_audit.py</code>, and <code>scripts/run_model_selection_sensitivity.py</code>. The figures and tables read by this article are stored under <code>results/figures</code> and <code>results/tables</code>. The audits are stress tests of the mechanisms, not estimates of a real platform or population.</p>
 
-    <h3>9.1 Social-Feedback Mechanism Audit</h3>
-    <p>The social-feedback simulations are not empirical estimates of social media, fashion, or AI systems. They are mechanism audits: they ask whether the mathematical ingredients for amplification and persistent taste change appear in broad parameter regions.</p>
-
-    <p>The first check is local. Near the critical threshold in Proposition 5, a small targeted exposure should have a large marginal effect, especially when it reaches a high-centrality target. In the figure, the central target is the most connected node in the audit network, while the peripheral target has much lower network centrality.</p>
+    <h3>C.1 Network Influence Multiplier</h3>
+    <p>The network audit evaluates the local-influence multiplier from Appendix B. It uses a 120-node attention network in which each agent follows 8 others, with popularity weights drawn from a Pareto distribution with shape 1.35 and seed 20260623. The responsiveness parameter is \(\beta=1.15\), and \(\eta\) varies over the grid shown below. The numbers are local derivatives around a benchmark, not predicted bounded changes in taste from a large intervention.</p>
 
     <figure>
       <img src="../results/figures/fashion_network_multiplier.svg" alt="Network influence multiplier">
-      <figcaption>Linear response to a small targeted influencer field on a heterogeneous attention network. The plotted benchmark is the zero-field local multiplier, corresponding to \(D=I\) in Proposition 5. The central target's effect rises sharply as social reinforcement approaches the critical threshold. The peripheral target remains small. These are local derivatives, not bounded adoption shares.</figcaption>
+      <figcaption>Linear response to a small targeted influencer field on a heterogeneous attention network. The central target's effect rises sharply as social reinforcement approaches the critical threshold. The peripheral target remains small.</figcaption>
     </figure>
 
-    <p class="table-title"><strong>Local network influence multipliers.</strong> The responses are derivatives of aggregate taste with respect to an infinitesimal field, not predicted changes in bounded taste levels from a unit intervention.</p>
+    <p class="table-title"><strong>Local network influence multipliers.</strong></p>
     <table>
       <thead>
         <tr>
@@ -1093,10 +919,8 @@
       </tbody>
     </table>
 
-    <figure>
-      <img src="../results/figures/fashion_mean_field_hysteresis.svg" alt="Mean-field hysteresis">
-      <figcaption>Stable and unstable closure branches for \(m=\tanh(\beta(Jm+b))\), with \(\beta=2.0\), \(J=0.8\), and baseline field \(h=-0.08\). A positive shock moves the path from the low branch to the high branch. Removing the shock leaves the system in the high branch's basin; the low branch still exists mathematically inside the hysteresis window, but this path does not return to it without another perturbation.</figcaption>
-    </figure>
+    <h3>C.2 Mean-Field Flip</h3>
+    <p>The mean-field calibration used in the main-text hysteresis figure is deliberately simple. It is meant to show the branch-selection logic, not to estimate a specific social domain. The random-parameter audit uses seed 20260623 and draws 6,000 economies with \(\beta\sim U[0.5,3.0]\), \(J\sim U[0.1,1.3]\), and \(h\sim U[-0.35,0.35]\). A positive shock of at most 0.35 is then tested against the fold condition.</p>
 
     <p class="table-title"><strong>Calibrated mean-field flip.</strong></p>
     <table>
@@ -1117,45 +941,13 @@
       </tbody>
     </table>
 
-    <p>This is the numerical version of the hysteresis result. The temporary shock is large enough to cross the fold; after the shock is removed, history selects the high branch. Because \(h&lt;0\), that high branch is also worse under the toy material evaluator \(G(m)=hm\).</p>
-
     <figure>
       <img src="../results/figures/fashion_phase_audit.svg" alt="Random parameter audit">
       <figcaption>Random parameter audit. Roughly half the sampled economies are subcritical and therefore unique. About \(26.98\%\) have a hysteresis window. About \(15.40\%\) can be moved to a different persistent branch by a temporary shock of size \(0.35\). About \(4.10\%\) move in a direction that lowers the simple material evaluator.</figcaption>
     </figure>
 
-    <p class="table-title"><strong>Random parameter audit.</strong> These rates describe a simulated parameter draw, not frequencies in real platforms or societies. The sampling ranges are reported in <code>src/utility_endogenous/fashion_meme_dynamics.py</code>; the point is sensitivity under a broad prior, not calibration.</p>
-    <table>
-      <thead>
-        <tr>
-          <th>Audit statistic</th>
-          <th class="num">Rate</th>
-          <th>Interpretation</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Subcritical unique closure</td><td class="num">0.4865</td><td>Fashion adjustment is single-valued and reversible.</td></tr>
-        <tr><td>Hysteresis possible</td><td class="num">0.2698</td><td>Two stable taste states can coexist.</td></tr>
-        <tr><td>Temporary shock flips state</td><td class="num">0.1540</td><td>A shock of size \(0.35\) can create persistent taste change.</td></tr>
-        <tr><td>Flip is material loss</td><td class="num">0.0410</td><td>The persistent flip lowers the toy material evaluator.</td></tr>
-      </tbody>
-    </table>
-
-    <h3>9.2 Finite-Game Strategic Audit</h3>
-    <p>The second audit asks a parallel question in finite games: how often do the exact invariance and proxy-alignment conditions survive random payoff perturbations? Neutral closure behaves as the theory predicts: it preserves best responses and selected outcomes. Random strategic closure usually changes the game. In this audit, proxy losses are small when the proxy is only noisily and approximately aligned with material payoff and large when the proxy is independent or reversed.</p>
-
-    <p>The random finite-game audit is a stress test of the invariance condition, not evidence needed for the theorems. The audit generates 5,000 random two-player, two-action games per route. A neutral route applies strategically irrelevant preference movement. A strategic route adds random payoff distortions. Three proxy routes choose closure laws from an intensity grid using noisy material-aligned, independent, or misaligned proxy objectives.</p>
-
-    <p><strong>Simulation design.</strong> The replication entry point is <code>python3 scripts/run_model_selection_audit.py</code>, with seed <code>20260620</code>. Material payoff entries are drawn independently from the uniform distribution on \([-1,1]\). For routes with multiple equilibria, the selected pure equilibrium maximizes the relevant ranking payoff; if no pure equilibrium is available, the script uses the interior mixed equilibrium when it lies in the unit square and otherwise falls back to the uniform distribution.</p>
-
-    <p>An outcome shift is counted when the distance between the selected material and subjective outcome distributions exceeds \(0.25\). For a reported rate \(p\) with \(N=5{,}000\), the Monte Carlo standard error is \(\sqrt{p(1-p)/N}\), which is at most \(0.0071\).</p>
-
-    <figure>
-      <img src="../results/figures/model_selection_fast_closure_audit.svg" alt="Finite-game stress test bar chart">
-      <figcaption>Finite-game stress test. The neutral route has zero selected-outcome shift, while random strategic closure often changes the reduced game. Proxy-choice material loss in this audit is small under a noisy approximately aligned proxy and large under independent or misaligned proxies. Best-response preservation is reported in the diagnostic table below the figure.</figcaption>
-    </figure>
-
-    <p>These numbers are not estimates of any real platform; they show how restrictive the exact invariance conditions are in random finite games. The key diagnostic is mixed best-response invariance, because Proposition 1 is a statement about all mixed opponent profiles. The pure-endpoint check is weaker.</p>
+    <h3>C.3 Finite-Game Diagnostics</h3>
+    <p>The finite-game audit separates best-response preservation from proxy alignment. It uses seed 20260620 and 5,000 random two-player, two-action games per route, with material payoff entries drawn independently from \(U[-1,1]\). The neutral route adds only opponent-action terms that preserve best responses; the random strategic route adds independent payoff distortions. For proxy routes, each feasible closure intensity is \(\lambda\in\{0,0.25,0.75,1.5,3.0\}\). The platform selects the intensity with the highest proxy payoff; the material benchmark selects the intensity with the highest material payoff. A selected-outcome shift is counted when the distance between selected outcome distributions exceeds 0.25. For \(N=5{,}000\), the largest possible binomial Monte Carlo standard error is about 0.0071.</p>
 
     <p class="table-title"><strong>Best-response diagnostics.</strong></p>
     <table>
@@ -1168,18 +960,8 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Neutral control</td>
-          <td class="num">1.0000</td>
-          <td class="num">1.0000</td>
-          <td class="num">0.0000</td>
-        </tr>
-        <tr>
-          <td>Random strategic closure</td>
-          <td class="num">0.0762</td>
-          <td class="num">0.3126</td>
-          <td class="num">0.5044</td>
-        </tr>
+        <tr><td>Neutral control</td><td class="num">1.0000</td><td class="num">1.0000</td><td class="num">0.0000</td></tr>
+        <tr><td>Random strategic closure</td><td class="num">0.0762</td><td class="num">0.3126</td><td class="num">0.5044</td></tr>
       </tbody>
     </table>
 
@@ -1193,132 +975,44 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Noisy approximately aligned proxy</td>
-          <td class="num">0.3766</td>
-          <td class="num">0.0432</td>
-        </tr>
-        <tr>
-          <td>Proxy independent of material welfare</td>
-          <td class="num">0.7244</td>
-          <td class="num">0.5758</td>
-        </tr>
-        <tr>
-          <td>Proxy misaligned with material welfare</td>
-          <td class="num">0.9730</td>
-          <td class="num">0.9706</td>
-        </tr>
+        <tr><td>Noisy approximately aligned proxy</td><td class="num">0.3766</td><td class="num">0.0432</td></tr>
+        <tr><td>Proxy independent of material welfare</td><td class="num">0.7244</td><td class="num">0.5758</td></tr>
+        <tr><td>Proxy misaligned with material welfare</td><td class="num">0.9730</td><td class="num">0.9706</td></tr>
       </tbody>
     </table>
-
-    <p class="note">The proxy-choice diagnostic table uses noisy approximate alignment in the first row. Proposition 3 guarantees zero material loss under exact maximizer-set alignment, \(\arg\max_{\mathcal R}V\subseteq\arg\max_{\mathcal R}G\).</p>
-
-    <p>Random strategic closure preserves full mixed best-response correspondences in only 7.62 percent of the simulated games, although it passes the weaker pure-endpoint check in 31.26 percent. Exact strategic irrelevance is therefore a restrictive condition in this audit. On the proxy side, the route labelled noisy approximately aligned is not the exact maximizer-set alignment in Proposition 3; its positive loss is therefore not a contradiction of the proposition. The pattern in this audit is still the one Proposition 3 isolates: loss is small under approximate alignment and large when the proxy is independent or misaligned.</p>
 
     <figure>
       <img src="../results/figures/model_selection_sensitivity.svg" alt="Finite-game sensitivity checks">
       <figcaption>Sensitivity checks. Larger strategic distortions lower mixed best-response invariance and raise selected-equilibrium shifts. Noisier approximately aligned proxies raise material loss, while exact alignment can move equilibria without lowering the material evaluator.</figcaption>
     </figure>
-
-    <p>Taken together, the audits support the paper's distinction between equilibrium, evaluation, and selection. Fast closure can leave the game unchanged, change the game without material loss, or change the game and lower the stated material evaluator. Which case obtains depends on best-response invariance, criticality, and proxy alignment.</p>
-  </section>
-
-  <section>
-    <h2>10. Welfare And Interpretation</h2>
-    <p>In ordinary revealed-preference welfare analysis, the choices or preferences observed at the end of the process often carry normative weight. That move becomes fragile when the process being evaluated helps produce those final preferences. Final-preference welfare is then not a stable welfare criterion by itself. The analyst must say what is being evaluated: allocations, material payoff, terminal preferences, the transition path, or the rule that changes preferences.</p>
-
-    <p>The model separates three questions that are often compressed. First, which utility representation is used for play? In the fast limit, it is the representation induced by closure. Second, are equilibrium predictions materially invariant? They are guaranteed to be invariant when fast closure preserves mixed best-response correspondences. Third, is the induced transition materially or normatively acceptable? That depends on the material evaluator, meta-preferences, or admissible transition laws.</p>
-
-    <p>The social-feedback mechanism makes the third question concrete. Below criticality, exposure shifts preferences in the ordinary comparative-static sense. Above criticality, the closure law is history-dependent: a temporary exposure shock can determine which stable preference branch later behavior uses. In that region, evaluating only the final induced preference can miss the role of the transition rule that produced it.</p>
-
-    <p>Final-preference welfare is not invariant when the process being evaluated also produces the final preferences. An allocation path can be attractive according to the induced terminal utility representation and unattractive according to initial preferences, material payoff, or a meta-preference over how preferences are changed. The paper does not select a welfare criterion. It shows why a criterion must specify whether it evaluates allocations, terminal preferences, transition laws, or paths.</p>
-
-    <p>Empirically, the framework points to two measurements: the speed of preference or exposure adjustment relative to the relevant slow variables, and the alignment between the proxy that induces closure and the material evaluator. A broader working-paper version retains a macro timescale diagnostic for this purpose. The present submission keeps that diagnostic outside the main argument.</p>
-  </section>
-
-  <section>
-    <h2>11. Conclusion</h2>
-    <p>The limiting result is simple. If preferences adapt first, the game is no longer built from primitive utility. It is built from utility produced by the preference-formation process.</p>
-
-    <p>In finite games, the formal object after fast adjustment is a reduced subjective game. Nash equilibrium is computed there because that is the game players are actually optimizing. Material payoff is evaluated separately. Mixed best-response preservation is a strong sufficient condition under which Nash predictions agree with the material-payoff benchmark after fast closure. Under common unique closure, material selection rules that observe only post-closure play cannot distinguish initial preference states that induce the same reduced game. Selection then moves to the laws, institutions, or transition rules that produce different reduced games.</p>
-
-    <p>The social-feedback example shows one way the closure law can be generated. If reinforcement is weak, induced preferences move continuously and reversibly. If reinforcement crosses a critical threshold, a temporary fashion, meme, influencer, or platform exposure can move the economy to a different persistent preference branch. That branch can then feed into the same Nash and selection machinery as any other closure law.</p>
-
-    <p>The platform example gives the result a concrete institutional interpretation. A rule that shapes future utility is not automatically harmful, and a changed equilibrium is not automatically a loss. The material claim requires a misalignment statement: the proxy choosing the closure law must select rules that the material evaluator ranks below feasible alternatives. That is the paper's main discipline. Fast endogenous utility changes where the economic analysis must look; it does not replace the need for equilibrium, selection, or welfare reasoning.</p>
-  </section>
-
-  <section>
-    <h2>Appendix A. Proof Details</h2>
-    <h3>A.1 Remark On Moving Slow States</h3>
-    <p>The main text holds \(E\) and \(\ell\) constant during the fast preference adjustment and treats \(\zeta\) as part of the specified closure experiment. In singular perturbation language, this is a fixed-slow-state boundary-layer closure: a short initial fast period is analyzed while the slow variables do not move. A moving-slow-state extension would require additional uniform attraction and regularity assumptions: for example, compact active sets, local Lipschitz continuity of \(H\) in \(\theta\), a unique uniformly attracting branch \(\theta_\ell^\star(E)\), a Lipschitz slow path \(E(t)\), and fixed \(\ell\) between discrete institutional revisions. Under such assumptions, standard singular perturbation arguments would support tracking of \(\theta_\ell^\star(E(t))\) after the initial fast-adjustment period on finite slow-time intervals away from discontinuities of \(\ell\). The paper does not use this as a theorem; the formal results require only fixed-state closure.</p>
-
-    <h3>A.2 Proof Of Lemma 1</h3>
-    <p>Fix \(E\), \(\ell\), and \(\zeta\). On the fast time \(s=t/T_\theta\), the preference subsystem is \(d\theta/ds=H(\theta;E,\ell,\zeta)\). Under unique closure, every initial state in the relevant basin converges to \(\theta_\ell^\star(E)\) as \(s\to\infty\). Thus, along any sequence \(T_\theta\downarrow 0\) observed after the short fast-adjustment period and before \(E\) or \(\ell\) changes, the payoff table used for play converges pointwise to \(U_i(\cdot;\theta_{i,\ell}^\star(E),E,\ell)\) for each player \(i\). Because action sets are finite, pointwise convergence of the payoff table is enough to define the limiting reduced finite game \(\Gamma_\ell^\star(E)\). If convergence from initial state \(q\) instead selects \(C_\ell(E,q,\zeta)\), the same pointwise argument gives the branch-selected game \(\Gamma_{\ell,q,\zeta}^\star(E)\). Nash equilibrium analysis after fast adjustment is therefore Nash equilibrium analysis in the relevant reduced game.</p>
-
-    <h3>A.3 Proof Of Proposition 1</h3>
-    <p>For every finite game, a mixed Nash equilibrium is a profile \(x\in X\) such that \(x_i\in BR_i(x_{-i})\) for every player \(i\). If \(BR_{i,\ell}^\star(\cdot;E)=BR_{i,\ell}^\pi(\cdot;E)\) for all \(i\), then the set of profiles satisfying the subjective fixed-point condition is exactly the set satisfying the material fixed-point condition. Hence the Nash sets coincide. The condition is not necessary because equality of fixed-point sets does not require equality of correspondences at profiles that are not fixed points.</p>
-
-    <h3>A.4 Proof Of Corollary 1</h3>
-    <p>For fixed \(x_{-i}\), expected subjective payoff equals the expected opponent-only term plus \(\beta_i\) times expected material payoff. The opponent-only term does not vary with \(x_i\), and \(\beta_i>0\) preserves the ordering of all \(x_i\). Therefore the subjective and material argmax sets coincide at every \(x_{-i}\). Proposition 1 gives equality of mixed Nash sets.</p>
-
-    <h3>A.5 Proof Of Proposition 2</h3>
-    <p>At the same opponent mixed profile, \(BR_{i,\ell}^\pi(x_{-i};E)=\{a_i\}\) and \(BR_{i,\ell}^\star(x_{-i};E)=\{b_i\}\), with \(a_i\ne b_i\). The two singleton correspondences are therefore not equal. Thus mixed best-response invariance fails. In a two-action choice set, a strict subjective/material ranking reversal between the two actions is exactly this strict-maximizer reversal.</p>
-
-    <h3>A.6 Proof Of Theorem 1</h3>
-    <p>If \(q\sim_{E,\ell,\zeta} q'\), the closure map gives \(C_\ell(E,q,\zeta)=C_\ell(E,q',\zeta)\). Thus every player's subjective payoff table is the same under the two initial states, so \(\Gamma_\ell^\star(E;q,\zeta)=\Gamma_\ell^\star(E;q',\zeta)\) and their Nash sets coincide. For any post-closure admissible selection rule \(S(q;E,\ell,\zeta)=\Phi(\Gamma_\ell^\star(E;q,\zeta),E,\ell)\), the argument of \(\Phi\) is identical for \(q\) and \(q'\), so \(S(q;E,\ell,\zeta)=S(q';E,\ell,\zeta)\). The same conclusion holds for the equilibrium-selection form \(S(q;E,\ell,\zeta)=M(\sigma(\Gamma_\ell^\star(E;q,\zeta)),E,\ell)\). In the unique-closure case, every initial state in \(Q_\ell\) maps to \(\theta_\ell^\star(E)\), so \(Q_\ell\) is one equivalence class and initial preference-state selection is degenerate. A model that directly observes or rewards the pre-closure state \(q\) violates post-closure admissibility and is not covered by the theorem.</p>
-
-    <h3>A.7 Proof Of Proposition 3</h3>
-    <p>Fix \(\mathcal R\). If \(\arg\max_{\mathcal R} V\subseteq\arg\max_{\mathcal R} G\), then every proxy maximizer \(r^V\) is also a material maximizer, so \(G(r^V)=\max_{r\in\mathcal R}G(r)\). Equality of maximizer sets is a direct sufficient condition. Strict ordinal equivalence is also sufficient when it preserves the relevant maximizers and ties on \(\mathcal R\). For the reversal construction, suppose there exist \(r_1,r_2\) with \(V(r_1)>V(r_2)\) and \(G(r_1)&lt;G(r_2)\). On the feasible set \(\{r_1,r_2\}\), proxy choice selects \(r_1\), while material choice selects \(r_2\). The proxy-maximizing rule is therefore materially inferior on that feasible set.</p>
-  </section>
-
-  <section>
-    <h2>Appendix B. Social-Feedback Proof Details</h2>
-    <h3>B.1 Proof Of Proposition 4</h3>
-    <p>Let \(F(m)=\tanh(\beta[h+\eta Wm+\phi z])\), where the hyperbolic tangent is applied componentwise. For any two taste vectors \(m,m'\), the derivative of \(\tanh\) is bounded above by one in absolute value, so the sup-norm Lipschitz modulus of \(F\) is bounded by \(\beta\eta\|W\|\) for any compatible matrix norm. More sharply, for a nonnegative matrix \(W\), the spectral-radius condition \(\beta\eta\rho(W)&lt;1\) gives a weighted sup norm in which \(F\) is a contraction. Banach's fixed-point theorem gives a unique fixed point, and the same contraction gives continuous dependence on the field \(z\). With a unique branch, removing \(z\) returns the closure law to the unique no-shock fixed point; hysteresis requires multiple stable branches, which the contraction region excludes.</p>
-
-    <h3>B.2 Proof Of Proposition 5</h3>
-    <p>At a stable fixed point, write the fixed-point equation as \(m=F(m,z)\). Differentiating with respect to the scalar exposure field gives \(\partial m/\partial z=\beta D(\eta W\,\partial m/\partial z+\phi)\), with \(D=\operatorname{diag}(1-(m_i^\star)^2)\). Rearranging gives \((I-\beta\eta DW)\partial m/\partial z=\beta D\phi\). If the matrix is invertible, the derivative is the stated multiplier. When the largest relevant eigenvalue of \(\beta\eta DW\) approaches one from below, the inverse becomes large along the corresponding eigendirection. The exposure vector must load on that direction through \(D\phi\); otherwise that near-critical direction is not excited by the shock.</p>
-
-    <h3>B.3 Proof Of Proposition 6</h3>
-    <p>For the mean-field equation \(m=\tanh(\beta(Jm+b))\), stable and unstable folds occur where the fixed-point curve is tangent to the forty-five-degree line. Differentiating the right side with respect to \(m\) gives \(\beta J(1-m^2)\). A fold therefore solves \(\beta J(1-m_s^2)=1\), so \(m_s=\sqrt{1-1/(\beta J)}\) when \(\beta J>1\). Substituting the fold condition into \(m=\tanh(\beta(Jm+b))\) gives \(b=\operatorname{arctanh}(m)/\beta-Jm\). The positive critical magnitude is \(B_c=Jm_s-\operatorname{arctanh}(m_s)/\beta\). For total fields inside \((-B_c,B_c)\), the curve has two stable fixed points separated by an unstable one. A shock that pushes \(b\) beyond \(B_c\) removes the low branch; after the shock is removed, the high branch remains stable inside the hysteresis window.</p>
-
-    <h3>B.4 Proof Of Proposition 7</h3>
-    <p>The first inequality \(|h|&lt;B_c\) places the no-shock baseline inside the hysteresis window, so both high and low stable branches exist at baseline. The second inequality \(B_c-h&lt;z_{\max}\) allows a shock \(z\in(B_c-h,z_{\max})\), so the total field \(h+z\) crosses strictly above \(B_c\), eliminating the low branch and moving the path to the high branch. When \(h&lt;0\), the material evaluator \(G(m)=hm\) ranks lower \(m\) above higher \(m\). Since the shock path ends on the high branch after removal, the final state has lower \(G\) than the original low-branch state.</p>
   </section>
 
   <section class="refs">
     <h2>References</h2>
-    <p>Adomavicius, Gediminas, Jesse C. Bockstedt, Shawn P. Curley, and Jingjing Zhang. "Do Recommender Systems Manipulate Consumer Preferences? A Study of Anchoring Effects." <em>Information Systems Research</em> 24(4), 2013, 956-975. <a href="https://ideas.repec.org/a/inm/orisre/v24y2013i4p956-975.html">Record</a>.</p>
-    <p>Akerlof, George A., and Rachel E. Kranton. "Economics and Identity." <em>Quarterly Journal of Economics</em> 115(3), 2000, 715-753. <a href="https://academic.oup.com/qje/article-abstract/115/3/715/1828154">Record</a>.</p>
-    <p>Ashton, Hal, and Matija Franklin. "Solutions to Preference Manipulation in Recommender Systems Require Knowledge of Meta-Preferences." 2022. <a href="https://arxiv.org/abs/2209.11801">arXiv</a>.</p>
-    <p>Banerjee, Abhijit V. "A Simple Model of Herd Behavior." <em>Quarterly Journal of Economics</em> 107(3), 1992, 797-817. <a href="https://academic.oup.com/qje/article-abstract/107/3/797/1873520">Record</a>.</p>
-    <p>Becker, Gary S., and Kevin M. Murphy. "A Theory of Rational Addiction." <em>Journal of Political Economy</em> 96(4), 1988, 675-700. <a href="https://www.jstor.org/stable/1830469">Record</a>.</p>
-    <p>Bernheim, B. Douglas, Debraj Ray, and Sevin Yeltekin. "Poverty and Self-Control." <em>Econometrica</em> 83(5), 2015, 1877-1911. <a href="https://bernheim.people.stanford.edu/publications/poverty-and-self-control">Record</a>.</p>
-    <p>Bernheim, B. Douglas, Luca Braghieri, Alejandro Martinez-Marquina, and David Zuckerman. "A Theory of Chosen Preferences." <em>American Economic Review</em> 111(2), 2021, 720-754. <a href="https://www.aeaweb.org/articles?id=10.1257/aer.20190390">Record</a>.</p>
-    <p>Bernheim, B. Douglas. "A Theory of Conformity." <em>Journal of Political Economy</em> 102(5), 1994, 841-877. <a href="https://www.journals.uchicago.edu/doi/10.1086/261957">Record</a>.</p>
-    <p>Bikhchandani, Sushil, David Hirshleifer, and Ivo Welch. "A Theory of Fads, Fashion, Custom, and Cultural Change as Informational Cascades." <em>Journal of Political Economy</em> 100(5), 1992, 992-1026. <a href="https://snap.stanford.edu/class/cs224w-readings/bikhchandani92fads.pdf">PDF</a>.</p>
-    <p>Bisin, Alberto, and Thierry Verdier. "The Economics of Cultural Transmission and the Dynamics of Preferences." <em>Journal of Economic Theory</em> 97(2), 2001, 298-319. <a href="https://eprints.soton.ac.uk/33480/">Record</a>.</p>
-    <p>Bowles, Samuel. "Endogenous Preferences: The Cultural Consequences of Markets and Other Economic Institutions." <em>Journal of Economic Literature</em> 36(1), 1998, 75-111. <a href="https://ideas.repec.org/a/aea/jeclit/v36y1998i1p75-111.html">Record</a>.</p>
-    <p>Brock, William A., and Steven N. Durlauf. "Discrete Choice with Social Interactions." <em>Review of Economic Studies</em> 68(2), 2001, 235-260. <a href="https://academic.oup.com/restud/article-abstract/68/2/235/1588432">Record</a>.</p>
-    <p>Chaney, Allison J. B., Brandon M. Stewart, and Barbara E. Engelhardt. "How Algorithmic Confounding in Recommendation Systems Increases Homogeneity and Decreases Utility." RecSys, 2018, 224-232. <a href="https://arxiv.org/abs/1710.11214">arXiv</a>.</p>
-    <p>Dekel, Eddie, Jeffrey C. Ely, and Okan Yilankaya. "Evolution of Preferences." <em>Review of Economic Studies</em> 74(3), 2007, 685-704. <a href="https://cet.econ.northwestern.edu/dekel/pdf/evolution%20of-preferences.pdf">PDF</a>.</p>
-    <p>Ely, Jeffrey C., and Okan Yilankaya. "Nash Equilibrium and the Evolution of Preferences." <em>Journal of Economic Theory</em> 97(2), 2001, 255-272. <a href="https://ideas.repec.org/a/eee/jetheo/v97y2001i2p255-272.html">Record</a>.</p>
-    <p>Fenichel, Neil. "Geometric Singular Perturbation Theory for Ordinary Differential Equations." <em>Journal of Differential Equations</em> 31(1), 1979, 53-98. <a href="https://link.springer.com/chapter/10.1007/BFb0095239">Reference</a>.</p>
-    <p>Granovetter, Mark. "Threshold Models of Collective Behavior." <em>American Journal of Sociology</em> 83(6), 1978, 1420-1443. <a href="https://www.journals.uchicago.edu/doi/10.1086/226707">Record</a>.</p>
-    <p>Heifetz, Aviad, Chris Shannon, and Yossi Spiegel. "What to Maximize if You Must." <em>Journal of Economic Theory</em> 133(1), 2007, 31-57. <a href="https://eml.berkeley.edu/~cshannon/wp/what.pdf">PDF</a>.</p>
-    <p>Jiang, Ray, Silvia Chiappa, Tor Lattimore, Andras Gyorgy, and Pushmeet Kohli. "Degenerate Feedback Loops in Recommender Systems." AIES, 2019. <a href="https://arxiv.org/abs/1902.10730">arXiv</a>.</p>
-    <p>Kempe, David, Jon Kleinberg, and Eva Tardos. "Maximizing the Spread of Influence through a Social Network." KDD, 2003, 137-146. <a href="https://www.cs.cornell.edu/home/kleinber/kdd03-inf.pdf">PDF</a>.</p>
-    <p>Kleinberg, Jon, Sendhil Mullainathan, and Manish Raghavan. "The Challenge of Understanding What Users Want: Inconsistent Preferences and Engagement Optimization." <em>Management Science</em> 70(9), 2024, 6336-6355. <a href="https://arxiv.org/abs/2202.11776">arXiv</a>.</p>
-    <p>Leibenstein, Harvey. "Bandwagon, Snob, and Veblen Effects in the Theory of Consumers' Demand." <em>Quarterly Journal of Economics</em> 64(2), 1950, 183-207. <a href="https://academic.oup.com/qje/article-abstract/64/2/183/1905439">Record</a>.</p>
-    <p>Manski, Charles F. "Identification of Endogenous Social Effects: The Reflection Problem." <em>Review of Economic Studies</em> 60(3), 1993, 531-542. <a href="https://academic.oup.com/restud/article-abstract/60/3/531/1574003">Record</a>.</p>
-    <p>Morris, Stephen. "Contagion." <em>Review of Economic Studies</em> 67(1), 2000, 57-78. <a href="https://academic.oup.com/restud/article-abstract/67/1/57/1566207">Record</a>.</p>
-    <p>Pesendorfer, Wolfgang. "Design Innovation and Fashion Cycles." <em>American Economic Review</em> 85(4), 1995, 771-792. <a href="https://www.jstor.org/stable/2118234">Record</a>.</p>
-    <p>Robson, Arthur J., Lorne A. Whitehead, and Nikolaus Robalino. "Adaptive Utility." <em>Journal of Economic Behavior and Organization</em> 211, 2023, 60-81. <a href="https://www.sfu.ca/~robson/ROWHRO.pdf">PDF</a>.</p>
-    <p>Sadowski, Philipp, and Todd Sarver. "Adaptive Preferences: An Evolutionary Model of Non-Expected Utility and Ambiguity Aversion." <em>Journal of Economic Theory</em> 218, 2024, 105840. <a href="https://ideas.repec.org/a/eee/jetheo/v218y2024ics0022053124000462.html">Record</a>.</p>
-    <p>Salganik, Matthew J., Peter Sheridan Dodds, and Duncan J. Watts. "Experimental Study of Inequality and Unpredictability in an Artificial Cultural Market." <em>Science</em> 311(5762), 2006, 854-856. <a href="https://www.science.org/doi/10.1126/science.1121066">Record</a>.</p>
-    <p>Sandholm, William H. "Preference Evolution, Two-Speed Dynamics, and Rapid Social Change." <em>Review of Economic Dynamics</em> 4(3), 2001, 637-679. <a href="https://ideas.repec.org/a/red/issued/v4y2001i3p637-679.html">Record</a>.</p>
-    <p>Stigler, George J., and Gary S. Becker. "De Gustibus Non Est Disputandum." <em>American Economic Review</em> 67(2), 1977, 76-90. <a href="https://econpapers.repec.org/RePEc:aea:aecrev:v:67:y:1977:i:2:p:76-90">Record</a>.</p>
-    <p>Watts, Duncan J. "A Simple Model of Global Cascades on Random Networks." <em>Proceedings of the National Academy of Sciences</em> 99(9), 2002, 5766-5771. <a href="https://www.pnas.org/doi/10.1073/pnas.082090499">Record</a>.</p>
+    <p id="ref-adomavicius">Adomavicius, Gediminas, Jesse C. Bockstedt, Shawn P. Curley, and Jingjing Zhang. "Do Recommender Systems Manipulate Consumer Preferences? A Study of Anchoring Effects." <em>Information Systems Research</em> 24(4), 2013, 956-975. <a href="https://ideas.repec.org/a/inm/orisre/v24y2013i4p956-975.html">Record</a>.</p>
+    <p id="ref-aassve">Aassve, Arnstein, Alicia Adsera, Paul Y. Chang, Letizia Mencarini, Hyunjoon Park, Chen Peng, Samuel Plach, James M. Raymo, Senhu Wang, and Wei-Jun Jean Yeung. "Family Ideals in an Era of Low Fertility." <em>Proceedings of the National Academy of Sciences</em>, 2024. <a href="https://www.pnas.org/doi/10.1073/pnas.2311847121">Record</a>.</p>
+    <p id="ref-ai-recommendations">Calvano, Emilio, Giacomo Calzolari, Vincenzo Denicolo, and Sergio Pastorello. "Artificial Intelligence Recommendations: Evidence, Issues, and Policy." <em>Oxford Review of Economic Policy</em> 40(4), 2024, 843-853. Published 2025. <a href="https://academic.oup.com/oxrep/article/40/4/843/7990569">Record</a>.</p>
+    <p id="ref-ai-companions">Malfacini, Kim. "The Impacts of Companion AI on Human Relationships: Risks, Benefits, and Design Considerations." <em>AI &amp; Society</em> 40, 2025, 5527-5540. <a href="https://link.springer.com/article/10.1007/s00146-025-02318-6">Record</a>.</p>
+    <p id="ref-banerjee">Banerjee, Abhijit V. "A Simple Model of Herd Behavior." <em>Quarterly Journal of Economics</em> 107(3), 1992, 797-817. <a href="https://academic.oup.com/qje/article-abstract/107/3/797/1873520">Record</a>.</p>
+    <p id="ref-becker-murphy">Becker, Gary S., and Kevin M. Murphy. "A Theory of Rational Addiction." <em>Journal of Political Economy</em> 96(4), 1988, 675-700. <a href="https://www.jstor.org/stable/1830469">Record</a>.</p>
+    <p id="ref-bernheim-chosen">Bernheim, B. Douglas, Luca Braghieri, Alejandro Martinez-Marquina, and David Zuckerman. "A Theory of Chosen Preferences." <em>American Economic Review</em> 111(2), 2021, 720-754. <a href="https://www.aeaweb.org/articles?id=10.1257/aer.20190390">Record</a>.</p>
+    <p id="ref-bikhchandani">Bikhchandani, Sushil, David Hirshleifer, and Ivo Welch. "A Theory of Fads, Fashion, Custom, and Cultural Change as Informational Cascades." <em>Journal of Political Economy</em> 100(5), 1992, 992-1026. <a href="https://snap.stanford.edu/class/cs224w-readings/bikhchandani92fads.pdf">PDF</a>.</p>
+    <p id="ref-bisin">Bisin, Alberto, and Thierry Verdier. "The Economics of Cultural Transmission and Socialization." NBER Working Paper 16512, 2010. <a href="https://www.nber.org/papers/w16512">Record</a>.</p>
+    <p id="ref-bowles">Bowles, Samuel. "Endogenous Preferences: The Cultural Consequences of Markets and Other Economic Institutions." <em>Journal of Economic Literature</em> 36(1), 1998, 75-111. <a href="https://ideas.repec.org/a/aea/jeclit/v36y1998i1p75-111.html">Record</a>.</p>
+    <p id="ref-brock-durlauf">Brock, William A., and Steven N. Durlauf. "Discrete Choice with Social Interactions." <em>Review of Economic Studies</em> 68(2), 2001, 235-260. <a href="https://academic.oup.com/restud/article-abstract/68/2/235/1588432">Record</a>.</p>
+    <p id="ref-chaney">Chaney, Allison J. B., Brandon M. Stewart, and Barbara E. Engelhardt. "How Algorithmic Confounding in Recommendation Systems Increases Homogeneity and Decreases Utility." RecSys, 2018. <a href="https://arxiv.org/abs/1710.11214">arXiv</a>.</p>
+    <p id="ref-dekel">Dekel, Eddie, Jeffrey C. Ely, and Okan Yilankaya. "Evolution of Preferences." <em>Review of Economic Studies</em> 74(3), 2007, 685-704. <a href="https://cet.econ.northwestern.edu/dekel/pdf/evolution%20of-preferences.pdf">PDF</a>.</p>
+    <p id="ref-hbs-ai">De Freitas, Julian, Ahmet K. Uguralp, Zeliha O. Uguralp, and Stefano Puntoni. "AI Companions Reduce Loneliness." Harvard Business School Working Paper 24-078, 2024. <a href="https://www.hbs.edu/ris/download.aspx?name=24-078.pdf">PDF</a>.</p>
+    <p id="ref-granovetter">Granovetter, Mark. "Threshold Models of Collective Behavior." <em>American Journal of Sociology</em> 83(6), 1978, 1420-1443. <a href="https://www.journals.uchicago.edu/doi/10.1086/226707">Record</a>.</p>
+    <p id="ref-jiang">Jiang, Ray, Silvia Chiappa, Tor Lattimore, Andras Gyorgy, and Pushmeet Kohli. "Degenerate Feedback Loops in Recommender Systems." AIES, 2019. <a href="https://arxiv.org/abs/1902.10730">arXiv</a>.</p>
+    <p id="ref-kleinberg">Kleinberg, Jon, Sendhil Mullainathan, and Manish Raghavan. "The Challenge of Understanding What Users Want: Inconsistent Preferences and Engagement Optimization." <em>Management Science</em> 70(9), 2024, 6336-6355. <a href="https://arxiv.org/abs/2202.11776">arXiv</a>.</p>
+    <p id="ref-mahler">Mahler, Lukas, Michele Tertilt, and Minchul Yum. "Policy Concerns in an Era of Low Fertility: The Role of Social Comparisons." 2025. <a href="https://lukasmahler.github.io/assets/pdf/5_Mahler_Tertilt_Yum_unembargoed.pdf">PDF</a>.</p>
+    <p id="ref-oecd">OECD. "Fertility Trends Across the OECD: Underlying Drivers and the Role for Policy." <em>Society at a Glance 2024</em>. <a href="https://www.oecd.org/en/publications/society-at-a-glance-2024_918d8db3-en/full-report/fertility-trends-across-the-oecd-underlying-drivers-and-the-role-for-policy_770679b8.html">Report</a>.</p>
+    <p id="ref-pesendorfer">Pesendorfer, Wolfgang. "Design Innovation and Fashion Cycles." <em>American Economic Review</em> 85(4), 1995, 771-792. <a href="https://www.jstor.org/stable/2118234">Record</a>.</p>
+    <p id="ref-surgeon-general">Office of the Surgeon General. "Our Epidemic of Loneliness and Isolation: The U.S. Surgeon General's Advisory on the Healing Effects of Social Connection and Community." US Department of Health and Human Services, 2023. <a href="https://www.ncbi.nlm.nih.gov/books/NBK595227/">NCBI Bookshelf</a>.</p>
+    <p id="ref-stigler-becker">Stigler, George J., and Gary S. Becker. "De Gustibus Non Est Disputandum." <em>American Economic Review</em> 67(2), 1977, 76-90. <a href="https://econpapers.repec.org/RePEc:aea:aecrev:v:67:y:1977:i:2:p:76-90">Record</a>.</p>
+    <p id="ref-ueda">Ueda, Peter, Catherine H. Mercer, Cyrus Ghaznavi, and Debby Herbenick. "Trends in Frequency of Sexual Activity and Number of Sexual Partners Among Adults Aged 18 to 44 Years in the US, 2000-2018." <em>JAMA Network Open</em> 3(6), 2020, e203833. <a href="https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2767066">Record</a>.</p>
+    <p id="ref-watts">Watts, Duncan J. "A Simple Model of Global Cascades on Random Networks." <em>Proceedings of the National Academy of Sciences</em> 99(9), 2002, 5766-5771. <a href="https://www.pnas.org/doi/10.1073/pnas.082090499">Record</a>.</p>
   </section>
 </main>
 </body>

@@ -117,3 +117,15 @@ The additional three review notes are:
 - `docs/agent_rounds/combined_round_6_modeller_numbering_palette.md`
 - `docs/agent_rounds/combined_round_7_writer_numerical_integration.md`
 - `docs/agent_rounds/combined_round_8_editor_production.md`
+
+Latest narrative-pivot review notes are:
+
+- `docs/agent_rounds/combined_round_9_narrative_pivot.md`
+- `docs/agent_rounds/combined_round_10_narrative_rigor.md`
+- `docs/agent_rounds/combined_round_11_final_reader_pass.md`
+
+The combined manuscript now loads MathJax locally from
+`vendor/mathjax/es5/tex-chtml.js`, so opening
+`paper/combined_fast_preference_closure_v1.html` as a local file should not
+produce a MathJax CDN connection error. If the in-app browser still shows stale
+content, reload the tab.
