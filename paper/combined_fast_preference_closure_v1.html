@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fast Preference Closure And Fitness Wedges</title>
+  <title>When Wants Move Faster Than Welfare</title>
   <script>
     window.MathJax = {
       tex: {
@@ -146,6 +146,83 @@
       line-height: 1.5;
       margin: 22px 0;
       padding: 14px 16px;
+    }
+
+    .lede {
+      color: #26313c;
+      font-size: 1.12rem;
+      line-height: 1.58;
+    }
+
+    .result-strip {
+      border-top: 2px solid var(--accent);
+      border-bottom: 1px solid var(--rule);
+      display: grid;
+      gap: 14px;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      margin: 26px 0 30px;
+      padding: 17px 0 19px;
+    }
+
+    .result-strip div {
+      min-width: 0;
+    }
+
+    .result-strip strong {
+      color: var(--accent);
+      display: block;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.82rem;
+      letter-spacing: 0.03em;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
+
+    .result-strip span {
+      color: #26313c;
+      display: block;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.9rem;
+      line-height: 1.36;
+    }
+
+    .issue-table td:first-child {
+      font-weight: 720;
+      width: 18%;
+    }
+
+    .issue-table {
+      font-size: 0.84rem;
+      line-height: 1.34;
+    }
+
+    .issue-table th,
+    .issue-table td {
+      padding: 8px 8px;
+    }
+
+    .issue-table td:nth-child(2) {
+      width: 15%;
+    }
+
+    .issue-table td:nth-child(3) {
+      width: 22%;
+    }
+
+    .reader-result {
+      background: #f8fbf5;
+      border: 1px solid #d9e8ce;
+      border-left: 4px solid var(--theorem-rule);
+      color: #243420;
+      font-size: 0.98rem;
+      line-height: 1.52;
+      margin: 22px 0;
+      padding: 14px 16px;
+    }
+
+    .reader-result strong {
+      color: #385928;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
     .warning {
@@ -323,6 +400,10 @@
         right: 12px;
       }
 
+      .result-strip {
+        grid-template-columns: 1fr;
+      }
+
       table {
         display: block;
         overflow-x: auto;
@@ -333,229 +414,279 @@
 <body>
 <main>
   <header>
-    <h1>Fast Preference Closure and Fitness Wedges</h1>
-    <p class="subtitle">Endogenous utility, social feedback, AI-mediated taste formation, and the separation between wanting, welfare, and survival</p>
+    <h1>When Wants Move Faster Than Welfare</h1>
+    <p class="subtitle">Fast preference closure, endogenous utility, and the separation between choice, welfare, and survival</p>
     <p class="meta">June 24, 2026</p>
     <p class="meta"><strong>JEL codes:</strong> C72, D01, D11, D83, D91, J13. <strong>Keywords:</strong> endogenous preferences, fast utility, fertility, loneliness, recommender systems, AI companions, Nash equilibrium, material payoff, selection.</p>
   </header>
 
   <section class="abstract">
     <h2>Abstract</h2>
-    <p>Many contemporary puzzles have the same uncomfortable structure. People sincerely choose, endorse, or drift into patterns that appear to weaken ordinary material objectives: lower fertility in rich societies, loneliness amid constant connection, retreat from dating and sex, status games that consume attention, and digital environments that satisfy momentary wants while reducing health, friendship, or reproduction. Call this a preference-fitness wedge: what people sincerely want after preference formation diverges from the slower criterion being evaluated.</p>
+    <p>Modern systems can make people sincerely want things that weaken the capacities they later need. A feed can train attention away from study or friendship. A betting app can make the next wager feel like participation rather than risk. An AI companion can reduce loneliness tonight while either rebuilding human social practice or replacing it. Once wants move this quickly, revealed preference is not only an input to economics. It is also an output of a preference-forming system.</p>
 
-    <p>The model separates three objects that are often collapsed: the utility representation people maximize, the material or fitness criterion used to evaluate consequences, and the rule that forms preferences. Fitness is application-relative: reproduction in fertility examples, health and social capacity in loneliness examples, and continuity in institutional examples. A fast preference-formation process first produces the utility representation. Players then choose a Nash equilibrium in the induced subjective game. The central wedge is therefore not between "true" and "false" preferences; it is between the process that makes preferences feel locally compelling and the slower criteria by which lives, populations, and institutions persist.</p>
+    <p>The model has three parts. A <em>closure law</em> is the process by which an environment settles what a person wants. People then optimize and play a Nash equilibrium in the induced subjective game. Consequences are evaluated by a separate material criterion such as health, fertility, solvency, social capacity, learning, or institutional continuity. The central object is a preference-capacity wedge: a locally sincere utility state that guides rational choice but weakens the slower capacity or institution being evaluated.</p>
 
-    <p>Four facts organize the argument. First, after fast preference adjustment, equilibrium analysis is analysis of the reduced subjective game. Second, agreement with a material-payoff benchmark is guaranteed under a strong best-response invariance condition; without such invariance, agreement is not generally warranted. Third, if many initial preference states close to the same induced utility representation, selection over those initial states becomes weak, so closure laws, institutions, platforms, and environments become the relevant objects. Fourth, preference change is not automatically harmful. Material loss requires a proxy that selects preference-forming rules misaligned with the material evaluator.</p>
+    <p>Three results follow. First, choices can be rational inside manufactured wants. The preferences are not fake; they are endogenous. Second, Nash equilibrium still describes strategic consistency after wants are formed, but it does not certify the preference-forming environment. Third, selection remains a survival method, but once different starting tastes are rapidly pushed into the same induced want, later behavior cannot tell those starting tastes apart. The durable selection question moves toward the platforms, institutions, peer networks, AI products, and social norms that repeatedly form tastes.</p>
 
-    <p>Low fertility, loneliness, dating retreat, fashion cascades, and AI companionship can then be studied as possible preference-fitness wedges. AI sharpens both sides of the argument: it can close preferences around engagement and dependency, or it can scaffold goals users endorse outside the immediate choice moment. The policy question is not whether preferences change. It is which systems shape them, how quickly, by what proxy, and whether they build or erode the capacities that make human and institutional life continue.</p>
+    <p>The cases fall into four families. Fertility and housing show moving thresholds: the standard for acceptable adulthood can rise faster than people can reach it. Loneliness, dating, and AI companions show capacity substitution: easier substitutes may either rebuild or replace the human skill they imitate. Gambling, debt, food, and appearance show reward capture: systems shorten the path to pleasure and delay the consequence. Politics and migration show civic reference points: anger, fear, or humiliation can persist after facts change. The evidence does not prove one grand cause. It identifies a repeated mechanism to test: fast preference formation, locally rational choice, a named evaluator, and a boundary condition.</p>
+
+    <p>The conditional predictions are sharp: family policy has limited force when the parenthood threshold is mainly social-status driven; AI companionship improves welfare when it increases real-world social capacity; fear can outlast crime or inflation shocks when the reference point itself has moved.</p>
   </section>
 
   <section>
-    <h2>1. Why Fast Preferences Matter</h2>
-    <p>Economics usually earns its power by treating preferences as given. That move is often reasonable. If tastes change slowly, the analyst can study prices, constraints, games, and institutions while holding utility fixed. The welfare question can then be asked in the familiar way: given what people want, which allocations are efficient or desirable?</p>
+    <h2>1. What Changes When Wants Move Fast</h2>
+    <p class="lede">A rational person can optimize inside a manufactured want. A society can then accumulate rational choices that are costly for health, reproduction, learning, solvency, trust, or institutional continuity. The contradiction is only apparent: subjective utility and material persistence are different objects.</p>
 
-    <p>The time scale has changed. Social media, recommender systems, dating apps, creator markets, online status games, and now AI companions or assistants do not merely satisfy preferences. They can help produce the preferences that later appear in choice data. They can do so quickly, experimentally, and at population scale. Once that is true, revealed preference becomes an output of a system rather than a primitive of the system.</p>
-
-    <p>The novelty is not the claim that preferences are endogenous. That claim has a long tradition. The novelty is the fast-limit question: if preference formation is much faster than the economic, demographic, or institutional process being evaluated, what survives equilibrium analysis, what can selection still act on, and when does revealed utility cease to be a reliable guide to the material criterion?</p>
-
-    <p>The issue matters because some of the most visible social trends look like preferences moving away from old fitness and welfare anchors. Fertility has fallen across most OECD countries; the <a href="#ref-oecd">OECD</a> reports that the average total fertility rate fell from 3.3 children per woman in 1960 to 1.5 in 2022. <a href="#ref-ueda">Ueda et al. (2020)</a> find that sexual inactivity increased among young US adults from 2000 to 2018, especially among younger men. The <a href="#ref-surgeon-general">US Surgeon General's advisory</a> treats loneliness and isolation as major health risks. None of these facts has a single cause, and none should be reduced to a moral panic about technology. But together they raise a mathematical question: how can a society contain many sincere, utility-maximizing choices that do not reproduce the society, thicken friendship, or preserve health?</p>
-
-    <div class="takeaway">
-      <strong>Core mechanism.</strong> A fast preference-formation environment can make locally attractive utility states that are not aligned with slower material, reproductive, health, or institutional objectives. The local utility is not fake. Local utility and long-run fitness are different objects, and modern preference technology can move the first faster than the second can discipline it.
+    <div class="result-strip">
+      <div>
+        <strong>Utility</strong>
+        <span>What feels worth choosing after the environment has shaped desire.</span>
+      </div>
+      <div>
+        <strong>Nash</strong>
+        <span>The consistency condition for choices in the induced subjective game.</span>
+      </div>
+      <div>
+        <strong>Evaluator</strong>
+        <span>The application-specific criterion: health, fertility, solvency, skill, trust, or continuity.</span>
+      </div>
+      <div>
+        <strong>Selection</strong>
+        <span>When initial tastes close to the same state, the empirical survival question turns toward taste-shaping systems.</span>
+      </div>
+      <div>
+        <strong>Policy</strong>
+        <span>The question is proxy alignment: what is the system optimizing while forming wants?</span>
+      </div>
     </div>
 
-    <p>Fast preference change also creates a positive possibility. If preferences can be shaped quickly, then beneficial preference scaffolding is possible. AI could help people practice goals they endorse on reflection: sleep, exercise, friendship, craft, parenting readiness, sobriety, learning, reconciliation, or more honest romantic search. The danger is not preference change. The danger is preference change chosen by a proxy that rewards attention, dependency, status anxiety, or short-run comfort while ignoring the slower capacities people need to live well.</p>
+    <p>Economics often treats preferences as given because the simplification is powerful. If tastes change slowly, the analyst can hold utility fixed and study prices, constraints, games, contracts, and institutions. That is still the right move for many questions. The move fails when the object called "preference" changes on the same time scale as the choice, or faster.</p>
+
+    <p>That faster world is no longer exotic. A feed can test thousands of tiny variations and learn which ones keep a person watching. A dating app can change the perceived cost of romantic effort. A sports-betting app can turn a game into a sequence of micro-risks. A beauty market can convert appearance into a continuously scored asset. A political influencer can become more trusted than an institution because the influencer feels familiar. An AI companion can respond with infinite patience and no ordinary social friction. These systems do not merely reveal demand. They help create the demand later revealed.</p>
+
+    <div class="reader-result">
+      <strong>Result in one sentence.</strong> When preference formation is fast, the economist must distinguish the utility people maximize from the process that formed that utility and from the slower criterion used to evaluate the consequences.
+    </div>
+
+    <p>Equilibrium applies after closure. Nash equilibrium is a mathematical consistency concept, not a moral endorsement. After preferences close, play may settle at a Nash equilibrium in the induced game. The result can be perfectly coherent as game theory and still poor as demography, public health, human capital, household finance, or institutional continuity.</p>
+
+    <p>Selection operates on what persists and reproduces. The fast limit changes the plausible object of selection. If many initial taste states are quickly pushed into the same induced utility state, later post-closure behavior cannot tell those starting states apart. Empirically, the natural object to study is then the environment that repeatedly forms tastes: families, schools, religious communities, neighborhoods, apps, platforms, AI systems, and legal rules.</p>
+
+    <p>The central wedge is therefore not between "real" and "fake" preferences. The preferences are real in the ordinary behavioral sense: people can sincerely act on them. The wedge is between locally compelling wants and a slower evaluator. The evaluator must always be named: fertility, health, solvency, learning, social capacity, and democratic legitimacy are not the same criterion.</p>
   </section>
 
   <section>
-    <h2>2. The Lens In Plain Language</h2>
-    <p>There are three layers. The first is <em>subjective utility</em>: what a person or player maximizes at the moment of choice. The second is <em>material value</em>: the outside criterion, such as health, reproduction, friendship, wealth, learning, or institutional continuity. The third is the <em>closure law</em>: the process that makes a person settle into one utility representation rather than another.</p>
+    <h2>2. Ten Live Puzzles</h2>
+    <p>Each case below has its own literature and its own causes. The diagnostic is simple: identify the fast preference-forming loop, identify the local choice it makes attractive, and then ask whether the induced wants strengthen or weaken a slower evaluator.</p>
 
-    <p>In an ordinary model, utility sits at the beginning. Here, utility sits in the middle. Something forms it. Then it guides choice. Then the consequences are evaluated.</p>
+    <p>Four families keep recurring across otherwise different problems. Fertility and housing are moving-threshold problems: the standard for acceptable adulthood moves faster than many people can reach it. Loneliness, dating, and AI companionship are capacity-substitution problems: easier substitutes can either rebuild or replace the human skill they imitate. Gambling, debt, food, and appearance are reward-capture problems: systems shorten the path to pleasure and delay the consequence, while GLP-1s show that fast preference change can also repair. Outrage, crime fear, economic mood, migration, and alliances are civic reference-point problems: the salient story can persist after conditions change.</p>
 
-    <p class="table-title"><strong>The three objects that must be kept separate.</strong></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Object</th>
-          <th>Question it answers</th>
-          <th>Examples</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Subjective utility</td>
-          <td>What feels worth choosing now?</td>
-          <td>Scrolling, avoiding rejection, pursuing status, joining a trend, talking to an AI companion, investing in a relationship.</td>
-        </tr>
-        <tr>
-          <td>Material or fitness value</td>
-          <td>What makes the person, group, or institution persist?</td>
-          <td>Health, fertility, durable friendship, household formation, skill accumulation, trust, solvency, civic continuity.</td>
-        </tr>
-        <tr>
-          <td>Closure law</td>
-          <td>What process makes the subjective utility settle where it does?</td>
-          <td>Social comparison, habit, recommender exposure, parental norms, peer status, AI coaching, AI companionship.</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p>A person can be perfectly consistent after closure. Once the preference state has settled, choosing according to it is ordinary optimization. Nash equilibrium also remains ordinary: it is still a consistency condition on choices. What changes is the game to which Nash equilibrium is applied. The game is no longer built from fixed primitive utility. It is built from utility produced by the closure process.</p>
-
-    <p>In words, the finite-game results are:</p>
-    <ul>
-      <li><strong>Fast closure result:</strong> after fast preference adjustment, players optimize in the induced subjective game.</li>
-      <li><strong>Nash invariance result:</strong> the induced game is guaranteed to have the same Nash predictions as the material-payoff game under the strong sufficient condition that closure preserves every player's best responses.</li>
-      <li><strong>Selection result:</strong> if different initial tastes all close to the same final utility, selection over those initial tastes is weakened; analysis must then examine the closure laws, platforms, institutions, or environments that form tastes.</li>
-      <li><strong>Proxy result:</strong> preference shaping is harmful relative to a criterion. If the proxy choosing the closure law is aligned with the material evaluator, it can help. If it is misaligned, it can produce stable, sincerely wanted losses.</li>
-    </ul>
-
-    <p>The intellectual neighborhood is broad. <a href="#ref-stigler-becker">Stigler and Becker</a> showed how stable preferences can coexist with changing shadow prices, while <a href="#ref-becker-murphy">Becker and Murphy</a> model habit-like dynamics in rational addiction. <a href="#ref-bowles">Bowles</a>, <a href="#ref-bisin">Bisin and Verdier</a>, and <a href="#ref-bernheim-chosen">Bernheim et al.</a> study endogenous, transmitted, or chosen preferences. <a href="#ref-dekel">Dekel, Ely, and Yilankaya</a> ask which preferences survive evolutionary selection. Recommender-system work studies preference manipulation, feedback loops, algorithmic confounding, and engagement incentives (<a href="#ref-adomavicius">Adomavicius et al.</a>; <a href="#ref-jiang">Jiang et al.</a>; <a href="#ref-chaney">Chaney, Stewart, and Engelhardt</a>; <a href="#ref-kleinberg">Kleinberg, Mullainathan, and Raghavan</a>). The fast-limit question is narrower: when preference formation is much faster than the rest of the economy, what remains invariant, what must be studied as a selected object, and how can revealed utility diverge from a chosen material evaluator?</p>
-  </section>
-
-  <section>
-    <h2>3. Puzzles The Lens Clarifies</h2>
-    <p>No single model substitutes for empirical demography, sociology, psychology, or medicine. The recurring candidate pattern is a fitness wedge: a locally attractive preference state is produced by a fast environment and then persists even when it weakens a slower material criterion.</p>
-
-    <p class="table-title"><strong>Preference-fitness wedges in contemporary examples.</strong></p>
-    <table>
+    <p class="table-title"><strong>Ten contemporary preference-capacity wedges.</strong></p>
+    <table class="issue-table">
       <thead>
         <tr>
           <th>Puzzle</th>
-          <th>Fast closure mechanism</th>
-          <th>Possible material criterion weakened</th>
-          <th>Mechanism</th>
+          <th>Evidence</th>
+          <th>Closure loop</th>
+          <th>Testable implication</th>
+          <th>Boundary condition</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Low fertility</td>
-          <td>Status comparison, intensive parenting norms, career clocks, housing and education races.</td>
-          <td>Population replacement, kin networks, old-age support, institutional continuity.</td>
-          <td>Shows one mechanism by which childbearing can become locally dominated when population continuity is the evaluator.</td>
+          <td><strong>Fertility gap.</strong> People still report wanting families, yet family formation keeps sliding later and lower.</td>
+          <td><a href="#ref-oecd">OECD</a>, <a href="#ref-unfpa-2025">UNFPA</a>, <a href="#ref-eurostat-fertility">Eurostat</a>, <a href="#ref-cdc-births">CDC/NCHS</a>.</td>
+          <td>Status competition, intensive parenting, housing, career risk, partner-market friction, fear of the future.</td>
+          <td>If realized fertility intentions are the evaluator, the wedge grows when "adequate parenting" becomes too demanding to choose.</td>
+          <td>Voluntary childlessness, medical limits, gender equity, and economic constraints must be separated from induced threshold effects.</td>
         </tr>
         <tr>
-          <td>Loneliness amid connection</td>
-          <td>Low-friction digital contact, avoidance of rejection, algorithmic entertainment, weakened offline practice.</td>
-          <td>Health, friendship, trust, resilience, civic association.</td>
-          <td>Separates momentary relief from the capacity to sustain embodied relationships.</td>
+          <td><strong>Housing threshold.</strong> A home can be objectively usable but subjectively not "adult enough" for marriage or children.</td>
+          <td><a href="#ref-jchs-2025">Harvard JCHS</a>; <a href="#ref-nar-2025">NAR</a>.</td>
+          <td>Comparison changes what counts as a tolerable home, neighborhood, school district, and family platform.</td>
+          <td>Household formation should be most delayed where material affordability and social readiness thresholds diverge.</td>
+          <td>Supply, rates, insurance, taxes, zoning, and income are direct constraints, not merely preference effects.</td>
         </tr>
         <tr>
-          <td>Retreat from dating and sex</td>
-          <td>Digital substitutes, safety norms, pornography, games, dating-app discouragement, fear of reputational error.</td>
-          <td>Pair bonding, fertility, emotional development, household formation.</td>
-          <td>Shows how risk avoidance can be locally rational while reducing future opportunity and skill.</td>
+          <td><strong>Loneliness paradox.</strong> Connectivity rises while loneliness remains a health problem.</td>
+          <td><a href="#ref-who-loneliness">WHO</a>; <a href="#ref-surgeon-general">US Surgeon General</a>.</td>
+          <td>Low-friction digital contact and entertainment make avoidance comfortable while embodied social practice decays.</td>
+          <td>Digital contact should help when it leads to reciprocal ties and harm when it replaces them.</td>
+          <td>Illness, geography, disability, family structure, work schedules, and local institutions also drive isolation.</td>
         </tr>
         <tr>
-          <td>Status and appearance cascades</td>
-          <td>Lookmaxxing, cosmetic trends, influencer comparison, metrics that make rank salient.</td>
-          <td>Attention, self-respect, financial resources, mental health.</td>
-          <td>Models persistent branch selection: a temporary social shock can create a new stable taste state.</td>
+          <td><strong>Dating retreat.</strong> Romantic opportunity is technologically abundant, yet courtship can feel more brittle and costly.</td>
+          <td><a href="#ref-ueda">Ueda et al.</a>; <a href="#ref-cdc-yrbs">CDC YRBS</a>.</td>
+          <td>Apps, pornography, gaming, safety fears, reputational risk, and rejection avoidance raise the utility of non-courtship substitutes.</td>
+          <td>Avoidance should become persistent where substitutes reduce practice and make later human risk feel worse.</td>
+          <td>Some retreat reflects autonomy, safety, intentionality, and lower coercion.</td>
         </tr>
         <tr>
-          <td>AI companions and assistants</td>
-          <td>Always-available empathy, memory, personalization, low rejection, behavioral coaching.</td>
-          <td>Can weaken or strengthen human relationships, self-regulation, and agency.</td>
-          <td>Identifies the design question: bridge to real capacities or replace them.</td>
+          <td><strong>Identity loop.</strong> A passing mood can become a public label, a searchable community, and then a self-preserving identity.</td>
+          <td><a href="#ref-pew-teens-tech">Pew tech</a>; <a href="#ref-pew-teens-mental">Pew mental health</a>; <a href="#ref-asps-2024">ASPS</a>.</td>
+          <td>Feeds reward self-narration, comparison, metrics, filters, and appearance optimization.</td>
+          <td>Identity and body preferences should be less reversible when online communities and metrics reward persistence.</td>
+          <td>Online identity communities can be protective, and cosmetic choices may improve confidence for some users.</td>
+        </tr>
+        <tr>
+          <td><strong>AI companion fork.</strong> A machine can reduce loneliness immediately while either rebuilding or replacing human social practice.</td>
+          <td><a href="#ref-common-sense-ai">Common Sense Media</a>; <a href="#ref-hbs-ai">De Freitas et al.</a>; <a href="#ref-ai-companions">Malfacini</a>.</td>
+          <td>Always-available empathy, memory, and personalization make low-rejection companionship attractive.</td>
+          <td>The test is whether AI functions as a bridge to human capacity or a sink that increases dependency.</td>
+          <td>Evidence is early; short-run loneliness relief is valuable even when long-run effects remain uncertain.</td>
+        </tr>
+        <tr>
+          <td><strong>Debt and betting loop.</strong> The next bet or purchase can feel like identity completion before the balance-sheet cost arrives.</td>
+          <td><a href="#ref-nber-sports-betting">NBER sports betting</a>; <a href="#ref-fed-shed-2025">Federal Reserve SHED</a>; <a href="#ref-aga-revenue">AGA</a>.</td>
+          <td>Frictionless bets and checkout transform fandom or identity consumption into repeated immediate reward.</td>
+          <td>Financial harm should concentrate where app exposure is high and liquidity feedback is delayed or hidden.</td>
+          <td>Legal betting can substitute for illegal markets, and BNPL can smooth liquidity for some households.</td>
+        </tr>
+        <tr>
+          <td><strong>Appetite repair.</strong> Appetite can be trained by food environments and then partly re-trained by medicine.</td>
+          <td><a href="#ref-cdc-upf">CDC</a>; <a href="#ref-wilding-semaglutide">Wilding et al.</a>; <a href="#ref-apa-glp1">APA</a>.</td>
+          <td>Food environments train craving; GLP-1s may alter appetite and craving.</td>
+          <td>Fast preference change may repair a wedge when the selection proxy is metabolic health rather than consumption volume.</td>
+          <td>Access, side effects, biology, stress, discontinuation, and food insecurity remain central.</td>
+        </tr>
+        <tr>
+          <td><strong>Outrage demand.</strong> People may prefer political content that makes them angrier and less able to deliberate.</td>
+          <td><a href="#ref-pew-news-influencers">Pew</a>; <a href="#ref-hks-tiktok">HKS Misinformation Review</a>; <a href="#ref-pnas-divisive">PNAS Nexus</a>; <a href="#ref-gallup-institutions">Gallup</a>.</td>
+          <td>Parasocial trust, anger, enemy exposure, and format familiarity make institutional verification less rewarding.</td>
+          <td>Civic trust should weaken where engagement rewards outrage more than correction or institutional competence.</td>
+          <td>Influencers can democratize expertise, and distrust can reflect real institutional failure.</td>
+        </tr>
+        <tr>
+          <td><strong>Migration backlash.</strong> Aging economies may need workers while voters experience migration as loss of control.</td>
+          <td><a href="#ref-oecd-migration">OECD</a>; <a href="#ref-unhcr-2024">UNHCR</a>; <a href="#ref-pew-border">Pew</a>; <a href="#ref-gallup-immigration">Gallup</a>.</td>
+          <td>Border visibility, housing pressure, crime narratives, service strain, and national identity close preferences around threat or openness.</td>
+          <td>Attitudes should be especially salience-sensitive when identity threat and state-capacity signals dominate labor-market facts.</td>
+          <td>Backlash is not reducible to manipulation; housing, wages, services, security, and administrative capacity matter.</td>
         </tr>
       </tbody>
     </table>
 
-    <p>Low fertility is a clean example if population continuity is the evaluator. The <a href="#ref-oecd">OECD</a> emphasizes that fertility decisions depend on economic security, costs, norms, labor markets, family policy, and personal conditions. Work on family ideals and comparison motives argues that norms about parenting and parental status competition can push households toward higher investment per child and lower fertility (<a href="#ref-aassve">Aassve et al. 2024</a>; <a href="#ref-mahler">Mahler, Tertilt, and Yum 2025</a>). One candidate closure chain is: visible comparison raises the perceived standard of adequate parenting; another child becomes locally costly in utility; postponement or one-child choices become individually reasonable; from the standpoint of a population-continuity evaluator, replacement and kin-network density weaken; the new norm may then make the high-investment, low-fertility state easier to reproduce socially. This chain is testable; it is not asserted as the dominant empirical cause.</p>
-
-    <p>The loneliness puzzle has a different shape. Digital connection can provide comfort, entertainment, and community. It can also become a substitute for the awkward practice required to maintain human relationships. The <a href="#ref-surgeon-general">Surgeon General's advisory</a> defines social connection broadly, including the structure, function, and quality of relationships, and treats lacking connection as a serious health issue. One testable chain is: low-friction mediated contact reduces the immediate cost of solitude; solitary or semi-social routines become locally rewarding; offline practice may decay; future offline interaction becomes harder; the person may sincerely prefer the substitute even if health, friendship, and resilience decline. The empirical question is whether a digital or AI-mediated closure law builds human social capacity or closes preferences around less demanding substitutes.</p>
-
-    <p>The retreat from dating and sex is not just loneliness with different vocabulary. <a href="#ref-ueda">Ueda et al. (2020)</a> document a decline in sexual activity among young adults, but no single technology cause is required for the mechanism. Dating involves rejection risk, ambiguity, embodied timing, reputational fear, app-market discouragement, and imperfect feedback. If pornography, games, parasocial intimacy, or low-risk online interaction become safer substitutes, lower dating effort can be locally optimal. If that effort reduction then erodes confidence, meeting opportunities, and relationship skill, the fast utility of avoidance can become self-confirming.</p>
-
-    <div class="note warning">
-      <strong>Limits.</strong> Low fertility is not morally wrong by definition. No individual has a duty to reproduce inside this model. Online life is not bad by definition, and AI companions are not necessarily harmful. "Fitness" is a criterion chosen for an application. In fertility it may mean replacement; in loneliness it may mean health and social capacity; in institutions it may mean continuity. The narrower claim is that when preference formation is fast, revealed desire alone cannot settle the welfare or survival question.
-    </div>
+    <p>The examples are not a catalogue of decline. Several are ambivalent, and one is explicitly hopeful. AI companions can reduce acute loneliness. GLP-1 drugs can make short-run appetite less destructive. Online communities can rescue isolated people. Influencers can explain politics to audiences that institutions abandoned. The same diagnostic handles harms and repairs because it asks what capacity the system leaves stronger or weaker, what proxy selects that change, and which slower capacity is being measured.</p>
   </section>
 
   <section>
-    <h2>4. AI As Risk And Repair</h2>
-    <p>AI can act as a personalized closure law. A recommender system chooses exposure. A companion system chooses tone, memory, empathy, and availability. A coaching system chooses prompts, reminders, and interpretations of a user's goals. These systems can shift what feels easy, meaningful, embarrassing, urgent, or rewarding.</p>
+    <h2>3. Fertility, Housing, And The Moving Target Of Adulthood</h2>
+    <p>Fertility is often discussed as if the preference for children either exists or disappears. That misses the middle layer. Many people may still value children, but the preference environment can change the conditions under which having children feels responsible, attractive, or socially admissible.</p>
 
-    <p>The negative case is familiar: optimize engagement, and the system may discover content or interaction styles that the user repeatedly chooses but later regrets. <a href="#ref-kleinberg">Kleinberg, Mullainathan, and Raghavan</a> formalize a related point: engagement can fail to track what users want when momentary choices are inconsistent with broader welfare. Recommender-system reviews and audits emphasize that recommendation can shape choices, concentration, diversity, and welfare (<a href="#ref-ai-recommendations">Calvano et al.</a>; <a href="#ref-jiang">Jiang et al.</a>; <a href="#ref-chaney">Chaney, Stewart, and Engelhardt</a>). In fast-closure terms, the system may be changing the utility representation that generates the next revealed preference.</p>
+    <p>The <a href="#ref-oecd">OECD fertility review</a> documents a long decline in fertility across rich countries and ties it to labor markets, gender norms, housing, uncertainty, family policy, and personal conditions. <a href="#ref-unfpa-2025">UNFPA's 2025 report</a> shifts the emphasis from panic about low births to reproductive agency: many people report that cost of living, insecure futures, unequal care burdens, partner constraints, and health factors prevent them from having the number of children they want. <a href="#ref-eurostat-fertility">Eurostat</a> reports an EU total fertility rate of 1.34 in 2024. The United States remains below replacement as well, with <a href="#ref-cdc-births">CDC/NCHS</a> reporting low recent fertility and births.</p>
 
-    <p>The positive case is just as important. If AI can shape preferences, it can help make fast utilities more reflective relative to a specified evaluator. A well-designed AI system could make the long-run object more salient at the moment of choice. It could help a lonely person practice initiating real contact, help a student begin the next hour of work, help a patient act on a prior sleep goal instead of scrolling, help a couple de-escalate conflict, or help a prospective parent navigate fear without romanticizing hardship. Companion-AI research already frames the design fork: replacement and deskilling are risks, but systems can also be designed to support human relationships, social motivation, and social skill (<a href="#ref-ai-companions">Malfacini 2025</a>; <a href="#ref-hbs-ai">De Freitas et al. 2024</a>).</p>
+    <p>Fast preference closure enters through the idea of an "adequate" adult life. If visible comparison raises the standard for housing, schools, extracurricular investment, career stability, body image, travel, and parental attention, then children become subjectively expensive even when income has risen relative to earlier generations. In the model, the cost is not only a budget constraint. It is a utility state: a person may sincerely prefer delay because the induced taste system says that parenting before a high threshold is irresponsible or humiliating.</p>
 
-    <p class="table-title"><strong>Two AI closure designs.</strong></p>
+    <p>Housing sharpens the point. The <a href="#ref-jchs-2025">Harvard Joint Center for Housing Studies</a> documents severe affordability pressures and cost burdens. The <a href="#ref-nar-2025">National Association of Realtors</a> reported a historically low first-time-buyer share and older first-time buyers in its recent buyer profile. Housing affects fertility in the familiar budgetary way, but the fast-preference lens adds a positional layer: the social meaning of a "good enough" home can move faster than the physical stock of housing. A household may be financially able to have a child by older standards while feeling unable by the current status standard.</p>
+
+    <div class="reader-result">
+      <strong>Demographic mechanism.</strong> Low fertility can be modeled as a failure of realized agency rather than as a simple disappearance of family desire: fast comparison raises the subjective threshold for acceptable parenthood, and the induced utility can rationally select postponement or smaller families.
+    </div>
+
+    <p>The prediction is concrete but conditional. If the binding closure law is a status race over adequate adulthood, then pronatalist cash transfers alone should have limited effect. Stronger effects should come from changes that lower the socially induced threshold: reliable childcare, housing supply in family-forming places, predictable work schedules, reduced education-status arms races, visible normalization of good-enough parenting, and partner-market conditions that make commitment less risky. The right empirical test is not merely whether people say they want children. It is whether the environment makes the wanted child feel feasible without heroic status performance.</p>
+  </section>
+
+  <section>
+    <h2>4. Loneliness, Dating, And Synthetic Ease</h2>
+    <p>Loneliness is not simply the absence of contact. It is often the absence of reliable, reciprocal, embodied connection. That distinction matters because digital and AI systems can supply contact-like relief while leaving the harder capacity untouched.</p>
+
+    <p>The <a href="#ref-who-loneliness">WHO Commission on Social Connection</a> treats loneliness as a global health issue, and the <a href="#ref-surgeon-general">US Surgeon General's advisory</a> describes social disconnection as a serious risk to health and community. Yet modern life offers more channels for contact than any prior period. The paradox is easier to understand once preferences are endogenous. If entertainment, mediated contact, asynchronous interaction, and low-risk parasocial connection reduce the immediate cost of solitude, a person can rationally choose the substitute today. If that substitute reduces practice at initiating, repairing, and sustaining ordinary relationships, tomorrow's human interaction becomes more costly. Avoidance then becomes more attractive because it has already weakened the capacity required for return.</p>
+
+    <p>Dating and sex fit the same pattern without being identical. <a href="#ref-ueda">Ueda et al. (2020)</a> document increased sexual inactivity among US adults aged 18 to 44 from 2000 to 2018, with especially large changes among younger men. <a href="#ref-cdc-yrbs">CDC youth surveys</a> also show long-run changes in adolescent sexual behavior. The model does not require a single villain. Apps, pornography, games, safety norms, reputational fear, economic insecurity, and online comparison can all raise the perceived cost of courtship. If lower effort then reduces confidence, social networks, and opportunity, the fast utility of avoidance becomes self-confirming.</p>
+
+    <p>AI companions intensify the mechanism because they can offer the reward of social response without ordinary reciprocity. <a href="#ref-common-sense-ai">Common Sense Media</a> reports substantial teen use of AI companions. <a href="#ref-hbs-ai">De Freitas et al.</a> find that AI companions can reduce loneliness in experimental and longitudinal settings. Both facts can be true. Acute loneliness relief is valuable. The long-run question is whether the companion is a bridge or a sink.</p>
+
+    <p class="table-title"><strong>AI companion design as preference closure.</strong></p>
     <table>
       <thead>
         <tr>
-          <th>Design target</th>
-          <th>Fast utility it creates</th>
-          <th>Likely long-run effect</th>
+          <th>Design</th>
+          <th>Immediate want it strengthens</th>
+          <th>Long-run evaluator</th>
+          <th>Observable success</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Engagement closure</td>
-          <td>"Stay here; this is easier, safer, more stimulating, and always responsive."</td>
-          <td>Can increase dependency, isolation, sleep loss, status anxiety, and opportunity decay.</td>
+          <td>Replacement</td>
+          <td>Stay with the always-available system because it is safer and more responsive.</td>
+          <td>User attachment, retention, session time, subscription renewal.</td>
+          <td>More dependence on the system and fewer human attempts.</td>
         </tr>
         <tr>
-          <td>Scaffolding closure</td>
-          <td>"Use this interaction to become more capable outside the system."</td>
-          <td>Can build social skill, health, learning, reflection, and durable agency.</td>
+          <td>Scaffolding</td>
+          <td>Use the system to rehearse, plan, and recover from human interaction.</td>
+          <td>Social capacity, loneliness reduction, reflected endorsement, offline relationships.</td>
+          <td>More capable life outside the system, including voluntary exit from heavy use.</td>
         </tr>
       </tbody>
     </table>
 
-    <p>This is why the proxy-alignment result matters. A change in preference is not a loss by definition. A changed equilibrium is not a loss by definition. The material claim requires a proxy statement. If the system selects interactions because they increase watch time, dependency, or subscription retention, the induced preferences may drift away from health, friendship, or family formation. If the system selects interactions because they advance a specified material evaluator, the same fast-preference technology can improve that evaluator.</p>
-
-    <p>Operationally, the difference is measurable. A scaffolding design should treat off-platform action as success, measure capacity rather than retention, support user-endorsed long-run goals, reduce dependency on the system, and regard exit into human relationships or ordinary competence as a good outcome. The evaluator should be grounded in reflective endorsement, revisable consent, and observable capacity gains, not merely in a designer's moralized objective. Engagement closure treats the next session as success. Scaffolding closure treats the user's expanded life outside the system as success.</p>
-
-    <div class="takeaway">
-      <strong>Selection implication.</strong> When closure is very fast, selection pressure need not restore alignment by acting on initial tastes. The selection theorem shows that initial taste differences become hard to distinguish after common closure. The next question is therefore which environments, institutions, platforms, and AI systems repeatedly form tastes.
+    <div class="reader-result">
+      <strong>Social-capacity result.</strong> The same technology can reduce or deepen a preference-capacity wedge. It helps when it makes the difficult human capacity easier to practice. It harms when it makes the substitute so satisfying that the capacity decays.
     </div>
   </section>
 
   <section>
-    <h2>5. The Social-Feedback Mechanism</h2>
-    <p>The worked mechanism is social feedback. A taste becomes more attractive when it appears common, admired, safe, or high-status. This covers fashion in the ordinary sense, but also memes, body norms, ideological cascades, dating norms, parenting standards, and platform-mediated visibility. The mechanism connects to classic models of herd behavior, informational cascades, fashion cycles, threshold contagion, and social interactions (<a href="#ref-granovetter">Granovetter</a>; <a href="#ref-banerjee">Banerjee</a>; <a href="#ref-bikhchandani">Bikhchandani, Hirshleifer, and Welch</a>; <a href="#ref-pesendorfer">Pesendorfer</a>; <a href="#ref-brock-durlauf">Brock and Durlauf</a>; <a href="#ref-watts">Watts</a>).</p>
+    <h2>5. Reward Loops: Gambling, Debt, Food, And Appearance</h2>
+    <p>Some wedges look less like ideology and more like trained reward. These are systems that shorten pleasure and lengthen consequence. The old model of temptation is still relevant, but the speed and personalization have changed. A platform can learn the exact timing, graphic, social cue, and offer that moves a person from weak interest to repeated use.</p>
 
-    <p>The mechanism has two regimes. Below a critical feedback threshold, exposure has a unique and reversible effect. A recommendation, influencer, or meme can move tastes, but when the shock disappears the preference state moves back. Above the threshold, the same kind of temporary exposure can move the system to a different stable branch. At that point the shock no longer needs to remain present. History has selected a new preference state.</p>
+    <h3>Frictionless Risk And Purchase</h3>
+    <p>Online sports betting is a clean case because it turns fandom into a continuous market for micro-risk. <a href="#ref-nber-sports-betting">NBER research</a> links online sports betting legalization and access to financial stress, including lower savings and worse credit outcomes for some households. The <a href="#ref-aga-revenue">American Gaming Association</a> tracks the growth of commercial gaming revenue, and sports betting has become a large, routine consumer market. The fast-closure mechanism is not merely "people like risk." It is that the app can make the next small wager feel like participation, identity, and attention at once.</p>
 
-    <p>This avoids an unhelpful binary. Many preference changes are ordinary learning or exploration. Some are persistent branch changes. The empirical question is which regime a given domain is in. Does exposure merely inform? Does it temporarily nudge? Or does it help select a new self-reinforcing taste equilibrium?</p>
+    <p>Buy-now-pay-later and identity consumption have a related structure. <a href="#ref-fed-shed-2025">Federal Reserve household well-being data</a> report BNPL use and financial strain among users. A purchase can close a gap between the current self and the visible aspirational self. The debt consequence arrives later, diffusely, and often privately. The utility correction is immediate, vivid, and often social.</p>
 
-    <p>The same feedback field looks different across applications. Parenting standards can be the field in fertility, perceived rejection and status can be the field in dating, body norms can be the field in appearance cascades, and responsiveness cues can be the field in AI companionship. The empirical evaluator is supplied domain by domain.</p>
+    <h3>Repair And Arms Race</h3>
+    <p>Food shows why the model should not become anti-pleasure moralizing. The <a href="#ref-cdc-upf">CDC</a> documents high ultra-processed-food calorie shares. Food environments can train cravings that work against metabolic health. GLP-1 drugs are a candidate repair mechanism: clinical evidence such as <a href="#ref-wilding-semaglutide">Wilding et al.</a> shows large weight effects, while clinical and consumer discussions suggest changes in appetite and craving. The point is not that medicine should replace judgment. The formal point is that endogenous utility can be harmful or beneficial depending on the evaluator and selection proxy. A preference-forming system is a bridge when it leaves the person more capable outside the system; it is a sink when it becomes the place where the capacity is consumed.</p>
+
+    <p>Teen attention and identity loops make the mechanism visible earlier in life. <a href="#ref-pew-teens-tech">Pew's teen technology surveys</a> document near-constant social media use among many adolescents, and <a href="#ref-pew-teens-mental">Pew's teen mental-health survey</a> reports that many teens see social media as having a negative effect on people their age. The model's warning is not that online identity communities are bad; for some youth they are protective. The warning is that a temporary feeling can become a rewarded label, then a searchable community, then a self-preserving preference state.</p>
+
+    <p>Appearance markets, including lookmaxxing and early cosmetic normalization, add a positional layer. The <a href="#ref-asps-2024">American Society of Plastic Surgeons</a> documents a large cosmetic-procedure market. A platformed face is not simply a face; it is a ranked, filtered, comparable asset. If each person acts rationally inside a beauty arms race, average anxiety and expenditure can rise even if no one intended the race. Social feedback can move the branch: yesterday's enhanced look becomes today's baseline, and the old baseline begins to feel inadequate.</p>
+
+    <div class="reader-result">
+      <strong>Reward-loop implication.</strong> Fast utility can make the next bet, purchase, snack, procedure, or scroll rational at the moment of choice while weakening financial resilience, metabolic health, attention, or body satisfaction over the slower horizon.
+    </div>
   </section>
 
   <section>
-    <h2>6. Computational Audits</h2>
-    <p>The computations are mechanism audits, not empirical estimates. They check whether the formal conditions are knife-edge or visible in simple simulations. Two results matter.</p>
+    <h2>6. Politics And International Spillovers</h2>
+    <p>Politics is full of preferences that are locally rewarding and institutionally costly. The preference for outrage can be enjoyable because it supplies clarity, group belonging, moral rank, and enemy identification. The institution damaged by that preference is not an individual's private welfare alone. It is deliberation, legitimacy, peaceful competition, and the public's ability to coordinate on shared facts.</p>
 
-    <p>First, social feedback can turn a temporary exposure shock into a persistent preference state. In the mean-field example below, the shock does not need to remain present. It moves the system across a fold; once the system is in the high branch's basin, removing the shock does not restore the old taste state.</p>
+    <p><a href="#ref-pew-news-influencers">Pew's news-influencer work</a> shows that a substantial share of US adults, especially younger adults, regularly get news from influencers. The problem is not that influencers are always wrong. Many are useful translators. The closure risk is that trust migrates from institutions and correction processes toward personalities who feel familiar. <a href="#ref-hks-tiktok">Research on TikTok engagement during the 2024 US election</a> and <a href="#ref-pnas-divisive">platform-ranking audits</a> suggest that engagement systems can reward divisive or toxic content more than what users say they reflectively want. <a href="#ref-gallup-institutions">Gallup</a> and <a href="#ref-pew-trust">Pew</a> document low institutional trust. In the model, distrust can become self-reinforcing: distrust makes correction less rewarding, and lack of correction confirms distrust.</p>
 
-    <figure>
-      <img src="../results/figures/fashion_mean_field_hysteresis.svg" alt="Mean-field hysteresis">
-      <figcaption>Stable and unstable closure branches for the mean-field social-feedback model, with \(\beta=2.0\), \(J=0.8\), and baseline field \(h=-0.08\). A positive shock moves the path from the low branch to the high branch. Removing the shock leaves the system in the high branch's basin; the low branch still exists mathematically inside the hysteresis window, but this path does not return to it without another perturbation.</figcaption>
-    </figure>
+    <p>Crime fear and economic mood show why this is not only about ideology. <a href="#ref-pew-crime">Pew's work on local news and crime perception</a> shows how violent crime can become highly salient through exposure, while <a href="#ref-fbi-crime">FBI preliminary data</a> report recent national declines in violent crime. National declines do not refute local danger or underreporting; they show why the level of fear and the level of measured crime must be analyzed separately. Inflation memory has a similar structure: even after some macro indicators improve, <a href="#ref-brookings-sentiment">Brookings</a> and public-opinion work describe household sentiment as shaped by price memories, housing costs, insurance, groceries, and partisan attribution. These are not imaginary grievances. The preference-closure question is how a recent shock becomes a durable reference point for trust and political choice.</p>
 
-    <p>Second, the finite-game audit separates three questions that are often blurred. Fast closure can change Nash predictions; that change can be strategically irrelevant or material; and material loss depends on the proxy selecting the closure law. Random strategic closure often changes the reduced game, while a noisy but approximately aligned proxy produces much less material loss than independent or misaligned proxy choice.</p>
+    <p>Migration shows the international version. The <a href="#ref-oecd-migration">OECD</a> reports high migration flows, while <a href="#ref-unhcr-2024">UNHCR</a> reports historically high forced displacement. Aging economies may need workers and caregivers, but publics may experience migration through housing pressure, border imagery, crime stories, language anxiety, or national-identity threat. <a href="#ref-pew-border">Pew</a> found that most Americans viewed the US-Mexico border situation as a crisis or major problem in early 2024; <a href="#ref-gallup-immigration">Gallup</a> later found that the desire to reduce immigration fell sharply in 2025. The swing is consistent with salience-sensitive preferences, while also reflecting real border conditions, policy changes, media agenda, and partisan cueing.</p>
 
-    <figure>
-      <img src="../results/figures/model_selection_fast_closure_audit.svg" alt="Finite-game stress test bar chart">
-      <figcaption>Finite-game stress test. The neutral route has zero selected-outcome shift, while random strategic closure often changes the reduced game. Proxy-choice material loss in this audit is small under a noisy approximately aligned proxy and large under independent or misaligned proxies. Best-response preservation is reported in Appendix C.</figcaption>
-    </figure>
+    <p>The global implication is sharp. If a country's political media reward unilateralism, contempt for allies, or suspicion of international institutions, domestic utility can move in a direction that weakens alliance coordination, migration integration, sanctions support, or climate cooperation. <a href="#ref-pew-global-us">Pew's 2026 global survey</a> reports declining ratings for the United States and greater concern about its reliability among publics in many countries; those publics may become more receptive to hedging even when shared security or trade interests remain. Conversely, a closure law that makes competence, reciprocity, and credible administration rewarding can strengthen institutional capacity.</p>
 
-    <p>The detailed tables, network multiplier audit, random-parameter audit, and sensitivity checks are collected in Appendix C. Fast utility can be perfectly coherent as utility and still fail a material evaluator; whether it does so depends on the closure law and the proxy that selects it.</p>
+    <div class="reader-result">
+      <strong>Political implication.</strong> Political preferences can become reference-point preferences: citizens choose the information environment that preserves anger, fear, or humiliation even when that weakens the institutions they later need.
+    </div>
   </section>
 
   <section>
-    <h2>7. What To Measure</h2>
-    <p>The empirical tests are speed, alignment, and reversibility.</p>
+    <h2>7. Equilibrium After Wants Are Formed</h2>
+    <p>A betting app example shows the separation. The user may maximize the utility of the next in-game wager; the platform may select exposures that increase betting; the material evaluator may be household liquidity. Those three objects can point in different directions.</p>
 
-    <p>Do not force fast closure onto every domain. If preferences move slowly relative to the economic choice, reverse after exposure, or are shaped by a proxy aligned with the material evaluator, standard preference-as-given analysis may be adequate. Fast closure matters most when those checks fail.</p>
+    <p>The formal core is the discipline of not collapsing those objects. The first object is the closure law: the process that forms the preference state. The second is the subjective game: after closure, each player maximizes the utility that now feels like the relevant payoff. The third is the material evaluator: the criterion used to judge the resulting outcome.</p>
 
-    <p>The first research design is a speed test. If exposure changes stated values, attention, search, or habits only slowly, ordinary preference-as-given analysis may be adequate. If the movement occurs over days, weeks, or a few interaction cycles, the closure law itself becomes an economic object. Randomized exposure, platform rollouts, sudden recommendation changes, local outages, and cohort timing can all help estimate whether preferences move on the fast side of the relevant economic decision.</p>
+    <p>The fast-limit assumption says that the preference state settles before the slower economic or institutional process changes much. This is an extreme case, but useful extremes reveal what is invariant. In that limit, equilibrium analysis becomes ordinary game theory applied to the induced subjective game. The math does not say that Nash equilibrium is obsolete. It says that Nash equilibrium begins after preference formation has already done important work.</p>
 
-    <p>The second design is a reversibility test. A nudge that disappears when exposure disappears is different from a branch change that persists after the shock ends. Post-shock follow-up is therefore not a secondary detail; it is the key test of hysteresis. The same logic applies to AI companions or coaching systems: does the interaction leave the user more able to act outside the system, or more dependent on the system for the action to occur?</p>
+    <p>Existing economics already contains many pieces of this story. <a href="#ref-stigler-becker">Stigler and Becker</a> defend stable preferences by moving variation into shadow prices; <a href="#ref-becker-murphy">Becker and Murphy</a> formalize habit and addiction; <a href="#ref-bowles">Bowles</a>, <a href="#ref-bisin">Bisin and Verdier</a>, and <a href="#ref-bernheim-chosen">Bernheim et al.</a> study endogenous, transmitted, or chosen preferences.</p>
 
-    <p>The third design is a proxy audit. For recommender systems and AI products, the empirical question is not only what users click, but what objective selected the experience that formed the next preference. Engagement, retention, stated satisfaction, reflected goals, health, friendship, and skill accumulation can point in different directions. The model suggests looking for preference-fitness wedges where these proxies disagree.</p>
+    <p><a href="#ref-dekel">Dekel, Ely, and Yilankaya</a> ask which preferences survive selection. Recommender-system work studies preference-shaping, feedback loops, and engagement incentives (<a href="#ref-adomavicius">Adomavicius et al.</a>; <a href="#ref-jiang">Jiang et al.</a>; <a href="#ref-chaney">Chaney, Stewart, and Engelhardt</a>; <a href="#ref-kleinberg">Kleinberg, Mullainathan, and Raghavan</a>). The fast limit separates the timing: first the environment closes wants, then players optimize, then the result is evaluated by a named material criterion.</p>
+
+    <p>The strongest invariance condition is best-response preservation. If preference closure leaves every player's best response unchanged at every opponent strategy, then the subjective and material games have the same Nash predictions. That is the clean case. It is also demanding. When closure changes best responses, Nash predictions can change. Whether the change is materially good or bad depends on the evaluator.</p>
+
+    <p>The selection theorem explains why the Darwinian question can move up one level. If different initial tastes are all rapidly mapped into the same closed taste state, then a selection rule that observes only post-closure play cannot distinguish those initial tastes. That theorem does not by itself prove a full evolutionary dynamic over institutions. It identifies the next empirical object: the closure laws and environments that keep producing preferences. In ordinary language, when the app, institution, school, peer group, or AI system rewrites tastes quickly enough, the survival question increasingly concerns the preference-forming system.</p>
+
+    <p>Social feedback gives the mechanism a sharp threshold. Below the threshold, exposure is reversible. Above it, a temporary shock can move the system to a new stable branch. That is the mathematical version of a meme, norm, body standard, political identity, or parenting ideal that no longer needs the original shock to persist.</p>
+  </section>
+
+  <section>
+    <h2>8. Tests And Policy</h2>
+    <p>The model becomes empirical when the evaluator is explicit. Fertility examples require measures of desired and realized children, housing thresholds, partner-market friction, parenting norms, and cohort timing. Loneliness examples require separating contact from capacity: whether digital or AI interaction increases later human interaction, reciprocal support, and health. Gambling and debt examples require linking exposure, app design, betting frequency, liquidity, and credit outcomes. Political examples require measuring the gap between engagement, reflected preference, factual accuracy, trust, and institutional behavior.</p>
 
     <p class="table-title"><strong>Diagnostics suggested by the model.</strong></p>
     <table>
@@ -563,46 +694,60 @@
         <tr>
           <th>Diagnostic</th>
           <th>Empirical question</th>
-          <th>Why it matters</th>
+          <th>Useful evidence</th>
+          <th>Interpretation</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Preference speed</td>
-          <td>How quickly do stated values, attention, habits, and social norms move after exposure?</td>
-          <td>Fast movement makes closure analysis relevant.</td>
+          <td>Speed</td>
+          <td>How quickly do values, habits, search, or attention change after exposure?</td>
+          <td>Rollouts, outages, randomized ranking changes, cohort timing, high-frequency surveys.</td>
+          <td>Fast movement makes preference formation part of the economic object.</td>
+        </tr>
+        <tr>
+          <td>Reversibility</td>
+          <td>Do wants return when exposure ends, or does a new branch persist?</td>
+          <td>Longitudinal follow-up after product exits, bans, shocks, or algorithm changes.</td>
+          <td>Persistent branch changes require stronger interventions than reversible nudges.</td>
         </tr>
         <tr>
           <td>Proxy alignment</td>
-          <td>Does the system optimize engagement, retention, stated satisfaction, reflected goals, health, or social capacity?</td>
+          <td>What does the system optimize while forming preferences?</td>
+          <td>Engagement, retention, satisfaction, reflected goals, health, learning, savings, social ties.</td>
           <td>Preference change is harmful only relative to a criterion.</td>
         </tr>
         <tr>
-          <td>Substitution versus complementarity</td>
-          <td>Does digital or AI interaction replace human relationships or help people form them?</td>
-          <td>The same AI companion can be a bridge or a sink.</td>
+          <td>Capacity</td>
+          <td>Does the closure law build or erode the ability to act outside the system?</td>
+          <td>Offline relationships, classroom persistence, savings buffers, social skill, work output.</td>
+          <td>Many material evaluators depend on capacities, not only current choices.</td>
         </tr>
         <tr>
-          <td>Hysteresis</td>
-          <td>After a shock ends, do preferences return, or does a new branch persist?</td>
-          <td>Persistent branch changes require different policy tools than reversible nudges.</td>
-        </tr>
-        <tr>
-          <td>Capacity effects</td>
-          <td>Does the closure law build skills and opportunities, or erode them?</td>
-          <td>Fitness often depends on capacities, not just current choices.</td>
+          <td>Selection level</td>
+          <td>Are initial tastes or taste-forming systems doing the real work?</td>
+          <td>Comparisons across schools, platforms, families, legal regimes, recommendation objectives, AI designs.</td>
+          <td>In the fast limit, durable differences are especially likely to appear at the level of institutions and closure laws.</td>
         </tr>
       </tbody>
     </table>
+
+    <p>Policy follows the same separation. If the problem is a budget constraint, subsidize or deregulate the constrained object. If the problem is reversible influence, disclosure, friction, and choice architecture may help. If the problem is persistent branch selection, small nudges may fail because the induced taste state is self-reinforcing. If the problem is proxy misalignment, the central policy lever is the objective function of the system forming preferences.</p>
+
+    <p>AI makes that policy question more precise. A companion or assistant should not be evaluated only by engagement or user affection. It should be evaluated by whether the user becomes more capable outside the system. A recommender should not be evaluated only by watch time. It should be evaluated by reflected satisfaction, sleep, learning, social capacity, and the user's ability to leave without losing function. A political platform should not be evaluated only by expression and activity. It should be evaluated by whether it preserves the institutional preconditions of peaceful disagreement.</p>
+
+    <div class="note warning">
+      <strong>Limits.</strong> The model does not imply that low fertility is immoral, that online life is bad, that migrants are merely economic inputs, that AI companions are inherently harmful, or that institutional distrust is never earned. Its claim is narrower and more useful: when preferences are formed quickly by systems with measurable objectives, revealed choice alone cannot settle the welfare or survival question.
+    </div>
   </section>
 
   <section>
-    <h2>8. Conclusion</h2>
-    <p>People can be sincere, consistent, and locally utility-maximizing while the preference-formation environment moves utility away from slower survival and welfare criteria. That possibility is not a refutation of economics. It moves one object: utility is no longer only a primitive; it is also an endogenous state.</p>
+    <h2>9. Conclusion</h2>
+    <p>Modern preference technologies make an old assumption fragile. If wants are slow, utility can be treated as a primitive. If wants are fast, utility becomes a state variable produced by institutions, platforms, peer networks, and AI systems. People then optimize inside that state, and their choices can be rational without being aligned with the slower capacities that keep lives and societies working.</p>
 
-    <p>The result is not anti-technology. A system that shapes preferences can be destructive, neutral, or beneficial. It depends on the closure law and the proxy selecting it. AI may make the problem sharper because it can personalize preference formation in real time. It may also make the solution sharper because it can help people practice the goals they endorse outside the immediate choice moment.</p>
+    <p>The useful conclusion is not pessimistic. The same mechanism that can produce dependency, isolation, debt, status anxiety, political outrage, or fertility blockage can also be used for repair. A preference-forming system can make exercise easier, conversation less frightening, learning more rewarding, appetite less compulsive, parenting more feasible, and disagreement less humiliating. The difference is the proxy. Engagement closure treats the next session as success. Scaffolding closure treats the user's expanded life outside the system as success.</p>
 
-    <p>The discipline is separation. Do not confuse subjective utility with material value. Do not confuse Nash equilibrium with welfare. Do not confuse preference change with harm. Do not confuse revealed preference with a primitive when the environment has just helped produce it. The diagnostic question is whether a case is ordinary choice under fixed preferences, reversible influence, persistent closure, or proxy-selected preference formation.</p>
+    <p>Nash equilibrium still disciplines strategic claims: it describes consistency among choices after wants form. Darwinian selection still disciplines survival claims: it can be applied to the systems that keep reproducing taste-forming environments and their effects. In fast-preference economies, the central object is the closure law, the system that makes some wants feel natural before anyone starts optimizing.</p>
   </section>
 
   <section>
@@ -631,19 +776,19 @@
     <p>During the fast adjustment, \(E\) and \(\ell\) are held fixed; \(\zeta\) is either fixed or specified as the fast input path. Let \(q\) be the initial preference state. The closure map is the selected post-adjustment preference state.</p>
 
     <div class="equation">
-      <span class="label">Closure Map And Unique Branch</span>
+      <span class="label">Closure Map And Fixed-Input Unique Branch</span>
       \[
       \begin{aligned}
         C_\ell(E,q,\zeta)
         &amp;=
         \lim_{s\to\infty}\theta(s;q,E,\ell,\zeta),\\
-        \theta_\ell^\star(E)
+        \theta_{\ell,\zeta}^\star(E)
         &amp;=
         C_\ell(E,q,\zeta)
         \quad
-        \text{for all relevant }(q,\zeta)
+        \text{for all relevant }q
         \quad
-        \text{in the unique-closure case.}
+        \text{after fixing }(E,\ell,\zeta).
       \end{aligned}
       \]
     </div>
@@ -660,28 +805,28 @@
       \]
     </div>
 
-    <p>In the unique-closure benchmark, \(\Gamma_\ell^\star(E)\) is shorthand for the same reduced subjective game with \(C_{i,\ell}(E,q,\zeta)=\theta_{i,\ell}^\star(E)\) for every player and every relevant initial state.</p>
+    <p>In the fixed-input unique-closure benchmark, \(\Gamma_{\ell,\zeta}^\star(E)\) is shorthand for the same reduced subjective game with \(C_{i,\ell}(E,q,\zeta)=\theta_{i,\ell,\zeta}^\star(E)\) for every player and every relevant initial state.</p>
 
     <div class="theorem" data-kind="Lemma">
       <span class="theorem-title">Fast Closure With The Slow Environment Held Constant</span>
-      <p>Fix \(E\), \(\ell\), and the relevant input \(\zeta\). In the unique-closure benchmark, suppose the fast preference dynamic has a unique globally attracting fixed point \(\theta_\ell^\star(E)\) on the relevant input class. Then, after the fast preference adjustment and in the limit \(T_\theta\to0\), equilibrium analysis at \((E,\ell)\) is represented by the reduced subjective game \(\Gamma_\ell^\star(E)\). More generally, if the fast limit from initial state \(q\) exists and equals \(C_\ell(E,q,\zeta)\), equilibrium analysis for that closure experiment is represented by \(\Gamma_{\ell,q,\zeta}^\star(E)\).</p>
+      <p>Fix \(E\), \(\ell\), and the relevant input \(\zeta\). In the fixed-input unique-closure benchmark, suppose the fast preference dynamic has a unique globally attracting fixed point \(\theta_{\ell,\zeta}^\star(E)\) on the relevant input class. Then, after the fast preference adjustment and in the limit \(T_\theta\to0\), the limiting payoff table at \((E,\ell,\zeta)\) is represented by the reduced subjective game \(\Gamma_{\ell,\zeta}^\star(E)\). More generally, if the fast limit from initial state \(q\) exists and equals \(C_\ell(E,q,\zeta)\), the limiting payoff table for that closure experiment is represented by \(\Gamma_{\ell,q,\zeta}^\star(E)\).</p>
     </div>
 
-    <p class="proof"><strong>Proof.</strong> On the fast time \(s=t/T_\theta\), the preference subsystem is \(d\theta/ds=H(\theta;E,\ell,\zeta)\). Under unique closure, every initial state in the relevant basin converges to \(\theta_\ell^\star(E)\). Thus the payoff table used for play converges pointwise to \(U_i(\cdot;\theta_{i,\ell}^\star(E),E,\ell)\) for every player. Because action sets are finite, the limiting finite game is well defined. The branch-selected case is identical with \(C_\ell(E,q,\zeta)\) replacing \(\theta_\ell^\star(E)\).</p>
+    <p class="proof"><strong>Proof.</strong> On the fast time \(s=t/T_\theta\), the preference subsystem is \(d\theta/ds=H(\theta;E,\ell,\zeta)\). Under fixed-input unique closure, every initial state in the relevant basin converges to \(\theta_{\ell,\zeta}^\star(E)\). Thus the payoff table used for play converges pointwise to \(U_i(\cdot;\theta_{i,\ell,\zeta}^\star(E),E,\ell)\) for every player. Because action sets are finite, the limiting finite game is well defined. The branch-selected case is identical with \(C_\ell(E,q,\zeta)\) replacing \(\theta_{\ell,\zeta}^\star(E)\). The lemma identifies the limiting game; it does not assert convergence of equilibrium selections without an additional selection rule.</p>
 
     <h3>A.2 Nash Invariance</h3>
     <p>Let \(X_i=\Delta(A_i)\) be player \(i\)'s mixed-strategy simplex and \(X=\prod_iX_i\). For \(x=(x_i,x_{-i})\), write \(x(a)=\prod_jx_j(a_j)\). The expected subjective and material payoffs are:</p>
 
-    <p>For compact notation, this subsection writes the unique-closure case using \(\theta_{i,\ell}^\star(E)\). In a branch-selected experiment, replace \(\theta_{i,\ell}^\star(E)\) everywhere by the realized closure component \(C_{i,\ell}(E,q,\zeta)\). The best-response argument is unchanged once the realized reduced game is fixed.</p>
+    <p>For compact notation, this subsection fixes the input \(\zeta\) and writes the unique-closure case using \(\theta_{i,\ell,\zeta}^\star(E)\). In a branch-selected experiment, replace \(\theta_{i,\ell,\zeta}^\star(E)\) everywhere by the realized closure component \(C_{i,\ell}(E,q,\zeta)\). The best-response argument is unchanged once the realized reduced game is fixed.</p>
 
     <div class="equation">
       <span class="label">Expected Payoffs</span>
       \[
       \begin{aligned}
-        \bar U_{i,\ell}(x_i,x_{-i};E)
+        \bar U_{i,\ell,\zeta}(x_i,x_{-i};E)
         &amp;=
         \sum_{a\in A}x(a)\,
-        U_i(a;\theta_{i,\ell}^\star(E),E,\ell),\\
+        U_i(a;\theta_{i,\ell,\zeta}^\star(E),E,\ell),\\
         \bar\pi_{i,\ell}(x_i,x_{-i};E)
         &amp;=
         \sum_{a\in A}x(a)\,\pi_i(a;E,\ell).
@@ -707,10 +852,10 @@
       <span class="label">Best-Response Correspondences</span>
       \[
       \begin{aligned}
-        BR_{i,\ell}^\star(x_{-i};E)
+        BR_{i,\ell,\zeta}^\star(x_{-i};E)
         &amp;=
         \arg\max_{x_i\in X_i}
-        \bar U_{i,\ell}(x_i,x_{-i};E),\\
+        \bar U_{i,\ell,\zeta}(x_i,x_{-i};E),\\
         BR_{i,\ell}^\pi(x_{-i};E)
         &amp;=
         \arg\max_{x_i\in X_i}
@@ -721,7 +866,7 @@
 
     <div class="theorem" data-kind="Proposition">
       <span class="theorem-title">Mixed Best-Response Invariance</span>
-      <p>If \(BR_{i,\ell}^\star(x_{-i};E)=BR_{i,\ell}^\pi(x_{-i};E)\) for every player \(i\) and every mixed opponent profile \(x_{-i}\in X_{-i}\), then the subjective reduced game and the material benchmark game have the same mixed Nash equilibrium set. For a fixed game, the condition is sufficient but not necessary.</p>
+      <p>If \(BR_{i,\ell,\zeta}^\star(x_{-i};E)=BR_{i,\ell}^\pi(x_{-i};E)\) for every player \(i\) and every mixed opponent profile \(x_{-i}\in X_{-i}\), then the subjective reduced game and the material benchmark game have the same mixed Nash equilibrium set. For a fixed game, the condition is sufficient but not necessary.</p>
     </div>
 
     <p class="proof"><strong>Proof.</strong> A mixed Nash equilibrium is exactly a fixed point of the players' best-response correspondences. If every player's subjective and material best-response correspondences are equal at every opponent mixed profile, the two fixed-point sets are identical.</p>
@@ -732,7 +877,7 @@
       <div class="equation">
         <span class="label">Opponent-Only Transformation</span>
         \[
-          U_i(a_i,a_{-i};\theta_{i,\ell}^\star(E),E,\ell)
+          U_i(a_i,a_{-i};\theta_{i,\ell,\zeta}^\star(E),E,\ell)
           =
           \alpha_i(a_{-i};E,\ell)
           +
@@ -817,10 +962,10 @@
 
     <div class="theorem" data-kind="Proposition">
       <span class="theorem-title">Subcritical Social-Feedback Closure</span>
-      <p>If \(\beta\eta\rho(W)&lt;1\), where \(\rho(W)\) is the spectral radius of \(W\), then the network social-feedback closure has a unique settled taste state. Small changes in \(z\) move that state continuously. When \(z\) is removed, the closure law itself has no hysteresis.</p>
+      <p>If \(\beta\eta\rho(W)&lt;1\), where \(\rho(W)\) is the spectral radius of \(W\), then the network social-feedback closure has a unique globally attracting settled taste state. Small changes in \(z\) move that state continuously. When \(z\) is removed, the closure law itself has no hysteresis.</p>
     </div>
 
-    <p class="proof"><strong>Proof.</strong> The right-hand side fixed-point map is a contraction in a weighted sup norm under the spectral-radius condition. Banach's fixed-point theorem gives a unique fixed point and continuous dependence on \(z\). Hysteresis requires multiple stable branches, which contraction excludes.</p>
+    <p class="proof"><strong>Proof.</strong> The right-hand side fixed-point map \(F(m,z)\) is a contraction in a weighted sup norm under the spectral-radius condition; write its Lipschitz constant in that norm as \(L&lt;1\). Banach's fixed-point theorem gives a unique fixed point and continuous dependence on \(z\). For the ODE \(\dot m=(F(m,z)-m)/T_m\), the same contraction gives exponential decay of the distance between any trajectory and the fixed point at rate at least \((1-L)/T_m\) in the chosen norm. Hence the fixed point is globally attracting. Hysteresis requires multiple stable branches, which contraction excludes.</p>
 
     <p>At a stable fixed point \(m^\star\), define \(D=\operatorname{diag}(1-(m_i^\star)^2)\). Differentiating the fixed-point equation with respect to the exposure field gives the local multiplier:</p>
 
@@ -835,12 +980,12 @@
 
     <div class="theorem" data-kind="Proposition">
       <span class="theorem-title">Near-Critical Influence Multiplier</span>
-      <p>If \(I-\beta\eta DW\) is invertible, the local response of settled preferences to a small exposure field is given by the multiplier above. As \(\beta\eta\rho(DW)\) approaches one from below, the response can become large and concentrated along central attention directions to which \(D\phi\) has nonzero projection.</p>
+      <p>If \(I-\beta\eta DW\) is invertible, the local derivative of settled preferences with respect to a small exposure field is given by the multiplier above. As \(\beta\eta\rho(DW)\) approaches one from below, the derivative can become large along the critical Perron or singular direction when \(D\phi\) has nonzero projection on that direction. This is a local derivative statement, not a finite-shock prediction.</p>
     </div>
 
     <p class="proof"><strong>Proof.</strong> Differentiate \(m=F(m,z)\) with respect to \(z\) and rearrange. The inverse becomes large as the relevant eigenvalue of \(\beta\eta DW\) approaches one from below.</p>
 
-    <p>The mean-field case sets all agents equal. Let \(m\) be average taste, \(J\) average reinforcement, and \(b=h+z\) the total field.</p>
+    <p>The mean-field case sets all agents equal. Let \(m\) be average taste, \(J&gt;0\) average reinforcement, \(\beta&gt;0\) responsiveness, and \(b=h+z\) the total field.</p>
 
     <div class="equation">
       <span class="label">Mean-Field Social-Feedback Closure</span>
@@ -859,6 +1004,8 @@
         B_c=Jm_s-\frac{\operatorname{arctanh}(m_s)}{\beta}.
       \]
     </div>
+
+    <p>The positive fold \(+B_c\) that destroys the low branch occurs at \(m=-m_s\). The negative fold \(-B_c\) that destroys the high branch occurs symmetrically at \(m=+m_s\). This sign convention is useful because a positive exposure shock must push the total field above \(+B_c\) to eliminate the low branch.</p>
 
     <div class="theorem" data-kind="Proposition">
       <span class="theorem-title">Hysteresis And Persistent Fashion</span>
@@ -883,12 +1030,14 @@
       <p>If the persistent-loss window holds, \(h&lt;0\), and the initial condition is on the low stable branch, then any temporary positive exposure shock \(z\in(B_c-h,z_{\max})\) can move the system to the high stable branch when held long enough on the fast time scale. After the shock disappears, the new taste state persists along that path and lowers \(G\).</p>
     </div>
 
-    <p class="proof"><strong>Proof.</strong> The inequalities put the baseline inside the hysteresis window and allow a shock to cross the upper critical field. The fast-time holding condition gives the basin transition described in Proposition 7. When \(h&lt;0\), the material evaluator ranks lower \(m\) above higher \(m\). The shock path ends on the high branch, so it lowers \(G\) relative to the initial low branch.</p>
+    <p class="proof"><strong>Proof.</strong> The inequalities put the baseline inside the hysteresis window and allow a shock to cross the upper critical field. The fast-time holding condition gives the basin transition described by the hysteresis proposition. When \(h&lt;0\), the material evaluator ranks lower \(m\) above higher \(m\). The shock path ends on the high branch, so it lowers \(G\) relative to the initial low branch.</p>
   </section>
 
   <section>
     <h2>Appendix C. Numerical Details</h2>
-    <p>The computations are illustrative mechanism checks. They use a single figure palette throughout: teal marks stability, invariance, or alignment; red marks material loss; blue marks exposure or equilibrium movement; amber marks comparison cases, instability, or strategic distortion; violet marks return paths after shock removal.</p>
+    <p>The computations are illustrative mechanism checks. The network multiplier corresponds to influencer and feed concentration; the mean-field flip corresponds to persistent fashion, norm, or identity branches; the finite-game diagnostics correspond to the separation between Nash consistency and proxy/material alignment.</p>
+
+    <p>The figures use a restrained common palette: teal marks stability, invariance, or alignment; red marks material loss; blue marks exposure or equilibrium movement; amber marks comparison cases, instability, or strategic distortion.</p>
 
     <p>Replication entry points are <code>scripts/run_fashion_meme_analysis.py</code>, <code>scripts/run_model_selection_audit.py</code>, and <code>scripts/run_model_selection_sensitivity.py</code>. The figures and tables read by this article are stored under <code>results/figures</code> and <code>results/tables</code>. The audits are stress tests of the mechanisms, not estimates of a real platform or population.</p>
 
@@ -991,8 +1140,11 @@
     <h2>References</h2>
     <p id="ref-adomavicius">Adomavicius, Gediminas, Jesse C. Bockstedt, Shawn P. Curley, and Jingjing Zhang. "Do Recommender Systems Manipulate Consumer Preferences? A Study of Anchoring Effects." <em>Information Systems Research</em> 24(4), 2013, 956-975. <a href="https://ideas.repec.org/a/inm/orisre/v24y2013i4p956-975.html">Record</a>.</p>
     <p id="ref-aassve">Aassve, Arnstein, Alicia Adsera, Paul Y. Chang, Letizia Mencarini, Hyunjoon Park, Chen Peng, Samuel Plach, James M. Raymo, Senhu Wang, and Wei-Jun Jean Yeung. "Family Ideals in an Era of Low Fertility." <em>Proceedings of the National Academy of Sciences</em>, 2024. <a href="https://www.pnas.org/doi/10.1073/pnas.2311847121">Record</a>.</p>
+    <p id="ref-aga-revenue">American Gaming Association. "Commercial Gaming Revenue Tracker." 2026. <a href="https://www.americangaming.org/resources/commercial-gaming-revenue-tracker/">Tracker</a>.</p>
     <p id="ref-ai-recommendations">Calvano, Emilio, Giacomo Calzolari, Vincenzo Denicolo, and Sergio Pastorello. "Artificial Intelligence Recommendations: Evidence, Issues, and Policy." <em>Oxford Review of Economic Policy</em> 40(4), 2024, 843-853. Published 2025. <a href="https://academic.oup.com/oxrep/article/40/4/843/7990569">Record</a>.</p>
     <p id="ref-ai-companions">Malfacini, Kim. "The Impacts of Companion AI on Human Relationships: Risks, Benefits, and Design Considerations." <em>AI &amp; Society</em> 40, 2025, 5527-5540. <a href="https://link.springer.com/article/10.1007/s00146-025-02318-6">Record</a>.</p>
+    <p id="ref-apa-glp1">American Psychological Association. "Weight-Loss Drugs and Mental Health." <em>Monitor on Psychology</em>, 2025. <a href="https://www.apa.org/monitor/2025/07-08/weight-loss-drugs-mental-health">Article</a>.</p>
+    <p id="ref-asps-2024">American Society of Plastic Surgeons. "Plastic Surgery Statistics Report." 2024. <a href="https://www.plasticsurgery.org/plastic-surgery-statistics">Report</a>.</p>
     <p id="ref-banerjee">Banerjee, Abhijit V. "A Simple Model of Herd Behavior." <em>Quarterly Journal of Economics</em> 107(3), 1992, 797-817. <a href="https://academic.oup.com/qje/article-abstract/107/3/797/1873520">Record</a>.</p>
     <p id="ref-becker-murphy">Becker, Gary S., and Kevin M. Murphy. "A Theory of Rational Addiction." <em>Journal of Political Economy</em> 96(4), 1988, 675-700. <a href="https://www.jstor.org/stable/1830469">Record</a>.</p>
     <p id="ref-bernheim-chosen">Bernheim, B. Douglas, Luca Braghieri, Alejandro Martinez-Marquina, and David Zuckerman. "A Theory of Chosen Preferences." <em>American Economic Review</em> 111(2), 2021, 720-754. <a href="https://www.aeaweb.org/articles?id=10.1257/aer.20190390">Record</a>.</p>
@@ -1000,18 +1152,46 @@
     <p id="ref-bisin">Bisin, Alberto, and Thierry Verdier. "The Economics of Cultural Transmission and Socialization." NBER Working Paper 16512, 2010. <a href="https://www.nber.org/papers/w16512">Record</a>.</p>
     <p id="ref-bowles">Bowles, Samuel. "Endogenous Preferences: The Cultural Consequences of Markets and Other Economic Institutions." <em>Journal of Economic Literature</em> 36(1), 1998, 75-111. <a href="https://ideas.repec.org/a/aea/jeclit/v36y1998i1p75-111.html">Record</a>.</p>
     <p id="ref-brock-durlauf">Brock, William A., and Steven N. Durlauf. "Discrete Choice with Social Interactions." <em>Review of Economic Studies</em> 68(2), 2001, 235-260. <a href="https://academic.oup.com/restud/article-abstract/68/2/235/1588432">Record</a>.</p>
+    <p id="ref-brookings-sentiment">Brookings Institution. "The Paradox Between the Macroeconomy and Household Sentiment." 2024. <a href="https://www.brookings.edu/articles/the-paradox-between-the-macroeconomy-and-household-sentiment/">Essay</a>.</p>
+    <p id="ref-cdc-births">Centers for Disease Control and Prevention, National Center for Health Statistics. "Births: Provisional Data for 2024." Vital Statistics Rapid Release, 2025. <a href="https://www.cdc.gov/nchs/data/vsrr/vsrr038.pdf">PDF</a>.</p>
+    <p id="ref-cdc-upf">Centers for Disease Control and Prevention, National Center for Health Statistics. "Ultra-Processed Food Intake in the United States." Data Brief No. 536, 2025. <a href="https://www.cdc.gov/nchs/products/databriefs/db536.htm">Report</a>.</p>
+    <p id="ref-cdc-yrbs">Centers for Disease Control and Prevention. "Youth Risk Behavior Survey Data Summary &amp; Trends Report: 2013-2023." 2024. <a href="https://www.cdc.gov/yrbs/dstr/pdf/YRBS-2023-Data-Summary-Trend-Report.pdf">PDF</a>.</p>
     <p id="ref-chaney">Chaney, Allison J. B., Brandon M. Stewart, and Barbara E. Engelhardt. "How Algorithmic Confounding in Recommendation Systems Increases Homogeneity and Decreases Utility." RecSys, 2018. <a href="https://arxiv.org/abs/1710.11214">arXiv</a>.</p>
+    <p id="ref-common-sense-ai">Common Sense Media. "Talk, Trust, and Trade-Offs: How and Why Teens Use AI Companions." 2025. <a href="https://www.commonsensemedia.org/research/talk-trust-and-trade-offs-how-and-why-teens-use-ai-companions">Report</a>.</p>
     <p id="ref-dekel">Dekel, Eddie, Jeffrey C. Ely, and Okan Yilankaya. "Evolution of Preferences." <em>Review of Economic Studies</em> 74(3), 2007, 685-704. <a href="https://cet.econ.northwestern.edu/dekel/pdf/evolution%20of-preferences.pdf">PDF</a>.</p>
+    <p id="ref-eurostat-fertility">Eurostat. "Fertility Statistics." 2026 update. <a href="https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Fertility_statistics">Report</a>.</p>
+    <p id="ref-fed-shed-2025">Board of Governors of the Federal Reserve System. <em>Economic Well-Being of U.S. Households in 2025</em>. 2026. <a href="https://www.federalreserve.gov/publications/files/2025-report-economic-well-being-us-households-202605.pdf">PDF</a>.</p>
+    <p id="ref-fbi-crime">Federal Bureau of Investigation. "FBI Releases Historic Early Look at Annual Crime Data." 2026. <a href="https://www.fbi.gov/news/press-releases/fbi-releases-historic-early-look-at-annual-crime-data">Release</a>.</p>
+    <p id="ref-gallup-immigration">Gallup. "Surge in Concern About Immigration Has Abated." 2025. <a href="https://news.gallup.com/poll/692522/surge-concern-immigration-abated.aspx">Report</a>.</p>
+    <p id="ref-gallup-institutions">Gallup. "Confidence in Institutions Mostly Flat, Police Highest." 2025. <a href="https://news.gallup.com/poll/647303/confidence-institutions-mostly-flat-police.aspx">Report</a>.</p>
     <p id="ref-hbs-ai">De Freitas, Julian, Ahmet K. Uguralp, Zeliha O. Uguralp, and Stefano Puntoni. "AI Companions Reduce Loneliness." Harvard Business School Working Paper 24-078, 2024. <a href="https://www.hbs.edu/ris/download.aspx?name=24-078.pdf">PDF</a>.</p>
     <p id="ref-granovetter">Granovetter, Mark. "Threshold Models of Collective Behavior." <em>American Journal of Sociology</em> 83(6), 1978, 1420-1443. <a href="https://www.journals.uchicago.edu/doi/10.1086/226707">Record</a>.</p>
+    <p id="ref-hks-tiktok">Harvard Kennedy School Misinformation Review. "Toxic Politics and TikTok Engagement in the 2024 U.S. Election." 2025. <a href="https://misinforeview.hks.harvard.edu/article/toxic-politics-and-tiktok-engagement-in-the-2024-u-s-election/">Record</a>.</p>
+    <p id="ref-jchs-2025">Joint Center for Housing Studies of Harvard University. <em>The State of the Nation's Housing 2025</em>. 2025. <a href="https://www.jchs.harvard.edu/state-nations-housing-2025">Report</a>.</p>
     <p id="ref-jiang">Jiang, Ray, Silvia Chiappa, Tor Lattimore, Andras Gyorgy, and Pushmeet Kohli. "Degenerate Feedback Loops in Recommender Systems." AIES, 2019. <a href="https://arxiv.org/abs/1902.10730">arXiv</a>.</p>
     <p id="ref-kleinberg">Kleinberg, Jon, Sendhil Mullainathan, and Manish Raghavan. "The Challenge of Understanding What Users Want: Inconsistent Preferences and Engagement Optimization." <em>Management Science</em> 70(9), 2024, 6336-6355. <a href="https://arxiv.org/abs/2202.11776">arXiv</a>.</p>
     <p id="ref-mahler">Mahler, Lukas, Michele Tertilt, and Minchul Yum. "Policy Concerns in an Era of Low Fertility: The Role of Social Comparisons." 2025. <a href="https://lukasmahler.github.io/assets/pdf/5_Mahler_Tertilt_Yum_unembargoed.pdf">PDF</a>.</p>
+    <p id="ref-morgan-stanley-glp1">Morgan Stanley. "Medications and Shifting Consumer Behavior." 2025. <a href="https://www.morganstanley.com/im/en-us/individual-investor/insights/articles/medications-and-shifting-consumer-behavior.html">Article</a>.</p>
+    <p id="ref-nar-2025">National Association of Realtors. "First-Time Home Buyers Shrink to Historic Low." 2025. <a href="https://www.nar.realtor/newsroom/first-time-home-buyers-shrink-to-historic-low-of-21-as-buyer-age-hits-new-high">Report</a>.</p>
+    <p id="ref-nber-sports-betting">Baker, Scott R., Justin Balthrop, Mark J. Johnson, Jason D. Kotter, and Kevin Pisciotta. "Gambling Away Stability: Sports Betting's Impact on Vulnerable Households." NBER Working Paper 33108, 2024. <a href="https://www.nber.org/papers/w33108">Record</a>.</p>
     <p id="ref-oecd">OECD. "Fertility Trends Across the OECD: Underlying Drivers and the Role for Policy." <em>Society at a Glance 2024</em>. <a href="https://www.oecd.org/en/publications/society-at-a-glance-2024_918d8db3-en/full-report/fertility-trends-across-the-oecd-underlying-drivers-and-the-role-for-policy_770679b8.html">Report</a>.</p>
+    <p id="ref-oecd-migration">OECD. <em>International Migration Outlook 2024</em>. 2024. <a href="https://www.oecd.org/en/publications/2024/11/international-migration-outlook-2024_c6f3e803.html">Report</a>.</p>
     <p id="ref-pesendorfer">Pesendorfer, Wolfgang. "Design Innovation and Fashion Cycles." <em>American Economic Review</em> 85(4), 1995, 771-792. <a href="https://www.jstor.org/stable/2118234">Record</a>.</p>
+    <p id="ref-pew-border">Pew Research Center. "How Americans View the Situation at the U.S.-Mexico Border, Its Causes and Consequences." 2024. <a href="https://www.pewresearch.org/politics/2024/02/15/how-americans-view-the-situation-at-the-u-s-mexico-border-its-causes-and-consequences/">Report</a>.</p>
+    <p id="ref-pew-crime">Pew Research Center. "The Link Between Local News Coverage and Americans' Perceptions of Crime." 2024. <a href="https://www.pewresearch.org/short-reads/2024/08/29/the-link-between-local-news-coverage-and-americans-perceptions-of-crime/">Report</a>.</p>
+    <p id="ref-pew-global-us">Pew Research Center. "Trump Gets Negative Reviews Internationally as Fewer Say U.S. Is a Reliable Partner." 2026. <a href="https://www.pewresearch.org/global/2026/06/23/trump-gets-negative-reviews-internationally-as-fewer-say-u-s-is-a-reliable-partner/">Report</a>.</p>
+    <p id="ref-pew-news-influencers">Pew Research Center. "America's News Influencers." 2024. <a href="https://www.pewresearch.org/journalism/2024/11/18/americas-news-influencers/">Report</a>.</p>
+    <p id="ref-pew-teens-mental">Pew Research Center. "Teens, Social Media and Mental Health." 2025. <a href="https://www.pewresearch.org/internet/2025/04/22/teens-social-media-and-mental-health/">Report</a>.</p>
+    <p id="ref-pew-teens-tech">Pew Research Center. "Teens, Social Media and Technology 2024." 2024. <a href="https://www.pewresearch.org/internet/2024/12/12/teens-social-media-and-technology-2024/">Report</a>.</p>
+    <p id="ref-pew-trust">Pew Charitable Trusts. "Americans' Deepening Mistrust of Institutions." 2024. <a href="https://www.pew.org/en/trend/archive/fall-2024/americans-deepening-mistrust-of-institutions">Report</a>.</p>
+    <p id="ref-pnas-divisive">PNAS Nexus. "Ranking Social Media Feeds by Engagement Can Amplify Divisive Content." 2025. <a href="https://academic.oup.com/pnasnexus/article/4/3/pgaf062/8052060">Record</a>.</p>
     <p id="ref-surgeon-general">Office of the Surgeon General. "Our Epidemic of Loneliness and Isolation: The U.S. Surgeon General's Advisory on the Healing Effects of Social Connection and Community." US Department of Health and Human Services, 2023. <a href="https://www.ncbi.nlm.nih.gov/books/NBK595227/">NCBI Bookshelf</a>.</p>
     <p id="ref-stigler-becker">Stigler, George J., and Gary S. Becker. "De Gustibus Non Est Disputandum." <em>American Economic Review</em> 67(2), 1977, 76-90. <a href="https://econpapers.repec.org/RePEc:aea:aecrev:v:67:y:1977:i:2:p:76-90">Record</a>.</p>
     <p id="ref-ueda">Ueda, Peter, Catherine H. Mercer, Cyrus Ghaznavi, and Debby Herbenick. "Trends in Frequency of Sexual Activity and Number of Sexual Partners Among Adults Aged 18 to 44 Years in the US, 2000-2018." <em>JAMA Network Open</em> 3(6), 2020, e203833. <a href="https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2767066">Record</a>.</p>
+    <p id="ref-unfpa-2025">UNFPA. <em>The State of World Population 2025: The Real Fertility Crisis</em>. 2025. <a href="https://www.unfpa.org/swp2025">Report</a>.</p>
+    <p id="ref-unhcr-2024">UNHCR. <em>Global Trends: Forced Displacement in 2024</em>. 2025. <a href="https://www.unhcr.org/global-trends-report-2024">Report</a>.</p>
+    <p id="ref-who-loneliness">World Health Organization. "Social Connection Linked to Improved Health and Reduced Risk of Early Death." WHO Commission on Social Connection, 2025. <a href="https://www.who.int/news/item/30-06-2025-social-connection-linked-to-improved-heath-and-reduced-risk-of-early-death">Report</a>.</p>
+    <p id="ref-wilding-semaglutide">Wilding, John P. H., Rachel L. Batterham, Salvatore Calanna, Melanie Davies, Luc F. Van Gaal, Ildiko Lingvay, Barbara M. McGowan, Julio Rosenstock, Marie T. D. Tran, Thomas A. Wadden, Sean Wharton, Kazuma Yokote, Niels Zeuthen, and Robert F. Kushner. "Once-Weekly Semaglutide in Adults with Overweight or Obesity." <em>New England Journal of Medicine</em> 384, 2021, 989-1002. <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2032183">Record</a>.</p>
     <p id="ref-watts">Watts, Duncan J. "A Simple Model of Global Cascades on Random Networks." <em>Proceedings of the National Academy of Sciences</em> 99(9), 2002, 5766-5771. <a href="https://www.pnas.org/doi/10.1073/pnas.082090499">Record</a>.</p>
   </section>
 </main>
