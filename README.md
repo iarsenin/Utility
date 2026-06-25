@@ -84,13 +84,13 @@ The script writes:
 
 ## Current Status
 
-The live manuscript direction is now the combined fast-preference/social-feedback paper:
+The live manuscript direction is now the fast-preference/equilibrium paper:
 
-- `paper/combined_fast_preference_closure_v1.html`
+- `paper/when_preferences_move_faster_than_equilibrium_v1.html`
 
-It combines the finite-game fast-closure theorem spine with a worked
-social-feedback closure law for fashion, influencers, memes, bubbles, and
-platform exposure. The key formal object is now the branch-selection map:
+It combines the finite-game fast-preference theorem spine with a worked
+social-feedback preference-formation mechanism for fashion, influencers, memes,
+bubbles, and platform exposure. The key formal object is now the settling map:
 
 ```text
 (ell, q, zeta) -> C_ell(E, q, zeta) -> Gamma^star_{ell,q,zeta}(E) -> NE -> G
@@ -103,7 +103,7 @@ history.
 
 Start here for the current research direction:
 
-- `paper/combined_fast_preference_closure_v1.html`
+- `paper/when_preferences_move_faster_than_equilibrium_v1.html`
 - `docs/agent_rounds/combined_round_1_modeller.md`
 - `docs/agent_rounds/combined_round_2_literature.md`
 - `docs/agent_rounds/combined_round_3_writer.md`

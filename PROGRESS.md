@@ -889,6 +889,18 @@ Main edits:
   This removes the immediate external network request that could produce
   connection errors when reading the local file.
 
+### Title And Artifact Rename
+
+On June 25, 2026, renamed the current reader-facing manuscript to:
+
+- `paper/when_preferences_move_faster_than_equilibrium_v1.html`
+
+The displayed article title is now "When Preferences Move Faster Than
+Equilibrium," with the subtitle "Endogenous utility, induced Nash games, and
+selection in mathematical economics." The former
+`paper/combined_fast_preference_closure_v1.html` path remains as a compatibility
+redirect only.
+
 Validation:
 
 - HTML parse passed.

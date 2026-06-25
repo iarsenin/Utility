@@ -36,11 +36,13 @@ notes, model results, and literature checks.
   presentation on fashion, influencers, memes, bubbles, and fast preference
   closure. It is intentionally separate from the GEB article until the results
   and interpretation are accepted.
-- `combined_fast_preference_closure_v1.html`: current integrated manuscript.
-  It combines the GEB-style fast-preference/Nash/selection paper with the
-  fashion/meme social-feedback closure mechanism. The standalone GEB and
-  fashion files remain preserved as source drafts, but this combined file is
-  now the main reader copy for the merged direction.
+- `when_preferences_move_faster_than_equilibrium_v1.html`: current integrated
+  manuscript. It combines the GEB-style fast-preference/Nash/selection paper
+  with the fashion/meme social-feedback preference-formation mechanism. The
+  standalone GEB and fashion files remain preserved as source drafts, but this
+  file is now the main reader copy for the merged direction.
+- `combined_fast_preference_closure_v1.html`: compatibility redirect to the
+  renamed current manuscript.
 - `venue_strategy.md`: venue plan and boundary between the working-paper and
   GEB-facing versions.
 
@@ -126,6 +128,6 @@ Latest narrative-pivot review notes are:
 
 The combined manuscript now loads MathJax locally from
 `vendor/mathjax/es5/tex-chtml.js`, so opening
-`paper/combined_fast_preference_closure_v1.html` as a local file should not
+`paper/when_preferences_move_faster_than_equilibrium_v1.html` as a local file should not
 produce a MathJax CDN connection error. If the in-app browser still shows stale
 content, reload the tab.
