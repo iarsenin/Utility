@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-"""Run sensitivity checks for the finite-game fast-closure audit."""
+"""Run sensitivity checks for the finite-game preference-formation audit."""
 
 from __future__ import annotations
 
 import csv
-import html
 from pathlib import Path
 import random
 import statistics
@@ -27,18 +26,20 @@ from utility_endogenous.model_selection_audit import (  # noqa: E402
     selected_equilibrium,
     vector_sum,
 )
-
-
-CHART_BG = "#ffffff"
-CHART_INK = "#18212f"
-CHART_MUTED = "#526173"
-CHART_AXIS = "#9aa4b2"
-CHART_GRID = "#e3e8ef"
-CHART_TEAL = "#236f73"
-CHART_AMBER = "#b7791f"
-CHART_BLUE = "#2f5f9f"
-CHART_RED = "#a64b3c"
-CHART_VIOLET = "#6b5a8e"
+from utility_endogenous.chart_style import (  # noqa: E402
+    CHART_AMBER,
+    CHART_AXIS,
+    CHART_BLUE,
+    CHART_GRID,
+    CHART_INK,
+    CHART_MUTED,
+    CHART_RED,
+    CHART_TEAL,
+    chart_footer,
+    chart_header,
+    svg_open,
+    svg_text,
+)
 
 
 def write_csv(path: Path, rows: list[dict[str, object]]) -> None:
@@ -191,16 +192,6 @@ def aligned_proxy_noise_sensitivity(
     return rows
 
 
-def svg_text(x: float, y: float, text: str, **attrs: object) -> str:
-    attributes = {"x": x, "y": y, "font-family": "Arial, sans-serif"}
-    attributes.update(attrs)
-    attr_text = " ".join(
-        f'{key.replace("_", "-")}="{html.escape(str(value))}"'
-        for key, value in attributes.items()
-    )
-    return f"<text {attr_text}>{html.escape(text)}</text>"
-
-
 def polyline(points: list[tuple[float, float]], color: str) -> str:
     point_text = " ".join(f"{x:.1f},{y:.1f}" for x, y in points)
     return f'<polyline points="{point_text}" fill="none" stroke="{color}" stroke-width="3"/>'
@@ -240,22 +231,11 @@ def write_svg(path: Path, rows: list[dict[str, object]]) -> None:
         ]
 
     elements = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
-        f'<rect width="100%" height="100%" fill="{CHART_BG}"/>',
-        svg_text(
-            34,
-            38,
+        *svg_open(width, height),
+        *chart_header(
             "Finite-Game Sensitivity Checks",
-            font_size=22,
-            font_weight=700,
-            fill=CHART_INK,
-        ),
-        svg_text(
-            34,
-            62,
             "3,000 random games per grid point; rates on vertical axes",
-            font_size=13,
-            fill=CHART_MUTED,
+            width,
         ),
     ]
     for panel_left in (left_1, left_2):
@@ -281,8 +261,8 @@ def write_svg(path: Path, rows: list[dict[str, object]]) -> None:
                 )
             )
 
-    elements.append(svg_text(left_1, 84, "Strategic distortion scale", font_size=14, font_weight=700, fill=CHART_INK))
-    elements.append(svg_text(left_2, 84, "Approx. aligned proxy noise", font_size=14, font_weight=700, fill=CHART_INK))
+    elements.append(svg_text(left_1, 84, "Strategic distortion scale", font_size=14, font_weight=800, fill=CHART_INK))
+    elements.append(svg_text(left_2, 84, "Approx. aligned proxy noise", font_size=14, font_weight=800, fill=CHART_INK))
 
     br_points = map_points(left_1, strategic, "mixed_br_invariance_rate")
     shift_points = map_points(left_1, strategic, "equilibrium_shift_rate")
@@ -302,10 +282,11 @@ def write_svg(path: Path, rows: list[dict[str, object]]) -> None:
             svg_text(left_1 + 12, top + 36, "equilibrium shift", font_size=11, fill=CHART_AMBER),
             svg_text(left_2 + 12, top + 18, "material loss", font_size=11, fill=CHART_RED),
             svg_text(left_2 + 12, top + 36, "equilibrium shift", font_size=11, fill=CHART_BLUE),
-            svg_text(left_1 + panel_w / 2, height - 28, "distortion scale", font_size=12, fill=CHART_MUTED, text_anchor="middle"),
-            svg_text(left_2 + panel_w / 2, height - 28, "noise weight", font_size=12, fill=CHART_MUTED, text_anchor="middle"),
+            svg_text(left_1 + panel_w / 2, height - 45, "distortion scale", font_size=12, fill=CHART_MUTED, text_anchor="middle"),
+            svg_text(left_2 + panel_w / 2, height - 45, "noise weight", font_size=12, fill=CHART_MUTED, text_anchor="middle"),
         ]
     )
+    elements.append(chart_footer("Source: sensitivity check around the finite-game simulation; rates are diagnostic, not estimates.", width, height))
     elements.append("</svg>")
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text("\n".join(elements) + "\n", encoding="utf-8")
@@ -351,7 +332,7 @@ def build_report(rows: list[dict[str, object]], games: int, seed: int) -> str:
             "",
             "## Modeller Readout",
             "",
-            "- At distortion scale `0`, preference closure is identical to the material game; mixed best-response invariance is `1.0000` and equilibrium shift is `0.0000`.",
+            "- At distortion scale `0`, preference formation is identical to the material game; mixed best-response invariance is `1.0000` and equilibrium shift is `0.0000`.",
             "- As random strategic distortion grows, mixed best-response invariance falls and selected-equilibrium shifts rise. This supports the claim that strategic closure changes the reduced game generically, while correctly showing that infinitesimal distortions need not have large equilibrium effects.",
             "- With an exactly material-aligned proxy, material loss is `0.0000`. Material loss rises as the proxy becomes a noisier proxy for material welfare. This supports the paper's conditional claim: speed alone is not the culprit; proxy alignment is the relevant object.",
             "",

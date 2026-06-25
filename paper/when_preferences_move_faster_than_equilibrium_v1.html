@@ -22,12 +22,13 @@
   <style>
     :root {
       --ink: #151719;
-      --muted: #5d6673;
-      --rule: #d9dee7;
+      --muted: #5f6368;
+      --rule: #ded8cf;
       --soft: #f6f8fb;
       --box: #fbfcfe;
-      --accent: #235f73;
-      --accent-soft: #e8f3f6;
+      --accent: #c74332;
+      --accent-2: #007f83;
+      --accent-soft: #fff1ee;
       --theorem: #f8fbf5;
       --theorem-rule: #78a55a;
       --warning: #fff8ed;
@@ -126,7 +127,7 @@
 
     .abstract {
       background: var(--soft);
-      border-left: 4px solid var(--accent);
+      border-left: 5px solid var(--accent);
       margin: 24px 0 34px;
       padding: 19px 23px 17px;
     }
@@ -140,8 +141,8 @@
 
     .note, .takeaway {
       background: var(--accent-soft);
-      border: 1px solid #c7e0e7;
-      color: #173b49;
+      border: 1px solid #f0c8bf;
+      color: #4d2119;
       font-size: 0.96rem;
       line-height: 1.5;
       margin: 22px 0;
@@ -155,7 +156,7 @@
     }
 
     .result-strip {
-      border-top: 2px solid var(--accent);
+      border-top: 3px solid var(--accent);
       border-bottom: 1px solid var(--rule);
       display: grid;
       gap: 14px;
@@ -169,7 +170,7 @@
     }
 
     .result-strip strong {
-      color: var(--accent);
+      color: var(--accent-2);
       display: block;
       font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       font-size: 0.82rem;
@@ -234,7 +235,7 @@
     .equation {
       background: var(--box);
       border: 1px solid var(--rule);
-      border-left: 4px solid var(--accent);
+      border-left: 5px solid var(--accent);
       counter-increment: equation;
       margin: 22px auto;
       max-width: 900px;
@@ -246,7 +247,7 @@
     }
 
     .equation::after {
-      color: var(--muted);
+      color: var(--accent);
       content: "(" counter(equation) ")";
       font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       font-size: 0.9rem;
@@ -258,7 +259,7 @@
     }
 
     .equation .label {
-      color: var(--muted);
+      color: #756f66;
       display: block;
       font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       font-size: 0.72rem;
@@ -312,11 +313,12 @@
 
     figure {
       counter-increment: figure;
-      margin: 26px 0;
+      margin: 30px 0;
     }
 
     figure img {
-      border: 1px solid var(--rule);
+      background: #fffaf2;
+      border: 1px solid #eadfce;
       display: block;
       height: auto;
       max-width: 100%;
@@ -328,6 +330,7 @@
       font-size: 0.9rem;
       line-height: 1.45;
       margin-top: 8px;
+      max-width: 860px;
     }
 
     figcaption::before {
@@ -361,8 +364,13 @@
     }
 
     th {
+      background: #fbfaf7;
       color: #26313c;
       font-weight: 720;
+    }
+
+    tbody tr:nth-child(even) td {
+      background: #fcfcfd;
     }
 
     .num {
@@ -404,9 +412,22 @@
         grid-template-columns: 1fr;
       }
 
+      .table-title::after {
+        color: var(--muted);
+        content: "Wide tables scroll horizontally on small screens.";
+        display: block;
+        font-size: 0.72rem;
+        font-weight: 520;
+        letter-spacing: 0;
+        margin-top: 2px;
+      }
+
       table {
         display: block;
+        max-width: 100%;
         overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        box-shadow: inset -18px 0 18px -18px rgba(21, 23, 25, 0.55);
       }
     }
   </style>
@@ -1037,16 +1058,16 @@
     <h2>Appendix C. Numerical Details</h2>
     <p>The computations are illustrative mechanism checks. The network multiplier corresponds to influencer and feed concentration; the mean-field flip corresponds to persistent fashion, norm, or identity branches; the finite-game diagnostics correspond to the separation between Nash consistency and proxy/material alignment.</p>
 
-    <p>The figures use a restrained common palette: teal marks stability, invariance, or alignment; red marks material loss; blue marks exposure or equilibrium movement; amber marks comparison cases, instability, or strategic distortion.</p>
+    <p>The appendix figures use a common visual system: a warm background, high-contrast labels, and semantic colors. Teal marks stability, invariance, or alignment; red marks material loss; blue marks exposure or equilibrium movement; amber marks comparison cases, instability, or strategic distortion.</p>
 
-    <p>Replication entry points are <code>scripts/run_fashion_meme_analysis.py</code>, <code>scripts/run_model_selection_audit.py</code>, and <code>scripts/run_model_selection_sensitivity.py</code>. The figures and tables read by this article are stored under <code>results/figures</code> and <code>results/tables</code>. The audits are stress tests of the mechanisms, not estimates of a real platform or population.</p>
+    <p>Replication entry points are <code>scripts/run_fashion_meme_analysis.py</code>, <code>scripts/run_model_selection_audit.py</code>, and <code>scripts/run_model_selection_sensitivity.py</code>. The figures and tables read by this article are stored under <code>results/figures</code> and <code>results/tables</code>. These numerical checks stress-test the mechanisms; they are not estimates of a real platform or population.</p>
 
     <h3>C.1 Network Influence Multiplier</h3>
-    <p>The network audit evaluates the local-influence multiplier from Appendix B. It uses a 120-node attention network in which each agent follows 8 others, with popularity weights drawn from a Pareto distribution with shape 1.35 and seed 20260623. The responsiveness parameter is \(\beta=1.15\), and \(\eta\) varies over the grid shown below. The numbers are local derivatives around a benchmark, not predicted bounded changes in taste from a large intervention.</p>
+    <p>The network check evaluates a zero-taste benchmark specialization of the local-influence multiplier from Appendix B. At that benchmark \(m^\star=0\), so \(D=I\) in Equation (12). The simulation uses a 120-node attention network in which each agent follows 8 others, with popularity weights drawn from a Pareto distribution with shape 1.35 and seed 20260623. The responsiveness parameter is \(\beta=1.15\), and \(\eta\) varies over the grid shown below. The numbers are local derivatives around that benchmark, not predicted bounded changes in taste from a large intervention.</p>
 
     <figure>
       <img src="../results/figures/fashion_network_multiplier.svg" alt="Network influence multiplier">
-      <figcaption>Linear response to a small targeted influencer field on a heterogeneous attention network. The central target's effect rises sharply as social reinforcement approaches the critical threshold. The peripheral target remains small.</figcaption>
+      <figcaption>Linear response to a small targeted exposure field on a heterogeneous attention network, evaluated at the zero-taste benchmark \(D=I\). The central target's effect rises sharply as social reinforcement approaches the critical threshold. The peripheral target remains small.</figcaption>
     </figure>
 
     <p class="table-title"><strong>Local network influence multipliers.</strong></p>
@@ -1069,7 +1090,12 @@
     </table>
 
     <h3>C.2 Mean-Field Flip</h3>
-    <p>The mean-field calibration used in the main-text hysteresis figure is deliberately simple. It is meant to show the branch-selection logic, not to estimate a specific social domain. The random-parameter audit uses seed 20260623 and draws 6,000 economies with \(\beta\sim U[0.5,3.0]\), \(J\sim U[0.1,1.3]\), and \(h\sim U[-0.35,0.35]\). A positive shock of at most 0.35 is then tested against the fold condition.</p>
+    <p>The mean-field calibration below is deliberately simple. It is meant to show the branch-selection logic, not to estimate a specific social domain. The random-parameter check uses seed 20260623 and draws 6,000 economies with \(\beta\sim U[0.5,3.0]\), \(J\sim U[0.1,1.3]\), and \(h\sim U[-0.35,0.35]\). A positive shock of at most 0.35 is then tested against the fold condition.</p>
+
+    <figure>
+      <img src="../results/figures/fashion_mean_field_hysteresis.svg" alt="Mean-field hysteresis branches">
+      <figcaption>Mean-field hysteresis in the social-feedback equation. The stable branches survive after a temporary shock is removed, so the same baseline field can support different settled tastes depending on the path.</figcaption>
+    </figure>
 
     <p class="table-title"><strong>Calibrated mean-field flip.</strong></p>
     <table>
@@ -1091,20 +1117,20 @@
     </table>
 
     <figure>
-      <img src="../results/figures/fashion_phase_audit.svg" alt="Random parameter audit">
-      <figcaption>Random parameter audit. Roughly half the sampled economies are subcritical and therefore unique. About \(26.98\%\) have a hysteresis window. About \(15.40\%\) can be moved to a different persistent branch by a temporary shock of size \(0.35\). About \(4.10\%\) move in a direction that lowers the simple material evaluator.</figcaption>
+      <img src="../results/figures/fashion_phase_audit.svg" alt="Random parameter check">
+      <figcaption>Random parameter check. Roughly half the sampled economies are subcritical and therefore unique. About \(26.98\%\) have a hysteresis window. About \(15.40\%\) can be moved to a different persistent branch by a temporary shock of size \(0.35\). About \(4.10\%\) move in a direction that lowers the simple material evaluator.</figcaption>
     </figure>
 
     <h3>C.3 Finite-Game Diagnostics</h3>
-    <p>The finite-game audit separates best-response preservation from proxy alignment. It uses seed 20260620 and 5,000 random two-player, two-action games per route, with material payoff entries drawn independently from \(U[-1,1]\). The neutral route adds only opponent-action terms that preserve best responses; the random strategic route adds independent payoff distortions. For proxy routes, each feasible preference-formation intensity is \(\lambda\in\{0,0.25,0.75,1.5,3.0\}\). The platform selects the intensity with the highest proxy payoff; the material benchmark selects the intensity with the highest material payoff. A selected-outcome shift is counted when the distance between selected outcome distributions exceeds 0.25. For \(N=5{,}000\), the largest possible binomial Monte Carlo standard error is about 0.0071.</p>
+    <p>The finite-game check separates best-response preservation from proxy alignment. It uses seed 20260620 and 5,000 random two-player, two-action games per route, with material payoff entries drawn independently from \(U[-1,1]\). The neutral route adds only opponent-action terms that preserve best responses; the random strategic route adds independent payoff distortions. For proxy routes, each feasible preference-formation intensity is \(\lambda\in\{0,0.25,0.75,1.5,3.0\}\). The platform selects the intensity with the highest proxy payoff; the material benchmark selects the intensity with the highest material payoff. A selected-outcome shift is counted when the distance between selected outcome distributions exceeds 0.25. For \(N=5{,}000\), the largest possible binomial Monte Carlo standard error is about 0.0071.</p>
 
     <p class="table-title"><strong>Best-response diagnostics.</strong></p>
     <table>
       <thead>
         <tr>
           <th>Route</th>
-          <th class="num">Mixed BR</th>
-          <th class="num">Endpoint BR</th>
+          <th class="num">Mixed best response</th>
+          <th class="num">Pure-action endpoint</th>
           <th class="num">Outcome shift</th>
         </tr>
       </thead>

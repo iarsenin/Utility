@@ -31,6 +31,6 @@ This sensitivity check asks whether the finite-game stress-test message is tied 
 
 ## Modeller Readout
 
-- At distortion scale `0`, preference closure is identical to the material game; mixed best-response invariance is `1.0000` and equilibrium shift is `0.0000`.
+- At distortion scale `0`, preference formation is identical to the material game; mixed best-response invariance is `1.0000` and equilibrium shift is `0.0000`.
 - As random strategic distortion grows, mixed best-response invariance falls and selected-equilibrium shifts rise. This supports the claim that strategic closure changes the reduced game generically, while correctly showing that infinitesimal distortions need not have large equilibrium effects.
 - With an exactly material-aligned proxy, material loss is `0.0000`. Material loss rises as the proxy becomes a noisier proxy for material welfare. This supports the paper's conditional claim: speed alone is not the culprit; proxy alignment is the relevant object.

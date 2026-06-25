@@ -1,28 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="920" height="400" viewBox="0 0 920 400">
-<rect width="100%" height="100%" fill="#ffffff"/>
-<text x="34" y="34" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#18212f">Random Parameter Audit</text>
-<text x="34" y="58" font-family="Arial, sans-serif" font-size="13" fill="#526173">6,000 mean-field economies; temporary positive meme shock z &lt;= 0.35</text>
-<line x1="260.0" y1="66" x2="260.0" y2="342" stroke="#e3e8ef"/>
-<text x="260.0" y="370" font-family="Arial, sans-serif" font-size="12" fill="#526173" text-anchor="middle">0</text>
-<line x1="407.5" y1="66" x2="407.5" y2="342" stroke="#e3e8ef"/>
-<text x="407.5" y="370" font-family="Arial, sans-serif" font-size="12" fill="#526173" text-anchor="middle">0.25</text>
-<line x1="555.0" y1="66" x2="555.0" y2="342" stroke="#e3e8ef"/>
-<text x="555.0" y="370" font-family="Arial, sans-serif" font-size="12" fill="#526173" text-anchor="middle">0.5</text>
-<line x1="702.5" y1="66" x2="702.5" y2="342" stroke="#e3e8ef"/>
-<text x="702.5" y="370" font-family="Arial, sans-serif" font-size="12" fill="#526173" text-anchor="middle">0.75</text>
-<line x1="850.0" y1="66" x2="850.0" y2="342" stroke="#e3e8ef"/>
-<text x="850.0" y="370" font-family="Arial, sans-serif" font-size="12" fill="#526173" text-anchor="middle">1</text>
-<text x="34" y="106" font-family="Arial, sans-serif" font-size="13" fill="#18212f" font-weight="700">Subcritical unique closure</text>
-<rect x="260" y="89" width="287.0" height="30" rx="3" fill="#236f73"/>
-<text x="557.035" y="109" font-family="Arial, sans-serif" font-size="12" fill="#18212f" font-weight="700">0.486</text>
-<text x="34" y="168" font-family="Arial, sans-serif" font-size="13" fill="#18212f" font-weight="700">Hysteresis possible</text>
-<rect x="260" y="151" width="159.2" height="30" rx="3" fill="#b7791f"/>
-<text x="429.20166666666665" y="171" font-family="Arial, sans-serif" font-size="12" fill="#18212f" font-weight="700">0.270</text>
-<text x="34" y="230" font-family="Arial, sans-serif" font-size="13" fill="#18212f" font-weight="700">Temporary shock flips state</text>
-<rect x="260" y="213" width="90.9" height="30" rx="3" fill="#2f5f9f"/>
-<text x="360.86" y="233" font-family="Arial, sans-serif" font-size="12" fill="#18212f" font-weight="700">0.154</text>
-<text x="34" y="292" font-family="Arial, sans-serif" font-size="13" fill="#18212f" font-weight="700">Flip is material loss</text>
-<rect x="260" y="275" width="24.2" height="30" rx="3" fill="#a64b3c"/>
-<text x="294.19" y="295" font-family="Arial, sans-serif" font-size="12" fill="#18212f" font-weight="700">0.041</text>
-<text x="460.0" y="392" font-family="Arial, sans-serif" font-size="13" fill="#18212f" text-anchor="middle">rate</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="446" viewBox="0 0 920 446">
+<rect width="100%" height="100%" fill="#fffaf2"/>
+<rect x="18" y="18" width="884" height="410" rx="0" fill="#ffffff" stroke="#eadfce"/>
+<line x1="18" y1="18" x2="902" y2="18" stroke="#d5412f" stroke-width="5"/>
+<text x="36" y="44" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="22" font-weight="800" fill="#171411">Random Parameter Check</text>
+<text x="36" y="68" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="13" fill="#5f5a52">6,000 mean-field economies; temporary positive meme shock z &lt;= 0.35</text>
+<line x1="36" y1="82" x2="884" y2="82" stroke="#e7dfd3" stroke-width="1"/>
+<line x1="260.0" y1="84" x2="260.0" y2="374" stroke="#e7dfd3"/>
+<text x="260.0" y="388" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" fill="#5f5a52" text-anchor="middle">0</text>
+<line x1="407.5" y1="84" x2="407.5" y2="374" stroke="#e7dfd3"/>
+<text x="407.5" y="388" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" fill="#5f5a52" text-anchor="middle">0.25</text>
+<line x1="555.0" y1="84" x2="555.0" y2="374" stroke="#e7dfd3"/>
+<text x="555.0" y="388" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" fill="#5f5a52" text-anchor="middle">0.5</text>
+<line x1="702.5" y1="84" x2="702.5" y2="374" stroke="#e7dfd3"/>
+<text x="702.5" y="388" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" fill="#5f5a52" text-anchor="middle">0.75</text>
+<line x1="850.0" y1="84" x2="850.0" y2="374" stroke="#e7dfd3"/>
+<text x="850.0" y="388" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" fill="#5f5a52" text-anchor="middle">1</text>
+<text x="34" y="124" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="13" fill="#171411" font-weight="700">Subcritical unique settling</text>
+<rect x="260" y="107" width="287.0" height="30" rx="3" fill="#007f83"/>
+<text x="557.035" y="127" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" fill="#171411" font-weight="700">0.486</text>
+<text x="34" y="186" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="13" fill="#171411" font-weight="700">Hysteresis possible</text>
+<rect x="260" y="169" width="159.2" height="30" rx="3" fill="#c7831f"/>
+<text x="429.20166666666665" y="189" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" fill="#171411" font-weight="700">0.270</text>
+<text x="34" y="248" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="13" fill="#171411" font-weight="700">Temporary shock flips state</text>
+<rect x="260" y="231" width="90.9" height="30" rx="3" fill="#3867a6"/>
+<text x="360.86" y="251" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" fill="#171411" font-weight="700">0.154</text>
+<text x="34" y="310" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="13" fill="#171411" font-weight="700">Flip is material loss</text>
+<rect x="260" y="293" width="24.2" height="30" rx="3" fill="#c74332"/>
+<text x="294.19" y="313" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" fill="#171411" font-weight="700">0.041</text>
+<text x="460.0" y="406" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="13" fill="#171411" text-anchor="middle">rate</text>
+<text x="36" y="424" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="10.5" fill="#5f5a52">Source: randomized stylized parameter check; rates are mechanism checks, not empirical estimates.</text>
 </svg>

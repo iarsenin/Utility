@@ -1,47 +1,51 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="920" height="540" viewBox="0 0 920 540">
-<rect width="100%" height="100%" fill="#ffffff"/>
-<text x="34" y="34" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#18212f">Influence Multiplier Near The Fashion Critical Point</text>
-<text x="34" y="58" font-family="Arial, sans-serif" font-size="13" fill="#526173">Linear response to one targeted influencer field on a heterogeneous attention network</text>
-<line x1="72.0" y1="78" x2="72.0" y2="472" stroke="#e3e8ef"/>
-<text x="72.0" y="502" font-family="Arial, sans-serif" font-size="12" fill="#526173" text-anchor="middle">0.0</text>
-<line x1="258.2" y1="78" x2="258.2" y2="472" stroke="#e3e8ef"/>
-<text x="258.2068965517242" y="502" font-family="Arial, sans-serif" font-size="12" fill="#526173" text-anchor="middle">0.2</text>
-<line x1="444.4" y1="78" x2="444.4" y2="472" stroke="#e3e8ef"/>
-<text x="444.4137931034483" y="502" font-family="Arial, sans-serif" font-size="12" fill="#526173" text-anchor="middle">0.4</text>
-<line x1="630.6" y1="78" x2="630.6" y2="472" stroke="#e3e8ef"/>
-<text x="630.6206896551723" y="502" font-family="Arial, sans-serif" font-size="12" fill="#526173" text-anchor="middle">0.6</text>
-<line x1="816.8" y1="78" x2="816.8" y2="472" stroke="#e3e8ef"/>
-<text x="816.8275862068966" y="502" font-family="Arial, sans-serif" font-size="12" fill="#526173" text-anchor="middle">0.8</text>
-<line x1="72" y1="472.0" x2="882" y2="472.0" stroke="#e3e8ef"/>
-<text x="58" y="476.0" font-family="Arial, sans-serif" font-size="12" fill="#526173" text-anchor="end">0</text>
-<line x1="72" y1="373.5" x2="882" y2="373.5" stroke="#e3e8ef"/>
-<text x="58" y="377.5" font-family="Arial, sans-serif" font-size="12" fill="#526173" text-anchor="end">214</text>
-<line x1="72" y1="275.0" x2="882" y2="275.0" stroke="#e3e8ef"/>
-<text x="58" y="279.0" font-family="Arial, sans-serif" font-size="12" fill="#526173" text-anchor="end">428</text>
-<line x1="72" y1="176.5" x2="882" y2="176.5" stroke="#e3e8ef"/>
-<text x="58" y="180.5" font-family="Arial, sans-serif" font-size="12" fill="#526173" text-anchor="end">642</text>
-<line x1="72" y1="78.0" x2="882" y2="78.0" stroke="#e3e8ef"/>
-<text x="58" y="82.0" font-family="Arial, sans-serif" font-size="12" fill="#526173" text-anchor="end">856</text>
-<polyline points="72.0,471.5 211.7,468.9 351.3,464.9 491.0,458.0 630.6,443.2 742.3,410.1 816.8,324.2 854.1,107.2" fill="none" stroke="#2f5f9f" stroke-width="3.2" stroke-linecap="round"/>
-<polyline points="72.0,471.5 211.7,471.5 351.3,471.5 491.0,471.5 630.6,471.5 742.3,471.5 816.8,471.5 854.1,471.5" fill="none" stroke="#b7791f" stroke-width="3.2" stroke-linecap="round"/>
-<circle cx="72.0" cy="471.5" r="4" fill="#2f5f9f"/>
-<circle cx="72.0" cy="471.5" r="4" fill="#b7791f"/>
-<circle cx="211.7" cy="468.9" r="4" fill="#2f5f9f"/>
-<circle cx="211.7" cy="471.5" r="4" fill="#b7791f"/>
-<circle cx="351.3" cy="464.9" r="4" fill="#2f5f9f"/>
-<circle cx="351.3" cy="471.5" r="4" fill="#b7791f"/>
-<circle cx="491.0" cy="458.0" r="4" fill="#2f5f9f"/>
-<circle cx="491.0" cy="471.5" r="4" fill="#b7791f"/>
-<circle cx="630.6" cy="443.2" r="4" fill="#2f5f9f"/>
-<circle cx="630.6" cy="471.5" r="4" fill="#b7791f"/>
-<circle cx="742.3" cy="410.1" r="4" fill="#2f5f9f"/>
-<circle cx="742.3" cy="471.5" r="4" fill="#b7791f"/>
-<circle cx="816.8" cy="324.2" r="4" fill="#2f5f9f"/>
-<circle cx="816.8" cy="471.5" r="4" fill="#b7791f"/>
-<circle cx="854.1" cy="107.2" r="4" fill="#2f5f9f"/>
-<circle cx="854.1" cy="471.5" r="4" fill="#b7791f"/>
-<text x="650" y="116" font-family="Arial, sans-serif" font-size="13" fill="#2f5f9f" font-weight="700">central target</text>
-<text x="650" y="140" font-family="Arial, sans-serif" font-size="13" fill="#b7791f" font-weight="700">peripheral target</text>
-<text x="460.0" y="528" font-family="Arial, sans-serif" font-size="13" fill="#18212f" text-anchor="middle">social reinforcement eta</text>
-<text x="18" y="270.0" font-family="Arial, sans-serif" font-size="13" fill="#18212f" transform="rotate(-90 18 270.0)" text-anchor="middle">aggregate response</text>
+<rect width="100%" height="100%" fill="#fffaf2"/>
+<rect x="18" y="18" width="884" height="504" rx="0" fill="#ffffff" stroke="#eadfce"/>
+<line x1="18" y1="18" x2="902" y2="18" stroke="#d5412f" stroke-width="5"/>
+<text x="36" y="44" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="22" font-weight="800" fill="#171411">Influence Multiplier Near a Social-Feedback Threshold</text>
+<text x="36" y="68" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="13" fill="#5f5a52">Zero-taste benchmark specialization of the local multiplier, so D = I</text>
+<line x1="36" y1="82" x2="884" y2="82" stroke="#e7dfd3" stroke-width="1"/>
+<line x1="72.0" y1="98" x2="72.0" y2="472" stroke="#e7dfd3"/>
+<text x="72.0" y="488" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" fill="#5f5a52" text-anchor="middle">0.0</text>
+<line x1="258.2" y1="98" x2="258.2" y2="472" stroke="#e7dfd3"/>
+<text x="258.2068965517242" y="488" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" fill="#5f5a52" text-anchor="middle">0.2</text>
+<line x1="444.4" y1="98" x2="444.4" y2="472" stroke="#e7dfd3"/>
+<text x="444.4137931034483" y="488" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" fill="#5f5a52" text-anchor="middle">0.4</text>
+<line x1="630.6" y1="98" x2="630.6" y2="472" stroke="#e7dfd3"/>
+<text x="630.6206896551723" y="488" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" fill="#5f5a52" text-anchor="middle">0.6</text>
+<line x1="816.8" y1="98" x2="816.8" y2="472" stroke="#e7dfd3"/>
+<text x="816.8275862068966" y="488" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" fill="#5f5a52" text-anchor="middle">0.8</text>
+<line x1="72" y1="472.0" x2="882" y2="472.0" stroke="#e7dfd3"/>
+<text x="58" y="476.0" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" fill="#5f5a52" text-anchor="end">0</text>
+<line x1="72" y1="378.5" x2="882" y2="378.5" stroke="#e7dfd3"/>
+<text x="58" y="382.5" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" fill="#5f5a52" text-anchor="end">214</text>
+<line x1="72" y1="285.0" x2="882" y2="285.0" stroke="#e7dfd3"/>
+<text x="58" y="289.0" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" fill="#5f5a52" text-anchor="end">428</text>
+<line x1="72" y1="191.5" x2="882" y2="191.5" stroke="#e7dfd3"/>
+<text x="58" y="195.5" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" fill="#5f5a52" text-anchor="end">642</text>
+<line x1="72" y1="98.0" x2="882" y2="98.0" stroke="#e7dfd3"/>
+<text x="58" y="102.0" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" fill="#5f5a52" text-anchor="end">856</text>
+<polyline points="72.0,471.5 211.7,469.1 351.3,465.3 491.0,458.7 630.6,444.7 742.3,413.2 816.8,331.7 854.1,125.7" fill="none" stroke="#3867a6" stroke-width="3.2" stroke-linecap="round"/>
+<polyline points="72.0,471.5 211.7,471.5 351.3,471.5 491.0,471.5 630.6,471.5 742.3,471.5 816.8,471.5 854.1,471.5" fill="none" stroke="#c7831f" stroke-width="3.2" stroke-linecap="round"/>
+<circle cx="72.0" cy="471.5" r="4" fill="#3867a6"/>
+<circle cx="72.0" cy="471.5" r="4" fill="#c7831f"/>
+<circle cx="211.7" cy="469.1" r="4" fill="#3867a6"/>
+<circle cx="211.7" cy="471.5" r="4" fill="#c7831f"/>
+<circle cx="351.3" cy="465.3" r="4" fill="#3867a6"/>
+<circle cx="351.3" cy="471.5" r="4" fill="#c7831f"/>
+<circle cx="491.0" cy="458.7" r="4" fill="#3867a6"/>
+<circle cx="491.0" cy="471.5" r="4" fill="#c7831f"/>
+<circle cx="630.6" cy="444.7" r="4" fill="#3867a6"/>
+<circle cx="630.6" cy="471.5" r="4" fill="#c7831f"/>
+<circle cx="742.3" cy="413.2" r="4" fill="#3867a6"/>
+<circle cx="742.3" cy="471.5" r="4" fill="#c7831f"/>
+<circle cx="816.8" cy="331.7" r="4" fill="#3867a6"/>
+<circle cx="816.8" cy="471.5" r="4" fill="#c7831f"/>
+<circle cx="854.1" cy="125.7" r="4" fill="#3867a6"/>
+<circle cx="854.1" cy="471.5" r="4" fill="#c7831f"/>
+<text x="650" y="122" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="13" fill="#3867a6" font-weight="800">central target</text>
+<text x="650" y="146" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="13" fill="#c7831f" font-weight="800">peripheral target</text>
+<text x="460.0" y="502" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="13" fill="#171411" text-anchor="middle">social reinforcement eta</text>
+<text x="30" y="270.0" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="13" fill="#171411" transform="rotate(-90 30 270.0)" text-anchor="middle">aggregate response</text>
+<text x="36" y="518" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="10.5" fill="#5f5a52">Source: 120-node simulated attention network; zero-benchmark local derivative, not a finite-shock forecast.</text>
 </svg>

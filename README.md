@@ -57,7 +57,7 @@ python3 scripts/run_research_iterations.py
 The script writes:
 
 - `results/research_iteration_report.md`
-- `results/figures/platform_inversion_heatmap.svg`
+- `results/figures/legacy/platform_inversion_heatmap.svg`
 - `results/tables/iteration_*.csv`
 
 Run the fast preference limit experiment:

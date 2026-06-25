@@ -490,13 +490,15 @@ def main() -> None:
     write_csv(tables_dir / "iteration_2_evolution_summary.csv", i2_summary)
     write_csv(tables_dir / "iteration_3_platform_paths.csv", i3_paths)
     write_csv(tables_dir / "iteration_3_platform_summary.csv", i3_summary)
-    write_svg_heatmap(figures_dir / "platform_inversion_heatmap.svg", i3_summary)
+    legacy_figures_dir = figures_dir / "legacy"
+    legacy_figures_dir.mkdir(parents=True, exist_ok=True)
+    write_svg_heatmap(legacy_figures_dir / "platform_inversion_heatmap.svg", i3_summary)
 
     report = build_report(i1_summary, i2_summary, i3_summary)
     (results_dir / "research_iteration_report.md").write_text(report, encoding="utf-8")
 
     print(f"Wrote {results_dir / 'research_iteration_report.md'}")
-    print(f"Wrote {figures_dir / 'platform_inversion_heatmap.svg'}")
+    print(f"Wrote {legacy_figures_dir / 'platform_inversion_heatmap.svg'}")
     print("Completed 3 major research iterations")
 
 

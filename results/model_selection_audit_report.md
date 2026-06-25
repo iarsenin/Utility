@@ -9,7 +9,7 @@ This is a deliberately different check from the one-dimensional taste and platfo
 ## Routes Tested
 
 - `neutral_control`: preferences move, but only by terms that are strategically irrelevant for best responses.
-- `strategic_random_distortion`: fast preference closure adds a random strategic payoff distortion.
+- `strategic_random_distortion`: fast preference formation adds a random strategic payoff distortion.
 - `proxy_aligned`: the institution-induced proxy is close to material welfare.
 - `proxy_independent`: the proxy is unrelated to material welfare.
 - `proxy_misaligned`: the proxy is approximately the negative of material welfare.
@@ -29,7 +29,7 @@ For proxy routes, each adaptation law is a value of `lambda` in `[0, 0.25, 0.75,
 ## Readout
 
 - Neutral preference movement preserved mixed best-response correspondences in `1.0000` of games, which is the intended sanity check.
-- Random strategic preference closure changed the selected equilibrium in `0.5044` of games and preserved mixed best-response correspondences in only `0.0762` of games.
+- Random strategic preference formation changed the selected equilibrium in `0.5044` of games and preserved mixed best-response correspondences in only `0.0762` of games.
 - The older pure-action endpoint check gives `0.3126` for random strategic closure; this is weaker than the all-mixed condition in Proposition 1 and should not be described as full best-response invariance.
 - When the proxy was aligned with material welfare, the platform-selected law lost material payoff in `0.0432` of games.
 - When the proxy was independent, material loss occurred in `0.5758` of games, so a loss result does not require an explicitly anti-material proxy.
@@ -46,7 +46,7 @@ The one-dimensional taste model should be demoted to an exposition and visualiza
 The strongest check is the aligned-proxy control. If the platform proxy is close to material welfare, the bad result weakens; if the proxy is independent or misaligned, the bad result strengthens. That means the paper should not claim that fast endogenous preferences mechanically imply collapse. The qualitative prediction should be conditional:
 
 ```text
-Fast preference closure changes the game generically.
+Fast preference formation changes the game generically.
 Material harm depends on the alignment between the preference-generating proxy and material welfare.
-Selection acts on adaptation laws or institutions after closure, not on initial preference states.
+Selection acts on adaptation laws or institutions after fast preference adjustment, not on initial preference states.
 ```

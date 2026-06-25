@@ -8,7 +8,6 @@ Current expected files after running:
 - `tables/endogenous_taste_summary.csv`
 - `tables/indirect_evolution_summary.csv`
 - `research_iteration_report.md`
-- `figures/platform_inversion_heatmap.svg`
 - `tables/iteration_1_taste_paths.csv`
 - `tables/iteration_1_taste_summary.csv`
 - `tables/iteration_2_evolution_paths.csv`
@@ -18,7 +17,8 @@ Current expected files after running:
 - `model_selection_audit_report.md`
 - `tables/model_selection_summary.csv`
 - `tables/model_selection_proxy_routes.csv`
-- `figures/model_selection_fast_closure_audit.svg`
+- `figures/model_selection_preference_formation_audit.svg`
+- `figures/model_selection_fast_closure_audit.svg` (legacy compatibility copy for older drafts)
 - `model_selection_sensitivity_report.md`
 - `tables/model_selection_sensitivity.csv`
 - `figures/model_selection_sensitivity.svg`
@@ -40,7 +40,11 @@ Current expected files after running:
 
 Do not treat generated toy outputs as empirical claims. They are mechanism checks.
 The WDI outputs are diagnostic exposure/outcome associations and timescale
-measures, not causal estimates of platform-induced preference closure.
-The fashion/meme closure outputs are also mechanism checks: they show
-criticality, amplification, and hysteresis in a stylized closure law, not an
-estimate for any specific platform or social network.
+measures, not causal estimates of platform-induced preference formation.
+The fashion/meme preference-formation outputs are also mechanism checks: they
+show criticality, amplification, and hysteresis in a stylized settling rule, not
+an estimate for any specific platform or social network.
+
+Legacy exploratory figures are retained under `figures/legacy/`. They are useful
+for source history but are not part of the current manuscript's production chart
+set.

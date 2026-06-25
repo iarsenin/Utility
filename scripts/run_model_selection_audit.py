@@ -5,8 +5,8 @@ from __future__ import annotations
 
 import csv
 from dataclasses import asdict
-import html
 from pathlib import Path
+import shutil
 import sys
 
 
@@ -16,18 +16,19 @@ if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
 from utility_endogenous.model_selection_audit import RouteSummary, run_model_selection_audit
-
-
-CHART_BG = "#ffffff"
-CHART_INK = "#18212f"
-CHART_MUTED = "#526173"
-CHART_AXIS = "#9aa4b2"
-CHART_GRID = "#e3e8ef"
-CHART_TEAL = "#236f73"
-CHART_AMBER = "#b7791f"
-CHART_BLUE = "#2f5f9f"
-CHART_RED = "#a64b3c"
-CHART_VIOLET = "#6b5a8e"
+from utility_endogenous.chart_style import (
+    CHART_AMBER,
+    CHART_BLUE,
+    CHART_GRID,
+    CHART_INK,
+    CHART_MUTED,
+    CHART_RED,
+    CHART_TEAL,
+    chart_footer,
+    chart_header,
+    svg_open,
+    svg_text,
+)
 
 
 def write_csv(path: Path, rows: list[dict[str, object]]) -> None:
@@ -63,16 +64,6 @@ def markdown_table(rows: list[dict[str, object]], columns: list[str]) -> str:
     return "\n".join([header, separator, *body])
 
 
-def svg_text(x: float, y: float, text: str, **attrs: object) -> str:
-    attributes = {"x": x, "y": y, "font-family": "Arial, sans-serif"}
-    attributes.update(attrs)
-    attr_text = " ".join(
-        f'{key.replace("_", "-")}="{html.escape(str(value))}"'
-        for key, value in attributes.items()
-    )
-    return f"<text {attr_text}>{html.escape(text)}</text>"
-
-
 def write_model_selection_svg(path: Path, summaries: list[RouteSummary]) -> None:
     rows: list[dict[str, object]] = []
     for summary in summaries:
@@ -87,7 +78,7 @@ def write_model_selection_svg(path: Path, summaries: list[RouteSummary]) -> None
                 }
                 if summary.route == "neutral_control"
                 else {
-                    "label": "Random strategic closure",
+                    "label": "Random strategic distortion",
                     "route": summary.route,
                     "metric": "Equilibrium shift rate",
                     "value": summary.equilibrium_shift_rate,
@@ -118,29 +109,18 @@ def write_model_selection_svg(path: Path, summaries: list[RouteSummary]) -> None
     width = 920
     margin_left = 250
     margin_right = 64
-    margin_top = 82
+    margin_top = 96
     margin_bottom = 66
     row_height = 54
     chart_width = width - margin_left - margin_right
     height = margin_top + margin_bottom + row_height * len(plotted)
     axis_max = 1.0
     elements = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
-        f'<rect width="100%" height="100%" fill="{CHART_BG}"/>',
-        svg_text(
-            32,
-            34,
-            "Finite-Game Fast-Closure Audit",
-            font_size=22,
-            font_weight=700,
-            fill=CHART_INK,
-        ),
-        svg_text(
-            32,
-            58,
+        *svg_open(width, height),
+        *chart_header(
+            "Finite-Game Preference-Formation Check",
             "5,000 random two-player games per route; neutral route is the sanity control",
-            font_size=13,
-            fill=CHART_MUTED,
+            width,
         ),
     ]
     for tick in [0.0, 0.25, 0.5, 0.75, 1.0]:
@@ -151,7 +131,7 @@ def write_model_selection_svg(path: Path, summaries: list[RouteSummary]) -> None
         elements.append(
             svg_text(
                 x,
-                height - margin_bottom + 30,
+                height - 56,
                 f"{tick:.2f}".rstrip("0").rstrip("."),
                 font_size=11,
                 fill=CHART_MUTED,
@@ -181,16 +161,8 @@ def write_model_selection_svg(path: Path, summaries: list[RouteSummary]) -> None
                 fill=CHART_INK,
             )
         )
-    elements.append(
-        svg_text(
-            margin_left + chart_width / 2,
-            height - 12,
-            "rate",
-            font_size=12,
-            fill=CHART_MUTED,
-            text_anchor="middle",
-        )
-    )
+    elements.append(svg_text(margin_left + chart_width / 2, height - 38, "rate", font_size=12, fill=CHART_MUTED, text_anchor="middle"))
+    elements.append(chart_footer("Source: random finite-game check; Monte Carlo standard error is at most about 0.0071.", width, height))
     elements.append("</svg>")
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text("\n".join(elements) + "\n", encoding="utf-8")
@@ -216,7 +188,7 @@ def build_report(summaries: list[RouteSummary], games: int, seed: int) -> str:
         "## Routes Tested",
         "",
         "- `neutral_control`: preferences move, but only by terms that are strategically irrelevant for best responses.",
-        "- `strategic_random_distortion`: fast preference closure adds a random strategic payoff distortion.",
+        "- `strategic_random_distortion`: fast preference formation adds a random strategic payoff distortion.",
         "- `proxy_aligned`: the institution-induced proxy is close to material welfare.",
         "- `proxy_independent`: the proxy is unrelated to material welfare.",
         "- `proxy_misaligned`: the proxy is approximately the negative of material welfare.",
@@ -244,7 +216,7 @@ def build_report(summaries: list[RouteSummary], games: int, seed: int) -> str:
         "## Readout",
         "",
         f"- Neutral preference movement preserved mixed best-response correspondences in `{fmt(by_route['neutral_control'].br_invariance_rate)}` of games, which is the intended sanity check.",
-        f"- Random strategic preference closure changed the selected equilibrium in `{fmt(strategic.equilibrium_shift_rate)}` of games and preserved mixed best-response correspondences in only `{fmt(strategic.br_invariance_rate)}` of games.",
+        f"- Random strategic preference formation changed the selected equilibrium in `{fmt(strategic.equilibrium_shift_rate)}` of games and preserved mixed best-response correspondences in only `{fmt(strategic.br_invariance_rate)}` of games.",
         f"- The older pure-action endpoint check gives `{fmt(strategic.pure_br_invariance_rate)}` for random strategic closure; this is weaker than the all-mixed condition in Proposition 1 and should not be described as full best-response invariance.",
         f"- When the proxy was aligned with material welfare, the platform-selected law lost material payoff in `{fmt(aligned.proxy_material_loss_rate)}` of games.",
         f"- When the proxy was independent, material loss occurred in `{fmt(independent.proxy_material_loss_rate)}` of games, so a loss result does not require an explicitly anti-material proxy.",
@@ -261,9 +233,9 @@ def build_report(summaries: list[RouteSummary], games: int, seed: int) -> str:
         "The strongest check is the aligned-proxy control. If the platform proxy is close to material welfare, the bad result weakens; if the proxy is independent or misaligned, the bad result strengthens. That means the paper should not claim that fast endogenous preferences mechanically imply collapse. The qualitative prediction should be conditional:",
         "",
         "```text",
-        "Fast preference closure changes the game generically.",
+        "Fast preference formation changes the game generically.",
         "Material harm depends on the alignment between the preference-generating proxy and material welfare.",
-        "Selection acts on adaptation laws or institutions after closure, not on initial preference states.",
+        "Selection acts on adaptation laws or institutions after fast preference adjustment, not on initial preference states.",
         "```",
         "",
     ]
@@ -281,14 +253,18 @@ def main() -> None:
     summary_rows = [asdict(summary) for summary in summaries]
     write_csv(tables_dir / "model_selection_summary.csv", summary_rows)
     write_csv(tables_dir / "model_selection_proxy_routes.csv", proxy_rows)
-    write_model_selection_svg(figures_dir / "model_selection_fast_closure_audit.svg", summaries)
+    current_figure = figures_dir / "model_selection_preference_formation_audit.svg"
+    legacy_figure = figures_dir / "model_selection_fast_closure_audit.svg"
+    write_model_selection_svg(current_figure, summaries)
+    shutil.copyfile(current_figure, legacy_figure)
     report = build_report(summaries, games, seed)
     (results_dir / "model_selection_audit_report.md").write_text(report, encoding="utf-8")
 
     print(f"Wrote {results_dir / 'model_selection_audit_report.md'}")
     print(f"Wrote {tables_dir / 'model_selection_summary.csv'}")
     print(f"Wrote {tables_dir / 'model_selection_proxy_routes.csv'}")
-    print(f"Wrote {figures_dir / 'model_selection_fast_closure_audit.svg'}")
+    print(f"Wrote {current_figure}")
+    print(f"Wrote {legacy_figure}")
 
 
 if __name__ == "__main__":
