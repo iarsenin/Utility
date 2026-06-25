@@ -24,11 +24,11 @@ economic language, but may not know:
 
 - mixed strategies;
 - best-response correspondences;
-- closure laws;
+- preference-forming rules;
 - boundary-layer arguments;
 - singular limits;
 - indirect evolutionary preference models;
-- post-closure admissibility.
+- post-adjustment admissibility.
 
 The reader should not be asked to infer the value of the framework from the
 formulas. The article must state what puzzle is being clarified, what the model
@@ -43,8 +43,8 @@ explains, and what it does not explain.
 4. Number every displayed formula.
 5. Introduce every symbol before the first displayed formula in which it appears.
 6. Never use shorthand such as "fixed-\(E\), fixed-\(\ell\)" without explaining
-   that \(E\) is the slow environment and \(\ell\) is the preference-formation
-   or closure law being held constant during the fast preference adjustment.
+   that \(E\) is the slow environment and \(\ell\) is the preference-forming
+   rule being held constant during the fast preference adjustment.
 7. Keep Nash equilibrium described as a method or consistency condition, not as
    a welfare conclusion.
 8. Keep mixed best-response invariance described as a strong sufficient
@@ -64,7 +64,7 @@ explains, and what it does not explain.
     material payoff, health, or institutional continuity, depending on the
     example. Do not imply that reproduction is the only human value.
 15. Include positive AI use cases. The point is not "AI corrupts preferences";
-    it is that AI can either close preferences around engagement proxies or
+    it is that AI can either settle preferences around engagement proxies or
     scaffold more reflective, long-run, socially connected preferences.
 16. Avoid self-referential scaffolding. Do not write sentences that narrate the
     paper's own plan, object, or contribution when a direct substantive claim
@@ -77,8 +77,14 @@ explains, and what it does not explain.
 18. A table is not a story. Every major example in the prose must contain a
     puzzle, mechanism, non-obvious implication, caveat, and empirical test.
 19. After every major section, the reader should be able to state the real-world
-    puzzle, the closure mechanism, and the predicted intervention failure or
-    success.
+    puzzle, the preference-forming mechanism, and the predicted intervention
+    failure or success.
+20. Do not put "closure" in the title, subtitle, abstract, section headings, or
+    ordinary main-text prose. It is not a settled game-theory term. Prefer
+    "preference formation," "preference-forming rule," "settling," or
+    "settled preference state" in reader-facing prose. Use "closure law" or
+    "closure map" only in the formal appendix after defining it as this
+    project's technical shorthand for the limiting preference-settling rule.
 
 ## Editing Sequence
 
@@ -110,7 +116,7 @@ Persona: exact, skeptical, and allergic to overclaiming. Preserve the
 mathematics while making assumptions explicit. Check especially that:
 
 - \(E\) is introduced as the slow economic environment before it appears;
-- \(\ell\) is introduced as the preference-formation or closure law before it
+- \(\ell\) is introduced as the preference-forming rule before it
   appears;
 - \(H\), \(\dot\theta\), \(T_\theta\), \(NE(\Gamma)\), and best responses are
   introduced before their first display;
@@ -136,9 +142,9 @@ follow.
 The writer may simplify sentences but must not simplify theorem claims into
 false claims.
 
-The writer should actively look for the paper's central insight: fast
-preference closure can make revealed desire, long-run welfare, and fitness pull
-apart while still leaving Nash equilibrium and selection as valid methods.
+The writer should actively look for the paper's central insight: fast preference
+formation can make revealed desire, long-run welfare, and fitness pull apart
+while still leaving Nash equilibrium and selection as valid methods.
 
 ### Editor / Production Agent
 
@@ -154,8 +160,10 @@ The editor should reject:
 - formula boxes with unbalanced delimiters or duplicate numbering;
 - paragraphs that argue against an earlier draft instead of stating the current
   model;
-- jargon before definition, especially "boundary layer," "closure-equivalence
-  class," and "mixed best-response correspondence."
+- jargon before definition, especially "boundary layer,"
+  "settling-equivalence class," and "mixed best-response correspondence."
+- prominent use of "closure" before the reader has been given the ordinary
+  language idea of fast preference formation and settling.
 
 The editor should also reject a dry formal sequence that hides the contribution.
 The main text should read as a paper about important phenomena, supported by a
