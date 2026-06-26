@@ -34,3 +34,12 @@ Do not use "want," "preference," "taste," "utility," and "subjective payoff" int
 2. Choice object: subjective payoff or payoff criterion.
 3. Evaluation object: material evaluator.
 4. Initial condition: initial preference state.
+
+## Selection Wording Rule
+
+Do not introduce the selection result in the abstract with theorem shorthand such as "selection rule cannot rank initial states." Reader-facing prose should state the identification idea directly:
+
+- If fast adjustment maps different initial preference states to the same subjective payoff, and later evidence only records the settled game, the material evaluator, and the surrounding environment, those starting differences are not recoverable from the later evidence.
+- Therefore the durable empirical object becomes the preference-forming system that repeatedly produces the payoff criterion.
+
+Keep the formal selection-rule language in the appendix, where the observability restriction is defined.
