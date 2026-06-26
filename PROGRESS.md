@@ -1159,3 +1159,94 @@ Final checks:
   - `bad interior steady state`: 0;
   - `inside the state space`: 0;
   - `diagnostic calibration`: 0.
+
+## 2026-06-26 Scientific-American Style Recalibration
+
+### Reason
+
+The plain-style pass overcorrected. The user wanted the article to remain
+accessible, but with real technical content in the abstract and main argument:
+closer to a Scientific American register than a stripped Hemingway register.
+The instruction was to keep rigor, avoid prescriptions, remove AI-slop
+repetition, and make the mechanism visible.
+
+### Implemented
+
+- Rebuilt the abstract around the actual model objects:
+  - fast preference state or induced payoff map;
+  - Nash-consistent choice in the induced game;
+  - slow material-capacity law;
+  - selection over payoff-forming rules.
+- Added compact inline formulas in the abstract for the scalar logit diagnostic:
+  substitute share `p(K,z)` and capacity drift `Phi(K)`.
+- Added baseline trap calibration values in the abstract:
+  low stable state near `K = 0.085`, unstable threshold near `K = 0.212`,
+  high stable state near `K = 0.843`.
+- Corrected the current-drift result to state the exact theorem:
+  a drift signal changes speeds and slopes but leaves interior steady-state
+  capacities unchanged.
+- Corrected the stock-feedback language:
+  the baseline already has a weak capacity-level channel; a sufficiently
+  stronger level-of-capacity channel can move steady states and remove the low
+  trap.
+- Corrected the selection claim:
+  competition preserves capacity when the competitive score ranks the
+  capacity-preserving rule above the sink; material viability is one aligned
+  diagnostic case.
+- Softened the collapse claim:
+  the article now ties collapse to the random audit's lower-boundary and
+  no-interior-stable-state results rather than claiming a named main
+  calibration where the high-capacity attractor disappears.
+- Removed remaining defensive or vague phrases flagged by reviewers:
+  `one-cause theory`, `not fake`, `Nash does one job`, `Fitness is not a mood`,
+  `identity purchases`, and the unsupported `family agency` abstract phrase.
+- Updated `docs/agent_objective_function.md` to specify the new style target:
+  serious popular-science prose with technical terms introduced before use.
+- Added final visual QA screenshot:
+  `results/figures/when_preferences_scientific_style_round3_top.png`.
+
+### Agent Review
+
+Three review rounds were completed with:
+
+- Scientist: checked theorem scope, scalar-logit claims, current-drift
+  invariance, collapse wording, and selection logic.
+- Editor: checked Scientific American style, repetition, clarity, and
+  non-prescriptive wording.
+- Narrator: checked whether the mechanism lands for a serious non-specialist
+  reader.
+
+Final gate:
+
+- Scientist: PASS after fixing the selection necessity overclaim.
+- Editor: PASS, no remaining blockers.
+- Narrator: PASS, no remaining blockers.
+
+### Verification
+
+- `python3 scripts/run_material_feedback_analysis.py` passed.
+- `python3 scripts/run_self_correction_analysis.py` passed.
+- `python3 scripts/build_material_feedback_article.py` passed.
+- `python3 -m compileall -q src scripts` passed.
+- `git diff --check` passed.
+- HTML parse/reference check passed:
+  - missing references: none;
+  - unused references: none;
+  - missing images: none;
+  - figures: 5 total, 3 in main;
+  - tables: 6 total, 1 in main;
+  - main displayed equations: 0;
+  - main theorem boxes: 0;
+  - template placeholders: 0.
+- Browser visual QA through `http://127.0.0.1:8782/...` passed:
+  - MathJax rendered;
+  - no horizontal overflow;
+  - selection correction present in rendered result list.
+
+### Next Actions
+
+- If the user likes this register, apply the same style to any PDF/LaTeX
+  version.
+- Consider adding an explicit named collapse calibration only if the paper keeps
+  using `Collapse` as a central headline rather than an audit-backed
+  collapse-prone region.
