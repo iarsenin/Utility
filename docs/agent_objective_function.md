@@ -120,7 +120,8 @@ preferences are fake. They are endogenous.
 21. The abstract must include enough technical detail to state the result:
     fast-settled subjective payoff, slow material capacity, the scalar
     bridge/trap/collapse regimes, the current-drift warning limitation, and the
-    dependence of Darwinian selection on the competitive score.
+    dependence of Darwinian selection on the competitive score. Do this in
+    prose, without symbolic formulas in the abstract.
 
 ## Editing Sequence
 

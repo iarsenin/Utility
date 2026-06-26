@@ -1250,3 +1250,46 @@ Final gate:
 - Consider adding an explicit named collapse calibration only if the paper keeps
   using `Collapse` as a central headline rather than an audit-backed
   collapse-prone region.
+
+## 2026-06-26 Abstract Formula Removal
+
+### Reason
+
+The Scientific-American recalibration went too far in the abstract by adding
+inline symbolic formulas. The user requested technical results in friendly
+language instead.
+
+### Implemented
+
+- Removed symbolic formulas from the abstract.
+- Kept the technical result content in prose:
+  - three-step capacity loop plus selection layer;
+  - one-capacity smooth-choice diagnostic;
+  - baseline trap calibration values on the normalized capacity scale;
+  - current-drift signal leaves interior steady-state capacities unchanged;
+  - sufficiently strong level-of-capacity channel can remove the low trap;
+  - competition preserves capacity when the competitive score ranks the
+    capacity-preserving rule above the sink.
+- Updated `docs/agent_objective_function.md` to require technical abstract
+  content in prose, without symbolic formulas in the abstract.
+
+### Verification
+
+- `python3 scripts/build_material_feedback_article.py` passed.
+- `python3 -m compileall -q src scripts` passed.
+- `git diff --check` passed.
+- HTML parse/reference check passed:
+  - missing references: none;
+  - unused references: none;
+  - missing images: none;
+  - figures: 5 total, 3 in main;
+  - tables: 6 total, 1 in main;
+  - main displayed equations: 0;
+  - main theorem boxes: 0;
+  - template placeholders: 0.
+- Targeted abstract check passed:
+  - abstract formula delimiters: 0;
+  - abstract MathJax containers in browser: 0;
+  - no horizontal overflow in browser QA.
+- Added visual QA screenshot:
+  `results/figures/when_preferences_no_formula_abstract_qa.png`.
