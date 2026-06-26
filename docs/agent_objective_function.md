@@ -22,6 +22,12 @@ statements, proofs, empirical equations, calibration tables, and numerical
 audit tables. The main text may use only a small number of salient figures that
 teach the argument directly.
 
+The main text should use a plain, hard style: short sentences, concrete nouns,
+active verbs, and no academic scaffolding when a direct claim will do. Avoid
+phrases such as `classification`, `qualitative regimes`, `objective force`,
+`interior steady state`, and `diagnostic calibration` in the main body. Keep
+the scope, but translate it.
+
 ## Current Core Result
 
 The reader should be able to state this result in plain words:
@@ -102,6 +108,10 @@ preferences are fake. They are endogenous.
 18. Keep at most three salient charts in the main body: threshold trap,
     correction channel, and competition score. Put audit figures and tables in
     appendices.
+19. In the main text, use the memorable result names `Bridge`, `Trap`,
+    `Collapse`, `Alarm`, and `Selection`.
+20. Captions should be short and interpretive. They should tell the reader what
+    the figure says, not restate the formal model.
 
 ## Editing Sequence
 

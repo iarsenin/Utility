@@ -1104,3 +1104,58 @@ Final gate:
   game, a dating-market withdrawal game, or a richer AI-companion bridge/sink
   model.
 - Prepare a PDF/LaTeX working-paper version after the narrative HTML stabilizes.
+
+## 2026-06-26 Plain-Style Rewrite Pass
+
+### Reason
+
+The article was structurally right but still too abstract in the main text,
+especially the abstract and results. The user requested three more editing
+rounds in a Hemingway-like style: short sentences, concrete examples, active
+verbs, and fewer academic labels.
+
+### Implemented
+
+- Rewrote the abstract around three endings: repair, trap, and collapse.
+- Replaced formal result labels in the main text with memorable names:
+  `Bridge`, `Trap`, `Collapse`, `Alarm`, and `Selection`.
+- Split dense paragraphs in the model, AI companion, empirical strategy, and
+  conclusion sections.
+- Shortened the figure captions and made them interpretive.
+- Added concrete lines for dating retreat and appearance markets before the
+  candidate-domain table.
+- Updated `docs/agent_objective_function.md` with the plain-style rule.
+
+### Agent Review
+
+Three rounds were completed with Plain-Style Editor, Scientist, and Narrator
+reviewers.
+
+Final checks:
+
+- Scientist: PASS on scientific scope.
+- Narrator: PASS on story.
+- Plain-Style Editor: final blocking issues were fixed in the abstract and
+  competition caption.
+
+### Verification
+
+- `python3 scripts/build_material_feedback_article.py` passed.
+- `python3 -m compileall -q src scripts` passed.
+- `git diff --check` passed.
+- HTML parse/reference check passed:
+  - missing references: none;
+  - unused references: none;
+  - main displayed equations: 0;
+  - main theorem boxes: 0;
+  - figures: 5 total, 3 in main;
+  - tables: 6 total, 1 in main;
+  - template placeholders: 0.
+- Main-text phrase scan removed the worst academic residue:
+  - `classification`: 0;
+  - `objective force`: 0;
+  - `qualitative regimes`: 0;
+  - `interior steady state`: 0;
+  - `bad interior steady state`: 0;
+  - `inside the state space`: 0;
+  - `diagnostic calibration`: 0.
