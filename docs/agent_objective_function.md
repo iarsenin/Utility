@@ -16,7 +16,11 @@ fast subjective payoff formation
 -> competition among preference-forming rules under an explicit metric
 ```
 
-The appendix should carry the formal model, theorem statements, and proofs.
+The main text should be a narrative argument with no displayed formulas and no
+theorem or proof boxes. The appendix should carry the formal model, theorem
+statements, proofs, empirical equations, calibration tables, and numerical
+audit tables. The main text may use only a small number of salient figures that
+teach the argument directly.
 
 ## Current Core Result
 
@@ -30,10 +34,12 @@ while still changing future capacity in a damaging or repairing direction.
 
 The current revision adds the objective correction result:
 
-- A current-deterioration signal alone does not generally remove bad steady
-  states, because the signal is zero at steady states.
-- Persistent material-state feedback can change the root pattern and remove a
-  low-capacity trap.
+- An instantaneous current-drift signal alone does not remove bad interior
+  steady states in the one-capacity model, because the signal is zero at
+  steady states.
+- Persistent material-state feedback can change the number and location of
+  long-run states and remove a low-capacity trap in the diagnostic
+  calibration.
 - Competition is corrective only when the competitive score is material
   viability; competition over engagement or another proxy can select a sink
   while absolute material mass falls.
@@ -50,8 +56,10 @@ Use these terms consistently:
   institutional competence.
 - `substitute behavior`: the behavior that may relieve immediate pressure while
   either bridging back to capacity or crowding it out.
-- `material evaluator`: the criterion used to judge consequences after naming
-  the capacity.
+- `material outcome metric`: the plain-language term in the main text for the
+  criterion used to judge consequences after naming the capacity.
+- `material evaluator`: the formal appendix term for the material outcome
+  metric.
 - `competitive score`: the score that determines which preference-forming rule
   expands under competition. It may be material viability, engagement, revenue,
   attention, reproduction, solvency, or institutional persistence. Always name
@@ -64,28 +72,36 @@ preferences are fake. They are endogenous.
 
 1. Lead with the story and result in plain language.
 2. Define `subjective payoff`, `substitute behavior`, `material capacity`, and
-   `material evaluator` before formulas.
-3. Explain every formula before or immediately after it appears.
-4. Number displayed formulas automatically in HTML.
-5. Keep Nash equilibrium as a consistency condition, not a welfare conclusion.
-6. Keep Darwinian or selection language criterion-explicit. Fitness must mean a
+   `material outcome metric` in the main text before any formal appendix.
+3. Keep displayed formulas, theorem statements, proofs, and empirical equations
+   out of the main text; put them in appendices.
+4. Explain every appendix formula before or immediately after it appears.
+5. Number displayed formulas automatically in HTML.
+6. Keep Nash equilibrium as a consistency condition, not a welfare conclusion.
+7. Keep Darwinian or selection language criterion-explicit. Fitness must mean a
    named capacity or reproduction/persistence criterion, not a loose metaphor.
-7. Keep real-world examples as candidate applications with caveats and tests,
+8. Keep real-world examples as candidate applications with caveats and tests,
    not as proof that one mechanism explains everything.
-8. Keep the main text narrative. Put proof detail in appendices.
-9. Avoid prominent "closure" language. It belongs only in old notes or, if
+9. Keep the main text narrative. Put proof detail in appendices.
+10. Avoid prominent "closure" language. It belongs only in old notes or, if
    unavoidable, as a narrowly defined appendix term.
-10. Avoid meta-commentary such as "this paper will show" or "the main object is."
-11. Avoid internal repository language in the reader copy except in a short
+11. Avoid meta-commentary such as "this paper will show" or "the main object is."
+12. Avoid internal repository language in the reader copy except in a short
     reproducibility note.
-12. Keep positive AI and repair cases visible. The point is not that preference
+13. Keep positive AI and repair cases visible. The point is not that preference
     formation is bad; it is that the feedback loop can build or deplete capacity.
-13. Distinguish formal theorem, constructive calibration, random audit, and
+14. Distinguish formal theorem, constructive calibration, random audit, and
     empirical conjecture.
-14. Avoid advice-like prose. State implications as vector-field changes,
+15. Avoid advice-like prose. State implications as changes in capacity paths,
     measurable capacity changes, or falsifiable predictions.
-15. Use one flagship application to carry the full mechanism before listing
+16. Use one flagship application to carry the full mechanism before listing
     candidate domains.
+17. Keep the bridge/sink distinction visible: a bridge rule rebuilds the named
+    material capacity, while a sink wins the induced payoff game and depletes
+    the capacity that would make exit feasible.
+18. Keep at most three salient charts in the main body: threshold trap,
+    correction channel, and competition score. Put audit figures and tables in
+    appendices.
 
 ## Editing Sequence
 

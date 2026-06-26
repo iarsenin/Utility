@@ -1031,3 +1031,76 @@ interval, the boundary is treated as a feasible projected state.
   stable.
 - Decide whether to develop a richer strategic application: appearance arms
   race, outrage game, dating market withdrawal, or alliance reliability game.
+
+## 2026-06-26 Narrative Main Text And Formal Appendices
+
+### Reason
+
+The working paper had become technically correct but too formula-forward for
+the intended audience. The new presentation keeps the formal apparatus intact
+while making the main article a readable narrative: model in words, results in
+plain language, three salient charts, real-world examples, and all formulas in
+appendices.
+
+### Implemented
+
+- Rewrote `scripts/build_material_feedback_article.py`.
+- Regenerated `paper/when_preferences_move_faster_than_equilibrium_v1.html`.
+- Moved displayed formulas, theorem statements, proofs, empirical equations,
+  calibration tables, and numerical audit tables out of the main text.
+- Kept three main figures:
+  - threshold capacity paths;
+  - self-correction channels;
+  - competition selection channels.
+- Added or strengthened narrative examples:
+  - AI companions and loneliness as the flagship bridge/sink case;
+  - sports betting and household solvency;
+  - GLP-1 medicines as a positive repair channel;
+  - political outrage as the Nash/competition example.
+- Updated `docs/agent_objective_function.md` to reflect the new rule: narrative
+  main text, formal appendices.
+- Added `docs/agent_rounds/narrative_appendix_rewrite_2026-06-26.md`.
+
+### Agent Review
+
+Five revision cycles were completed with Scientist, Editor, and Narrator
+reviewers.
+
+Final gate:
+
+- Scientist: PASS, no blocking math or conclusion issues.
+- Editor: PASS, no blocking readability/style issues.
+- Narrator: PASS.
+
+### Verification
+
+- `python3 scripts/run_material_feedback_analysis.py` passed.
+- `python3 scripts/run_self_correction_analysis.py` passed.
+- `python3 scripts/build_material_feedback_article.py` passed.
+- `python3 -m compileall -q src scripts` passed.
+- `git diff --check` passed.
+- HTML parse/reference check passed:
+  - missing references: none;
+  - unused references: none;
+  - main displayed equations: 0;
+  - main theorem boxes: 0;
+  - visible main inline math: none;
+  - figures: 5 total, 3 in main;
+  - tables: 6 total, 1 in main;
+  - template placeholders: 0.
+
+### Math Recheck
+
+- Current-drift roots match baseline roots up to `1.192e-10` at the largest
+  tested signal strength.
+- Stock-feedback channel removes the low trap at about `rho = 3.1` on the grid.
+- Material-viability competition selects the bridge and recovers total scale.
+- Engagement-proxy competition selects the sink while total scale falls.
+
+### Next Actions
+
+- Visual QA the regenerated HTML in the browser when browser access allows it.
+- Decide whether the next theoretical extension should be a strategic outrage
+  game, a dating-market withdrawal game, or a richer AI-companion bridge/sink
+  model.
+- Prepare a PDF/LaTeX working-paper version after the narrative HTML stabilizes.
