@@ -73,6 +73,12 @@ Core outputs:
 - `results/figures/competition_selection_channels.svg`
 - `paper/when_preferences_move_faster_than_equilibrium_v1.html`
 
+Latest render check:
+
+- `results/figures/article_abstract_trap_wording_top_2026-06-26.png`
+  verifies the abstract wording that explains the trap regime as a capacity
+  feedback loop.
+
 ## Active Next Steps
 
 - Polish the current manuscript rather than adding new model families.
