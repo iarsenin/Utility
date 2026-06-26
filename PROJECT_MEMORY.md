@@ -40,6 +40,10 @@ material growth object are named.
 
 - Endogenous preferences alone are not novel; the paper needs the feedback
   from induced payoff to material capacity and back.
+- The "why now" claim is about time-scale acceleration and synchronized
+  exposure: internet, social media, recommenders, and AI can move subjective
+  payoffs before material capacity, institutions, markets, or selection catch
+  up.
 - A current-improvement/current-decline alarm is not a general
   self-correction mechanism in the minimal model.
 - Competition can repair only when the score rewards capacity-preserving rules.

@@ -31,10 +31,13 @@ fast subjective payoff formation
 
 The minimal model supports five reader-facing claims:
 
+- **Why now:** preferences have always moved, but internet-scale and AI-driven
+  payoff formation can move subjective payoffs quickly and synchronously before
+  material capacity, institutions, markets, or selection catch up.
 - **Bridge:** the induced substitute lowers pressure while rebuilding the
   capacity that makes outside options usable.
-- **Trap:** low capacity makes the substitute attractive, and substitute use
-  keeps capacity low.
+- **Trap:** the substitute is most attractive when capacity is weak, and using
+  it can crowd out the practice or exposure that would rebuild capacity.
 - **Collapse-prone:** sufficiently damaging feedback can pull the capacity
   stock toward a lower boundary in the minimal model.
 - **Alarm limitation:** a signal based only on current improvement or decline
@@ -78,6 +81,9 @@ Latest render check:
 - `results/figures/article_abstract_trap_wording_top_2026-06-26.png`
   verifies the abstract wording that explains the trap regime as a capacity
   feedback loop.
+- `results/figures/article_why_now_abstract_2026-06-26.png` and
+  `results/figures/article_why_now_intro_2026-06-26.png` verify the new
+  acceleration/time-scale argument in the abstract and opening section.
 
 ## Active Next Steps
 
