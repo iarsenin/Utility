@@ -1,61 +1,58 @@
 # Results
 
-Generated results live here.
+This directory contains generated reports, figures, and tables. Treat these as
+evidence artifacts, not active writing instructions.
 
-Current expected files after running:
+## Current Core Outputs
 
-- `toy_model_report.md`
-- `tables/endogenous_taste_summary.csv`
-- `tables/indirect_evolution_summary.csv`
-- `research_iteration_report.md`
-- `tables/iteration_1_taste_paths.csv`
-- `tables/iteration_1_taste_summary.csv`
-- `tables/iteration_2_evolution_paths.csv`
-- `tables/iteration_2_evolution_summary.csv`
-- `tables/iteration_3_platform_paths.csv`
-- `tables/iteration_3_platform_summary.csv`
-- `model_selection_audit_report.md`
-- `tables/model_selection_summary.csv`
-- `tables/model_selection_proxy_routes.csv`
-- `figures/model_selection_preference_formation_audit.svg`
-- `figures/model_selection_fast_closure_audit.svg` (legacy compatibility copy for older drafts)
-- `model_selection_sensitivity_report.md`
-- `tables/model_selection_sensitivity.csv`
-- `figures/model_selection_sensitivity.svg`
-- `tables/empirical_wdi_coverage.csv`
-- `tables/empirical_wdi_country_gap_closure.csv`
-- `tables/empirical_wdi_timescales.csv`
-- `tables/empirical_wdi_alignment_fits.csv`
-- `figures/empirical_wdi_timescales.svg`
-- `figures/empirical_wdi_alignment_coefficients.svg`
-- `fashion_meme_report.md`
-- `tables/fashion_threshold_summary.csv`
-- `tables/fashion_hysteresis_path.csv`
-- `tables/fashion_mean_field_branches.csv`
-- `tables/fashion_network_multipliers.csv`
-- `tables/fashion_phase_audit_summary.csv`
-- `figures/fashion_mean_field_hysteresis.svg`
-- `figures/fashion_network_multiplier.svg`
-- `figures/fashion_phase_audit.svg`
+Run:
+
+```bash
+python3 scripts/run_material_feedback_analysis.py
+python3 scripts/run_self_correction_analysis.py
+python3 scripts/build_material_feedback_article.py
+```
+
+Current core generated files:
+
 - `material_feedback_report.md`
+- `self_correction_report.md`
 - `tables/material_feedback_equilibria.csv`
 - `tables/material_feedback_paths.csv`
 - `tables/material_feedback_parameter_audit.csv`
+- `tables/self_correction_*.csv`
 - `figures/material_feedback_phase.svg`
 - `figures/material_feedback_paths.svg`
 - `figures/material_feedback_audit.svg`
+- `figures/self_correction_channels.svg`
+- `figures/competition_selection_channels.svg`
 
-Do not treat generated toy outputs as empirical claims. They are mechanism checks.
-The WDI outputs are diagnostic exposure/outcome associations and timescale
-measures, not causal estimates of platform-induced preference formation.
-The fashion/meme preference-formation outputs are also mechanism checks: they
-show criticality, amplification, and hysteresis in a stylized settling rule, not
-an estimate for any specific platform or social network.
-The material-feedback outputs are the current manuscript's core mechanism
-checks. They classify self-correction, threshold traps, and collapse-prone
-capacity loss in a stylized reduced-form model. They are not empirical
-estimates.
+## Evidence Standard
 
-Legacy exploratory figures are retained under `figures/legacy/`. They are useful
-for source history but are not part of the current manuscript's production chart
-set.
+- Material-feedback and self-correction outputs are mechanism checks, not
+  empirical estimates.
+- Random audits show how often a qualitative regime appears in a sampled
+  parameter class; they do not estimate population frequencies.
+- WDI outputs are diagnostic associations and timescale measures, not causal
+  evidence of platform-induced preference formation.
+- Fashion/meme outputs show criticality, amplification, and hysteresis in a
+  stylized settling rule, not estimates for a specific platform.
+- Toy and early iteration outputs are retained for source history.
+
+## Figure Use
+
+The current manuscript's main body should use only the salient production
+figures:
+
+- threshold/path figure;
+- self-correction channel figure;
+- competition selection figure.
+
+Audit figures and tables belong in appendices unless a later manuscript
+explicitly changes that design.
+
+## Legacy Artifacts
+
+Legacy exploratory figures are retained under `figures/legacy/` or as older
+named files in `results/figures/`. Use them for provenance only unless a model
+or paper section explicitly revives them.

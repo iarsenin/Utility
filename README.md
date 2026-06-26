@@ -1,93 +1,80 @@
 # Endogenous Utility Research Program
 
-This repository develops a mathematical economics research project around a simple provocation:
+This repository develops a mathematical economics paper on endogenous utility:
+preferences are treated as state variables shaped by social, institutional, and
+technological environments, not as fixed primitives.
 
-> What if utility functions are not quasi-fixed objects, but fast-moving state variables shaped by institutions, social media, AI systems, and evolutionary selection?
+The live paper is:
 
-Classical consumer and welfare theory often treats preferences as exogenous or slow moving. This project asks what changes when the preference map itself is endogenous, manipulable, and selected by fitness-like forces. The first target is not a finished theorem, but a disciplined research machine: axioms, model families, simulations, literature notes, and a reproducible progress ledger.
+- [When Preferences Decouple From Fitness](paper/when_preferences_move_faster_than_equilibrium_v1.html)
 
-## Research Spine
-
-The current paper studies dynamic economies where each agent has a preference
-state and a material capacity stock, not merely a fixed utility function:
-
-```text
-state_t = (material_capacity_t, beliefs_t, preference_state_t, institutions_t)
-```
-
-Agents maximize current subjective utility, while preference states evolve
-through exposure, habit, imitation, recommender systems, institutions, and AI.
-The choices made under those subjective payoffs then change slower material
-capacities such as health, solvency, social skill, fertility agency, learning,
-trust, and institutional continuity. The key separation is:
+The current model studies a feedback loop:
 
 ```text
-subjective utility != biological/material fitness != platform objective
+fast subjective payoff formation
+-> coherent choice or Nash equilibrium under the induced payoff
+-> slow material-capacity change
+-> future subjective payoff formation
+-> competition among preference-forming rules under a named score
 ```
 
-That separation is where the strange results should live.
+The key distinction is:
+
+```text
+subjective payoff != material capacity != competitive score
+```
+
+Choices can be rational under the subjective payoff while still building or
+depleting future capacity. Competition can correct the system only when the
+operative competitive score rewards capacity-preserving rules.
+
+## Start Here
+
+Use these files as the current project memory:
+
+- `PROGRESS.md`: compact state of the project, active result, next work.
+- `PROJECT_PLAN.md`: research plan and milestone map.
+- `docs/agent_objective_function.md`: article-writing and editing rules.
+- `models/material_capacity_feedback.md`: mathematical model note.
+- `paper/README.md`: manuscript status and reader-facing artifacts.
+- `results/README.md`: generated output map and evidence standard.
+
+Historical round logs and older progress ledgers are archived under
+`docs/archive/`. They preserve provenance but are not active instructions.
+
+## Live Research Claim
+
+The paper does not claim that endogenous preferences are new. The contribution
+is a timing-and-selection claim:
+
+1. Payoffs can be formed quickly by platforms, peers, institutions, AI systems,
+   markets, and norms.
+2. Agents may then choose coherently under those induced payoffs.
+3. The chosen behavior can change a slower material capacity such as social
+   skill, solvency, health, trust, learning, or institutional competence.
+4. Preference-forming rules then compete under a score that may or may not
+   align with material viability.
+
+The minimal scalar model yields bridge, trap, and collapse-prone regimes. The
+self-correction result says that a signal based only on current improvement or
+decline can change adjustment speed without changing the long-run states of the
+minimal model. Durable correction requires a force that changes the capacity
+path, or competition whose score rewards capacity-preserving rules.
 
 ## Repository Layout
 
-- `docs/`: literature map, axioms, methodology, and project plans.
-- `models/`: model-specific mathematical notes.
-- `src/utility_endogenous/`: simulation and model code.
-- `scripts/`: reproducible entry points.
-- `data/`: raw and processed data placeholders.
+- `docs/`: active research notes, project memory, and archived review logs.
+- `models/`: mathematical model specifications.
+- `src/utility_endogenous/`: executable model code.
+- `scripts/`: reproducible analysis and article-building entry points.
 - `results/`: generated reports, figures, and tables.
-- `references/`: bibliography notes and paper summaries.
-- `notebooks/`: exploratory notebooks, when needed.
-- `paper/`: readable article drafts assembled from the research program.
+- `paper/`: reader-facing drafts and current HTML manuscript.
+- `references/`: literature notes and bibliography material.
+- `data/`, `notebooks/`: data and exploratory workspace.
 
-## Quick Start
+## Reproduce The Current Paper
 
-Run the initial toy models:
-
-```bash
-python3 scripts/run_toy_models.py
-```
-
-The script writes:
-
-- `results/toy_model_report.md`
-- `results/tables/endogenous_taste_summary.csv`
-- `results/tables/indirect_evolution_summary.csv`
-
-Run the three-iteration research sprint:
-
-```bash
-python3 scripts/run_research_iterations.py
-```
-
-The script writes:
-
-- `results/research_iteration_report.md`
-- `results/figures/legacy/platform_inversion_heatmap.svg`
-- `results/tables/iteration_*.csv`
-
-Run the fast preference limit experiment:
-
-```bash
-python3 scripts/run_fast_limit.py
-```
-
-The script writes:
-
-- `results/fast_preference_limit_report.md`
-- `results/tables/fast_limit_*.csv`
-
-Run the timescale/survival variants:
-
-```bash
-python3 scripts/run_timescale_variants.py
-```
-
-The script writes:
-
-- `results/timescale_variant_report.md`
-- `results/tables/timescale_*.csv`
-
-Run the current material-feedback model:
+Run:
 
 ```bash
 python3 scripts/run_material_feedback_analysis.py
@@ -95,69 +82,32 @@ python3 scripts/run_self_correction_analysis.py
 python3 scripts/build_material_feedback_article.py
 ```
 
-The scripts write:
+The main output is:
+
+- `paper/when_preferences_move_faster_than_equilibrium_v1.html`
+
+Core generated diagnostics are:
 
 - `results/material_feedback_report.md`
 - `results/self_correction_report.md`
-- `results/tables/material_feedback_*.csv`
-- `results/tables/self_correction_*.csv`
-- `results/figures/material_feedback_*.svg`
+- `results/figures/material_feedback_paths.svg`
 - `results/figures/self_correction_channels.svg`
 - `results/figures/competition_selection_channels.svg`
-- `paper/when_preferences_move_faster_than_equilibrium_v1.html`
 
-## Current Status
+## Evidence Standard
 
-The live manuscript direction is now the material-capacity feedback paper:
+Generated simulations are mechanism checks unless explicitly identified as
+estimates. Applied claims should name:
 
-- `paper/when_preferences_move_faster_than_equilibrium_v1.html`
+1. the payoff-forming exposure;
+2. the substitute behavior;
+3. the material capacity;
+4. the capacity outcome measure;
+5. the competitive score;
+6. the identification strategy.
 
-The paper keeps the fast-preference limit and Nash equilibrium discipline, but
-the main object is now a feedback loop:
+## Article QA Rule
 
-```text
-fast subjective payoff formation
--> Nash or choice under subjective payoff
--> slow material capacity
--> future subjective payoff formation
-```
-
-The older GEB, finite-game, and fashion drafts remain in `paper/` as source
-history. They should not be treated as the live frame unless explicitly revived.
-
-## Research Planning Docs
-
-Start here for the current research direction:
-
-- `paper/when_preferences_move_faster_than_equilibrium_v1.html`
-- `docs/13_material_feedback_pivot.md`
-- `models/material_capacity_feedback.md`
-- `results/material_feedback_report.md`
-- `docs/agent_rounds/combined_round_1_modeller.md`
-- `docs/agent_rounds/combined_round_2_literature.md`
-- `docs/agent_rounds/combined_round_3_writer.md`
-- `docs/agent_rounds/combined_round_4_editor.md`
-- `docs/agent_rounds/combined_round_5_production.md`
-- `paper/article_draft_v0.html`
-- `paper/article_draft_v0_codex.md`
-- `paper/article_draft_v0_math.md`
-- `paper/article_draft_v0.md`
-- `docs/05_research_synthesis_v1.md`
-- `docs/06_formal_research_plan.md`
-- `docs/07_paper_outline_v1.md`
-- `docs/08_novelty_check_v1.md`
-- `docs/09_fast_preference_limit.md`
-- `docs/10_timescales_and_survival.md`
-- `docs/11_model_selection_audit.md`
-- `references/literature_matrix.md`
-
-Next model specs:
-
-- `models/platform_preference_control.md`
-- `models/revealed_preference_with_drift.md`
-
-Current research decision: treat platform-controlled preference transitions as
-one application of a broader material-feedback program. The next proof target
-is a rigorous singular-limit theorem for fast subjective payoff formation
-coupled to slow capacity dynamics, with institutional and population speeds
-treated as estimable parameters rather than assumptions.
+Every reader-facing article update must be generated from source, opened in the
+target browser, and visually checked with a screenshot before it is reported as
+ready.

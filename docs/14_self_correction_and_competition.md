@@ -1,84 +1,71 @@
-# Self-Correction And Competition Revision
+# Self-Correction And Competition
 
-## Reason For The Pivot
+This note records the current correction and selection results.
 
-The previous material-capacity model showed self-correction, traps, and
-collapse-prone dynamics, but it risked sounding like advice: build capacity,
-avoid sinks, design bridges. The user clarified that the paper should analyze
-objective reality and consequences, not give guidance.
+## Question
 
-This revision therefore asks a sharper question:
+Does the model contain an automatic self-correcting mechanism, or can a
+low-capacity trap persist even when deterioration is visible?
 
-```text
-Does an automatic corrective mechanism emerge from the model itself?
-```
+## Result 1: Current-Movement Signals Are Weak
 
-## Main Findings
+The tested signal reports whether material capacity is improving or
+deteriorating right now. In the scalar diagnostic, this signal changes
+adjustment speeds and local slopes, but it does not move the interior
+steady-state capacities. At a steady state, current movement is zero, so the
+signal is silent exactly where it would need to remove the trap.
 
-### Current-drift signals do not generally correct traps
+Interpretation: warning, discomfort, regret, or current pain can matter, but
+they are not a general automatic correction mechanism in the minimal model.
 
-Add a signal of current material improvement or deterioration to the fast
-subjective payoff:
+## Result 2: Capacity-Level Feedback Can Repair
 
-```text
-p_chi(K) = logistic(beta * (q + z - rho K + chi * Phi_chi(K)))
-Phi_chi(K) = alpha + r K^2(1 - K) - d K - L p_chi(K)
-```
+A different channel depends on the level of material capacity itself. If higher
+capacity makes the substitute less attractive strongly enough, the low-capacity
+trap can disappear in the diagnostic calibration.
 
-At any steady state `Phi_chi(K) = 0`, so the current-drift signal is zero at the
-very point where it would need to remove the trap. The roots of the scalar
-capacity equation are invariant to this signal. In the baseline calibration,
-the maximum numerical root displacement was about `1.19e-10`.
+Interpretation: durable correction requires a force that changes the capacity
+path, not only a warning about current movement.
 
-Interpretation: discomfort, warning, regret, or current pain can change speeds
-and slopes, but is not enough by itself to remove a stable low-capacity state.
+## Result 3: Competition Selects Its Score
 
-### Persistent stock feedback can correct the system
+Competition is represented as a share dynamic over preference-forming rules,
+with a separate equation for absolute material scale. This separates relative
+victory from absolute survival.
 
-If material capacity itself changes the payoff map, the root pattern can change.
-In the baseline trap calibration, raising the capacity-protection channel `rho`
-removes the low trap at about `rho = 3.10` on the grid used by the audit.
+In the two-rule diagnostic:
 
-Interpretation: in this diagnostic, the tested current-drift signal does not
-correct the trap; the displayed capacity-protection channel can. Other vector-field
-changes, such as lower exposure, lower damage, or higher repair, can also remove
-the low root in other diagnostics.
+- Material-viability competition selects the capacity-preserving bridge and
+  total scale rises.
+- Engagement-proxy competition selects the high-engagement sink and total scale
+  falls.
 
-### Competition selects rules under the operative metric
-
-Competition is modeled as:
-
-```text
-sdot_l = omega * s_l * (S_l - sum_r s_r S_r)
-Ndot = N * sum_r s_r g_r
-```
-
-Here `S_l` is the competitive score that changes relative prevalence, while
-`g_l` is the material growth rate. This separates relative competition from
-absolute survival.
-
-In the two-rule audit:
-
-- Under material-viability competition, the capacity-preserving bridge expands
-  to share `0.999` at `omega = 1.2`, and population mass rises to `5.734`.
-- Under engagement-proxy competition, the high-engagement sink expands to share
-  effectively `1.000`, while population mass falls to `0.020`.
-
-Interpretation: Darwinian competition is not automatically a truth machine. It
-selects whatever competitive score governs reproduction, capital, attention,
-users, or institutional prevalence. Absolute survival depends on material
-growth, which may differ from the competitive score.
+Interpretation: Darwinian language is useful only after the competitive score
+is named. Competition can select attention, revenue, reproduction,
+institutional persistence, or material viability. These are not the same object.
 
 ## Article Consequence
 
-The paper should now lead with this result:
+The paper should not sound like advice. It should map mechanisms:
 
-```text
-Fast endogenous preferences can be objectively disciplined, but only by a
-persistent material-state channel or by competition under a competitive score
-aligned with material growth. Current deterioration signals alone do not remove
-bad steady states, and competition over proxies can select the sink.
+- which forces move capacity paths;
+- when a low trap persists;
+- which score governs selection;
+- whether relative success and absolute survival diverge.
+
+## Reproducible Outputs
+
+Run:
+
+```bash
+python3 scripts/run_self_correction_analysis.py
 ```
 
-This is stronger than the previous bridge/sink discussion because it says when
-correction exists, when it fails, and why Nash and Darwinian competition matter.
+Outputs:
+
+- `results/self_correction_report.md`
+- `results/tables/self_correction_material_signal_roots.csv`
+- `results/tables/self_correction_stock_feedback_roots.csv`
+- `results/tables/self_correction_competition_summary.csv`
+- `results/figures/self_correction_channels.svg`
+- `results/figures/competition_selection_channels.svg`

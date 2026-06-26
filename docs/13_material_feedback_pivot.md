@@ -1,88 +1,84 @@
-# Material Feedback Pivot
+# Material-Capacity Feedback Frame
 
-Date: 2026-06-26.
+This is the current paper frame.
 
-## Reason For Pivot
+## Core Idea
 
-The previous manuscript correctly separated subjective payoff, Nash
-equilibrium, and material evaluation, but it left preference formation too
-one-way. A fast environment produced subjective payoffs; agents optimized; a
-material evaluator judged the result. The missing piece was feedback from
-material consequences into future preference formation.
-
-The current direction makes that feedback explicit.
-
-## Current Core Claim
-
-Fast preference formation is economically important when it is coupled to a
-slow material capacity:
+Endogenous preferences matter most when fast payoff formation is coupled to a
+slower material capacity:
 
 ```text
-preference-forming rule -> subjective payoff -> action/equilibrium -> material capacity -> future subjective payoff
+preference-forming rule
+-> subjective payoff
+-> action or Nash equilibrium
+-> material capacity
+-> future subjective payoff
 ```
 
-This loop can produce three qualitatively different regimes:
+The model is not about fake preferences. It treats subjective payoffs as real
+choice criteria and asks how the rules that form those payoffs change future
+capacity.
 
-- self-correction when capacity remains protective;
-- threshold traps when substitute behavior erodes the capacity that would make
-  the substitute less attractive;
-- collapse-prone projected dynamics when damage overwhelms interior repair and
-  the lower capacity boundary becomes relevant.
+## Why This Frame Won
 
-## Why This Is Better
+Earlier versions focused on fast preference settling, platform control, or
+finite-game invariance. Those remain useful background. The material-capacity
+frame is stronger for the current paper because it connects the theory to
+observable consequences:
 
-The model now answers real puzzles more directly. Low fertility, loneliness,
-dating retreat, AI companions, betting, ultra-processed food, appearance arms
-races, political outrage, migration backlash, and alliance distrust are not
-presented as examples of "fake preferences." They are examples where a payoff
-criterion can be rational at the moment of choice while the choice changes a
-capacity stock that shapes future payoff criteria.
+- social capacity;
+- solvency;
+- metabolic health;
+- learning;
+- trust;
+- institutional competence.
 
-This avoids two weak positions:
+It also keeps Nash and selection in their proper roles:
 
-- saying only that preferences move fast;
-- implying that Nash equilibrium or Darwinian selection disappears.
+- Nash equilibrium checks coherence after subjective payoffs are formed.
+- Selection asks which preference-forming rules persist after the competitive
+  score is named.
 
-Nash equilibrium remains the consistency condition after subjective payoffs are
-formed. Selection remains the long-run persistence operator after the material
-capacity and evaluator are named.
+## Live Manuscript Structure
 
-## Literature Backbone
+1. Concrete puzzle.
+2. Fast payoff / slow capacity mechanism.
+3. Bridge, trap, collapse-prone, alarm, and selection results.
+4. Flagship AI-companion/loneliness example.
+5. Candidate domains and empirical strategy.
+6. Formal appendix.
 
-The revised backbone uses:
+## Terms To Prefer
 
-- Stigler-Becker consumption capital as the stable-preference foil;
-- Grossman health capital for slow material stocks;
-- Becker-Murphy rational addiction for dynamic complementarity;
-- Bowles, Bisin-Verdier, and Bernheim et al. for endogenous and chosen
-  preferences;
-- Koszegi-Rabin and Genicot-Ray for reference points and aspirations;
-- Brock-Durlauf and Arthur for social interactions, multiple states, and
-  lock-in;
-- recommender-feedback literature for modern preference-forming environments;
-- Allcott et al., Braghieri-Levy-Makarin, and Guess et al. for exposure
-  experiments useful in identification.
+- `subjective payoff formation`;
+- `preference-forming rule`;
+- `material capacity`;
+- `substitute behavior`;
+- `competitive score`;
+- `bridge` and `sink`;
+- `capacity path`.
+
+Avoid prominent use of old fast-settling terminology except when discussing
+archived fast-limit notes or a narrowly defined appendix object.
 
 ## Current Files
 
-- Model note: `models/material_capacity_feedback.md`
-- Code: `src/utility_endogenous/material_feedback.py`
-- Runner: `scripts/run_material_feedback_analysis.py`
-- Article builder: `scripts/build_material_feedback_article.py`
-- Generated article: `paper/when_preferences_move_faster_than_equilibrium_v1.html`
-- Generated report: `results/material_feedback_report.md`
+- `models/material_capacity_feedback.md`
+- `src/utility_endogenous/material_feedback.py`
+- `src/utility_endogenous/self_correction.py`
+- `scripts/run_material_feedback_analysis.py`
+- `scripts/run_self_correction_analysis.py`
+- `scripts/build_material_feedback_article.py`
+- `paper/when_preferences_move_faster_than_equilibrium_v1.html`
+- `results/material_feedback_report.md`
+- `results/self_correction_report.md`
 
-## Instructions For Future Sessions
+## Future Extensions
 
-Start from the material-capacity loop. Do not restore the old
-fast-closure-only language as the main frame. It can remain as a special case
-in the appendix, but the live manuscript should lead with:
+Useful extensions should deepen the current frame rather than replace it:
 
-1. plain-language puzzle;
-2. material-capacity feedback loop;
-3. analytical classification;
-4. empirical strategy;
-5. Nash and selection interpretation.
-
-Avoid prominent use of "closure." Use "preference formation," "settling," or
-"subjective payoff formation" unless discussing old notes.
+- vector-valued material capacities;
+- explicit platform optimization over preference-forming rules;
+- empirical identification of capacity feedback;
+- richer competition among rules with different scores;
+- formal conditions for bridge/sink transitions.

@@ -1,208 +1,127 @@
-# Agent Objective Function For Article Editing
+# Article Editing Guide
+
+This file defines the stable objective for future article edits. It should not
+record transient reactions or turn-by-turn comments.
 
 ## Primary Objective
 
 Produce a rigorous but readable working paper on endogenous utility with
-material-capacity feedback. The article should be understandable to an
-intelligent, highly educated reader who may not be a game theorist.
+material-capacity feedback. The article should be understandable to a highly
+educated reader who is not necessarily a game theorist, while remaining
+mathematically precise enough for economics readers.
 
 The main text should explain:
 
 ```text
 fast subjective payoff formation
--> choice or Nash equilibrium under induced payoffs
--> slow material capacity change
+-> coherent choice or Nash equilibrium under induced payoffs
+-> slow material-capacity change
 -> future subjective payoff formation
--> competition among preference-forming rules under an explicit metric
+-> competition among preference-forming rules under an explicit score
 ```
 
-The main text should be a narrative argument with no displayed formulas and no
-theorem or proof boxes. The appendix should carry the formal model, theorem
-statements, proofs, empirical equations, calibration tables, and numerical
-audit tables. The main text may use only a small number of salient figures that
-teach the argument directly.
+## Reader Contract
 
-The first page should not read like a math abstract disguised as prose. Start
-with a concrete situation where a local choice is coherent under the payoff the
+The main text is a narrative argument. It should contain no displayed formulas,
+theorem boxes, proof boxes, or empirical equations. The appendix carries the
+formal model, propositions, proofs, calibrations, robustness tables, and
+empirical equations.
+
+The first page should not read like a mathematical abstract. Start with a
+concrete situation where a local choice is coherent under the payoff the
 environment presents, then show how that choice changes a slower material
-capacity. Move bibliographic machinery such as JEL codes and long keyword lists
-below the abstract. Do not put symbolic formulas in the abstract. Do not use the
-opening to announce the paper's structure; use it to make the mechanism visible.
-The abstract should avoid compressed theorem-management phrases such as
-`one-capacity diagnostic`, `zero-drift equation`, `current-drift signal`, or
-`lower-boundary attracting state`; put those in the body or appendix after the
-reader already understands the mechanism. In the abstract, state the result as:
-bridge, trap, collapse-prone, self-correction can fail, and competition selects
-the metric it rewards.
+capacity. Technical terms may enter only after the reader can see what they are
+for.
 
-The main text should use a Scientific American style: concrete, explanatory,
-and alive, but not stripped of technical content. Short sentences are useful
-when they clarify; technical terms are useful when they are introduced before
-they are used. Avoid academic scaffolding when a direct claim will do, but do
-not hide the actual result. Terms such as `interior steady state`, `threshold`,
-`scalar model`, and `competitive score` may appear in the main body when the
-sentence explains what they mean.
+The abstract should state the result in plain language:
 
-## Current Core Result
+- fast environments can change what feels worth choosing;
+- today's choice can change tomorrow's material capacity;
+- bridge, trap, and collapse-prone regimes can arise;
+- self-correction can fail if the feedback only reports current movement;
+- competition selects whatever score it rewards.
 
-The reader should be able to state this result in plain words:
+Avoid compressed theorem-management phrases in the abstract, including
+`zero-drift equation`, `current-drift signal`, `one-capacity diagnostic`, and
+`lower-boundary attracting state`.
 
-If the environment quickly changes what feels rewarding, and the resulting
-behavior changes the slower capacity that makes alternatives feasible or
-rewarding, the economy can self-correct, fall into a threshold trap, or enter a
-collapse-prone lower-boundary region in the scalar diagnostics. Choices can be
-rational under the induced payoff while still changing future capacity in a
-damaging or repairing direction.
-
-The current revision adds the objective correction result:
-
-- An instantaneous current-drift signal alone does not move interior
-  steady-state capacities in the one-capacity model, because the signal is zero
-  at interior steady states.
-- A sufficiently strong level-of-capacity channel can change the number and
-  location of long-run states and remove a low-capacity trap in the diagnostic
-  calibration.
-- Competition preserves capacity when the competitive score ranks the
-  capacity-preserving rule above the sink. Material viability is one aligned
-  score; engagement or another proxy can select a sink while absolute material
-  mass falls.
-
-## Reader Vocabulary
+## Core Vocabulary
 
 Use these terms consistently:
 
-- `subjective payoff`: the criterion used at choice time.
+- `subjective payoff`: the criterion used at choice time;
 - `preference-forming rule`: the environment, institution, platform, AI system,
-  peer process, or norm that forms the subjective payoff.
-- `material capacity`: the slower stock being evaluated and changed by action,
-  such as social skill, solvency, health, metabolic resilience, learning, trust, or
-  institutional competence.
-- `substitute behavior`: the behavior that may relieve immediate pressure while
-  either bridging back to capacity or crowding it out.
-- `material outcome metric`: the plain-language term in the main text for the
-  criterion used to judge consequences after naming the capacity.
-- `material evaluator`: the formal appendix term for the material outcome
-  metric.
+  peer process, or norm that forms the subjective payoff;
+- `substitute behavior`: the quick reward or relief that may either bridge
+  back to capacity or crowd it out;
+- `material capacity`: the slower stock changed by behavior, such as social
+  skill, solvency, health, learning, trust, or institutional competence;
 - `competitive score`: the score that determines which preference-forming rule
-  expands under competition. It may be material viability, engagement, revenue,
-  attention, reproduction, solvency, or institutional persistence. Always name
-  it.
+  expands, such as material viability, engagement, revenue, attention,
+  reproduction, or institutional persistence.
 
-Do not use "wants" as a technical synonym for preferences. Do not imply that
+Do not use `wants` as a technical synonym for preferences. Do not imply that
 preferences are fake. They are endogenous.
 
-## Hard Requirements
+## Claims To Preserve
 
-1. Lead with the story and result in plain language.
-2. Define `subjective payoff`, `substitute behavior`, `material capacity`, and
-   `material outcome metric` in the main text before any formal appendix.
-3. Keep displayed formulas, theorem statements, proofs, and empirical equations
-   out of the main text; put them in appendices.
-4. Explain every appendix formula before or immediately after it appears.
-5. Number displayed formulas automatically in HTML.
-6. Keep Nash equilibrium as a consistency condition, not a welfare conclusion.
-7. Keep Darwinian or selection language criterion-explicit. Fitness must mean a
-   named capacity or reproduction/persistence criterion, not a loose metaphor.
-   Competition can reallocate share toward a better rule; do not imply that it
-   erases the sink rule's own low-capacity equilibrium unless a separate model
-   change removes that equilibrium.
-8. Keep real-world examples as candidate applications with caveats and tests,
-   not as proof that one mechanism explains everything.
-9. Keep the main text narrative. Put proof detail in appendices.
-10. Avoid prominent "closure" language. It belongs only in old notes or, if
-   unavoidable, as a narrowly defined appendix term.
-11. Avoid meta-commentary such as "this paper will show" or "the main object is."
-12. Avoid internal repository language in the reader copy except in a short
-    reproducibility note.
-13. Keep positive AI and repair cases visible. The point is not that preference
-    formation is bad; it is that the feedback loop can build or deplete capacity.
-14. Distinguish formal theorem, constructive calibration, random audit, and
-    empirical conjecture.
-15. Avoid advice-like prose. State implications as changes in capacity paths,
-    measurable capacity changes, or falsifiable predictions.
-16. Use one flagship application to carry the full mechanism before listing
-    candidate domains.
-17. Keep the bridge/sink distinction visible: a bridge rule rebuilds the named
-    material capacity, while a sink wins the induced payoff game and depletes
-    the capacity that would make exit feasible.
-18. Keep at most three salient charts in the main body: threshold trap,
-    correction channel, and competition score. Put audit figures and tables in
-    appendices.
-19. In the main text, use the memorable result names `Bridge`, `Trap`,
-    `Collapse`, `Alarm`, and `Selection`, but pair them with the technical
-    claim they summarize.
-20. Captions should be short and interpretive. They should tell the reader what
-    the figure says, not restate the formal model.
-21. The abstract must include enough technical detail to state the result:
-    fast-settled subjective payoff, slow material capacity, the scalar
-    bridge/trap/collapse regimes, the current-drift warning limitation, and the
-    dependence of Darwinian selection on the competitive score. Do this in
-    prose, without symbolic formulas in the abstract.
+- Nash equilibrium is a consistency condition after subjective payoffs are
+  formed, not a welfare conclusion.
+- Selection is meaningful only after the selected object and competitive score
+  are named.
+- Competition can reallocate share toward a better rule; it does not erase a
+  sink rule's own low-capacity equilibrium unless the capacity dynamics also
+  change.
+- The scalar simulations are mechanism checks, not empirical estimates.
+- Real-world examples are candidate tests, not proof that one mechanism
+  explains everything.
 
-## Editing Sequence
+## Main-Text Style
 
-Each cycle should check the draft in this order:
+Use a serious popular-science register: concrete, explanatory, and alive, but
+not sloppy. Simplify sentences, not claims.
 
-1. Editor: Does the prose read like serious popular science rather than either
-   a math monograph or a motivational essay?
-2. Scientist: Do the formal claims match the equations, simulations, and
-   proofs?
-3. Narrator: Do the examples make the model useful rather than decorative?
-4. Writer: Integrate feedback without flattening the math, adding prescriptions,
-   or overclaiming.
-5. Rendering: Do equations, tables, figures, and references render cleanly?
+Prefer:
 
-## Role-Specific Objective Functions
+- concrete examples before abstractions;
+- short explanations of why a term matters;
+- visible caveats that do not smother the argument;
+- figures with interpretive captions;
+- one flagship example that carries the full mechanism.
 
-### Scientist
+Avoid:
 
-Persona: exact, skeptical, and allergic to overclaiming.
+- meta-commentary such as "this paper will show";
+- formula names before the intuition is clear;
+- prominent use of `closure`;
+- advice-like prose;
+- internal workflow residue;
+- long lists of topical examples before one example has done real explanatory
+  work.
 
-Check:
+## Formal Placement
 
-- the fast-limit reduction is stated with appropriate assumptions;
-- the scalar capacity model's roots and stability claims are correct;
-- comparative statics do not claim monotone global effects where only local or
-  constructive statements are proven;
-- the random audit is described as a mechanism check, not an estimate;
-- Nash and selection claims are methodologically precise.
-- competition claims distinguish relative prevalence from absolute survival;
-- the selected metric is not conflated with objective material welfare.
+The appendix should explain every formula before or immediately after it
+appears. Displayed formulas should be numbered automatically in HTML.
 
-### Editor
+The main body may use at most three salient figures:
 
-Persona: journal editor with a strong ear for clarity, sequence, and reader
-patience.
+- threshold trap;
+- self-correction channel;
+- competition score.
 
-Reject:
+Audit tables and robustness diagnostics belong in the appendix.
 
-- undefined notation or unexplained symbols;
-- technical terms in the abstract before the idea is introduced;
-- empty simplifications that remove the result;
-- formula tables without interpretation;
-- examples presented as a universal explanation;
-- internal workflow residue in the reader copy.
-- broad application lists before one full worked example has made the mechanism
-  concrete.
+## Review Loop
 
-### Narrator
+Use these roles when an agentic edit cycle is requested:
 
-Persona: concrete, intellectually alive, and allergic to empty abstraction.
+1. **Editor:** clarity, sequence, style, reader patience.
+2. **Scientist:** theorem scope, model fidelity, no overclaiming.
+3. **Narrator:** examples illuminate the mechanism rather than decorate it.
+4. **Writer:** integrate feedback without flattening the result.
+5. **Rendering:** verify equations, tables, figures, references, and browser
+   layout.
 
-Check:
-
-- the flagship application walks through exposure, subjective payoff, action,
-  material capacity, threshold, correction channel, and competitive score;
-- other examples are framed as candidate tests, not as equal-weight diagnosis;
-- each example names the substitute and the capacity;
-- caveats are present without smothering the argument;
-- the reader can see how the model could be empirically tested.
-
-### Writer
-
-Persona: ambitious, lucid, and disciplined.
-
-Integrate feedback while preserving the central result. Simplify language, not
-claims. The final draft should sound like a serious economics article that a
-curious non-specialist can follow, with the formal power available in the
-appendix.
+Every reader-facing HTML revision must be visually checked in the target
+browser and recorded with a screenshot.

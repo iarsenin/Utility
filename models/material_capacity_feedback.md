@@ -2,17 +2,17 @@
 
 ## Purpose
 
-This is the current core model for the working paper. It replaces the
+This is the current core model for the working paper. It replaces the earlier
 fast-settling-only emphasis with a closed feedback loop:
 
 ```text
 fast subjective payoff formation -> choice/equilibrium -> slow material capacity -> future payoff formation
 ```
 
-The model is designed to answer the user's central objection: endogenous
-preferences should not be free-floating. They should be shaped by material
-outcomes, and material outcomes should be shaped by the choices made under the
-induced subjective payoff.
+The model keeps endogenous preferences tied to material consequences.
+Preference-forming environments shape current payoffs; choices under those
+payoffs change material capacity; material capacity then affects future payoff
+formation.
 
 ## Variables
 
@@ -72,7 +72,7 @@ Interpretation:
 
 ## Self-Correction And Competition Extension
 
-The current revision adds two correction channels.
+The model has two correction channels.
 
 First, a current material-drift signal can enter subjective payoff formation:
 
@@ -101,8 +101,8 @@ victory from absolute survival.
 
 Key implication:
 
-- If `S_l` is material viability and tracks `g_l`, competition can shift prevalence toward the
-  capacity-preserving rule.
+- If `S_l` is material viability and tracks `g_l`, competition can shift
+  prevalence toward the capacity-preserving rule.
 - If `S_l` is an engagement proxy, competition can select a high-engagement sink
   while absolute material mass falls.
 - If all available rules have negative material growth, Darwinian competition

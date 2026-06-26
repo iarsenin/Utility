@@ -2,6 +2,9 @@
 
 Use this directory for paper notes, BibTeX exports, and literature summaries.
 
+Active notes should support the current material-capacity feedback paper.
+Superseded extension notes are kept under `archive/` for provenance.
+
 Suggested naming:
 
 ```text
