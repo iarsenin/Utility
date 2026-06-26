@@ -70,6 +70,44 @@ Interpretation:
 - Stronger damage can also produce a lower-boundary state rather than a clean
   two-interior-basin trap.
 
+## Self-Correction And Competition Extension
+
+The current revision adds two correction channels.
+
+First, a current material-drift signal can enter subjective payoff formation:
+
+```text
+p_chi(K) = logistic(beta * (q + z - rho K + chi * Phi_chi(K)))
+Phi_chi(K) = alpha + r K^2(1 - K) - d K - L p_chi(K)
+```
+
+This looks like reality pushing back, but it does not move the steady-state
+capacities. At any steady state `Phi_chi(K) = 0`, so the current-drift signal is
+zero exactly where it would need to remove the trap. It can damp slopes and
+adjustment speeds, but it is not a general self-correction mechanism.
+
+Second, competition among preference-forming rules is modeled by a replicator
+layer:
+
+```text
+sdot_l = omega * s_l * (S_l - sum_r s_r S_r)
+Ndot = N * sum_r s_r g_r
+```
+
+Here `s_l` is the prevalence of rule `l`, `S_l` is the operative competitive
+score, `g_l` is material growth, `omega` is competition intensity, and `N` is
+absolute population, capital, or institutional scale. This separates relative
+victory from absolute survival.
+
+Key implication:
+
+- If `S_l` is material viability and tracks `g_l`, competition can shift prevalence toward the
+  capacity-preserving rule.
+- If `S_l` is an engagement proxy, competition can select a high-engagement sink
+  while absolute material mass falls.
+- If all available rules have negative material growth, Darwinian competition
+  can still produce disappearance rather than convergence to a fitter taste.
+
 ## Literature Position
 
 The model draws from:
@@ -95,6 +133,7 @@ Run:
 
 ```bash
 python3 scripts/run_material_feedback_analysis.py
+python3 scripts/run_self_correction_analysis.py
 python3 scripts/build_material_feedback_article.py
 ```
 
@@ -107,6 +146,10 @@ Generated outputs:
 - `results/figures/material_feedback_phase.svg`
 - `results/figures/material_feedback_paths.svg`
 - `results/figures/material_feedback_audit.svg`
+- `results/self_correction_report.md`
+- `results/tables/self_correction_*.csv`
+- `results/figures/self_correction_channels.svg`
+- `results/figures/competition_selection_channels.svg`
 - `paper/when_preferences_move_faster_than_equilibrium_v1.html`
 
 ## Evidence Standard

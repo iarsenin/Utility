@@ -91,14 +91,19 @@ Run the current material-feedback model:
 
 ```bash
 python3 scripts/run_material_feedback_analysis.py
+python3 scripts/run_self_correction_analysis.py
 python3 scripts/build_material_feedback_article.py
 ```
 
 The scripts write:
 
 - `results/material_feedback_report.md`
+- `results/self_correction_report.md`
 - `results/tables/material_feedback_*.csv`
+- `results/tables/self_correction_*.csv`
 - `results/figures/material_feedback_*.svg`
+- `results/figures/self_correction_channels.svg`
+- `results/figures/competition_selection_channels.svg`
 - `paper/when_preferences_move_faster_than_equilibrium_v1.html`
 
 ## Current Status

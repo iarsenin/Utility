@@ -108,10 +108,12 @@ Target a reader-facing but rigorous working paper:
 2. Material-capacity feedback model.
 3. Analytical classification: self-correction, threshold trap, collapse-prone
    feedback.
-4. Real-world applications and tests.
-5. Empirical strategy.
-6. Nash equilibrium and material selection.
-7. Formal appendix.
+4. Automatic correction tests: current-drift signals, persistent stock
+   feedback, and competition among preference-forming rules.
+5. Real-world applications and tests.
+6. Empirical strategy.
+7. Nash equilibrium, competition, and material selection.
+8. Formal appendix.
 
 ## Near-Term Milestones
 
@@ -150,8 +152,19 @@ Status: first version implemented in
 
 ### Milestone 3: Model Deepening
 
-- Add a platform objective and solve for Markov-perfect or stationary equilibria.
-- Compare welfare under biological fitness, current subjective utility, and meta-preference criteria.
+- Add a competition layer over preference-forming rules using a replicator
+  dynamic with competition intensity `omega`.
+- Separate relative selection of rules from absolute survival of population,
+  capital, or institutional mass.
+- Compare material-viability competition with proxy competition such as
+  engagement or retention.
+- Then add a platform objective and solve for Markov-perfect or stationary
+  equilibria if the scalar/replicator results remain interesting.
+
+Status: first competition layer implemented in
+`src/utility_endogenous/self_correction.py`,
+`scripts/run_self_correction_analysis.py`, and
+`results/self_correction_report.md`.
 
 ### Milestone 4: Empirical Anchors
 
@@ -184,6 +197,8 @@ The formal model should therefore focus on:
 - local subjective payoff formation;
 - the induced subjective game and Nash equilibrium;
 - material capacity dynamics;
-- selection over rules, institutions, and designs;
+- competition and selection over rules, institutions, and designs;
+- the distinction between material selection metrics and proxy selection
+  metrics;
 - empirical tests that identify capacity feedback rather than merely
   preference drift.

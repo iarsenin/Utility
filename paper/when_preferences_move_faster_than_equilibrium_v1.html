@@ -184,6 +184,27 @@
       font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
+    .result-list {
+      background: #f8fbf5;
+      border: 1px solid #d9e8ce;
+      border-left: 4px solid var(--theorem-rule);
+      margin: 24px 0;
+      padding: 16px 18px;
+    }
+
+    .result-list h3 {
+      font-size: 0.95rem;
+      margin: 0 0 9px;
+    }
+
+    .result-list ol {
+      margin-bottom: 0;
+    }
+
+    .result-list li {
+      margin: 8px 0;
+    }
+
     .warning {
       background: var(--warning);
       border-color: #ecd3aa;
@@ -356,14 +377,15 @@
     <h1>When Preferences Move Faster Than Equilibrium</h1>
     <p class="subtitle">Endogenous utility, material-capacity feedback, and Nash equilibrium</p>
     <p class="meta"><strong>Working paper draft.</strong> Prepared for comment.</p>
-    <p class="meta"><strong>JEL codes:</strong> C72, D01, D11, D83, D91, I12, J13. <strong>Keywords:</strong> endogenous preferences, utility, Nash equilibrium, material capacity, social media, AI, addiction, fertility, loneliness, selection.</p>
+    <p class="meta"><strong>JEL codes:</strong> C72, D01, D11, D83, D91, I12. <strong>Keywords:</strong> endogenous preferences, utility, Nash equilibrium, material capacity, social media, AI, addiction, loneliness, competition.</p>
   </header>
 
   <section class="abstract">
     <h2>Abstract</h2>
     <p>Economic models often treat preferences as fixed. This article studies cases where environments quickly change what feels rewarding, while the real capacities needed for other choices change slowly. A feed, peer group, market, institution, or AI system can make a substitute behavior attractive today. The resulting choice can then change the capacity that would make tomorrow's alternatives attractive: social skill, solvency, metabolic health, family agency, learning, trust, or institutional competence.</p>
-    <p>The central result is a feedback classification. When capacity remains protective, the system self-corrects. When the substitute erodes the same capacity that would make it less attractive, the model can have two stable states: a low-capacity state with heavy substitute use and a high-capacity state with little substitute use. A threshold separates them. When damage overwhelms repair, the high-capacity state can disappear rather than merely become harder to reach. These outcomes can arise even when each choice is rational under the payoff criterion formed at the moment of choice.</p>
-    <p>The framework gives a disciplined test for candidate applications such as low fertility, loneliness, dating retreat, AI companions, online betting and debt, ultra-processed food, appearance arms races, political outrage, migration backlash, and international trust. It does not claim that these phenomena have one cause. It asks: what forms the subjective payoff, what substitute behavior is chosen, what material capacity is changed, and does the loop build capacity, deplete it, or trap the system below a threshold?</p>
+    <p>The central result is a feedback classification. If damage and sensitivity are weak enough, repair is strong enough, or the capacity-protection channel is strong enough, the system can self-correct. When the substitute erodes the same capacity that would make it less attractive, the model can instead have two stable states: a low-capacity state with heavy substitute use and a high-capacity state with little substitute use. A threshold separates them. When damage overwhelms repair, the high-capacity state can disappear rather than merely become harder to reach. These outcomes can arise even when each choice is rational under the payoff criterion formed at the moment of choice.</p>
+    <p>A second result concerns objective correction. A signal that merely reports current deterioration does not remove the low-capacity steady state, because at a steady state the deterioration signal is zero. Durable correction in the diagnostics comes from the capacity-protection channel or from competition under a material competitive score. Competition is not magic: if the competitive score is material viability, a capacity-preserving rule expands; if the competitive score is engagement, a high-engagement sink can win while material capacity and population mass fall.</p>
+    <p>The framework gives a disciplined test for candidate applications such as AI companions, dating retreat, online betting and debt, ultra-processed food, appetite-changing medicines, appearance arms races, and political outrage. It does not claim that these phenomena have one cause. It asks: what forms the subjective payoff, what substitute behavior is chosen, what material capacity is changed, what competitive score selects among systems, and does the loop build capacity, deplete it, or trap the system below a threshold?</p>
   </section>
 
   <section>
@@ -372,15 +394,26 @@
 
     <p>A teenager who retreats from courtship into screens may not be confused at the moment of choice. An isolated adult may rationally prefer an AI companion tonight. A bettor may value the next in-game wager as participation in the match. A young couple may sincerely delay children because the visible threshold for adequate parenthood has moved. A citizen may prefer outrage media because institutional verification feels remote while a familiar personality feels fluent and alive.</p>
 
-    <p>The hard question is not whether the subjective payoff is "real." In economic terms it is real if it guides choice. The hard question is whether the system that forms that payoff builds or depletes the material capacity being evaluated. Capacity means the stock that matters for the application: social skill, friendship, solvency, metabolic health, fertility agency, learning, trust, institutional competence, or demographic continuity.</p>
+    <p>The hard question is not whether the subjective payoff is "real." In economic terms it is real if it guides choice. The hard question is whether the system that forms that payoff builds or depletes the material capacity being evaluated, and whether competition actually selects the systems that preserve that capacity. Capacity means the stock that matters for the application: social skill, friendship, solvency, metabolic health, learning, trust, or institutional competence.</p>
 
     <p>Three terms do the work. A <em>subjective payoff</em> is what the agent maximizes at the moment of choice. A <em>substitute behavior</em> is the action that gives immediate relief or reward while possibly replacing practice of another capacity. A <em>material evaluator</em> is the criterion used to judge the longer-run consequence after the capacity has been named. For example, an AI companion may reduce loneliness tonight; the material evaluator asks whether it also builds friendship capacity outside the companion system.</p>
+
+    <div class="result-list">
+      <h3>Results in the draft</h3>
+      <ol>
+        <li><strong>Formal reduction.</strong> If preference formation is fast, initial conditions lie in the basin of a selected attracting branch, and no branch switch occurs on the interval, Nash equilibrium is computed in the induced subjective game, and material capacity then moves under the selected equilibrium behavior.</li>
+        <li><strong>Scalar capacity result.</strong> The one-stock model has three regimes: a single high-capacity state, two stable states separated by a threshold, or collapse toward a boundary when damage overwhelms repair.</li>
+        <li><strong>Correction result.</strong> A current-deterioration signal does not move steady states; persistent material-state feedback can remove the low trap.</li>
+        <li><strong>Competition result.</strong> Competition selects the rule with the higher competitive score \(S_\ell\). Absolute survival depends on material growth \(g_\ell\). If \(S_\ell\) is material viability, a bridge can expand. If \(S_\ell\) is engagement, a sink can win while material mass falls.</li>
+        <li><strong>Empirical status.</strong> The applications are candidate tests. They require measured exposure, behavior, capacity, and competitive score before they become evidence.</li>
+      </ol>
+    </div>
 
     <div class="result-strip">
       <div><strong>Subjective payoff</strong><span>The criterion used at choice time, after exposure and current capacity have shaped what feels rewarding.</span></div>
       <div><strong>Nash step</strong><span>The consistency condition applied to the induced game. It is not a welfare certificate.</span></div>
       <div><strong>Material capacity</strong><span>The slower stock used to evaluate consequences and to shape future payoffs.</span></div>
-      <div><strong>Selection</strong><span>The long-run question: which rules reproduce capacity, spread, or disappear?</span></div>
+      <div><strong>Competition</strong><span>The long-run question: which rules expand, which disappear, and what metric decides?</span></div>
     </div>
 
     <p>The old fixed-preference account is enough when exposure changes information, prices, or constraints while leaving the relevant payoff criterion stable. It is not enough when the environment changes the criterion and the resulting action changes the future environment of choice. That second case is the object here.</p>
@@ -415,6 +448,19 @@
     <div class="reader-result">
       <strong>Why this form?</strong> It is the smallest model that allows three empirically distinct cases: self-correction, a threshold trap, and collapse-prone capacity loss. A linear repair term would make the low-capacity region too easy to escape. A purely exogenous taste shock would miss the feedback from material capacity back into the next subjective payoff.
     </div>
+
+    <p>Competition enters only after the competitive score has been named. Let \(s_\ell\) be the share of aggregate mass \(N\) governed by preference-forming rule \(\ell\), with \(s_\ell\ge0\) and \(\sum_\ell s_\ell=1\). Let \(S_\ell\) be the competitive score that changes relative prevalence: material viability, engagement, revenue, attention, or another criterion. Let \(g_\ell\) be the material growth rate of the mass carrying rule \(\ell\), and let \(\omega\) be competition intensity. The minimal Darwinian layer used here separates relative prevalence from aggregate material scale:</p>
+
+    <div class="equation">
+      <span class="label">Competition among preference-forming rules</span>
+      \[
+        \dot s_\ell=\omega s_\ell\left(S_\ell-\sum_r s_rS_r\right),
+        \qquad
+        \dot N=N\sum_r s_rg_r
+      \]
+    </div>
+
+    <p>The first equation is relative competition: rules with above-average competitive scores expand. The second equation is absolute survival: the whole population, capital stock, or institutional scale can still shrink if average material growth is negative. This is a modeling convention, not an identity: the share equation is governed by \(S\), while material scale is governed by \(g\). The two coincide only when the competitive score tracks material growth.</p>
   </section>
 
   <section>
@@ -423,10 +469,10 @@
 
     <p>The second result is the trap. A low-capacity state can be stable because low capacity makes the substitute attractive, and the substitute prevents the capacity from rebuilding. A high-capacity state can also be stable because capacity makes the substitute less attractive, and lower substitute use allows capacity to rebuild. The unstable middle point is the threshold. Moving just above it changes the long-run destination; moving just below it does not.</p>
 
-    <p>The third result matters for policy and design: more severe feedback need not simply make hysteresis larger. It can remove the interior high-capacity equilibrium. In plain words, there is a difference between a system that is trapped below a threshold and a system whose repair process has been overwhelmed.</p>
+    <p>The third result matters for mechanism classification: more severe feedback need not simply make hysteresis larger. It can remove the interior high-capacity equilibrium. In plain words, there is a difference between a system that is trapped below a threshold and a system whose repair process has been overwhelmed.</p>
 
     <div class="reader-result">
-      <strong>Relation to prior work.</strong> <a href="#ref-stigler-becker">Stigler and Becker</a> move apparent taste changes into shadow prices and consumption capital. <a href="#ref-grossman">Grossman</a> models health as a durable capital stock. <a href="#ref-becker-murphy">Becker and Murphy</a> model addiction through intertemporal complementarity. <a href="#ref-bowles">Bowles</a>, <a href="#ref-bisin">Bisin and Verdier</a>, and <a href="#ref-bernheim-chosen">Bernheim et al.</a> put preference formation inside institutions, transmission, or chosen worldviews. <a href="#ref-koszegi-rabin">Koszegi and Rabin</a> and <a href="#ref-genicot-ray">Genicot and Ray</a> make reference points and aspirations endogenous. <a href="#ref-brock-durlauf">Brock and Durlauf</a> and <a href="#ref-arthur">Arthur</a> show how social interactions and increasing returns create multiple states. Recommender-system work such as <a href="#ref-jiang">Jiang et al.</a> and <a href="#ref-kleinberg">Kleinberg, Mullainathan, and Raghavan</a> supplies the modern preference-forming environment. The contribution here is the timing discipline: fast subjective payoff formation, ordinary equilibrium choice, and slow capacity feedback in one loop.
+      <strong>Relation to prior work.</strong> <a href="#ref-stigler-becker">Stigler and Becker</a> move apparent taste changes into shadow prices and consumption capital. <a href="#ref-grossman">Grossman</a> models health as a durable capital stock. <a href="#ref-becker-murphy">Becker and Murphy</a> model addiction through intertemporal complementarity. <a href="#ref-bowles">Bowles</a>, <a href="#ref-bisin">Bisin and Verdier</a>, and <a href="#ref-bernheim-chosen">Bernheim et al.</a> put preference formation inside institutions, transmission, or chosen worldviews. <a href="#ref-ely-yilankaya">Ely and Yilankaya</a>, <a href="#ref-dekel">Dekel, Ely, and Yilankaya</a>, and <a href="#ref-sandholm">Sandholm</a> separate subjective preferences, equilibrium play, and evolutionary selection. <a href="#ref-koszegi-rabin">Koszegi and Rabin</a> and <a href="#ref-genicot-ray">Genicot and Ray</a> make reference points and aspirations endogenous. <a href="#ref-brock-durlauf">Brock and Durlauf</a> and <a href="#ref-arthur">Arthur</a> show how social interactions and increasing returns create multiple states. Recommender-system work such as <a href="#ref-jiang">Jiang et al.</a> and <a href="#ref-kleinberg">Kleinberg, Mullainathan, and Raghavan</a> supplies the modern preference-forming environment. The contribution here is the timing discipline: fast subjective payoff formation, ordinary equilibrium choice, slow capacity feedback, and explicit competition over preference-forming rules.
     </div>
 
     <figure>
@@ -457,12 +503,12 @@
 <tr><td>collapse-prone feedback</td><td>3,000</td><td>19.7%</td><td>80.3%</td><td>15.4%</td><td>88.5%</td><td>5.6%</td><td>29.3%</td></tr></tbody></table>
 
     <p class="table-title">Audit design.</p>
-    <p class="small">The audit uses seed 20260626 and 3,000 draws per class. Classes differ only in substitute damage \(L\), sensitivity \(\beta\), and capacity protection \(\rho\). Shared ranges are \(\alpha\in[0.10,0.28]\), \(r\in[1,4]\), \(d\in[0.22,0.78]\), \(q\in[0.35,0.65]\), and \(z\in[-0.05,0.10]\).</p>
+    <p class="small">The audit uses seed 20260626 and 3,000 draws per class. Classes differ only in substitute damage \(L\), sensitivity \(\beta\), and the capacity-protection channel \(\rho\). Shared ranges are \(\alpha\in[0.10,0.28]\), \(r\in[1,4]\), \(d\in[0.22,0.78]\), \(q\in[0.35,0.65]\), and \(z\in[-0.05,0.10]\).</p>
     <table>
       <thead><tr><th>Feedback class</th><th>\(L\)</th><th>\(\beta\)</th><th>\(\rho\)</th><th>Interpretation</th></tr></thead>
       <tbody>
         <tr><td>Weak feedback</td><td>[0.04, 0.12]</td><td>[8, 18]</td><td>[0.55, 1.00]</td><td>Low substitute damage and moderate sensitivity.</td></tr>
-        <tr><td>Trap-prone feedback</td><td>[0.12, 0.24]</td><td>[10, 24]</td><td>[0.70, 1.20]</td><td>Intermediate damage and sharper capacity protection.</td></tr>
+        <tr><td>Trap-prone feedback</td><td>[0.12, 0.24]</td><td>[10, 24]</td><td>[0.70, 1.20]</td><td>Intermediate damage and a sharper capacity-protection channel.</td></tr>
         <tr><td>Collapse-prone feedback</td><td>[0.20, 0.36]</td><td>[14, 30]</td><td>[0.75, 1.35]</td><td>High damage and high sensitivity, often pushing the projected state to the lower boundary.</td></tr>
       </tbody>
     </table>
@@ -471,61 +517,102 @@
       <img src="../results/figures/material_feedback_audit.svg" alt="Parameter audit for capacity traps">
       <figcaption>Random parameter audit. Weak feedback mostly produces one stable state. Trap-prone feedback produces the highest share of low-high traps. Collapse-prone feedback more often reaches the lower boundary of the projected capacity interval. The audit is a mechanism check, not an empirical estimate.</figcaption>
     </figure>
+
+    <h3>Does Reality Correct The System Automatically?</h3>
+    <p>No, not in the weak sense of "people eventually notice the damage." If the subjective payoff includes a signal of current material deterioration, the motion can be damped, but the steady states are unchanged. At any steady state, current deterioration is zero, so that signal has nothing left to say. The mechanical result is that warnings and discomfort are not a restoring force unless they remain connected to an enduring material state or a competitive selection process.</p>
+
+    <p>The capacity-protection channel is different. When the level of capacity itself changes the payoff map, a sufficiently strong \(\rho\) can remove the low trap. In the baseline calibration, the low-capacity trap disappears when \(\rho\) is raised to about 3.1 on the reported grid. That is self-correction in the formal sense: the vector field no longer contains the low attracting state.</p>
+
+    <figure>
+      <img src="../results/figures/self_correction_channels.svg" alt="Self-correction channel diagnostics">
+      <figcaption>Two correction channels. A current deterioration signal changes slopes but leaves the same roots. A persistent capacity-stock signal can change the root pattern and remove the low-capacity trap. The distinction matters because transient regret or pain often behaves like the first channel, while institutions, skills, balance sheets, health, and social networks behave like the second.</figcaption>
+    </figure>
+
+    <p class="table-title">Stock-feedback correction threshold.</p>
+    <p class="small">The sweep varies only the protective effect of capacity on payoff formation, \(\rho\), holding the baseline trap calibration fixed. The table is a mechanism diagnostic, not an estimate.</p>
+    <table><thead><tr><th>Capacity protection rho</th><th>Stable states</th><th>Low trap</th><th>Threshold</th><th>High state</th></tr></thead><tbody><tr><td class="num">0.000</td><td class="num">2</td><td>yes</td><td>yes</td><td>yes</td></tr>
+<tr><td class="num">0.500</td><td class="num">2</td><td>yes</td><td>yes</td><td>yes</td></tr>
+<tr><td class="num">1.000</td><td class="num">2</td><td>yes</td><td>yes</td><td>yes</td></tr>
+<tr><td class="num">1.500</td><td class="num">2</td><td>yes</td><td>yes</td><td>yes</td></tr>
+<tr><td class="num">2.000</td><td class="num">2</td><td>yes</td><td>yes</td><td>yes</td></tr>
+<tr><td class="num">2.500</td><td class="num">2</td><td>yes</td><td>yes</td><td>yes</td></tr>
+<tr><td class="num">3.000</td><td class="num">2</td><td>yes</td><td>yes</td><td>yes</td></tr>
+<tr><td class="num">3.500</td><td class="num">1</td><td>no</td><td>no</td><td>yes</td></tr>
+<tr><td class="num">4.000</td><td class="num">1</td><td>no</td><td>no</td><td>yes</td></tr></tbody></table>
+
+    <h3>Competition Is Corrective Only Under The Right Metric</h3>
+    <p>Competition is Darwinian, but Darwinian does not mean benevolent. In the audit below, a bridge rule and a sink rule start at the same capacity and equal shares. Under material-viability competition, the bridge expands and total population mass recovers. Under engagement-proxy competition, the sink expands and material population mass falls. The same replicator equation does both; the difference is the competitive score \(S_\ell\) and its relation to material growth \(g_\ell\).</p>
+
+    <figure>
+      <img src="../results/figures/competition_selection_channels.svg" alt="Competition selection channels">
+      <figcaption>Competition over rules. When the competitive score is material viability, the capacity-preserving bridge rule takes over. When the competitive score is engagement, the high-substitute sink wins even though material population mass collapses. The figure separates relative victory from absolute survival.</figcaption>
+    </figure>
+
+    <p class="table-title">Competition audit.</p>
+    <p class="small">The bridge and sink rules are simulated from the same initial capacity and equal shares. Competition intensity \(\omega=0\) is the no-competition control; higher \(\omega\) speeds selection. Population mass is normalized to one initially.</p>
+    <table><thead><tr><th>Competitive score</th><th>Competition omega</th><th>Final bridge share</th><th>Final population mass</th><th>Final material growth</th><th>Readout</th></tr></thead><tbody><tr><td>material viability</td><td class="num">0.000</td><td class="num">0.500</td><td class="num">0.440</td><td class="num">-0.009</td><td>no competition: shares remain fixed</td></tr>
+<tr><td>material viability</td><td class="num">0.400</td><td class="num">0.925</td><td class="num">2.192</td><td class="num">0.026</td><td>competition selects the capacity-preserving rule</td></tr>
+<tr><td>material viability</td><td class="num">1.200</td><td class="num">0.999</td><td class="num">5.734</td><td class="num">0.032</td><td>competition selects the capacity-preserving rule</td></tr>
+<tr><td>engagement proxy</td><td class="num">0.000</td><td class="num">0.500</td><td class="num">0.440</td><td class="num">-0.009</td><td>no competition: shares remain fixed</td></tr>
+<tr><td>engagement proxy</td><td class="num">0.400</td><td class="num">0.000</td><td class="num">0.022</td><td class="num">-0.050</td><td>competition selects the high-engagement sink</td></tr>
+<tr><td>engagement proxy</td><td class="num">1.200</td><td class="num">0.000</td><td class="num">0.020</td><td class="num">-0.050</td><td>competition selects the high-engagement sink</td></tr></tbody></table>
   </section>
 
   <section>
-    <h2>4. Why This Helps With Real Puzzles</h2>
-    <p>The model is useful only when it explains something that a stable-preference story leaves obscure. The candidate applications below are not proofs that one mechanism explains everything. The test is concrete: identify the substitute, the capacity, the feedback sign, and the evidence that would distinguish capacity feedback from ordinary constraints.</p>
+    <h2>4. Nash Equilibrium And Competition</h2>
+    <p>Nash equilibrium is used as a mathematical consistency condition. The model changes the game to which Nash equilibrium is applied. First the preference-forming rule creates subjective payoffs. Then agents choose, possibly strategically, inside the induced game. The equilibrium can be fully coherent while the material capacity being evaluated moves in a bad direction.</p>
 
-    <p class="table-title">Ten places to test the mechanism.</p>
+    <p>Competition supplies the second operator. Once equilibrium behavior has changed capacity, rules compete according to \(S_\ell\), the competitive score. If \(S_\ell\) is material viability, rules with lower material-viability scores lose prevalence. If \(S_\ell\) is engagement, attention, status, or short-run revenue, the rule that expands may be the one with negative material growth \(g_\ell\). This is why "competition will fix it" is not a theorem. The theorem needs the score.</p>
+
+    <div class="reader-result">
+      <strong>Selection claim.</strong> A preference-forming rule survives in the long run only if the capacity path it induces is compatible with the material evaluator that reproduces the system. If every available rule depletes the relevant capacity, the long-run conclusion can be disappearance rather than convergence to a fitter taste.
+    </div>
+
+    <p>This is where the Darwinian language becomes disciplined. "Fitness" is not a loose metaphor. It must be named: reproduction, solvency, health, learning, institutional continuity, verification capacity, or some other material evaluator. Different evaluators can disagree, and the disagreement is part of the economics.</p>
+  </section>
+
+  <section>
+    <h2>5. A Full Example: AI Companions And Loneliness</h2>
+    <p>The cleanest way to read the model is through one case. The <a href="#ref-who-loneliness">WHO Commission on Social Connection</a> and the <a href="#ref-surgeon-general">US Surgeon General</a> treat loneliness as a health and community problem, while <a href="#ref-hbs-ai">De Freitas et al.</a>, <a href="#ref-common-sense-ai">Common Sense Media</a>, and <a href="#ref-ai-companions">Malfacini</a> document the emerging AI-companion setting. Suppose an AI companion is always available, responsive, nonjudgmental, and tuned by a platform. The exposure variable \(z\) is the availability and emotional fluency of the companion. The subjective payoff is the immediate value of synthetic interaction relative to costly human contact. The substitute behavior is time spent in the synthetic relationship instead of attempts at ordinary social contact.</p>
+
+    <p>The material capacity is not "happiness" in general. It is a measurable stock: offline contact attempts, friendship repair attempts, invitations accepted, social anxiety after repeated use, time spent in mixed social settings, or durable human ties. A bridge design lowers the cost of contact while preserving or increasing those stocks. A sink design supplies enough synthetic reward that the outside stock decays. The same user can make locally rational choices under either design; the objective difference is the path of measured social capacity.</p>
+
+    <p>The threshold result says that small changes may have different effects depending on the starting stock. Above the threshold, synthetic interaction can be a scaffold that reduces anxiety and returns the user to human contact with higher capacity. Below the threshold, the same local reward can stabilize retreat if outside contact becomes too costly relative to the induced payoff. The current-deterioration result is narrower than "loneliness disappears": loneliness may remain, but the marginal signal that current behavior is making the capacity stock worse can vanish once the system settles into a low-capacity state.</p>
+
+    <p>Competition is the Darwinian part. Imagine two companion systems. A health insurer, school, employer, clinical trial, or public agency rewards the bridge design when later offline contact, friendship repair attempts, or social anxiety improve. A platform ranking system, venture dashboard, or creator marketplace rewards the sink design when retention, session length, paid attachment, or daily dependence rises. Material-viability competition expands the bridge if it produces higher long-run capacity. Engagement competition expands the sink if it captures more time, even when the absolute stock of human social capacity falls. This is not a claim that AI companionship is intrinsically harmful or beneficial; it is a claim that the competitive score determines which design survives.</p>
+
+    <p>The empirical test is therefore concrete: randomize or instrument exposure to companion designs, measure immediate loneliness and longer-run offline contact capacity, and observe which competitive score governs product survival. A fixed-preference account is adequate if the exposure changes only convenience or information. The feedback account is needed if exposure changes the payoff of human contact and the resulting behavior changes later social capacity.</p>
+  </section>
+
+  <section>
+    <h2>6. Candidate Domains</h2>
+    <p>The same mechanism can be tested elsewhere, but the following table is a research menu, not a claim that one model explains everything. Each row must name a substitute, a measurable capacity, and a competitive score before it becomes evidence.</p>
+
+    <p class="table-title">Candidate tests of the mechanism.</p>
     <table>
       <thead>
-        <tr><th>Domain</th><th>Substitute</th><th>Capacity</th><th>Preference-forming rule</th><th>Non-obvious prediction</th></tr>
+        <tr><th>Domain</th><th>Substitute</th><th>Measurable capacity</th><th>Preference-forming rule</th><th>Competitive score to check</th></tr>
       </thead>
       <tbody>
-        <tr><td>Low fertility</td><td>Delay, smaller family size, child-free status competition</td><td>Family agency, partner-market capacity, household formation</td><td>Status comparison raises the subjective threshold for acceptable parenthood.</td><td>Policy works better when it lowers material barriers and the perceived standard of "responsible" parenthood.</td></tr>
-        <tr><td>Loneliness</td><td>Mediated contact, scrolling, parasocial connection</td><td>Friendship skill, ordinary social practice, trust</td><td>Mediated substitutes reduce the immediate cost of solitude.</td><td>Short-run relief can coexist with long-run social-capacity loss.</td></tr>
-        <tr><td>Dating retreat</td><td>Avoidance, pornography, games, low-risk digital interaction</td><td>Courtship confidence, mixed social networks, intimacy practice</td><td>Rejection avoidance and online substitutes raise the subjective payoff of non-courtship.</td><td>Small nudges fail below the threshold; assisted practice can work if it moves people across it.</td></tr>
-        <tr><td>AI companions</td><td>Always-available synthetic relationship</td><td>Social capacity outside the AI system</td><td>Always-available response makes synthetic companionship highly rewarding.</td><td>Companions help when they bridge to human practice and harm when they replace it.</td></tr>
-        <tr><td>Sports betting and debt</td><td>Micro-wagers, frictionless checkout, identity purchases</td><td>Liquidity, savings, credit resilience</td><td>Frictionless risk turns fandom or shopping into repeated immediate reward.</td><td>Financial harm is largest where losses reduce future self-control and raise the appeal of further risk.</td></tr>
-        <tr><td>Food and GLP-1s</td><td>Hyper-palatable food; repair via appetite-changing medicine</td><td>Metabolic health, appetite regulation, agency</td><td>Food environments or medicines alter the subjective reward of consumption.</td><td>Preference change can be repair, not manipulation, if it builds durable capacity.</td></tr>
-        <tr><td>Appearance arms races</td><td>Filters, cosmetic escalation, lookmaxxing advice</td><td>Body satisfaction, identity flexibility, financial resilience</td><td>Ranked visual comparison makes yesterday's enhancement today's baseline.</td><td>Temporary fashion becomes a trap when the old baseline remains unacceptable after exposure fades.</td></tr>
-        <tr><td>Political outrage</td><td>Outrage feeds, parasocial news trust</td><td>Verification capacity, institutional trust, civic patience</td><td>Feeds and personalities make anger and familiarity more rewarding than correction.</td><td>Distrust can become self-confirming even when some grievances are real.</td></tr>
-        <tr><td>Migration</td><td>Threat framing, withdrawal, status defense</td><td>Integration capacity, state competence, local trust</td><td>Border images and identity cues change the subjective payoff of openness.</td><td>Public willingness to cooperate can move faster than labor-market or demographic fundamentals.</td></tr>
-        <tr><td>Alliances</td><td>Unilateralism, burden-sharing resentment, contempt for partners</td><td>Credible commitment, alliance trust, defense coordination</td><td>Domestic media can change the subjective payoff of reliability.</td><td>Alliance capacity erodes when defection becomes a locally rational political equilibrium.</td></tr>
+        <tr><td>Dating retreat</td><td>Avoidance, pornography, games, low-risk digital interaction</td><td>Mixed social-network size, date initiation attempts, rejection anxiety, relationship formation</td><td>Rejection avoidance and online substitutes raise the subjective payoff of non-courtship.</td><td>Retention in substitutes versus later courtship capacity.</td></tr>
+        <tr><td>Sports betting and debt</td><td>Micro-wagers, frictionless checkout, identity purchases</td><td>Savings buffer, credit utilization, missed payments, debt service</td><td>Frictionless risk turns fandom or shopping into repeated immediate reward.</td><td>Handle, revenue, and attention versus household solvency.</td></tr>
+        <tr><td>Hyper-palatable food</td><td>Ultra-processed, high-reward consumption</td><td>Weight trajectory, metabolic markers, appetite regulation, food cue sensitivity</td><td>Food environments raise the subjective reward of repeated consumption.</td><td>Sales, attention, and repeat purchase versus metabolic capacity.</td></tr>
+        <tr><td>GLP-1 repair channel</td><td>Appetite-changing medicine as a bridge intervention</td><td>Metabolic markers, appetite regulation after withdrawal, durable behavior change</td><td>Medicine changes the reward field and may shift the capacity path.</td><td>Durable metabolic capacity versus continued product dependence.</td></tr>
+        <tr><td>Appearance arms races</td><td>Filters, cosmetic escalation, lookmaxxing advice</td><td>Body satisfaction, procedure spending, baseline acceptability after exposure</td><td>Ranked visual comparison makes yesterday's enhancement today's baseline.</td><td>Status attention versus financial and identity resilience.</td></tr>
+        <tr><td>Political outrage</td><td>Outrage feeds, parasocial news trust</td><td>Correction acceptance, institutional trust, cross-cutting exposure</td><td>Feeds and personalities make anger and familiarity more rewarding than verification.</td><td>Engagement and audience share versus verification capacity.</td></tr>
       </tbody>
     </table>
 
-    <h3>Fertility And The Moving Standard Of Readiness</h3>
-    <p><a href="#ref-oecd">OECD</a>, <a href="#ref-unfpa-2025">UNFPA</a>, <a href="#ref-eurostat-fertility">Eurostat</a>, and <a href="#ref-cdc-births">CDC/NCHS</a> document low fertility, delayed births, and gaps between desired and realized family life across many high-income settings. A standard budget story is essential: housing, care costs, income risk, and gendered burdens matter. The feedback model adds a second channel. <a href="#ref-mahler">Mahler, Tertilt, and Yum</a> study social comparisons in low-fertility policy concerns, and <a href="#ref-aassve">Aassve et al.</a> emphasize family ideals in low-fertility societies. If social comparison raises the subjective threshold for being ready, delay can be rational under the induced payoff. Delay then changes partner markets, age constraints, housing expectations, and confidence, which can further raise the subjective cost of parenthood.</p>
+    <p>The table deliberately uses measurable stocks rather than moral language. For sports betting, the object is not whether wagering is virtuous; it is whether repeated exposure changes the payoff of risk and whether behavior predicts later solvency measures. For food, the object is whether a reward environment or medicine changes durable metabolic capacity. For politics, the object is not whether anger is justified; it is whether the induced media game lowers correction acceptance or institutional trust.</p>
 
-    <p>The model does not say people owe society children. It says that "revealed preference" is ambiguous when the preference-forming environment also changes the feasible capacity for later choice. A policy that only transfers money may disappoint if the standard of acceptable parenthood keeps moving. A policy that only moralizes family formation may fail because the material constraint is real. A falsifiable prediction is that family policy should move behavior partly through measured readiness standards, not only disposable income or formal eligibility.</p>
+    <p>The strategic version is clearest in outrage media. If each broadcaster, politician, or influencer expects restraint to lose attention under the induced payoff, escalation can be a best response for each actor. The Nash equilibrium is then coherent, but the material capacity being depleted is verification, trust, or correction acceptance. The model's contribution is to locate the failure in the payoff-forming environment and competitive score, not in a mysterious collective irrationality.</p>
 
-    <h3>Loneliness, Dating, And Synthetic Ease</h3>
-    <p>The <a href="#ref-who-loneliness">WHO Commission on Social Connection</a> and the <a href="#ref-surgeon-general">US Surgeon General</a> treat loneliness and disconnection as health and community problems. Yet modern economies provide abundant mediated contact. The capacity loop offers one testable explanation for the paradox. If mediated substitutes reduce the immediate pain of loneliness but reduce practice at initiating and repairing relationships, then future human interaction becomes harder. The person is not irrational. The local payoff changed, and the capacity needed to escape the substitute weakened.</p>
-
-    <p>Dating retreat is the same loop with higher stakes. <a href="#ref-ueda">Ueda et al.</a> document increases in sexual inactivity among US adults aged 18 to 44 from 2000 to 2018, and <a href="#ref-cdc-yrbs">CDC youth surveys</a> show long-run changes in adolescent sexual behavior. Apps, pornography, gaming, safety concerns, reputational risk, economic insecurity, and rejection avoidance can all raise the payoff of non-courtship. The capacity test is whether avoidance reduces later confidence, mixed social networks, and opportunity, or whether it simply reflects safer and more autonomous choice.</p>
-
-    <p>AI companions sharpen the distinction. <a href="#ref-hbs-ai">De Freitas et al.</a> find that AI companions can reduce loneliness; <a href="#ref-common-sense-ai">Common Sense Media</a> reports teen use of AI companions; <a href="#ref-ai-companions">Malfacini</a> emphasizes both risks and benefits. The model says not to classify AI companionship as good or bad in the abstract. It asks whether the design is a bridge or a sink. A bridge lowers anxiety, rehearses social skill, and returns the person to human connection with more capacity. A sink gives enough reward that the outside capacity decays. The measurable outcomes are offline contact, friendship repair attempts, social anxiety, and later human interaction, not only loneliness tonight.</p>
-
-    <h3>Reward Loops: Betting, Debt, Food, And Appearance</h3>
-    <p>Online sports betting is a clean test case because it is measurable and repeated. <a href="#ref-nber-sports-betting">Baker et al.</a> link sports-betting access to financial stress for vulnerable households, while the <a href="#ref-aga-revenue">American Gaming Association</a> tracks the growth of the legal market. In the model, the relevant capacity is liquidity and financial resilience. A small wager can be locally rational as entertainment, identity, or attention. Losses can then weaken the capacity that would make restraint easier tomorrow.</p>
-
-    <p>Food and medicine show the positive side of the same logic. <a href="#ref-cdc-upf">CDC/NCHS</a> documents high ultra-processed-food intake. <a href="#ref-wilding-semaglutide">Wilding et al.</a> show large weight effects for semaglutide in clinical trials. The model interprets appetite or craving change as a candidate preference-formation channel to be measured, not as something proven by weight loss alone. <a href="#ref-wilding-withdrawal">Wilding et al.'s extension study</a> also documents weight regain after treatment withdrawal, which is exactly the model's durability question. Does the intervention build a stable metabolic and behavioral state, or does capacity depend entirely on continued external control?</p>
-
-    <p>Appearance markets and lookmaxxing, the online subculture of optimizing appearance through routines, ratings, and procedures, are positional versions of the same loop. The <a href="#ref-asps-2024">American Society of Plastic Surgeons</a> documents a large cosmetic-procedure market. The model does not condemn cosmetic choice. It identifies an arms-race condition: if each visible enhancement raises the future standard, the old baseline loses subjective acceptability. The material capacity may be body satisfaction, financial resilience, or identity flexibility. A fashion is reversible; a trap is not.</p>
-
-    <h3>Politics, Migration, And International Trust</h3>
-    <p><a href="#ref-pew-news-influencers">Pew</a> documents the role of news influencers, while platform-ranking studies such as <a href="#ref-pnas-divisive">PNAS Nexus</a> and recommender-system research show how engagement criteria can amplify divisive material. <a href="#ref-gallup-institutions">Gallup</a> and <a href="#ref-pew-trust">Pew</a> document low institutional trust. The model's contribution is not "people are manipulated." It is more precise: if anger and familiar personalities become the rewarding way to process public life, then verification and institutional patience can become subjectively unrewarding. That erodes the capacity needed to correct distrust. A strategic version is an outrage game: each actor may escalate because restraint loses attention under the induced payoff, while the collective equilibrium lowers trust.</p>
-
-    <p>Migration is an international version of the capacity loop. <a href="#ref-oecd-migration">OECD</a> reports high migration flows, and <a href="#ref-unhcr-global-trends">UNHCR</a> reports historically high forced displacement. Aging economies may need labor and care capacity, but publics may experience migration through housing pressure, border images, identity threat, or state-capacity failure. <a href="#ref-pew-border">Pew</a> and <a href="#ref-gallup-immigration">Gallup</a> show that salience and opinion can move. If the mechanism is active, the largest political swings should occur where exposure changes the subjective payoff of openness faster than labor-market or demographic fundamentals change.</p>
-
-    <p>Alliances are separate from migration. <a href="#ref-pew-nato">Pew's NATO surveys</a> show generally favorable views of NATO across many member countries, but alliance politics repeatedly turns on domestic narratives about reliability, burden sharing, and respect. The capacity is credible commitment: partners invest and coordinate only when they believe promises will hold. A domestic media environment can make unilateralism feel rewarding even when the material evaluator is alliance capacity. The Nash version is a coordination problem: if each country defects because it expects others to defect, the equilibrium can validate the distrust that produced it.</p>
+    <p class="small">Empirical anchors for these rows include <a href="#ref-ueda">Ueda et al.</a> and <a href="#ref-cdc-yrbs">CDC youth surveys</a> for dating and sexual activity, <a href="#ref-nber-sports-betting">Baker et al.</a> and the <a href="#ref-aga-revenue">American Gaming Association</a> for sports betting, <a href="#ref-cdc-upf">CDC/NCHS</a> and <a href="#ref-wilding-semaglutide">Wilding et al.</a> for food and GLP-1 medicines, the <a href="#ref-asps-2024">American Society of Plastic Surgeons</a> for appearance markets, and <a href="#ref-pew-news-influencers">Pew</a>, <a href="#ref-pnas-divisive">PNAS Nexus</a>, <a href="#ref-gallup-institutions">Gallup</a>, and <a href="#ref-pew-trust">Pew Trusts</a> for news influencers, divisive ranking, and institutional trust.</p>
   </section>
 
   <section>
-    <h2>5. Empirical Strategy</h2>
-    <p>The model becomes empirical when the capacity stock is named and measured. For fertility, capacity may include partner-market opportunity, housing security, age constraints, and perceived readiness. For loneliness, it may include friendship frequency, social anxiety, and offline practice. For betting, it may include savings, credit scores, missed payments, and debt service. For politics, it may include institutional trust, correction acceptance, and cross-cutting exposure.</p>
+    <h2>7. Empirical Strategy</h2>
+    <p>The model becomes empirical when the capacity stock is named and measured. For loneliness, capacity may include friendship frequency, social anxiety, and offline practice. For betting, it may include savings, credit scores, missed payments, and debt service. For food, it may include metabolic markers and appetite regulation after exposure changes. For politics, it may include institutional trust, correction acceptance, and cross-cutting exposure.</p>
 
     <p>The plain test has three steps. First, do exposure shocks change what feels rewarding? Second, does the changed payoff alter behavior? Third, does the behavior change later capacity in a way that predicts the next payoff state? Without all three links, the case is weaker than the model.</p>
 
@@ -558,40 +645,27 @@
   </section>
 
   <section>
-    <h2>6. Nash Equilibrium And Selection</h2>
-    <p>Nash equilibrium is used as a mathematical consistency condition. The model changes the game to which Nash equilibrium is applied. First the preference-forming rule creates subjective payoffs. Then agents choose, possibly strategically, inside the induced game. The equilibrium can be fully coherent while the material capacity being evaluated moves in a bad direction.</p>
+    <h2>8. What The Result Rules In And Out</h2>
+    <p>The model does not conclude that people should want different things. It maps which changes alter the objective dynamics. A change can work by lowering exposure or inducement \(z\), lowering sensitivity \(\beta\), lowering damage \(L\), raising baseline or practice repair \(\alpha\) or \(r\), strengthening the capacity-protection channel \(\rho\), or changing the competitive score \(S_\ell\). These are comparative statics, not moral categories.</p>
 
-    <p>Selection also remains a method. The question is what selection acts on. If fast preference formation repeatedly produces the same payoff criterion from many initial states, then initial preference states are not the durable object. The durable objects are the rules, platforms, institutions, communities, and AI designs that keep producing payoff criteria and capacity paths.</p>
+    <p>The capacity-protection channel \(\rho\) has a dual role. A higher \(\rho\) can lower substitute appeal in the high-capacity region. But moderate increases can also sharpen the gap between low and high states, making thresholds more pronounced. Full self-correction appears only when the low attracting state disappears or when competition reallocates prevalence to a rule with higher material-viability score.</p>
 
-    <div class="reader-result">
-      <strong>Selection claim.</strong> A preference-forming rule survives in the long run only if the capacity path it induces is compatible with the material evaluator that reproduces the system. If every available rule depletes the relevant capacity, the long-run conclusion can be disappearance rather than convergence to a fitter taste.
-    </div>
+    <p>Technology is therefore not classified by its surface form. An AI companion, recommender, medical intervention, school, workplace, or political institution is a bridge when its induced payoff leads back into durable material capacity. It is a sink when it wins the local payoff game while reducing the capacity that would make alternatives feasible later. Competition can reward either form depending on whether the competitive score \(S_\ell\) is material viability or a proxy such as engagement.</p>
 
-    <p>This is where the Darwinian language becomes disciplined. "Fitness" is not a loose metaphor. It must be named: reproduction, solvency, health, learning, institutional continuity, military capacity, alliance reliability, or some other material evaluator. Different evaluators can disagree, and the disagreement is part of the economics.</p>
+    <p>The model also rules out a weak optimism. Pure warnings below a threshold need not move the state, because the low-capacity equilibrium can absorb the warning into the same payoff criterion that created the trap. In the model, correction occurs only when the vector field changes, the state crosses the threshold, or the competitive process reallocates mass toward a rule with higher material viability.</p>
   </section>
 
   <section>
-    <h2>7. Design And Policy</h2>
-    <p>The policy levers are human before they are algebraic. Reduce exposure or inducement. Lower sensitivity to cues. Reduce harm per use. Strengthen repair. Make real capacity more rewarding and protective. In the scalar notation, these correspond to lowering \(z\), \(\beta\), or \(L\), raising \(\alpha\) or \(r\), and increasing the protective channel \(\rho\).</p>
-
-    <p>The protective channel \(\rho\) has a dual role. Higher capacity protection can help people in the high-capacity region resist substitutes. But it can also sharpen the gap between low and high states, making thresholds more pronounced. This is why repair and threshold-crossing matter as much as exposure reduction.</p>
-
-    <p>That list is intentionally neutral about technology. A platform can worsen the loop by optimizing engagement, intensity, or retention while ignoring capacity. The same AI layer can improve the loop by helping people cross thresholds: practicing social skills, reducing anxiety, budgeting before betting, translating health goals into appetite changes, or making institutional verification easier and less humiliating.</p>
-
-    <p>The strongest interventions are likely to be bridge designs. They make the desired outside capacity easier to practice and then hand the person back to the world stronger. The weakest interventions are likely to be pure warnings below a threshold. If the low-capacity state is stable, information alone may be absorbed into the same payoff criterion that created the trap.</p>
-  </section>
-
-  <section>
-    <h2>8. Conclusion</h2>
+    <h2>9. Conclusion</h2>
     <p>Utility can be endogenous without being unreal. People optimize the payoff criterion they have, and modern preference-forming systems can change that criterion quickly. The economic problem is that material capacity often moves more slowly and feeds back into what will feel rewarding next.</p>
 
-    <p>The model turns that observation into a tractable object. Fast subjective payoff formation plus slow capacity feedback yields self-correction, threshold traps, or collapse-prone dynamics. Nash equilibrium disciplines the strategic step after subjective payoffs are formed. Selection disciplines the long-run step after the capacity evaluator is named. The same mathematics can describe harmful loops and repair loops. That is why the framework is useful for current problems without becoming a theory that every current problem has the same cause.</p>
+    <p>The model turns that observation into a tractable object. Fast subjective payoff formation plus slow capacity feedback yields self-correction, threshold traps, or collapse-prone dynamics. A current deterioration signal alone does not generally remove a bad steady state. The capacity-protection channel can. Competition can also correct the composition of rules, but only when the competitive score tracks material viability. Nash equilibrium disciplines the strategic step after subjective payoffs are formed. Competition disciplines the long-run step after the competitive score and material growth rate are named. The same mathematics can describe harmful loops and repair loops without pretending that every current problem has the same cause.</p>
   </section>
 
   <section>
     <h2>Appendix A. General Formal Model</h2>
     <h3>A.1 Primitives</h3>
-    <p>There is a finite set of players \(N=\{1,\ldots,n\}\). Player \(i\) has action set \(A_i\), and \(A=\prod_i A_i\). The slow state is \(K\in\mathcal K\). In applications \(K\) may be scalar or vector-valued. The slow environment is \(E\). The preference-forming rule is \(\ell\). Exposure or input is \(z\). Player \(i\)'s preference state is \(\theta_i\), and subjective utility is \(U_i(a;\theta_i,K,E,\ell)\). The material evaluator is \(G(K,a,E,\ell)\), or player-specific material payoff \(\pi_i(a,K,E,\ell)\) when needed. The material law of motion is \(F(K,x,E,\ell,z)\); it describes how equilibrium behavior changes the slow capacity state. The evaluator \(G\) ranks consequences, while \(F\) moves the capacity stock.</p>
+    <p>There is a finite set of players \(I=\{1,\ldots,n\}\). Player \(i\) has action set \(A_i\), and \(A=\prod_i A_i\). The slow state is \(K\in\mathcal K\). In applications \(K\) may be scalar or vector-valued. The slow environment is \(E\). The preference-forming rule is \(\ell\). Exposure or input is \(z\). Player \(i\)'s preference state is \(\theta_i\), and subjective utility is \(U_i(a;\theta_i,K,E,\ell)\). The material evaluator is \(G(K,a,E,\ell)\), or player-specific material payoff \(\pi_i(a,K,E,\ell)\) when needed. The material law of motion is \(F(K,x,E,\ell,z)\); it describes how equilibrium behavior changes the slow capacity state. The evaluator \(G\) ranks consequences, while \(F\) moves the capacity stock.</p>
 
     <div class="equation">
       <span class="label">Fast preference state</span>
@@ -618,7 +692,7 @@
       \]
     </div>
 
-    <p>The slow state then changes according to a material law. If the induced game has several equilibria, the right-hand side is a differential inclusion; an equilibrium-selection rule can be added as an explicit primitive.</p>
+    <p>The slow state then changes according to a material law. The displayed theorem uses a selected continuous equilibrium branch. If the induced game has several equilibria and no branch is selected, the right-hand side should be treated as a correspondence or differential inclusion with additional assumptions; the paper does not need that generality for the scalar applications.</p>
 
     <div class="equation">
       <span class="label">Reduced slow dynamic</span>
@@ -629,9 +703,9 @@
 
     <div class="theorem" data-kind="Proposition">
       <span class="theorem-title">Fast-limit reduction</span>
-      <p>Assume that for each fixed \((K,E,\ell,z)\) in the region studied, the fast preference dynamic has a selected normally hyperbolic attracting branch \(C(K,E,\ell,z)\), with attraction uniform on the compact region considered. Assume also that the slow vector field is regular and that either the induced Nash equilibrium is locally single-valued and continuous or an explicit equilibrium-selection rule is included. Then along any interval on which the selected branch is maintained, the \(\varepsilon\to0\) limit is governed by the displayed reduced slow dynamic. If the induced Nash set is genuinely multivalued and no selection rule is imposed, the limit is a differential inclusion rather than a single ordinary differential equation.</p>
+      <p>Assume that for each fixed \((K,E,\ell,z)\) in the region studied, the fast preference dynamic has a selected normally hyperbolic attracting branch \(C(K,E,\ell,z)\), with attraction uniform on the compact region considered, and that initial preference states lie in the basin of that branch. Assume no branch switching or bifurcation occurs on the interval studied. Assume also that the induced game has a selected Nash equilibrium branch \(x^\star(K,E,\ell,z)\) that is continuous on the region considered, and that the slow vector field \(F(K,x,E,\ell,z)\) is regular. Then along that interval, the \(\varepsilon\to0\) limit is governed by \(\dot K=F(K,x^\star(K,E,\ell,z),E,\ell,z)\).</p>
     </div>
-    <p class="proof"><strong>Proof.</strong> Under the stated normal-hyperbolicity and uniform-attraction assumptions, the fast state approaches the selected branch while \(K\), \(E\), \(\ell\), and \(z\) are fixed on the fast clock; this is the standard singular-perturbation logic associated with <a href="#ref-fenichel">Fenichel</a>. Substituting that branch into subjective utility gives the induced game. Slow motion is then evaluated at the selected Nash equilibrium, or as a differential inclusion when selection is not imposed.</p>
+    <p class="proof"><strong>Proof.</strong> Under the stated normal-hyperbolicity and uniform-attraction assumptions, the fast state approaches the selected branch while \(K\), \(E\), \(\ell\), and \(z\) are fixed on the fast clock; this is the standard singular-perturbation logic associated with <a href="#ref-fenichel">Fenichel</a>. Substituting that branch into subjective utility gives the induced game. Continuity of the selected equilibrium branch and regularity of \(F\) give the reduced slow vector field after substitution.</p>
 
     <h3>A.2 Local Feedback Multiplier</h3>
     <p>When \(K\) is scalar and the equilibrium branch is locally single-valued and differentiable, write the reduced law as \(\dot K=\Phi(K)\). The derivative of \(\Phi\) is the local feedback multiplier. For vector-valued \(K\), the same expression is a Jacobian and local stability depends on eigenvalues.</p>
@@ -654,17 +728,25 @@
     </div>
     <p class="proof"><strong>Proof.</strong> A mixed Nash equilibrium is a fixed point of the product of best-response correspondences. Equality of the correspondences at every opponent profile gives equality of the fixed-point sets.</p>
 
-    <h3>A.4 Selection Over Rules</h3>
-    <p>Let \(s_\ell\) be the share or prevalence of preference-forming rule \(\ell\). Let \(\mathcal G_\ell\) be the long-run material growth, reproduction, persistence, or institutional payoff induced by the reduced capacity path under \(\ell\).</p>
+    <h3>A.4 Competition And Selection Over Rules</h3>
+    <p>Let \(s_\ell\) be the share of aggregate mass \(N\) governed by preference-forming rule \(\ell\), with \(s_\ell\ge0\) and \(\sum_\ell s_\ell=1\). Let \(S_\ell\) be the score that determines relative competition among rules, and let \(g_\ell\) be the material growth, reproduction, persistence, or institutional growth rate of the mass governed by \(\ell\). Let \(\omega\ge0\) be the intensity of competition across rules, and let \(N\) be total population mass, capital mass, or institutional scale. The convention used here separates relative prevalence from aggregate material scale: \(S\) governs shares, while \(g\) governs \(N\).</p>
 
     <div class="equation">
       <span class="label">Selection over preference-forming rules</span>
       \[
-        \dot s_\ell=s_\ell\left(\mathcal G_\ell-\sum_r s_r\mathcal G_r\right)
+        \dot s_\ell=\omega s_\ell\left(S_\ell-\sum_r s_rS_r\right),
+        \qquad
+        \dot N=N\sum_r s_rg_r
       \]
     </div>
 
-    <p>This equation is not an additional welfare assumption. It is a way to state the Darwinian question after the material evaluator has been named. If all available rules imply negative \(\mathcal G_\ell\), the limiting result may be disappearance of the population, institution, or practice rather than survival of a better preference type.</p>
+    <p>This equation is not an additional welfare assumption. It is a way to state the Darwinian question after the competitive score and material growth rate have been named. Relative competition can select the rule with the highest \(S_\ell\), while absolute survival depends on the average \(\sum_r s_rg_r\). If all available rules imply negative material growth, the limiting result may be disappearance of the population, institution, or practice rather than survival of a better preference type.</p>
+
+    <div class="theorem" data-kind="Proposition">
+      <span class="theorem-title">Competition selects the metric, not objective welfare by definition</span>
+      <p>Consider two rules, \(A\) and \(B\), with competitive scores \(S_A\) and \(S_B\). If \(\omega>0\) and \(S_A>S_B\) on an interval, then any interior share \(s_A(0)\in(0,1)\) rises monotonically on that interval; if the score ordering persists indefinitely, \(s_A\) converges to one. If \(S_A>S_B\) but \(g_A<g_B\), as can happen when \(S\) is engagement, then relative victory need not imply positive absolute growth in the \(N\) equation.</p>
+    </div>
+    <p class="proof"><strong>Proof.</strong> In the two-rule case, \(\dot s_A=\omega s_A(1-s_A)(S_A-S_B)\). The sign is positive for interior \(s_A\) exactly when \(S_A>S_B\), yielding monotone convergence to one. The absolute mass equation uses \(g\), not \(S\); if the relative competitive score differs from material growth, relative victory need not imply positive material growth.</p>
   </section>
 
   <section>
@@ -710,6 +792,23 @@
 
     <p>The final term is the induced-preference feedback. It is largest when the substitute share is near one half and small when the substitute is almost never or almost always chosen. This explains why the middle region can be unstable even when the low and high states are stable.</p>
 
+    <p>To test whether reality corrects the loop automatically, add a current-drift signal to the fast subjective payoff. Let \(\chi\ge0\) measure how salient current material improvement or deterioration is:</p>
+
+    <div class="equation">
+      <span class="label">Current-drift reality signal</span>
+      \[
+        p_\chi(K)=\sigma\{\beta[q+z-\rho K+\chi\Phi_\chi(K)]\},
+        \qquad
+        \Phi_\chi(K)=\alpha+rK^2(1-K)-dK-Lp_\chi(K)
+      \]
+    </div>
+
+    <div class="theorem" data-kind="Proposition">
+      <span class="theorem-title">Current deterioration does not move steady states</span>
+      <p>For the scalar logit model above, take \(\chi,L,\beta\ge0\). Then for each interior \(K\), the implicit equation for \(p_\chi(K)\) has a unique solution, and adding the current-drift signal \(\chi\Phi_\chi(K)\) leaves the set of interior steady-state capacities unchanged. It can change local slopes and adjustment speeds, but it cannot remove the low-capacity steady state by itself.</p>
+    </div>
+    <p class="proof"><strong>Proof.</strong> For fixed \(K\), the left side minus the right side of the implicit share equation is \(p-\sigma\{\beta[q+z-\rho K+\chi(R(K)-Lp)]\}\), where \(R(K)=\alpha+rK^2(1-K)-dK\). Its derivative with respect to \(p\) is \(1+\chi L\beta\sigma(1-\sigma)>0\), so the solution is unique. If \(K^\star\) is an interior steady state under the signal model, then \(\Phi_\chi(K^\star)=0\), so the signal term in the logit field is zero at \(K^\star\). The fixed-point equation for \(p_\chi(K^\star)\) is therefore the original logit equation. Hence \(K^\star\) is a root of the original scalar drift. The reverse implication is identical: at an original interior root the drift signal is zero, so the signal-augmented and original logit equations coincide.</p>
+
     <div class="theorem" data-kind="Proposition">
       <span class="theorem-title">Two-basin capacity trap</span>
       <p>Suppose the projected scalar dynamic has exactly three interior equilibria \(K_L&lt;K_U&lt;K_H\) in the relevant interval, no attracting boundary state in that interval, and \(\Phi'(K_L)&lt;0\), \(\Phi'(K_U)&gt;0\), and \(\Phi'(K_H)&lt;0\). Then \(K_L\) and \(K_H\) are locally stable, \(K_U\) is locally unstable, and the interval is split into two local basins separated by \(K_U\).</p>
@@ -718,17 +817,15 @@
 
     <div class="theorem" data-kind="Proposition">
       <span class="theorem-title">Conditional derivatives and existence of traps</span>
-      <p>For interior \(K\), the direct derivatives are \(\partial\Phi/\partial L=-p\), \(\partial\Phi/\partial z=-L\beta p(1-p)\), \(\partial\Phi/\partial \rho=L\beta Kp(1-p)\), and \(\partial\Phi/\partial\beta=-L(q+z-\rho K)p(1-p)\). Thus damage and exposure lower the drift pointwise, capacity protection raises the drift at fixed \(K&gt;0\), and sensitivity has a sign that depends on whether the substitute field \(q+z-\rho K\) is positive or negative. Parameter changes can create or remove low-high traps by changing the root pattern of \(\Phi\); the capacity-trap calibration gives one such constructive case.</p>
+      <p>For interior \(K\), the direct derivatives are \(\partial\Phi/\partial L=-p\), \(\partial\Phi/\partial z=-L\beta p(1-p)\), \(\partial\Phi/\partial \rho=L\beta Kp(1-p)\), and \(\partial\Phi/\partial\beta=-L(q+z-\rho K)p(1-p)\). Thus damage and exposure lower the drift pointwise, the capacity-protection channel raises the drift at fixed \(K&gt;0\), and sensitivity has a sign that depends on whether the substitute field \(q+z-\rho K\) is positive or negative. Parameter changes can create or remove low-high traps by changing the root pattern of \(\Phi\); the capacity-trap calibration gives one such constructive case.</p>
     </div>
     <p class="proof"><strong>Proof.</strong> The derivative expressions follow by differentiating the logit formula and the scalar drift. The existence claim follows constructively from the reported calibration, where the computed roots satisfy the two-basin conditions in the preceding proposition. More general monotone comparative statics are not asserted because \(\beta\) and \(\rho\) affect both levels and slopes of the vector field.</p>
 
-    <p>The baseline capacity-trap calibration used for Table 1 and Figures 1-2 sets \(\alpha=0.235\), \(r=2.90\), \(d=0.66\), \(L=0.198\), \(\beta=21.0\), \(q=0.51\), and \(\rho=0.855\). The self-correcting scenario lowers \(L\) and \(\beta\). The repair scenario raises \(\alpha\). Reproducibility details appear in `results/material_feedback_report.md`.</p>
+    <p>The baseline capacity-trap calibration used for Table 1 and Figures 1-2 sets \(\alpha=0.235\), \(r=2.90\), \(d=0.66\), \(L=0.198\), \(\beta=21.0\), \(q=0.51\), and \(\rho=0.855\). The self-correcting scenario lowers \(L\) and \(\beta\). The repair scenario raises \(\alpha\). The current-drift and competition audits are generated by `scripts/run_self_correction_analysis.py`; the material-feedback baseline is generated by `scripts/run_material_feedback_analysis.py`.</p>
   </section>
 
   <section class="refs">
     <h2>References</h2>
-    <p id="ref-adomavicius">Adomavicius, Gediminas, Jesse C. Bockstedt, Shawn P. Curley, and Jingjing Zhang. "Do Recommender Systems Manipulate Consumer Preferences? A Study of Anchoring Effects." <em>Information Systems Research</em> 24(4), 2013, 956-975. <a href="https://ideas.repec.org/a/inm/orisre/v24y2013i4p956-975.html">Record</a>.</p>
-    <p id="ref-aassve">Aassve, Arnstein, Alicia Adsera, Paul Y. Chang, Letizia Mencarini, Hyunjoon Park, Chen Peng, Samuel Plach, James M. Raymo, Senhu Wang, and Wei-Jun Jean Yeung. "Family Ideals in an Era of Low Fertility." <em>Proceedings of the National Academy of Sciences</em>, 2024. <a href="https://www.pnas.org/doi/10.1073/pnas.2311847121">Record</a>.</p>
     <p id="ref-aga-revenue">American Gaming Association. "Commercial Gaming Revenue Tracker." 2026. <a href="https://www.americangaming.org/resources/commercial-gaming-revenue-tracker/">Tracker</a>.</p>
     <p id="ref-ai-companions">Malfacini, Kim. "The Impacts of Companion AI on Human Relationships: Risks, Benefits, and Design Considerations." <em>AI &amp; Society</em> 40, 2025, 5527-5540. <a href="https://link.springer.com/article/10.1007/s00146-025-02318-6">Record</a>.</p>
     <p id="ref-allcott-social">Allcott, Hunt, Luca Braghieri, Sarah Eichmeyer, and Matthew Gentzkow. "The Welfare Effects of Social Media." <em>American Economic Review</em> 110(3), 2020, 629-676. <a href="https://www.aeaweb.org/articles?id=10.1257/aer.20190658">Record</a>.</p>
@@ -740,15 +837,12 @@
     <p id="ref-bowles">Bowles, Samuel. "Endogenous Preferences: The Cultural Consequences of Markets and Other Economic Institutions." <em>Journal of Economic Literature</em> 36(1), 1998, 75-111. <a href="https://ideas.repec.org/a/aea/jeclit/v36y1998i1p75-111.html">Record</a>.</p>
     <p id="ref-braghieri-social">Braghieri, Luca, Ro'ee Levy, and Alexey Makarin. "Social Media and Mental Health." <em>American Economic Review</em> 112(11), 2022, 3660-3693. <a href="https://www.aeaweb.org/articles?id=10.1257/aer.20211218">Record</a>.</p>
     <p id="ref-brock-durlauf">Brock, William A., and Steven N. Durlauf. "Discrete Choice with Social Interactions." <em>Review of Economic Studies</em> 68(2), 2001, 235-260. <a href="https://academic.oup.com/restud/article-abstract/68/2/235/1588432">Record</a>.</p>
-    <p id="ref-cdc-births">Centers for Disease Control and Prevention, National Center for Health Statistics. "Births: Provisional Data for 2025." Vital Statistics Rapid Release, 2026. <a href="https://www.cdc.gov/nchs/data/vsrr/vsrr043.pdf">PDF</a>.</p>
     <p id="ref-cdc-upf">Centers for Disease Control and Prevention, National Center for Health Statistics. "Ultra-Processed Food Intake in the United States." Data Brief No. 536, 2025. <a href="https://www.cdc.gov/nchs/products/databriefs/db536.htm">Report</a>.</p>
     <p id="ref-cdc-yrbs">Centers for Disease Control and Prevention. "Youth Risk Behavior Survey Data Summary &amp; Trends Report: 2013-2023." 2024. <a href="https://www.cdc.gov/yrbs/dstr/pdf/YRBS-2023-Data-Summary-Trend-Report.pdf">PDF</a>.</p>
-    <p id="ref-chaney">Chaney, Allison J. B., Brandon M. Stewart, and Barbara E. Engelhardt. "How Algorithmic Confounding in Recommendation Systems Increases Homogeneity and Decreases Utility." RecSys, 2018. <a href="https://arxiv.org/abs/1710.11214">arXiv</a>.</p>
     <p id="ref-common-sense-ai">Common Sense Media. "Talk, Trust, and Trade-Offs: How and Why Teens Use AI Companions." 2025. <a href="https://www.commonsensemedia.org/research/talk-trust-and-trade-offs-how-and-why-teens-use-ai-companions">Report</a>.</p>
     <p id="ref-dekel">Dekel, Eddie, Jeffrey C. Ely, and Okan Yilankaya. "Evolution of Preferences." <em>Review of Economic Studies</em> 74(3), 2007, 685-704. <a href="https://academic.oup.com/restud/article/74/3/685/1599139">Record</a>.</p>
-    <p id="ref-eurostat-fertility">Eurostat. "Fertility Statistics." 2026 update. <a href="https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Fertility_statistics">Report</a>.</p>
+    <p id="ref-ely-yilankaya">Ely, Jeffrey C., and Okan Yilankaya. "Nash Equilibrium and the Evolution of Preferences." <em>Journal of Economic Theory</em> 97(2), 2001, 255-272. <a href="https://ideas.repec.org/a/eee/jetheo/v97y2001i2p255-272.html">Record</a>.</p>
     <p id="ref-fenichel">Fenichel, Neil. "Geometric Singular Perturbation Theory for Ordinary Differential Equations." <em>Journal of Differential Equations</em> 31, 1979, 53-98. <a href="https://doi.org/10.1016/0022-0396(79)90152-9">Record</a>.</p>
-    <p id="ref-gallup-immigration">Gallup. "Surge in Concern About Immigration Has Abated." 2025. <a href="https://news.gallup.com/poll/692522/surge-concern-immigration-abated.aspx">Report</a>.</p>
     <p id="ref-gallup-institutions">Gallup. "Confidence in Institutions Mostly Flat, Police Highest." 2025. <a href="https://news.gallup.com/poll/647303/confidence-institutions-mostly-flat-police.aspx">Report</a>.</p>
     <p id="ref-genicot-ray">Genicot, Garance, and Debraj Ray. "Aspirations and Inequality." <em>Econometrica</em> 85(2), 2017, 489-519. <a href="https://doi.org/10.3982/ECTA13865">Record</a>.</p>
     <p id="ref-grossman">Grossman, Michael. "On the Concept of Health Capital and the Demand for Health." <em>Journal of Political Economy</em> 80(2), 1972, 223-255. <a href="https://www.journals.uchicago.edu/doi/10.1086/259880">Record</a>.</p>
@@ -759,23 +853,16 @@
     <p id="ref-kleinberg">Kleinberg, Jon, Sendhil Mullainathan, and Manish Raghavan. "The Challenge of Understanding What Users Want: Inconsistent Preferences and Engagement Optimization." <em>Management Science</em> 70(9), 2024, 6336-6355. <a href="https://pubsonline.informs.org/doi/10.1287/mnsc.2022.03683">Record</a>.</p>
     <p id="ref-koszegi-rabin">Koszegi, Botond, and Matthew Rabin. "A Model of Reference-Dependent Preferences." <em>Quarterly Journal of Economics</em> 121(4), 2006, 1133-1165. <a href="https://academic.oup.com/qje/article/121/4/1133/1935100">Record</a>.</p>
     <p id="ref-lachaab">Lachaab, Mohamed, Asim Ansari, Kamel Jedidi, and Abdelwahed Trabelsi. "Modeling Preference Evolution in Discrete Choice Models: A Bayesian State-Space Approach." <em>Quantitative Marketing and Economics</em> 4, 2006, 57-81. <a href="https://doi.org/10.1007/s11129-006-6559-x">Record</a>.</p>
-    <p id="ref-mahler">Mahler, Lukas, Michele Tertilt, and Minchul Yum. "Policy Concerns in an Era of Low Fertility: The Role of Social Comparisons." 2025. <a href="https://lukasmahler.github.io/assets/pdf/5_Mahler_Tertilt_Yum_unembargoed.pdf">PDF</a>.</p>
     <p id="ref-nber-sports-betting">Baker, Scott R., Justin Balthrop, Mark J. Johnson, Jason D. Kotter, and Kevin Pisciotta. "Gambling Away Stability: Sports Betting's Impact on Vulnerable Households." NBER Working Paper 33108, 2024. <a href="https://www.nber.org/papers/w33108">Record</a>.</p>
-    <p id="ref-oecd">OECD. "Fertility Trends Across the OECD: Underlying Drivers and the Role for Policy." <em>Society at a Glance 2024</em>. <a href="https://www.oecd.org/en/publications/society-at-a-glance-2024_918d8db3-en/full-report/fertility-trends-across-the-oecd-underlying-drivers-and-the-role-for-policy_770679b8.html">Report</a>.</p>
-    <p id="ref-oecd-migration">OECD. <em>International Migration Outlook 2025</em>. 2025. <a href="https://www.oecd.org/en/publications/international-migration-outlook-2025_ae26c893-en.html">Report</a>.</p>
-    <p id="ref-pew-border">Pew Research Center. "How Americans View the Situation at the U.S.-Mexico Border, Its Causes and Consequences." 2024. <a href="https://www.pewresearch.org/politics/2024/02/15/how-americans-view-the-situation-at-the-u-s-mexico-border-its-causes-and-consequences/">Report</a>.</p>
     <p id="ref-pew-news-influencers">Pew Research Center. "America's News Influencers." 2024. <a href="https://www.pewresearch.org/journalism/2024/11/18/americas-news-influencers/">Report</a>.</p>
-    <p id="ref-pew-nato">Pew Research Center. "NATO Viewed Favorably Across 13 Member Nations." 2025. <a href="https://www.pewresearch.org/global/2025/06/23/nato-viewed-favorably-across-13-member-nations/">Report</a>.</p>
     <p id="ref-pew-trust">Pew Charitable Trusts. "Americans' Deepening Mistrust of Institutions." 2024. <a href="https://www.pew.org/en/trend/archive/fall-2024/americans-deepening-mistrust-of-institutions">Report</a>.</p>
     <p id="ref-pnas-divisive">PNAS Nexus. "Ranking Social Media Feeds by Engagement Can Amplify Divisive Content." 2025. <a href="https://academic.oup.com/pnasnexus/article/4/3/pgaf062/8052060">Record</a>.</p>
+    <p id="ref-sandholm">Sandholm, William H. "Preference Evolution, Two-Speed Dynamics, and Rapid Social Change." <em>Review of Economic Dynamics</em> 4(3), 2001, 637-679. <a href="https://doi.org/10.1006/redy.2001.0128">Record</a>.</p>
     <p id="ref-stigler-becker">Stigler, George J., and Gary S. Becker. "De Gustibus Non Est Disputandum." <em>American Economic Review</em> 67(2), 1977, 76-90. <a href="https://econpapers.repec.org/RePEc:aea:aecrev:v:67:y:1977:i:2:p:76-90">Record</a>.</p>
     <p id="ref-surgeon-general">Office of the Surgeon General. "Our Epidemic of Loneliness and Isolation: The U.S. Surgeon General's Advisory on the Healing Effects of Social Connection and Community." US Department of Health and Human Services, 2023. <a href="https://www.ncbi.nlm.nih.gov/books/NBK595227/">NCBI Bookshelf</a>.</p>
-    <p id="ref-unfpa-2025">UNFPA. <em>The State of World Population 2025: The Real Fertility Crisis</em>. 2025. <a href="https://www.unfpa.org/swp2025">Report</a>.</p>
     <p id="ref-ueda">Ueda, Peter, Catherine H. Mercer, Cyrus Ghaznavi, and Debby Herbenick. "Trends in Frequency of Sexual Activity and Number of Sexual Partners Among Adults Aged 18 to 44 Years in the US, 2000-2018." <em>JAMA Network Open</em> 3(6), 2020, e203833. <a href="https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2767066">Record</a>.</p>
-    <p id="ref-unhcr-global-trends">UNHCR. <em>Global Trends</em>. 2026. <a href="https://www.unhcr.org/global-trends">Report</a>.</p>
     <p id="ref-who-loneliness">World Health Organization. "Social Connection Linked to Improved Health and Reduced Risk of Early Death." WHO Commission on Social Connection, 2025. <a href="https://www.who.int/news/item/30-06-2025-social-connection-linked-to-improved-heath-and-reduced-risk-of-early-death">Report</a>.</p>
     <p id="ref-wilding-semaglutide">Wilding, John P. H., Rachel L. Batterham, Salvatore Calanna, Melanie Davies, Luc F. Van Gaal, Ildiko Lingvay, Barbara M. McGowan, Julio Rosenstock, Marie T. D. Tran, Thomas A. Wadden, Sean Wharton, Kazuma Yokote, Niels Zeuthen, and Robert F. Kushner. "Once-Weekly Semaglutide in Adults with Overweight or Obesity." <em>New England Journal of Medicine</em> 384, 2021, 989-1002. <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2032183">Record</a>.</p>
-    <p id="ref-wilding-withdrawal">Wilding, John P. H., Rachel L. Batterham, Melanie Davies, Luc F. Van Gaal, Ildiko Lingvay, Thomas A. Wadden, and others. "Weight Regain and Cardiometabolic Effects After Withdrawal of Semaglutide: The STEP 1 Trial Extension." <em>Diabetes, Obesity and Metabolism</em> 24(8), 2022, 1553-1564. <a href="https://dom-pubs.onlinelibrary.wiley.com/doi/10.1111/dom.14725">Record</a>.</p>
   </section>
 </main>
 </body>

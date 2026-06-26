@@ -170,6 +170,50 @@ Purpose:
 3. A Nash equilibrium of actions is not enough. In an endogenous-preference economy, equilibrium must include the preference-transition policy or institution.
 4. Platform objectives can become an alternative selection criterion, creating a conflict between survival fitness and engagement fitness.
 
+### Self-Correction And Competition Pivot
+
+Added `docs/14_self_correction_and_competition.md`,
+`src/utility_endogenous/self_correction.py`, and
+`scripts/run_self_correction_analysis.py`.
+
+The new analysis was motivated by the user's objection that the paper should
+map objective consequences rather than produce advice. The sharper question is:
+does a self-correcting mechanism emerge inside the Nash/Darwin framework?
+
+Findings:
+
+- A current material-drift signal does not generally remove a low-capacity
+  steady state. In the scalar logit model, any steady state has zero current
+  drift, so the drift signal vanishes exactly at the roots. In the baseline
+  calibration, the maximum numerical displacement of roots was about
+  `1.19e-10`.
+- Persistent material-state feedback can remove the low trap. In the stock
+  feedback sweep, the low trap disappears around `rho = 3.10` on the grid used
+  by the audit.
+- Competition is now modeled explicitly:
+
+```text
+sdot_l = omega * s_l * (S_l - sum_r s_r S_r)
+Ndot = N * sum_r s_r g_r
+```
+
+where `S_l` is the relative competitive score and `g_l` is material growth.
+
+- Under material-viability competition, the bridge rule wins: at
+  `omega = 1.2`, final bridge share is about `0.999`, population mass rises to
+  about `5.734`, and final mean material growth is positive.
+- Under engagement-proxy competition, the sink wins: at `omega = 1.2`, final
+  bridge share is effectively zero, population mass falls to about `0.020`,
+  and final mean material growth is negative.
+
+Research conclusion:
+
+```text
+Competition is a Darwinian operator, but it selects the operative metric.
+It is corrective only when the competitive metric is aligned with material
+viability and a capacity-preserving alternative exists.
+```
+
 ### Model Selection Audit
 
 Added `docs/11_model_selection_audit.md`,

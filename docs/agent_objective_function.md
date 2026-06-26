@@ -13,6 +13,7 @@ fast subjective payoff formation
 -> choice or Nash equilibrium under induced payoffs
 -> slow material capacity change
 -> future subjective payoff formation
+-> competition among preference-forming rules under an explicit metric
 ```
 
 The appendix should carry the formal model, theorem statements, and proofs.
@@ -27,6 +28,16 @@ rewarding, the economy can self-correct, fall into a threshold trap, or lose an
 interior high-capacity state. Choices can be rational under the induced payoff
 while still changing future capacity in a damaging or repairing direction.
 
+The current revision adds the objective correction result:
+
+- A current-deterioration signal alone does not generally remove bad steady
+  states, because the signal is zero at steady states.
+- Persistent material-state feedback can change the root pattern and remove a
+  low-capacity trap.
+- Competition is corrective only when the competitive score is material
+  viability; competition over engagement or another proxy can select a sink
+  while absolute material mass falls.
+
 ## Reader Vocabulary
 
 Use these terms consistently:
@@ -35,12 +46,16 @@ Use these terms consistently:
 - `preference-forming rule`: the environment, institution, platform, AI system,
   peer process, or norm that forms the subjective payoff.
 - `material capacity`: the slower stock being evaluated and changed by action,
-  such as social skill, solvency, health, fertility agency, learning, trust, or
+  such as social skill, solvency, health, metabolic resilience, learning, trust, or
   institutional competence.
 - `substitute behavior`: the behavior that may relieve immediate pressure while
   either bridging back to capacity or crowding it out.
 - `material evaluator`: the criterion used to judge consequences after naming
   the capacity.
+- `competitive score`: the score that determines which preference-forming rule
+  expands under competition. It may be material viability, engagement, revenue,
+  attention, reproduction, solvency, or institutional persistence. Always name
+  it.
 
 Do not use "wants" as a technical synonym for preferences. Do not imply that
 preferences are fake. They are endogenous.
@@ -65,6 +80,12 @@ preferences are fake. They are endogenous.
     reproducibility note.
 12. Keep positive AI and repair cases visible. The point is not that preference
     formation is bad; it is that the feedback loop can build or deplete capacity.
+13. Distinguish formal theorem, constructive calibration, random audit, and
+    empirical conjecture.
+14. Avoid advice-like prose. State implications as vector-field changes,
+    measurable capacity changes, or falsifiable predictions.
+15. Use one flagship application to carry the full mechanism before listing
+    candidate domains.
 
 ## Editing Sequence
 
@@ -92,6 +113,8 @@ Check:
   constructive statements are proven;
 - the random audit is described as a mechanism check, not an estimate;
 - Nash and selection claims are methodologically precise.
+- competition claims distinguish relative prevalence from absolute survival;
+- the selected metric is not conflated with objective material welfare.
 
 ### Editor
 
@@ -105,6 +128,8 @@ Reject:
 - formula tables without interpretation;
 - examples presented as a universal explanation;
 - internal workflow residue in the reader copy.
+- broad application lists before one full worked example has made the mechanism
+  concrete.
 
 ### Narrator
 
@@ -112,8 +137,9 @@ Persona: concrete, intellectually alive, and allergic to empty abstraction.
 
 Check:
 
-- fertility, loneliness, dating, AI companions, betting, food, appearance,
-  politics, migration, and alliances are tied to the model's capacity loop;
+- the flagship application walks through exposure, subjective payoff, action,
+  material capacity, threshold, correction channel, and competitive score;
+- other examples are framed as candidate tests, not as equal-weight diagnosis;
 - each example names the substitute and the capacity;
 - caveats are present without smothering the argument;
 - the reader can see how the model could be empirically tested.
