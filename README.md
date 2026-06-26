@@ -8,13 +8,18 @@ Classical consumer and welfare theory often treats preferences as exogenous or s
 
 ## Research Spine
 
-The project studies dynamic economies where each agent has a preference state, not merely a utility function:
+The current paper studies dynamic economies where each agent has a preference
+state and a material capacity stock, not merely a fixed utility function:
 
 ```text
-state_t = (resources_t, beliefs_t, preference_state_t, institutions_t)
+state_t = (material_capacity_t, beliefs_t, preference_state_t, institutions_t)
 ```
 
-Agents maximize current subjective utility, while preference states evolve through exposure, habit, imitation, recommender systems, institutions, and selection. The key separation is:
+Agents maximize current subjective utility, while preference states evolve
+through exposure, habit, imitation, recommender systems, institutions, and AI.
+The choices made under those subjective payoffs then change slower material
+capacities such as health, solvency, social skill, fertility agency, learning,
+trust, and institutional continuity. The key separation is:
 
 ```text
 subjective utility != biological/material fitness != platform objective
@@ -82,28 +87,47 @@ The script writes:
 - `results/timescale_variant_report.md`
 - `results/tables/timescale_*.csv`
 
+Run the current material-feedback model:
+
+```bash
+python3 scripts/run_material_feedback_analysis.py
+python3 scripts/build_material_feedback_article.py
+```
+
+The scripts write:
+
+- `results/material_feedback_report.md`
+- `results/tables/material_feedback_*.csv`
+- `results/figures/material_feedback_*.svg`
+- `paper/when_preferences_move_faster_than_equilibrium_v1.html`
+
 ## Current Status
 
-The live manuscript direction is now the fast-preference/equilibrium paper:
+The live manuscript direction is now the material-capacity feedback paper:
 
 - `paper/when_preferences_move_faster_than_equilibrium_v1.html`
 
-It combines the finite-game fast-preference theorem spine with a worked
-social-feedback preference-formation mechanism for fashion, influencers, memes,
-bubbles, and platform exposure. The key formal object is now the settling map:
+The paper keeps the fast-preference limit and Nash equilibrium discipline, but
+the main object is now a feedback loop:
 
 ```text
-(ell, q, zeta) -> C_ell(E, q, zeta) -> Gamma^star_{ell,q,zeta}(E) -> NE -> G
+fast subjective payoff formation
+-> Nash or choice under subjective payoff
+-> slow material capacity
+-> future subjective payoff formation
 ```
 
-The older GEB and fashion presentation drafts remain in `paper/` as source
-history.
+The older GEB, finite-game, and fashion drafts remain in `paper/` as source
+history. They should not be treated as the live frame unless explicitly revived.
 
 ## Research Planning Docs
 
 Start here for the current research direction:
 
 - `paper/when_preferences_move_faster_than_equilibrium_v1.html`
+- `docs/13_material_feedback_pivot.md`
+- `models/material_capacity_feedback.md`
+- `results/material_feedback_report.md`
 - `docs/agent_rounds/combined_round_1_modeller.md`
 - `docs/agent_rounds/combined_round_2_literature.md`
 - `docs/agent_rounds/combined_round_3_writer.md`
@@ -127,4 +151,8 @@ Next model specs:
 - `models/platform_preference_control.md`
 - `models/revealed_preference_with_drift.md`
 
-Current research decision: treat platform-controlled preference transitions as one application of the broader fast-preference-limit program. The next proof target is a singular-limit theorem for utility functions that adapt instantly, with institution and population speeds treated as estimable parameters rather than assumptions.
+Current research decision: treat platform-controlled preference transitions as
+one application of a broader material-feedback program. The next proof target
+is a rigorous singular-limit theorem for fast subjective payoff formation
+coupled to slow capacity dynamics, with institutional and population speeds
+treated as estimable parameters rather than assumptions.

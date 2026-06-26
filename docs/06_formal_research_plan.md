@@ -1,11 +1,15 @@
 # Formal Research Plan
 
-Status note: this plan now has a new priority from
-`docs/09_fast_preference_limit.md`: prove the `T -> 0` singular-limit theorem
-before committing the first paper to the platform-control model. The
-model-selection audit in `docs/11_model_selection_audit.md` promotes a generic
-finite-game fast-closure theorem to the core route. The platform model remains a
-key application.
+Status note, 2026-06-26: this file is source history for the earlier
+fast-preference and platform-control route. The live manuscript now starts from
+`docs/13_material_feedback_pivot.md` and
+`models/material_capacity_feedback.md`. The old finite-game and platform
+models remain useful, especially for Nash invariance and strategic
+applications, but the current core route is:
+
+```text
+fast subjective payoff formation -> induced choice/game -> slow material capacity -> future subjective payoff formation
+```
 
 ## 1. Core Mathematical Environment
 

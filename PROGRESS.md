@@ -916,3 +916,74 @@ Browser note:
   Browser Use URL policy. Source-level connection checks were completed
   instead, and the obvious external-load cause was removed by vendoring
   MathJax.
+
+## 2026-06-26 Material Feedback Pivot
+
+### Reason
+
+The previous fast-preference manuscript separated subjective payoff, Nash
+equilibrium, and material evaluation, but it did not close the feedback loop
+from material consequences back into future preference formation. The new
+direction makes that loop the core object.
+
+### Implemented
+
+- Added `models/material_capacity_feedback.md`.
+- Added `docs/13_material_feedback_pivot.md`.
+- Added `src/utility_endogenous/material_feedback.py`.
+- Added `scripts/run_material_feedback_analysis.py`.
+- Added `scripts/build_material_feedback_article.py`.
+- Regenerated `paper/when_preferences_move_faster_than_equilibrium_v1.html`
+  from model outputs.
+- Updated `README.md`, `PROJECT_PLAN.md`, `paper/README.md`,
+  `results/README.md`, `models/README.md`, and
+  `docs/agent_objective_function.md`.
+
+### Current Model
+
+Fast subjective payoff formation:
+
+```text
+p(K,z) = logistic(beta * (q + z - rho K))
+```
+
+Slow projected capacity dynamic:
+
+```text
+Kdot = alpha + r K^2 (1 - K) - d K - L p(K,z)
+```
+
+Capacity is normalized to `[0,1]`. If the unprojected drift points outside the
+interval, the boundary is treated as a feasible projected state.
+
+### Current Readout
+
+- The baseline trap calibration has two stable states and one unstable
+  threshold.
+- The self-correcting calibration has one high-capacity stable state.
+- The repair calibration moves a low initial condition into the high-capacity
+  basin.
+- The random audit now distinguishes:
+  - single-state feedback;
+  - interior low-high traps;
+  - lower-boundary projected states.
+
+### Important Corrections
+
+- Use `alpha` for baseline repair; reserve action notation for actions.
+- Do not claim global monotone comparative statics for `beta` or `rho`.
+  Appendix B now gives conditional derivatives and a constructive trap
+  calibration.
+- The fast-limit result now assumes a selected normally hyperbolic attracting
+  branch and either a continuous equilibrium branch or an explicit selection
+  rule.
+- The article frames social examples as candidate applications with empirical
+  tests, not as one master explanation.
+
+### Next Actions
+
+- Visual QA the regenerated HTML in the browser.
+- Convert the working paper to a LaTeX/PDF version after the model direction is
+  stable.
+- Decide whether to develop a richer strategic application: appearance arms
+  race, outrage game, dating market withdrawal, or alliance reliability game.

@@ -2,20 +2,32 @@
 
 ## Working Title
 
-Endogenous Utility in Algorithmic Economies: Preference Dynamics, Selection, and Welfare Failure
+When Preferences Move Faster Than Equilibrium: Endogenous Utility And
+Material-Capacity Feedback
 
 ## Central Claim
 
-The exogeneity of preferences is no longer a harmless approximation when preference-updating technologies operate at social-media or AI speed. Welfare, equilibrium, and Pareto efficiency must be defined over extended paths that include preference states and preference-transition technologies.
+The exogeneity of preferences is no longer a harmless approximation when
+preference-updating technologies operate at social-media or AI speed and when
+choices made under induced subjective payoffs change slower material
+capacities. Welfare, equilibrium, and selection must be defined over paths that
+include preference states, preference-forming rules, actions, and material
+capacity stocks.
 
 ## Research Questions
 
 1. What axioms replace static utility representation when preferences are state variables?
 2. What are the smallest models where endogenous preferences change equilibrium conclusions?
-3. When does selection favor preference types that maximize survival, engagement, status, imitation, or reproduction?
-4. Can subjective utility rise while biological or material fitness falls?
-5. What becomes of Pareto efficiency when the allocation mechanism can alter tastes?
-6. Which empirical observables could distinguish slow cultural preference drift from AI-accelerated preference control?
+3. When does selection favor rules that reproduce material capacity rather
+   than rules that maximize engagement, status, imitation, or immediate
+   subjective payoff?
+4. When can choices be locally rational under induced subjective payoffs while
+   depleting health, solvency, fertility agency, social skill, learning, trust,
+   or institutions?
+5. What becomes of Pareto efficiency when the allocation mechanism can alter
+   the payoff criteria used to evaluate allocations?
+6. Which empirical observables distinguish stable preferences, reversible
+   influence, threshold traps, and collapse-prone capacity feedback?
 
 ## Workstreams
 
@@ -42,11 +54,27 @@ Develop an axiomatic system where the primitive is a dynamic preference process:
 
 where `Theta` is the preference-state space, `K` is the preference transition kernel, `F` is material or Darwinian fitness, and `U` is current subjective utility.
 
+Current revision: reserve `K` in the manuscript for material capacity. Use
+`C` or `P` for preference-transition maps if needed. This avoids overloading the
+central variable in the new model.
+
 Output: `docs/02_axioms_v0.md`.
 
 ### 3. Models
 
-Start with two families:
+Current core model:
+
+- material-capacity feedback:
+
+```text
+p(K,z) = logistic(beta * (q + z - rho K))
+Kdot = a + r K^2(1 - K) - d K - L p(K,z)
+```
+
+This model classifies self-correction, threshold traps, and collapse-prone
+feedback. It is implemented in `src/utility_endogenous/material_feedback.py`.
+
+Legacy and supporting model families:
 
 - A consumption model where the Cobb-Douglas weight is endogenous and algorithmically shifted.
 - An indirect evolutionary game where social preferences are selected by material payoff while institutions mutate preference types.
@@ -74,15 +102,16 @@ Output: `PROGRESS.md` plus generated files under `results/`.
 
 ### 5. Paper
 
-Target a theory-forward paper with a provocative applied motivation:
+Target a reader-facing but rigorous working paper:
 
-1. Introduction: why exogenous preferences may fail at AI speed.
-2. Literature and conceptual gap.
-3. Dynamic endogenous-preference axioms.
-4. Toy models showing welfare and equilibrium reversals.
-5. Richer platform-selection model.
-6. Welfare implications and impossibility/proposition section.
-7. Empirical strategy.
+1. Plain-language puzzle: rational choice inside induced subjective payoffs.
+2. Material-capacity feedback model.
+3. Analytical classification: self-correction, threshold trap, collapse-prone
+   feedback.
+4. Real-world applications and tests.
+5. Empirical strategy.
+6. Nash equilibrium and material selection.
+7. Formal appendix.
 
 ## Near-Term Milestones
 
@@ -105,11 +134,19 @@ Status: complete.
 
 Status: complete as of `docs/05_research_synthesis_v1.md`, `docs/06_formal_research_plan.md`, and `docs/07_paper_outline_v1.md`.
 
-### Milestone 2: First Formal Note
+### Milestone 2: Material Feedback Formal Note
 
-- Convert axioms into proposition-ready notation.
-- Prove a simple "preference laundering" result: if utilities can be altered cheaply enough, final-preference Pareto comparisons are not invariant.
-- Prove a timescale result: if preference plasticity dominates fitness selection, population mean taste can move opposite to Darwinian fitness gradient.
+- Convert the material-capacity feedback model into proposition-ready notation.
+- Prove the fast-limit reduction from preference dynamics to the slow capacity
+  law under a selected attracting preference branch.
+- Prove the one-dimensional two-basin trap result.
+- State comparative statics for repair, substitute damage, sensitivity,
+  exposure, and capacity protection.
+
+Status: first version implemented in
+`models/material_capacity_feedback.md`,
+`src/utility_endogenous/material_feedback.py`, and
+`paper/when_preferences_move_faster_than_equilibrium_v1.html`.
 
 ### Milestone 3: Model Deepening
 
@@ -135,16 +172,18 @@ Status: complete as of `docs/05_research_synthesis_v1.md`, `docs/06_formal_resea
 
 ## Current Research Bet
 
-The first publishable paper should not merely argue that preferences are endogenous. That is already known. The sharper contribution is:
+The first publishable paper should not merely argue that preferences are
+endogenous. That is already known. The sharper contribution is:
 
 ```text
-AI and social-media systems act as fast, strategic preference-transition technologies.
+fast preference formation can create material-capacity feedback loops
 ```
 
 The formal model should therefore focus on:
 
-- local utility representation,
-- a preference transition kernel `K_m`,
-- material or Darwinian fitness `F`,
-- platform or institutional policy `m`,
-- welfare comparisons over allocation-preference paths.
+- local subjective payoff formation;
+- the induced subjective game and Nash equilibrium;
+- material capacity dynamics;
+- selection over rules, institutions, and designs;
+- empirical tests that identify capacity feedback rather than merely
+  preference drift.

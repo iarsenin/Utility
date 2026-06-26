@@ -37,6 +37,13 @@ Current expected files after running:
 - `figures/fashion_mean_field_hysteresis.svg`
 - `figures/fashion_network_multiplier.svg`
 - `figures/fashion_phase_audit.svg`
+- `material_feedback_report.md`
+- `tables/material_feedback_equilibria.csv`
+- `tables/material_feedback_paths.csv`
+- `tables/material_feedback_parameter_audit.csv`
+- `figures/material_feedback_phase.svg`
+- `figures/material_feedback_paths.svg`
+- `figures/material_feedback_audit.svg`
 
 Do not treat generated toy outputs as empirical claims. They are mechanism checks.
 The WDI outputs are diagnostic exposure/outcome associations and timescale
@@ -44,6 +51,10 @@ measures, not causal estimates of platform-induced preference formation.
 The fashion/meme preference-formation outputs are also mechanism checks: they
 show criticality, amplification, and hysteresis in a stylized settling rule, not
 an estimate for any specific platform or social network.
+The material-feedback outputs are the current manuscript's core mechanism
+checks. They classify self-correction, threshold traps, and collapse-prone
+capacity loss in a stylized reduced-form model. They are not empirical
+estimates.
 
 Legacy exploratory figures are retained under `figures/legacy/`. They are useful
 for source history but are not part of the current manuscript's production chart

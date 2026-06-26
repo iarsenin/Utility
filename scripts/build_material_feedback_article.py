@@ -1,4 +1,130 @@
-<!doctype html>
+#!/usr/bin/env python3
+"""Build the current HTML article from generated model outputs."""
+
+from __future__ import annotations
+
+import csv
+from html import escape
+from pathlib import Path
+from string import Template
+import sys
+
+
+ROOT = Path(__file__).resolve().parents[1]
+PAPER = ROOT / "paper" / "when_preferences_move_faster_than_equilibrium_v1.html"
+
+
+def fmt(value: str) -> str:
+    if value in {"True", "False"}:
+        return "yes" if value == "True" else "no"
+    if value.isdigit():
+        return f"{int(value):,}"
+    try:
+        number = float(value)
+    except ValueError:
+        return value
+    if number != number:
+        return ""
+    return f"{number:.3f}"
+
+
+def read_csv(path: Path) -> list[dict[str, str]]:
+    with path.open(newline="", encoding="utf-8") as handle:
+        return list(csv.DictReader(handle))
+
+
+def enrich_equilibria(rows: list[dict[str, str]]) -> list[dict[str, str]]:
+    counters: dict[str, int] = {}
+    enriched = []
+    for row in rows:
+        scenario = row["scenario"]
+        counters[scenario] = counters.get(scenario, 0) + 1
+        stable = row["stable"] == "True"
+        slope = float(row["drift_slope"])
+        capacity = float(row["capacity"])
+        if stable and capacity < 0.2:
+            interpretation = "low-capacity trap"
+        elif stable and capacity > 0.7:
+            interpretation = "high-capacity state"
+        elif not stable and slope > 0:
+            interpretation = "threshold"
+        elif stable:
+            interpretation = "stable state"
+        else:
+            interpretation = "unstable state"
+        enriched.append({**row, "interpretation": interpretation})
+    return enriched
+
+
+def enrich_audit(rows: list[dict[str, str]]) -> list[dict[str, str]]:
+    enriched = []
+    for row in rows:
+        updated = dict(row)
+        updated["draws"] = f"{int(float(updated['draws'])):,}"
+        for key in [
+            "one_stable_state_rate",
+            "multiple_stable_states_rate",
+            "no_interior_stable_state_rate",
+            "lower_boundary_state_rate",
+            "low_high_trap_rate",
+            "median_trap_threshold_when_present",
+        ]:
+            updated[key] = f"{100 * float(updated[key]):.1f}%"
+        enriched.append(updated)
+    return enriched
+
+
+def html_table(
+    rows: list[dict[str, str]],
+    columns: list[tuple[str, str]],
+    numeric: set[str] | None = None,
+) -> str:
+    numeric = numeric or set()
+    header = "".join(f"<th>{escape(label)}</th>" for key, label in columns)
+    body_rows = []
+    for row in rows:
+        cells = []
+        for key, _ in columns:
+            klass = ' class="num"' if key in numeric else ""
+            cells.append(f"<td{klass}>{escape(fmt(row.get(key, '')))}</td>")
+        body_rows.append("<tr>" + "".join(cells) + "</tr>")
+    return "<table><thead><tr>" + header + "</tr></thead><tbody>" + "\n".join(body_rows) + "</tbody></table>"
+
+
+def build_article() -> str:
+    equilibria = enrich_equilibria(
+        read_csv(ROOT / "results" / "tables" / "material_feedback_equilibria.csv")
+    )
+    audit = enrich_audit(read_csv(ROOT / "results" / "tables" / "material_feedback_parameter_audit.csv"))
+    equilibria_table = html_table(
+        equilibria,
+        [
+            ("scenario", "Scenario"),
+            ("capacity", "Capacity K"),
+            ("substitute_share", "Substitute share p"),
+            ("drift_slope", "Local slope"),
+            ("stable", "Stable"),
+            ("interpretation", "Interpretation"),
+        ],
+        {"capacity", "substitute_share", "drift_slope"},
+    )
+    audit_table = html_table(
+        audit,
+        [
+            ("feedback_class", "Feedback class"),
+            ("draws", "Draws"),
+            ("one_stable_state_rate", "One stable"),
+            ("multiple_stable_states_rate", "Multiple stable"),
+            ("no_interior_stable_state_rate", "No interior stable"),
+            ("lower_boundary_state_rate", "Lower boundary"),
+            ("low_high_trap_rate", "Low-high trap"),
+            ("median_trap_threshold_when_present", "Median trap threshold"),
+        ],
+        {"capacity", "substitute_share", "drift_slope"},
+    )
+
+    template = Template(
+        r"""<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -441,20 +567,11 @@
 
     <p class="table-title">Equilibria in the scalar model.</p>
     <p class="small">A negative local slope means the state is stable; a positive local slope marks a threshold. In the table, shares are rounded, so values shown as 1.000 are very close to one, not assumed exactly equal to one.</p>
-    <table><thead><tr><th>Scenario</th><th>Capacity K</th><th>Substitute share p</th><th>Local slope</th><th>Stable</th><th>Interpretation</th></tr></thead><tbody><tr><td>capacity trap</td><td class="num">0.085</td><td class="num">1.000</td><td class="num">-0.228</td><td>yes</td><td>low-capacity trap</td></tr>
-<tr><td>capacity trap</td><td class="num">0.212</td><td class="num">0.999</td><td class="num">0.182</td><td>no</td><td>threshold</td></tr>
-<tr><td>capacity trap</td><td class="num">0.843</td><td class="num">0.012</td><td class="num">-1.911</td><td>yes</td><td>high-capacity state</td></tr>
-<tr><td>self-correcting</td><td class="num">0.839</td><td class="num">0.076</td><td class="num">-1.834</td><td>yes</td><td>high-capacity state</td></tr>
-<tr><td>higher exposure</td><td class="num">0.085</td><td class="num">1.000</td><td class="num">-0.228</td><td>yes</td><td>low-capacity trap</td></tr>
-<tr><td>higher exposure</td><td class="num">0.213</td><td class="num">1.000</td><td class="num">0.181</td><td>no</td><td>threshold</td></tr>
-<tr><td>higher exposure</td><td class="num">0.754</td><td class="num">0.721</td><td class="num">-0.519</td><td>yes</td><td>high-capacity state</td></tr>
-<tr><td>repair intervention</td><td class="num">0.868</td><td class="num">0.008</td><td class="num">-2.149</td><td>yes</td><td>high-capacity state</td></tr></tbody></table>
+    $equilibria_table
 
     <p class="table-title">Random parameter audit.</p>
     <p class="small">Entries are shares of parameter draws. The audit is designed to check mechanism robustness, not to estimate real-world frequencies.</p>
-    <table><thead><tr><th>Feedback class</th><th>Draws</th><th>One stable</th><th>Multiple stable</th><th>No interior stable</th><th>Lower boundary</th><th>Low-high trap</th><th>Median trap threshold</th></tr></thead><tbody><tr><td>weak feedback</td><td>3,000</td><td>94.0%</td><td>6.0%</td><td>2.0%</td><td>2.0%</td><td>3.9%</td><td>23.0%</td></tr>
-<tr><td>trap-prone feedback</td><td>3,000</td><td>51.3%</td><td>48.7%</td><td>11.1%</td><td>44.2%</td><td>13.7%</td><td>27.0%</td></tr>
-<tr><td>collapse-prone feedback</td><td>3,000</td><td>19.7%</td><td>80.3%</td><td>15.4%</td><td>88.5%</td><td>5.6%</td><td>29.3%</td></tr></tbody></table>
+    $audit_table
 
     <p class="table-title">Audit design.</p>
     <p class="small">The audit uses seed 20260626 and 3,000 draws per class. Classes differ only in substitute damage \(L\), sensitivity \(\beta\), and capacity protection \(\rho\). Shared ranges are \(\alpha\in[0.10,0.28]\), \(r\in[1,4]\), \(d\in[0.22,0.78]\), \(q\in[0.35,0.65]\), and \(z\in[-0.05,0.10]\).</p>
@@ -780,3 +897,21 @@
 </main>
 </body>
 </html>
+"""
+    )
+    return template.substitute(
+        equilibria_table=equilibria_table,
+        audit_table=audit_table,
+    )
+
+
+def main() -> None:
+    if not (ROOT / "results" / "tables" / "material_feedback_equilibria.csv").exists():
+        print("Run scripts/run_material_feedback_analysis.py first.", file=sys.stderr)
+        raise SystemExit(1)
+    PAPER.write_text(build_article(), encoding="utf-8")
+    print(PAPER)
+
+
+if __name__ == "__main__":
+    main()

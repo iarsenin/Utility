@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="500" viewBox="0 0 940 500">
+<rect width="100%" height="100%" fill="#fffaf2"/>
+<rect x="18" y="18" width="904" height="464" rx="0" fill="#ffffff" stroke="#eadfce"/>
+<line x1="18" y1="18" x2="922" y2="18" stroke="#d5412f" stroke-width="5"/>
+<text x="36" y="44" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="22" font-weight="800" fill="#171411">When Do Capacity Traps Or Boundary States Appear?</text>
+<text x="36" y="68" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="13" fill="#5f5a52">Random parameter audit across weak, trap-prone, and collapse-prone feedback classes</text>
+<line x1="36" y1="82" x2="904" y2="82" stroke="#e7dfd3" stroke-width="1"/>
+<line x1="238.0" y1="90" x2="238.0" y2="441" stroke="#e7dfd3" stroke-width="1"/>
+<text x="238.0" y="458" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="middle">0</text>
+<line x1="397.0" y1="90" x2="397.0" y2="441" stroke="#e7dfd3" stroke-width="1"/>
+<text x="397.0" y="458" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="middle">0.25</text>
+<line x1="556.0" y1="90" x2="556.0" y2="441" stroke="#e7dfd3" stroke-width="1"/>
+<text x="556.0" y="458" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="middle">0.5</text>
+<line x1="715.0" y1="90" x2="715.0" y2="441" stroke="#e7dfd3" stroke-width="1"/>
+<text x="715.0" y="458" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="middle">0.75</text>
+<line x1="874.0" y1="90" x2="874.0" y2="441" stroke="#e7dfd3" stroke-width="1"/>
+<text x="874.0" y="458" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="middle">1</text>
+<text x="36" y="130" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="14" font-weight="800" fill="#171411">Weak Feedback</text>
+<text x="36" y="151" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52">3,000 draws</text>
+<rect x="238" y="114" width="37.9" height="22" rx="3" fill="#007f83"/>
+<rect x="238" y="142" width="25.0" height="18" rx="3" fill="#7658a5"/>
+<rect x="238" y="166" width="12.5" height="18" rx="3" fill="#c74332"/>
+<text x="284.948" y="130" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#171411">multi-state 0.06</text>
+<text x="272.016" y="156" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#171411">low-high trap 0.04</text>
+<text x="259.50800000000004" y="180" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#171411">lower boundary 0.02</text>
+<text x="36" y="212" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="14" font-weight="800" fill="#171411">Trap-Prone Feedback</text>
+<text x="36" y="233" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52">3,000 draws</text>
+<rect x="238" y="196" width="309.5" height="22" rx="3" fill="#c7831f"/>
+<rect x="238" y="224" width="87.1" height="18" rx="3" fill="#7658a5"/>
+<rect x="238" y="248" width="281.3" height="18" rx="3" fill="#c74332"/>
+<text x="556.52" y="212" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#171411">multi-state 0.49</text>
+<text x="334.132" y="238" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#171411">low-high trap 0.14</text>
+<text x="528.3240000000001" y="262" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#171411">lower boundary 0.44</text>
+<text x="36" y="294" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="14" font-weight="800" fill="#171411">Collapse-Prone Feedback</text>
+<text x="36" y="315" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52">3,000 draws</text>
+<rect x="238" y="278" width="510.9" height="22" rx="3" fill="#c74332"/>
+<rect x="238" y="306" width="35.8" height="18" rx="3" fill="#7658a5"/>
+<rect x="238" y="330" width="563.1" height="18" rx="3" fill="#c74332"/>
+<text x="757.9200000000001" y="294" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#171411">multi-state 0.80</text>
+<text x="282.828" y="320" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#171411">low-high trap 0.06</text>
+<text x="810.072" y="344" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#171411">lower boundary 0.89</text>
+<text x="556.0" y="476" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" fill="#5f5a52" text-anchor="middle">share of parameter draws</text>
+<text x="36" y="478" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="10.5" fill="#5f5a52">Audit is a mechanism check, not an empirical estimate. Parameter ranges are reported in results/material_feedback_report.md.</text>
+</svg>

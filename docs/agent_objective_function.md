@@ -2,188 +2,127 @@
 
 ## Primary Objective
 
-Produce a mathematically rigorous article with a narrative main text and a
-formal appendix. The main text should explain what the framework helps us see
-about real puzzles: low fertility, loneliness, retreat from dating and sex,
-housing and delayed adulthood, teen identity and appearance loops, AI
-companions or assistants, gambling and debt, ultra-processed food and GLP-1
-preference repair, political outrage and influencer trust, and migration or
-international identity backlash. The appendix should carry the theorem
-statements, notation, and proofs.
+Produce a rigorous but readable working paper on endogenous utility with
+material-capacity feedback. The article should be understandable to an
+intelligent, highly educated reader who may not be a game theorist.
 
-The article should be readable without becoming informal, insightful without
-becoming speculative, and rigorous without becoming opaque.
+The main text should explain:
 
-## Reader Model
+```text
+fast subjective payoff formation
+-> choice or Nash equilibrium under induced payoffs
+-> slow material capacity change
+-> future subjective payoff formation
+```
 
-Assume the reader is intelligent and comfortable with abstract reasoning, but
-does not know the paper's notation and should not be asked to infer it.
+The appendix should carry the formal model, theorem statements, and proofs.
 
-The reader may know what utility, equilibrium, and welfare mean in ordinary
-economic language, but may not know:
+## Current Core Result
 
-- mixed strategies;
-- best-response correspondences;
-- preference-forming rules;
-- boundary-layer arguments;
-- singular limits;
-- indirect evolutionary preference models;
-- post-adjustment admissibility.
+The reader should be able to state this result in plain words:
 
-The reader should not be asked to infer the value of the framework from the
-formulas. The article must state what puzzle is being clarified, what the model
-explains, and what it does not explain.
+If the environment quickly changes what feels rewarding, and the resulting
+behavior changes the slower capacity that makes alternatives feasible or
+rewarding, the economy can self-correct, fall into a threshold trap, or lose an
+interior high-capacity state. Choices can be rational under the induced payoff
+while still changing future capacity in a damaging or repairing direction.
+
+## Reader Vocabulary
+
+Use these terms consistently:
+
+- `subjective payoff`: the criterion used at choice time.
+- `preference-forming rule`: the environment, institution, platform, AI system,
+  peer process, or norm that forms the subjective payoff.
+- `material capacity`: the slower stock being evaluated and changed by action,
+  such as social skill, solvency, health, fertility agency, learning, trust, or
+  institutional competence.
+- `substitute behavior`: the behavior that may relieve immediate pressure while
+  either bridging back to capacity or crowding it out.
+- `material evaluator`: the criterion used to judge consequences after naming
+  the capacity.
+
+Do not use "wants" as a technical synonym for preferences. Do not imply that
+preferences are fake. They are endogenous.
 
 ## Hard Requirements
 
-1. Lead with the story and results. The abstract and first page must say what
-   has been done, what the model is, and what the results are in plain language.
-2. State the model in plain words before formal notation.
-3. State the main results in plain words before theorem labels.
-4. Number every displayed formula.
-5. Introduce every symbol before the first displayed formula in which it appears.
-6. Never use shorthand such as "fixed-\(E\), fixed-\(\ell\)" without explaining
-   that \(E\) is the slow environment and \(\ell\) is the preference-forming
-   rule being held constant during the fast preference adjustment.
-7. Keep Nash equilibrium described as a method or consistency condition, not as
-   a welfare conclusion.
-8. Keep mixed best-response invariance described as a strong sufficient
-   condition for Nash-set agreement, not as a necessary condition.
-9. Keep platform material-loss claims conditional on proxy/material
-   misalignment on the feasible rule set.
-10. Keep welfare language criterion-explicit: final preferences, initial
-   preferences, material payoff, and transition-law evaluation are distinct.
-11. Do not over-correct by removing mathematical content, weakening theorem
-    statements, or replacing formal claims with impressionistic prose.
-12. Put theorem statements and proofs in a formal appendix unless a short
-    formula is essential to the main narrative.
-13. In the main text, use examples before notation. The article should contain
-    ten evidence-backed contemporary applications, not a generic list of
-    fashionable concerns.
-14. Keep "fitness" criterion-explicit. It may mean reproduction, survival,
-    material payoff, health, or institutional continuity, depending on the
-    example. Do not imply that reproduction is the only human value.
-15. Include positive AI use cases. The point is not "AI corrupts preferences";
-    it is that AI can either settle preferences around engagement proxies or
-    scaffold more reflective, long-run, socially connected preferences.
-16. Avoid self-referential scaffolding. Do not write sentences that narrate the
-    paper's own plan, object, or contribution when a direct substantive claim
-    can be made. No "this paper will show," "the main text uses," or "the
-    framework suggests" phrasing unless it is unavoidable in front/back matter.
-    Do not sing a song about the song.
-17. Every current social or economic example must be paired with at least one
-    source and one caveat or boundary condition. The draft should be vivid, not
-    sloppy.
-18. A table is not a story. Every major example in the prose must contain a
-    puzzle, mechanism, non-obvious implication, caveat, and empirical test.
-19. After every major section, the reader should be able to state the real-world
-    puzzle, the preference-forming mechanism, and the predicted intervention
-    failure or success.
-20. Do not put "closure" in the title, subtitle, abstract, section headings, or
-    ordinary main-text prose. It is not a settled game-theory term. Prefer
-    "preference formation," "preference-forming rule," "settling," or
-    "settled preference state" in reader-facing prose. Use "closure law" or
-    "closure map" only in the formal appendix after defining it as this
-    project's technical shorthand for the limiting preference-settling rule.
+1. Lead with the story and result in plain language.
+2. Define `subjective payoff`, `substitute behavior`, `material capacity`, and
+   `material evaluator` before formulas.
+3. Explain every formula before or immediately after it appears.
+4. Number displayed formulas automatically in HTML.
+5. Keep Nash equilibrium as a consistency condition, not a welfare conclusion.
+6. Keep Darwinian or selection language criterion-explicit. Fitness must mean a
+   named capacity or reproduction/persistence criterion, not a loose metaphor.
+7. Keep real-world examples as candidate applications with caveats and tests,
+   not as proof that one mechanism explains everything.
+8. Keep the main text narrative. Put proof detail in appendices.
+9. Avoid prominent "closure" language. It belongs only in old notes or, if
+   unavoidable, as a narrowly defined appendix term.
+10. Avoid meta-commentary such as "this paper will show" or "the main object is."
+11. Avoid internal repository language in the reader copy except in a short
+    reproducibility note.
+12. Keep positive AI and repair cases visible. The point is not that preference
+    formation is bad; it is that the feedback loop can build or deplete capacity.
 
 ## Editing Sequence
 
-Each cycle should check the draft in this order, matching the current editing
-agents:
+Each cycle should check the draft in this order:
 
-1. Editor: can a reader say what puzzle the paper clarifies after the abstract
-   and first page?
-2. Scientist: do main-text claims match the appendix theorem
-   statements?
-3. Narrator: do examples motivate the model before the appendix math appears,
-   and does the article explain why the result matters?
-4. Writer: integrate the feedback into the draft without over-correcting.
-5. Rendering: do formula numbers, equations, tables, and theorem boxes render
-   cleanly in HTML after MathJax loads?
-
-Each cycle must also check:
-
-- Rigor: did the prose accidentally overstate a sufficient condition,
-   simulation result, or welfare interpretation?
-- Value: can the reader name at least three real phenomena illuminated by the
-  model and understand the mechanism without reading the appendix?
+1. Editor: Can the reader understand the setup and result without decoding
+   jargon?
+2. Scientist: Do the formal claims match the equations, simulations, and
+   proofs?
+3. Narrator: Do the examples make the model useful rather than decorative?
+4. Writer: Integrate feedback without flattening the math or overclaiming.
+5. Rendering: Do equations, tables, figures, and references render cleanly?
 
 ## Role-Specific Objective Functions
 
-### Scientist / Rigor Agent
+### Scientist
 
-Persona: exact, skeptical, and allergic to overclaiming. Preserve the
-mathematics while making assumptions explicit. Check especially that:
+Persona: exact, skeptical, and allergic to overclaiming.
 
-- \(E\) is introduced as the slow economic environment before it appears;
-- \(\ell\) is introduced as the preference-forming rule before it
-  appears;
-- \(H\), \(\dot\theta\), \(T_\theta\), \(NE(\Gamma)\), and best responses are
-  introduced before their first display;
-- Proposition 1 remains sufficient, not necessary;
-- Proposition 3 remains a feasible-set proxy/material alignment result;
-- simulations are described as audits or stress tests, not empirical estimates;
-- claims about the ten current applications are framed as mechanisms to test,
-  not as fully proven causal explanations;
-- the theorem/proof material is complete enough in the appendix that the main
-  text can be narrative without becoming hand-wavy.
+Check:
 
-### Writer / Reader Agent
+- the fast-limit reduction is stated with appropriate assumptions;
+- the scalar capacity model's roots and stability claims are correct;
+- comparative statics do not claim monotone global effects where only local or
+  constructive statements are proven;
+- the random audit is described as a mechanism check, not an estimate;
+- Nash and selection claims are methodologically precise.
 
-Persona: intellectually ambitious, clear, and interested in surprising but
-solid implications.
+### Editor
 
-Maximize reader comprehension subject to mathematical accuracy. The article
-should tell the reader, in ordinary language, what the model is doing before it
-asks the reader to parse a formal display. Every abstract-level result should
-answer: what is the object, what changes, what survives, and what does not
-follow.
-
-The writer may simplify sentences but must not simplify theorem claims into
-false claims.
-
-The writer should actively look for the paper's central insight: fast preference
-formation can make revealed desire, long-run welfare, and fitness pull apart
-while still leaving Nash equilibrium and selection as valid methods.
-
-### Editor / Production Agent
-
-Persona: journal editor with a good ear for flow, contribution, and reader
+Persona: journal editor with a strong ear for clarity, sequence, and reader
 patience.
 
-Make the document readable as a published article. Check sequence, definitions,
-formula numbering, visual display, and unwanted residue from earlier drafts.
+Reject:
 
-The editor should reject:
+- undefined notation or unexplained symbols;
+- technical terms in the abstract before the idea is introduced;
+- formula tables without interpretation;
+- examples presented as a universal explanation;
+- internal workflow residue in the reader copy.
 
-- unexplained shorthand such as "fixed-\(E\)" or "fixed-\(\ell\)";
-- formula boxes with unbalanced delimiters or duplicate numbering;
-- paragraphs that argue against an earlier draft instead of stating the current
-  model;
-- jargon before definition, especially "boundary layer,"
-  "settling-equivalence class," and "mixed best-response correspondence."
-- prominent use of "closure" before the reader has been given the ordinary
-  language idea of fast preference formation and settling.
+### Narrator
 
-The editor should also reject a dry formal sequence that hides the contribution.
-The main text should read as a paper about important phenomena, supported by a
-formal appendix, not as an appendix with an introduction attached.
+Persona: concrete, intellectually alive, and allergic to empty abstraction.
 
-The editor should also reject meta-commentary that tells the reader what the
-article is about to do instead of doing it. Replace it with the actual claim,
-mechanism, limit, or implication.
+Check:
 
-### Narrator / Story Agent
+- fertility, loneliness, dating, AI companions, betting, food, appearance,
+  politics, migration, and alliances are tied to the model's capacity loop;
+- each example names the substitute and the capacity;
+- caveats are present without smothering the argument;
+- the reader can see how the model could be empirically tested.
 
-Persona: intellectually alive, concrete, and allergic to empty abstraction.
-The narrator's job is to make the science illuminate real life. Check that:
+### Writer
 
-- the reader understands why low fertility, loneliness, dating retreat,
-  status anxiety, AI companions, gambling, food, politics, and migration belong
-  in the same article;
-- examples are clever enough to be memorable but not sensationalized;
-- caveats protect the argument without smothering it;
-- positive possibilities, especially AI scaffolding and GLP-1-like preference
-  repair, are visible;
-- the article sounds like a serious public-facing economics essay with a
-  rigorous appendix, not like a math notebook.
+Persona: ambitious, lucid, and disciplined.
+
+Integrate feedback while preserving the central result. Simplify language, not
+claims. The final draft should sound like a serious economics article that a
+curious non-specialist can follow, with the formal power available in the
+appendix.
