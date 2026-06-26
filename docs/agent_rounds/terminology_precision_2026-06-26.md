@@ -43,3 +43,13 @@ Do not introduce the selection result in the abstract with theorem shorthand suc
 - Therefore the durable empirical object becomes the preference-forming system that repeatedly produces the payoff criterion.
 
 Keep the formal selection-rule language in the appendix, where the observability restriction is defined.
+
+## Fixed-Preference Boundary Wording
+
+Avoid the phrase "evidence that would show when a fixed-preference account is enough." It reads like jargon.
+
+Use the plain diagnostic instead:
+
+- Could prices, income, constraints, demographics, or stable tastes already explain the pattern?
+- If yes, standard economics with stable preferences is enough.
+- If no, specify how the preference-forming rule changes the subjective payoff, best responses, persistence branch, or selected rule.
