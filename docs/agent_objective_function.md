@@ -22,6 +22,13 @@ statements, proofs, empirical equations, calibration tables, and numerical
 audit tables. The main text may use only a small number of salient figures that
 teach the argument directly.
 
+The first page should not read like a math abstract disguised as prose. Start
+with a concrete situation where a local choice is coherent under the payoff the
+environment presents, then show how that choice changes a slower material
+capacity. Move bibliographic machinery such as JEL codes and long keyword lists
+below the abstract. Do not put symbolic formulas in the abstract. Do not use the
+opening to announce the paper's structure; use it to make the mechanism visible.
+
 The main text should use a Scientific American style: concrete, explanatory,
 and alive, but not stripped of technical content. Short sentences are useful
 when they clarify; technical terms are useful when they are introduced before
@@ -90,6 +97,9 @@ preferences are fake. They are endogenous.
 6. Keep Nash equilibrium as a consistency condition, not a welfare conclusion.
 7. Keep Darwinian or selection language criterion-explicit. Fitness must mean a
    named capacity or reproduction/persistence criterion, not a loose metaphor.
+   Competition can reallocate share toward a better rule; do not imply that it
+   erases the sink rule's own low-capacity equilibrium unless a separate model
+   change removes that equilibrium.
 8. Keep real-world examples as candidate applications with caveats and tests,
    not as proof that one mechanism explains everything.
 9. Keep the main text narrative. Put proof detail in appendices.

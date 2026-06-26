@@ -1301,3 +1301,75 @@ Equilibrium` to `When Preferences Decouple From Fitness`, because the old title
 suggested a generic speed comparison with equilibrium while the paper's core
 claim is a decoupling between induced subjective payoffs and material or
 fitness-relevant outcomes. The filename is unchanged for link continuity.
+
+## 2026-06-26 Happy-Medium Opening Pass
+
+### Reason
+
+The draft had drifted back toward a technical opening. The user requested a
+middle register: more like serious popular science, but still rigorous and
+publication-oriented.
+
+### Implemented
+
+- Reworked the header so the reader sees the title and a softer subtitle before
+  the abstract; JEL codes and keywords now appear below the abstract.
+- Rebuilt the abstract around concrete choices first: AI companionship, live
+  sports betting, and outrage media.
+- Kept the technical result content in prose:
+  - fast payoff formation;
+  - coherent choice or Nash equilibrium under induced payoff;
+  - slow material-capacity feedback;
+  - bridge, trap, and collapse-prone scalar diagnostics;
+  - current-drift signals do not move interior steady-state capacities in the
+    scalar diagnostic;
+  - competition is corrective only when the competitive score favors the
+    capacity-preserving rule.
+- Added concrete first-page mappings for sports betting and outrage:
+  exposure, substitute behavior, material capacity, and competitive score.
+- Pulled the stark competition calibration into the main text: in the displayed
+  two-rule diagnostic with initial mass normalized to one, material viability
+  ends near total mass `5.7`, while engagement competition ends near `0.02`.
+- Tightened theorem scope after agent review:
+  collapse-prone language now says lower-boundary attracting state rather than
+  simulated outcome frequency, and the current-drift result is scoped to the
+  scalar diagnostic and interior steady-state capacities.
+- Updated `docs/agent_objective_function.md` so future revisions preserve the
+  narrative-first opening and keep formulas out of the abstract.
+
+### Agent Review
+
+Completed three editing rounds:
+
+- Round 1: Scientist, Editor, and Narrator flagged technical overclaiming,
+  first-page repetition, and insufficient betting/outrage mapping.
+- Round 2: Narrator passed; Editor requested a less technical abstract and a
+  plainer result box; Scientist required separating scalar-trap removal from
+  competition-driven reallocation across rules.
+- Round 3: Scientist, Editor, and Narrator all passed the revised draft.
+
+### Verification
+
+- `python3 scripts/build_material_feedback_article.py` passed.
+- `python3 -m compileall -q src scripts` passed.
+- `git diff --check` passed.
+- HTML integrity check passed:
+  - missing references: none;
+  - unused references: none;
+  - missing images: none;
+  - figures: 5 total, 3 in main;
+  - tables: 6 total, 1 in main;
+  - main displayed equations: 0;
+  - main theorem boxes: 0;
+  - template placeholders: 0;
+  - abstract formula delimiters: 0.
+- Browser visual QA through
+  `http://127.0.0.1:8782/paper/when_preferences_move_faster_than_equilibrium_v1.html`
+  passed:
+  - title renders as `When Preferences Decouple From Fitness`;
+  - abstract contains no MathJax containers;
+  - old abstract phrases `zero-drift equation` and `one-capacity diagnostic`
+    are absent;
+  - no horizontal overflow.
+- Added visual QA screenshot:
+  `results/figures/when_preferences_happy_medium_qa.png`.

@@ -114,6 +114,13 @@
       margin: 0 0 6px;
     }
 
+    .article-data {
+      border-bottom: 1px solid var(--rule);
+      border-top: 1px solid var(--rule);
+      margin: -12px 0 34px;
+      padding: 12px 0 9px;
+    }
+
     .abstract {
       background: var(--soft);
       border-left: 5px solid var(--accent);
@@ -375,45 +382,54 @@
 <main>
   <header>
     <h1>When Preferences Decouple From Fitness</h1>
-    <p class="subtitle">Endogenous utility, material-capacity feedback, and Nash equilibrium</p>
-    <p class="meta"><strong>Working paper draft.</strong> Prepared for comment.</p>
-    <p class="meta"><strong>JEL codes:</strong> C72, D01, D11, D83, D91, I12. <strong>Keywords:</strong> endogenous preferences, utility, Nash equilibrium, material capacity, social media, AI, addiction, loneliness, competition.</p>
+    <p class="subtitle">Endogenous utility, material capacity, and strategic choice</p>
   </header>
 
   <section class="abstract">
     <h2>Abstract</h2>
-    <p>Modern environments can change subjective payoffs faster than the material capacities behind future choices can adjust. A recommender system, market interface, peer group, institution, or AI product may raise the short-run value of a substitute behavior. That behavior can then change the stock that makes tomorrow's alternatives feasible: friendship skill, solvency, metabolic resilience, learning, trust, or institutional competence.</p>
-    <p>The capacity loop has three steps plus a selection layer. First, exposure and current capacity form a fast preference state or payoff map. Second, agents choose coherently inside that induced game, with Nash equilibrium as the strategic consistency condition in strategic settings. Third, behavior moves the slower capacity stock. Finally, payoff-forming rules compete under a named score. The key feedback chain is capacity to payoff, payoff to behavior, and behavior back to capacity.</p>
-    <p>In the one-capacity smooth-choice diagnostic, this loop produces three long-run patterns. With weak damage or strong repair, capacity recovers. In the baseline trap calibration, there is a low-capacity state, a high-capacity state, and a threshold between them; on the normalized capacity scale those points are about 0.085, 0.843, and 0.212. In the higher-damage audit, the collapse-prone class reaches the lower boundary in 88.5 percent of draws and has no interior stable state in 15.4 percent. In all patterns, choice can remain Nash-consistent after subjective payoffs are formed.</p>
-    <p>The correction result is sharper than the usual intuition that current feedback eventually corrects behavior. A signal tied only to whether capacity is currently rising or falling changes speeds and slopes, but it does not move interior steady-state capacities; once the system is at rest, that signal is silent. A sufficiently strong level-of-capacity channel can move the steady states and remove the low trap. Competition can also favor repair, but only when the competitive score ranks the capacity-preserving rule above the sink. If the score rewards engagement instead, the sink can gain relative share while aggregate material scale falls.</p>
-    <p>The empirical content is a set of observables: the payoff-forming exposure, the substitute behavior, the material capacity law, and the competitive score. AI companions, sports betting, hyper-palatable food, appetite-changing medicines, dating retreat, appearance markets, and political outrage differ in substance, but they become comparable once those four objects are measured.</p>
+    <p>A person may choose an AI companion because it is available, kind, and low-risk. A bettor may choose another in-game wager because the app makes risk feel like part of the match. A citizen may choose outrage media because anger and familiarity are easier than slow verification. These choices need not be mistakes. They can be coherent responses to the payoffs the environment presents.</p>
+    <p>The problem begins when the same environment that shapes today's payoff also changes tomorrow's capacity. Synthetic companionship can either rebuild social confidence or replace the practice that would rebuild it. Betting can turn fandom into repeated risk while weakening solvency. Outrage media can win attention while lowering the capacity for correction. The issue is not fake preference. It is endogenous preference formation with material consequences.</p>
+    <p>The loop has four parts. A fast payoff-forming system changes what is attractive at the moment of choice. Agents then choose coherently inside that induced game; in strategic settings, this is the Nash step. The chosen behavior moves a slower stock such as social skill, health, solvency, learning, or trust. Payoff-forming rules then compete under a named score: material viability, engagement, revenue, reproduction, or institutional survival.</p>
+    <p>The simplest capacity model gives three outcomes. A bridge rebuilds capacity. A trap has both a low-capacity and high-capacity state, separated by a threshold. In the parameter audit, more damaging feedback often admits an attracting lower-boundary state, and some draws have no interior stable capacity state. A deliberately narrow warning result follows: if the only corrective signal says whether capacity is improving or deteriorating right now, that signal can change adjustment speeds without moving the interior long-run rest points. To remove the low trap inside that scalar model, the forces that determine those rest points must change; a stronger channel from capacity to payoff can do this.</p>
+    <p>Competition answers a different question. It does not erase the sink rule's own low-capacity state. It determines which payoff-forming rule gains share when a named score rewards material viability, engagement, revenue, reproduction, or institutional survival. Empirically, the claim becomes testable only after four objects are named: the payoff-forming exposure, the substitute behavior, the material capacity being changed, and the competitive score. AI companions, sports betting, hyper-palatable food, appetite-changing medicines, dating retreat, appearance markets, and political outrage differ in substance, but they become comparable once those four objects are measured.</p>
   </section>
+
+  <div class="article-data">
+    <p class="meta"><strong>Working paper draft.</strong> Prepared for comment.</p>
+    <p class="meta"><strong>JEL codes:</strong> C72, D01, D11, D83, D91, I12. <strong>Keywords:</strong> endogenous preferences, utility, Nash equilibrium, material capacity, social media, AI, addiction, loneliness, competition.</p>
+  </div>
 
   <section>
     <h2>1. The Puzzle In Plain Words</h2>
-    <p class="lede">People can make coherent choices inside a payoff criterion that the environment helped produce. The choice can be rational and sincere at the moment of choice while weakening the slower capacity that would make a different future choice feasible.</p>
+    <p class="lede">The sharp case is not a person choosing badly against their own preferences. The sharp case is a person choosing well under preferences that the environment has helped form.</p>
 
-    <p>An isolated adult may prefer an AI companion tonight because it is responsive, low-risk, and always available. A bettor may want the next in-game wager because the app makes risk feel like part of the match. A teenager may retreat from courtship because digital substitutes feel safer. A citizen may prefer outrage media because a familiar personality feels more fluent than slow verification. These choices need not be mistakes at the moment they are made. The sharper issue is that the environment helped form the criterion used to choose.</p>
+    <p>Begin with loneliness. An isolated adult opens an AI companion. The interaction is responsive, emotionally fluent, and always available. Human contact is slower, riskier, and harder to repair after embarrassment. In that moment, the companion may be the best choice under the payoff the person actually faces. Calling the choice irrational misses the point.</p>
+
+    <p>The harder question comes later. Does repeated synthetic interaction make human contact easier, by lowering anxiety and restoring confidence? Or does it replace the practice needed for ordinary contact, making the outside option harder next week? The same product can be a bridge or a sink depending on how it changes that slower stock.</p>
+
+    <p>Sports betting gives the solvency version. The exposure is a live-betting interface that makes risk feel like part of fandom. The substitute is another micro-wager. The capacity is a savings buffer, credit headroom, or ordinary budget control. The competitive score may be handle and retention, or it may be household solvency.</p>
+
+    <p>Outrage media gives the verification version. The exposure is a ranked feed, influencer, or news personality that makes anger and familiarity rewarding. The substitute is outrage consumption or broadcasting in place of slower verification. The capacity is correction acceptance, institutional trust, or cross-cutting attention. The competitive score may be engagement, audience share, or resilience of the information environment.</p>
 
     <div class="result-strip">
       <div><strong>Subjective payoff</strong><span>What feels worth doing at choice time.</span></div>
       <div><strong>Substitute</strong><span>The quick reward or relief that may replace practice.</span></div>
       <div><strong>Capacity</strong><span>The slower stock that keeps other choices possible.</span></div>
-      <div><strong>Outcome metric</strong><span>The named stock the analysis cares about.</span></div>
+      <div><strong>Competitive score</strong><span>The quantity that decides which rule spreads.</span></div>
     </div>
 
     <p>For a lonely user, the substitute may be the companion. The capacity may be the ability to handle ordinary contact. The competitive score may reward retention, or it may reward restored social life. The same user can choose rationally in both settings, but the selected product design and long-run capacity path differ.</p>
 
-    <p>The model treats subjective payoffs as operative, not illusory. The question is how the payoff-forming system changes later capacity, and whether competition selects systems that preserve that capacity.</p>
+    <p>Subjective payoffs are operative, not illusory. The economic question is how the payoff-forming system changes later capacity, and whether competition selects systems that preserve that capacity.</p>
 
     <div class="result-list">
-      <h3>Results</h3>
+      <h3>Results In Plain Language</h3>
       <ol>
         <li><strong>Bridge.</strong> The loop rebuilds capacity when the substitute is mild, repair is strong, or the induced payoff pushes agents back toward the outside capacity.</li>
         <li><strong>Trap.</strong> Low capacity can make the substitute attractive, and substitute use can keep capacity low. A threshold separates the low-capacity and high-capacity basins.</li>
-        <li><strong>Collapse.</strong> In the random audit, higher-damage feedback often pushes the projected dynamic to the lower boundary, and some draws have no interior stable capacity state.</li>
-        <li><strong>Alarm.</strong> In the one-capacity logit model, a warning tied only to current decline changes the speed of motion but does not move the interior steady-state capacities.</li>
-        <li><strong>Selection.</strong> Competition selects the rule with the higher score. It preserves capacity when the score ranks the capacity-preserving rule above the sink; material viability is one aligned score.</li>
+        <li><strong>Collapse.</strong> In the parameter audit, higher-damage feedback often admits a lower-boundary attracting state, and some draws have no interior stable capacity state.</li>
+        <li><strong>Alarm.</strong> In the one-capacity test, a signal tied only to current improvement or decline can change adjustment speed without moving the interior steady-state capacities.</li>
+        <li><strong>Selection.</strong> With positive competition and a persistent score ordering, the higher-scoring rule gains share. It preserves capacity only when the score ranks the capacity-preserving rule above the sink.</li>
       </ol>
     </div>
   </section>
@@ -433,7 +449,7 @@
 
     <p>The scalar example in the appendix uses one normalized capacity stock. Capacity makes the outside option usable: it keeps a non-substitute alternative from becoming too costly. If social skill is high, human contact is less costly. If solvency is high, risky credit is less tempting. If trust is high, verification is easier. Substitute use can erode that capacity. Repair may fail near the bottom because the capacity needed for repair is already missing.</p>
 
-    <p>The local feedback multiplier is the mathematical version of this story. Its direct terms capture how capacity moves mechanically. Its endogenous preference component is the chain in which capacity affects the fast payoff state, the payoff state affects behavior, and behavior affects capacity. When that component reinforces repair, the loop tends to correct itself. When it is sufficiently positive around the middle of the state space, the same model can produce a threshold: initial states above the threshold move toward the high-capacity attractor, while states below it move toward the low-capacity attractor.</p>
+    <p>The appendix turns this into a local feedback calculation. One part captures how capacity moves mechanically. The second part is the endogenous preference chain: capacity affects the fast payoff state, the payoff state affects behavior, and behavior affects capacity. When that chain reinforces repair, the loop tends to correct itself. When it is sufficiently positive around the middle of the state space, the same model can produce a threshold: initial states above the threshold move toward the high-capacity attractor, while states below it move toward the low-capacity attractor.</p>
 
     <p>In the AI companion case, the empirical question is precise: does synthetic interaction build enough social capacity to make human contact easier later, or does it replace the practice needed for that contact?</p>
 
@@ -451,7 +467,7 @@
     <p>Low capacity can make the substitute attractive. Heavy substitute use can then prevent capacity from rebuilding. High capacity can also persist because the outside option remains usable, so the substitute loses some of its pull. Between the two stable states lies a threshold. Above it, the same environment converges upward. Below it, the same environment converges downward.</p>
 
     <h3>Collapse</h3>
-    <p>The audit also contains collapse-prone dynamics. In those parameter regions, higher damage and sensitivity often push the projected state to the lower boundary, and some draws have no interior stable capacity state. In this model, recovery from such a region occurs only when the forces pushing capacity up or down change. In a betting case, this is the point where solvency is so damaged that ordinary budgeting no longer restores the previous option set.</p>
+    <p>The audit also contains collapse-prone dynamics. In those parameter regions, higher damage and sensitivity often admit a lower-boundary attracting state, and some draws have no interior stable capacity state. In this model, recovery from such a region occurs only when the forces pushing capacity up or down change. In a betting case, this is the point where solvency is so damaged that ordinary budgeting no longer restores the previous option set.</p>
 
     <figure>
       <img src="../results/figures/material_feedback_paths.svg" alt="Capacity paths from different starting values">
@@ -463,17 +479,17 @@
     </div>
 
     <h3>Does Reality Correct The System Automatically?</h3>
-    <p>Not automatically. The model separates two signals. One signal says, "this is getting worse right now." In the one-capacity diagnostic, that current-drift signal can slow the path, but it does not change the interior steady-state capacities. At an interior steady state there is no current drift, so the signal goes quiet.</p>
+    <p>Not automatically. The model separates two signals. One signal reports whether capacity is improving or deteriorating right now. In the one-capacity diagnostic, that signed current-drift signal can slow or speed the path, but it does not change the interior steady-state capacities. At an interior steady state there is no current drift, so the signal goes quiet. That is the surprising part: a psychologically salient warning can be real and still leave the trap untouched.</p>
 
     <p>A level-of-capacity signal is different. The baseline already has a weak version of this channel: higher capacity makes the substitute less attractive. The stock-feedback sweep asks what happens when that channel becomes stronger. In the test case, once the channel is strong enough, it removes the low-capacity trap because it still acts when the system is not moving. A person may feel bad about retreating, but if retreat has become stable, that discomfort need not rebuild the social skill they lost.</p>
 
     <figure>
       <img src="../results/figures/self_correction_channels.svg" alt="Self-correction channel diagnostics">
-      <figcaption>The alarm changes speed but not the destination. The capacity signal changes the destination. That is why regret can fail while a real stock-building channel can work.</figcaption>
+      <figcaption>The alarm changes speed but not the interior steady states in this diagnostic. The capacity signal changes the destination in this diagnostic. That is why regret can fail while a real stock-building channel can work.</figcaption>
     </figure>
 
     <h3>Competition Is Corrective Only Under The Right Metric</h3>
-    <p>Competition is Darwinian in the precise sense of a share dynamic over preference-forming rules. It does not make the outcome benevolent. In the numerical diagnostic, a bridge design and a sink design start with equal shares. If the competitive score is material viability, the bridge expands and total scale recovers. If the score is engagement, the sink expands and total scale falls. Relative victory and absolute survival are different equations.</p>
+    <p>Competition here is a share dynamic over preference-forming rules. It does not make the outcome benevolent. In the numerical diagnostic, a bridge design and a sink design start with equal shares. If the competitive score is material viability, the bridge expands and total scale recovers. If the score is engagement, the sink expands and total scale falls. With competition intensity set to 1.2 and initial total mass normalized to one, the displayed calibration ends near total mass 5.7 under material viability and near 0.02 under engagement. The point is not that those numbers are universal; it is that relative victory and absolute survival are different equations.</p>
 
     <figure>
       <img src="../results/figures/competition_selection_channels.svg" alt="Competition selection channels">
@@ -485,7 +501,7 @@
     <h2>4. Nash Equilibrium And Competition</h2>
     <p>Nash has a narrower role here than welfare analysis sometimes gives it. After the rule forms payoffs, Nash asks whether each player is choosing coherently given those payoffs and the others' choices. The equilibrium can be coherent while capacity falls.</p>
 
-    <p>Competition decides which payoff-forming systems spread only after the score is specified. The share equation is governed by a relative score \(S\). Aggregate survival is governed by a material growth rate \(g\). If \(S\) rewards engagement while \(g\) tracks solvency, health, trust, or social capacity, a rule can win relative share while the carrier population, capital stock, or institution shrinks.</p>
+    <p>Competition decides which payoff-forming systems spread only after the score is specified. Relative share is governed by the competitive score. Aggregate survival is governed by material growth. If the score rewards engagement while material growth tracks solvency, health, trust, or social capacity, a rule can win relative share while the carrier population, capital stock, or institution shrinks.</p>
 
     <div class="reader-result">
       <strong>Selection claim.</strong> Relative share depends on the competitive score. Absolute survival depends on the growth of the population, capital, or institution carrying the rule. If every available rule depletes the relevant capacity, the end point can be disappearance, not convergence to a fitter taste.
@@ -504,11 +520,11 @@
 
     <p>The material capacity is not "happiness" in general. It is something measurable: offline contact attempts, friendship repair, invitations accepted, social anxiety after use, time in mixed social settings, or durable human ties. A bridge lowers the cost of contact and preserves those stocks. A sink gives enough synthetic reward that the outside stock decays. The same user can choose rationally under either design. The difference is the path of measured social capacity.</p>
 
-    <p>The threshold result says that small changes may have different effects depending on the starting stock. Above the threshold, synthetic interaction can be a scaffold that reduces anxiety and returns the user to human contact with higher capacity. Below the threshold, the same local reward can stabilize retreat if outside contact becomes too costly relative to the induced payoff. The model does not say loneliness vanishes. It says an alarm based only on "am I getting worse right now?" can go quiet once a low-contact routine becomes stable.</p>
+    <p>The threshold result says that small changes may have different effects depending on the starting stock. Above the threshold, synthetic interaction can be a scaffold that reduces anxiety and returns the user to human contact with higher capacity. Below the threshold, the same local reward can stabilize retreat if outside contact becomes too costly relative to the induced payoff. The model does not say loneliness vanishes. It says an alarm based only on "am I improving or getting worse right now?" can go quiet once a low-contact routine becomes stable.</p>
 
-    <p>Competition is the Darwinian part. Imagine two companion systems. A health insurer, school, employer, clinical trial, or public agency rewards the bridge when offline contact or social anxiety improves. A platform ranking system rewards the sink when retention, session length, paid attachment, or daily dependence rises. Material-viability competition expands the bridge if it builds long-run capacity. Engagement competition expands the sink if it captures more time, even when human social capacity falls. Under this model, design and selection metric determine which companion system gains share.</p>
+    <p>This is the selection step. Imagine two companion systems. A health insurer, school, employer, clinical trial, or public agency rewards the bridge when offline contact or social anxiety improves. A platform ranking system rewards the sink when retention, session length, paid attachment, or daily dependence rises. Material-viability competition expands the bridge if it builds long-run capacity. Engagement competition expands the sink if it captures more time, even when human social capacity falls. Under this model, design and selection metric determine which companion system gains share.</p>
 
-    <p>The empirical design is concrete. Randomized or instrumented exposure to companion designs can help identify the first link under the usual design assumptions. Short-run loneliness and longer-run offline contact capacity show whether the substitute changes the stock. Product survival, funding, ranking, or adoption data reveal the competitive score. A fixed-preference account fits when exposure changes only convenience or information. The feedback account gains force when exposure changes the payoff of human contact and behavior then changes later social capacity.</p>
+    <p>The empirical design is testable. Randomized or instrumented exposure to companion designs can help identify the first link under the usual design assumptions. Short-run loneliness and longer-run offline contact capacity show whether the substitute changes the stock. Product survival, funding, ranking, or adoption data reveal the competitive score. A fixed-preference account fits when exposure changes only convenience or information. The feedback account gains force when exposure changes the payoff of human contact and behavior then changes later social capacity.</p>
   </section>
 
   <section>
@@ -517,11 +533,11 @@
 
     <p>Sports betting shows the competition point. Handle, retention, and in-game engagement can rise while household solvency falls. A fixed-preference story describes gambling demand under stable payoffs. The feedback story tests whether the interface changes the payoff of risk and whether repeated play changes future solvency.</p>
 
-    <p>GLP-1 medicines show the positive case. A fast change in appetite payoff can be a bridge if it rebuilds durable metabolic capacity. It is a sink only if it creates dependence without rebuilding the stock that makes healthier eating and weight maintenance feasible outside the product.</p>
+    <p>GLP-1 medicines illustrate a possible repair case. A fast change in appetite payoff can be a bridge if it rebuilds durable metabolic capacity. It is a sink only if it creates dependence without rebuilding the stock that makes healthier eating and weight maintenance feasible outside the product.</p>
 
     <p>Political outrage shows strategic stability. Escalation can be individually rational after the attention payoff is formed. It can also degrade verification capacity. A fixed-preference account describes demand for partisan media under stable payoffs. The feedback account tests whether the media environment changes the payoff of outrage and whether repeated exposure lowers later correction acceptance.</p>
 
-    <p>Dating retreat is the threshold case. Avoidance may feel safer when courtship skill is already low. But avoidance can also keep that skill from rebuilding. Appearance markets give another test. Filters or procedures may be bridges if they restore agency. They are sinks if they make yesterday's baseline feel unacceptable and raise the next round of spending.</p>
+    <p>Dating retreat is a candidate threshold case. Avoidance may feel safer when courtship skill is already low. But avoidance can also keep that skill from rebuilding. Appearance markets give another test. Filters or procedures may be bridges if they restore agency. They are sinks if they make yesterday's baseline feel unacceptable and raise the next round of spending.</p>
 
     <p>Each row becomes evidence only after the substitute, capacity, and competitive score are measured rather than inferred from the example.</p>
 
@@ -573,14 +589,14 @@
 
     <p>Technology is not classified by its surface form. An AI companion, recommender, medicine, school, workplace, or political institution is a bridge when it leads back into durable capacity. It is a sink when it wins the local payoff game while reducing the capacity that would make alternatives feasible later. Competition can reward either form.</p>
 
-    <p>The model also separates weak optimism from changed dynamics. Current-decline warnings below a threshold need not move the state in the one-capacity model. The low-capacity equilibrium can absorb the warning into the same payoff that created the trap. In this model, correction occurs through a changed force, a threshold crossing, or competition that moves mass toward a more viable rule.</p>
+    <p>The model also separates weak optimism from changed dynamics. Signals based only on current improvement or decline below a threshold need not move the interior steady states in the one-capacity diagnostic. The low-capacity equilibrium can absorb the signal into the same payoff that created the trap. In this model, correction occurs through a changed force, a threshold crossing, or competition that moves mass toward a more viable rule.</p>
   </section>
 
   <section>
     <h2>10. Conclusion</h2>
     <p>Utility can be endogenous without being unreal. People optimize the payoff criterion they have, and modern preference-forming systems can change that criterion quickly. The economic problem is that material capacity often moves more slowly and feeds back into what will feel rewarding next.</p>
 
-    <p>Fast subjective payoff formation plus slow capacity feedback yields bridge, threshold-trap, and collapse-prone dynamics in the scalar diagnostics. A warning tied only to current decline does not move interior steady-state capacities. A sufficiently strong level-of-capacity channel can remove the low trap in the diagnostic calibration. Competition can shift composition toward the capacity-preserving rule when the competitive score ranks that rule above the sink; the material-viability diagnostic is one aligned case.</p>
+    <p>Fast subjective payoff formation plus slow capacity feedback yields bridge, threshold-trap, and collapse-prone dynamics in the scalar diagnostics. A signal tied only to current improvement or decline does not move interior steady-state capacities in the scalar diagnostic. A sufficiently strong level-of-capacity channel can remove the low trap in the diagnostic calibration. Competition can shift composition toward the capacity-preserving rule when the competitive score ranks that rule above the sink; the material-viability diagnostic is one aligned case.</p>
 
     <p>Nash equilibrium pins down strategic consistency after subjective payoffs are formed. Selection pins down which payoff-forming systems spread after the competitive score and material growth rate are named. The missing object in many fixed-preference accounts is the loop between fast payoffs and slow capacity. That loop can build capacity. It can also drain it.</p>
   </section>
@@ -674,7 +690,7 @@
 
   <section>
     <h2>Appendix B. Scalar Capacity Model</h2>
-    <p>The scalar model used for the numerical diagnostics is the special case in which the fast subsystem directly yields a substitute share \(p(K,z)\) and the slow law is one-dimensional. The form is deliberately austere. It is the smallest normal form that allows self-correction, a threshold trap, and collapse-prone capacity loss.</p>
+    <p>The scalar model used for the numerical diagnostics is the special case in which the fast subsystem directly yields a substitute share \(p(K,z)\) and the slow law is one-dimensional. The form is deliberately austere: a small normal form that allows self-correction, a threshold trap, and collapse-prone capacity loss.</p>
 
     <div class="equation">
       <span class="label">Scalar substitute share</span>
@@ -744,7 +760,7 @@
     </div>
     <p class="proof"><strong>Proof.</strong> The derivative expressions follow by differentiating the logit formula and the scalar drift. The existence claim follows constructively from the reported calibration, where the computed roots satisfy the two-basin conditions in the preceding proposition. More general monotone comparative statics are not asserted because \(\beta\) and \(\rho\) affect both levels and slopes of the vector field.</p>
 
-    <p>The baseline capacity-trap calibration used for Table 1 and Figures 1-2 sets \(\alpha=0.235\), \(r=2.90\), \(d=0.66\), \(L=0.198\), \(\beta=21.0\), \(q=0.51\), and \(\rho=0.855\). The self-correcting scenario lowers \(L\) and \(\beta\). The repair scenario raises \(\alpha\). The current-drift and competition audits are generated by `scripts/run_self_correction_analysis.py`; the material-feedback baseline is generated by `scripts/run_material_feedback_analysis.py`.</p>
+    <p>The baseline capacity-trap calibration used for Table 1 and Figures 1-2 sets \(\alpha=0.235\), \(r=2.90\), \(d=0.66\), \(L=0.198\), \(\beta=21.0\), \(q=0.51\), and \(\rho=0.855\). The self-correcting scenario lowers \(L\) and \(\beta\). The repair scenario raises \(\alpha\). The current-drift and competition audits are generated by <code>scripts/run_self_correction_analysis.py</code>; the material-feedback baseline is generated by <code>scripts/run_material_feedback_analysis.py</code>.</p>
   </section>
 
   <section>
@@ -779,13 +795,13 @@
       <tbody>
         <tr><td>Weak feedback</td><td>[0.04, 0.12]</td><td>[8, 18]</td><td>[0.55, 1.00]</td><td>Low substitute damage and moderate sensitivity.</td></tr>
         <tr><td>Trap-prone feedback</td><td>[0.12, 0.24]</td><td>[10, 24]</td><td>[0.70, 1.20]</td><td>Intermediate damage and a sharper capacity-protection channel.</td></tr>
-        <tr><td>Collapse-prone feedback</td><td>[0.20, 0.36]</td><td>[14, 30]</td><td>[0.75, 1.35]</td><td>High damage and high sensitivity, often pushing the projected state to the lower boundary.</td></tr>
+        <tr><td>Collapse-prone feedback</td><td>[0.20, 0.36]</td><td>[14, 30]</td><td>[0.75, 1.35]</td><td>High damage and high sensitivity, often admitting a lower-boundary attracting state.</td></tr>
       </tbody>
     </table>
 
     <figure>
       <img src="../results/figures/material_feedback_audit.svg" alt="Parameter audit for capacity traps">
-      <figcaption>Random parameter audit. Weak feedback mostly produces one stable state. Trap-prone feedback produces the highest share of low-high traps. Collapse-prone feedback more often reaches the lower boundary of the projected capacity interval. The audit is a mechanism check, not an empirical estimate.</figcaption>
+      <figcaption>Random parameter audit. Weak feedback mostly produces one stable state. Trap-prone feedback produces the highest share of low-high traps. Collapse-prone feedback more often admits a lower-boundary attracting state in the projected capacity interval. The audit is a mechanism check, not an empirical estimate.</figcaption>
     </figure>
 
     <p class="table-title">Stock-feedback correction threshold.</p>
