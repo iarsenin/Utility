@@ -1293,3 +1293,11 @@ language instead.
   - no horizontal overflow in browser QA.
 - Added visual QA screenshot:
   `results/figures/when_preferences_no_formula_abstract_qa.png`.
+
+## 2026-06-26 Title Update
+
+Changed the working paper title from `When Preferences Move Faster Than
+Equilibrium` to `When Preferences Decouple From Fitness`, because the old title
+suggested a generic speed comparison with equilibrium while the paper's core
+claim is a decoupling between induced subjective payoffs and material or
+fitness-relevant outcomes. The filename is unchanged for link continuity.

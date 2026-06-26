@@ -2,7 +2,7 @@
 
 ## Working Title
 
-When Preferences Move Faster Than Equilibrium: Endogenous Utility And
+When Preferences Decouple From Fitness: Endogenous Utility And
 Material-Capacity Feedback
 
 ## Central Claim

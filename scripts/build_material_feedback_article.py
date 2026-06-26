@@ -171,7 +171,7 @@ def build_article() -> str:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>When Preferences Move Faster Than Equilibrium</title>
+  <title>When Preferences Decouple From Fitness</title>
   <script>
     window.MathJax = {
       tex: {
@@ -542,7 +542,7 @@ def build_article() -> str:
 <body>
 <main>
   <header>
-    <h1>When Preferences Move Faster Than Equilibrium</h1>
+    <h1>When Preferences Decouple From Fitness</h1>
     <p class="subtitle">Endogenous utility, material-capacity feedback, and Nash equilibrium</p>
     <p class="meta"><strong>Working paper draft.</strong> Prepared for comment.</p>
     <p class="meta"><strong>JEL codes:</strong> C72, D01, D11, D83, D91, I12. <strong>Keywords:</strong> endogenous preferences, utility, Nash equilibrium, material capacity, social media, AI, addiction, loneliness, competition.</p>
