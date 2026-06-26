@@ -1373,3 +1373,53 @@ Completed three editing rounds:
   - no horizontal overflow.
 - Added visual QA screenshot:
   `results/figures/when_preferences_happy_medium_qa.png`.
+
+## 2026-06-26 Editorial Reset For Abstract And Top Third
+
+### Reason
+
+The previous abstract still read like compressed reviewer-proof language. It
+contained too many scope-management terms before the reader had a stable
+picture of the mechanism.
+
+### Implemented
+
+- Rewrote the abstract as a clean sequence:
+  - modern environments can change what feels worth choosing;
+  - today's choice can change tomorrow's material capacity;
+  - the loop has fast payoff formation, coherent choice, slow capacity change,
+    and competition under a named score;
+  - the minimal loop gives bridge, trap, and collapse-prone regimes;
+  - self-correction can fail when the signal only reports current movement;
+  - competition preserves capacity only when its score rewards capacity.
+- Reworked Sections 1-3 so the first third now carries the reader from:
+  AI companionship and loneliness, to betting and outrage examples, to the four
+  model objects, to the result list, to the mechanism.
+- Removed abstract-level jargon such as `zero-drift`, `one-capacity diagnostic`,
+  `current-drift`, and `lower-boundary attracting`.
+- Updated `docs/agent_objective_function.md` with an explicit abstract guardrail
+  against compressed theorem-management language.
+
+### Verification
+
+- `python3 scripts/build_material_feedback_article.py` passed.
+- `python3 -m compileall -q src scripts` passed.
+- `git diff --check` passed.
+- HTML integrity check passed:
+  - missing references: none;
+  - unused references: none;
+  - missing images: none;
+  - main displayed equations: 0;
+  - main theorem boxes: 0;
+  - template placeholders: 0;
+  - abstract formula delimiters: 0;
+  - blocked abstract phrases: none.
+- Browser visual QA through
+  `http://127.0.0.1:8782/paper/when_preferences_move_faster_than_equilibrium_v1.html`
+  passed:
+  - abstract contains no MathJax containers;
+  - blocked abstract phrases: none;
+  - no horizontal overflow;
+  - abstract-to-Section-1 handoff visible and readable.
+- Added visual QA screenshot:
+  `results/figures/when_preferences_editorial_reset_qa.png`.

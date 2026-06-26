@@ -28,6 +28,12 @@ environment presents, then show how that choice changes a slower material
 capacity. Move bibliographic machinery such as JEL codes and long keyword lists
 below the abstract. Do not put symbolic formulas in the abstract. Do not use the
 opening to announce the paper's structure; use it to make the mechanism visible.
+The abstract should avoid compressed theorem-management phrases such as
+`one-capacity diagnostic`, `zero-drift equation`, `current-drift signal`, or
+`lower-boundary attracting state`; put those in the body or appendix after the
+reader already understands the mechanism. In the abstract, state the result as:
+bridge, trap, collapse-prone, self-correction can fail, and competition selects
+the metric it rewards.
 
 The main text should use a Scientific American style: concrete, explanatory,
 and alive, but not stripped of technical content. Short sentences are useful
