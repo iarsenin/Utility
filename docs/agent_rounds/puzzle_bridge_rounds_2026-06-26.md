@@ -72,3 +72,72 @@ The framework does not need a revamp at this stage. The contribution is best fra
 3. Social feedback explains persistence in the specified threshold models.
 4. Selection identifies what later evidence can still distinguish after initial tastes are overwritten.
 5. Proxy alignment determines when preference formation repairs or worsens the named material evaluator.
+
+## Second Four-Round Chain: Nash/Selection Bridge Clarity
+
+Date: 2026-06-26
+
+Objective: Re-check whether the Nash/Darwin/selection framework actually helps answer the puzzles, rather than merely decorating them with formulas. The instruction was to stop and report if the framework did not carry the burden.
+
+### Round 1: Editor
+
+Verdict: Pass with revision.
+
+Finding: the bridge was present but needed to be stated earlier and more plainly. The article should admit examples only when they specify the preference-forming rule, induced payoff or best-response change, material evaluator, and evidence that would make fixed preferences sufficient.
+
+Edits made:
+
+- Rewrote the Section 1 admission test for applications.
+- Compressed the opening of Section 2 so the puzzle table is explicitly diagnostic rather than a loose list.
+- Reframed "What the math adds" as a bridge from puzzles to formal claims.
+
+### Round 2: Scientist
+
+Verdict: Go, with precision changes.
+
+Finding: the framework is viable, but the language had to avoid overclaiming. Nash is used after preferences settle; it is not a convergence claim. Selection indistinguishability holds for post-adjustment rules that observe only the induced game, material evaluator, and slow environment.
+
+Edits made:
+
+- Changed the abstract to say behavior is analyzed through Nash equilibrium after preferences settle.
+- Replaced broad "later behavior cannot tell" language with the formal observability condition.
+- Replaced "sharp predictions" with "concrete empirical tests."
+- Tightened the Nash invariance, social-feedback, and selection target rows.
+
+### Round 3: Narrator
+
+Verdict: Pass.
+
+Finding: the framework contribution is clear enough to keep editing, but some theorem-level wording was too heavy in the reader-facing path.
+
+Edits made:
+
+- Rewrote the abstract selection result in plainer language while retaining the observability restriction.
+- Replaced "boundary condition" with "evidence that would show that a fixed-preference account is enough."
+- Added a reversibility test to the appearance/lookmaxxing discussion.
+- Added a conditional diplomatic-drift prediction to the politics and international spillovers section.
+- Recast the social-feedback paragraph so it ends with the practical implication: test reversibility before choosing policy scale.
+
+### Round 4: Final Editor/Writer
+
+Verdict: Pass; no structural revamp needed.
+
+Finding: the paper now repeatedly separates induced utility, Nash consistency, material evaluation, and selection over preference-forming systems. Remaining issues were polish: reduce loaded phrasing and do not ask Nash to explain individual consistency where ordinary maximization is enough.
+
+Edits made:
+
+- Replaced "manufactured wants" with "induced wants."
+- Replaced "selection remains a survival method" with "selection remains a way to ask what persists."
+- Changed "taste-shaping systems" to "preference-forming systems."
+- Softened AI companion wording from "infinite patience" to "effectively unlimited patience."
+- Clarified the demographic result: ordinary maximization explains individual delay, and Nash applies where partner-market choices interact.
+- Softened the identity-loop warning and made the international prediction explicitly conditional.
+
+### Verification Notes
+
+- `git diff --check` passed.
+- Internal anchor check passed: 55 IDs, no duplicates, no missing hash links.
+- Equation containers: 15. Figure blocks: 4. Theorem blocks: 11.
+- Display-math delimiters are balanced.
+- HTML Tidy on this machine is old enough to misclassify HTML5 tags such as `main`, `header`, and `section`; the custom structural checks did not find unbalanced main tags.
+- Browser reload/screenshot was attempted through the in-app browser, but the browser security policy blocked visiting the localhost URL during this pass. No workaround was used.
