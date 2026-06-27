@@ -99,6 +99,8 @@ Latest render check:
 - `results/figures/article_definition_consolidation_2026-06-27.png` verifies
   the removal of repeated definition strips and glossary-like blocks from the
   opening render.
+- `results/figures/article_figure1_explanation_full_2026-06-27.png` verifies
+  the added main-text explanation and expanded caption for Figure 1.
 
 ## Active Next Steps
 

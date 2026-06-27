@@ -593,9 +593,11 @@ def build_article() -> str:
     <h3>Collapse</h3>
     <p>The audit also contains collapse-prone dynamics. In those parameter regions, higher damage and sensitivity often admit a lower-boundary attracting state, and some draws have no interior stable capacity state. In a betting case, this is the point where solvency is so damaged that ordinary budgeting no longer restores the previous option set. The formal claim is deliberately limited: the audit is a mechanism check, not an estimate of how often collapse occurs in the population.</p>
 
-    <figure>
+    <p>Figure 1 shows the simplest visual version of the claim. The horizontal axis is slow time. The vertical axis is normalized material capacity, with zero at the bottom and one at the top. The two paths labeled as the capacity-trap calibration use the same payoff-forming rule; only the starting capacity differs. The lower start settles into the low-capacity state, while the higher start rises to the high-capacity state. The repair path starts from the same low stock but changes the capacity law enough to cross the threshold. The self-correcting path shows a calibration in which the low trap is removed.</p>
+
+    <figure id="fig-material-paths">
       <img src="../results/figures/material_feedback_paths.svg" alt="Capacity paths from different starting values">
-      <figcaption>Same environment. Different starting stock. Below the threshold, capacity falls. Above it, capacity recovers. Repair can move the low starting point across the threshold.</figcaption>
+      <figcaption>How to read the threshold result. Capacity K is normalized between zero and one. Under the trap calibration, the low-start path remains low and the higher-start path recovers. A repair intervention can move the same low start across the threshold. A stronger self-correcting channel removes the low trap in this diagnostic.</figcaption>
     </figure>
 
     <div class="reader-result">
