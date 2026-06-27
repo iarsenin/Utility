@@ -33,6 +33,11 @@ environment presents, then show how that choice changes a slower material
 capacity. Technical terms may enter only after the reader can see what they are
 for.
 
+Define the core vocabulary once in the main text. Prefer a short prose handoff
+near the first examples over callout boxes or repeated definition areas. Later
+sections should use the vocabulary to advance the argument, not restart the
+setup.
+
 The abstract should state the result in plain language:
 
 - fast environments can change what feels worth choosing;

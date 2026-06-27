@@ -55,6 +55,10 @@ The main text leads with the puzzle and examples, then introduces the mechanism.
 The appendix carries formulas, propositions, proofs, empirical equations, and
 diagnostic tables.
 
+Core terms should be introduced once near the first examples. Avoid repeated
+definition strips, glossary boxes, or lever lists in the main text; later
+sections should use the terms to explain results and evidence.
+
 The abstract should stay readable. Avoid compressed theorem-management phrases
 there. Use plain statements such as bridge, trap, collapse-prone,
 self-correction can fail, and competition selects what its score rewards.
@@ -92,6 +96,9 @@ Latest render check:
 - `results/figures/article_why_now_abstract_2026-06-26.png` and
   `results/figures/article_why_now_intro_2026-06-26.png` verify the new
   acceleration/time-scale argument in the abstract and opening section.
+- `results/figures/article_definition_consolidation_2026-06-27.png` verifies
+  the removal of repeated definition strips and glossary-like blocks from the
+  opening render.
 
 ## Active Next Steps
 

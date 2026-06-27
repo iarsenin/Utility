@@ -69,5 +69,10 @@ Use a serious popular-science register: concrete and readable, but not
 dumbed down. No formulas in the abstract. No displayed formulas or theorem
 boxes in the main text. Keep formal details in the appendices.
 
+Introduce the core vocabulary once, in prose, near the first worked examples.
+Do not add repeated definition strips, glossary boxes, or lever lists unless a
+new concept cannot be understood from the existing setup. After the vocabulary
+is introduced, use it to make claims rather than restarting the model.
+
 Every reader-facing HTML update must be visually checked in the browser and
 recorded with a screenshot.
