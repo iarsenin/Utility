@@ -560,6 +560,7 @@ def build_article() -> str:
     <p>The problem is dynamic. Today's choice can change tomorrow's capacity: social confidence, solvency, health, trust, learning, or the ability to verify information. The loop has four steps. A fast environment forms subjective payoffs; agents choose coherently under those payoffs; the choice changes a slower material capacity; and competing systems spread according to whatever score the environment rewards.</p>
     <p>A minimal version of this loop has three main regimes. In a bridge, the substitute lowers immediate pressure while rebuilding the capacity needed to use ordinary options. In a trap, the substitute is most appealing when capacity is already weak; using it then crowds out the practice, savings, trust, or exposure that would rebuild capacity, so the low-capacity state can persist. In a collapse-prone case, the damage is strong enough to pull capacity toward a lower boundary. None of these cases requires irrational choice. The agents may be optimizing perfectly under the payoff criterion the environment has induced.</p>
     <p>The sharper result concerns self-correction. A signal that merely says "things are getting better or worse right now" can change the speed of adjustment without changing the long-run states of the minimal capacity model. Once a trap is at rest, that signal goes quiet. Long-run selection may eventually punish capacity-draining systems, but the short run can still matter: capacity can be damaged before the Darwinian feedback arrives, and competition may reward engagement rather than material viability. Escaping the trap requires a force that changes the capacity path itself, or competition that favors a capacity-preserving rule over a capacity-draining one.</p>
+    <p>One historical source of such a force is governance: collective rules that change the payoff or capacity path. It is not treated as advice or as an outside rescue. In the model, governance matters only when rules restrict exposure, change product design, raise repair, enforce constraints, or alter what competition rewards, and when those changes outrun evasion, delay, capture, or displacement.</p>
     <p>The empirical test is therefore not a general complaint about technology or tastes. It asks four concrete questions: what exposure changes the payoff, what substitute behavior follows, what material capacity changes next, and what competitive score determines which rule spreads.</p>
   </section>
 
@@ -593,6 +594,8 @@ def build_article() -> str:
 
     <p>The first object is the payoff-forming exposure: the feed, interface, peer norm, institution, or AI system that changes what feels rewarding. The second is the substitute behavior. The third is the material capacity changed by that behavior. The fourth is the competitive score that determines which payoff-forming rule spreads. A platform may reward retention. A clinical trial may reward restored social life. A political market may reward attention. A household may care about solvency. The same local choice can be rational under each score, while the long-run capacity path differs.</p>
 
+    <p>Government enters after those objects are named. It is the organized channel through which a population tries to express common interest, with all the usual imperfections of delay, enforcement limits, capture, and disagreement. In this model, regulation matters when it changes one of the path variables: exposure, damage, repair, enforcement, or the competitive score. A rule that only announces concern is an alarm. A rule that changes the capacity path is a force in the system.</p>
+
     <p>The model therefore takes subjective payoffs seriously. They are not treated as fake or as mere error. The question is sharper: when payoffs are formed quickly and capacity changes slowly, which systems build future capacity, which systems trap it, and which systems survive competition?</p>
 
     <div class="result-list">
@@ -620,6 +623,7 @@ def build_article() -> str:
       <div><strong>Choice</strong><span>Agents optimize inside the induced payoff; in strategic settings this is the Nash step.</span></div>
       <div><strong>Capacity</strong><span>The behavior changes a slower stock such as solvency, health, social skill, learning, or trust.</span></div>
       <div><strong>Selection</strong><span>Rules expand or shrink according to the competitive score that the environment rewards.</span></div>
+      <div><strong>Governance</strong><span>Collective rules may change exposure, repair, damage, enforcement, or the score itself.</span></div>
     </div>
 
     <p>The appendix formalizes the simplest version with one normalized capacity stock. Capacity makes an outside option usable. If social skill is high, human contact is less costly. If solvency is high, risky credit is less tempting. If trust is high, verification is easier. Substitute use can erode that capacity. Repair may fail near the bottom because the capacity needed for repair is already missing.</p>
@@ -629,6 +633,8 @@ def build_article() -> str:
     <p>Nash equilibrium enters only at the choice step. After the payoff-forming rule creates subjective payoffs, Nash asks whether each actor is choosing coherently given those payoffs and the others' choices. That coherence is important, but it is not a welfare certificate. A Nash-consistent induced game can still drain the capacity that would make other future choices feasible.</p>
 
     <p>Selection enters after the competitive score is named. A rule may spread because it preserves capacity. It may spread because it captures attention. It may spread because it earns revenue, reproduces biologically, or survives inside an institution. These scores can agree, but they need not. The model separates relative victory from absolute material survival.</p>
+
+    <p>Government is a special selection environment because it can rewrite rules for many actors at once. Crime law, tobacco control, gambling limits, product safety, advertising rules, and platform regulation all work this way. They do not need to erase the underlying subjective payoff. They can change the probability of punishment, the availability of the substitute, the design of the product, the repair channel, or the score by which firms survive. The same channel can also fail if the rule is slow, unenforced, captured, or easily evaded.</p>
   </section>
 
   <section>
@@ -648,7 +654,7 @@ def build_article() -> str:
     </figure>
 
     <div class="reader-result">
-      <strong>What changes the prediction.</strong> In this model, a change has predictive force when it changes the capacity path: it lowers damage, raises repair, moves the state across the threshold, removes the low trap, or changes what competition rewards.
+      <strong>What changes the prediction.</strong> In this model, a change has predictive force when it changes the capacity path: it lowers damage, raises repair, moves the state across the threshold, removes the low trap, changes what competition rewards, or gives a governance rule enough enforcement to do one of those things.
     </div>
 
     <h3>Does Reality Correct The System Automatically?</h3>
@@ -671,7 +677,7 @@ def build_article() -> str:
   </section>
 
   <section>
-    <h2>4. Nash Equilibrium And Competition</h2>
+    <h2>4. Nash Equilibrium, Competition, And Governance</h2>
     <p>Nash has a narrower role here than welfare analysis sometimes gives it. After the rule forms payoffs, Nash asks whether each player is choosing coherently given those payoffs and the others' choices. The equilibrium can be coherent while capacity falls.</p>
 
     <p>Competition decides which payoff-forming systems spread only after the score is specified. Relative share is governed by the competitive score. Aggregate survival is governed by material growth. If the score rewards engagement while material growth tracks solvency, health, trust, or social capacity, a rule can win relative share while the carrier population, capital stock, or institution shrinks.</p>
@@ -686,7 +692,45 @@ def build_article() -> str:
   </section>
 
   <section>
-    <h2>5. A Full Example: AI Companions And Loneliness</h2>
+    <h2>5. Government As An Endogenous Feedback Channel</h2>
+    <p>Government has often been a historical mechanism for turning private payoff loops into public rules. <a href="#ref-becker-crime">Criminal law</a> changes the payoff of theft or violence by adding detection and punishment. <a href="#ref-who-tobacco">Tobacco rules</a> change exposure, price, and product design. Gambling rules can change advertising, deposit friction, access, and self-exclusion. <a href="#ref-eu-dsa">Platform rules</a> can change recommender incentives, transparency, and design obligations. None of this requires treating government as outside the model.</p>
+
+    <p>In the model, government is the institution through which expressed collective interest is converted into a governance rule. That conversion is imperfect. The public signal may measure outrage rather than capacity. The political process may be delayed. The regulated industry may capture the rule. Courts or agencies may lack enforcement capacity. Users and firms may move to a substitute channel. These are not footnotes. They are the variables that determine whether regulation changes the path.</p>
+
+    <div class="result-list">
+      <h3>Governance Levers</h3>
+      <ol>
+        <li><strong>Exposure.</strong> Age gates, advertising limits, recommender rules, taxes, and friction can reduce the inducement entering payoff formation.</li>
+        <li><strong>Damage.</strong> Product standards, liability, speed limits, and design rules can reduce the capacity loss caused by each use.</li>
+        <li><strong>Repair.</strong> Treatment, education, public infrastructure, and social supports can raise the capacity-rebuilding term.</li>
+        <li><strong>Enforcement.</strong> Detection, penalties, licensing, and jurisdiction can change the feasible action set or expected payoff.</li>
+        <li><strong>Selection score.</strong> Procurement, liability, reporting duties, and institutional funding can make capacity preservation count in competition.</li>
+      </ol>
+    </div>
+
+    <p>The model therefore predicts neither automatic success nor automatic failure. Tobacco regulation is the clean mapping case because it targets several path variables at once: price, advertising, warnings, smoke-free environments, product rules, and cessation support. A <a href="#ref-miron-prohibition">prohibition-style rule</a> can reduce use while also raising evasion, illegal supply, corruption, or enforcement burden. Digital-services regulation is a live test of the same channel: the rule may matter if it changes ranking, risk assessment, compliance, and firm incentives; it will be mostly symbolic if engagement remains the operative score.</p>
+
+    <p>Observable governments differ in this channel. The specific intervention must be measured in the domain: tax, ban, ranking obligation, product standard, self-exclusion system, licensing rule, public investment, or enforcement intensity. Measures such as <a href="#ref-wgi">government effectiveness, regulatory quality, rule of law, and control of corruption</a>, plus <a href="#ref-oecd-reg-policy">regulatory impact assessment, stakeholder engagement, risk-based enforcement, and ex-post review</a>, do not identify the intervention. They proxy the state's ability to make an intervention real. Omitting this channel leaves out one of the main historical ways societies have changed payoff and capacity paths.</p>
+
+    <p>The empirical question is precise. After a governance rule appears, does exposure fall, does damage per use fall, does repair rise, does enforcement change behavior, or does the competitive score shift toward capacity? Is the movement larger where implementation quality is higher? If none of these move, government has entered the public conversation but not the reduced dynamic. If the combined movement is strong enough, the low-capacity trap can disappear or the system can cross the threshold.</p>
+
+    <p class="table-title">Governance as measured path change.</p>
+    <table>
+      <thead>
+        <tr><th>Lever</th><th>Model object</th><th>Observable measure</th><th>Example</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Exposure</td><td>\(z\)</td><td>Ad exposure, recommender reach, price, age-gated availability</td><td>Tobacco advertising limits, gambling ad limits, app-store restrictions</td></tr>
+        <tr><td>Damage</td><td>\(L\)</td><td>Harm per use, toxicity, debt/default, health loss, unsafe design features</td><td>Product standards, liability, friction, safer defaults</td></tr>
+        <tr><td>Repair</td><td>\(\alpha,r\)</td><td>Treatment access, cessation use, education, recovery capacity</td><td>Cessation support, counseling, public-health or school capacity</td></tr>
+        <tr><td>Enforcement</td><td>action set or payoff</td><td>Clearance, penalties, compliance, licensing, court delay, inspection intensity</td><td>Crime enforcement, gambling licensing, platform compliance audits</td></tr>
+        <tr><td>Selection score</td><td>\(S_\ell\)</td><td>Contracts, reimbursement criteria, procurement rules, liability exposure, public compliance reports, ad libraries, risk assessments, inferred firm priorities</td><td>Ranking duties, clinical reimbursement, public procurement, liability</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>6. A Full Example: AI Companions And Loneliness</h2>
     <p>An illustrative case is AI companionship. The <a href="#ref-who-loneliness">WHO Commission on Social Connection</a> and the <a href="#ref-surgeon-general">US Surgeon General</a> treat loneliness as a health and community problem. <a href="#ref-hbs-ai">De Freitas et al.</a>, <a href="#ref-common-sense-ai">Common Sense Media</a>, and <a href="#ref-ai-companions">Malfacini</a> document the emerging AI-companion setting.</p>
 
     <p>Suppose a companion is always available, responsive, nonjudgmental, and tuned by a platform. Exposure is the companion's availability and emotional fluency. The subjective payoff is the value of synthetic interaction compared with costly human contact. The substitute is time spent in the synthetic relationship instead of attempts at ordinary social contact.</p>
@@ -701,7 +745,7 @@ def build_article() -> str:
   </section>
 
   <section>
-    <h2>6. Candidate Domains</h2>
+    <h2>7. Candidate Domains</h2>
     <p>The same mechanism can be tested elsewhere. The table is a research menu: each row maps an exposure, substitute, measurable capacity, and competitive score.</p>
 
     <p>Sports betting shows the competition point. Handle, retention, and in-game engagement can rise while household solvency falls. A fixed-preference story describes gambling demand under stable payoffs. The feedback story tests whether the interface changes the payoff of risk and whether repeated play changes future solvency.</p>
@@ -735,10 +779,10 @@ def build_article() -> str:
   </section>
 
   <section>
-    <h2>7. Empirical Strategy</h2>
+    <h2>8. Empirical Strategy</h2>
     <p>The model becomes empirical when the capacity is named and measured. For loneliness, measure friendship, social anxiety, and offline practice. For betting, measure savings, credit scores, missed payments, and debt service. For food, measure metabolic markers and appetite regulation after exposure changes. For politics, measure trust, correction acceptance, and cross-cutting exposure.</p>
 
-    <p>The test has three links: exposure changes what feels rewarding; the changed payoff alters behavior; the behavior changes later capacity. Without all three links, the case is weaker than the model.</p>
+    <p>The test has three links: exposure changes what feels rewarding; the changed payoff alters behavior; the behavior changes later capacity. Without all three links, the case is weaker than the model. When government enters, measure the rule separately from implementation quality. The rule is the domain-specific intervention: timing, jurisdiction, tax, ban, standard, enforcement intensity, or liability. Implementation quality is the administrative and legal capacity that makes the rule real. A strong empirical design tests whether the rule changed \(z\), \(L\), repair, enforcement, or \(S\), and whether that change was larger where implementation quality was higher, while allowing for the fact that high-quality governments may also differ in trends, culture, and selection into regulation.</p>
 
     <p>The panel test separates feedback from stable differences across people or places. The required equations link exposure and capacity to later payoff, behavior and payoff to later capacity, and payoff to substitute use. Appendix D writes them explicitly.</p>
 
@@ -748,30 +792,34 @@ def build_article() -> str:
   </section>
 
   <section>
-    <h2>8. Relation To Existing Economics</h2>
+    <h2>9. Relation To Existing Economics</h2>
     <p><a href="#ref-stigler-becker">Stigler and Becker</a> move apparent taste changes into shadow prices and consumption capital. <a href="#ref-grossman">Grossman</a> models health as a durable capital stock. <a href="#ref-becker-murphy">Becker and Murphy</a> model addiction through intertemporal complementarity. <a href="#ref-bowles">Bowles</a>, <a href="#ref-bisin">Bisin and Verdier</a>, and <a href="#ref-bernheim-chosen">Bernheim et al.</a> put preference formation inside institutions, transmission, or chosen worldviews.</p>
 
     <p><a href="#ref-ely-yilankaya">Ely and Yilankaya</a>, <a href="#ref-dekel">Dekel, Ely, and Yilankaya</a>, and <a href="#ref-sandholm">Sandholm</a> separate subjective preferences, equilibrium play, and evolutionary selection. <a href="#ref-koszegi-rabin">Koszegi and Rabin</a> and <a href="#ref-genicot-ray">Genicot and Ray</a> make reference points and aspirations endogenous. <a href="#ref-brock-durlauf">Brock and Durlauf</a> and <a href="#ref-arthur">Arthur</a> show how social interactions and increasing returns create multiple states. Recommender-system work such as <a href="#ref-jiang">Jiang et al.</a> and <a href="#ref-kleinberg">Kleinberg, Mullainathan, and Raghavan</a> supplies the modern preference-forming environment.</p>
+
+    <p>The governance channel connects the model to the economic theory of enforcement and regulation. <a href="#ref-becker-crime">Becker's crime model</a> treats law as a change in expected payoff through detection and punishment. <a href="#ref-stigler-regulation">Stigler</a> and <a href="#ref-becker-pressure">Becker's pressure-group model</a> warn that regulation is endogenous to political competition and can be captured. <a href="#ref-wgi">World Bank governance indicators</a> and <a href="#ref-oecd-reg-policy">OECD regulatory-policy measures</a> provide observable proxies for state capacity, regulatory quality, and rule implementation.</p>
 
     <p>The contribution is the order of events. Payoffs form quickly. Choice follows, with Nash equilibrium in strategic cases. Behavior then changes slower capacity. Finally, payoff-forming rules compete under an explicit score. This order can describe both harm and repair while leaving subjective payoffs operative and competition metric-dependent.</p>
   </section>
 
   <section>
-    <h2>9. What The Result Distinguishes</h2>
+    <h2>10. What The Result Distinguishes</h2>
     <p>The model compares mechanisms by how they change the path. A change can lower inducement, lower sensitivity, reduce damage, strengthen repair, make capacity reduce the substitute's pull, move the state across a threshold, or change the competitive score. These are model comparisons, not moral categories.</p>
 
     <p>Technology is not classified by its surface form. An AI companion, recommender, medicine, school, workplace, or political institution is a bridge when it leads back into durable capacity. It is a sink when it wins the local payoff game while reducing the capacity that would make alternatives feasible later. Competition can reward either form.</p>
 
     <p>The model also separates weak optimism from changed dynamics. Signals based only on current improvement or decline below a threshold need not move the interior steady states in the one-capacity diagnostic. The low-capacity equilibrium can absorb the signal into the same payoff that created the trap. In this model, correction occurs through a changed force, a threshold crossing, or competition that moves mass toward a more viable rule.</p>
+
+    <p>Regulation is one such changed force only when it changes the reduced dynamics. A warning campaign that leaves exposure, damage, repair, enforcement, and selection unchanged is an alarm. A rule that lowers inducement, reduces damage, builds repair capacity, raises detection, or changes the competitive score is part of the mechanism.</p>
   </section>
 
   <section>
-    <h2>10. Conclusion</h2>
+    <h2>11. Conclusion</h2>
     <p>Utility can be endogenous without being unreal. People optimize the payoff criterion they have, and modern preference-forming systems can change that criterion quickly. The economic problem is that material capacity often moves more slowly and feeds back into what will feel rewarding next.</p>
 
     <p>Fast subjective payoff formation plus slow capacity feedback yields bridge, threshold-trap, and collapse-prone dynamics in the scalar diagnostics. A signal tied only to current improvement or decline does not move interior steady-state capacities in the scalar diagnostic. A sufficiently strong level-of-capacity channel can remove the low trap in the diagnostic calibration. Competition can shift composition toward the capacity-preserving rule when the competitive score ranks that rule above the sink; the material-viability diagnostic is one aligned case.</p>
 
-    <p>Nash equilibrium pins down strategic consistency after subjective payoffs are formed. Selection pins down which payoff-forming systems spread after the competitive score and material growth rate are named. The missing object in many fixed-preference accounts is the loop between fast payoffs and slow capacity. That loop can build capacity. It can also drain it.</p>
+    <p>Nash equilibrium pins down strategic consistency after subjective payoffs are formed. Selection pins down which payoff-forming systems spread after the competitive score and material growth rate are named. Government regulation is another endogenous feedback channel: it can change the path, but only through concrete instruments that affect exposure, damage, repair, enforcement, or selection. The missing object in many fixed-preference accounts is the loop between fast payoffs and slow capacity. That loop can build capacity. It can also drain it.</p>
   </section>
 
   <section>
@@ -859,6 +907,46 @@ def build_article() -> str:
       <p>Consider two rules, \(A\) and \(B\), with competitive scores \(S_A\) and \(S_B\). If \(\omega>0\) and \(S_A>S_B\) on an interval, then any interior share \(s_A(0)\in(0,1)\) rises monotonically on that interval; if the score ordering persists indefinitely, \(s_A\) converges to one. If \(S_A>S_B\) but \(g_A<g_B\), as can happen when \(S\) is engagement, then relative victory need not imply positive absolute growth in the \(N\) equation.</p>
     </div>
     <p class="proof"><strong>Proof.</strong> In the two-rule case, \(\dot s_A=\omega s_A(1-s_A)(S_A-S_B)\). The sign is positive for interior \(s_A\) exactly when \(S_A>S_B\), yielding monotone convergence to one. The absolute mass equation uses \(g\), not \(S\); if the relative competitive score differs from material growth, relative victory need not imply positive material growth.</p>
+
+    <h3>A.5 Endogenous Governance</h3>
+    <p>Let \(R\) denote the domain-specific governance or regulatory instrument. It may include a tax, ban, enforcement intensity, product standard, public investment, liability rule, ranking obligation, or licensing rule. Let \(Q\) denote implementation quality: administrative capacity, rule of law, regulatory quality, corruption control, jurisdiction, and political aggregation. Unless a separate law of motion is specified, \(Q\) is an implementation-quality shifter rather than a dynamic state. The instrument is not assumed to be optimal or exogenous. It responds to a measured collective signal \(M(K,x,z,E)\) and to \(Q\).</p>
+
+    <div class="equation">
+      <span class="label">Governance adjustment</span>
+      \[
+        \tau_R\dot R=\mathcal P\{M(K,x,z,E),Q\}-R,\qquad \tau_R>0
+      \]
+    </div>
+
+    <p>The map \(\mathcal P\) is the expressed collective policy target. It can be aligned with material capacity, captured by a regulated industry, driven by salience rather than capacity, or limited by enforcement constraints. Once \(R\) is endogenous, the minimal dynamic is the coupled system \((\dot K,\dot R)\). The scalar comparative static below describes the channel through which \(R\) acts, not a sufficient condition for policy success by itself.</p>
+
+    <div class="equation">
+      <span class="label">Governance levers in the scalar law</span>
+      \[
+        z(R)=z_0-a_zR,\qquad
+        L(R)=L_0-a_LR,\qquad
+        \alpha(R)=\alpha_0+a_\alpha R,\qquad
+        S_\ell(R)=S_\ell^0+a_SR\,V_\ell
+      \]
+    </div>
+
+    <p>Here \(a_z\) reduces inducement or exposure, \(a_L\) reduces damage per use, \(a_\alpha\) raises repair, and \(a_S\) changes the competitive score in favor of rules with capacity value \(V_\ell\). These coefficients can be zero or negative in a failed or captured regime.</p>
+
+    <div class="equation">
+      <span class="label">Path effect of governance</span>
+      \[
+        \frac{\partial\Phi}{\partial R}
+        =
+        a_\alpha+a_Lp(K,z(R))
+        +L(R)\beta a_zp(K,z(R))\{1-p(K,z(R))\}.
+      \]
+    </div>
+
+    <div class="theorem" data-kind="Proposition">
+      <span class="theorem-title">Effective governance changes the reduced path only through model primitives</span>
+      <p>In the scalar capacity model, a governance rule that leaves \(z\), \(L\), \(\alpha\), the feasible action set, and \(S_\ell\) unchanged leaves the reduced capacity path and the selection equation unchanged. Holding \(R\) fixed, a higher \(R\) raises capacity drift at state \(K\) exactly when \(\partial\Phi/\partial R>0\). Endogenous governance changes the realized outcome only if the induced path of \(R(t)\) is large and fast enough to move \(K(t)\) across the relevant basin boundary before delay, evasion, capture, or displacement neutralizes the rule. If governance changes only a current-drift alarm that vanishes at rest, the alarm-limitation result applies.</p>
+    </div>
+    <p class="proof"><strong>Proof.</strong> The scalar path is determined by \(\dot K=\Phi(K;R)\) and the selection layer by \(S_\ell(R)\). If the listed primitives and scores are unchanged, the equations are unchanged. Holding \(R\) fixed, differentiating \(\Phi\) gives the displayed sign condition for drift at \(K\). With endogenous \(R(t)\), escape from a low basin is a path statement: \(R(t)\) must move the drift enough, early enough, along the realized trajectory. A current-drift alarm is zero at a steady state, so it does not by itself move the steady-state root pattern.</p>
   </section>
 
   <section>
@@ -919,7 +1007,7 @@ def build_article() -> str:
       <span class="theorem-title">Current deterioration does not move interior steady states</span>
       <p>For the scalar logit model above, take \(\chi,L,\beta\ge0\). Then for each interior \(K\), the implicit equation for \(p_\chi(K)\) has a unique solution, and adding the current-drift signal \(\chi\Phi_\chi(K)\) leaves the set of interior steady-state capacities unchanged. It can change local slopes and adjustment speeds, but it cannot remove the low-capacity steady state by itself.</p>
     </div>
-    <p class="proof"><strong>Proof.</strong> For fixed \(K\), the left side minus the right side of the implicit share equation is \(p-\sigma\{\beta[q+z-\rho K+\chi(R(K)-Lp)]\}\), where \(R(K)=\alpha+rK^2(1-K)-dK\). Its derivative with respect to \(p\) is \(1+\chi L\beta\sigma(1-\sigma)>0\), so the solution is unique. If \(K^\star\) is an interior steady state under the signal model, then \(\Phi_\chi(K^\star)=0\), so the signal term in the logit field is zero at \(K^\star\). The fixed-point equation for \(p_\chi(K^\star)\) is therefore the original logit equation. Hence \(K^\star\) is a root of the original scalar drift. The reverse implication is identical: at an original interior root the drift signal is zero, so the signal-augmented and original logit equations coincide.</p>
+    <p class="proof"><strong>Proof.</strong> For fixed \(K\), the left side minus the right side of the implicit share equation is \(p-\sigma\{\beta[q+z-\rho K+\chi(B(K)-Lp)]\}\), where \(B(K)=\alpha+rK^2(1-K)-dK\). Its derivative with respect to \(p\) is \(1+\chi L\beta\sigma(1-\sigma)>0\), so the solution is unique. If \(K^\star\) is an interior steady state under the signal model, then \(\Phi_\chi(K^\star)=0\), so the signal term in the logit field is zero at \(K^\star\). The fixed-point equation for \(p_\chi(K^\star)\) is therefore the original logit equation. Hence \(K^\star\) is a root of the original scalar drift. The reverse implication is identical: at an original interior root the drift signal is zero, so the signal-augmented and original logit equations coincide.</p>
 
     <div class="theorem" data-kind="Proposition">
       <span class="theorem-title">Two-basin capacity trap</span>
@@ -1012,9 +1100,12 @@ def build_article() -> str:
     <p id="ref-allcott-social">Allcott, Hunt, Luca Braghieri, Sarah Eichmeyer, and Matthew Gentzkow. "The Welfare Effects of Social Media." <em>American Economic Review</em> 110(3), 2020, 629-676. <a href="https://www.aeaweb.org/articles?id=10.1257/aer.20190658">Record</a>.</p>
     <p id="ref-arthur">Arthur, W. Brian. "Competing Technologies, Increasing Returns, and Lock-In by Historical Events." <em>Economic Journal</em> 99(394), 1989, 116-131. <a href="https://www.jstor.org/stable/2234208">Record</a>.</p>
     <p id="ref-asps-2024">American Society of Plastic Surgeons. "Plastic Surgery Statistics Report." 2024. <a href="https://www.plasticsurgery.org/plastic-surgery-statistics">Report</a>.</p>
+    <p id="ref-becker-crime">Becker, Gary S. "Crime and Punishment: An Economic Approach." <em>Journal of Political Economy</em> 76(2), 1968, 169-217. <a href="https://www.nber.org/chapters/c3625">Record</a>.</p>
     <p id="ref-becker-murphy">Becker, Gary S., and Kevin M. Murphy. "A Theory of Rational Addiction." <em>Journal of Political Economy</em> 96(4), 1988, 675-700. <a href="https://www.journals.uchicago.edu/doi/10.1086/261558">Record</a>.</p>
+    <p id="ref-becker-pressure">Becker, Gary S. "A Theory of Competition Among Pressure Groups for Political Influence." <em>Quarterly Journal of Economics</em> 98(3), 1983, 371-400. <a href="https://www.jstor.org/stable/1886017">Record</a>.</p>
     <p id="ref-bernheim-chosen">Bernheim, B. Douglas, Luca Braghieri, Alejandro Martinez-Marquina, and David Zuckerman. "A Theory of Chosen Preferences." <em>American Economic Review</em> 111(2), 2021, 720-754. <a href="https://www.aeaweb.org/articles?id=10.1257/aer.20190390">Record</a>.</p>
     <p id="ref-bisin">Bisin, Alberto, and Thierry Verdier. "The Economics of Cultural Transmission and the Dynamics of Preferences." <em>Journal of Economic Theory</em> 97(2), 2001, 298-319. <a href="https://doi.org/10.1006/jeth.2000.2678">Record</a>.</p>
+    <p id="ref-bjs">Bureau of Justice Statistics. "Data and Product Finder." 2026. <a href="https://bjs.ojp.gov/data">Data portal</a>.</p>
     <p id="ref-bowles">Bowles, Samuel. "Endogenous Preferences: The Cultural Consequences of Markets and Other Economic Institutions." <em>Journal of Economic Literature</em> 36(1), 1998, 75-111. <a href="https://ideas.repec.org/a/aea/jeclit/v36y1998i1p75-111.html">Record</a>.</p>
     <p id="ref-braghieri-social">Braghieri, Luca, Ro'ee Levy, and Alexey Makarin. "Social Media and Mental Health." <em>American Economic Review</em> 112(11), 2022, 3660-3693. <a href="https://www.aeaweb.org/articles?id=10.1257/aer.20211218">Record</a>.</p>
     <p id="ref-brock-durlauf">Brock, William A., and Steven N. Durlauf. "Discrete Choice with Social Interactions." <em>Review of Economic Studies</em> 68(2), 2001, 235-260. <a href="https://academic.oup.com/restud/article-abstract/68/2/235/1588432">Record</a>.</p>
@@ -1022,6 +1113,7 @@ def build_article() -> str:
     <p id="ref-cdc-yrbs">Centers for Disease Control and Prevention. "Youth Risk Behavior Survey Data Summary &amp; Trends Report: 2013-2023." 2024. <a href="https://www.cdc.gov/yrbs/dstr/pdf/YRBS-2023-Data-Summary-Trend-Report.pdf">PDF</a>.</p>
     <p id="ref-common-sense-ai">Common Sense Media. "Talk, Trust, and Trade-Offs: How and Why Teens Use AI Companions." 2025. <a href="https://www.commonsensemedia.org/research/talk-trust-and-trade-offs-how-and-why-teens-use-ai-companions">Report</a>.</p>
     <p id="ref-dekel">Dekel, Eddie, Jeffrey C. Ely, and Okan Yilankaya. "Evolution of Preferences." <em>Review of Economic Studies</em> 74(3), 2007, 685-704. <a href="https://academic.oup.com/restud/article/74/3/685/1599139">Record</a>.</p>
+    <p id="ref-eu-dsa">European Commission. "The Digital Services Act Package." 2026. <a href="https://digital-strategy.ec.europa.eu/en/policies/digital-services-act-package">Policy page</a>.</p>
     <p id="ref-ely-yilankaya">Ely, Jeffrey C., and Okan Yilankaya. "Nash Equilibrium and the Evolution of Preferences." <em>Journal of Economic Theory</em> 97(2), 2001, 255-272. <a href="https://ideas.repec.org/a/eee/jetheo/v97y2001i2p255-272.html">Record</a>.</p>
     <p id="ref-fenichel">Fenichel, Neil. "Geometric Singular Perturbation Theory for Ordinary Differential Equations." <em>Journal of Differential Equations</em> 31, 1979, 53-98. <a href="https://doi.org/10.1016/0022-0396(79)90152-9">Record</a>.</p>
     <p id="ref-gallup-institutions">Gallup. "Confidence in Institutions Mostly Flat, Police Highest." 2025. <a href="https://news.gallup.com/poll/647303/confidence-institutions-mostly-flat-police.aspx">Report</a>.</p>
@@ -1034,16 +1126,21 @@ def build_article() -> str:
     <p id="ref-kleinberg">Kleinberg, Jon, Sendhil Mullainathan, and Manish Raghavan. "The Challenge of Understanding What Users Want: Inconsistent Preferences and Engagement Optimization." <em>Management Science</em> 70(9), 2024, 6336-6355. <a href="https://pubsonline.informs.org/doi/10.1287/mnsc.2022.03683">Record</a>.</p>
     <p id="ref-koszegi-rabin">Koszegi, Botond, and Matthew Rabin. "A Model of Reference-Dependent Preferences." <em>Quarterly Journal of Economics</em> 121(4), 2006, 1133-1165. <a href="https://academic.oup.com/qje/article/121/4/1133/1935100">Record</a>.</p>
     <p id="ref-lachaab">Lachaab, Mohamed, Asim Ansari, Kamel Jedidi, and Abdelwahed Trabelsi. "Modeling Preference Evolution in Discrete Choice Models: A Bayesian State-Space Approach." <em>Quantitative Marketing and Economics</em> 4, 2006, 57-81. <a href="https://doi.org/10.1007/s11129-006-6559-x">Record</a>.</p>
+    <p id="ref-miron-prohibition">Miron, Jeffrey A., and Jeffrey Zwiebel. "Alcohol Consumption During Prohibition." <em>American Economic Review</em> 81(2), 1991, 242-247. <a href="https://www.jstor.org/stable/2006861">Record</a>.</p>
     <p id="ref-nber-sports-betting">Baker, Scott R., Justin Balthrop, Mark J. Johnson, Jason D. Kotter, and Kevin Pisciotta. "Gambling Away Stability: Sports Betting's Impact on Vulnerable Households." NBER Working Paper 33108, 2024. <a href="https://www.nber.org/papers/w33108">Record</a>.</p>
+    <p id="ref-oecd-reg-policy">OECD. <em>OECD Regulatory Policy Outlook 2025</em>. OECD Publishing, 2025. <a href="https://www.oecd.org/en/publications/oecd-regulatory-policy-outlook-2025_56b60e39-en.html">Report</a>.</p>
     <p id="ref-pew-news-influencers">Pew Research Center. "America's News Influencers." 2024. <a href="https://www.pewresearch.org/journalism/2024/11/18/americas-news-influencers/">Report</a>.</p>
     <p id="ref-pew-trust">Pew Charitable Trusts. "Americans' Deepening Mistrust of Institutions." 2024. <a href="https://www.pew.org/en/trend/archive/fall-2024/americans-deepening-mistrust-of-institutions">Report</a>.</p>
     <p id="ref-pnas-divisive">PNAS Nexus. "Ranking Social Media Feeds by Engagement Can Amplify Divisive Content." 2025. <a href="https://academic.oup.com/pnasnexus/article/4/3/pgaf062/8052060">Record</a>.</p>
     <p id="ref-sandholm">Sandholm, William H. "Preference Evolution, Two-Speed Dynamics, and Rapid Social Change." <em>Review of Economic Dynamics</em> 4(3), 2001, 637-679. <a href="https://doi.org/10.1006/redy.2001.0128">Record</a>.</p>
     <p id="ref-stigler-becker">Stigler, George J., and Gary S. Becker. "De Gustibus Non Est Disputandum." <em>American Economic Review</em> 67(2), 1977, 76-90. <a href="https://econpapers.repec.org/RePEc:aea:aecrev:v:67:y:1977:i:2:p:76-90">Record</a>.</p>
+    <p id="ref-stigler-regulation">Stigler, George J. "The Theory of Economic Regulation." <em>Bell Journal of Economics and Management Science</em> 2(1), 1971, 3-21. <a href="https://www.jstor.org/stable/3003160">Record</a>.</p>
     <p id="ref-surgeon-general">Office of the Surgeon General. "Our Epidemic of Loneliness and Isolation: The U.S. Surgeon General's Advisory on the Healing Effects of Social Connection and Community." US Department of Health and Human Services, 2023. <a href="https://www.ncbi.nlm.nih.gov/books/NBK595227/">NCBI Bookshelf</a>.</p>
     <p id="ref-ueda">Ueda, Peter, Catherine H. Mercer, Cyrus Ghaznavi, and Debby Herbenick. "Trends in Frequency of Sexual Activity and Number of Sexual Partners Among Adults Aged 18 to 44 Years in the US, 2000-2018." <em>JAMA Network Open</em> 3(6), 2020, e203833. <a href="https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2767066">Record</a>.</p>
     <p id="ref-who-loneliness">World Health Organization. "Social Connection Linked to Improved Health and Reduced Risk of Early Death." WHO Commission on Social Connection, 2025. <a href="https://www.who.int/news/item/30-06-2025-social-connection-linked-to-improved-heath-and-reduced-risk-of-early-death">Report</a>.</p>
+    <p id="ref-who-tobacco">World Health Organization. <em>WHO Report on the Global Tobacco Epidemic 2025</em>. 2025. <a href="https://www.who.int/teams/health-promotion/tobacco-control/global-tobacco-report-2025">Report</a>.</p>
     <p id="ref-wilding-semaglutide">Wilding, John P. H., Rachel L. Batterham, Salvatore Calanna, Melanie Davies, Luc F. Van Gaal, Ildiko Lingvay, Barbara M. McGowan, Julio Rosenstock, Marie T. D. Tran, Thomas A. Wadden, Sean Wharton, Kazuma Yokote, Niels Zeuthen, and Robert F. Kushner. "Once-Weekly Semaglutide in Adults with Overweight or Obesity." <em>New England Journal of Medicine</em> 384, 2021, 989-1002. <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2032183">Record</a>.</p>
+    <p id="ref-wgi">World Bank. "Worldwide Governance Indicators." 2026. <a href="https://www.worldbank.org/en/publication/worldwide-governance-indicators">Project page</a>.</p>
   </section>
 </main>
 </body>

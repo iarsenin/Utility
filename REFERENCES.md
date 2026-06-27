@@ -133,6 +133,36 @@ claims.
 - von Weizsaecker, "Freedom, Wealth and Adaptive Preferences."
   https://www.econ.mpg.de/80411/CCvW-Freedom_-Wealth-and-Adaptive-Preferences.pdf
 
+## Governance, Enforcement, And Regulation
+
+These sources support the government channel. Government should be modeled as
+an endogenous collective feedback mechanism with state capacity, capture, and
+enforcement limits, not as an outside welfare planner.
+
+- Becker, "Crime and Punishment: An Economic Approach," Journal of Political
+  Economy, 1968.
+  https://www.nber.org/chapters/c3625
+- Bureau of Justice Statistics data portal, for enforcement, courts,
+  corrections, victimization, and justice-system data.
+  https://bjs.ojp.gov/data
+- Stigler, "The Theory of Economic Regulation," Bell Journal of Economics and
+  Management Science, 1971.
+  https://www.jstor.org/stable/3003160
+- Becker, "A Theory of Competition Among Pressure Groups for Political
+  Influence," Quarterly Journal of Economics, 1983.
+  https://www.jstor.org/stable/1886017
+- World Bank, Worldwide Governance Indicators.
+  https://www.worldbank.org/en/publication/worldwide-governance-indicators
+- OECD, OECD Regulatory Policy Outlook 2025.
+  https://www.oecd.org/en/publications/oecd-regulatory-policy-outlook-2025_56b60e39-en.html
+- WHO Report on the Global Tobacco Epidemic 2025.
+  https://www.who.int/teams/health-promotion/tobacco-control/global-tobacco-report-2025
+- Miron and Zwiebel, "Alcohol Consumption During Prohibition," American
+  Economic Review, 1991.
+  https://www.jstor.org/stable/2006861
+- European Commission, Digital Services Act package.
+  https://digital-strategy.ec.europa.eu/en/policies/digital-services-act-package
+
 ## Mathematical And Empirical Tools
 
 - Fenichel, "Geometric Singular Perturbation Theory for Ordinary Differential

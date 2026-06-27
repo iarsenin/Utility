@@ -21,6 +21,8 @@ Read these first:
 - `13_material_feedback_pivot.md`: current paper frame.
 - `14_self_correction_and_competition.md`: self-correction and competition
   result.
+- `15_governance_channel.md`: government and regulation as an endogenous
+  feedback channel.
 
 Older numbered notes remain useful for provenance, literature background, and
 future extensions. They are not automatically active instructions.

@@ -44,6 +44,10 @@ The minimal model supports five reader-facing claims:
   can change speed without changing the long-run states of the minimal model.
 - **Selection metric:** competition preserves capacity only when its score
   favors capacity-preserving rules.
+- **Governance channel:** government regulation is endogenous collective
+  feedback. It matters when it changes exposure, damage, repair, enforcement,
+  or the competitive score; it fails when delayed, captured, symbolic,
+  unenforced, or displaced.
 
 ## Current Manuscript Standard
 
@@ -75,6 +79,10 @@ Core outputs:
 - `results/figures/self_correction_channels.svg`
 - `results/figures/competition_selection_channels.svg`
 - `paper/when_preferences_move_faster_than_equilibrium_v1.html`
+
+Current governance note:
+
+- `docs/15_governance_channel.md`
 
 Latest render check:
 

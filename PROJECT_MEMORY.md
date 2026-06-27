@@ -44,6 +44,10 @@ material growth object are named.
   exposure: internet, social media, recommenders, and AI can move subjective
   payoffs before material capacity, institutions, markets, or selection catch
   up.
+- Government is an endogenous governance channel, not an outside rescue. It
+  matters when collective rules change exposure, damage, repair, enforcement,
+  or the competitive score; it fails when delayed, captured, symbolic,
+  unenforced, or displaced.
 - A current-improvement/current-decline alarm is not a general
   self-correction mechanism in the minimal model.
 - Competition can repair only when the score rewards capacity-preserving rules.
