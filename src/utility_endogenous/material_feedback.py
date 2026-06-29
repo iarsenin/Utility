@@ -18,6 +18,7 @@ from .chart_style import (
     CHART_AMBER,
     CHART_BLUE,
     CHART_GRID,
+    CHART_GREEN,
     CHART_INK,
     CHART_MUTED,
     CHART_PANEL,
@@ -91,6 +92,17 @@ class FeedbackAuditRow:
     low_high_trap_rate: float
     mean_trap_threshold_when_present: float
     median_trap_threshold_when_present: float
+
+
+@dataclass(frozen=True)
+class RegimeGridPoint:
+    repair_baseline: float
+    substitute_damage: float
+    regime: str
+    stable_count: int
+    low_trap_present: bool
+    high_state_present: bool
+    lower_boundary_present: bool
 
 
 def logistic(value: float) -> float:
@@ -335,6 +347,67 @@ def feedback_parameter_audit(draws: int = 3000, seed: int = 20260626) -> list[Fe
     return rows
 
 
+def regime_label(params: CapacityFeedbackParams) -> tuple[str, dict[str, bool | int]]:
+    """Classify the baseline scalar dynamic for main-text regime mapping."""
+
+    equilibria = capacity_equilibria(params)
+    stable = [point for point in equilibria if point.stable]
+    low_trap = any(point.stable and point.capacity < 0.25 for point in equilibria)
+    high_state = any(point.stable and point.capacity > 0.60 for point in equilibria)
+    lower_boundary = any(point.stable and point.state_scope == "lower boundary" for point in equilibria)
+    two_basin_trap = bool(classify_equilibria(params)["low_high_trap"])
+
+    if lower_boundary or not high_state:
+        label = "collapse-prone"
+    elif two_basin_trap or low_trap:
+        label = "threshold trap"
+    elif high_state:
+        label = "bridge region"
+    else:
+        label = "transition"
+    return (
+        label,
+        {
+            "stable_count": len(stable),
+            "low_trap_present": low_trap,
+            "high_state_present": high_state,
+            "lower_boundary_present": lower_boundary,
+        },
+    )
+
+
+def regime_grid(
+    params: CapacityFeedbackParams,
+    repair_min: float = 0.14,
+    repair_max: float = 0.38,
+    damage_min: float = 0.05,
+    damage_max: float = 0.42,
+    repair_steps: int = 49,
+    damage_steps: int = 61,
+) -> list[RegimeGridPoint]:
+    """Grid over repair and substitute damage for the main-text regime map."""
+
+    rows: list[RegimeGridPoint] = []
+    for repair_index in range(repair_steps):
+        repair = repair_min + (repair_max - repair_min) * repair_index / (repair_steps - 1)
+        for damage_index in range(damage_steps):
+            damage = damage_min + (damage_max - damage_min) * damage_index / (damage_steps - 1)
+            scenario = replace(params, baseline_repair=repair, substitute_damage=damage)
+            label, flags = regime_label(scenario)
+            rows.append(
+                RegimeGridPoint(
+                    repair_baseline=repair,
+                    substitute_damage=damage,
+                    regime=label,
+                    stable_count=int(flags["stable_count"]),
+                    low_trap_present=bool(flags["low_trap_present"]),
+                    high_state_present=bool(flags["high_state_present"]),
+                    lower_boundary_present=bool(flags["lower_boundary_present"]),
+                )
+            )
+    return rows
+
+
 def write_csv(path: Path, rows: list[dict[str, object]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     if not rows:
@@ -477,6 +550,217 @@ def write_paths_svg(path: Path, paths: list[list[CapacityPathPoint]]) -> None:
     path.write_text("\n".join(elements) + "\n", encoding="utf-8")
 
 
+def write_loop_svg(path: Path, params: CapacityFeedbackParams) -> None:
+    """Main-text figure: the fast choice rule and the slow capacity law."""
+
+    width = 940
+    height = 670
+    left = 78
+    right = 44
+    top = 118
+    bottom = 132
+    gap = 68
+    panel_width = (width - left - right - gap) / 2.0
+    panel_height = height - top - bottom
+    drift_values = [capacity_drift(index / 500, params) for index in range(501)]
+    drift_min = min(-0.18, min(drift_values) - 0.025)
+    drift_max = max(0.18, max(drift_values) + 0.025)
+    right_left = left + panel_width + gap
+
+    def x_scale(panel_left: float, capacity: float) -> float:
+        return panel_left + panel_width * capacity
+
+    def y_share(value: float) -> float:
+        return top + panel_height * (1.0 - value)
+
+    def y_drift(value: float) -> float:
+        return top + panel_height * (drift_max - value) / (drift_max - drift_min)
+
+    equilibria = capacity_equilibria(params)
+    low_state = next((point for point in equilibria if point.stable and point.capacity < 0.25), None)
+    threshold = next((point for point in equilibria if not point.stable and 0.15 < point.capacity < 0.70), None)
+    high_state = next((point for point in equilibria if point.stable and point.capacity > 0.60), None)
+    markers = [
+        ("low trap", low_state, CHART_RED),
+        ("threshold", threshold, CHART_VIOLET),
+        ("high state", high_state, CHART_TEAL),
+    ]
+
+    elements = [
+        *svg_open(width, height),
+        *chart_header(
+            "Why A Rational Choice Can Become A Trap",
+            "Fast payoff formation controls substitute use; substitute use controls the slow capacity stock",
+            width,
+        ),
+    ]
+    for panel_left, panel_title in [
+        (left, "A. What the induced payoff makes attractive"),
+        (right_left, "B. What that choice does to capacity"),
+    ]:
+        elements.append(svg_text(panel_left, top - 20, panel_title, font_size=14, font_weight=800, fill=CHART_INK))
+        elements.append(
+            f'<rect x="{panel_left}" y="{top}" width="{panel_width:.1f}" height="{panel_height}" fill="#ffffff" stroke="{CHART_GRID}"/>'
+        )
+        for tick in [0.0, 0.25, 0.5, 0.75, 1.0]:
+            x = x_scale(panel_left, tick)
+            elements.append(
+                f'<line x1="{x:.1f}" y1="{top}" x2="{x:.1f}" y2="{top + panel_height}" stroke="{CHART_GRID}" stroke-width="1"/>'
+            )
+            elements.append(svg_text(x, top + panel_height + 25, f"{tick:.2f}".rstrip("0").rstrip("."), font_size=11, fill=CHART_MUTED, text_anchor="middle"))
+        elements.append(svg_text(panel_left + panel_width / 2, top + panel_height + 51, "material capacity K", font_size=12, fill=CHART_MUTED, text_anchor="middle"))
+
+    for tick in [0.0, 0.25, 0.5, 0.75, 1.0]:
+        y = y_share(tick)
+        elements.append(f'<line x1="{left}" y1="{y:.1f}" x2="{left + panel_width}" y2="{y:.1f}" stroke="{CHART_GRID}" stroke-width="1"/>')
+        elements.append(svg_text(left - 12, y + 4, f"{tick:.2f}".rstrip("0").rstrip("."), font_size=11, fill=CHART_MUTED, text_anchor="end"))
+    elements.append(svg_text(27, top + panel_height / 2, "substitute share", font_size=12, fill=CHART_MUTED, transform=f"rotate(-90 27 {top + panel_height / 2})", text_anchor="middle"))
+
+    for tick in [-0.15, 0.0, 0.15]:
+        y = y_drift(tick)
+        elements.append(f'<line x1="{right_left}" y1="{y:.1f}" x2="{right_left + panel_width}" y2="{y:.1f}" stroke="{CHART_GRID}" stroke-width="1"/>')
+        elements.append(svg_text(right_left - 12, y + 4, f"{tick:.2f}".rstrip("0"), font_size=11, fill=CHART_MUTED, text_anchor="end"))
+    zero_y = y_drift(0.0)
+    elements.append(f'<line x1="{right_left}" y1="{zero_y:.1f}" x2="{right_left + panel_width}" y2="{zero_y:.1f}" stroke="{CHART_INK}" stroke-width="1.3"/>')
+    elements.append(svg_text(right_left - 50, top + panel_height / 2, "capacity drift", font_size=12, fill=CHART_MUTED, transform=f"rotate(-90 {right_left - 50} {top + panel_height / 2})", text_anchor="middle"))
+
+    choice_line = [
+        (x_scale(left, index / 500), y_share(substitute_share(index / 500, params)))
+        for index in range(501)
+    ]
+    drift_line = [
+        (x_scale(right_left, index / 500), y_drift(capacity_drift(index / 500, params)))
+        for index in range(501)
+    ]
+    elements.append(_polyline(choice_line, CHART_RED, 3.4))
+    elements.append(_polyline(drift_line, CHART_TEAL, 3.4))
+
+    for label, point, color in markers:
+        if point is None:
+            continue
+        for panel_left in [left, right_left]:
+            x = x_scale(panel_left, point.capacity)
+            elements.append(
+                f'<line x1="{x:.1f}" y1="{top}" x2="{x:.1f}" y2="{top + panel_height}" stroke="{color}" stroke-width="1.4" stroke-dasharray="5 6" opacity="0.75"/>'
+            )
+        marker_fill = color if point.stable else CHART_PANEL
+        elements.append(
+            f'<circle cx="{x_scale(right_left, point.capacity):.1f}" cy="{zero_y:.1f}" r="6.5" fill="{marker_fill}" stroke="{color}" stroke-width="2"/>'
+        )
+
+    elements.append(svg_text(left + 16, top + 28, "low capacity: substitute is attractive", font_size=12, font_weight=800, fill=CHART_RED))
+    elements.append(svg_text(left + panel_width - 16, top + panel_height - 18, "high capacity: outside option works", font_size=12, font_weight=800, fill=CHART_TEAL, text_anchor="end"))
+    elements.append(svg_text(right_left + 18, zero_y + 34, "below zero: capacity falls", font_size=12, font_weight=800, fill=CHART_RED))
+    elements.append(svg_text(right_left + panel_width - 18, zero_y - 22, "above zero: capacity rises", font_size=12, font_weight=800, fill=CHART_TEAL, text_anchor="end"))
+    legend_y = top + panel_height + 86
+    for index, (label, point, color) in enumerate(markers):
+        x = left + 150 * index
+        fill = color if point is not None and point.stable else CHART_PANEL
+        elements.append(f'<circle cx="{x}" cy="{legend_y}" r="6" fill="{fill}" stroke="{color}" stroke-width="2"/>')
+        elements.append(svg_text(x + 14, legend_y + 4, label, font_size=12, font_weight=800, fill=CHART_INK))
+    elements.append(chart_footer("Same baseline trap calibration. Filled dots are stable states; the open dot is the threshold.", width, height))
+    elements.append("</svg>")
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text("\n".join(elements) + "\n", encoding="utf-8")
+
+
+def write_regime_map_svg(path: Path, rows: list[RegimeGridPoint], baseline: CapacityFeedbackParams) -> None:
+    """Main-text figure: which parameter movements change the qualitative regime."""
+
+    width = 940
+    height = 700
+    left = 94
+    right = 54
+    top = 112
+    bottom = 152
+    chart_width = width - left - right
+    chart_height = height - top - bottom
+    damage_values = [row.substitute_damage for row in rows]
+    repair_values = [row.repair_baseline for row in rows]
+    damage_min = min(damage_values)
+    damage_max = max(damage_values)
+    repair_min = min(repair_values)
+    repair_max = max(repair_values)
+    damage_steps = len(set(damage_values))
+    repair_steps = len(set(repair_values))
+    cell_width = chart_width / damage_steps
+    cell_height = chart_height / repair_steps
+    colors = {
+        "bridge region": "#dcebd8",
+        "threshold trap": "#f4d7a1",
+        "collapse-prone": "#f3b8ae",
+        "transition": "#e6e1d8",
+    }
+
+    def x_scale(damage: float) -> float:
+        return left + chart_width * (damage - damage_min) / (damage_max - damage_min)
+
+    def y_scale(repair: float) -> float:
+        return top + chart_height * (repair_max - repair) / (repair_max - repair_min)
+
+    def arrow(x1: float, y1: float, x2: float, y2: float, color: str) -> str:
+        return (
+            f'<line x1="{x1:.1f}" y1="{y1:.1f}" x2="{x2:.1f}" y2="{y2:.1f}" '
+            f'stroke="{color}" stroke-width="3.2" stroke-linecap="round" marker-end="url(#arrowhead)"/>'
+        )
+
+    elements = [
+        *svg_open(width, height),
+        '<defs><marker id="arrowhead" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">'
+        f'<path d="M 0 0 L 10 4 L 0 8 z" fill="{CHART_INK}"/></marker></defs>',
+        *chart_header(
+            "What Actually Moves The System",
+            "Repair capacity and damage per substitute use change the regime; a warning alone stays put",
+            width,
+        ),
+    ]
+    for row in rows:
+        damage_index = round((row.substitute_damage - damage_min) / (damage_max - damage_min) * (damage_steps - 1))
+        repair_index = round((row.repair_baseline - repair_min) / (repair_max - repair_min) * (repair_steps - 1))
+        x = left + damage_index * cell_width
+        y = top + (repair_steps - 1 - repair_index) * cell_height
+        elements.append(
+            f'<rect x="{x:.1f}" y="{y:.1f}" width="{cell_width + 0.7:.1f}" height="{cell_height + 0.7:.1f}" fill="{colors[row.regime]}" stroke="none"/>'
+        )
+    elements.append(f'<rect x="{left}" y="{top}" width="{chart_width}" height="{chart_height}" fill="none" stroke="{CHART_GRID}" stroke-width="1.2"/>')
+    for tick in [0.05, 0.15, 0.25, 0.35, 0.42]:
+        x = x_scale(tick)
+        elements.append(f'<line x1="{x:.1f}" y1="{top}" x2="{x:.1f}" y2="{top + chart_height}" stroke="#ffffff" stroke-width="1" opacity="0.8"/>')
+        elements.append(svg_text(x, top + chart_height + 26, f"{tick:.2f}", font_size=11, fill=CHART_MUTED, text_anchor="middle"))
+    for tick in [0.14, 0.20, 0.26, 0.32, 0.38]:
+        y = y_scale(tick)
+        elements.append(f'<line x1="{left}" y1="{y:.1f}" x2="{left + chart_width}" y2="{y:.1f}" stroke="#ffffff" stroke-width="1" opacity="0.8"/>')
+        elements.append(svg_text(left - 12, y + 4, f"{tick:.2f}", font_size=11, fill=CHART_MUTED, text_anchor="end"))
+    elements.append(svg_text(left + chart_width / 2, top + chart_height + 54, "damage per substitute use", font_size=12, fill=CHART_MUTED, text_anchor="middle"))
+    elements.append(svg_text(33, top + chart_height / 2, "baseline repair", font_size=12, fill=CHART_MUTED, transform=f"rotate(-90 33 {top + chart_height / 2})", text_anchor="middle"))
+
+    base_x = x_scale(baseline.substitute_damage)
+    base_y = y_scale(baseline.baseline_repair)
+    elements.append(f'<circle cx="{base_x:.1f}" cy="{base_y:.1f}" r="8" fill="{CHART_INK}" stroke="#ffffff" stroke-width="2"/>')
+    elements.append(svg_text(base_x + 14, base_y - 12, "baseline trap", font_size=12, font_weight=800, fill=CHART_INK))
+    elements.append(arrow(base_x, base_y - 12, base_x, y_scale(0.305), CHART_INK))
+    elements.append(svg_text(base_x + 12, y_scale(0.305) - 10, "raise repair", font_size=12, font_weight=800, fill=CHART_GREEN))
+    elements.append(arrow(base_x - 8, base_y + 6, x_scale(0.105), base_y + 6, CHART_INK))
+    elements.append(svg_text(x_scale(0.105), base_y + 25, "reduce damage", font_size=12, font_weight=800, fill=CHART_TEAL, text_anchor="middle"))
+    elements.append(f'<circle cx="{base_x + 49:.1f}" cy="{base_y + 38:.1f}" r="19" fill="none" stroke="{CHART_VIOLET}" stroke-width="2.4" stroke-dasharray="4 5"/>')
+    elements.append(svg_text(base_x + 78, base_y + 43, "alarm only: same coordinates", font_size=12, font_weight=800, fill=CHART_VIOLET))
+
+    legend_y = top + chart_height + 84
+    legend_items = [
+        ("bridge region", colors["bridge region"], CHART_GREEN),
+        ("threshold trap", colors["threshold trap"], CHART_AMBER),
+        ("collapse-prone", colors["collapse-prone"], CHART_RED),
+    ]
+    for index, (label, fill, stroke) in enumerate(legend_items):
+        x = left + 245 * index
+        elements.append(f'<rect x="{x}" y="{legend_y - 13}" width="22" height="16" rx="2" fill="{fill}" stroke="{stroke}" stroke-width="1.2"/>')
+        elements.append(svg_text(x + 31, legend_y, label, font_size=12, font_weight=800, fill=CHART_INK))
+    elements.append(chart_footer("Grid holds the other baseline parameters fixed. Colors classify computed stable states of the scalar dynamic.", width, height))
+    elements.append("</svg>")
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text("\n".join(elements) + "\n", encoding="utf-8")
+
+
 def write_audit_svg(path: Path, rows: list[FeedbackAuditRow]) -> None:
     width = 940
     height = 500
@@ -558,27 +842,35 @@ def run_material_feedback_analysis(root: Path) -> dict[str, object]:
     ]
     path_rows = [asdict(point) for path_points in paths for point in path_points]
     audit_rows = feedback_parameter_audit()
+    regime_rows = regime_grid(scenarios["trap"])
 
     equilibrium_path = tables_dir / "material_feedback_equilibria.csv"
     path_table = tables_dir / "material_feedback_paths.csv"
     audit_table = tables_dir / "material_feedback_parameter_audit.csv"
+    regime_table = tables_dir / "material_feedback_regime_grid.csv"
     write_csv(equilibrium_path, equilibria)
     write_csv(path_table, path_rows)
     write_csv(audit_table, [asdict(row) for row in audit_rows])
+    write_csv(regime_table, [asdict(row) for row in regime_rows])
 
     phase_svg = figures_dir / "material_feedback_phase.svg"
     paths_svg = figures_dir / "material_feedback_paths.svg"
     audit_svg = figures_dir / "material_feedback_audit.svg"
+    loop_svg = figures_dir / "material_feedback_loop.svg"
+    regime_svg = figures_dir / "material_feedback_regime_map.svg"
     write_phase_svg(phase_svg, [scenarios["resilient"], scenarios["trap"], scenarios["damaged"]])
     write_paths_svg(paths_svg, paths)
     write_audit_svg(audit_svg, audit_rows)
+    write_loop_svg(loop_svg, scenarios["trap"])
+    write_regime_map_svg(regime_svg, regime_rows, scenarios["trap"])
 
     return {
         "scenarios": scenarios,
         "equilibria": equilibria,
         "paths": path_rows,
         "audit": audit_rows,
+        "regime_grid": regime_rows,
         "audit_classes": AUDIT_CLASSES,
-        "tables": [equilibrium_path, path_table, audit_table],
-        "figures": [phase_svg, paths_svg, audit_svg],
+        "tables": [equilibrium_path, path_table, audit_table, regime_table],
+        "figures": [loop_svg, regime_svg, phase_svg, paths_svg, audit_svg],
     }

@@ -54,6 +54,9 @@ material growth object are named.
 - Examples are useful only when they specify the measurable capacity and
   competitive score.
 - The main text should be readable before the appendix is opened.
+- Main-text charts should be argument diagnostics, not raw simulation traces:
+  first show the mechanism, then the regime boundary, then the competition
+  metric.
 
 ## Do Not Regress To
 
@@ -73,6 +76,11 @@ Introduce the core vocabulary once, in prose, near the first worked examples.
 Do not add repeated definition strips, glossary boxes, or lever lists unless a
 new concept cannot be understood from the existing setup. After the vocabulary
 is introduced, use it to make claims rather than restarting the model.
+
+Let exposition drive figures. The current main-text chart sequence is:
+mechanism loop, repair/damage regime map, and competition metric mismatch.
+Path charts, phase lines, and parameter audits belong in the appendix unless a
+new draft explicitly needs them in the main argument.
 
 Every reader-facing HTML update must be visually checked in the browser and
 recorded with a screenshot.

@@ -33,6 +33,13 @@ is mostly single-state, trap-prone feedback has the highest rate of
 low-high traps, and collapse-prone feedback more often reaches the
 lower boundary of the projected capacity interval.
 
+The main-text regime map varies baseline repair `alpha` and substitute
+damage `L` while holding the remaining trap-calibration parameters fixed.
+The baseline point lies in the threshold-trap region. Moving upward
+raises repair; moving left lowers damage per substitute use. These
+movements can cross into the bridge region, while weaker repair and
+higher damage move the system toward collapse-prone dynamics.
+
 ## Baseline Equilibria
 
 | scenario | capacity | substitute_share | drift_slope | stable |
@@ -88,9 +95,12 @@ Tables:
 - `/Users/igor/My Drive/git/Utility/results/tables/material_feedback_equilibria.csv`
 - `/Users/igor/My Drive/git/Utility/results/tables/material_feedback_paths.csv`
 - `/Users/igor/My Drive/git/Utility/results/tables/material_feedback_parameter_audit.csv`
+- `/Users/igor/My Drive/git/Utility/results/tables/material_feedback_regime_grid.csv`
 
 Figures:
 
+- `/Users/igor/My Drive/git/Utility/results/figures/material_feedback_loop.svg`
+- `/Users/igor/My Drive/git/Utility/results/figures/material_feedback_regime_map.svg`
 - `/Users/igor/My Drive/git/Utility/results/figures/material_feedback_phase.svg`
 - `/Users/igor/My Drive/git/Utility/results/figures/material_feedback_paths.svg`
 - `/Users/igor/My Drive/git/Utility/results/figures/material_feedback_audit.svg`

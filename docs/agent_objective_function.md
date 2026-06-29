@@ -111,11 +111,13 @@ appears. Displayed formulas should be numbered automatically in HTML.
 
 The main body may use at most three salient figures:
 
-- threshold trap;
-- self-correction channel;
-- competition score.
+- mechanism loop: fast substitute share and slow capacity drift;
+- regime map: repair and damage movements across bridge, trap, and collapse;
+- competition metric: bridge share and carrier mass under alternative scores.
 
-Audit tables and robustness diagnostics belong in the appendix.
+Exposition must drive each figure. Path charts, phase lines, audit tables, and
+robustness diagnostics belong in the appendix unless the main text explicitly
+needs them for a claim.
 
 ## Review Loop
 

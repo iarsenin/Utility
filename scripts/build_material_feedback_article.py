@@ -590,15 +590,15 @@ def build_article() -> str:
     <h3>Trap</h3>
     <p>Low capacity can make the substitute attractive. Heavy substitute use can then prevent capacity from rebuilding. High capacity can also persist because the outside option remains usable, so the substitute loses some of its pull. Between the two stable states lies a threshold. Above it, the same environment converges upward. Below it, the same environment converges downward. The point is not that people miscalculate. The point is that the environment can make the low-capacity routine locally coherent.</p>
 
-    <h3>Collapse</h3>
-    <p>The audit also contains collapse-prone dynamics. In those parameter regions, higher damage and sensitivity often admit a lower-boundary attracting state, and some draws have no interior stable capacity state. In a betting case, this is the point where solvency is so damaged that ordinary budgeting no longer restores the previous option set. The formal claim is deliberately limited: the audit is a mechanism check, not an estimate of how often collapse occurs in the population.</p>
+    <p>Figure 1 shows the mechanism directly. The left panel is the fast part: when capacity is low, the induced payoff makes the substitute almost automatic; when capacity is high, the outside option becomes usable and substitute use falls. The right panel is the slow part: the same substitute choice changes the drift of capacity. Where the drift curve crosses zero, capacity stops moving. Filled points are stable states. The open point is the threshold separating the two basins.</p>
 
-    <p>Figure 1 shows the simplest visual version of the claim. The horizontal axis is slow time. The vertical axis is normalized material capacity, with zero at the bottom and one at the top. The two paths labeled as the capacity-trap calibration use the same payoff-forming rule; only the starting capacity differs. The lower start settles into the low-capacity state, while the higher start rises to the high-capacity state. The repair path starts from the same low stock but changes the capacity law enough to cross the threshold. The self-correcting path shows a calibration in which the low trap is removed.</p>
-
-    <figure id="fig-material-paths">
-      <img src="../results/figures/material_feedback_paths.svg" alt="Capacity paths from different starting values">
-      <figcaption>How to read the threshold result. Capacity K is normalized between zero and one. Under the trap calibration, the low-start path remains low and the higher-start path recovers. A repair intervention can move the same low start across the threshold. A stronger self-correcting channel removes the low trap in this diagnostic.</figcaption>
+    <figure id="fig-material-loop">
+      <img src="../results/figures/material_feedback_loop.svg" alt="Two-panel chart showing substitute share and capacity drift by capacity">
+      <figcaption>The trap is not a mysterious preference failure. It is the composition of a fast choice rule and a slow capacity law. Low capacity makes the substitute attractive, heavy substitute use lowers capacity, and the system can settle into the low stable state. Above the threshold, the same rule moves toward the high state.</figcaption>
     </figure>
+
+    <h3>Collapse</h3>
+    <p>The same scalar model also contains collapse-prone dynamics. In those parameter regions, higher damage and weaker repair can admit a lower-boundary attracting state, and some draws have no interior stable capacity state. In a betting case, this is the point where solvency is so damaged that ordinary budgeting no longer restores the previous option set. The formal claim is deliberately limited: the diagnostics are mechanism checks, not estimates of how often collapse occurs in the population.</p>
 
     <div class="reader-result">
       <strong>What changes the prediction.</strong> In this model, a change has predictive force when it changes the capacity path: it lowers damage, raises repair, moves the state across the threshold, removes the low trap, changes what competition rewards, or gives a governance rule enough enforcement to do one of those things.
@@ -607,19 +607,19 @@ def build_article() -> str:
     <h3>Does Reality Correct The System Automatically?</h3>
     <p>Not automatically. The model separates two kinds of feedback. The first says whether things are improving or deteriorating right now. That signal can be psychologically powerful. It can also be mathematically weak. In the one-capacity model, it changes how fast the system moves, but it does not move the long-run states. Once the system reaches a rest point, the signal is silent.</p>
 
-    <p>The second kind of feedback depends on the level of capacity itself. If higher capacity makes the substitute less attractive, and that force is strong enough, the low-capacity trap can disappear in the diagnostic calibration. This distinction is the self-correction result. Regret or alarm can coexist with a stable trap. Repair needs a force that changes the capacity path even when the system is not already moving.</p>
+    <p>The second kind of feedback changes the capacity law itself. Figure 2 maps the baseline calibration over two quantities that do move the reduced dynamic. Moving left means each use of the substitute does less damage. Moving up means baseline repair is stronger. The baseline calibration lies in the threshold-trap region. A warning that merely reports trouble leaves the point where it is. Product design, treatment, education, enforcement, or platform rules matter only if they move the point across a regime boundary.</p>
 
-    <figure>
-      <img src="../results/figures/self_correction_channels.svg" alt="Self-correction channel diagnostics">
-      <figcaption>The alarm changes speed but not the interior steady states in this diagnostic. The capacity signal changes the destination in this diagnostic. That is why regret can fail while a real stock-building channel can work.</figcaption>
+    <figure id="fig-regime-map">
+      <img src="../results/figures/material_feedback_regime_map.svg" alt="Regime map showing bridge, trap, and collapse-prone regions by repair and damage">
+      <figcaption>The useful visual question is not whether someone feels regret. It is whether the reduced dynamic moves. Raising repair moves the system upward. Reducing damage moves it left. In this calibration, those movements can cross from a threshold trap into the bridge region. Higher damage and weaker repair move the system toward collapse-prone dynamics.</figcaption>
     </figure>
 
     <h3>Competition Is Corrective Only Under The Right Metric</h3>
-    <p>Competition here is a share dynamic over preference-forming rules. It does not make the outcome benevolent. In the numerical diagnostic, a bridge design and a sink design start with equal shares. If the competitive score is material viability, the bridge expands and total scale recovers. If the score is engagement, the sink expands and total scale falls. With competition intensity set to 1.2 and initial total mass normalized to one, the displayed calibration ends near total mass 5.7 under material viability and near 0.02 under engagement. The point is not that those numbers are universal. The point is that relative victory and absolute survival are different equations.</p>
+    <p>Competition here is a share dynamic over preference-forming rules. It does not make the outcome benevolent. Figure 3 starts a bridge design and a sink design with equal shares and the same initial capacity. If the contest rewards material viability, the bridge wins share and the carrier grows. If the contest rewards engagement, the sink wins share and the carrier shrinks. The numbers are calibration outputs, not population estimates. The point is structural: relative victory and absolute survival are different equations.</p>
 
-    <figure>
+    <figure id="fig-competition-score">
       <img src="../results/figures/competition_selection_channels.svg" alt="Competition selection channels">
-      <figcaption>The bridge preserves capacity. The sink captures use. When competition rewards survival capacity, the bridge takes over. When it rewards engagement, the sink wins even as the total stock falls.</figcaption>
+      <figcaption>Competition selects the rule rewarded by the score. Under a material-viability score, the bridge takes over and carrier mass rises. Under an engagement score, the sink takes over and carrier mass falls. Selection is powerful, but it is not automatically aligned with material survival.</figcaption>
     </figure>
   </section>
 

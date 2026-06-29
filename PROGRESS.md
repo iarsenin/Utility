@@ -79,8 +79,8 @@ Core outputs:
 
 - `results/material_feedback_report.md`
 - `results/self_correction_report.md`
-- `results/figures/material_feedback_paths.svg`
-- `results/figures/self_correction_channels.svg`
+- `results/figures/material_feedback_loop.svg`
+- `results/figures/material_feedback_regime_map.svg`
 - `results/figures/competition_selection_channels.svg`
 - `paper/when_preferences_move_faster_than_equilibrium_v1.html`
 
@@ -101,6 +101,13 @@ Latest render check:
   opening render.
 - `results/figures/article_figure1_explanation_full_2026-06-27.png` verifies
   the added main-text explanation and expanded caption for Figure 1.
+- `results/figures/article_chart_reset_section_2026-06-29.png` verifies the
+  rewritten Section 3 render after replacing the old path/self-correction
+  charts.
+- `results/figures/article_chart_reset_loop_2026-06-29.png`,
+  `results/figures/article_chart_reset_regime_map_2026-06-29.png`, and
+  `results/figures/article_chart_reset_competition_2026-06-29.png` verify the
+  three new main-text chart renders.
 
 ## Active Next Steps
 

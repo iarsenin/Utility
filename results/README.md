@@ -20,7 +20,10 @@ Current core generated files:
 - `tables/material_feedback_equilibria.csv`
 - `tables/material_feedback_paths.csv`
 - `tables/material_feedback_parameter_audit.csv`
+- `tables/material_feedback_regime_grid.csv`
 - `tables/self_correction_*.csv`
+- `figures/material_feedback_loop.svg`
+- `figures/material_feedback_regime_map.svg`
 - `figures/material_feedback_phase.svg`
 - `figures/material_feedback_paths.svg`
 - `figures/material_feedback_audit.svg`
@@ -44,12 +47,13 @@ Current core generated files:
 The current manuscript's main body should use only the salient production
 figures:
 
-- threshold/path figure;
-- self-correction channel figure;
-- competition selection figure.
+- mechanism loop figure: fast substitute share and slow capacity drift;
+- regime map: damage and repair movements across bridge/trap/collapse regions;
+- competition selection figure: bridge share and carrier mass under alternative
+  scores.
 
-Audit figures and tables belong in appendices unless a later manuscript
-explicitly changes that design.
+Time-path, phase-line, audit, and robustness figures belong in appendices unless
+a later manuscript explicitly changes that design.
 
 ## Legacy Artifacts
 

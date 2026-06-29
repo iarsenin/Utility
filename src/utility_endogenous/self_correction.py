@@ -504,38 +504,48 @@ def write_self_correction_svg(
 
 def write_competition_svg(path: Path, points: list[CompetitionPathPoint]) -> None:
     width = 940
-    height = 600
+    height = 700
     left = 78
     right = 52
-    top = 112
-    panel_gap = 64
-    panel_width = (width - left - right - panel_gap) / 2.0
-    panel_height = 342
-    bottom = top + panel_height
+    top = 118
+    column_gap = 64
+    row_gap = 58
+    panel_width = (width - left - right - column_gap) / 2.0
+    panel_height = 190
+    share_top = top
+    mass_top = top + panel_height + row_gap
+    bottom = mass_top + panel_height
     horizon = max(point.time for point in points)
     selected_intensity = 1.2
 
     def x_scale(panel_left: float, time: float) -> float:
         return panel_left + panel_width * time / horizon
 
-    def y_share(value: float) -> float:
-        return top + panel_height * (1.0 - value)
+    def y_unit(panel_top: float, value: float) -> float:
+        return panel_top + panel_height * (1.0 - value)
 
-    def mass_to_share(value: float) -> float:
-        return max(0.0, min(1.0, math.log(max(value, 1e-6)) / math.log(12.0)))
+    max_mass = max(
+        point.population_mass
+        for point in points
+        if abs(point.competition_intensity - selected_intensity) < 1e-9
+    )
+    mass_axis_max = max(6.0, math.ceil(max_mass))
+
+    def y_mass(value: float) -> float:
+        return mass_top + panel_height * (1.0 - min(value, mass_axis_max) / mass_axis_max)
 
     elements = [
         *svg_open(width, height),
         *chart_header(
-            "Competition Selects Rules, Not Good Intentions",
-            "Material competition shifts mass to a bridge; engagement competition can select the sink",
+            "Competition Selects Whatever It Scores",
+            "The same bridge and sink have opposite outcomes when the contest rewards viability versus engagement",
             width,
         ),
     ]
 
     panels = [
         ("material viability", left, "A. Competition on material viability"),
-        ("engagement proxy", left + panel_width + panel_gap, "B. Competition on engagement"),
+        ("engagement proxy", left + panel_width + column_gap, "B. Competition on engagement"),
     ]
     for metric, panel_left, panel_title in panels:
         panel_points = [
@@ -543,38 +553,44 @@ def write_competition_svg(path: Path, points: list[CompetitionPathPoint]) -> Non
             for point in points
             if point.selection_metric == metric and abs(point.competition_intensity - selected_intensity) < 1e-9
         ]
-        elements.append(svg_text(panel_left, top - 20, panel_title, font_size=14, font_weight=800, fill=CHART_INK))
-        elements.append(
-            f'<rect x="{panel_left}" y="{top}" width="{panel_width}" height="{panel_height}" fill="#ffffff" stroke="{CHART_GRID}"/>'
-        )
-        for tick in [0.0, 0.25, 0.5, 0.75, 1.0]:
-            y = y_share(tick)
+        elements.append(svg_text(panel_left, share_top - 22, panel_title, font_size=14, font_weight=800, fill=CHART_INK))
+        for panel_top, row_label in [(share_top, "Bridge share"), (mass_top, "Carrier mass")]:
             elements.append(
-                f'<line x1="{panel_left}" y1="{y:.1f}" x2="{panel_left + panel_width}" y2="{y:.1f}" stroke="{CHART_GRID}" stroke-width="1"/>'
+                f'<rect x="{panel_left}" y="{panel_top}" width="{panel_width}" height="{panel_height}" fill="#ffffff" stroke="{CHART_GRID}"/>'
             )
-            if panel_left == left:
-                elements.append(svg_text(panel_left - 11, y + 4, f"{tick:.2f}".rstrip("0").rstrip("."), font_size=11, fill=CHART_MUTED, text_anchor="end"))
-        for tick in [0, 20, 40, 60, 80]:
-            x = x_scale(panel_left, tick)
-            elements.append(svg_text(x, bottom + 24, str(tick), font_size=11, fill=CHART_MUTED, text_anchor="middle"))
-            elements.append(f'<line x1="{x:.1f}" y1="{bottom}" x2="{x:.1f}" y2="{bottom + 6}" stroke="{CHART_MUTED}"/>')
-        share_line = [(x_scale(panel_left, point.time), y_share(point.bridge_share)) for point in panel_points]
-        mass_line = [(x_scale(panel_left, point.time), y_share(mass_to_share(point.population_mass))) for point in panel_points]
-        elements.append(_polyline(share_line, CHART_TEAL, 3.2))
-        elements.append(
-            f'<polyline points="{" ".join(f"{x:.1f},{y:.1f}" for x, y in mass_line)}" fill="none" stroke="{CHART_RED}" stroke-width="3.0" stroke-dasharray="7 6" stroke-linejoin="round" stroke-linecap="round"/>'
-        )
-        final = panel_points[-1]
-        elements.append(svg_text(panel_left + 18, top + 28, f"final bridge share {final.bridge_share:.2f}", font_size=12, font_weight=800, fill=CHART_TEAL))
-        elements.append(svg_text(panel_left + 18, top + 49, f"final population mass {final.population_mass:.2f}", font_size=12, font_weight=800, fill=CHART_RED))
-        elements.append(svg_text(panel_left + panel_width / 2, bottom + 48, "slow time", font_size=12, fill=CHART_MUTED, text_anchor="middle"))
+            elements.append(svg_text(panel_left + 12, panel_top + 22, row_label, font_size=12, font_weight=800, fill=CHART_INK))
+            for tick in [0.0, 0.5, 1.0]:
+                y = y_unit(panel_top, tick) if panel_top == share_top else y_mass(tick * mass_axis_max)
+                elements.append(
+                    f'<line x1="{panel_left}" y1="{y:.1f}" x2="{panel_left + panel_width}" y2="{y:.1f}" stroke="{CHART_GRID}" stroke-width="1"/>'
+                )
+                if panel_left == left:
+                    label = f"{tick:.1f}".rstrip("0").rstrip(".") if panel_top == share_top else f"{tick * mass_axis_max:.0f}"
+                    elements.append(svg_text(panel_left - 11, y + 4, label, font_size=11, fill=CHART_MUTED, text_anchor="end"))
+            for tick in [0, 20, 40, 60, 80]:
+                x = x_scale(panel_left, tick)
+                elements.append(f'<line x1="{x:.1f}" y1="{panel_top + panel_height}" x2="{x:.1f}" y2="{panel_top + panel_height + 5}" stroke="{CHART_MUTED}"/>')
+                if panel_top == mass_top:
+                    elements.append(svg_text(x, bottom + 24, str(tick), font_size=11, fill=CHART_MUTED, text_anchor="middle"))
 
-    legend_y = bottom + 90
+        share_line = [(x_scale(panel_left, point.time), y_unit(share_top, point.bridge_share)) for point in panel_points]
+        mass_line = [(x_scale(panel_left, point.time), y_mass(point.population_mass)) for point in panel_points]
+        elements.append(_polyline(share_line, CHART_TEAL, 3.2))
+        elements.append(_polyline(mass_line, CHART_RED, 3.2))
+        final = panel_points[-1]
+        share_note = f"ends at {final.bridge_share:.2f}"
+        mass_note = f"ends at {final.population_mass:.2f}"
+        elements.append(svg_text(panel_left + panel_width - 16, share_top + 24, share_note, font_size=12, font_weight=800, fill=CHART_TEAL, text_anchor="end"))
+        elements.append(svg_text(panel_left + panel_width - 16, mass_top + 24, mass_note, font_size=12, font_weight=800, fill=CHART_RED, text_anchor="end"))
+        elements.append(svg_text(panel_left + panel_width / 2, bottom + 50, "slow time", font_size=12, fill=CHART_MUTED, text_anchor="middle"))
+
+    legend_y = bottom + 86
     elements.append(f'<line x1="{left}" y1="{legend_y}" x2="{left + 32}" y2="{legend_y}" stroke="{CHART_TEAL}" stroke-width="4" stroke-linecap="round"/>')
     elements.append(svg_text(left + 42, legend_y + 4, "share governed by bridge rule", font_size=12, font_weight=700, fill=CHART_INK))
-    elements.append(f'<line x1="{left + 320}" y1="{legend_y}" x2="{left + 352}" y2="{legend_y}" stroke="{CHART_RED}" stroke-width="4" stroke-dasharray="7 6" stroke-linecap="round"/>')
-    elements.append(svg_text(left + 362, legend_y + 4, "absolute population mass, log-scaled to panel", font_size=12, font_weight=700, fill=CHART_INK))
-    elements.append(svg_text(27, top + panel_height / 2, "share or scaled mass", font_size=12, fill=CHART_MUTED, transform=f"rotate(-90 27 {top + panel_height / 2})", text_anchor="middle"))
+    elements.append(f'<line x1="{left + 320}" y1="{legend_y}" x2="{left + 352}" y2="{legend_y}" stroke="{CHART_RED}" stroke-width="4" stroke-linecap="round"/>')
+    elements.append(svg_text(left + 362, legend_y + 4, "absolute carrier mass", font_size=12, font_weight=700, fill=CHART_INK))
+    elements.append(svg_text(27, share_top + panel_height / 2, "share", font_size=12, fill=CHART_MUTED, transform=f"rotate(-90 27 {share_top + panel_height / 2})", text_anchor="middle"))
+    elements.append(svg_text(27, mass_top + panel_height / 2, "mass", font_size=12, fill=CHART_MUTED, transform=f"rotate(-90 27 {mass_top + panel_height / 2})", text_anchor="middle"))
     elements.append(chart_footer("Bridge and sink start at the same capacity and equal shares. Competition intensity omega = 1.2.", width, height))
     elements.append("</svg>")
     path.parent.mkdir(parents=True, exist_ok=True)

@@ -1,63 +1,83 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="940" height="600" viewBox="0 0 940 600">
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="700" viewBox="0 0 940 700">
 <rect width="100%" height="100%" fill="#fffaf2"/>
-<rect x="18" y="18" width="904" height="564" rx="0" fill="#ffffff" stroke="#eadfce"/>
+<rect x="18" y="18" width="904" height="664" rx="0" fill="#ffffff" stroke="#eadfce"/>
 <line x1="18" y1="18" x2="922" y2="18" stroke="#d5412f" stroke-width="5"/>
-<text x="36" y="44" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="22" font-weight="800" fill="#171411">Competition Selects Rules, Not Good Intentions</text>
-<text x="36" y="68" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="13" fill="#5f5a52">Material competition shifts mass to a bridge; engagement competition can select the sink</text>
+<text x="36" y="44" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="22" font-weight="800" fill="#171411">Competition Selects Whatever It Scores</text>
+<text x="36" y="68" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="13" fill="#5f5a52">The same bridge and sink have opposite outcomes when the contest rewards viability versus engagement</text>
 <line x1="36" y1="82" x2="904" y2="82" stroke="#e7dfd3" stroke-width="1"/>
-<text x="78" y="92" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="14" font-weight="800" fill="#171411">A. Competition on material viability</text>
-<rect x="78" y="112" width="373.0" height="342" fill="#ffffff" stroke="#e7dfd3"/>
-<line x1="78" y1="454.0" x2="451.0" y2="454.0" stroke="#e7dfd3" stroke-width="1"/>
-<text x="67" y="458.0" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="end">0</text>
-<line x1="78" y1="368.5" x2="451.0" y2="368.5" stroke="#e7dfd3" stroke-width="1"/>
-<text x="67" y="372.5" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="end">0.25</text>
-<line x1="78" y1="283.0" x2="451.0" y2="283.0" stroke="#e7dfd3" stroke-width="1"/>
-<text x="67" y="287.0" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="end">0.5</text>
-<line x1="78" y1="197.5" x2="451.0" y2="197.5" stroke="#e7dfd3" stroke-width="1"/>
-<text x="67" y="201.5" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="end">0.75</text>
-<line x1="78" y1="112.0" x2="451.0" y2="112.0" stroke="#e7dfd3" stroke-width="1"/>
-<text x="67" y="116.0" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="end">1</text>
-<text x="78.0" y="478" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="middle">0</text>
-<line x1="78.0" y1="454" x2="78.0" y2="460" stroke="#5f5a52"/>
-<text x="171.25" y="478" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="middle">20</text>
-<line x1="171.2" y1="454" x2="171.2" y2="460" stroke="#5f5a52"/>
-<text x="264.5" y="478" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="middle">40</text>
-<line x1="264.5" y1="454" x2="264.5" y2="460" stroke="#5f5a52"/>
-<text x="357.75" y="478" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="middle">60</text>
-<line x1="357.8" y1="454" x2="357.8" y2="460" stroke="#5f5a52"/>
-<text x="451.0" y="478" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="middle">80</text>
-<line x1="451.0" y1="454" x2="451.0" y2="460" stroke="#5f5a52"/>
-<polyline points="78.0,283.0 82.7,282.7 87.3,281.8 92.0,279.8 96.7,275.7 101.3,268.8 106.0,260.9 110.6,252.9 115.3,244.9 120.0,237.1 124.6,229.5 129.3,222.0 133.9,214.9 138.6,207.9 143.3,201.3 147.9,195.0 152.6,188.9 157.3,183.2 161.9,177.8 166.6,172.7 171.2,168.0 175.9,163.5 180.6,159.3 185.2,155.5 189.9,151.8 194.6,148.5 199.2,145.4 203.9,142.5 208.6,139.9 213.2,137.5 217.9,135.2 222.5,133.2 227.2,131.3 231.9,129.6 236.5,128.0 241.2,126.6 245.8,125.2 250.5,124.0 255.2,122.9 259.8,121.9 264.5,121.0 269.2,120.2 273.8,119.4 278.5,118.8 283.1,118.1 287.8,117.6 292.5,117.1 297.1,116.6 301.8,116.2 306.5,115.8 311.1,115.4 315.8,115.1 320.4,114.8 325.1,114.5 329.8,114.3 334.4,114.1 339.1,113.9 343.8,113.7 348.4,113.6 353.1,113.4 357.8,113.3 362.4,113.2 367.1,113.1 371.7,113.0 376.4,112.9 381.1,112.8 385.7,112.7 390.4,112.6 395.1,112.6 399.7,112.5 404.4,112.5 409.0,112.4 413.7,112.4 418.4,112.4 423.0,112.3 427.7,112.3 432.4,112.3 437.0,112.2 441.7,112.2 446.3,112.2 451.0,112.2" fill="none" stroke="#007f83" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>
-<polyline points="78.0,454.0 82.7,454.0 87.3,454.0 92.0,454.0 96.7,454.0 101.3,454.0 106.0,454.0 110.6,454.0 115.3,454.0 120.0,454.0 124.6,454.0 129.3,454.0 133.9,454.0 138.6,454.0 143.3,454.0 147.9,454.0 152.6,454.0 157.3,454.0 161.9,454.0 166.6,454.0 171.2,454.0 175.9,454.0 180.6,454.0 185.2,451.6 189.9,448.5 194.6,445.3 199.2,442.0 203.9,438.6 208.6,435.1 213.2,431.6 217.9,427.9 222.5,424.2 227.2,420.5 231.9,416.6 236.5,412.7 241.2,408.8 245.8,404.8 250.5,400.8 255.2,396.7 259.8,392.6 264.5,388.5 269.2,384.3 273.8,380.1 278.5,375.9 283.1,371.7 287.8,367.4 292.5,363.2 297.1,358.9 301.8,354.6 306.5,350.3 311.1,345.9 315.8,341.6 320.4,337.2 325.1,332.9 329.8,328.5 334.4,324.1 339.1,319.8 343.8,315.4 348.4,311.0 353.1,306.6 357.8,302.2 362.4,297.8 367.1,293.4 371.7,289.0 376.4,284.5 381.1,280.1 385.7,275.7 390.4,271.3 395.1,266.9 399.7,262.4 404.4,258.0 409.0,253.6 413.7,249.1 418.4,244.7 423.0,240.3 427.7,235.8 432.4,231.4 437.0,226.9 441.7,222.5 446.3,218.1 451.0,213.6" fill="none" stroke="#c74332" stroke-width="3.0" stroke-dasharray="7 6" stroke-linejoin="round" stroke-linecap="round"/>
-<text x="96" y="140" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" font-weight="800" fill="#007f83">final bridge share 1.00</text>
-<text x="96" y="161" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" font-weight="800" fill="#c74332">final population mass 5.73</text>
-<text x="264.5" y="502" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" fill="#5f5a52" text-anchor="middle">slow time</text>
-<text x="515.0" y="92" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="14" font-weight="800" fill="#171411">B. Competition on engagement</text>
-<rect x="515.0" y="112" width="373.0" height="342" fill="#ffffff" stroke="#e7dfd3"/>
-<line x1="515.0" y1="454.0" x2="888.0" y2="454.0" stroke="#e7dfd3" stroke-width="1"/>
-<line x1="515.0" y1="368.5" x2="888.0" y2="368.5" stroke="#e7dfd3" stroke-width="1"/>
-<line x1="515.0" y1="283.0" x2="888.0" y2="283.0" stroke="#e7dfd3" stroke-width="1"/>
-<line x1="515.0" y1="197.5" x2="888.0" y2="197.5" stroke="#e7dfd3" stroke-width="1"/>
-<line x1="515.0" y1="112.0" x2="888.0" y2="112.0" stroke="#e7dfd3" stroke-width="1"/>
-<text x="515.0" y="478" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="middle">0</text>
-<line x1="515.0" y1="454" x2="515.0" y2="460" stroke="#5f5a52"/>
-<text x="608.25" y="478" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="middle">20</text>
-<line x1="608.2" y1="454" x2="608.2" y2="460" stroke="#5f5a52"/>
-<text x="701.5" y="478" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="middle">40</text>
-<line x1="701.5" y1="454" x2="701.5" y2="460" stroke="#5f5a52"/>
-<text x="794.75" y="478" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="middle">60</text>
-<line x1="794.8" y1="454" x2="794.8" y2="460" stroke="#5f5a52"/>
-<text x="888.0" y="478" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="middle">80</text>
-<line x1="888.0" y1="454" x2="888.0" y2="460" stroke="#5f5a52"/>
-<polyline points="515.0,283.0 519.7,284.5 524.3,288.0 529.0,298.8 533.6,335.9 538.3,395.8 543.0,432.3 547.6,446.7 552.3,451.6 557.0,453.2 561.6,453.8 566.3,453.9 571.0,454.0 575.6,454.0 580.3,454.0 584.9,454.0 589.6,454.0 594.3,454.0 598.9,454.0 603.6,454.0 608.2,454.0 612.9,454.0 617.6,454.0 622.2,454.0 626.9,454.0 631.6,454.0 636.2,454.0 640.9,454.0 645.5,454.0 650.2,454.0 654.9,454.0 659.5,454.0 664.2,454.0 668.9,454.0 673.5,454.0 678.2,454.0 682.9,454.0 687.5,454.0 692.2,454.0 696.8,454.0 701.5,454.0 706.2,454.0 710.8,454.0 715.5,454.0 720.1,454.0 724.8,454.0 729.5,454.0 734.1,454.0 738.8,454.0 743.5,454.0 748.1,454.0 752.8,454.0 757.5,454.0 762.1,454.0 766.8,454.0 771.4,454.0 776.1,454.0 780.8,454.0 785.4,454.0 790.1,454.0 794.8,454.0 799.4,454.0 804.1,454.0 808.7,454.0 813.4,454.0 818.1,454.0 822.7,454.0 827.4,454.0 832.0,454.0 836.7,454.0 841.4,454.0 846.0,454.0 850.7,454.0 855.4,454.0 860.0,454.0 864.7,454.0 869.4,454.0 874.0,454.0 878.7,454.0 883.3,454.0 888.0,454.0" fill="none" stroke="#007f83" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>
-<polyline points="515.0,454.0 519.7,454.0 524.3,454.0 529.0,454.0 533.6,454.0 538.3,454.0 543.0,454.0 547.6,454.0 552.3,454.0 557.0,454.0 561.6,454.0 566.3,454.0 571.0,454.0 575.6,454.0 580.3,454.0 584.9,454.0 589.6,454.0 594.3,454.0 598.9,454.0 603.6,454.0 608.2,454.0 612.9,454.0 617.6,454.0 622.2,454.0 626.9,454.0 631.6,454.0 636.2,454.0 640.9,454.0 645.5,454.0 650.2,454.0 654.9,454.0 659.5,454.0 664.2,454.0 668.9,454.0 673.5,454.0 678.2,454.0 682.9,454.0 687.5,454.0 692.2,454.0 696.8,454.0 701.5,454.0 706.2,454.0 710.8,454.0 715.5,454.0 720.1,454.0 724.8,454.0 729.5,454.0 734.1,454.0 738.8,454.0 743.5,454.0 748.1,454.0 752.8,454.0 757.5,454.0 762.1,454.0 766.8,454.0 771.4,454.0 776.1,454.0 780.8,454.0 785.4,454.0 790.1,454.0 794.8,454.0 799.4,454.0 804.1,454.0 808.7,454.0 813.4,454.0 818.1,454.0 822.7,454.0 827.4,454.0 832.0,454.0 836.7,454.0 841.4,454.0 846.0,454.0 850.7,454.0 855.4,454.0 860.0,454.0 864.7,454.0 869.4,454.0 874.0,454.0 878.7,454.0 883.3,454.0 888.0,454.0" fill="none" stroke="#c74332" stroke-width="3.0" stroke-dasharray="7 6" stroke-linejoin="round" stroke-linecap="round"/>
-<text x="533.0" y="140" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" font-weight="800" fill="#007f83">final bridge share 0.00</text>
-<text x="533.0" y="161" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" font-weight="800" fill="#c74332">final population mass 0.02</text>
-<text x="701.5" y="502" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" fill="#5f5a52" text-anchor="middle">slow time</text>
-<line x1="78" y1="544" x2="110" y2="544" stroke="#007f83" stroke-width="4" stroke-linecap="round"/>
-<text x="120" y="548" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" font-weight="700" fill="#171411">share governed by bridge rule</text>
-<line x1="398" y1="544" x2="430" y2="544" stroke="#c74332" stroke-width="4" stroke-dasharray="7 6" stroke-linecap="round"/>
-<text x="440" y="548" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" font-weight="700" fill="#171411">absolute population mass, log-scaled to panel</text>
-<text x="27" y="283.0" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" fill="#5f5a52" transform="rotate(-90 27 283.0)" text-anchor="middle">share or scaled mass</text>
-<text x="36" y="578" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="10.5" fill="#5f5a52">Bridge and sink start at the same capacity and equal shares. Competition intensity omega = 1.2.</text>
+<text x="78" y="96" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="14" font-weight="800" fill="#171411">A. Competition on material viability</text>
+<rect x="78" y="118" width="373.0" height="190" fill="#ffffff" stroke="#e7dfd3"/>
+<text x="90" y="140" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" font-weight="800" fill="#171411">Bridge share</text>
+<line x1="78" y1="308.0" x2="451.0" y2="308.0" stroke="#e7dfd3" stroke-width="1"/>
+<text x="67" y="312.0" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="end">0</text>
+<line x1="78" y1="213.0" x2="451.0" y2="213.0" stroke="#e7dfd3" stroke-width="1"/>
+<text x="67" y="217.0" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="end">0.5</text>
+<line x1="78" y1="118.0" x2="451.0" y2="118.0" stroke="#e7dfd3" stroke-width="1"/>
+<text x="67" y="122.0" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="end">1</text>
+<line x1="78.0" y1="308" x2="78.0" y2="313" stroke="#5f5a52"/>
+<line x1="171.2" y1="308" x2="171.2" y2="313" stroke="#5f5a52"/>
+<line x1="264.5" y1="308" x2="264.5" y2="313" stroke="#5f5a52"/>
+<line x1="357.8" y1="308" x2="357.8" y2="313" stroke="#5f5a52"/>
+<line x1="451.0" y1="308" x2="451.0" y2="313" stroke="#5f5a52"/>
+<rect x="78" y="366" width="373.0" height="190" fill="#ffffff" stroke="#e7dfd3"/>
+<text x="90" y="388" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" font-weight="800" fill="#171411">Carrier mass</text>
+<line x1="78" y1="556.0" x2="451.0" y2="556.0" stroke="#e7dfd3" stroke-width="1"/>
+<text x="67" y="560.0" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="end">0</text>
+<line x1="78" y1="461.0" x2="451.0" y2="461.0" stroke="#e7dfd3" stroke-width="1"/>
+<text x="67" y="465.0" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="end">3</text>
+<line x1="78" y1="366.0" x2="451.0" y2="366.0" stroke="#e7dfd3" stroke-width="1"/>
+<text x="67" y="370.0" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="end">6</text>
+<line x1="78.0" y1="556" x2="78.0" y2="561" stroke="#5f5a52"/>
+<text x="78.0" y="580" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="middle">0</text>
+<line x1="171.2" y1="556" x2="171.2" y2="561" stroke="#5f5a52"/>
+<text x="171.25" y="580" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="middle">20</text>
+<line x1="264.5" y1="556" x2="264.5" y2="561" stroke="#5f5a52"/>
+<text x="264.5" y="580" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="middle">40</text>
+<line x1="357.8" y1="556" x2="357.8" y2="561" stroke="#5f5a52"/>
+<text x="357.75" y="580" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="middle">60</text>
+<line x1="451.0" y1="556" x2="451.0" y2="561" stroke="#5f5a52"/>
+<text x="451.0" y="580" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="middle">80</text>
+<polyline points="78.0,213.0 82.7,212.8 87.3,212.3 92.0,211.2 96.7,208.9 101.3,205.1 106.0,200.7 110.6,196.3 115.3,191.8 120.0,187.5 124.6,183.3 129.3,179.1 133.9,175.1 138.6,171.3 143.3,167.6 147.9,164.1 152.6,160.7 157.3,157.6 161.9,154.6 166.6,151.7 171.2,149.1 175.9,146.6 180.6,144.3 185.2,142.1 189.9,140.1 194.6,138.3 199.2,136.6 203.9,135.0 208.6,133.5 213.2,132.1 217.9,130.9 222.5,129.8 227.2,128.7 231.9,127.8 236.5,126.9 241.2,126.1 245.8,125.4 250.5,124.7 255.2,124.1 259.8,123.5 264.5,123.0 269.2,122.6 273.8,122.1 278.5,121.8 283.1,121.4 287.8,121.1 292.5,120.8 297.1,120.5 301.8,120.3 306.5,120.1 311.1,119.9 315.8,119.7 320.4,119.6 325.1,119.4 329.8,119.3 334.4,119.2 339.1,119.1 343.8,119.0 348.4,118.9 353.1,118.8 357.8,118.7 362.4,118.6 367.1,118.6 371.7,118.5 376.4,118.5 381.1,118.4 385.7,118.4 390.4,118.4 395.1,118.3 399.7,118.3 404.4,118.3 409.0,118.2 413.7,118.2 418.4,118.2 423.0,118.2 427.7,118.2 432.4,118.1 437.0,118.1 441.7,118.1 446.3,118.1 451.0,118.1" fill="none" stroke="#007f83" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="78.0,524.3 82.7,525.7 87.3,527.0 92.0,528.0 96.7,528.8 101.3,529.1 106.0,529.2 110.6,529.3 115.3,529.3 120.0,529.2 124.6,529.1 129.3,529.0 133.9,528.8 138.6,528.6 143.3,528.3 147.9,528.0 152.6,527.6 157.3,527.2 161.9,526.7 166.6,526.2 171.2,525.7 175.9,525.1 180.6,524.4 185.2,523.8 189.9,523.0 194.6,522.3 199.2,521.5 203.9,520.6 208.6,519.7 213.2,518.7 217.9,517.7 222.5,516.7 227.2,515.6 231.9,514.5 236.5,513.3 241.2,512.0 245.8,510.7 250.5,509.4 255.2,508.0 259.8,506.5 264.5,505.0 269.2,503.5 273.8,501.8 278.5,500.2 283.1,498.4 287.8,496.6 292.5,494.7 297.1,492.8 301.8,490.8 306.5,488.7 311.1,486.6 315.8,484.3 320.4,482.0 325.1,479.7 329.8,477.2 334.4,474.7 339.1,472.0 343.8,469.3 348.4,466.5 353.1,463.6 357.8,460.6 362.4,457.5 367.1,454.3 371.7,451.0 376.4,447.5 381.1,444.0 385.7,440.3 390.4,436.6 395.1,432.6 399.7,428.6 404.4,424.4 409.0,420.1 413.7,415.7 418.4,411.1 423.0,406.4 427.7,401.5 432.4,396.4 437.0,391.2 441.7,385.8 446.3,380.2 451.0,374.4" fill="none" stroke="#c74332" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="435.0" y="142" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" font-weight="800" fill="#007f83" text-anchor="end">ends at 1.00</text>
+<text x="435.0" y="390" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" font-weight="800" fill="#c74332" text-anchor="end">ends at 5.73</text>
+<text x="264.5" y="606" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" fill="#5f5a52" text-anchor="middle">slow time</text>
+<text x="515.0" y="96" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="14" font-weight="800" fill="#171411">B. Competition on engagement</text>
+<rect x="515.0" y="118" width="373.0" height="190" fill="#ffffff" stroke="#e7dfd3"/>
+<text x="527.0" y="140" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" font-weight="800" fill="#171411">Bridge share</text>
+<line x1="515.0" y1="308.0" x2="888.0" y2="308.0" stroke="#e7dfd3" stroke-width="1"/>
+<line x1="515.0" y1="213.0" x2="888.0" y2="213.0" stroke="#e7dfd3" stroke-width="1"/>
+<line x1="515.0" y1="118.0" x2="888.0" y2="118.0" stroke="#e7dfd3" stroke-width="1"/>
+<line x1="515.0" y1="308" x2="515.0" y2="313" stroke="#5f5a52"/>
+<line x1="608.2" y1="308" x2="608.2" y2="313" stroke="#5f5a52"/>
+<line x1="701.5" y1="308" x2="701.5" y2="313" stroke="#5f5a52"/>
+<line x1="794.8" y1="308" x2="794.8" y2="313" stroke="#5f5a52"/>
+<line x1="888.0" y1="308" x2="888.0" y2="313" stroke="#5f5a52"/>
+<rect x="515.0" y="366" width="373.0" height="190" fill="#ffffff" stroke="#e7dfd3"/>
+<text x="527.0" y="388" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" font-weight="800" fill="#171411">Carrier mass</text>
+<line x1="515.0" y1="556.0" x2="888.0" y2="556.0" stroke="#e7dfd3" stroke-width="1"/>
+<line x1="515.0" y1="461.0" x2="888.0" y2="461.0" stroke="#e7dfd3" stroke-width="1"/>
+<line x1="515.0" y1="366.0" x2="888.0" y2="366.0" stroke="#e7dfd3" stroke-width="1"/>
+<line x1="515.0" y1="556" x2="515.0" y2="561" stroke="#5f5a52"/>
+<text x="515.0" y="580" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="middle">0</text>
+<line x1="608.2" y1="556" x2="608.2" y2="561" stroke="#5f5a52"/>
+<text x="608.25" y="580" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="middle">20</text>
+<line x1="701.5" y1="556" x2="701.5" y2="561" stroke="#5f5a52"/>
+<text x="701.5" y="580" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="middle">40</text>
+<line x1="794.8" y1="556" x2="794.8" y2="561" stroke="#5f5a52"/>
+<text x="794.75" y="580" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="middle">60</text>
+<line x1="888.0" y1="556" x2="888.0" y2="561" stroke="#5f5a52"/>
+<text x="888.0" y="580" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="middle">80</text>
+<polyline points="515.0,213.0 519.7,213.8 524.3,215.8 529.0,221.8 533.6,242.4 538.3,275.6 543.0,295.9 547.6,303.9 552.3,306.7 557.0,307.6 561.6,307.9 566.3,308.0 571.0,308.0 575.6,308.0 580.3,308.0 584.9,308.0 589.6,308.0 594.3,308.0 598.9,308.0 603.6,308.0 608.2,308.0 612.9,308.0 617.6,308.0 622.2,308.0 626.9,308.0 631.6,308.0 636.2,308.0 640.9,308.0 645.5,308.0 650.2,308.0 654.9,308.0 659.5,308.0 664.2,308.0 668.9,308.0 673.5,308.0 678.2,308.0 682.9,308.0 687.5,308.0 692.2,308.0 696.8,308.0 701.5,308.0 706.2,308.0 710.8,308.0 715.5,308.0 720.1,308.0 724.8,308.0 729.5,308.0 734.1,308.0 738.8,308.0 743.5,308.0 748.1,308.0 752.8,308.0 757.5,308.0 762.1,308.0 766.8,308.0 771.4,308.0 776.1,308.0 780.8,308.0 785.4,308.0 790.1,308.0 794.8,308.0 799.4,308.0 804.1,308.0 808.7,308.0 813.4,308.0 818.1,308.0 822.7,308.0 827.4,308.0 832.0,308.0 836.7,308.0 841.4,308.0 846.0,308.0 850.7,308.0 855.4,308.0 860.0,308.0 864.7,308.0 869.4,308.0 874.0,308.0 878.7,308.0 883.3,308.0 888.0,308.0" fill="none" stroke="#007f83" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="515.0,524.3 519.7,525.7 524.3,527.0 529.0,528.0 533.6,528.9 538.3,529.7 543.0,530.7 547.6,531.8 552.3,533.0 557.0,534.1 561.6,535.1 566.3,536.1 571.0,537.1 575.6,538.0 580.3,538.8 584.9,539.7 589.6,540.5 594.3,541.2 598.9,541.9 603.6,542.6 608.2,543.3 612.9,543.9 617.6,544.5 622.2,545.0 626.9,545.6 631.6,546.1 636.2,546.6 640.9,547.0 645.5,547.4 650.2,547.9 654.9,548.3 659.5,548.6 664.2,549.0 668.9,549.3 673.5,549.7 678.2,550.0 682.9,550.3 687.5,550.5 692.2,550.8 696.8,551.1 701.5,551.3 706.2,551.5 710.8,551.7 715.5,552.0 720.1,552.1 724.8,552.3 729.5,552.5 734.1,552.7 738.8,552.8 743.5,553.0 748.1,553.1 752.8,553.3 757.5,553.4 762.1,553.5 766.8,553.7 771.4,553.8 776.1,553.9 780.8,554.0 785.4,554.1 790.1,554.2 794.8,554.3 799.4,554.4 804.1,554.4 808.7,554.5 813.4,554.6 818.1,554.6 822.7,554.7 827.4,554.8 832.0,554.8 836.7,554.9 841.4,554.9 846.0,555.0 850.7,555.0 855.4,555.1 860.0,555.1 864.7,555.2 869.4,555.2 874.0,555.3 878.7,555.3 883.3,555.3 888.0,555.4" fill="none" stroke="#c74332" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="872.0" y="142" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" font-weight="800" fill="#007f83" text-anchor="end">ends at 0.00</text>
+<text x="872.0" y="390" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" font-weight="800" fill="#c74332" text-anchor="end">ends at 0.02</text>
+<text x="701.5" y="606" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" fill="#5f5a52" text-anchor="middle">slow time</text>
+<line x1="78" y1="642" x2="110" y2="642" stroke="#007f83" stroke-width="4" stroke-linecap="round"/>
+<text x="120" y="646" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" font-weight="700" fill="#171411">share governed by bridge rule</text>
+<line x1="398" y1="642" x2="430" y2="642" stroke="#c74332" stroke-width="4" stroke-linecap="round"/>
+<text x="440" y="646" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" font-weight="700" fill="#171411">absolute carrier mass</text>
+<text x="27" y="213.0" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" fill="#5f5a52" transform="rotate(-90 27 213.0)" text-anchor="middle">share</text>
+<text x="27" y="461.0" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" fill="#5f5a52" transform="rotate(-90 27 461.0)" text-anchor="middle">mass</text>
+<text x="36" y="678" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="10.5" fill="#5f5a52">Bridge and sink start at the same capacity and equal shares. Competition intensity omega = 1.2.</text>
 </svg>
