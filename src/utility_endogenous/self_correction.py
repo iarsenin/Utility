@@ -554,7 +554,7 @@ def write_competition_svg(path: Path, points: list[CompetitionPathPoint]) -> Non
             if point.selection_metric == metric and abs(point.competition_intensity - selected_intensity) < 1e-9
         ]
         elements.append(svg_text(panel_left, share_top - 22, panel_title, font_size=14, font_weight=800, fill=CHART_INK))
-        for panel_top, row_label in [(share_top, "Building-rule share"), (mass_top, "Material scale")]:
+        for panel_top, row_label in [(share_top, "Capacity-building share s"), (mass_top, "Material scale N")]:
             elements.append(
                 f'<rect x="{panel_left}" y="{panel_top}" width="{panel_width}" height="{panel_height}" fill="#ffffff" stroke="{CHART_GRID}"/>'
             )
@@ -582,15 +582,15 @@ def write_competition_svg(path: Path, points: list[CompetitionPathPoint]) -> Non
         mass_note = f"ends at {final.population_mass:.2f}"
         elements.append(svg_text(panel_left + panel_width - 16, share_top + 24, share_note, font_size=12, font_weight=800, fill=CHART_TEAL, text_anchor="end"))
         elements.append(svg_text(panel_left + panel_width - 16, mass_top + 24, mass_note, font_size=12, font_weight=800, fill=CHART_RED, text_anchor="end"))
-        elements.append(svg_text(panel_left + panel_width / 2, bottom + 50, "slow time", font_size=12, fill=CHART_MUTED, text_anchor="middle"))
+        elements.append(svg_text(panel_left + panel_width / 2, bottom + 50, "slow time t", font_size=12, fill=CHART_MUTED, text_anchor="middle"))
 
     legend_y = bottom + 86
     elements.append(f'<line x1="{left}" y1="{legend_y}" x2="{left + 32}" y2="{legend_y}" stroke="{CHART_TEAL}" stroke-width="4" stroke-linecap="round"/>')
-    elements.append(svg_text(left + 42, legend_y + 4, "share under capacity-building rule", font_size=12, font_weight=700, fill=CHART_INK))
+    elements.append(svg_text(left + 42, legend_y + 4, "capacity-building share s", font_size=12, font_weight=700, fill=CHART_INK))
     elements.append(f'<line x1="{left + 320}" y1="{legend_y}" x2="{left + 352}" y2="{legend_y}" stroke="{CHART_RED}" stroke-width="4" stroke-linecap="round"/>')
-    elements.append(svg_text(left + 362, legend_y + 4, "absolute material scale", font_size=12, font_weight=700, fill=CHART_INK))
-    elements.append(svg_text(27, share_top + panel_height / 2, "share", font_size=12, fill=CHART_MUTED, transform=f"rotate(-90 27 {share_top + panel_height / 2})", text_anchor="middle"))
-    elements.append(svg_text(27, mass_top + panel_height / 2, "mass", font_size=12, fill=CHART_MUTED, transform=f"rotate(-90 27 {mass_top + panel_height / 2})", text_anchor="middle"))
+    elements.append(svg_text(left + 362, legend_y + 4, "material scale N", font_size=12, font_weight=700, fill=CHART_INK))
+    elements.append(svg_text(27, share_top + panel_height / 2, "share s", font_size=12, fill=CHART_MUTED, transform=f"rotate(-90 27 {share_top + panel_height / 2})", text_anchor="middle"))
+    elements.append(svg_text(27, mass_top + panel_height / 2, "scale N", font_size=12, fill=CHART_MUTED, transform=f"rotate(-90 27 {mass_top + panel_height / 2})", text_anchor="middle"))
     elements.append(chart_footer("The two rules start at the same capacity and equal shares. Competition intensity omega = 1.2.", width, height))
     elements.append("</svg>")
     path.parent.mkdir(parents=True, exist_ok=True)

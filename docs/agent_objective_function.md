@@ -131,7 +131,8 @@ Use these roles when an agentic edit cycle is requested:
    stacked metaphors, charts without a reason to exist, math that has no
    visible job in the argument, repeated redefinitions, and shorthand terms
    that sound intuitive but are not yet concrete, such as friction, salience,
-   responsiveness, or perceived risk.
+   responsiveness, or perceived risk. If prose names a chart symbol, the
+   symbol must appear on the chart axis, legend, or caption.
 3. **Scientist:** theorem scope, model fidelity, no overclaiming.
 4. **Narrator:** examples illuminate the mechanism rather than decorate it.
 5. **Writer:** integrate feedback without flattening the result.

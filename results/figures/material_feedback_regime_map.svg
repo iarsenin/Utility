@@ -3016,8 +3016,8 @@
 <text x="82" y="225.0" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="end">0.32</text>
 <line x1="94" y1="112.0" x2="886" y2="112.0" stroke="#ffffff" stroke-width="1" opacity="0.8"/>
 <text x="82" y="116.0" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="end">0.38</text>
-<text x="490.0" y="602" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" fill="#5f5a52" text-anchor="middle">damage per substitute use</text>
-<text x="33" y="330.0" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" fill="#5f5a52" transform="rotate(-90 33 330.0)" text-anchor="middle">baseline repair</text>
+<text x="490.0" y="602" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" fill="#5f5a52" text-anchor="middle">damage per substitute use L</text>
+<text x="33" y="330.0" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" fill="#5f5a52" transform="rotate(-90 33 330.0)" text-anchor="middle">baseline repair alpha</text>
 <circle cx="410.8" cy="375.4" r="8" fill="#171411" stroke="#ffffff" stroke-width="2"/>
 <text x="424.80000000000007" y="363.4166666666667" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" font-weight="800" fill="#171411">baseline trap</text>
 <line x1="410.8" y1="363.4" x2="410.8" y2="248.3" stroke="#171411" stroke-width="3.2" stroke-linecap="round" marker-end="url(#arrowhead)"/>

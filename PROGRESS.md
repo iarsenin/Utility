@@ -118,6 +118,14 @@ Latest render check:
 - `results/figures/article_mechanism_terms_huh_2026-06-30.png` verifies the
   Section 2 clarification of friction, salience, responsiveness, and perceived
   risk after the HuH? critique.
+- `results/figures/article_symbol_labels_huh_2026-06-30.png` verifies that the
+  prose definition of substitute behavior appears before the diagnostic and
+  that the main-text figures carry the plotted symbols.
+- `results/figures/material_feedback_loop_label_check_2026-06-30.png`,
+  `results/figures/material_feedback_regime_label_check_2026-06-30.png`, and
+  `results/figures/competition_selection_label_check_2026-06-30.png` verify the
+  individual chart labels for \(p\), \(\Phi(K)\), \(L\), \(\alpha\), \(s\),
+  \(N\), and \(t\).
 
 ## Active Next Steps
 

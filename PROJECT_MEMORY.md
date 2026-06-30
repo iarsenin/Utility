@@ -63,6 +63,9 @@ material growth object are named.
 - HuH? must also catch friendly-sounding shorthand that is still undefined.
   Terms such as friction, salience, responsiveness, and perceived risk need
   concrete examples at first use.
+- If the prose names a plotted symbol, the symbol must appear on the chart
+  axis, legend, or caption. Do not make the reader infer that "substitute
+  share" means \(p\).
 
 ## Do Not Regress To
 

@@ -470,7 +470,7 @@ def write_phase_svg(path: Path, scenarios: list[CapacityFeedbackParams]) -> None
     zero_y = y_scale(0.0)
     elements.append(f'<line x1="{left}" y1="{zero_y:.1f}" x2="{width - right}" y2="{zero_y:.1f}" stroke="{CHART_INK}" stroke-width="1.3"/>')
     elements.append(svg_text(left + chart_width / 2, height - 34, "material capacity K", font_size=12, fill=CHART_MUTED, text_anchor="middle"))
-    elements.append(svg_text(28, top + chart_height / 2, "capacity drift", font_size=12, fill=CHART_MUTED, transform=f"rotate(-90 28 {top + chart_height / 2})", text_anchor="middle"))
+    elements.append(svg_text(28, top + chart_height / 2, "capacity drift Phi(K)", font_size=12, fill=CHART_MUTED, transform=f"rotate(-90 28 {top + chart_height / 2})", text_anchor="middle"))
 
     for index, params in enumerate(scenarios):
         color = colors[index % len(colors)]
@@ -533,7 +533,7 @@ def write_paths_svg(path: Path, paths: list[list[CapacityPathPoint]]) -> None:
         y = y_scale(tick)
         elements.append(f'<line x1="{left}" y1="{y:.1f}" x2="{width - right}" y2="{y:.1f}" stroke="{CHART_GRID}" stroke-width="1"/>')
         elements.append(svg_text(left - 12, y + 4, f"{tick:.2f}".rstrip("0").rstrip("."), font_size=11, fill=CHART_MUTED, text_anchor="end"))
-    elements.append(svg_text(left + chart_width / 2, height - 31, "slow time", font_size=12, fill=CHART_MUTED, text_anchor="middle"))
+    elements.append(svg_text(left + chart_width / 2, height - 31, "slow time t", font_size=12, fill=CHART_MUTED, text_anchor="middle"))
     elements.append(svg_text(25, top + chart_height / 2, "capacity K", font_size=12, fill=CHART_MUTED, transform=f"rotate(-90 25 {top + chart_height / 2})", text_anchor="middle"))
     for index, path_points in enumerate(paths):
         color = colors[index % len(colors)]
@@ -614,7 +614,7 @@ def write_loop_svg(path: Path, params: CapacityFeedbackParams) -> None:
         y = y_share(tick)
         elements.append(f'<line x1="{left}" y1="{y:.1f}" x2="{left + panel_width}" y2="{y:.1f}" stroke="{CHART_GRID}" stroke-width="1"/>')
         elements.append(svg_text(left - 12, y + 4, f"{tick:.2f}".rstrip("0").rstrip("."), font_size=11, fill=CHART_MUTED, text_anchor="end"))
-    elements.append(svg_text(27, top + panel_height / 2, "substitute share", font_size=12, fill=CHART_MUTED, transform=f"rotate(-90 27 {top + panel_height / 2})", text_anchor="middle"))
+    elements.append(svg_text(27, top + panel_height / 2, "substitute-behavior share p", font_size=12, fill=CHART_MUTED, transform=f"rotate(-90 27 {top + panel_height / 2})", text_anchor="middle"))
 
     for tick in [-0.15, 0.0, 0.15]:
         y = y_drift(tick)
@@ -622,7 +622,7 @@ def write_loop_svg(path: Path, params: CapacityFeedbackParams) -> None:
         elements.append(svg_text(right_left - 12, y + 4, f"{tick:.2f}".rstrip("0"), font_size=11, fill=CHART_MUTED, text_anchor="end"))
     zero_y = y_drift(0.0)
     elements.append(f'<line x1="{right_left}" y1="{zero_y:.1f}" x2="{right_left + panel_width}" y2="{zero_y:.1f}" stroke="{CHART_INK}" stroke-width="1.3"/>')
-    elements.append(svg_text(right_left - 50, top + panel_height / 2, "capacity drift", font_size=12, fill=CHART_MUTED, transform=f"rotate(-90 {right_left - 50} {top + panel_height / 2})", text_anchor="middle"))
+    elements.append(svg_text(right_left - 50, top + panel_height / 2, "capacity drift Phi(K)", font_size=12, fill=CHART_MUTED, transform=f"rotate(-90 {right_left - 50} {top + panel_height / 2})", text_anchor="middle"))
 
     choice_line = [
         (x_scale(left, index / 500), y_share(substitute_share(index / 500, params)))
@@ -731,8 +731,8 @@ def write_regime_map_svg(path: Path, rows: list[RegimeGridPoint], baseline: Capa
         y = y_scale(tick)
         elements.append(f'<line x1="{left}" y1="{y:.1f}" x2="{left + chart_width}" y2="{y:.1f}" stroke="#ffffff" stroke-width="1" opacity="0.8"/>')
         elements.append(svg_text(left - 12, y + 4, f"{tick:.2f}", font_size=11, fill=CHART_MUTED, text_anchor="end"))
-    elements.append(svg_text(left + chart_width / 2, top + chart_height + 54, "damage per substitute use", font_size=12, fill=CHART_MUTED, text_anchor="middle"))
-    elements.append(svg_text(33, top + chart_height / 2, "baseline repair", font_size=12, fill=CHART_MUTED, transform=f"rotate(-90 33 {top + chart_height / 2})", text_anchor="middle"))
+    elements.append(svg_text(left + chart_width / 2, top + chart_height + 54, "damage per substitute use L", font_size=12, fill=CHART_MUTED, text_anchor="middle"))
+    elements.append(svg_text(33, top + chart_height / 2, "baseline repair alpha", font_size=12, fill=CHART_MUTED, transform=f"rotate(-90 33 {top + chart_height / 2})", text_anchor="middle"))
 
     base_x = x_scale(baseline.substitute_damage)
     base_y = y_scale(baseline.baseline_repair)
