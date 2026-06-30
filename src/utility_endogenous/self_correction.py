@@ -362,9 +362,9 @@ def run_rule_competition_audit() -> tuple[list[CompetitionPathPoint], list[Compe
             elif metric == "material viability":
                 verdict = "competition selects the capacity-preserving rule"
             elif final.bridge_share < 0.10:
-                verdict = "competition selects the high-engagement sink"
+                verdict = "competition selects the high-engagement capacity-draining rule"
             else:
-                verdict = "proxy competition weakly favors the sink"
+                verdict = "proxy competition weakly favors the capacity-draining rule"
             summaries.append(
                 CompetitionSummary(
                     selection_metric=metric,
@@ -538,7 +538,7 @@ def write_competition_svg(path: Path, points: list[CompetitionPathPoint]) -> Non
         *svg_open(width, height),
         *chart_header(
             "Competition Selects Whatever It Scores",
-            "The same bridge and sink have opposite outcomes when the contest rewards viability versus engagement",
+            "The same capacity-building and capacity-draining rules have opposite outcomes under different scores",
             width,
         ),
     ]
@@ -554,7 +554,7 @@ def write_competition_svg(path: Path, points: list[CompetitionPathPoint]) -> Non
             if point.selection_metric == metric and abs(point.competition_intensity - selected_intensity) < 1e-9
         ]
         elements.append(svg_text(panel_left, share_top - 22, panel_title, font_size=14, font_weight=800, fill=CHART_INK))
-        for panel_top, row_label in [(share_top, "Bridge share"), (mass_top, "Carrier mass")]:
+        for panel_top, row_label in [(share_top, "Building-rule share"), (mass_top, "Material scale")]:
             elements.append(
                 f'<rect x="{panel_left}" y="{panel_top}" width="{panel_width}" height="{panel_height}" fill="#ffffff" stroke="{CHART_GRID}"/>'
             )
@@ -586,12 +586,12 @@ def write_competition_svg(path: Path, points: list[CompetitionPathPoint]) -> Non
 
     legend_y = bottom + 86
     elements.append(f'<line x1="{left}" y1="{legend_y}" x2="{left + 32}" y2="{legend_y}" stroke="{CHART_TEAL}" stroke-width="4" stroke-linecap="round"/>')
-    elements.append(svg_text(left + 42, legend_y + 4, "share governed by bridge rule", font_size=12, font_weight=700, fill=CHART_INK))
+    elements.append(svg_text(left + 42, legend_y + 4, "share under capacity-building rule", font_size=12, font_weight=700, fill=CHART_INK))
     elements.append(f'<line x1="{left + 320}" y1="{legend_y}" x2="{left + 352}" y2="{legend_y}" stroke="{CHART_RED}" stroke-width="4" stroke-linecap="round"/>')
-    elements.append(svg_text(left + 362, legend_y + 4, "absolute carrier mass", font_size=12, font_weight=700, fill=CHART_INK))
+    elements.append(svg_text(left + 362, legend_y + 4, "absolute material scale", font_size=12, font_weight=700, fill=CHART_INK))
     elements.append(svg_text(27, share_top + panel_height / 2, "share", font_size=12, fill=CHART_MUTED, transform=f"rotate(-90 27 {share_top + panel_height / 2})", text_anchor="middle"))
     elements.append(svg_text(27, mass_top + panel_height / 2, "mass", font_size=12, fill=CHART_MUTED, transform=f"rotate(-90 27 {mass_top + panel_height / 2})", text_anchor="middle"))
-    elements.append(chart_footer("Bridge and sink start at the same capacity and equal shares. Competition intensity omega = 1.2.", width, height))
+    elements.append(chart_footer("The two rules start at the same capacity and equal shares. Competition intensity omega = 1.2.", width, height))
     elements.append("</svg>")
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text("\n".join(elements) + "\n", encoding="utf-8")

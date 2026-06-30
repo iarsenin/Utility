@@ -48,7 +48,7 @@ material growth object are named.
   matters when collective rules change exposure, damage, repair, enforcement,
   or the competitive score; it fails when delayed, captured, symbolic,
   unenforced, or displaced.
-- A current-improvement/current-decline alarm is not a general
+- A current-improvement/current-decline report is not a general
   self-correction mechanism in the minimal model.
 - Competition can repair only when the score rewards capacity-preserving rules.
 - Examples are useful only when they specify the measurable capacity and
@@ -57,6 +57,9 @@ material growth object are named.
 - Main-text charts should be argument diagnostics, not raw simulation traces:
   first show the mechanism, then the regime boundary, then the competition
   metric.
+- A HuH? pass is required for major article edits: can an intelligent reader
+  follow why this paragraph, figure, example, or formal claim appears at this
+  point in the story?
 
 ## Do Not Regress To
 

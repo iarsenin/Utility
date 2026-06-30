@@ -24,8 +24,9 @@ def fmt(value: object) -> str:
     return str(value)
 
 
-def markdown_table(rows: list[dict[str, object]], columns: list[str]) -> str:
-    header = "| " + " | ".join(columns) + " |"
+def markdown_table(rows: list[dict[str, object]], columns: list[str], labels: dict[str, str] | None = None) -> str:
+    labels = labels or {}
+    header = "| " + " | ".join(labels.get(column, column) for column in columns) + " |"
     separator = "| " + " | ".join(["---"] * len(columns)) + " |"
     body = [
         "| " + " | ".join(fmt(row.get(column, "")) for column in columns) + " |"
@@ -70,9 +71,9 @@ def write_report(output: dict[str, object]) -> None:
             "attention, or institutional prevalence toward rules that score higher",
             "on the operative competitive score `S`. Absolute material survival is",
             "tracked separately by material growth `g`. With material-viability",
-            "competition, `S` is aligned with `g` and the capacity-preserving bridge",
-            "wins. With engagement-proxy competition, the sink can win while material",
-            "population mass falls.",
+            "competition, `S` is aligned with `g` and the capacity-building rule",
+            "wins. With engagement-proxy competition, the capacity-draining rule",
+            "can win while material population mass falls.",
             "",
             "## Drift-Signal Equilibria",
             "",
@@ -115,11 +116,21 @@ def write_report(output: dict[str, object]) -> None:
                     "final_mean_material_growth",
                     "verdict",
                 ],
+                {
+                    "selection_metric": "competitive score",
+                    "competition_intensity": "competition omega",
+                    "final_bridge_share": "final building-rule share",
+                    "final_bridge_capacity": "final building-rule capacity",
+                    "final_sink_capacity": "final draining-rule capacity",
+                    "final_population_mass": "final material scale",
+                    "final_mean_material_growth": "final material growth",
+                    "verdict": "readout",
+                },
             ),
             "",
             "## Interpretation",
             "",
-            "- Current pain, warnings, or deteriorating flow signals are not enough if",
+            "- Current pain or deteriorating-flow reports are not enough if",
             "  they vanish once the system settles into a low-capacity state.",
             "- In this diagnostic, automatic correction comes from a persistent",
             "  material state channel, or from competition when the competitive score",

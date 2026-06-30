@@ -1,12 +1,12 @@
 repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_state_present,lower_boundary_present
-0.14,0.05,bridge region,1,False,True,False
-0.14,0.05616666666666667,bridge region,1,False,True,False
-0.14,0.06233333333333334,bridge region,1,False,True,False
-0.14,0.0685,bridge region,1,False,True,False
-0.14,0.07466666666666667,bridge region,1,False,True,False
-0.14,0.08083333333333334,bridge region,1,False,True,False
-0.14,0.087,bridge region,1,False,True,False
-0.14,0.09316666666666668,bridge region,1,False,True,False
+0.14,0.05,capacity-building,1,False,True,False
+0.14,0.05616666666666667,capacity-building,1,False,True,False
+0.14,0.06233333333333334,capacity-building,1,False,True,False
+0.14,0.0685,capacity-building,1,False,True,False
+0.14,0.07466666666666667,capacity-building,1,False,True,False
+0.14,0.08083333333333334,capacity-building,1,False,True,False
+0.14,0.087,capacity-building,1,False,True,False
+0.14,0.09316666666666668,capacity-building,1,False,True,False
 0.14,0.09933333333333333,threshold trap,2,True,True,False
 0.14,0.10550000000000001,threshold trap,2,True,True,False
 0.14,0.11166666666666666,threshold trap,2,True,True,False
@@ -60,15 +60,15 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.14,0.4076666666666667,collapse-prone,2,True,True,True
 0.14,0.4138333333333333,collapse-prone,2,True,True,True
 0.14,0.42,collapse-prone,2,True,True,True
-0.14500000000000002,0.05,bridge region,1,False,True,False
-0.14500000000000002,0.05616666666666667,bridge region,1,False,True,False
-0.14500000000000002,0.06233333333333334,bridge region,1,False,True,False
-0.14500000000000002,0.0685,bridge region,1,False,True,False
-0.14500000000000002,0.07466666666666667,bridge region,1,False,True,False
-0.14500000000000002,0.08083333333333334,bridge region,1,False,True,False
-0.14500000000000002,0.087,bridge region,1,False,True,False
-0.14500000000000002,0.09316666666666668,bridge region,1,False,True,False
-0.14500000000000002,0.09933333333333333,bridge region,1,False,True,False
+0.14500000000000002,0.05,capacity-building,1,False,True,False
+0.14500000000000002,0.05616666666666667,capacity-building,1,False,True,False
+0.14500000000000002,0.06233333333333334,capacity-building,1,False,True,False
+0.14500000000000002,0.0685,capacity-building,1,False,True,False
+0.14500000000000002,0.07466666666666667,capacity-building,1,False,True,False
+0.14500000000000002,0.08083333333333334,capacity-building,1,False,True,False
+0.14500000000000002,0.087,capacity-building,1,False,True,False
+0.14500000000000002,0.09316666666666668,capacity-building,1,False,True,False
+0.14500000000000002,0.09933333333333333,capacity-building,1,False,True,False
 0.14500000000000002,0.10550000000000001,threshold trap,2,True,True,False
 0.14500000000000002,0.11166666666666666,threshold trap,2,True,True,False
 0.14500000000000002,0.11783333333333335,threshold trap,2,True,True,False
@@ -121,16 +121,16 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.14500000000000002,0.4076666666666667,collapse-prone,2,True,True,True
 0.14500000000000002,0.4138333333333333,collapse-prone,2,True,True,True
 0.14500000000000002,0.42,collapse-prone,2,True,True,True
-0.15000000000000002,0.05,bridge region,1,False,True,False
-0.15000000000000002,0.05616666666666667,bridge region,1,False,True,False
-0.15000000000000002,0.06233333333333334,bridge region,1,False,True,False
-0.15000000000000002,0.0685,bridge region,1,False,True,False
-0.15000000000000002,0.07466666666666667,bridge region,1,False,True,False
-0.15000000000000002,0.08083333333333334,bridge region,1,False,True,False
-0.15000000000000002,0.087,bridge region,1,False,True,False
-0.15000000000000002,0.09316666666666668,bridge region,1,False,True,False
-0.15000000000000002,0.09933333333333333,bridge region,1,False,True,False
-0.15000000000000002,0.10550000000000001,bridge region,1,False,True,False
+0.15000000000000002,0.05,capacity-building,1,False,True,False
+0.15000000000000002,0.05616666666666667,capacity-building,1,False,True,False
+0.15000000000000002,0.06233333333333334,capacity-building,1,False,True,False
+0.15000000000000002,0.0685,capacity-building,1,False,True,False
+0.15000000000000002,0.07466666666666667,capacity-building,1,False,True,False
+0.15000000000000002,0.08083333333333334,capacity-building,1,False,True,False
+0.15000000000000002,0.087,capacity-building,1,False,True,False
+0.15000000000000002,0.09316666666666668,capacity-building,1,False,True,False
+0.15000000000000002,0.09933333333333333,capacity-building,1,False,True,False
+0.15000000000000002,0.10550000000000001,capacity-building,1,False,True,False
 0.15000000000000002,0.11166666666666666,threshold trap,2,True,True,False
 0.15000000000000002,0.11783333333333335,threshold trap,2,True,True,False
 0.15000000000000002,0.124,threshold trap,2,True,True,False
@@ -182,16 +182,16 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.15000000000000002,0.4076666666666667,collapse-prone,2,True,True,True
 0.15000000000000002,0.4138333333333333,collapse-prone,2,True,True,True
 0.15000000000000002,0.42,collapse-prone,2,True,True,True
-0.15500000000000003,0.05,bridge region,1,False,True,False
-0.15500000000000003,0.05616666666666667,bridge region,1,False,True,False
-0.15500000000000003,0.06233333333333334,bridge region,1,False,True,False
-0.15500000000000003,0.0685,bridge region,1,False,True,False
-0.15500000000000003,0.07466666666666667,bridge region,1,False,True,False
-0.15500000000000003,0.08083333333333334,bridge region,1,False,True,False
-0.15500000000000003,0.087,bridge region,1,False,True,False
-0.15500000000000003,0.09316666666666668,bridge region,1,False,True,False
-0.15500000000000003,0.09933333333333333,bridge region,1,False,True,False
-0.15500000000000003,0.10550000000000001,bridge region,1,False,True,False
+0.15500000000000003,0.05,capacity-building,1,False,True,False
+0.15500000000000003,0.05616666666666667,capacity-building,1,False,True,False
+0.15500000000000003,0.06233333333333334,capacity-building,1,False,True,False
+0.15500000000000003,0.0685,capacity-building,1,False,True,False
+0.15500000000000003,0.07466666666666667,capacity-building,1,False,True,False
+0.15500000000000003,0.08083333333333334,capacity-building,1,False,True,False
+0.15500000000000003,0.087,capacity-building,1,False,True,False
+0.15500000000000003,0.09316666666666668,capacity-building,1,False,True,False
+0.15500000000000003,0.09933333333333333,capacity-building,1,False,True,False
+0.15500000000000003,0.10550000000000001,capacity-building,1,False,True,False
 0.15500000000000003,0.11166666666666666,threshold trap,2,True,True,False
 0.15500000000000003,0.11783333333333335,threshold trap,2,True,True,False
 0.15500000000000003,0.124,threshold trap,2,True,True,False
@@ -243,17 +243,17 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.15500000000000003,0.4076666666666667,collapse-prone,2,True,True,True
 0.15500000000000003,0.4138333333333333,collapse-prone,2,True,True,True
 0.15500000000000003,0.42,collapse-prone,2,True,True,True
-0.16,0.05,bridge region,1,False,True,False
-0.16,0.05616666666666667,bridge region,1,False,True,False
-0.16,0.06233333333333334,bridge region,1,False,True,False
-0.16,0.0685,bridge region,1,False,True,False
-0.16,0.07466666666666667,bridge region,1,False,True,False
-0.16,0.08083333333333334,bridge region,1,False,True,False
-0.16,0.087,bridge region,1,False,True,False
-0.16,0.09316666666666668,bridge region,1,False,True,False
-0.16,0.09933333333333333,bridge region,1,False,True,False
-0.16,0.10550000000000001,bridge region,1,False,True,False
-0.16,0.11166666666666666,bridge region,1,False,True,False
+0.16,0.05,capacity-building,1,False,True,False
+0.16,0.05616666666666667,capacity-building,1,False,True,False
+0.16,0.06233333333333334,capacity-building,1,False,True,False
+0.16,0.0685,capacity-building,1,False,True,False
+0.16,0.07466666666666667,capacity-building,1,False,True,False
+0.16,0.08083333333333334,capacity-building,1,False,True,False
+0.16,0.087,capacity-building,1,False,True,False
+0.16,0.09316666666666668,capacity-building,1,False,True,False
+0.16,0.09933333333333333,capacity-building,1,False,True,False
+0.16,0.10550000000000001,capacity-building,1,False,True,False
+0.16,0.11166666666666666,capacity-building,1,False,True,False
 0.16,0.11783333333333335,threshold trap,2,True,True,False
 0.16,0.124,threshold trap,2,True,True,False
 0.16,0.13016666666666665,threshold trap,2,True,True,False
@@ -304,18 +304,18 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.16,0.4076666666666667,collapse-prone,2,True,True,True
 0.16,0.4138333333333333,collapse-prone,2,True,True,True
 0.16,0.42,collapse-prone,2,True,True,True
-0.165,0.05,bridge region,1,False,True,False
-0.165,0.05616666666666667,bridge region,1,False,True,False
-0.165,0.06233333333333334,bridge region,1,False,True,False
-0.165,0.0685,bridge region,1,False,True,False
-0.165,0.07466666666666667,bridge region,1,False,True,False
-0.165,0.08083333333333334,bridge region,1,False,True,False
-0.165,0.087,bridge region,1,False,True,False
-0.165,0.09316666666666668,bridge region,1,False,True,False
-0.165,0.09933333333333333,bridge region,1,False,True,False
-0.165,0.10550000000000001,bridge region,1,False,True,False
-0.165,0.11166666666666666,bridge region,1,False,True,False
-0.165,0.11783333333333335,bridge region,1,False,True,False
+0.165,0.05,capacity-building,1,False,True,False
+0.165,0.05616666666666667,capacity-building,1,False,True,False
+0.165,0.06233333333333334,capacity-building,1,False,True,False
+0.165,0.0685,capacity-building,1,False,True,False
+0.165,0.07466666666666667,capacity-building,1,False,True,False
+0.165,0.08083333333333334,capacity-building,1,False,True,False
+0.165,0.087,capacity-building,1,False,True,False
+0.165,0.09316666666666668,capacity-building,1,False,True,False
+0.165,0.09933333333333333,capacity-building,1,False,True,False
+0.165,0.10550000000000001,capacity-building,1,False,True,False
+0.165,0.11166666666666666,capacity-building,1,False,True,False
+0.165,0.11783333333333335,capacity-building,1,False,True,False
 0.165,0.124,threshold trap,2,True,True,False
 0.165,0.13016666666666665,threshold trap,2,True,True,False
 0.165,0.13633333333333333,threshold trap,2,True,True,False
@@ -365,19 +365,19 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.165,0.4076666666666667,collapse-prone,2,True,True,True
 0.165,0.4138333333333333,collapse-prone,2,True,True,True
 0.165,0.42,collapse-prone,2,True,True,True
-0.17,0.05,bridge region,1,False,True,False
-0.17,0.05616666666666667,bridge region,1,False,True,False
-0.17,0.06233333333333334,bridge region,1,False,True,False
-0.17,0.0685,bridge region,1,False,True,False
-0.17,0.07466666666666667,bridge region,1,False,True,False
-0.17,0.08083333333333334,bridge region,1,False,True,False
-0.17,0.087,bridge region,1,False,True,False
-0.17,0.09316666666666668,bridge region,1,False,True,False
-0.17,0.09933333333333333,bridge region,1,False,True,False
-0.17,0.10550000000000001,bridge region,1,False,True,False
-0.17,0.11166666666666666,bridge region,1,False,True,False
-0.17,0.11783333333333335,bridge region,1,False,True,False
-0.17,0.124,bridge region,1,False,True,False
+0.17,0.05,capacity-building,1,False,True,False
+0.17,0.05616666666666667,capacity-building,1,False,True,False
+0.17,0.06233333333333334,capacity-building,1,False,True,False
+0.17,0.0685,capacity-building,1,False,True,False
+0.17,0.07466666666666667,capacity-building,1,False,True,False
+0.17,0.08083333333333334,capacity-building,1,False,True,False
+0.17,0.087,capacity-building,1,False,True,False
+0.17,0.09316666666666668,capacity-building,1,False,True,False
+0.17,0.09933333333333333,capacity-building,1,False,True,False
+0.17,0.10550000000000001,capacity-building,1,False,True,False
+0.17,0.11166666666666666,capacity-building,1,False,True,False
+0.17,0.11783333333333335,capacity-building,1,False,True,False
+0.17,0.124,capacity-building,1,False,True,False
 0.17,0.13016666666666665,threshold trap,2,True,True,False
 0.17,0.13633333333333333,threshold trap,2,True,True,False
 0.17,0.14250000000000002,threshold trap,2,True,True,False
@@ -426,20 +426,20 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.17,0.4076666666666667,collapse-prone,2,True,True,True
 0.17,0.4138333333333333,collapse-prone,2,True,True,True
 0.17,0.42,collapse-prone,2,True,True,True
-0.17500000000000002,0.05,bridge region,1,False,True,False
-0.17500000000000002,0.05616666666666667,bridge region,1,False,True,False
-0.17500000000000002,0.06233333333333334,bridge region,1,False,True,False
-0.17500000000000002,0.0685,bridge region,1,False,True,False
-0.17500000000000002,0.07466666666666667,bridge region,1,False,True,False
-0.17500000000000002,0.08083333333333334,bridge region,1,False,True,False
-0.17500000000000002,0.087,bridge region,1,False,True,False
-0.17500000000000002,0.09316666666666668,bridge region,1,False,True,False
-0.17500000000000002,0.09933333333333333,bridge region,1,False,True,False
-0.17500000000000002,0.10550000000000001,bridge region,1,False,True,False
-0.17500000000000002,0.11166666666666666,bridge region,1,False,True,False
-0.17500000000000002,0.11783333333333335,bridge region,1,False,True,False
-0.17500000000000002,0.124,bridge region,1,False,True,False
-0.17500000000000002,0.13016666666666665,bridge region,1,False,True,False
+0.17500000000000002,0.05,capacity-building,1,False,True,False
+0.17500000000000002,0.05616666666666667,capacity-building,1,False,True,False
+0.17500000000000002,0.06233333333333334,capacity-building,1,False,True,False
+0.17500000000000002,0.0685,capacity-building,1,False,True,False
+0.17500000000000002,0.07466666666666667,capacity-building,1,False,True,False
+0.17500000000000002,0.08083333333333334,capacity-building,1,False,True,False
+0.17500000000000002,0.087,capacity-building,1,False,True,False
+0.17500000000000002,0.09316666666666668,capacity-building,1,False,True,False
+0.17500000000000002,0.09933333333333333,capacity-building,1,False,True,False
+0.17500000000000002,0.10550000000000001,capacity-building,1,False,True,False
+0.17500000000000002,0.11166666666666666,capacity-building,1,False,True,False
+0.17500000000000002,0.11783333333333335,capacity-building,1,False,True,False
+0.17500000000000002,0.124,capacity-building,1,False,True,False
+0.17500000000000002,0.13016666666666665,capacity-building,1,False,True,False
 0.17500000000000002,0.13633333333333333,threshold trap,2,True,True,False
 0.17500000000000002,0.14250000000000002,threshold trap,2,True,True,False
 0.17500000000000002,0.14866666666666667,threshold trap,2,True,True,False
@@ -487,21 +487,21 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.17500000000000002,0.4076666666666667,collapse-prone,2,True,True,True
 0.17500000000000002,0.4138333333333333,collapse-prone,2,True,True,True
 0.17500000000000002,0.42,collapse-prone,2,True,True,True
-0.18000000000000002,0.05,bridge region,1,False,True,False
-0.18000000000000002,0.05616666666666667,bridge region,1,False,True,False
-0.18000000000000002,0.06233333333333334,bridge region,1,False,True,False
-0.18000000000000002,0.0685,bridge region,1,False,True,False
-0.18000000000000002,0.07466666666666667,bridge region,1,False,True,False
-0.18000000000000002,0.08083333333333334,bridge region,1,False,True,False
-0.18000000000000002,0.087,bridge region,1,False,True,False
-0.18000000000000002,0.09316666666666668,bridge region,1,False,True,False
-0.18000000000000002,0.09933333333333333,bridge region,1,False,True,False
-0.18000000000000002,0.10550000000000001,bridge region,1,False,True,False
-0.18000000000000002,0.11166666666666666,bridge region,1,False,True,False
-0.18000000000000002,0.11783333333333335,bridge region,1,False,True,False
-0.18000000000000002,0.124,bridge region,1,False,True,False
-0.18000000000000002,0.13016666666666665,bridge region,1,False,True,False
-0.18000000000000002,0.13633333333333333,bridge region,1,False,True,False
+0.18000000000000002,0.05,capacity-building,1,False,True,False
+0.18000000000000002,0.05616666666666667,capacity-building,1,False,True,False
+0.18000000000000002,0.06233333333333334,capacity-building,1,False,True,False
+0.18000000000000002,0.0685,capacity-building,1,False,True,False
+0.18000000000000002,0.07466666666666667,capacity-building,1,False,True,False
+0.18000000000000002,0.08083333333333334,capacity-building,1,False,True,False
+0.18000000000000002,0.087,capacity-building,1,False,True,False
+0.18000000000000002,0.09316666666666668,capacity-building,1,False,True,False
+0.18000000000000002,0.09933333333333333,capacity-building,1,False,True,False
+0.18000000000000002,0.10550000000000001,capacity-building,1,False,True,False
+0.18000000000000002,0.11166666666666666,capacity-building,1,False,True,False
+0.18000000000000002,0.11783333333333335,capacity-building,1,False,True,False
+0.18000000000000002,0.124,capacity-building,1,False,True,False
+0.18000000000000002,0.13016666666666665,capacity-building,1,False,True,False
+0.18000000000000002,0.13633333333333333,capacity-building,1,False,True,False
 0.18000000000000002,0.14250000000000002,threshold trap,2,True,True,False
 0.18000000000000002,0.14866666666666667,threshold trap,2,True,True,False
 0.18000000000000002,0.15483333333333332,threshold trap,2,True,True,False
@@ -548,21 +548,21 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.18000000000000002,0.4076666666666667,collapse-prone,2,True,True,True
 0.18000000000000002,0.4138333333333333,collapse-prone,2,True,True,True
 0.18000000000000002,0.42,collapse-prone,2,True,True,True
-0.18500000000000003,0.05,bridge region,1,False,True,False
-0.18500000000000003,0.05616666666666667,bridge region,1,False,True,False
-0.18500000000000003,0.06233333333333334,bridge region,1,False,True,False
-0.18500000000000003,0.0685,bridge region,1,False,True,False
-0.18500000000000003,0.07466666666666667,bridge region,1,False,True,False
-0.18500000000000003,0.08083333333333334,bridge region,1,False,True,False
-0.18500000000000003,0.087,bridge region,1,False,True,False
-0.18500000000000003,0.09316666666666668,bridge region,1,False,True,False
-0.18500000000000003,0.09933333333333333,bridge region,1,False,True,False
-0.18500000000000003,0.10550000000000001,bridge region,1,False,True,False
-0.18500000000000003,0.11166666666666666,bridge region,1,False,True,False
-0.18500000000000003,0.11783333333333335,bridge region,1,False,True,False
-0.18500000000000003,0.124,bridge region,1,False,True,False
-0.18500000000000003,0.13016666666666665,bridge region,1,False,True,False
-0.18500000000000003,0.13633333333333333,bridge region,1,False,True,False
+0.18500000000000003,0.05,capacity-building,1,False,True,False
+0.18500000000000003,0.05616666666666667,capacity-building,1,False,True,False
+0.18500000000000003,0.06233333333333334,capacity-building,1,False,True,False
+0.18500000000000003,0.0685,capacity-building,1,False,True,False
+0.18500000000000003,0.07466666666666667,capacity-building,1,False,True,False
+0.18500000000000003,0.08083333333333334,capacity-building,1,False,True,False
+0.18500000000000003,0.087,capacity-building,1,False,True,False
+0.18500000000000003,0.09316666666666668,capacity-building,1,False,True,False
+0.18500000000000003,0.09933333333333333,capacity-building,1,False,True,False
+0.18500000000000003,0.10550000000000001,capacity-building,1,False,True,False
+0.18500000000000003,0.11166666666666666,capacity-building,1,False,True,False
+0.18500000000000003,0.11783333333333335,capacity-building,1,False,True,False
+0.18500000000000003,0.124,capacity-building,1,False,True,False
+0.18500000000000003,0.13016666666666665,capacity-building,1,False,True,False
+0.18500000000000003,0.13633333333333333,capacity-building,1,False,True,False
 0.18500000000000003,0.14250000000000002,threshold trap,2,True,True,False
 0.18500000000000003,0.14866666666666667,threshold trap,2,True,True,False
 0.18500000000000003,0.15483333333333332,threshold trap,2,True,True,False
@@ -609,22 +609,22 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.18500000000000003,0.4076666666666667,collapse-prone,2,True,True,True
 0.18500000000000003,0.4138333333333333,collapse-prone,2,True,True,True
 0.18500000000000003,0.42,collapse-prone,2,True,True,True
-0.19,0.05,bridge region,1,False,True,False
-0.19,0.05616666666666667,bridge region,1,False,True,False
-0.19,0.06233333333333334,bridge region,1,False,True,False
-0.19,0.0685,bridge region,1,False,True,False
-0.19,0.07466666666666667,bridge region,1,False,True,False
-0.19,0.08083333333333334,bridge region,1,False,True,False
-0.19,0.087,bridge region,1,False,True,False
-0.19,0.09316666666666668,bridge region,1,False,True,False
-0.19,0.09933333333333333,bridge region,1,False,True,False
-0.19,0.10550000000000001,bridge region,1,False,True,False
-0.19,0.11166666666666666,bridge region,1,False,True,False
-0.19,0.11783333333333335,bridge region,1,False,True,False
-0.19,0.124,bridge region,1,False,True,False
-0.19,0.13016666666666665,bridge region,1,False,True,False
-0.19,0.13633333333333333,bridge region,1,False,True,False
-0.19,0.14250000000000002,bridge region,1,False,True,False
+0.19,0.05,capacity-building,1,False,True,False
+0.19,0.05616666666666667,capacity-building,1,False,True,False
+0.19,0.06233333333333334,capacity-building,1,False,True,False
+0.19,0.0685,capacity-building,1,False,True,False
+0.19,0.07466666666666667,capacity-building,1,False,True,False
+0.19,0.08083333333333334,capacity-building,1,False,True,False
+0.19,0.087,capacity-building,1,False,True,False
+0.19,0.09316666666666668,capacity-building,1,False,True,False
+0.19,0.09933333333333333,capacity-building,1,False,True,False
+0.19,0.10550000000000001,capacity-building,1,False,True,False
+0.19,0.11166666666666666,capacity-building,1,False,True,False
+0.19,0.11783333333333335,capacity-building,1,False,True,False
+0.19,0.124,capacity-building,1,False,True,False
+0.19,0.13016666666666665,capacity-building,1,False,True,False
+0.19,0.13633333333333333,capacity-building,1,False,True,False
+0.19,0.14250000000000002,capacity-building,1,False,True,False
 0.19,0.14866666666666667,threshold trap,2,True,True,False
 0.19,0.15483333333333332,threshold trap,2,True,True,False
 0.19,0.161,threshold trap,2,True,True,False
@@ -670,23 +670,23 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.19,0.4076666666666667,collapse-prone,2,True,True,True
 0.19,0.4138333333333333,collapse-prone,2,True,True,True
 0.19,0.42,collapse-prone,2,True,True,True
-0.195,0.05,bridge region,1,False,True,False
-0.195,0.05616666666666667,bridge region,1,False,True,False
-0.195,0.06233333333333334,bridge region,1,False,True,False
-0.195,0.0685,bridge region,1,False,True,False
-0.195,0.07466666666666667,bridge region,1,False,True,False
-0.195,0.08083333333333334,bridge region,1,False,True,False
-0.195,0.087,bridge region,1,False,True,False
-0.195,0.09316666666666668,bridge region,1,False,True,False
-0.195,0.09933333333333333,bridge region,1,False,True,False
-0.195,0.10550000000000001,bridge region,1,False,True,False
-0.195,0.11166666666666666,bridge region,1,False,True,False
-0.195,0.11783333333333335,bridge region,1,False,True,False
-0.195,0.124,bridge region,1,False,True,False
-0.195,0.13016666666666665,bridge region,1,False,True,False
-0.195,0.13633333333333333,bridge region,1,False,True,False
-0.195,0.14250000000000002,bridge region,1,False,True,False
-0.195,0.14866666666666667,bridge region,1,False,True,False
+0.195,0.05,capacity-building,1,False,True,False
+0.195,0.05616666666666667,capacity-building,1,False,True,False
+0.195,0.06233333333333334,capacity-building,1,False,True,False
+0.195,0.0685,capacity-building,1,False,True,False
+0.195,0.07466666666666667,capacity-building,1,False,True,False
+0.195,0.08083333333333334,capacity-building,1,False,True,False
+0.195,0.087,capacity-building,1,False,True,False
+0.195,0.09316666666666668,capacity-building,1,False,True,False
+0.195,0.09933333333333333,capacity-building,1,False,True,False
+0.195,0.10550000000000001,capacity-building,1,False,True,False
+0.195,0.11166666666666666,capacity-building,1,False,True,False
+0.195,0.11783333333333335,capacity-building,1,False,True,False
+0.195,0.124,capacity-building,1,False,True,False
+0.195,0.13016666666666665,capacity-building,1,False,True,False
+0.195,0.13633333333333333,capacity-building,1,False,True,False
+0.195,0.14250000000000002,capacity-building,1,False,True,False
+0.195,0.14866666666666667,capacity-building,1,False,True,False
 0.195,0.15483333333333332,threshold trap,2,True,True,False
 0.195,0.161,threshold trap,2,True,True,False
 0.195,0.16716666666666669,threshold trap,2,True,True,False
@@ -731,24 +731,24 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.195,0.4076666666666667,collapse-prone,2,True,True,True
 0.195,0.4138333333333333,collapse-prone,2,True,True,True
 0.195,0.42,collapse-prone,2,True,True,True
-0.2,0.05,bridge region,1,False,True,False
-0.2,0.05616666666666667,bridge region,1,False,True,False
-0.2,0.06233333333333334,bridge region,1,False,True,False
-0.2,0.0685,bridge region,1,False,True,False
-0.2,0.07466666666666667,bridge region,1,False,True,False
-0.2,0.08083333333333334,bridge region,1,False,True,False
-0.2,0.087,bridge region,1,False,True,False
-0.2,0.09316666666666668,bridge region,1,False,True,False
-0.2,0.09933333333333333,bridge region,1,False,True,False
-0.2,0.10550000000000001,bridge region,1,False,True,False
-0.2,0.11166666666666666,bridge region,1,False,True,False
-0.2,0.11783333333333335,bridge region,1,False,True,False
-0.2,0.124,bridge region,1,False,True,False
-0.2,0.13016666666666665,bridge region,1,False,True,False
-0.2,0.13633333333333333,bridge region,1,False,True,False
-0.2,0.14250000000000002,bridge region,1,False,True,False
-0.2,0.14866666666666667,bridge region,1,False,True,False
-0.2,0.15483333333333332,bridge region,1,False,True,False
+0.2,0.05,capacity-building,1,False,True,False
+0.2,0.05616666666666667,capacity-building,1,False,True,False
+0.2,0.06233333333333334,capacity-building,1,False,True,False
+0.2,0.0685,capacity-building,1,False,True,False
+0.2,0.07466666666666667,capacity-building,1,False,True,False
+0.2,0.08083333333333334,capacity-building,1,False,True,False
+0.2,0.087,capacity-building,1,False,True,False
+0.2,0.09316666666666668,capacity-building,1,False,True,False
+0.2,0.09933333333333333,capacity-building,1,False,True,False
+0.2,0.10550000000000001,capacity-building,1,False,True,False
+0.2,0.11166666666666666,capacity-building,1,False,True,False
+0.2,0.11783333333333335,capacity-building,1,False,True,False
+0.2,0.124,capacity-building,1,False,True,False
+0.2,0.13016666666666665,capacity-building,1,False,True,False
+0.2,0.13633333333333333,capacity-building,1,False,True,False
+0.2,0.14250000000000002,capacity-building,1,False,True,False
+0.2,0.14866666666666667,capacity-building,1,False,True,False
+0.2,0.15483333333333332,capacity-building,1,False,True,False
 0.2,0.161,threshold trap,2,True,True,False
 0.2,0.16716666666666669,threshold trap,2,True,True,False
 0.2,0.17333333333333334,threshold trap,2,True,True,False
@@ -792,25 +792,25 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.2,0.4076666666666667,collapse-prone,2,True,True,True
 0.2,0.4138333333333333,collapse-prone,2,True,True,True
 0.2,0.42,collapse-prone,2,True,True,True
-0.20500000000000002,0.05,bridge region,1,False,True,False
-0.20500000000000002,0.05616666666666667,bridge region,1,False,True,False
-0.20500000000000002,0.06233333333333334,bridge region,1,False,True,False
-0.20500000000000002,0.0685,bridge region,1,False,True,False
-0.20500000000000002,0.07466666666666667,bridge region,1,False,True,False
-0.20500000000000002,0.08083333333333334,bridge region,1,False,True,False
-0.20500000000000002,0.087,bridge region,1,False,True,False
-0.20500000000000002,0.09316666666666668,bridge region,1,False,True,False
-0.20500000000000002,0.09933333333333333,bridge region,1,False,True,False
-0.20500000000000002,0.10550000000000001,bridge region,1,False,True,False
-0.20500000000000002,0.11166666666666666,bridge region,1,False,True,False
-0.20500000000000002,0.11783333333333335,bridge region,1,False,True,False
-0.20500000000000002,0.124,bridge region,1,False,True,False
-0.20500000000000002,0.13016666666666665,bridge region,1,False,True,False
-0.20500000000000002,0.13633333333333333,bridge region,1,False,True,False
-0.20500000000000002,0.14250000000000002,bridge region,1,False,True,False
-0.20500000000000002,0.14866666666666667,bridge region,1,False,True,False
-0.20500000000000002,0.15483333333333332,bridge region,1,False,True,False
-0.20500000000000002,0.161,bridge region,1,False,True,False
+0.20500000000000002,0.05,capacity-building,1,False,True,False
+0.20500000000000002,0.05616666666666667,capacity-building,1,False,True,False
+0.20500000000000002,0.06233333333333334,capacity-building,1,False,True,False
+0.20500000000000002,0.0685,capacity-building,1,False,True,False
+0.20500000000000002,0.07466666666666667,capacity-building,1,False,True,False
+0.20500000000000002,0.08083333333333334,capacity-building,1,False,True,False
+0.20500000000000002,0.087,capacity-building,1,False,True,False
+0.20500000000000002,0.09316666666666668,capacity-building,1,False,True,False
+0.20500000000000002,0.09933333333333333,capacity-building,1,False,True,False
+0.20500000000000002,0.10550000000000001,capacity-building,1,False,True,False
+0.20500000000000002,0.11166666666666666,capacity-building,1,False,True,False
+0.20500000000000002,0.11783333333333335,capacity-building,1,False,True,False
+0.20500000000000002,0.124,capacity-building,1,False,True,False
+0.20500000000000002,0.13016666666666665,capacity-building,1,False,True,False
+0.20500000000000002,0.13633333333333333,capacity-building,1,False,True,False
+0.20500000000000002,0.14250000000000002,capacity-building,1,False,True,False
+0.20500000000000002,0.14866666666666667,capacity-building,1,False,True,False
+0.20500000000000002,0.15483333333333332,capacity-building,1,False,True,False
+0.20500000000000002,0.161,capacity-building,1,False,True,False
 0.20500000000000002,0.16716666666666669,threshold trap,2,True,True,False
 0.20500000000000002,0.17333333333333334,threshold trap,2,True,True,False
 0.20500000000000002,0.1795,threshold trap,2,True,True,False
@@ -853,25 +853,25 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.20500000000000002,0.4076666666666667,collapse-prone,2,True,True,True
 0.20500000000000002,0.4138333333333333,collapse-prone,2,True,True,True
 0.20500000000000002,0.42,collapse-prone,2,True,True,True
-0.21000000000000002,0.05,bridge region,1,False,True,False
-0.21000000000000002,0.05616666666666667,bridge region,1,False,True,False
-0.21000000000000002,0.06233333333333334,bridge region,1,False,True,False
-0.21000000000000002,0.0685,bridge region,1,False,True,False
-0.21000000000000002,0.07466666666666667,bridge region,1,False,True,False
-0.21000000000000002,0.08083333333333334,bridge region,1,False,True,False
-0.21000000000000002,0.087,bridge region,1,False,True,False
-0.21000000000000002,0.09316666666666668,bridge region,1,False,True,False
-0.21000000000000002,0.09933333333333333,bridge region,1,False,True,False
-0.21000000000000002,0.10550000000000001,bridge region,1,False,True,False
-0.21000000000000002,0.11166666666666666,bridge region,1,False,True,False
-0.21000000000000002,0.11783333333333335,bridge region,1,False,True,False
-0.21000000000000002,0.124,bridge region,1,False,True,False
-0.21000000000000002,0.13016666666666665,bridge region,1,False,True,False
-0.21000000000000002,0.13633333333333333,bridge region,1,False,True,False
-0.21000000000000002,0.14250000000000002,bridge region,1,False,True,False
-0.21000000000000002,0.14866666666666667,bridge region,1,False,True,False
-0.21000000000000002,0.15483333333333332,bridge region,1,False,True,False
-0.21000000000000002,0.161,bridge region,1,False,True,False
+0.21000000000000002,0.05,capacity-building,1,False,True,False
+0.21000000000000002,0.05616666666666667,capacity-building,1,False,True,False
+0.21000000000000002,0.06233333333333334,capacity-building,1,False,True,False
+0.21000000000000002,0.0685,capacity-building,1,False,True,False
+0.21000000000000002,0.07466666666666667,capacity-building,1,False,True,False
+0.21000000000000002,0.08083333333333334,capacity-building,1,False,True,False
+0.21000000000000002,0.087,capacity-building,1,False,True,False
+0.21000000000000002,0.09316666666666668,capacity-building,1,False,True,False
+0.21000000000000002,0.09933333333333333,capacity-building,1,False,True,False
+0.21000000000000002,0.10550000000000001,capacity-building,1,False,True,False
+0.21000000000000002,0.11166666666666666,capacity-building,1,False,True,False
+0.21000000000000002,0.11783333333333335,capacity-building,1,False,True,False
+0.21000000000000002,0.124,capacity-building,1,False,True,False
+0.21000000000000002,0.13016666666666665,capacity-building,1,False,True,False
+0.21000000000000002,0.13633333333333333,capacity-building,1,False,True,False
+0.21000000000000002,0.14250000000000002,capacity-building,1,False,True,False
+0.21000000000000002,0.14866666666666667,capacity-building,1,False,True,False
+0.21000000000000002,0.15483333333333332,capacity-building,1,False,True,False
+0.21000000000000002,0.161,capacity-building,1,False,True,False
 0.21000000000000002,0.16716666666666669,threshold trap,2,True,True,False
 0.21000000000000002,0.17333333333333334,threshold trap,2,True,True,False
 0.21000000000000002,0.1795,threshold trap,2,True,True,False
@@ -914,26 +914,26 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.21000000000000002,0.4076666666666667,collapse-prone,2,True,True,True
 0.21000000000000002,0.4138333333333333,collapse-prone,2,True,True,True
 0.21000000000000002,0.42,collapse-prone,2,True,True,True
-0.21500000000000002,0.05,bridge region,1,False,True,False
-0.21500000000000002,0.05616666666666667,bridge region,1,False,True,False
-0.21500000000000002,0.06233333333333334,bridge region,1,False,True,False
-0.21500000000000002,0.0685,bridge region,1,False,True,False
-0.21500000000000002,0.07466666666666667,bridge region,1,False,True,False
-0.21500000000000002,0.08083333333333334,bridge region,1,False,True,False
-0.21500000000000002,0.087,bridge region,1,False,True,False
-0.21500000000000002,0.09316666666666668,bridge region,1,False,True,False
-0.21500000000000002,0.09933333333333333,bridge region,1,False,True,False
-0.21500000000000002,0.10550000000000001,bridge region,1,False,True,False
-0.21500000000000002,0.11166666666666666,bridge region,1,False,True,False
-0.21500000000000002,0.11783333333333335,bridge region,1,False,True,False
-0.21500000000000002,0.124,bridge region,1,False,True,False
-0.21500000000000002,0.13016666666666665,bridge region,1,False,True,False
-0.21500000000000002,0.13633333333333333,bridge region,1,False,True,False
-0.21500000000000002,0.14250000000000002,bridge region,1,False,True,False
-0.21500000000000002,0.14866666666666667,bridge region,1,False,True,False
-0.21500000000000002,0.15483333333333332,bridge region,1,False,True,False
-0.21500000000000002,0.161,bridge region,1,False,True,False
-0.21500000000000002,0.16716666666666669,bridge region,1,False,True,False
+0.21500000000000002,0.05,capacity-building,1,False,True,False
+0.21500000000000002,0.05616666666666667,capacity-building,1,False,True,False
+0.21500000000000002,0.06233333333333334,capacity-building,1,False,True,False
+0.21500000000000002,0.0685,capacity-building,1,False,True,False
+0.21500000000000002,0.07466666666666667,capacity-building,1,False,True,False
+0.21500000000000002,0.08083333333333334,capacity-building,1,False,True,False
+0.21500000000000002,0.087,capacity-building,1,False,True,False
+0.21500000000000002,0.09316666666666668,capacity-building,1,False,True,False
+0.21500000000000002,0.09933333333333333,capacity-building,1,False,True,False
+0.21500000000000002,0.10550000000000001,capacity-building,1,False,True,False
+0.21500000000000002,0.11166666666666666,capacity-building,1,False,True,False
+0.21500000000000002,0.11783333333333335,capacity-building,1,False,True,False
+0.21500000000000002,0.124,capacity-building,1,False,True,False
+0.21500000000000002,0.13016666666666665,capacity-building,1,False,True,False
+0.21500000000000002,0.13633333333333333,capacity-building,1,False,True,False
+0.21500000000000002,0.14250000000000002,capacity-building,1,False,True,False
+0.21500000000000002,0.14866666666666667,capacity-building,1,False,True,False
+0.21500000000000002,0.15483333333333332,capacity-building,1,False,True,False
+0.21500000000000002,0.161,capacity-building,1,False,True,False
+0.21500000000000002,0.16716666666666669,capacity-building,1,False,True,False
 0.21500000000000002,0.17333333333333334,threshold trap,2,True,True,False
 0.21500000000000002,0.1795,threshold trap,2,True,True,False
 0.21500000000000002,0.1856666666666667,threshold trap,2,True,True,False
@@ -975,27 +975,27 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.21500000000000002,0.4076666666666667,collapse-prone,2,True,True,True
 0.21500000000000002,0.4138333333333333,collapse-prone,2,True,True,True
 0.21500000000000002,0.42,collapse-prone,2,True,True,True
-0.22000000000000003,0.05,bridge region,1,False,True,False
-0.22000000000000003,0.05616666666666667,bridge region,1,False,True,False
-0.22000000000000003,0.06233333333333334,bridge region,1,False,True,False
-0.22000000000000003,0.0685,bridge region,1,False,True,False
-0.22000000000000003,0.07466666666666667,bridge region,1,False,True,False
-0.22000000000000003,0.08083333333333334,bridge region,1,False,True,False
-0.22000000000000003,0.087,bridge region,1,False,True,False
-0.22000000000000003,0.09316666666666668,bridge region,1,False,True,False
-0.22000000000000003,0.09933333333333333,bridge region,1,False,True,False
-0.22000000000000003,0.10550000000000001,bridge region,1,False,True,False
-0.22000000000000003,0.11166666666666666,bridge region,1,False,True,False
-0.22000000000000003,0.11783333333333335,bridge region,1,False,True,False
-0.22000000000000003,0.124,bridge region,1,False,True,False
-0.22000000000000003,0.13016666666666665,bridge region,1,False,True,False
-0.22000000000000003,0.13633333333333333,bridge region,1,False,True,False
-0.22000000000000003,0.14250000000000002,bridge region,1,False,True,False
-0.22000000000000003,0.14866666666666667,bridge region,1,False,True,False
-0.22000000000000003,0.15483333333333332,bridge region,1,False,True,False
-0.22000000000000003,0.161,bridge region,1,False,True,False
-0.22000000000000003,0.16716666666666669,bridge region,1,False,True,False
-0.22000000000000003,0.17333333333333334,bridge region,1,False,True,False
+0.22000000000000003,0.05,capacity-building,1,False,True,False
+0.22000000000000003,0.05616666666666667,capacity-building,1,False,True,False
+0.22000000000000003,0.06233333333333334,capacity-building,1,False,True,False
+0.22000000000000003,0.0685,capacity-building,1,False,True,False
+0.22000000000000003,0.07466666666666667,capacity-building,1,False,True,False
+0.22000000000000003,0.08083333333333334,capacity-building,1,False,True,False
+0.22000000000000003,0.087,capacity-building,1,False,True,False
+0.22000000000000003,0.09316666666666668,capacity-building,1,False,True,False
+0.22000000000000003,0.09933333333333333,capacity-building,1,False,True,False
+0.22000000000000003,0.10550000000000001,capacity-building,1,False,True,False
+0.22000000000000003,0.11166666666666666,capacity-building,1,False,True,False
+0.22000000000000003,0.11783333333333335,capacity-building,1,False,True,False
+0.22000000000000003,0.124,capacity-building,1,False,True,False
+0.22000000000000003,0.13016666666666665,capacity-building,1,False,True,False
+0.22000000000000003,0.13633333333333333,capacity-building,1,False,True,False
+0.22000000000000003,0.14250000000000002,capacity-building,1,False,True,False
+0.22000000000000003,0.14866666666666667,capacity-building,1,False,True,False
+0.22000000000000003,0.15483333333333332,capacity-building,1,False,True,False
+0.22000000000000003,0.161,capacity-building,1,False,True,False
+0.22000000000000003,0.16716666666666669,capacity-building,1,False,True,False
+0.22000000000000003,0.17333333333333334,capacity-building,1,False,True,False
 0.22000000000000003,0.1795,threshold trap,2,True,True,False
 0.22000000000000003,0.1856666666666667,threshold trap,2,True,True,False
 0.22000000000000003,0.19183333333333336,threshold trap,2,True,True,False
@@ -1036,28 +1036,28 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.22000000000000003,0.4076666666666667,collapse-prone,2,True,True,True
 0.22000000000000003,0.4138333333333333,collapse-prone,2,True,True,True
 0.22000000000000003,0.42,collapse-prone,2,True,True,True
-0.22500000000000003,0.05,bridge region,1,False,True,False
-0.22500000000000003,0.05616666666666667,bridge region,1,False,True,False
-0.22500000000000003,0.06233333333333334,bridge region,1,False,True,False
-0.22500000000000003,0.0685,bridge region,1,False,True,False
-0.22500000000000003,0.07466666666666667,bridge region,1,False,True,False
-0.22500000000000003,0.08083333333333334,bridge region,1,False,True,False
-0.22500000000000003,0.087,bridge region,1,False,True,False
-0.22500000000000003,0.09316666666666668,bridge region,1,False,True,False
-0.22500000000000003,0.09933333333333333,bridge region,1,False,True,False
-0.22500000000000003,0.10550000000000001,bridge region,1,False,True,False
-0.22500000000000003,0.11166666666666666,bridge region,1,False,True,False
-0.22500000000000003,0.11783333333333335,bridge region,1,False,True,False
-0.22500000000000003,0.124,bridge region,1,False,True,False
-0.22500000000000003,0.13016666666666665,bridge region,1,False,True,False
-0.22500000000000003,0.13633333333333333,bridge region,1,False,True,False
-0.22500000000000003,0.14250000000000002,bridge region,1,False,True,False
-0.22500000000000003,0.14866666666666667,bridge region,1,False,True,False
-0.22500000000000003,0.15483333333333332,bridge region,1,False,True,False
-0.22500000000000003,0.161,bridge region,1,False,True,False
-0.22500000000000003,0.16716666666666669,bridge region,1,False,True,False
-0.22500000000000003,0.17333333333333334,bridge region,1,False,True,False
-0.22500000000000003,0.1795,bridge region,1,False,True,False
+0.22500000000000003,0.05,capacity-building,1,False,True,False
+0.22500000000000003,0.05616666666666667,capacity-building,1,False,True,False
+0.22500000000000003,0.06233333333333334,capacity-building,1,False,True,False
+0.22500000000000003,0.0685,capacity-building,1,False,True,False
+0.22500000000000003,0.07466666666666667,capacity-building,1,False,True,False
+0.22500000000000003,0.08083333333333334,capacity-building,1,False,True,False
+0.22500000000000003,0.087,capacity-building,1,False,True,False
+0.22500000000000003,0.09316666666666668,capacity-building,1,False,True,False
+0.22500000000000003,0.09933333333333333,capacity-building,1,False,True,False
+0.22500000000000003,0.10550000000000001,capacity-building,1,False,True,False
+0.22500000000000003,0.11166666666666666,capacity-building,1,False,True,False
+0.22500000000000003,0.11783333333333335,capacity-building,1,False,True,False
+0.22500000000000003,0.124,capacity-building,1,False,True,False
+0.22500000000000003,0.13016666666666665,capacity-building,1,False,True,False
+0.22500000000000003,0.13633333333333333,capacity-building,1,False,True,False
+0.22500000000000003,0.14250000000000002,capacity-building,1,False,True,False
+0.22500000000000003,0.14866666666666667,capacity-building,1,False,True,False
+0.22500000000000003,0.15483333333333332,capacity-building,1,False,True,False
+0.22500000000000003,0.161,capacity-building,1,False,True,False
+0.22500000000000003,0.16716666666666669,capacity-building,1,False,True,False
+0.22500000000000003,0.17333333333333334,capacity-building,1,False,True,False
+0.22500000000000003,0.1795,capacity-building,1,False,True,False
 0.22500000000000003,0.1856666666666667,threshold trap,2,True,True,False
 0.22500000000000003,0.19183333333333336,threshold trap,2,True,True,False
 0.22500000000000003,0.198,threshold trap,2,True,True,False
@@ -1097,29 +1097,29 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.22500000000000003,0.4076666666666667,collapse-prone,2,True,True,True
 0.22500000000000003,0.4138333333333333,collapse-prone,2,True,True,True
 0.22500000000000003,0.42,collapse-prone,2,True,True,True
-0.23000000000000004,0.05,bridge region,1,False,True,False
-0.23000000000000004,0.05616666666666667,bridge region,1,False,True,False
-0.23000000000000004,0.06233333333333334,bridge region,1,False,True,False
-0.23000000000000004,0.0685,bridge region,1,False,True,False
-0.23000000000000004,0.07466666666666667,bridge region,1,False,True,False
-0.23000000000000004,0.08083333333333334,bridge region,1,False,True,False
-0.23000000000000004,0.087,bridge region,1,False,True,False
-0.23000000000000004,0.09316666666666668,bridge region,1,False,True,False
-0.23000000000000004,0.09933333333333333,bridge region,1,False,True,False
-0.23000000000000004,0.10550000000000001,bridge region,1,False,True,False
-0.23000000000000004,0.11166666666666666,bridge region,1,False,True,False
-0.23000000000000004,0.11783333333333335,bridge region,1,False,True,False
-0.23000000000000004,0.124,bridge region,1,False,True,False
-0.23000000000000004,0.13016666666666665,bridge region,1,False,True,False
-0.23000000000000004,0.13633333333333333,bridge region,1,False,True,False
-0.23000000000000004,0.14250000000000002,bridge region,1,False,True,False
-0.23000000000000004,0.14866666666666667,bridge region,1,False,True,False
-0.23000000000000004,0.15483333333333332,bridge region,1,False,True,False
-0.23000000000000004,0.161,bridge region,1,False,True,False
-0.23000000000000004,0.16716666666666669,bridge region,1,False,True,False
-0.23000000000000004,0.17333333333333334,bridge region,1,False,True,False
-0.23000000000000004,0.1795,bridge region,1,False,True,False
-0.23000000000000004,0.1856666666666667,bridge region,1,False,True,False
+0.23000000000000004,0.05,capacity-building,1,False,True,False
+0.23000000000000004,0.05616666666666667,capacity-building,1,False,True,False
+0.23000000000000004,0.06233333333333334,capacity-building,1,False,True,False
+0.23000000000000004,0.0685,capacity-building,1,False,True,False
+0.23000000000000004,0.07466666666666667,capacity-building,1,False,True,False
+0.23000000000000004,0.08083333333333334,capacity-building,1,False,True,False
+0.23000000000000004,0.087,capacity-building,1,False,True,False
+0.23000000000000004,0.09316666666666668,capacity-building,1,False,True,False
+0.23000000000000004,0.09933333333333333,capacity-building,1,False,True,False
+0.23000000000000004,0.10550000000000001,capacity-building,1,False,True,False
+0.23000000000000004,0.11166666666666666,capacity-building,1,False,True,False
+0.23000000000000004,0.11783333333333335,capacity-building,1,False,True,False
+0.23000000000000004,0.124,capacity-building,1,False,True,False
+0.23000000000000004,0.13016666666666665,capacity-building,1,False,True,False
+0.23000000000000004,0.13633333333333333,capacity-building,1,False,True,False
+0.23000000000000004,0.14250000000000002,capacity-building,1,False,True,False
+0.23000000000000004,0.14866666666666667,capacity-building,1,False,True,False
+0.23000000000000004,0.15483333333333332,capacity-building,1,False,True,False
+0.23000000000000004,0.161,capacity-building,1,False,True,False
+0.23000000000000004,0.16716666666666669,capacity-building,1,False,True,False
+0.23000000000000004,0.17333333333333334,capacity-building,1,False,True,False
+0.23000000000000004,0.1795,capacity-building,1,False,True,False
+0.23000000000000004,0.1856666666666667,capacity-building,1,False,True,False
 0.23000000000000004,0.19183333333333336,threshold trap,2,True,True,False
 0.23000000000000004,0.198,threshold trap,2,True,True,False
 0.23000000000000004,0.20416666666666666,threshold trap,2,True,True,False
@@ -1158,29 +1158,29 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.23000000000000004,0.4076666666666667,collapse-prone,2,True,True,True
 0.23000000000000004,0.4138333333333333,collapse-prone,2,True,True,True
 0.23000000000000004,0.42,collapse-prone,2,True,True,True
-0.235,0.05,bridge region,1,False,True,False
-0.235,0.05616666666666667,bridge region,1,False,True,False
-0.235,0.06233333333333334,bridge region,1,False,True,False
-0.235,0.0685,bridge region,1,False,True,False
-0.235,0.07466666666666667,bridge region,1,False,True,False
-0.235,0.08083333333333334,bridge region,1,False,True,False
-0.235,0.087,bridge region,1,False,True,False
-0.235,0.09316666666666668,bridge region,1,False,True,False
-0.235,0.09933333333333333,bridge region,1,False,True,False
-0.235,0.10550000000000001,bridge region,1,False,True,False
-0.235,0.11166666666666666,bridge region,1,False,True,False
-0.235,0.11783333333333335,bridge region,1,False,True,False
-0.235,0.124,bridge region,1,False,True,False
-0.235,0.13016666666666665,bridge region,1,False,True,False
-0.235,0.13633333333333333,bridge region,1,False,True,False
-0.235,0.14250000000000002,bridge region,1,False,True,False
-0.235,0.14866666666666667,bridge region,1,False,True,False
-0.235,0.15483333333333332,bridge region,1,False,True,False
-0.235,0.161,bridge region,1,False,True,False
-0.235,0.16716666666666669,bridge region,1,False,True,False
-0.235,0.17333333333333334,bridge region,1,False,True,False
-0.235,0.1795,bridge region,1,False,True,False
-0.235,0.1856666666666667,bridge region,1,False,True,False
+0.235,0.05,capacity-building,1,False,True,False
+0.235,0.05616666666666667,capacity-building,1,False,True,False
+0.235,0.06233333333333334,capacity-building,1,False,True,False
+0.235,0.0685,capacity-building,1,False,True,False
+0.235,0.07466666666666667,capacity-building,1,False,True,False
+0.235,0.08083333333333334,capacity-building,1,False,True,False
+0.235,0.087,capacity-building,1,False,True,False
+0.235,0.09316666666666668,capacity-building,1,False,True,False
+0.235,0.09933333333333333,capacity-building,1,False,True,False
+0.235,0.10550000000000001,capacity-building,1,False,True,False
+0.235,0.11166666666666666,capacity-building,1,False,True,False
+0.235,0.11783333333333335,capacity-building,1,False,True,False
+0.235,0.124,capacity-building,1,False,True,False
+0.235,0.13016666666666665,capacity-building,1,False,True,False
+0.235,0.13633333333333333,capacity-building,1,False,True,False
+0.235,0.14250000000000002,capacity-building,1,False,True,False
+0.235,0.14866666666666667,capacity-building,1,False,True,False
+0.235,0.15483333333333332,capacity-building,1,False,True,False
+0.235,0.161,capacity-building,1,False,True,False
+0.235,0.16716666666666669,capacity-building,1,False,True,False
+0.235,0.17333333333333334,capacity-building,1,False,True,False
+0.235,0.1795,capacity-building,1,False,True,False
+0.235,0.1856666666666667,capacity-building,1,False,True,False
 0.235,0.19183333333333336,threshold trap,2,True,True,False
 0.235,0.198,threshold trap,2,True,True,False
 0.235,0.20416666666666666,threshold trap,2,True,True,False
@@ -1219,30 +1219,30 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.235,0.4076666666666667,collapse-prone,2,True,True,True
 0.235,0.4138333333333333,collapse-prone,2,True,True,True
 0.235,0.42,collapse-prone,2,True,True,True
-0.24,0.05,bridge region,1,False,True,False
-0.24,0.05616666666666667,bridge region,1,False,True,False
-0.24,0.06233333333333334,bridge region,1,False,True,False
-0.24,0.0685,bridge region,1,False,True,False
-0.24,0.07466666666666667,bridge region,1,False,True,False
-0.24,0.08083333333333334,bridge region,1,False,True,False
-0.24,0.087,bridge region,1,False,True,False
-0.24,0.09316666666666668,bridge region,1,False,True,False
-0.24,0.09933333333333333,bridge region,1,False,True,False
-0.24,0.10550000000000001,bridge region,1,False,True,False
-0.24,0.11166666666666666,bridge region,1,False,True,False
-0.24,0.11783333333333335,bridge region,1,False,True,False
-0.24,0.124,bridge region,1,False,True,False
-0.24,0.13016666666666665,bridge region,1,False,True,False
-0.24,0.13633333333333333,bridge region,1,False,True,False
-0.24,0.14250000000000002,bridge region,1,False,True,False
-0.24,0.14866666666666667,bridge region,1,False,True,False
-0.24,0.15483333333333332,bridge region,1,False,True,False
-0.24,0.161,bridge region,1,False,True,False
-0.24,0.16716666666666669,bridge region,1,False,True,False
-0.24,0.17333333333333334,bridge region,1,False,True,False
-0.24,0.1795,bridge region,1,False,True,False
-0.24,0.1856666666666667,bridge region,1,False,True,False
-0.24,0.19183333333333336,bridge region,1,False,True,False
+0.24,0.05,capacity-building,1,False,True,False
+0.24,0.05616666666666667,capacity-building,1,False,True,False
+0.24,0.06233333333333334,capacity-building,1,False,True,False
+0.24,0.0685,capacity-building,1,False,True,False
+0.24,0.07466666666666667,capacity-building,1,False,True,False
+0.24,0.08083333333333334,capacity-building,1,False,True,False
+0.24,0.087,capacity-building,1,False,True,False
+0.24,0.09316666666666668,capacity-building,1,False,True,False
+0.24,0.09933333333333333,capacity-building,1,False,True,False
+0.24,0.10550000000000001,capacity-building,1,False,True,False
+0.24,0.11166666666666666,capacity-building,1,False,True,False
+0.24,0.11783333333333335,capacity-building,1,False,True,False
+0.24,0.124,capacity-building,1,False,True,False
+0.24,0.13016666666666665,capacity-building,1,False,True,False
+0.24,0.13633333333333333,capacity-building,1,False,True,False
+0.24,0.14250000000000002,capacity-building,1,False,True,False
+0.24,0.14866666666666667,capacity-building,1,False,True,False
+0.24,0.15483333333333332,capacity-building,1,False,True,False
+0.24,0.161,capacity-building,1,False,True,False
+0.24,0.16716666666666669,capacity-building,1,False,True,False
+0.24,0.17333333333333334,capacity-building,1,False,True,False
+0.24,0.1795,capacity-building,1,False,True,False
+0.24,0.1856666666666667,capacity-building,1,False,True,False
+0.24,0.19183333333333336,capacity-building,1,False,True,False
 0.24,0.198,threshold trap,2,True,True,False
 0.24,0.20416666666666666,threshold trap,2,True,True,False
 0.24,0.21033333333333332,threshold trap,2,True,True,False
@@ -1280,31 +1280,31 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.24,0.4076666666666667,collapse-prone,2,True,True,True
 0.24,0.4138333333333333,collapse-prone,2,True,True,True
 0.24,0.42,collapse-prone,2,True,True,True
-0.245,0.05,bridge region,1,False,True,False
-0.245,0.05616666666666667,bridge region,1,False,True,False
-0.245,0.06233333333333334,bridge region,1,False,True,False
-0.245,0.0685,bridge region,1,False,True,False
-0.245,0.07466666666666667,bridge region,1,False,True,False
-0.245,0.08083333333333334,bridge region,1,False,True,False
-0.245,0.087,bridge region,1,False,True,False
-0.245,0.09316666666666668,bridge region,1,False,True,False
-0.245,0.09933333333333333,bridge region,1,False,True,False
-0.245,0.10550000000000001,bridge region,1,False,True,False
-0.245,0.11166666666666666,bridge region,1,False,True,False
-0.245,0.11783333333333335,bridge region,1,False,True,False
-0.245,0.124,bridge region,1,False,True,False
-0.245,0.13016666666666665,bridge region,1,False,True,False
-0.245,0.13633333333333333,bridge region,1,False,True,False
-0.245,0.14250000000000002,bridge region,1,False,True,False
-0.245,0.14866666666666667,bridge region,1,False,True,False
-0.245,0.15483333333333332,bridge region,1,False,True,False
-0.245,0.161,bridge region,1,False,True,False
-0.245,0.16716666666666669,bridge region,1,False,True,False
-0.245,0.17333333333333334,bridge region,1,False,True,False
-0.245,0.1795,bridge region,1,False,True,False
-0.245,0.1856666666666667,bridge region,1,False,True,False
-0.245,0.19183333333333336,bridge region,1,False,True,False
-0.245,0.198,bridge region,1,False,True,False
+0.245,0.05,capacity-building,1,False,True,False
+0.245,0.05616666666666667,capacity-building,1,False,True,False
+0.245,0.06233333333333334,capacity-building,1,False,True,False
+0.245,0.0685,capacity-building,1,False,True,False
+0.245,0.07466666666666667,capacity-building,1,False,True,False
+0.245,0.08083333333333334,capacity-building,1,False,True,False
+0.245,0.087,capacity-building,1,False,True,False
+0.245,0.09316666666666668,capacity-building,1,False,True,False
+0.245,0.09933333333333333,capacity-building,1,False,True,False
+0.245,0.10550000000000001,capacity-building,1,False,True,False
+0.245,0.11166666666666666,capacity-building,1,False,True,False
+0.245,0.11783333333333335,capacity-building,1,False,True,False
+0.245,0.124,capacity-building,1,False,True,False
+0.245,0.13016666666666665,capacity-building,1,False,True,False
+0.245,0.13633333333333333,capacity-building,1,False,True,False
+0.245,0.14250000000000002,capacity-building,1,False,True,False
+0.245,0.14866666666666667,capacity-building,1,False,True,False
+0.245,0.15483333333333332,capacity-building,1,False,True,False
+0.245,0.161,capacity-building,1,False,True,False
+0.245,0.16716666666666669,capacity-building,1,False,True,False
+0.245,0.17333333333333334,capacity-building,1,False,True,False
+0.245,0.1795,capacity-building,1,False,True,False
+0.245,0.1856666666666667,capacity-building,1,False,True,False
+0.245,0.19183333333333336,capacity-building,1,False,True,False
+0.245,0.198,capacity-building,1,False,True,False
 0.245,0.20416666666666666,threshold trap,2,True,True,False
 0.245,0.21033333333333332,threshold trap,2,True,True,False
 0.245,0.21650000000000003,threshold trap,2,True,True,False
@@ -1341,32 +1341,32 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.245,0.4076666666666667,collapse-prone,2,True,True,True
 0.245,0.4138333333333333,collapse-prone,2,True,True,True
 0.245,0.42,collapse-prone,2,True,True,True
-0.25,0.05,bridge region,1,False,True,False
-0.25,0.05616666666666667,bridge region,1,False,True,False
-0.25,0.06233333333333334,bridge region,1,False,True,False
-0.25,0.0685,bridge region,1,False,True,False
-0.25,0.07466666666666667,bridge region,1,False,True,False
-0.25,0.08083333333333334,bridge region,1,False,True,False
-0.25,0.087,bridge region,1,False,True,False
-0.25,0.09316666666666668,bridge region,1,False,True,False
-0.25,0.09933333333333333,bridge region,1,False,True,False
-0.25,0.10550000000000001,bridge region,1,False,True,False
-0.25,0.11166666666666666,bridge region,1,False,True,False
-0.25,0.11783333333333335,bridge region,1,False,True,False
-0.25,0.124,bridge region,1,False,True,False
-0.25,0.13016666666666665,bridge region,1,False,True,False
-0.25,0.13633333333333333,bridge region,1,False,True,False
-0.25,0.14250000000000002,bridge region,1,False,True,False
-0.25,0.14866666666666667,bridge region,1,False,True,False
-0.25,0.15483333333333332,bridge region,1,False,True,False
-0.25,0.161,bridge region,1,False,True,False
-0.25,0.16716666666666669,bridge region,1,False,True,False
-0.25,0.17333333333333334,bridge region,1,False,True,False
-0.25,0.1795,bridge region,1,False,True,False
-0.25,0.1856666666666667,bridge region,1,False,True,False
-0.25,0.19183333333333336,bridge region,1,False,True,False
-0.25,0.198,bridge region,1,False,True,False
-0.25,0.20416666666666666,bridge region,1,False,True,False
+0.25,0.05,capacity-building,1,False,True,False
+0.25,0.05616666666666667,capacity-building,1,False,True,False
+0.25,0.06233333333333334,capacity-building,1,False,True,False
+0.25,0.0685,capacity-building,1,False,True,False
+0.25,0.07466666666666667,capacity-building,1,False,True,False
+0.25,0.08083333333333334,capacity-building,1,False,True,False
+0.25,0.087,capacity-building,1,False,True,False
+0.25,0.09316666666666668,capacity-building,1,False,True,False
+0.25,0.09933333333333333,capacity-building,1,False,True,False
+0.25,0.10550000000000001,capacity-building,1,False,True,False
+0.25,0.11166666666666666,capacity-building,1,False,True,False
+0.25,0.11783333333333335,capacity-building,1,False,True,False
+0.25,0.124,capacity-building,1,False,True,False
+0.25,0.13016666666666665,capacity-building,1,False,True,False
+0.25,0.13633333333333333,capacity-building,1,False,True,False
+0.25,0.14250000000000002,capacity-building,1,False,True,False
+0.25,0.14866666666666667,capacity-building,1,False,True,False
+0.25,0.15483333333333332,capacity-building,1,False,True,False
+0.25,0.161,capacity-building,1,False,True,False
+0.25,0.16716666666666669,capacity-building,1,False,True,False
+0.25,0.17333333333333334,capacity-building,1,False,True,False
+0.25,0.1795,capacity-building,1,False,True,False
+0.25,0.1856666666666667,capacity-building,1,False,True,False
+0.25,0.19183333333333336,capacity-building,1,False,True,False
+0.25,0.198,capacity-building,1,False,True,False
+0.25,0.20416666666666666,capacity-building,1,False,True,False
 0.25,0.21033333333333332,threshold trap,2,True,True,False
 0.25,0.21650000000000003,threshold trap,2,True,True,False
 0.25,0.22266666666666668,threshold trap,2,True,True,False
@@ -1402,33 +1402,33 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.25,0.4076666666666667,collapse-prone,2,True,True,True
 0.25,0.4138333333333333,collapse-prone,2,True,True,True
 0.25,0.42,collapse-prone,2,True,True,True
-0.255,0.05,bridge region,1,False,True,False
-0.255,0.05616666666666667,bridge region,1,False,True,False
-0.255,0.06233333333333334,bridge region,1,False,True,False
-0.255,0.0685,bridge region,1,False,True,False
-0.255,0.07466666666666667,bridge region,1,False,True,False
-0.255,0.08083333333333334,bridge region,1,False,True,False
-0.255,0.087,bridge region,1,False,True,False
-0.255,0.09316666666666668,bridge region,1,False,True,False
-0.255,0.09933333333333333,bridge region,1,False,True,False
-0.255,0.10550000000000001,bridge region,1,False,True,False
-0.255,0.11166666666666666,bridge region,1,False,True,False
-0.255,0.11783333333333335,bridge region,1,False,True,False
-0.255,0.124,bridge region,1,False,True,False
-0.255,0.13016666666666665,bridge region,1,False,True,False
-0.255,0.13633333333333333,bridge region,1,False,True,False
-0.255,0.14250000000000002,bridge region,1,False,True,False
-0.255,0.14866666666666667,bridge region,1,False,True,False
-0.255,0.15483333333333332,bridge region,1,False,True,False
-0.255,0.161,bridge region,1,False,True,False
-0.255,0.16716666666666669,bridge region,1,False,True,False
-0.255,0.17333333333333334,bridge region,1,False,True,False
-0.255,0.1795,bridge region,1,False,True,False
-0.255,0.1856666666666667,bridge region,1,False,True,False
-0.255,0.19183333333333336,bridge region,1,False,True,False
-0.255,0.198,bridge region,1,False,True,False
-0.255,0.20416666666666666,bridge region,1,False,True,False
-0.255,0.21033333333333332,bridge region,1,False,True,False
+0.255,0.05,capacity-building,1,False,True,False
+0.255,0.05616666666666667,capacity-building,1,False,True,False
+0.255,0.06233333333333334,capacity-building,1,False,True,False
+0.255,0.0685,capacity-building,1,False,True,False
+0.255,0.07466666666666667,capacity-building,1,False,True,False
+0.255,0.08083333333333334,capacity-building,1,False,True,False
+0.255,0.087,capacity-building,1,False,True,False
+0.255,0.09316666666666668,capacity-building,1,False,True,False
+0.255,0.09933333333333333,capacity-building,1,False,True,False
+0.255,0.10550000000000001,capacity-building,1,False,True,False
+0.255,0.11166666666666666,capacity-building,1,False,True,False
+0.255,0.11783333333333335,capacity-building,1,False,True,False
+0.255,0.124,capacity-building,1,False,True,False
+0.255,0.13016666666666665,capacity-building,1,False,True,False
+0.255,0.13633333333333333,capacity-building,1,False,True,False
+0.255,0.14250000000000002,capacity-building,1,False,True,False
+0.255,0.14866666666666667,capacity-building,1,False,True,False
+0.255,0.15483333333333332,capacity-building,1,False,True,False
+0.255,0.161,capacity-building,1,False,True,False
+0.255,0.16716666666666669,capacity-building,1,False,True,False
+0.255,0.17333333333333334,capacity-building,1,False,True,False
+0.255,0.1795,capacity-building,1,False,True,False
+0.255,0.1856666666666667,capacity-building,1,False,True,False
+0.255,0.19183333333333336,capacity-building,1,False,True,False
+0.255,0.198,capacity-building,1,False,True,False
+0.255,0.20416666666666666,capacity-building,1,False,True,False
+0.255,0.21033333333333332,capacity-building,1,False,True,False
 0.255,0.21650000000000003,threshold trap,2,True,True,False
 0.255,0.22266666666666668,threshold trap,2,True,True,False
 0.255,0.22883333333333333,threshold trap,2,True,True,False
@@ -1463,33 +1463,33 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.255,0.4076666666666667,collapse-prone,2,True,True,True
 0.255,0.4138333333333333,collapse-prone,2,True,True,True
 0.255,0.42,collapse-prone,2,True,True,True
-0.26,0.05,bridge region,1,False,True,False
-0.26,0.05616666666666667,bridge region,1,False,True,False
-0.26,0.06233333333333334,bridge region,1,False,True,False
-0.26,0.0685,bridge region,1,False,True,False
-0.26,0.07466666666666667,bridge region,1,False,True,False
-0.26,0.08083333333333334,bridge region,1,False,True,False
-0.26,0.087,bridge region,1,False,True,False
-0.26,0.09316666666666668,bridge region,1,False,True,False
-0.26,0.09933333333333333,bridge region,1,False,True,False
-0.26,0.10550000000000001,bridge region,1,False,True,False
-0.26,0.11166666666666666,bridge region,1,False,True,False
-0.26,0.11783333333333335,bridge region,1,False,True,False
-0.26,0.124,bridge region,1,False,True,False
-0.26,0.13016666666666665,bridge region,1,False,True,False
-0.26,0.13633333333333333,bridge region,1,False,True,False
-0.26,0.14250000000000002,bridge region,1,False,True,False
-0.26,0.14866666666666667,bridge region,1,False,True,False
-0.26,0.15483333333333332,bridge region,1,False,True,False
-0.26,0.161,bridge region,1,False,True,False
-0.26,0.16716666666666669,bridge region,1,False,True,False
-0.26,0.17333333333333334,bridge region,1,False,True,False
-0.26,0.1795,bridge region,1,False,True,False
-0.26,0.1856666666666667,bridge region,1,False,True,False
-0.26,0.19183333333333336,bridge region,1,False,True,False
-0.26,0.198,bridge region,1,False,True,False
-0.26,0.20416666666666666,bridge region,1,False,True,False
-0.26,0.21033333333333332,bridge region,1,False,True,False
+0.26,0.05,capacity-building,1,False,True,False
+0.26,0.05616666666666667,capacity-building,1,False,True,False
+0.26,0.06233333333333334,capacity-building,1,False,True,False
+0.26,0.0685,capacity-building,1,False,True,False
+0.26,0.07466666666666667,capacity-building,1,False,True,False
+0.26,0.08083333333333334,capacity-building,1,False,True,False
+0.26,0.087,capacity-building,1,False,True,False
+0.26,0.09316666666666668,capacity-building,1,False,True,False
+0.26,0.09933333333333333,capacity-building,1,False,True,False
+0.26,0.10550000000000001,capacity-building,1,False,True,False
+0.26,0.11166666666666666,capacity-building,1,False,True,False
+0.26,0.11783333333333335,capacity-building,1,False,True,False
+0.26,0.124,capacity-building,1,False,True,False
+0.26,0.13016666666666665,capacity-building,1,False,True,False
+0.26,0.13633333333333333,capacity-building,1,False,True,False
+0.26,0.14250000000000002,capacity-building,1,False,True,False
+0.26,0.14866666666666667,capacity-building,1,False,True,False
+0.26,0.15483333333333332,capacity-building,1,False,True,False
+0.26,0.161,capacity-building,1,False,True,False
+0.26,0.16716666666666669,capacity-building,1,False,True,False
+0.26,0.17333333333333334,capacity-building,1,False,True,False
+0.26,0.1795,capacity-building,1,False,True,False
+0.26,0.1856666666666667,capacity-building,1,False,True,False
+0.26,0.19183333333333336,capacity-building,1,False,True,False
+0.26,0.198,capacity-building,1,False,True,False
+0.26,0.20416666666666666,capacity-building,1,False,True,False
+0.26,0.21033333333333332,capacity-building,1,False,True,False
 0.26,0.21650000000000003,threshold trap,2,True,True,False
 0.26,0.22266666666666668,threshold trap,2,True,True,False
 0.26,0.22883333333333333,threshold trap,2,True,True,False
@@ -1524,34 +1524,34 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.26,0.4076666666666667,collapse-prone,2,True,True,True
 0.26,0.4138333333333333,collapse-prone,2,True,True,True
 0.26,0.42,collapse-prone,2,True,True,True
-0.265,0.05,bridge region,1,False,True,False
-0.265,0.05616666666666667,bridge region,1,False,True,False
-0.265,0.06233333333333334,bridge region,1,False,True,False
-0.265,0.0685,bridge region,1,False,True,False
-0.265,0.07466666666666667,bridge region,1,False,True,False
-0.265,0.08083333333333334,bridge region,1,False,True,False
-0.265,0.087,bridge region,1,False,True,False
-0.265,0.09316666666666668,bridge region,1,False,True,False
-0.265,0.09933333333333333,bridge region,1,False,True,False
-0.265,0.10550000000000001,bridge region,1,False,True,False
-0.265,0.11166666666666666,bridge region,1,False,True,False
-0.265,0.11783333333333335,bridge region,1,False,True,False
-0.265,0.124,bridge region,1,False,True,False
-0.265,0.13016666666666665,bridge region,1,False,True,False
-0.265,0.13633333333333333,bridge region,1,False,True,False
-0.265,0.14250000000000002,bridge region,1,False,True,False
-0.265,0.14866666666666667,bridge region,1,False,True,False
-0.265,0.15483333333333332,bridge region,1,False,True,False
-0.265,0.161,bridge region,1,False,True,False
-0.265,0.16716666666666669,bridge region,1,False,True,False
-0.265,0.17333333333333334,bridge region,1,False,True,False
-0.265,0.1795,bridge region,1,False,True,False
-0.265,0.1856666666666667,bridge region,1,False,True,False
-0.265,0.19183333333333336,bridge region,1,False,True,False
-0.265,0.198,bridge region,1,False,True,False
-0.265,0.20416666666666666,bridge region,1,False,True,False
-0.265,0.21033333333333332,bridge region,1,False,True,False
-0.265,0.21650000000000003,bridge region,1,False,True,False
+0.265,0.05,capacity-building,1,False,True,False
+0.265,0.05616666666666667,capacity-building,1,False,True,False
+0.265,0.06233333333333334,capacity-building,1,False,True,False
+0.265,0.0685,capacity-building,1,False,True,False
+0.265,0.07466666666666667,capacity-building,1,False,True,False
+0.265,0.08083333333333334,capacity-building,1,False,True,False
+0.265,0.087,capacity-building,1,False,True,False
+0.265,0.09316666666666668,capacity-building,1,False,True,False
+0.265,0.09933333333333333,capacity-building,1,False,True,False
+0.265,0.10550000000000001,capacity-building,1,False,True,False
+0.265,0.11166666666666666,capacity-building,1,False,True,False
+0.265,0.11783333333333335,capacity-building,1,False,True,False
+0.265,0.124,capacity-building,1,False,True,False
+0.265,0.13016666666666665,capacity-building,1,False,True,False
+0.265,0.13633333333333333,capacity-building,1,False,True,False
+0.265,0.14250000000000002,capacity-building,1,False,True,False
+0.265,0.14866666666666667,capacity-building,1,False,True,False
+0.265,0.15483333333333332,capacity-building,1,False,True,False
+0.265,0.161,capacity-building,1,False,True,False
+0.265,0.16716666666666669,capacity-building,1,False,True,False
+0.265,0.17333333333333334,capacity-building,1,False,True,False
+0.265,0.1795,capacity-building,1,False,True,False
+0.265,0.1856666666666667,capacity-building,1,False,True,False
+0.265,0.19183333333333336,capacity-building,1,False,True,False
+0.265,0.198,capacity-building,1,False,True,False
+0.265,0.20416666666666666,capacity-building,1,False,True,False
+0.265,0.21033333333333332,capacity-building,1,False,True,False
+0.265,0.21650000000000003,capacity-building,1,False,True,False
 0.265,0.22266666666666668,threshold trap,2,True,True,False
 0.265,0.22883333333333333,threshold trap,2,True,True,False
 0.265,0.235,threshold trap,2,True,True,False
@@ -1585,35 +1585,35 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.265,0.4076666666666667,collapse-prone,2,True,True,True
 0.265,0.4138333333333333,collapse-prone,2,True,True,True
 0.265,0.42,collapse-prone,2,True,True,True
-0.27,0.05,bridge region,1,False,True,False
-0.27,0.05616666666666667,bridge region,1,False,True,False
-0.27,0.06233333333333334,bridge region,1,False,True,False
-0.27,0.0685,bridge region,1,False,True,False
-0.27,0.07466666666666667,bridge region,1,False,True,False
-0.27,0.08083333333333334,bridge region,1,False,True,False
-0.27,0.087,bridge region,1,False,True,False
-0.27,0.09316666666666668,bridge region,1,False,True,False
-0.27,0.09933333333333333,bridge region,1,False,True,False
-0.27,0.10550000000000001,bridge region,1,False,True,False
-0.27,0.11166666666666666,bridge region,1,False,True,False
-0.27,0.11783333333333335,bridge region,1,False,True,False
-0.27,0.124,bridge region,1,False,True,False
-0.27,0.13016666666666665,bridge region,1,False,True,False
-0.27,0.13633333333333333,bridge region,1,False,True,False
-0.27,0.14250000000000002,bridge region,1,False,True,False
-0.27,0.14866666666666667,bridge region,1,False,True,False
-0.27,0.15483333333333332,bridge region,1,False,True,False
-0.27,0.161,bridge region,1,False,True,False
-0.27,0.16716666666666669,bridge region,1,False,True,False
-0.27,0.17333333333333334,bridge region,1,False,True,False
-0.27,0.1795,bridge region,1,False,True,False
-0.27,0.1856666666666667,bridge region,1,False,True,False
-0.27,0.19183333333333336,bridge region,1,False,True,False
-0.27,0.198,bridge region,1,False,True,False
-0.27,0.20416666666666666,bridge region,1,False,True,False
-0.27,0.21033333333333332,bridge region,1,False,True,False
-0.27,0.21650000000000003,bridge region,1,False,True,False
-0.27,0.22266666666666668,bridge region,1,False,True,False
+0.27,0.05,capacity-building,1,False,True,False
+0.27,0.05616666666666667,capacity-building,1,False,True,False
+0.27,0.06233333333333334,capacity-building,1,False,True,False
+0.27,0.0685,capacity-building,1,False,True,False
+0.27,0.07466666666666667,capacity-building,1,False,True,False
+0.27,0.08083333333333334,capacity-building,1,False,True,False
+0.27,0.087,capacity-building,1,False,True,False
+0.27,0.09316666666666668,capacity-building,1,False,True,False
+0.27,0.09933333333333333,capacity-building,1,False,True,False
+0.27,0.10550000000000001,capacity-building,1,False,True,False
+0.27,0.11166666666666666,capacity-building,1,False,True,False
+0.27,0.11783333333333335,capacity-building,1,False,True,False
+0.27,0.124,capacity-building,1,False,True,False
+0.27,0.13016666666666665,capacity-building,1,False,True,False
+0.27,0.13633333333333333,capacity-building,1,False,True,False
+0.27,0.14250000000000002,capacity-building,1,False,True,False
+0.27,0.14866666666666667,capacity-building,1,False,True,False
+0.27,0.15483333333333332,capacity-building,1,False,True,False
+0.27,0.161,capacity-building,1,False,True,False
+0.27,0.16716666666666669,capacity-building,1,False,True,False
+0.27,0.17333333333333334,capacity-building,1,False,True,False
+0.27,0.1795,capacity-building,1,False,True,False
+0.27,0.1856666666666667,capacity-building,1,False,True,False
+0.27,0.19183333333333336,capacity-building,1,False,True,False
+0.27,0.198,capacity-building,1,False,True,False
+0.27,0.20416666666666666,capacity-building,1,False,True,False
+0.27,0.21033333333333332,capacity-building,1,False,True,False
+0.27,0.21650000000000003,capacity-building,1,False,True,False
+0.27,0.22266666666666668,capacity-building,1,False,True,False
 0.27,0.22883333333333333,threshold trap,2,True,True,False
 0.27,0.235,threshold trap,2,True,True,False
 0.27,0.2411666666666667,threshold trap,2,True,True,False
@@ -1646,36 +1646,36 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.27,0.4076666666666667,collapse-prone,2,True,True,True
 0.27,0.4138333333333333,collapse-prone,2,True,True,True
 0.27,0.42,collapse-prone,2,True,True,True
-0.275,0.05,bridge region,1,False,True,False
-0.275,0.05616666666666667,bridge region,1,False,True,False
-0.275,0.06233333333333334,bridge region,1,False,True,False
-0.275,0.0685,bridge region,1,False,True,False
-0.275,0.07466666666666667,bridge region,1,False,True,False
-0.275,0.08083333333333334,bridge region,1,False,True,False
-0.275,0.087,bridge region,1,False,True,False
-0.275,0.09316666666666668,bridge region,1,False,True,False
-0.275,0.09933333333333333,bridge region,1,False,True,False
-0.275,0.10550000000000001,bridge region,1,False,True,False
-0.275,0.11166666666666666,bridge region,1,False,True,False
-0.275,0.11783333333333335,bridge region,1,False,True,False
-0.275,0.124,bridge region,1,False,True,False
-0.275,0.13016666666666665,bridge region,1,False,True,False
-0.275,0.13633333333333333,bridge region,1,False,True,False
-0.275,0.14250000000000002,bridge region,1,False,True,False
-0.275,0.14866666666666667,bridge region,1,False,True,False
-0.275,0.15483333333333332,bridge region,1,False,True,False
-0.275,0.161,bridge region,1,False,True,False
-0.275,0.16716666666666669,bridge region,1,False,True,False
-0.275,0.17333333333333334,bridge region,1,False,True,False
-0.275,0.1795,bridge region,1,False,True,False
-0.275,0.1856666666666667,bridge region,1,False,True,False
-0.275,0.19183333333333336,bridge region,1,False,True,False
-0.275,0.198,bridge region,1,False,True,False
-0.275,0.20416666666666666,bridge region,1,False,True,False
-0.275,0.21033333333333332,bridge region,1,False,True,False
-0.275,0.21650000000000003,bridge region,1,False,True,False
-0.275,0.22266666666666668,bridge region,1,False,True,False
-0.275,0.22883333333333333,bridge region,1,False,True,False
+0.275,0.05,capacity-building,1,False,True,False
+0.275,0.05616666666666667,capacity-building,1,False,True,False
+0.275,0.06233333333333334,capacity-building,1,False,True,False
+0.275,0.0685,capacity-building,1,False,True,False
+0.275,0.07466666666666667,capacity-building,1,False,True,False
+0.275,0.08083333333333334,capacity-building,1,False,True,False
+0.275,0.087,capacity-building,1,False,True,False
+0.275,0.09316666666666668,capacity-building,1,False,True,False
+0.275,0.09933333333333333,capacity-building,1,False,True,False
+0.275,0.10550000000000001,capacity-building,1,False,True,False
+0.275,0.11166666666666666,capacity-building,1,False,True,False
+0.275,0.11783333333333335,capacity-building,1,False,True,False
+0.275,0.124,capacity-building,1,False,True,False
+0.275,0.13016666666666665,capacity-building,1,False,True,False
+0.275,0.13633333333333333,capacity-building,1,False,True,False
+0.275,0.14250000000000002,capacity-building,1,False,True,False
+0.275,0.14866666666666667,capacity-building,1,False,True,False
+0.275,0.15483333333333332,capacity-building,1,False,True,False
+0.275,0.161,capacity-building,1,False,True,False
+0.275,0.16716666666666669,capacity-building,1,False,True,False
+0.275,0.17333333333333334,capacity-building,1,False,True,False
+0.275,0.1795,capacity-building,1,False,True,False
+0.275,0.1856666666666667,capacity-building,1,False,True,False
+0.275,0.19183333333333336,capacity-building,1,False,True,False
+0.275,0.198,capacity-building,1,False,True,False
+0.275,0.20416666666666666,capacity-building,1,False,True,False
+0.275,0.21033333333333332,capacity-building,1,False,True,False
+0.275,0.21650000000000003,capacity-building,1,False,True,False
+0.275,0.22266666666666668,capacity-building,1,False,True,False
+0.275,0.22883333333333333,capacity-building,1,False,True,False
 0.275,0.235,threshold trap,2,True,True,False
 0.275,0.2411666666666667,threshold trap,2,True,True,False
 0.275,0.24733333333333335,threshold trap,2,True,True,False
@@ -1707,37 +1707,37 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.275,0.4076666666666667,collapse-prone,2,True,True,True
 0.275,0.4138333333333333,collapse-prone,2,True,True,True
 0.275,0.42,collapse-prone,2,True,True,True
-0.28,0.05,bridge region,1,False,True,False
-0.28,0.05616666666666667,bridge region,1,False,True,False
-0.28,0.06233333333333334,bridge region,1,False,True,False
-0.28,0.0685,bridge region,1,False,True,False
-0.28,0.07466666666666667,bridge region,1,False,True,False
-0.28,0.08083333333333334,bridge region,1,False,True,False
-0.28,0.087,bridge region,1,False,True,False
-0.28,0.09316666666666668,bridge region,1,False,True,False
-0.28,0.09933333333333333,bridge region,1,False,True,False
-0.28,0.10550000000000001,bridge region,1,False,True,False
-0.28,0.11166666666666666,bridge region,1,False,True,False
-0.28,0.11783333333333335,bridge region,1,False,True,False
-0.28,0.124,bridge region,1,False,True,False
-0.28,0.13016666666666665,bridge region,1,False,True,False
-0.28,0.13633333333333333,bridge region,1,False,True,False
-0.28,0.14250000000000002,bridge region,1,False,True,False
-0.28,0.14866666666666667,bridge region,1,False,True,False
-0.28,0.15483333333333332,bridge region,1,False,True,False
-0.28,0.161,bridge region,1,False,True,False
-0.28,0.16716666666666669,bridge region,1,False,True,False
-0.28,0.17333333333333334,bridge region,1,False,True,False
-0.28,0.1795,bridge region,1,False,True,False
-0.28,0.1856666666666667,bridge region,1,False,True,False
-0.28,0.19183333333333336,bridge region,1,False,True,False
-0.28,0.198,bridge region,1,False,True,False
-0.28,0.20416666666666666,bridge region,1,False,True,False
-0.28,0.21033333333333332,bridge region,1,False,True,False
-0.28,0.21650000000000003,bridge region,1,False,True,False
-0.28,0.22266666666666668,bridge region,1,False,True,False
-0.28,0.22883333333333333,bridge region,1,False,True,False
-0.28,0.235,bridge region,1,False,True,False
+0.28,0.05,capacity-building,1,False,True,False
+0.28,0.05616666666666667,capacity-building,1,False,True,False
+0.28,0.06233333333333334,capacity-building,1,False,True,False
+0.28,0.0685,capacity-building,1,False,True,False
+0.28,0.07466666666666667,capacity-building,1,False,True,False
+0.28,0.08083333333333334,capacity-building,1,False,True,False
+0.28,0.087,capacity-building,1,False,True,False
+0.28,0.09316666666666668,capacity-building,1,False,True,False
+0.28,0.09933333333333333,capacity-building,1,False,True,False
+0.28,0.10550000000000001,capacity-building,1,False,True,False
+0.28,0.11166666666666666,capacity-building,1,False,True,False
+0.28,0.11783333333333335,capacity-building,1,False,True,False
+0.28,0.124,capacity-building,1,False,True,False
+0.28,0.13016666666666665,capacity-building,1,False,True,False
+0.28,0.13633333333333333,capacity-building,1,False,True,False
+0.28,0.14250000000000002,capacity-building,1,False,True,False
+0.28,0.14866666666666667,capacity-building,1,False,True,False
+0.28,0.15483333333333332,capacity-building,1,False,True,False
+0.28,0.161,capacity-building,1,False,True,False
+0.28,0.16716666666666669,capacity-building,1,False,True,False
+0.28,0.17333333333333334,capacity-building,1,False,True,False
+0.28,0.1795,capacity-building,1,False,True,False
+0.28,0.1856666666666667,capacity-building,1,False,True,False
+0.28,0.19183333333333336,capacity-building,1,False,True,False
+0.28,0.198,capacity-building,1,False,True,False
+0.28,0.20416666666666666,capacity-building,1,False,True,False
+0.28,0.21033333333333332,capacity-building,1,False,True,False
+0.28,0.21650000000000003,capacity-building,1,False,True,False
+0.28,0.22266666666666668,capacity-building,1,False,True,False
+0.28,0.22883333333333333,capacity-building,1,False,True,False
+0.28,0.235,capacity-building,1,False,True,False
 0.28,0.2411666666666667,threshold trap,2,True,True,False
 0.28,0.24733333333333335,threshold trap,2,True,True,False
 0.28,0.2535,threshold trap,2,True,True,False
@@ -1768,38 +1768,38 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.28,0.4076666666666667,collapse-prone,2,True,True,True
 0.28,0.4138333333333333,collapse-prone,2,True,True,True
 0.28,0.42,collapse-prone,2,True,True,True
-0.28500000000000003,0.05,bridge region,1,False,True,False
-0.28500000000000003,0.05616666666666667,bridge region,1,False,True,False
-0.28500000000000003,0.06233333333333334,bridge region,1,False,True,False
-0.28500000000000003,0.0685,bridge region,1,False,True,False
-0.28500000000000003,0.07466666666666667,bridge region,1,False,True,False
-0.28500000000000003,0.08083333333333334,bridge region,1,False,True,False
-0.28500000000000003,0.087,bridge region,1,False,True,False
-0.28500000000000003,0.09316666666666668,bridge region,1,False,True,False
-0.28500000000000003,0.09933333333333333,bridge region,1,False,True,False
-0.28500000000000003,0.10550000000000001,bridge region,1,False,True,False
-0.28500000000000003,0.11166666666666666,bridge region,1,False,True,False
-0.28500000000000003,0.11783333333333335,bridge region,1,False,True,False
-0.28500000000000003,0.124,bridge region,1,False,True,False
-0.28500000000000003,0.13016666666666665,bridge region,1,False,True,False
-0.28500000000000003,0.13633333333333333,bridge region,1,False,True,False
-0.28500000000000003,0.14250000000000002,bridge region,1,False,True,False
-0.28500000000000003,0.14866666666666667,bridge region,1,False,True,False
-0.28500000000000003,0.15483333333333332,bridge region,1,False,True,False
-0.28500000000000003,0.161,bridge region,1,False,True,False
-0.28500000000000003,0.16716666666666669,bridge region,1,False,True,False
-0.28500000000000003,0.17333333333333334,bridge region,1,False,True,False
-0.28500000000000003,0.1795,bridge region,1,False,True,False
-0.28500000000000003,0.1856666666666667,bridge region,1,False,True,False
-0.28500000000000003,0.19183333333333336,bridge region,1,False,True,False
-0.28500000000000003,0.198,bridge region,1,False,True,False
-0.28500000000000003,0.20416666666666666,bridge region,1,False,True,False
-0.28500000000000003,0.21033333333333332,bridge region,1,False,True,False
-0.28500000000000003,0.21650000000000003,bridge region,1,False,True,False
-0.28500000000000003,0.22266666666666668,bridge region,1,False,True,False
-0.28500000000000003,0.22883333333333333,bridge region,1,False,True,False
-0.28500000000000003,0.235,bridge region,1,False,True,False
-0.28500000000000003,0.2411666666666667,bridge region,1,False,True,False
+0.28500000000000003,0.05,capacity-building,1,False,True,False
+0.28500000000000003,0.05616666666666667,capacity-building,1,False,True,False
+0.28500000000000003,0.06233333333333334,capacity-building,1,False,True,False
+0.28500000000000003,0.0685,capacity-building,1,False,True,False
+0.28500000000000003,0.07466666666666667,capacity-building,1,False,True,False
+0.28500000000000003,0.08083333333333334,capacity-building,1,False,True,False
+0.28500000000000003,0.087,capacity-building,1,False,True,False
+0.28500000000000003,0.09316666666666668,capacity-building,1,False,True,False
+0.28500000000000003,0.09933333333333333,capacity-building,1,False,True,False
+0.28500000000000003,0.10550000000000001,capacity-building,1,False,True,False
+0.28500000000000003,0.11166666666666666,capacity-building,1,False,True,False
+0.28500000000000003,0.11783333333333335,capacity-building,1,False,True,False
+0.28500000000000003,0.124,capacity-building,1,False,True,False
+0.28500000000000003,0.13016666666666665,capacity-building,1,False,True,False
+0.28500000000000003,0.13633333333333333,capacity-building,1,False,True,False
+0.28500000000000003,0.14250000000000002,capacity-building,1,False,True,False
+0.28500000000000003,0.14866666666666667,capacity-building,1,False,True,False
+0.28500000000000003,0.15483333333333332,capacity-building,1,False,True,False
+0.28500000000000003,0.161,capacity-building,1,False,True,False
+0.28500000000000003,0.16716666666666669,capacity-building,1,False,True,False
+0.28500000000000003,0.17333333333333334,capacity-building,1,False,True,False
+0.28500000000000003,0.1795,capacity-building,1,False,True,False
+0.28500000000000003,0.1856666666666667,capacity-building,1,False,True,False
+0.28500000000000003,0.19183333333333336,capacity-building,1,False,True,False
+0.28500000000000003,0.198,capacity-building,1,False,True,False
+0.28500000000000003,0.20416666666666666,capacity-building,1,False,True,False
+0.28500000000000003,0.21033333333333332,capacity-building,1,False,True,False
+0.28500000000000003,0.21650000000000003,capacity-building,1,False,True,False
+0.28500000000000003,0.22266666666666668,capacity-building,1,False,True,False
+0.28500000000000003,0.22883333333333333,capacity-building,1,False,True,False
+0.28500000000000003,0.235,capacity-building,1,False,True,False
+0.28500000000000003,0.2411666666666667,capacity-building,1,False,True,False
 0.28500000000000003,0.24733333333333335,threshold trap,2,True,True,False
 0.28500000000000003,0.2535,threshold trap,2,True,True,False
 0.28500000000000003,0.25966666666666666,threshold trap,2,True,True,False
@@ -1829,38 +1829,38 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.28500000000000003,0.4076666666666667,collapse-prone,2,True,True,True
 0.28500000000000003,0.4138333333333333,collapse-prone,2,True,True,True
 0.28500000000000003,0.42,collapse-prone,2,True,True,True
-0.29000000000000004,0.05,bridge region,1,False,True,False
-0.29000000000000004,0.05616666666666667,bridge region,1,False,True,False
-0.29000000000000004,0.06233333333333334,bridge region,1,False,True,False
-0.29000000000000004,0.0685,bridge region,1,False,True,False
-0.29000000000000004,0.07466666666666667,bridge region,1,False,True,False
-0.29000000000000004,0.08083333333333334,bridge region,1,False,True,False
-0.29000000000000004,0.087,bridge region,1,False,True,False
-0.29000000000000004,0.09316666666666668,bridge region,1,False,True,False
-0.29000000000000004,0.09933333333333333,bridge region,1,False,True,False
-0.29000000000000004,0.10550000000000001,bridge region,1,False,True,False
-0.29000000000000004,0.11166666666666666,bridge region,1,False,True,False
-0.29000000000000004,0.11783333333333335,bridge region,1,False,True,False
-0.29000000000000004,0.124,bridge region,1,False,True,False
-0.29000000000000004,0.13016666666666665,bridge region,1,False,True,False
-0.29000000000000004,0.13633333333333333,bridge region,1,False,True,False
-0.29000000000000004,0.14250000000000002,bridge region,1,False,True,False
-0.29000000000000004,0.14866666666666667,bridge region,1,False,True,False
-0.29000000000000004,0.15483333333333332,bridge region,1,False,True,False
-0.29000000000000004,0.161,bridge region,1,False,True,False
-0.29000000000000004,0.16716666666666669,bridge region,1,False,True,False
-0.29000000000000004,0.17333333333333334,bridge region,1,False,True,False
-0.29000000000000004,0.1795,bridge region,1,False,True,False
-0.29000000000000004,0.1856666666666667,bridge region,1,False,True,False
-0.29000000000000004,0.19183333333333336,bridge region,1,False,True,False
-0.29000000000000004,0.198,bridge region,1,False,True,False
-0.29000000000000004,0.20416666666666666,bridge region,1,False,True,False
-0.29000000000000004,0.21033333333333332,bridge region,1,False,True,False
-0.29000000000000004,0.21650000000000003,bridge region,1,False,True,False
-0.29000000000000004,0.22266666666666668,bridge region,1,False,True,False
-0.29000000000000004,0.22883333333333333,bridge region,1,False,True,False
-0.29000000000000004,0.235,bridge region,1,False,True,False
-0.29000000000000004,0.2411666666666667,bridge region,1,False,True,False
+0.29000000000000004,0.05,capacity-building,1,False,True,False
+0.29000000000000004,0.05616666666666667,capacity-building,1,False,True,False
+0.29000000000000004,0.06233333333333334,capacity-building,1,False,True,False
+0.29000000000000004,0.0685,capacity-building,1,False,True,False
+0.29000000000000004,0.07466666666666667,capacity-building,1,False,True,False
+0.29000000000000004,0.08083333333333334,capacity-building,1,False,True,False
+0.29000000000000004,0.087,capacity-building,1,False,True,False
+0.29000000000000004,0.09316666666666668,capacity-building,1,False,True,False
+0.29000000000000004,0.09933333333333333,capacity-building,1,False,True,False
+0.29000000000000004,0.10550000000000001,capacity-building,1,False,True,False
+0.29000000000000004,0.11166666666666666,capacity-building,1,False,True,False
+0.29000000000000004,0.11783333333333335,capacity-building,1,False,True,False
+0.29000000000000004,0.124,capacity-building,1,False,True,False
+0.29000000000000004,0.13016666666666665,capacity-building,1,False,True,False
+0.29000000000000004,0.13633333333333333,capacity-building,1,False,True,False
+0.29000000000000004,0.14250000000000002,capacity-building,1,False,True,False
+0.29000000000000004,0.14866666666666667,capacity-building,1,False,True,False
+0.29000000000000004,0.15483333333333332,capacity-building,1,False,True,False
+0.29000000000000004,0.161,capacity-building,1,False,True,False
+0.29000000000000004,0.16716666666666669,capacity-building,1,False,True,False
+0.29000000000000004,0.17333333333333334,capacity-building,1,False,True,False
+0.29000000000000004,0.1795,capacity-building,1,False,True,False
+0.29000000000000004,0.1856666666666667,capacity-building,1,False,True,False
+0.29000000000000004,0.19183333333333336,capacity-building,1,False,True,False
+0.29000000000000004,0.198,capacity-building,1,False,True,False
+0.29000000000000004,0.20416666666666666,capacity-building,1,False,True,False
+0.29000000000000004,0.21033333333333332,capacity-building,1,False,True,False
+0.29000000000000004,0.21650000000000003,capacity-building,1,False,True,False
+0.29000000000000004,0.22266666666666668,capacity-building,1,False,True,False
+0.29000000000000004,0.22883333333333333,capacity-building,1,False,True,False
+0.29000000000000004,0.235,capacity-building,1,False,True,False
+0.29000000000000004,0.2411666666666667,capacity-building,1,False,True,False
 0.29000000000000004,0.24733333333333335,threshold trap,2,True,True,False
 0.29000000000000004,0.2535,threshold trap,2,True,True,False
 0.29000000000000004,0.25966666666666666,threshold trap,2,True,True,False
@@ -1890,39 +1890,39 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.29000000000000004,0.4076666666666667,collapse-prone,2,True,True,True
 0.29000000000000004,0.4138333333333333,collapse-prone,2,True,True,True
 0.29000000000000004,0.42,collapse-prone,2,True,True,True
-0.29500000000000004,0.05,bridge region,1,False,True,False
-0.29500000000000004,0.05616666666666667,bridge region,1,False,True,False
-0.29500000000000004,0.06233333333333334,bridge region,1,False,True,False
-0.29500000000000004,0.0685,bridge region,1,False,True,False
-0.29500000000000004,0.07466666666666667,bridge region,1,False,True,False
-0.29500000000000004,0.08083333333333334,bridge region,1,False,True,False
-0.29500000000000004,0.087,bridge region,1,False,True,False
-0.29500000000000004,0.09316666666666668,bridge region,1,False,True,False
-0.29500000000000004,0.09933333333333333,bridge region,1,False,True,False
-0.29500000000000004,0.10550000000000001,bridge region,1,False,True,False
-0.29500000000000004,0.11166666666666666,bridge region,1,False,True,False
-0.29500000000000004,0.11783333333333335,bridge region,1,False,True,False
-0.29500000000000004,0.124,bridge region,1,False,True,False
-0.29500000000000004,0.13016666666666665,bridge region,1,False,True,False
-0.29500000000000004,0.13633333333333333,bridge region,1,False,True,False
-0.29500000000000004,0.14250000000000002,bridge region,1,False,True,False
-0.29500000000000004,0.14866666666666667,bridge region,1,False,True,False
-0.29500000000000004,0.15483333333333332,bridge region,1,False,True,False
-0.29500000000000004,0.161,bridge region,1,False,True,False
-0.29500000000000004,0.16716666666666669,bridge region,1,False,True,False
-0.29500000000000004,0.17333333333333334,bridge region,1,False,True,False
-0.29500000000000004,0.1795,bridge region,1,False,True,False
-0.29500000000000004,0.1856666666666667,bridge region,1,False,True,False
-0.29500000000000004,0.19183333333333336,bridge region,1,False,True,False
-0.29500000000000004,0.198,bridge region,1,False,True,False
-0.29500000000000004,0.20416666666666666,bridge region,1,False,True,False
-0.29500000000000004,0.21033333333333332,bridge region,1,False,True,False
-0.29500000000000004,0.21650000000000003,bridge region,1,False,True,False
-0.29500000000000004,0.22266666666666668,bridge region,1,False,True,False
-0.29500000000000004,0.22883333333333333,bridge region,1,False,True,False
-0.29500000000000004,0.235,bridge region,1,False,True,False
-0.29500000000000004,0.2411666666666667,bridge region,1,False,True,False
-0.29500000000000004,0.24733333333333335,bridge region,1,False,True,False
+0.29500000000000004,0.05,capacity-building,1,False,True,False
+0.29500000000000004,0.05616666666666667,capacity-building,1,False,True,False
+0.29500000000000004,0.06233333333333334,capacity-building,1,False,True,False
+0.29500000000000004,0.0685,capacity-building,1,False,True,False
+0.29500000000000004,0.07466666666666667,capacity-building,1,False,True,False
+0.29500000000000004,0.08083333333333334,capacity-building,1,False,True,False
+0.29500000000000004,0.087,capacity-building,1,False,True,False
+0.29500000000000004,0.09316666666666668,capacity-building,1,False,True,False
+0.29500000000000004,0.09933333333333333,capacity-building,1,False,True,False
+0.29500000000000004,0.10550000000000001,capacity-building,1,False,True,False
+0.29500000000000004,0.11166666666666666,capacity-building,1,False,True,False
+0.29500000000000004,0.11783333333333335,capacity-building,1,False,True,False
+0.29500000000000004,0.124,capacity-building,1,False,True,False
+0.29500000000000004,0.13016666666666665,capacity-building,1,False,True,False
+0.29500000000000004,0.13633333333333333,capacity-building,1,False,True,False
+0.29500000000000004,0.14250000000000002,capacity-building,1,False,True,False
+0.29500000000000004,0.14866666666666667,capacity-building,1,False,True,False
+0.29500000000000004,0.15483333333333332,capacity-building,1,False,True,False
+0.29500000000000004,0.161,capacity-building,1,False,True,False
+0.29500000000000004,0.16716666666666669,capacity-building,1,False,True,False
+0.29500000000000004,0.17333333333333334,capacity-building,1,False,True,False
+0.29500000000000004,0.1795,capacity-building,1,False,True,False
+0.29500000000000004,0.1856666666666667,capacity-building,1,False,True,False
+0.29500000000000004,0.19183333333333336,capacity-building,1,False,True,False
+0.29500000000000004,0.198,capacity-building,1,False,True,False
+0.29500000000000004,0.20416666666666666,capacity-building,1,False,True,False
+0.29500000000000004,0.21033333333333332,capacity-building,1,False,True,False
+0.29500000000000004,0.21650000000000003,capacity-building,1,False,True,False
+0.29500000000000004,0.22266666666666668,capacity-building,1,False,True,False
+0.29500000000000004,0.22883333333333333,capacity-building,1,False,True,False
+0.29500000000000004,0.235,capacity-building,1,False,True,False
+0.29500000000000004,0.2411666666666667,capacity-building,1,False,True,False
+0.29500000000000004,0.24733333333333335,capacity-building,1,False,True,False
 0.29500000000000004,0.2535,threshold trap,2,True,True,False
 0.29500000000000004,0.25966666666666666,threshold trap,2,True,True,False
 0.29500000000000004,0.2658333333333333,threshold trap,2,True,True,False
@@ -1951,40 +1951,40 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.29500000000000004,0.4076666666666667,collapse-prone,2,True,True,True
 0.29500000000000004,0.4138333333333333,collapse-prone,2,True,True,True
 0.29500000000000004,0.42,collapse-prone,2,True,True,True
-0.30000000000000004,0.05,bridge region,1,False,True,False
-0.30000000000000004,0.05616666666666667,bridge region,1,False,True,False
-0.30000000000000004,0.06233333333333334,bridge region,1,False,True,False
-0.30000000000000004,0.0685,bridge region,1,False,True,False
-0.30000000000000004,0.07466666666666667,bridge region,1,False,True,False
-0.30000000000000004,0.08083333333333334,bridge region,1,False,True,False
-0.30000000000000004,0.087,bridge region,1,False,True,False
-0.30000000000000004,0.09316666666666668,bridge region,1,False,True,False
-0.30000000000000004,0.09933333333333333,bridge region,1,False,True,False
-0.30000000000000004,0.10550000000000001,bridge region,1,False,True,False
-0.30000000000000004,0.11166666666666666,bridge region,1,False,True,False
-0.30000000000000004,0.11783333333333335,bridge region,1,False,True,False
-0.30000000000000004,0.124,bridge region,1,False,True,False
-0.30000000000000004,0.13016666666666665,bridge region,1,False,True,False
-0.30000000000000004,0.13633333333333333,bridge region,1,False,True,False
-0.30000000000000004,0.14250000000000002,bridge region,1,False,True,False
-0.30000000000000004,0.14866666666666667,bridge region,1,False,True,False
-0.30000000000000004,0.15483333333333332,bridge region,1,False,True,False
-0.30000000000000004,0.161,bridge region,1,False,True,False
-0.30000000000000004,0.16716666666666669,bridge region,1,False,True,False
-0.30000000000000004,0.17333333333333334,bridge region,1,False,True,False
-0.30000000000000004,0.1795,bridge region,1,False,True,False
-0.30000000000000004,0.1856666666666667,bridge region,1,False,True,False
-0.30000000000000004,0.19183333333333336,bridge region,1,False,True,False
-0.30000000000000004,0.198,bridge region,1,False,True,False
-0.30000000000000004,0.20416666666666666,bridge region,1,False,True,False
-0.30000000000000004,0.21033333333333332,bridge region,1,False,True,False
-0.30000000000000004,0.21650000000000003,bridge region,1,False,True,False
-0.30000000000000004,0.22266666666666668,bridge region,1,False,True,False
-0.30000000000000004,0.22883333333333333,bridge region,1,False,True,False
-0.30000000000000004,0.235,bridge region,1,False,True,False
-0.30000000000000004,0.2411666666666667,bridge region,1,False,True,False
-0.30000000000000004,0.24733333333333335,bridge region,1,False,True,False
-0.30000000000000004,0.2535,bridge region,1,False,True,False
+0.30000000000000004,0.05,capacity-building,1,False,True,False
+0.30000000000000004,0.05616666666666667,capacity-building,1,False,True,False
+0.30000000000000004,0.06233333333333334,capacity-building,1,False,True,False
+0.30000000000000004,0.0685,capacity-building,1,False,True,False
+0.30000000000000004,0.07466666666666667,capacity-building,1,False,True,False
+0.30000000000000004,0.08083333333333334,capacity-building,1,False,True,False
+0.30000000000000004,0.087,capacity-building,1,False,True,False
+0.30000000000000004,0.09316666666666668,capacity-building,1,False,True,False
+0.30000000000000004,0.09933333333333333,capacity-building,1,False,True,False
+0.30000000000000004,0.10550000000000001,capacity-building,1,False,True,False
+0.30000000000000004,0.11166666666666666,capacity-building,1,False,True,False
+0.30000000000000004,0.11783333333333335,capacity-building,1,False,True,False
+0.30000000000000004,0.124,capacity-building,1,False,True,False
+0.30000000000000004,0.13016666666666665,capacity-building,1,False,True,False
+0.30000000000000004,0.13633333333333333,capacity-building,1,False,True,False
+0.30000000000000004,0.14250000000000002,capacity-building,1,False,True,False
+0.30000000000000004,0.14866666666666667,capacity-building,1,False,True,False
+0.30000000000000004,0.15483333333333332,capacity-building,1,False,True,False
+0.30000000000000004,0.161,capacity-building,1,False,True,False
+0.30000000000000004,0.16716666666666669,capacity-building,1,False,True,False
+0.30000000000000004,0.17333333333333334,capacity-building,1,False,True,False
+0.30000000000000004,0.1795,capacity-building,1,False,True,False
+0.30000000000000004,0.1856666666666667,capacity-building,1,False,True,False
+0.30000000000000004,0.19183333333333336,capacity-building,1,False,True,False
+0.30000000000000004,0.198,capacity-building,1,False,True,False
+0.30000000000000004,0.20416666666666666,capacity-building,1,False,True,False
+0.30000000000000004,0.21033333333333332,capacity-building,1,False,True,False
+0.30000000000000004,0.21650000000000003,capacity-building,1,False,True,False
+0.30000000000000004,0.22266666666666668,capacity-building,1,False,True,False
+0.30000000000000004,0.22883333333333333,capacity-building,1,False,True,False
+0.30000000000000004,0.235,capacity-building,1,False,True,False
+0.30000000000000004,0.2411666666666667,capacity-building,1,False,True,False
+0.30000000000000004,0.24733333333333335,capacity-building,1,False,True,False
+0.30000000000000004,0.2535,capacity-building,1,False,True,False
 0.30000000000000004,0.25966666666666666,threshold trap,2,True,True,False
 0.30000000000000004,0.2658333333333333,threshold trap,2,True,True,False
 0.30000000000000004,0.272,threshold trap,2,True,True,False
@@ -2012,41 +2012,41 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.30000000000000004,0.4076666666666667,collapse-prone,2,True,True,True
 0.30000000000000004,0.4138333333333333,collapse-prone,2,True,True,True
 0.30000000000000004,0.42,collapse-prone,2,True,True,True
-0.30500000000000005,0.05,bridge region,1,False,True,False
-0.30500000000000005,0.05616666666666667,bridge region,1,False,True,False
-0.30500000000000005,0.06233333333333334,bridge region,1,False,True,False
-0.30500000000000005,0.0685,bridge region,1,False,True,False
-0.30500000000000005,0.07466666666666667,bridge region,1,False,True,False
-0.30500000000000005,0.08083333333333334,bridge region,1,False,True,False
-0.30500000000000005,0.087,bridge region,1,False,True,False
-0.30500000000000005,0.09316666666666668,bridge region,1,False,True,False
-0.30500000000000005,0.09933333333333333,bridge region,1,False,True,False
-0.30500000000000005,0.10550000000000001,bridge region,1,False,True,False
-0.30500000000000005,0.11166666666666666,bridge region,1,False,True,False
-0.30500000000000005,0.11783333333333335,bridge region,1,False,True,False
-0.30500000000000005,0.124,bridge region,1,False,True,False
-0.30500000000000005,0.13016666666666665,bridge region,1,False,True,False
-0.30500000000000005,0.13633333333333333,bridge region,1,False,True,False
-0.30500000000000005,0.14250000000000002,bridge region,1,False,True,False
-0.30500000000000005,0.14866666666666667,bridge region,1,False,True,False
-0.30500000000000005,0.15483333333333332,bridge region,1,False,True,False
-0.30500000000000005,0.161,bridge region,1,False,True,False
-0.30500000000000005,0.16716666666666669,bridge region,1,False,True,False
-0.30500000000000005,0.17333333333333334,bridge region,1,False,True,False
-0.30500000000000005,0.1795,bridge region,1,False,True,False
-0.30500000000000005,0.1856666666666667,bridge region,1,False,True,False
-0.30500000000000005,0.19183333333333336,bridge region,1,False,True,False
-0.30500000000000005,0.198,bridge region,1,False,True,False
-0.30500000000000005,0.20416666666666666,bridge region,1,False,True,False
-0.30500000000000005,0.21033333333333332,bridge region,1,False,True,False
-0.30500000000000005,0.21650000000000003,bridge region,1,False,True,False
-0.30500000000000005,0.22266666666666668,bridge region,1,False,True,False
-0.30500000000000005,0.22883333333333333,bridge region,1,False,True,False
-0.30500000000000005,0.235,bridge region,1,False,True,False
-0.30500000000000005,0.2411666666666667,bridge region,1,False,True,False
-0.30500000000000005,0.24733333333333335,bridge region,1,False,True,False
-0.30500000000000005,0.2535,bridge region,1,False,True,False
-0.30500000000000005,0.25966666666666666,bridge region,1,False,True,False
+0.30500000000000005,0.05,capacity-building,1,False,True,False
+0.30500000000000005,0.05616666666666667,capacity-building,1,False,True,False
+0.30500000000000005,0.06233333333333334,capacity-building,1,False,True,False
+0.30500000000000005,0.0685,capacity-building,1,False,True,False
+0.30500000000000005,0.07466666666666667,capacity-building,1,False,True,False
+0.30500000000000005,0.08083333333333334,capacity-building,1,False,True,False
+0.30500000000000005,0.087,capacity-building,1,False,True,False
+0.30500000000000005,0.09316666666666668,capacity-building,1,False,True,False
+0.30500000000000005,0.09933333333333333,capacity-building,1,False,True,False
+0.30500000000000005,0.10550000000000001,capacity-building,1,False,True,False
+0.30500000000000005,0.11166666666666666,capacity-building,1,False,True,False
+0.30500000000000005,0.11783333333333335,capacity-building,1,False,True,False
+0.30500000000000005,0.124,capacity-building,1,False,True,False
+0.30500000000000005,0.13016666666666665,capacity-building,1,False,True,False
+0.30500000000000005,0.13633333333333333,capacity-building,1,False,True,False
+0.30500000000000005,0.14250000000000002,capacity-building,1,False,True,False
+0.30500000000000005,0.14866666666666667,capacity-building,1,False,True,False
+0.30500000000000005,0.15483333333333332,capacity-building,1,False,True,False
+0.30500000000000005,0.161,capacity-building,1,False,True,False
+0.30500000000000005,0.16716666666666669,capacity-building,1,False,True,False
+0.30500000000000005,0.17333333333333334,capacity-building,1,False,True,False
+0.30500000000000005,0.1795,capacity-building,1,False,True,False
+0.30500000000000005,0.1856666666666667,capacity-building,1,False,True,False
+0.30500000000000005,0.19183333333333336,capacity-building,1,False,True,False
+0.30500000000000005,0.198,capacity-building,1,False,True,False
+0.30500000000000005,0.20416666666666666,capacity-building,1,False,True,False
+0.30500000000000005,0.21033333333333332,capacity-building,1,False,True,False
+0.30500000000000005,0.21650000000000003,capacity-building,1,False,True,False
+0.30500000000000005,0.22266666666666668,capacity-building,1,False,True,False
+0.30500000000000005,0.22883333333333333,capacity-building,1,False,True,False
+0.30500000000000005,0.235,capacity-building,1,False,True,False
+0.30500000000000005,0.2411666666666667,capacity-building,1,False,True,False
+0.30500000000000005,0.24733333333333335,capacity-building,1,False,True,False
+0.30500000000000005,0.2535,capacity-building,1,False,True,False
+0.30500000000000005,0.25966666666666666,capacity-building,1,False,True,False
 0.30500000000000005,0.2658333333333333,threshold trap,2,True,True,False
 0.30500000000000005,0.272,threshold trap,2,True,True,False
 0.30500000000000005,0.2781666666666667,threshold trap,2,True,True,False
@@ -2073,42 +2073,42 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.30500000000000005,0.4076666666666667,collapse-prone,2,True,True,True
 0.30500000000000005,0.4138333333333333,collapse-prone,2,True,True,True
 0.30500000000000005,0.42,collapse-prone,2,True,True,True
-0.31000000000000005,0.05,bridge region,1,False,True,False
-0.31000000000000005,0.05616666666666667,bridge region,1,False,True,False
-0.31000000000000005,0.06233333333333334,bridge region,1,False,True,False
-0.31000000000000005,0.0685,bridge region,1,False,True,False
-0.31000000000000005,0.07466666666666667,bridge region,1,False,True,False
-0.31000000000000005,0.08083333333333334,bridge region,1,False,True,False
-0.31000000000000005,0.087,bridge region,1,False,True,False
-0.31000000000000005,0.09316666666666668,bridge region,1,False,True,False
-0.31000000000000005,0.09933333333333333,bridge region,1,False,True,False
-0.31000000000000005,0.10550000000000001,bridge region,1,False,True,False
-0.31000000000000005,0.11166666666666666,bridge region,1,False,True,False
-0.31000000000000005,0.11783333333333335,bridge region,1,False,True,False
-0.31000000000000005,0.124,bridge region,1,False,True,False
-0.31000000000000005,0.13016666666666665,bridge region,1,False,True,False
-0.31000000000000005,0.13633333333333333,bridge region,1,False,True,False
-0.31000000000000005,0.14250000000000002,bridge region,1,False,True,False
-0.31000000000000005,0.14866666666666667,bridge region,1,False,True,False
-0.31000000000000005,0.15483333333333332,bridge region,1,False,True,False
-0.31000000000000005,0.161,bridge region,1,False,True,False
-0.31000000000000005,0.16716666666666669,bridge region,1,False,True,False
-0.31000000000000005,0.17333333333333334,bridge region,1,False,True,False
-0.31000000000000005,0.1795,bridge region,1,False,True,False
-0.31000000000000005,0.1856666666666667,bridge region,1,False,True,False
-0.31000000000000005,0.19183333333333336,bridge region,1,False,True,False
-0.31000000000000005,0.198,bridge region,1,False,True,False
-0.31000000000000005,0.20416666666666666,bridge region,1,False,True,False
-0.31000000000000005,0.21033333333333332,bridge region,1,False,True,False
-0.31000000000000005,0.21650000000000003,bridge region,1,False,True,False
-0.31000000000000005,0.22266666666666668,bridge region,1,False,True,False
-0.31000000000000005,0.22883333333333333,bridge region,1,False,True,False
-0.31000000000000005,0.235,bridge region,1,False,True,False
-0.31000000000000005,0.2411666666666667,bridge region,1,False,True,False
-0.31000000000000005,0.24733333333333335,bridge region,1,False,True,False
-0.31000000000000005,0.2535,bridge region,1,False,True,False
-0.31000000000000005,0.25966666666666666,bridge region,1,False,True,False
-0.31000000000000005,0.2658333333333333,bridge region,1,False,True,False
+0.31000000000000005,0.05,capacity-building,1,False,True,False
+0.31000000000000005,0.05616666666666667,capacity-building,1,False,True,False
+0.31000000000000005,0.06233333333333334,capacity-building,1,False,True,False
+0.31000000000000005,0.0685,capacity-building,1,False,True,False
+0.31000000000000005,0.07466666666666667,capacity-building,1,False,True,False
+0.31000000000000005,0.08083333333333334,capacity-building,1,False,True,False
+0.31000000000000005,0.087,capacity-building,1,False,True,False
+0.31000000000000005,0.09316666666666668,capacity-building,1,False,True,False
+0.31000000000000005,0.09933333333333333,capacity-building,1,False,True,False
+0.31000000000000005,0.10550000000000001,capacity-building,1,False,True,False
+0.31000000000000005,0.11166666666666666,capacity-building,1,False,True,False
+0.31000000000000005,0.11783333333333335,capacity-building,1,False,True,False
+0.31000000000000005,0.124,capacity-building,1,False,True,False
+0.31000000000000005,0.13016666666666665,capacity-building,1,False,True,False
+0.31000000000000005,0.13633333333333333,capacity-building,1,False,True,False
+0.31000000000000005,0.14250000000000002,capacity-building,1,False,True,False
+0.31000000000000005,0.14866666666666667,capacity-building,1,False,True,False
+0.31000000000000005,0.15483333333333332,capacity-building,1,False,True,False
+0.31000000000000005,0.161,capacity-building,1,False,True,False
+0.31000000000000005,0.16716666666666669,capacity-building,1,False,True,False
+0.31000000000000005,0.17333333333333334,capacity-building,1,False,True,False
+0.31000000000000005,0.1795,capacity-building,1,False,True,False
+0.31000000000000005,0.1856666666666667,capacity-building,1,False,True,False
+0.31000000000000005,0.19183333333333336,capacity-building,1,False,True,False
+0.31000000000000005,0.198,capacity-building,1,False,True,False
+0.31000000000000005,0.20416666666666666,capacity-building,1,False,True,False
+0.31000000000000005,0.21033333333333332,capacity-building,1,False,True,False
+0.31000000000000005,0.21650000000000003,capacity-building,1,False,True,False
+0.31000000000000005,0.22266666666666668,capacity-building,1,False,True,False
+0.31000000000000005,0.22883333333333333,capacity-building,1,False,True,False
+0.31000000000000005,0.235,capacity-building,1,False,True,False
+0.31000000000000005,0.2411666666666667,capacity-building,1,False,True,False
+0.31000000000000005,0.24733333333333335,capacity-building,1,False,True,False
+0.31000000000000005,0.2535,capacity-building,1,False,True,False
+0.31000000000000005,0.25966666666666666,capacity-building,1,False,True,False
+0.31000000000000005,0.2658333333333333,capacity-building,1,False,True,False
 0.31000000000000005,0.272,threshold trap,2,True,True,False
 0.31000000000000005,0.2781666666666667,threshold trap,2,True,True,False
 0.31000000000000005,0.2843333333333333,threshold trap,2,True,True,False
@@ -2134,42 +2134,42 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.31000000000000005,0.4076666666666667,collapse-prone,2,True,True,True
 0.31000000000000005,0.4138333333333333,collapse-prone,2,True,True,True
 0.31000000000000005,0.42,collapse-prone,2,True,True,True
-0.31500000000000006,0.05,bridge region,1,False,True,False
-0.31500000000000006,0.05616666666666667,bridge region,1,False,True,False
-0.31500000000000006,0.06233333333333334,bridge region,1,False,True,False
-0.31500000000000006,0.0685,bridge region,1,False,True,False
-0.31500000000000006,0.07466666666666667,bridge region,1,False,True,False
-0.31500000000000006,0.08083333333333334,bridge region,1,False,True,False
-0.31500000000000006,0.087,bridge region,1,False,True,False
-0.31500000000000006,0.09316666666666668,bridge region,1,False,True,False
-0.31500000000000006,0.09933333333333333,bridge region,1,False,True,False
-0.31500000000000006,0.10550000000000001,bridge region,1,False,True,False
-0.31500000000000006,0.11166666666666666,bridge region,1,False,True,False
-0.31500000000000006,0.11783333333333335,bridge region,1,False,True,False
-0.31500000000000006,0.124,bridge region,1,False,True,False
-0.31500000000000006,0.13016666666666665,bridge region,1,False,True,False
-0.31500000000000006,0.13633333333333333,bridge region,1,False,True,False
-0.31500000000000006,0.14250000000000002,bridge region,1,False,True,False
-0.31500000000000006,0.14866666666666667,bridge region,1,False,True,False
-0.31500000000000006,0.15483333333333332,bridge region,1,False,True,False
-0.31500000000000006,0.161,bridge region,1,False,True,False
-0.31500000000000006,0.16716666666666669,bridge region,1,False,True,False
-0.31500000000000006,0.17333333333333334,bridge region,1,False,True,False
-0.31500000000000006,0.1795,bridge region,1,False,True,False
-0.31500000000000006,0.1856666666666667,bridge region,1,False,True,False
-0.31500000000000006,0.19183333333333336,bridge region,1,False,True,False
-0.31500000000000006,0.198,bridge region,1,False,True,False
-0.31500000000000006,0.20416666666666666,bridge region,1,False,True,False
-0.31500000000000006,0.21033333333333332,bridge region,1,False,True,False
-0.31500000000000006,0.21650000000000003,bridge region,1,False,True,False
-0.31500000000000006,0.22266666666666668,bridge region,1,False,True,False
-0.31500000000000006,0.22883333333333333,bridge region,1,False,True,False
-0.31500000000000006,0.235,bridge region,1,False,True,False
-0.31500000000000006,0.2411666666666667,bridge region,1,False,True,False
-0.31500000000000006,0.24733333333333335,bridge region,1,False,True,False
-0.31500000000000006,0.2535,bridge region,1,False,True,False
-0.31500000000000006,0.25966666666666666,bridge region,1,False,True,False
-0.31500000000000006,0.2658333333333333,bridge region,1,False,True,False
+0.31500000000000006,0.05,capacity-building,1,False,True,False
+0.31500000000000006,0.05616666666666667,capacity-building,1,False,True,False
+0.31500000000000006,0.06233333333333334,capacity-building,1,False,True,False
+0.31500000000000006,0.0685,capacity-building,1,False,True,False
+0.31500000000000006,0.07466666666666667,capacity-building,1,False,True,False
+0.31500000000000006,0.08083333333333334,capacity-building,1,False,True,False
+0.31500000000000006,0.087,capacity-building,1,False,True,False
+0.31500000000000006,0.09316666666666668,capacity-building,1,False,True,False
+0.31500000000000006,0.09933333333333333,capacity-building,1,False,True,False
+0.31500000000000006,0.10550000000000001,capacity-building,1,False,True,False
+0.31500000000000006,0.11166666666666666,capacity-building,1,False,True,False
+0.31500000000000006,0.11783333333333335,capacity-building,1,False,True,False
+0.31500000000000006,0.124,capacity-building,1,False,True,False
+0.31500000000000006,0.13016666666666665,capacity-building,1,False,True,False
+0.31500000000000006,0.13633333333333333,capacity-building,1,False,True,False
+0.31500000000000006,0.14250000000000002,capacity-building,1,False,True,False
+0.31500000000000006,0.14866666666666667,capacity-building,1,False,True,False
+0.31500000000000006,0.15483333333333332,capacity-building,1,False,True,False
+0.31500000000000006,0.161,capacity-building,1,False,True,False
+0.31500000000000006,0.16716666666666669,capacity-building,1,False,True,False
+0.31500000000000006,0.17333333333333334,capacity-building,1,False,True,False
+0.31500000000000006,0.1795,capacity-building,1,False,True,False
+0.31500000000000006,0.1856666666666667,capacity-building,1,False,True,False
+0.31500000000000006,0.19183333333333336,capacity-building,1,False,True,False
+0.31500000000000006,0.198,capacity-building,1,False,True,False
+0.31500000000000006,0.20416666666666666,capacity-building,1,False,True,False
+0.31500000000000006,0.21033333333333332,capacity-building,1,False,True,False
+0.31500000000000006,0.21650000000000003,capacity-building,1,False,True,False
+0.31500000000000006,0.22266666666666668,capacity-building,1,False,True,False
+0.31500000000000006,0.22883333333333333,capacity-building,1,False,True,False
+0.31500000000000006,0.235,capacity-building,1,False,True,False
+0.31500000000000006,0.2411666666666667,capacity-building,1,False,True,False
+0.31500000000000006,0.24733333333333335,capacity-building,1,False,True,False
+0.31500000000000006,0.2535,capacity-building,1,False,True,False
+0.31500000000000006,0.25966666666666666,capacity-building,1,False,True,False
+0.31500000000000006,0.2658333333333333,capacity-building,1,False,True,False
 0.31500000000000006,0.272,threshold trap,2,True,True,False
 0.31500000000000006,0.2781666666666667,threshold trap,2,True,True,False
 0.31500000000000006,0.2843333333333333,threshold trap,2,True,True,False
@@ -2195,43 +2195,43 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.31500000000000006,0.4076666666666667,collapse-prone,2,True,True,True
 0.31500000000000006,0.4138333333333333,collapse-prone,2,True,True,True
 0.31500000000000006,0.42,collapse-prone,2,True,True,True
-0.32000000000000006,0.05,bridge region,1,False,True,False
-0.32000000000000006,0.05616666666666667,bridge region,1,False,True,False
-0.32000000000000006,0.06233333333333334,bridge region,1,False,True,False
-0.32000000000000006,0.0685,bridge region,1,False,True,False
-0.32000000000000006,0.07466666666666667,bridge region,1,False,True,False
-0.32000000000000006,0.08083333333333334,bridge region,1,False,True,False
-0.32000000000000006,0.087,bridge region,1,False,True,False
-0.32000000000000006,0.09316666666666668,bridge region,1,False,True,False
-0.32000000000000006,0.09933333333333333,bridge region,1,False,True,False
-0.32000000000000006,0.10550000000000001,bridge region,1,False,True,False
-0.32000000000000006,0.11166666666666666,bridge region,1,False,True,False
-0.32000000000000006,0.11783333333333335,bridge region,1,False,True,False
-0.32000000000000006,0.124,bridge region,1,False,True,False
-0.32000000000000006,0.13016666666666665,bridge region,1,False,True,False
-0.32000000000000006,0.13633333333333333,bridge region,1,False,True,False
-0.32000000000000006,0.14250000000000002,bridge region,1,False,True,False
-0.32000000000000006,0.14866666666666667,bridge region,1,False,True,False
-0.32000000000000006,0.15483333333333332,bridge region,1,False,True,False
-0.32000000000000006,0.161,bridge region,1,False,True,False
-0.32000000000000006,0.16716666666666669,bridge region,1,False,True,False
-0.32000000000000006,0.17333333333333334,bridge region,1,False,True,False
-0.32000000000000006,0.1795,bridge region,1,False,True,False
-0.32000000000000006,0.1856666666666667,bridge region,1,False,True,False
-0.32000000000000006,0.19183333333333336,bridge region,1,False,True,False
-0.32000000000000006,0.198,bridge region,1,False,True,False
-0.32000000000000006,0.20416666666666666,bridge region,1,False,True,False
-0.32000000000000006,0.21033333333333332,bridge region,1,False,True,False
-0.32000000000000006,0.21650000000000003,bridge region,1,False,True,False
-0.32000000000000006,0.22266666666666668,bridge region,1,False,True,False
-0.32000000000000006,0.22883333333333333,bridge region,1,False,True,False
-0.32000000000000006,0.235,bridge region,1,False,True,False
-0.32000000000000006,0.2411666666666667,bridge region,1,False,True,False
-0.32000000000000006,0.24733333333333335,bridge region,1,False,True,False
-0.32000000000000006,0.2535,bridge region,1,False,True,False
-0.32000000000000006,0.25966666666666666,bridge region,1,False,True,False
-0.32000000000000006,0.2658333333333333,bridge region,1,False,True,False
-0.32000000000000006,0.272,bridge region,1,False,True,False
+0.32000000000000006,0.05,capacity-building,1,False,True,False
+0.32000000000000006,0.05616666666666667,capacity-building,1,False,True,False
+0.32000000000000006,0.06233333333333334,capacity-building,1,False,True,False
+0.32000000000000006,0.0685,capacity-building,1,False,True,False
+0.32000000000000006,0.07466666666666667,capacity-building,1,False,True,False
+0.32000000000000006,0.08083333333333334,capacity-building,1,False,True,False
+0.32000000000000006,0.087,capacity-building,1,False,True,False
+0.32000000000000006,0.09316666666666668,capacity-building,1,False,True,False
+0.32000000000000006,0.09933333333333333,capacity-building,1,False,True,False
+0.32000000000000006,0.10550000000000001,capacity-building,1,False,True,False
+0.32000000000000006,0.11166666666666666,capacity-building,1,False,True,False
+0.32000000000000006,0.11783333333333335,capacity-building,1,False,True,False
+0.32000000000000006,0.124,capacity-building,1,False,True,False
+0.32000000000000006,0.13016666666666665,capacity-building,1,False,True,False
+0.32000000000000006,0.13633333333333333,capacity-building,1,False,True,False
+0.32000000000000006,0.14250000000000002,capacity-building,1,False,True,False
+0.32000000000000006,0.14866666666666667,capacity-building,1,False,True,False
+0.32000000000000006,0.15483333333333332,capacity-building,1,False,True,False
+0.32000000000000006,0.161,capacity-building,1,False,True,False
+0.32000000000000006,0.16716666666666669,capacity-building,1,False,True,False
+0.32000000000000006,0.17333333333333334,capacity-building,1,False,True,False
+0.32000000000000006,0.1795,capacity-building,1,False,True,False
+0.32000000000000006,0.1856666666666667,capacity-building,1,False,True,False
+0.32000000000000006,0.19183333333333336,capacity-building,1,False,True,False
+0.32000000000000006,0.198,capacity-building,1,False,True,False
+0.32000000000000006,0.20416666666666666,capacity-building,1,False,True,False
+0.32000000000000006,0.21033333333333332,capacity-building,1,False,True,False
+0.32000000000000006,0.21650000000000003,capacity-building,1,False,True,False
+0.32000000000000006,0.22266666666666668,capacity-building,1,False,True,False
+0.32000000000000006,0.22883333333333333,capacity-building,1,False,True,False
+0.32000000000000006,0.235,capacity-building,1,False,True,False
+0.32000000000000006,0.2411666666666667,capacity-building,1,False,True,False
+0.32000000000000006,0.24733333333333335,capacity-building,1,False,True,False
+0.32000000000000006,0.2535,capacity-building,1,False,True,False
+0.32000000000000006,0.25966666666666666,capacity-building,1,False,True,False
+0.32000000000000006,0.2658333333333333,capacity-building,1,False,True,False
+0.32000000000000006,0.272,capacity-building,1,False,True,False
 0.32000000000000006,0.2781666666666667,threshold trap,2,True,True,False
 0.32000000000000006,0.2843333333333333,threshold trap,2,True,True,False
 0.32000000000000006,0.2905,threshold trap,2,True,True,False
@@ -2256,44 +2256,44 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.32000000000000006,0.4076666666666667,collapse-prone,2,True,True,True
 0.32000000000000006,0.4138333333333333,collapse-prone,2,True,True,True
 0.32000000000000006,0.42,collapse-prone,2,True,True,True
-0.32499999999999996,0.05,bridge region,1,False,True,False
-0.32499999999999996,0.05616666666666667,bridge region,1,False,True,False
-0.32499999999999996,0.06233333333333334,bridge region,1,False,True,False
-0.32499999999999996,0.0685,bridge region,1,False,True,False
-0.32499999999999996,0.07466666666666667,bridge region,1,False,True,False
-0.32499999999999996,0.08083333333333334,bridge region,1,False,True,False
-0.32499999999999996,0.087,bridge region,1,False,True,False
-0.32499999999999996,0.09316666666666668,bridge region,1,False,True,False
-0.32499999999999996,0.09933333333333333,bridge region,1,False,True,False
-0.32499999999999996,0.10550000000000001,bridge region,1,False,True,False
-0.32499999999999996,0.11166666666666666,bridge region,1,False,True,False
-0.32499999999999996,0.11783333333333335,bridge region,1,False,True,False
-0.32499999999999996,0.124,bridge region,1,False,True,False
-0.32499999999999996,0.13016666666666665,bridge region,1,False,True,False
-0.32499999999999996,0.13633333333333333,bridge region,1,False,True,False
-0.32499999999999996,0.14250000000000002,bridge region,1,False,True,False
-0.32499999999999996,0.14866666666666667,bridge region,1,False,True,False
-0.32499999999999996,0.15483333333333332,bridge region,1,False,True,False
-0.32499999999999996,0.161,bridge region,1,False,True,False
-0.32499999999999996,0.16716666666666669,bridge region,1,False,True,False
-0.32499999999999996,0.17333333333333334,bridge region,1,False,True,False
-0.32499999999999996,0.1795,bridge region,1,False,True,False
-0.32499999999999996,0.1856666666666667,bridge region,1,False,True,False
-0.32499999999999996,0.19183333333333336,bridge region,1,False,True,False
-0.32499999999999996,0.198,bridge region,1,False,True,False
-0.32499999999999996,0.20416666666666666,bridge region,1,False,True,False
-0.32499999999999996,0.21033333333333332,bridge region,1,False,True,False
-0.32499999999999996,0.21650000000000003,bridge region,1,False,True,False
-0.32499999999999996,0.22266666666666668,bridge region,1,False,True,False
-0.32499999999999996,0.22883333333333333,bridge region,1,False,True,False
-0.32499999999999996,0.235,bridge region,1,False,True,False
-0.32499999999999996,0.2411666666666667,bridge region,1,False,True,False
-0.32499999999999996,0.24733333333333335,bridge region,1,False,True,False
-0.32499999999999996,0.2535,bridge region,1,False,True,False
-0.32499999999999996,0.25966666666666666,bridge region,1,False,True,False
-0.32499999999999996,0.2658333333333333,bridge region,1,False,True,False
-0.32499999999999996,0.272,bridge region,1,False,True,False
-0.32499999999999996,0.2781666666666667,bridge region,1,False,True,False
+0.32499999999999996,0.05,capacity-building,1,False,True,False
+0.32499999999999996,0.05616666666666667,capacity-building,1,False,True,False
+0.32499999999999996,0.06233333333333334,capacity-building,1,False,True,False
+0.32499999999999996,0.0685,capacity-building,1,False,True,False
+0.32499999999999996,0.07466666666666667,capacity-building,1,False,True,False
+0.32499999999999996,0.08083333333333334,capacity-building,1,False,True,False
+0.32499999999999996,0.087,capacity-building,1,False,True,False
+0.32499999999999996,0.09316666666666668,capacity-building,1,False,True,False
+0.32499999999999996,0.09933333333333333,capacity-building,1,False,True,False
+0.32499999999999996,0.10550000000000001,capacity-building,1,False,True,False
+0.32499999999999996,0.11166666666666666,capacity-building,1,False,True,False
+0.32499999999999996,0.11783333333333335,capacity-building,1,False,True,False
+0.32499999999999996,0.124,capacity-building,1,False,True,False
+0.32499999999999996,0.13016666666666665,capacity-building,1,False,True,False
+0.32499999999999996,0.13633333333333333,capacity-building,1,False,True,False
+0.32499999999999996,0.14250000000000002,capacity-building,1,False,True,False
+0.32499999999999996,0.14866666666666667,capacity-building,1,False,True,False
+0.32499999999999996,0.15483333333333332,capacity-building,1,False,True,False
+0.32499999999999996,0.161,capacity-building,1,False,True,False
+0.32499999999999996,0.16716666666666669,capacity-building,1,False,True,False
+0.32499999999999996,0.17333333333333334,capacity-building,1,False,True,False
+0.32499999999999996,0.1795,capacity-building,1,False,True,False
+0.32499999999999996,0.1856666666666667,capacity-building,1,False,True,False
+0.32499999999999996,0.19183333333333336,capacity-building,1,False,True,False
+0.32499999999999996,0.198,capacity-building,1,False,True,False
+0.32499999999999996,0.20416666666666666,capacity-building,1,False,True,False
+0.32499999999999996,0.21033333333333332,capacity-building,1,False,True,False
+0.32499999999999996,0.21650000000000003,capacity-building,1,False,True,False
+0.32499999999999996,0.22266666666666668,capacity-building,1,False,True,False
+0.32499999999999996,0.22883333333333333,capacity-building,1,False,True,False
+0.32499999999999996,0.235,capacity-building,1,False,True,False
+0.32499999999999996,0.2411666666666667,capacity-building,1,False,True,False
+0.32499999999999996,0.24733333333333335,capacity-building,1,False,True,False
+0.32499999999999996,0.2535,capacity-building,1,False,True,False
+0.32499999999999996,0.25966666666666666,capacity-building,1,False,True,False
+0.32499999999999996,0.2658333333333333,capacity-building,1,False,True,False
+0.32499999999999996,0.272,capacity-building,1,False,True,False
+0.32499999999999996,0.2781666666666667,capacity-building,1,False,True,False
 0.32499999999999996,0.2843333333333333,threshold trap,2,True,True,False
 0.32499999999999996,0.2905,threshold trap,2,True,True,False
 0.32499999999999996,0.2966666666666667,threshold trap,2,True,True,False
@@ -2317,45 +2317,45 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.32499999999999996,0.4076666666666667,collapse-prone,2,True,True,True
 0.32499999999999996,0.4138333333333333,collapse-prone,2,True,True,True
 0.32499999999999996,0.42,collapse-prone,2,True,True,True
-0.32999999999999996,0.05,bridge region,1,False,True,False
-0.32999999999999996,0.05616666666666667,bridge region,1,False,True,False
-0.32999999999999996,0.06233333333333334,bridge region,1,False,True,False
-0.32999999999999996,0.0685,bridge region,1,False,True,False
-0.32999999999999996,0.07466666666666667,bridge region,1,False,True,False
-0.32999999999999996,0.08083333333333334,bridge region,1,False,True,False
-0.32999999999999996,0.087,bridge region,1,False,True,False
-0.32999999999999996,0.09316666666666668,bridge region,1,False,True,False
-0.32999999999999996,0.09933333333333333,bridge region,1,False,True,False
-0.32999999999999996,0.10550000000000001,bridge region,1,False,True,False
-0.32999999999999996,0.11166666666666666,bridge region,1,False,True,False
-0.32999999999999996,0.11783333333333335,bridge region,1,False,True,False
-0.32999999999999996,0.124,bridge region,1,False,True,False
-0.32999999999999996,0.13016666666666665,bridge region,1,False,True,False
-0.32999999999999996,0.13633333333333333,bridge region,1,False,True,False
-0.32999999999999996,0.14250000000000002,bridge region,1,False,True,False
-0.32999999999999996,0.14866666666666667,bridge region,1,False,True,False
-0.32999999999999996,0.15483333333333332,bridge region,1,False,True,False
-0.32999999999999996,0.161,bridge region,1,False,True,False
-0.32999999999999996,0.16716666666666669,bridge region,1,False,True,False
-0.32999999999999996,0.17333333333333334,bridge region,1,False,True,False
-0.32999999999999996,0.1795,bridge region,1,False,True,False
-0.32999999999999996,0.1856666666666667,bridge region,1,False,True,False
-0.32999999999999996,0.19183333333333336,bridge region,1,False,True,False
-0.32999999999999996,0.198,bridge region,1,False,True,False
-0.32999999999999996,0.20416666666666666,bridge region,1,False,True,False
-0.32999999999999996,0.21033333333333332,bridge region,1,False,True,False
-0.32999999999999996,0.21650000000000003,bridge region,1,False,True,False
-0.32999999999999996,0.22266666666666668,bridge region,1,False,True,False
-0.32999999999999996,0.22883333333333333,bridge region,1,False,True,False
-0.32999999999999996,0.235,bridge region,1,False,True,False
-0.32999999999999996,0.2411666666666667,bridge region,1,False,True,False
-0.32999999999999996,0.24733333333333335,bridge region,1,False,True,False
-0.32999999999999996,0.2535,bridge region,1,False,True,False
-0.32999999999999996,0.25966666666666666,bridge region,1,False,True,False
-0.32999999999999996,0.2658333333333333,bridge region,1,False,True,False
-0.32999999999999996,0.272,bridge region,1,False,True,False
-0.32999999999999996,0.2781666666666667,bridge region,1,False,True,False
-0.32999999999999996,0.2843333333333333,bridge region,1,False,True,False
+0.32999999999999996,0.05,capacity-building,1,False,True,False
+0.32999999999999996,0.05616666666666667,capacity-building,1,False,True,False
+0.32999999999999996,0.06233333333333334,capacity-building,1,False,True,False
+0.32999999999999996,0.0685,capacity-building,1,False,True,False
+0.32999999999999996,0.07466666666666667,capacity-building,1,False,True,False
+0.32999999999999996,0.08083333333333334,capacity-building,1,False,True,False
+0.32999999999999996,0.087,capacity-building,1,False,True,False
+0.32999999999999996,0.09316666666666668,capacity-building,1,False,True,False
+0.32999999999999996,0.09933333333333333,capacity-building,1,False,True,False
+0.32999999999999996,0.10550000000000001,capacity-building,1,False,True,False
+0.32999999999999996,0.11166666666666666,capacity-building,1,False,True,False
+0.32999999999999996,0.11783333333333335,capacity-building,1,False,True,False
+0.32999999999999996,0.124,capacity-building,1,False,True,False
+0.32999999999999996,0.13016666666666665,capacity-building,1,False,True,False
+0.32999999999999996,0.13633333333333333,capacity-building,1,False,True,False
+0.32999999999999996,0.14250000000000002,capacity-building,1,False,True,False
+0.32999999999999996,0.14866666666666667,capacity-building,1,False,True,False
+0.32999999999999996,0.15483333333333332,capacity-building,1,False,True,False
+0.32999999999999996,0.161,capacity-building,1,False,True,False
+0.32999999999999996,0.16716666666666669,capacity-building,1,False,True,False
+0.32999999999999996,0.17333333333333334,capacity-building,1,False,True,False
+0.32999999999999996,0.1795,capacity-building,1,False,True,False
+0.32999999999999996,0.1856666666666667,capacity-building,1,False,True,False
+0.32999999999999996,0.19183333333333336,capacity-building,1,False,True,False
+0.32999999999999996,0.198,capacity-building,1,False,True,False
+0.32999999999999996,0.20416666666666666,capacity-building,1,False,True,False
+0.32999999999999996,0.21033333333333332,capacity-building,1,False,True,False
+0.32999999999999996,0.21650000000000003,capacity-building,1,False,True,False
+0.32999999999999996,0.22266666666666668,capacity-building,1,False,True,False
+0.32999999999999996,0.22883333333333333,capacity-building,1,False,True,False
+0.32999999999999996,0.235,capacity-building,1,False,True,False
+0.32999999999999996,0.2411666666666667,capacity-building,1,False,True,False
+0.32999999999999996,0.24733333333333335,capacity-building,1,False,True,False
+0.32999999999999996,0.2535,capacity-building,1,False,True,False
+0.32999999999999996,0.25966666666666666,capacity-building,1,False,True,False
+0.32999999999999996,0.2658333333333333,capacity-building,1,False,True,False
+0.32999999999999996,0.272,capacity-building,1,False,True,False
+0.32999999999999996,0.2781666666666667,capacity-building,1,False,True,False
+0.32999999999999996,0.2843333333333333,capacity-building,1,False,True,False
 0.32999999999999996,0.2905,threshold trap,2,True,True,False
 0.32999999999999996,0.2966666666666667,threshold trap,2,True,True,False
 0.32999999999999996,0.30283333333333334,threshold trap,2,True,True,False
@@ -2378,46 +2378,46 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.32999999999999996,0.4076666666666667,collapse-prone,2,True,True,True
 0.32999999999999996,0.4138333333333333,collapse-prone,2,True,True,True
 0.32999999999999996,0.42,collapse-prone,2,True,True,True
-0.33499999999999996,0.05,bridge region,1,False,True,False
-0.33499999999999996,0.05616666666666667,bridge region,1,False,True,False
-0.33499999999999996,0.06233333333333334,bridge region,1,False,True,False
-0.33499999999999996,0.0685,bridge region,1,False,True,False
-0.33499999999999996,0.07466666666666667,bridge region,1,False,True,False
-0.33499999999999996,0.08083333333333334,bridge region,1,False,True,False
-0.33499999999999996,0.087,bridge region,1,False,True,False
-0.33499999999999996,0.09316666666666668,bridge region,1,False,True,False
-0.33499999999999996,0.09933333333333333,bridge region,1,False,True,False
-0.33499999999999996,0.10550000000000001,bridge region,1,False,True,False
-0.33499999999999996,0.11166666666666666,bridge region,1,False,True,False
-0.33499999999999996,0.11783333333333335,bridge region,1,False,True,False
-0.33499999999999996,0.124,bridge region,1,False,True,False
-0.33499999999999996,0.13016666666666665,bridge region,1,False,True,False
-0.33499999999999996,0.13633333333333333,bridge region,1,False,True,False
-0.33499999999999996,0.14250000000000002,bridge region,1,False,True,False
-0.33499999999999996,0.14866666666666667,bridge region,1,False,True,False
-0.33499999999999996,0.15483333333333332,bridge region,1,False,True,False
-0.33499999999999996,0.161,bridge region,1,False,True,False
-0.33499999999999996,0.16716666666666669,bridge region,1,False,True,False
-0.33499999999999996,0.17333333333333334,bridge region,1,False,True,False
-0.33499999999999996,0.1795,bridge region,1,False,True,False
-0.33499999999999996,0.1856666666666667,bridge region,1,False,True,False
-0.33499999999999996,0.19183333333333336,bridge region,1,False,True,False
-0.33499999999999996,0.198,bridge region,1,False,True,False
-0.33499999999999996,0.20416666666666666,bridge region,1,False,True,False
-0.33499999999999996,0.21033333333333332,bridge region,1,False,True,False
-0.33499999999999996,0.21650000000000003,bridge region,1,False,True,False
-0.33499999999999996,0.22266666666666668,bridge region,1,False,True,False
-0.33499999999999996,0.22883333333333333,bridge region,1,False,True,False
-0.33499999999999996,0.235,bridge region,1,False,True,False
-0.33499999999999996,0.2411666666666667,bridge region,1,False,True,False
-0.33499999999999996,0.24733333333333335,bridge region,1,False,True,False
-0.33499999999999996,0.2535,bridge region,1,False,True,False
-0.33499999999999996,0.25966666666666666,bridge region,1,False,True,False
-0.33499999999999996,0.2658333333333333,bridge region,1,False,True,False
-0.33499999999999996,0.272,bridge region,1,False,True,False
-0.33499999999999996,0.2781666666666667,bridge region,1,False,True,False
-0.33499999999999996,0.2843333333333333,bridge region,1,False,True,False
-0.33499999999999996,0.2905,bridge region,1,False,True,False
+0.33499999999999996,0.05,capacity-building,1,False,True,False
+0.33499999999999996,0.05616666666666667,capacity-building,1,False,True,False
+0.33499999999999996,0.06233333333333334,capacity-building,1,False,True,False
+0.33499999999999996,0.0685,capacity-building,1,False,True,False
+0.33499999999999996,0.07466666666666667,capacity-building,1,False,True,False
+0.33499999999999996,0.08083333333333334,capacity-building,1,False,True,False
+0.33499999999999996,0.087,capacity-building,1,False,True,False
+0.33499999999999996,0.09316666666666668,capacity-building,1,False,True,False
+0.33499999999999996,0.09933333333333333,capacity-building,1,False,True,False
+0.33499999999999996,0.10550000000000001,capacity-building,1,False,True,False
+0.33499999999999996,0.11166666666666666,capacity-building,1,False,True,False
+0.33499999999999996,0.11783333333333335,capacity-building,1,False,True,False
+0.33499999999999996,0.124,capacity-building,1,False,True,False
+0.33499999999999996,0.13016666666666665,capacity-building,1,False,True,False
+0.33499999999999996,0.13633333333333333,capacity-building,1,False,True,False
+0.33499999999999996,0.14250000000000002,capacity-building,1,False,True,False
+0.33499999999999996,0.14866666666666667,capacity-building,1,False,True,False
+0.33499999999999996,0.15483333333333332,capacity-building,1,False,True,False
+0.33499999999999996,0.161,capacity-building,1,False,True,False
+0.33499999999999996,0.16716666666666669,capacity-building,1,False,True,False
+0.33499999999999996,0.17333333333333334,capacity-building,1,False,True,False
+0.33499999999999996,0.1795,capacity-building,1,False,True,False
+0.33499999999999996,0.1856666666666667,capacity-building,1,False,True,False
+0.33499999999999996,0.19183333333333336,capacity-building,1,False,True,False
+0.33499999999999996,0.198,capacity-building,1,False,True,False
+0.33499999999999996,0.20416666666666666,capacity-building,1,False,True,False
+0.33499999999999996,0.21033333333333332,capacity-building,1,False,True,False
+0.33499999999999996,0.21650000000000003,capacity-building,1,False,True,False
+0.33499999999999996,0.22266666666666668,capacity-building,1,False,True,False
+0.33499999999999996,0.22883333333333333,capacity-building,1,False,True,False
+0.33499999999999996,0.235,capacity-building,1,False,True,False
+0.33499999999999996,0.2411666666666667,capacity-building,1,False,True,False
+0.33499999999999996,0.24733333333333335,capacity-building,1,False,True,False
+0.33499999999999996,0.2535,capacity-building,1,False,True,False
+0.33499999999999996,0.25966666666666666,capacity-building,1,False,True,False
+0.33499999999999996,0.2658333333333333,capacity-building,1,False,True,False
+0.33499999999999996,0.272,capacity-building,1,False,True,False
+0.33499999999999996,0.2781666666666667,capacity-building,1,False,True,False
+0.33499999999999996,0.2843333333333333,capacity-building,1,False,True,False
+0.33499999999999996,0.2905,capacity-building,1,False,True,False
 0.33499999999999996,0.2966666666666667,threshold trap,2,True,True,False
 0.33499999999999996,0.30283333333333334,threshold trap,2,True,True,False
 0.33499999999999996,0.309,threshold trap,2,True,True,False
@@ -2439,46 +2439,46 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.33499999999999996,0.4076666666666667,collapse-prone,2,True,True,True
 0.33499999999999996,0.4138333333333333,collapse-prone,2,True,True,True
 0.33499999999999996,0.42,collapse-prone,2,True,True,True
-0.33999999999999997,0.05,bridge region,1,False,True,False
-0.33999999999999997,0.05616666666666667,bridge region,1,False,True,False
-0.33999999999999997,0.06233333333333334,bridge region,1,False,True,False
-0.33999999999999997,0.0685,bridge region,1,False,True,False
-0.33999999999999997,0.07466666666666667,bridge region,1,False,True,False
-0.33999999999999997,0.08083333333333334,bridge region,1,False,True,False
-0.33999999999999997,0.087,bridge region,1,False,True,False
-0.33999999999999997,0.09316666666666668,bridge region,1,False,True,False
-0.33999999999999997,0.09933333333333333,bridge region,1,False,True,False
-0.33999999999999997,0.10550000000000001,bridge region,1,False,True,False
-0.33999999999999997,0.11166666666666666,bridge region,1,False,True,False
-0.33999999999999997,0.11783333333333335,bridge region,1,False,True,False
-0.33999999999999997,0.124,bridge region,1,False,True,False
-0.33999999999999997,0.13016666666666665,bridge region,1,False,True,False
-0.33999999999999997,0.13633333333333333,bridge region,1,False,True,False
-0.33999999999999997,0.14250000000000002,bridge region,1,False,True,False
-0.33999999999999997,0.14866666666666667,bridge region,1,False,True,False
-0.33999999999999997,0.15483333333333332,bridge region,1,False,True,False
-0.33999999999999997,0.161,bridge region,1,False,True,False
-0.33999999999999997,0.16716666666666669,bridge region,1,False,True,False
-0.33999999999999997,0.17333333333333334,bridge region,1,False,True,False
-0.33999999999999997,0.1795,bridge region,1,False,True,False
-0.33999999999999997,0.1856666666666667,bridge region,1,False,True,False
-0.33999999999999997,0.19183333333333336,bridge region,1,False,True,False
-0.33999999999999997,0.198,bridge region,1,False,True,False
-0.33999999999999997,0.20416666666666666,bridge region,1,False,True,False
-0.33999999999999997,0.21033333333333332,bridge region,1,False,True,False
-0.33999999999999997,0.21650000000000003,bridge region,1,False,True,False
-0.33999999999999997,0.22266666666666668,bridge region,1,False,True,False
-0.33999999999999997,0.22883333333333333,bridge region,1,False,True,False
-0.33999999999999997,0.235,bridge region,1,False,True,False
-0.33999999999999997,0.2411666666666667,bridge region,1,False,True,False
-0.33999999999999997,0.24733333333333335,bridge region,1,False,True,False
-0.33999999999999997,0.2535,bridge region,1,False,True,False
-0.33999999999999997,0.25966666666666666,bridge region,1,False,True,False
-0.33999999999999997,0.2658333333333333,bridge region,1,False,True,False
-0.33999999999999997,0.272,bridge region,1,False,True,False
-0.33999999999999997,0.2781666666666667,bridge region,1,False,True,False
-0.33999999999999997,0.2843333333333333,bridge region,1,False,True,False
-0.33999999999999997,0.2905,bridge region,1,False,True,False
+0.33999999999999997,0.05,capacity-building,1,False,True,False
+0.33999999999999997,0.05616666666666667,capacity-building,1,False,True,False
+0.33999999999999997,0.06233333333333334,capacity-building,1,False,True,False
+0.33999999999999997,0.0685,capacity-building,1,False,True,False
+0.33999999999999997,0.07466666666666667,capacity-building,1,False,True,False
+0.33999999999999997,0.08083333333333334,capacity-building,1,False,True,False
+0.33999999999999997,0.087,capacity-building,1,False,True,False
+0.33999999999999997,0.09316666666666668,capacity-building,1,False,True,False
+0.33999999999999997,0.09933333333333333,capacity-building,1,False,True,False
+0.33999999999999997,0.10550000000000001,capacity-building,1,False,True,False
+0.33999999999999997,0.11166666666666666,capacity-building,1,False,True,False
+0.33999999999999997,0.11783333333333335,capacity-building,1,False,True,False
+0.33999999999999997,0.124,capacity-building,1,False,True,False
+0.33999999999999997,0.13016666666666665,capacity-building,1,False,True,False
+0.33999999999999997,0.13633333333333333,capacity-building,1,False,True,False
+0.33999999999999997,0.14250000000000002,capacity-building,1,False,True,False
+0.33999999999999997,0.14866666666666667,capacity-building,1,False,True,False
+0.33999999999999997,0.15483333333333332,capacity-building,1,False,True,False
+0.33999999999999997,0.161,capacity-building,1,False,True,False
+0.33999999999999997,0.16716666666666669,capacity-building,1,False,True,False
+0.33999999999999997,0.17333333333333334,capacity-building,1,False,True,False
+0.33999999999999997,0.1795,capacity-building,1,False,True,False
+0.33999999999999997,0.1856666666666667,capacity-building,1,False,True,False
+0.33999999999999997,0.19183333333333336,capacity-building,1,False,True,False
+0.33999999999999997,0.198,capacity-building,1,False,True,False
+0.33999999999999997,0.20416666666666666,capacity-building,1,False,True,False
+0.33999999999999997,0.21033333333333332,capacity-building,1,False,True,False
+0.33999999999999997,0.21650000000000003,capacity-building,1,False,True,False
+0.33999999999999997,0.22266666666666668,capacity-building,1,False,True,False
+0.33999999999999997,0.22883333333333333,capacity-building,1,False,True,False
+0.33999999999999997,0.235,capacity-building,1,False,True,False
+0.33999999999999997,0.2411666666666667,capacity-building,1,False,True,False
+0.33999999999999997,0.24733333333333335,capacity-building,1,False,True,False
+0.33999999999999997,0.2535,capacity-building,1,False,True,False
+0.33999999999999997,0.25966666666666666,capacity-building,1,False,True,False
+0.33999999999999997,0.2658333333333333,capacity-building,1,False,True,False
+0.33999999999999997,0.272,capacity-building,1,False,True,False
+0.33999999999999997,0.2781666666666667,capacity-building,1,False,True,False
+0.33999999999999997,0.2843333333333333,capacity-building,1,False,True,False
+0.33999999999999997,0.2905,capacity-building,1,False,True,False
 0.33999999999999997,0.2966666666666667,threshold trap,2,True,True,False
 0.33999999999999997,0.30283333333333334,threshold trap,2,True,True,False
 0.33999999999999997,0.309,threshold trap,2,True,True,False
@@ -2500,47 +2500,47 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.33999999999999997,0.4076666666666667,collapse-prone,2,True,True,True
 0.33999999999999997,0.4138333333333333,collapse-prone,2,True,True,True
 0.33999999999999997,0.42,collapse-prone,2,True,True,True
-0.345,0.05,bridge region,1,False,True,False
-0.345,0.05616666666666667,bridge region,1,False,True,False
-0.345,0.06233333333333334,bridge region,1,False,True,False
-0.345,0.0685,bridge region,1,False,True,False
-0.345,0.07466666666666667,bridge region,1,False,True,False
-0.345,0.08083333333333334,bridge region,1,False,True,False
-0.345,0.087,bridge region,1,False,True,False
-0.345,0.09316666666666668,bridge region,1,False,True,False
-0.345,0.09933333333333333,bridge region,1,False,True,False
-0.345,0.10550000000000001,bridge region,1,False,True,False
-0.345,0.11166666666666666,bridge region,1,False,True,False
-0.345,0.11783333333333335,bridge region,1,False,True,False
-0.345,0.124,bridge region,1,False,True,False
-0.345,0.13016666666666665,bridge region,1,False,True,False
-0.345,0.13633333333333333,bridge region,1,False,True,False
-0.345,0.14250000000000002,bridge region,1,False,True,False
-0.345,0.14866666666666667,bridge region,1,False,True,False
-0.345,0.15483333333333332,bridge region,1,False,True,False
-0.345,0.161,bridge region,1,False,True,False
-0.345,0.16716666666666669,bridge region,1,False,True,False
-0.345,0.17333333333333334,bridge region,1,False,True,False
-0.345,0.1795,bridge region,1,False,True,False
-0.345,0.1856666666666667,bridge region,1,False,True,False
-0.345,0.19183333333333336,bridge region,1,False,True,False
-0.345,0.198,bridge region,1,False,True,False
-0.345,0.20416666666666666,bridge region,1,False,True,False
-0.345,0.21033333333333332,bridge region,1,False,True,False
-0.345,0.21650000000000003,bridge region,1,False,True,False
-0.345,0.22266666666666668,bridge region,1,False,True,False
-0.345,0.22883333333333333,bridge region,1,False,True,False
-0.345,0.235,bridge region,1,False,True,False
-0.345,0.2411666666666667,bridge region,1,False,True,False
-0.345,0.24733333333333335,bridge region,1,False,True,False
-0.345,0.2535,bridge region,1,False,True,False
-0.345,0.25966666666666666,bridge region,1,False,True,False
-0.345,0.2658333333333333,bridge region,1,False,True,False
-0.345,0.272,bridge region,1,False,True,False
-0.345,0.2781666666666667,bridge region,1,False,True,False
-0.345,0.2843333333333333,bridge region,1,False,True,False
-0.345,0.2905,bridge region,1,False,True,False
-0.345,0.2966666666666667,bridge region,1,False,True,False
+0.345,0.05,capacity-building,1,False,True,False
+0.345,0.05616666666666667,capacity-building,1,False,True,False
+0.345,0.06233333333333334,capacity-building,1,False,True,False
+0.345,0.0685,capacity-building,1,False,True,False
+0.345,0.07466666666666667,capacity-building,1,False,True,False
+0.345,0.08083333333333334,capacity-building,1,False,True,False
+0.345,0.087,capacity-building,1,False,True,False
+0.345,0.09316666666666668,capacity-building,1,False,True,False
+0.345,0.09933333333333333,capacity-building,1,False,True,False
+0.345,0.10550000000000001,capacity-building,1,False,True,False
+0.345,0.11166666666666666,capacity-building,1,False,True,False
+0.345,0.11783333333333335,capacity-building,1,False,True,False
+0.345,0.124,capacity-building,1,False,True,False
+0.345,0.13016666666666665,capacity-building,1,False,True,False
+0.345,0.13633333333333333,capacity-building,1,False,True,False
+0.345,0.14250000000000002,capacity-building,1,False,True,False
+0.345,0.14866666666666667,capacity-building,1,False,True,False
+0.345,0.15483333333333332,capacity-building,1,False,True,False
+0.345,0.161,capacity-building,1,False,True,False
+0.345,0.16716666666666669,capacity-building,1,False,True,False
+0.345,0.17333333333333334,capacity-building,1,False,True,False
+0.345,0.1795,capacity-building,1,False,True,False
+0.345,0.1856666666666667,capacity-building,1,False,True,False
+0.345,0.19183333333333336,capacity-building,1,False,True,False
+0.345,0.198,capacity-building,1,False,True,False
+0.345,0.20416666666666666,capacity-building,1,False,True,False
+0.345,0.21033333333333332,capacity-building,1,False,True,False
+0.345,0.21650000000000003,capacity-building,1,False,True,False
+0.345,0.22266666666666668,capacity-building,1,False,True,False
+0.345,0.22883333333333333,capacity-building,1,False,True,False
+0.345,0.235,capacity-building,1,False,True,False
+0.345,0.2411666666666667,capacity-building,1,False,True,False
+0.345,0.24733333333333335,capacity-building,1,False,True,False
+0.345,0.2535,capacity-building,1,False,True,False
+0.345,0.25966666666666666,capacity-building,1,False,True,False
+0.345,0.2658333333333333,capacity-building,1,False,True,False
+0.345,0.272,capacity-building,1,False,True,False
+0.345,0.2781666666666667,capacity-building,1,False,True,False
+0.345,0.2843333333333333,capacity-building,1,False,True,False
+0.345,0.2905,capacity-building,1,False,True,False
+0.345,0.2966666666666667,capacity-building,1,False,True,False
 0.345,0.30283333333333334,threshold trap,2,True,True,False
 0.345,0.309,threshold trap,2,True,True,False
 0.345,0.31516666666666665,threshold trap,2,True,True,False
@@ -2561,48 +2561,48 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.345,0.4076666666666667,collapse-prone,2,True,True,True
 0.345,0.4138333333333333,collapse-prone,2,True,True,True
 0.345,0.42,collapse-prone,2,True,True,True
-0.35,0.05,bridge region,1,False,True,False
-0.35,0.05616666666666667,bridge region,1,False,True,False
-0.35,0.06233333333333334,bridge region,1,False,True,False
-0.35,0.0685,bridge region,1,False,True,False
-0.35,0.07466666666666667,bridge region,1,False,True,False
-0.35,0.08083333333333334,bridge region,1,False,True,False
-0.35,0.087,bridge region,1,False,True,False
-0.35,0.09316666666666668,bridge region,1,False,True,False
-0.35,0.09933333333333333,bridge region,1,False,True,False
-0.35,0.10550000000000001,bridge region,1,False,True,False
-0.35,0.11166666666666666,bridge region,1,False,True,False
-0.35,0.11783333333333335,bridge region,1,False,True,False
-0.35,0.124,bridge region,1,False,True,False
-0.35,0.13016666666666665,bridge region,1,False,True,False
-0.35,0.13633333333333333,bridge region,1,False,True,False
-0.35,0.14250000000000002,bridge region,1,False,True,False
-0.35,0.14866666666666667,bridge region,1,False,True,False
-0.35,0.15483333333333332,bridge region,1,False,True,False
-0.35,0.161,bridge region,1,False,True,False
-0.35,0.16716666666666669,bridge region,1,False,True,False
-0.35,0.17333333333333334,bridge region,1,False,True,False
-0.35,0.1795,bridge region,1,False,True,False
-0.35,0.1856666666666667,bridge region,1,False,True,False
-0.35,0.19183333333333336,bridge region,1,False,True,False
-0.35,0.198,bridge region,1,False,True,False
-0.35,0.20416666666666666,bridge region,1,False,True,False
-0.35,0.21033333333333332,bridge region,1,False,True,False
-0.35,0.21650000000000003,bridge region,1,False,True,False
-0.35,0.22266666666666668,bridge region,1,False,True,False
-0.35,0.22883333333333333,bridge region,1,False,True,False
-0.35,0.235,bridge region,1,False,True,False
-0.35,0.2411666666666667,bridge region,1,False,True,False
-0.35,0.24733333333333335,bridge region,1,False,True,False
-0.35,0.2535,bridge region,1,False,True,False
-0.35,0.25966666666666666,bridge region,1,False,True,False
-0.35,0.2658333333333333,bridge region,1,False,True,False
-0.35,0.272,bridge region,1,False,True,False
-0.35,0.2781666666666667,bridge region,1,False,True,False
-0.35,0.2843333333333333,bridge region,1,False,True,False
-0.35,0.2905,bridge region,1,False,True,False
-0.35,0.2966666666666667,bridge region,1,False,True,False
-0.35,0.30283333333333334,bridge region,1,False,True,False
+0.35,0.05,capacity-building,1,False,True,False
+0.35,0.05616666666666667,capacity-building,1,False,True,False
+0.35,0.06233333333333334,capacity-building,1,False,True,False
+0.35,0.0685,capacity-building,1,False,True,False
+0.35,0.07466666666666667,capacity-building,1,False,True,False
+0.35,0.08083333333333334,capacity-building,1,False,True,False
+0.35,0.087,capacity-building,1,False,True,False
+0.35,0.09316666666666668,capacity-building,1,False,True,False
+0.35,0.09933333333333333,capacity-building,1,False,True,False
+0.35,0.10550000000000001,capacity-building,1,False,True,False
+0.35,0.11166666666666666,capacity-building,1,False,True,False
+0.35,0.11783333333333335,capacity-building,1,False,True,False
+0.35,0.124,capacity-building,1,False,True,False
+0.35,0.13016666666666665,capacity-building,1,False,True,False
+0.35,0.13633333333333333,capacity-building,1,False,True,False
+0.35,0.14250000000000002,capacity-building,1,False,True,False
+0.35,0.14866666666666667,capacity-building,1,False,True,False
+0.35,0.15483333333333332,capacity-building,1,False,True,False
+0.35,0.161,capacity-building,1,False,True,False
+0.35,0.16716666666666669,capacity-building,1,False,True,False
+0.35,0.17333333333333334,capacity-building,1,False,True,False
+0.35,0.1795,capacity-building,1,False,True,False
+0.35,0.1856666666666667,capacity-building,1,False,True,False
+0.35,0.19183333333333336,capacity-building,1,False,True,False
+0.35,0.198,capacity-building,1,False,True,False
+0.35,0.20416666666666666,capacity-building,1,False,True,False
+0.35,0.21033333333333332,capacity-building,1,False,True,False
+0.35,0.21650000000000003,capacity-building,1,False,True,False
+0.35,0.22266666666666668,capacity-building,1,False,True,False
+0.35,0.22883333333333333,capacity-building,1,False,True,False
+0.35,0.235,capacity-building,1,False,True,False
+0.35,0.2411666666666667,capacity-building,1,False,True,False
+0.35,0.24733333333333335,capacity-building,1,False,True,False
+0.35,0.2535,capacity-building,1,False,True,False
+0.35,0.25966666666666666,capacity-building,1,False,True,False
+0.35,0.2658333333333333,capacity-building,1,False,True,False
+0.35,0.272,capacity-building,1,False,True,False
+0.35,0.2781666666666667,capacity-building,1,False,True,False
+0.35,0.2843333333333333,capacity-building,1,False,True,False
+0.35,0.2905,capacity-building,1,False,True,False
+0.35,0.2966666666666667,capacity-building,1,False,True,False
+0.35,0.30283333333333334,capacity-building,1,False,True,False
 0.35,0.309,threshold trap,2,True,True,False
 0.35,0.31516666666666665,threshold trap,2,True,True,False
 0.35,0.32133333333333336,threshold trap,2,True,True,False
@@ -2622,49 +2622,49 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.35,0.4076666666666667,collapse-prone,2,True,True,True
 0.35,0.4138333333333333,collapse-prone,2,True,True,True
 0.35,0.42,collapse-prone,2,True,True,True
-0.355,0.05,bridge region,1,False,True,False
-0.355,0.05616666666666667,bridge region,1,False,True,False
-0.355,0.06233333333333334,bridge region,1,False,True,False
-0.355,0.0685,bridge region,1,False,True,False
-0.355,0.07466666666666667,bridge region,1,False,True,False
-0.355,0.08083333333333334,bridge region,1,False,True,False
-0.355,0.087,bridge region,1,False,True,False
-0.355,0.09316666666666668,bridge region,1,False,True,False
-0.355,0.09933333333333333,bridge region,1,False,True,False
-0.355,0.10550000000000001,bridge region,1,False,True,False
-0.355,0.11166666666666666,bridge region,1,False,True,False
-0.355,0.11783333333333335,bridge region,1,False,True,False
-0.355,0.124,bridge region,1,False,True,False
-0.355,0.13016666666666665,bridge region,1,False,True,False
-0.355,0.13633333333333333,bridge region,1,False,True,False
-0.355,0.14250000000000002,bridge region,1,False,True,False
-0.355,0.14866666666666667,bridge region,1,False,True,False
-0.355,0.15483333333333332,bridge region,1,False,True,False
-0.355,0.161,bridge region,1,False,True,False
-0.355,0.16716666666666669,bridge region,1,False,True,False
-0.355,0.17333333333333334,bridge region,1,False,True,False
-0.355,0.1795,bridge region,1,False,True,False
-0.355,0.1856666666666667,bridge region,1,False,True,False
-0.355,0.19183333333333336,bridge region,1,False,True,False
-0.355,0.198,bridge region,1,False,True,False
-0.355,0.20416666666666666,bridge region,1,False,True,False
-0.355,0.21033333333333332,bridge region,1,False,True,False
-0.355,0.21650000000000003,bridge region,1,False,True,False
-0.355,0.22266666666666668,bridge region,1,False,True,False
-0.355,0.22883333333333333,bridge region,1,False,True,False
-0.355,0.235,bridge region,1,False,True,False
-0.355,0.2411666666666667,bridge region,1,False,True,False
-0.355,0.24733333333333335,bridge region,1,False,True,False
-0.355,0.2535,bridge region,1,False,True,False
-0.355,0.25966666666666666,bridge region,1,False,True,False
-0.355,0.2658333333333333,bridge region,1,False,True,False
-0.355,0.272,bridge region,1,False,True,False
-0.355,0.2781666666666667,bridge region,1,False,True,False
-0.355,0.2843333333333333,bridge region,1,False,True,False
-0.355,0.2905,bridge region,1,False,True,False
-0.355,0.2966666666666667,bridge region,1,False,True,False
-0.355,0.30283333333333334,bridge region,1,False,True,False
-0.355,0.309,bridge region,1,False,True,False
+0.355,0.05,capacity-building,1,False,True,False
+0.355,0.05616666666666667,capacity-building,1,False,True,False
+0.355,0.06233333333333334,capacity-building,1,False,True,False
+0.355,0.0685,capacity-building,1,False,True,False
+0.355,0.07466666666666667,capacity-building,1,False,True,False
+0.355,0.08083333333333334,capacity-building,1,False,True,False
+0.355,0.087,capacity-building,1,False,True,False
+0.355,0.09316666666666668,capacity-building,1,False,True,False
+0.355,0.09933333333333333,capacity-building,1,False,True,False
+0.355,0.10550000000000001,capacity-building,1,False,True,False
+0.355,0.11166666666666666,capacity-building,1,False,True,False
+0.355,0.11783333333333335,capacity-building,1,False,True,False
+0.355,0.124,capacity-building,1,False,True,False
+0.355,0.13016666666666665,capacity-building,1,False,True,False
+0.355,0.13633333333333333,capacity-building,1,False,True,False
+0.355,0.14250000000000002,capacity-building,1,False,True,False
+0.355,0.14866666666666667,capacity-building,1,False,True,False
+0.355,0.15483333333333332,capacity-building,1,False,True,False
+0.355,0.161,capacity-building,1,False,True,False
+0.355,0.16716666666666669,capacity-building,1,False,True,False
+0.355,0.17333333333333334,capacity-building,1,False,True,False
+0.355,0.1795,capacity-building,1,False,True,False
+0.355,0.1856666666666667,capacity-building,1,False,True,False
+0.355,0.19183333333333336,capacity-building,1,False,True,False
+0.355,0.198,capacity-building,1,False,True,False
+0.355,0.20416666666666666,capacity-building,1,False,True,False
+0.355,0.21033333333333332,capacity-building,1,False,True,False
+0.355,0.21650000000000003,capacity-building,1,False,True,False
+0.355,0.22266666666666668,capacity-building,1,False,True,False
+0.355,0.22883333333333333,capacity-building,1,False,True,False
+0.355,0.235,capacity-building,1,False,True,False
+0.355,0.2411666666666667,capacity-building,1,False,True,False
+0.355,0.24733333333333335,capacity-building,1,False,True,False
+0.355,0.2535,capacity-building,1,False,True,False
+0.355,0.25966666666666666,capacity-building,1,False,True,False
+0.355,0.2658333333333333,capacity-building,1,False,True,False
+0.355,0.272,capacity-building,1,False,True,False
+0.355,0.2781666666666667,capacity-building,1,False,True,False
+0.355,0.2843333333333333,capacity-building,1,False,True,False
+0.355,0.2905,capacity-building,1,False,True,False
+0.355,0.2966666666666667,capacity-building,1,False,True,False
+0.355,0.30283333333333334,capacity-building,1,False,True,False
+0.355,0.309,capacity-building,1,False,True,False
 0.355,0.31516666666666665,threshold trap,2,True,True,False
 0.355,0.32133333333333336,threshold trap,2,True,True,False
 0.355,0.32749999999999996,threshold trap,2,True,True,False
@@ -2683,50 +2683,50 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.355,0.4076666666666667,collapse-prone,2,True,True,True
 0.355,0.4138333333333333,collapse-prone,2,True,True,True
 0.355,0.42,collapse-prone,2,True,True,True
-0.36,0.05,bridge region,1,False,True,False
-0.36,0.05616666666666667,bridge region,1,False,True,False
-0.36,0.06233333333333334,bridge region,1,False,True,False
-0.36,0.0685,bridge region,1,False,True,False
-0.36,0.07466666666666667,bridge region,1,False,True,False
-0.36,0.08083333333333334,bridge region,1,False,True,False
-0.36,0.087,bridge region,1,False,True,False
-0.36,0.09316666666666668,bridge region,1,False,True,False
-0.36,0.09933333333333333,bridge region,1,False,True,False
-0.36,0.10550000000000001,bridge region,1,False,True,False
-0.36,0.11166666666666666,bridge region,1,False,True,False
-0.36,0.11783333333333335,bridge region,1,False,True,False
-0.36,0.124,bridge region,1,False,True,False
-0.36,0.13016666666666665,bridge region,1,False,True,False
-0.36,0.13633333333333333,bridge region,1,False,True,False
-0.36,0.14250000000000002,bridge region,1,False,True,False
-0.36,0.14866666666666667,bridge region,1,False,True,False
-0.36,0.15483333333333332,bridge region,1,False,True,False
-0.36,0.161,bridge region,1,False,True,False
-0.36,0.16716666666666669,bridge region,1,False,True,False
-0.36,0.17333333333333334,bridge region,1,False,True,False
-0.36,0.1795,bridge region,1,False,True,False
-0.36,0.1856666666666667,bridge region,1,False,True,False
-0.36,0.19183333333333336,bridge region,1,False,True,False
-0.36,0.198,bridge region,1,False,True,False
-0.36,0.20416666666666666,bridge region,1,False,True,False
-0.36,0.21033333333333332,bridge region,1,False,True,False
-0.36,0.21650000000000003,bridge region,1,False,True,False
-0.36,0.22266666666666668,bridge region,1,False,True,False
-0.36,0.22883333333333333,bridge region,1,False,True,False
-0.36,0.235,bridge region,1,False,True,False
-0.36,0.2411666666666667,bridge region,1,False,True,False
-0.36,0.24733333333333335,bridge region,1,False,True,False
-0.36,0.2535,bridge region,1,False,True,False
-0.36,0.25966666666666666,bridge region,1,False,True,False
-0.36,0.2658333333333333,bridge region,1,False,True,False
-0.36,0.272,bridge region,1,False,True,False
-0.36,0.2781666666666667,bridge region,1,False,True,False
-0.36,0.2843333333333333,bridge region,1,False,True,False
-0.36,0.2905,bridge region,1,False,True,False
-0.36,0.2966666666666667,bridge region,1,False,True,False
-0.36,0.30283333333333334,bridge region,1,False,True,False
-0.36,0.309,bridge region,1,False,True,False
-0.36,0.31516666666666665,bridge region,1,False,True,False
+0.36,0.05,capacity-building,1,False,True,False
+0.36,0.05616666666666667,capacity-building,1,False,True,False
+0.36,0.06233333333333334,capacity-building,1,False,True,False
+0.36,0.0685,capacity-building,1,False,True,False
+0.36,0.07466666666666667,capacity-building,1,False,True,False
+0.36,0.08083333333333334,capacity-building,1,False,True,False
+0.36,0.087,capacity-building,1,False,True,False
+0.36,0.09316666666666668,capacity-building,1,False,True,False
+0.36,0.09933333333333333,capacity-building,1,False,True,False
+0.36,0.10550000000000001,capacity-building,1,False,True,False
+0.36,0.11166666666666666,capacity-building,1,False,True,False
+0.36,0.11783333333333335,capacity-building,1,False,True,False
+0.36,0.124,capacity-building,1,False,True,False
+0.36,0.13016666666666665,capacity-building,1,False,True,False
+0.36,0.13633333333333333,capacity-building,1,False,True,False
+0.36,0.14250000000000002,capacity-building,1,False,True,False
+0.36,0.14866666666666667,capacity-building,1,False,True,False
+0.36,0.15483333333333332,capacity-building,1,False,True,False
+0.36,0.161,capacity-building,1,False,True,False
+0.36,0.16716666666666669,capacity-building,1,False,True,False
+0.36,0.17333333333333334,capacity-building,1,False,True,False
+0.36,0.1795,capacity-building,1,False,True,False
+0.36,0.1856666666666667,capacity-building,1,False,True,False
+0.36,0.19183333333333336,capacity-building,1,False,True,False
+0.36,0.198,capacity-building,1,False,True,False
+0.36,0.20416666666666666,capacity-building,1,False,True,False
+0.36,0.21033333333333332,capacity-building,1,False,True,False
+0.36,0.21650000000000003,capacity-building,1,False,True,False
+0.36,0.22266666666666668,capacity-building,1,False,True,False
+0.36,0.22883333333333333,capacity-building,1,False,True,False
+0.36,0.235,capacity-building,1,False,True,False
+0.36,0.2411666666666667,capacity-building,1,False,True,False
+0.36,0.24733333333333335,capacity-building,1,False,True,False
+0.36,0.2535,capacity-building,1,False,True,False
+0.36,0.25966666666666666,capacity-building,1,False,True,False
+0.36,0.2658333333333333,capacity-building,1,False,True,False
+0.36,0.272,capacity-building,1,False,True,False
+0.36,0.2781666666666667,capacity-building,1,False,True,False
+0.36,0.2843333333333333,capacity-building,1,False,True,False
+0.36,0.2905,capacity-building,1,False,True,False
+0.36,0.2966666666666667,capacity-building,1,False,True,False
+0.36,0.30283333333333334,capacity-building,1,False,True,False
+0.36,0.309,capacity-building,1,False,True,False
+0.36,0.31516666666666665,capacity-building,1,False,True,False
 0.36,0.32133333333333336,threshold trap,2,True,True,False
 0.36,0.32749999999999996,threshold trap,2,True,True,False
 0.36,0.33366666666666667,threshold trap,2,True,True,False
@@ -2744,51 +2744,51 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.36,0.4076666666666667,collapse-prone,2,True,True,True
 0.36,0.4138333333333333,collapse-prone,2,True,True,True
 0.36,0.42,collapse-prone,2,True,True,True
-0.365,0.05,bridge region,1,False,True,False
-0.365,0.05616666666666667,bridge region,1,False,True,False
-0.365,0.06233333333333334,bridge region,1,False,True,False
-0.365,0.0685,bridge region,1,False,True,False
-0.365,0.07466666666666667,bridge region,1,False,True,False
-0.365,0.08083333333333334,bridge region,1,False,True,False
-0.365,0.087,bridge region,1,False,True,False
-0.365,0.09316666666666668,bridge region,1,False,True,False
-0.365,0.09933333333333333,bridge region,1,False,True,False
-0.365,0.10550000000000001,bridge region,1,False,True,False
-0.365,0.11166666666666666,bridge region,1,False,True,False
-0.365,0.11783333333333335,bridge region,1,False,True,False
-0.365,0.124,bridge region,1,False,True,False
-0.365,0.13016666666666665,bridge region,1,False,True,False
-0.365,0.13633333333333333,bridge region,1,False,True,False
-0.365,0.14250000000000002,bridge region,1,False,True,False
-0.365,0.14866666666666667,bridge region,1,False,True,False
-0.365,0.15483333333333332,bridge region,1,False,True,False
-0.365,0.161,bridge region,1,False,True,False
-0.365,0.16716666666666669,bridge region,1,False,True,False
-0.365,0.17333333333333334,bridge region,1,False,True,False
-0.365,0.1795,bridge region,1,False,True,False
-0.365,0.1856666666666667,bridge region,1,False,True,False
-0.365,0.19183333333333336,bridge region,1,False,True,False
-0.365,0.198,bridge region,1,False,True,False
-0.365,0.20416666666666666,bridge region,1,False,True,False
-0.365,0.21033333333333332,bridge region,1,False,True,False
-0.365,0.21650000000000003,bridge region,1,False,True,False
-0.365,0.22266666666666668,bridge region,1,False,True,False
-0.365,0.22883333333333333,bridge region,1,False,True,False
-0.365,0.235,bridge region,1,False,True,False
-0.365,0.2411666666666667,bridge region,1,False,True,False
-0.365,0.24733333333333335,bridge region,1,False,True,False
-0.365,0.2535,bridge region,1,False,True,False
-0.365,0.25966666666666666,bridge region,1,False,True,False
-0.365,0.2658333333333333,bridge region,1,False,True,False
-0.365,0.272,bridge region,1,False,True,False
-0.365,0.2781666666666667,bridge region,1,False,True,False
-0.365,0.2843333333333333,bridge region,1,False,True,False
-0.365,0.2905,bridge region,1,False,True,False
-0.365,0.2966666666666667,bridge region,1,False,True,False
-0.365,0.30283333333333334,bridge region,1,False,True,False
-0.365,0.309,bridge region,1,False,True,False
-0.365,0.31516666666666665,bridge region,1,False,True,False
-0.365,0.32133333333333336,bridge region,1,False,True,False
+0.365,0.05,capacity-building,1,False,True,False
+0.365,0.05616666666666667,capacity-building,1,False,True,False
+0.365,0.06233333333333334,capacity-building,1,False,True,False
+0.365,0.0685,capacity-building,1,False,True,False
+0.365,0.07466666666666667,capacity-building,1,False,True,False
+0.365,0.08083333333333334,capacity-building,1,False,True,False
+0.365,0.087,capacity-building,1,False,True,False
+0.365,0.09316666666666668,capacity-building,1,False,True,False
+0.365,0.09933333333333333,capacity-building,1,False,True,False
+0.365,0.10550000000000001,capacity-building,1,False,True,False
+0.365,0.11166666666666666,capacity-building,1,False,True,False
+0.365,0.11783333333333335,capacity-building,1,False,True,False
+0.365,0.124,capacity-building,1,False,True,False
+0.365,0.13016666666666665,capacity-building,1,False,True,False
+0.365,0.13633333333333333,capacity-building,1,False,True,False
+0.365,0.14250000000000002,capacity-building,1,False,True,False
+0.365,0.14866666666666667,capacity-building,1,False,True,False
+0.365,0.15483333333333332,capacity-building,1,False,True,False
+0.365,0.161,capacity-building,1,False,True,False
+0.365,0.16716666666666669,capacity-building,1,False,True,False
+0.365,0.17333333333333334,capacity-building,1,False,True,False
+0.365,0.1795,capacity-building,1,False,True,False
+0.365,0.1856666666666667,capacity-building,1,False,True,False
+0.365,0.19183333333333336,capacity-building,1,False,True,False
+0.365,0.198,capacity-building,1,False,True,False
+0.365,0.20416666666666666,capacity-building,1,False,True,False
+0.365,0.21033333333333332,capacity-building,1,False,True,False
+0.365,0.21650000000000003,capacity-building,1,False,True,False
+0.365,0.22266666666666668,capacity-building,1,False,True,False
+0.365,0.22883333333333333,capacity-building,1,False,True,False
+0.365,0.235,capacity-building,1,False,True,False
+0.365,0.2411666666666667,capacity-building,1,False,True,False
+0.365,0.24733333333333335,capacity-building,1,False,True,False
+0.365,0.2535,capacity-building,1,False,True,False
+0.365,0.25966666666666666,capacity-building,1,False,True,False
+0.365,0.2658333333333333,capacity-building,1,False,True,False
+0.365,0.272,capacity-building,1,False,True,False
+0.365,0.2781666666666667,capacity-building,1,False,True,False
+0.365,0.2843333333333333,capacity-building,1,False,True,False
+0.365,0.2905,capacity-building,1,False,True,False
+0.365,0.2966666666666667,capacity-building,1,False,True,False
+0.365,0.30283333333333334,capacity-building,1,False,True,False
+0.365,0.309,capacity-building,1,False,True,False
+0.365,0.31516666666666665,capacity-building,1,False,True,False
+0.365,0.32133333333333336,capacity-building,1,False,True,False
 0.365,0.32749999999999996,threshold trap,2,True,True,False
 0.365,0.33366666666666667,threshold trap,2,True,True,False
 0.365,0.3398333333333333,threshold trap,2,True,True,False
@@ -2805,51 +2805,51 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.365,0.4076666666666667,collapse-prone,2,True,True,True
 0.365,0.4138333333333333,collapse-prone,2,True,True,True
 0.365,0.42,collapse-prone,2,True,True,True
-0.37,0.05,bridge region,1,False,True,False
-0.37,0.05616666666666667,bridge region,1,False,True,False
-0.37,0.06233333333333334,bridge region,1,False,True,False
-0.37,0.0685,bridge region,1,False,True,False
-0.37,0.07466666666666667,bridge region,1,False,True,False
-0.37,0.08083333333333334,bridge region,1,False,True,False
-0.37,0.087,bridge region,1,False,True,False
-0.37,0.09316666666666668,bridge region,1,False,True,False
-0.37,0.09933333333333333,bridge region,1,False,True,False
-0.37,0.10550000000000001,bridge region,1,False,True,False
-0.37,0.11166666666666666,bridge region,1,False,True,False
-0.37,0.11783333333333335,bridge region,1,False,True,False
-0.37,0.124,bridge region,1,False,True,False
-0.37,0.13016666666666665,bridge region,1,False,True,False
-0.37,0.13633333333333333,bridge region,1,False,True,False
-0.37,0.14250000000000002,bridge region,1,False,True,False
-0.37,0.14866666666666667,bridge region,1,False,True,False
-0.37,0.15483333333333332,bridge region,1,False,True,False
-0.37,0.161,bridge region,1,False,True,False
-0.37,0.16716666666666669,bridge region,1,False,True,False
-0.37,0.17333333333333334,bridge region,1,False,True,False
-0.37,0.1795,bridge region,1,False,True,False
-0.37,0.1856666666666667,bridge region,1,False,True,False
-0.37,0.19183333333333336,bridge region,1,False,True,False
-0.37,0.198,bridge region,1,False,True,False
-0.37,0.20416666666666666,bridge region,1,False,True,False
-0.37,0.21033333333333332,bridge region,1,False,True,False
-0.37,0.21650000000000003,bridge region,1,False,True,False
-0.37,0.22266666666666668,bridge region,1,False,True,False
-0.37,0.22883333333333333,bridge region,1,False,True,False
-0.37,0.235,bridge region,1,False,True,False
-0.37,0.2411666666666667,bridge region,1,False,True,False
-0.37,0.24733333333333335,bridge region,1,False,True,False
-0.37,0.2535,bridge region,1,False,True,False
-0.37,0.25966666666666666,bridge region,1,False,True,False
-0.37,0.2658333333333333,bridge region,1,False,True,False
-0.37,0.272,bridge region,1,False,True,False
-0.37,0.2781666666666667,bridge region,1,False,True,False
-0.37,0.2843333333333333,bridge region,1,False,True,False
-0.37,0.2905,bridge region,1,False,True,False
-0.37,0.2966666666666667,bridge region,1,False,True,False
-0.37,0.30283333333333334,bridge region,1,False,True,False
-0.37,0.309,bridge region,1,False,True,False
-0.37,0.31516666666666665,bridge region,1,False,True,False
-0.37,0.32133333333333336,bridge region,1,False,True,False
+0.37,0.05,capacity-building,1,False,True,False
+0.37,0.05616666666666667,capacity-building,1,False,True,False
+0.37,0.06233333333333334,capacity-building,1,False,True,False
+0.37,0.0685,capacity-building,1,False,True,False
+0.37,0.07466666666666667,capacity-building,1,False,True,False
+0.37,0.08083333333333334,capacity-building,1,False,True,False
+0.37,0.087,capacity-building,1,False,True,False
+0.37,0.09316666666666668,capacity-building,1,False,True,False
+0.37,0.09933333333333333,capacity-building,1,False,True,False
+0.37,0.10550000000000001,capacity-building,1,False,True,False
+0.37,0.11166666666666666,capacity-building,1,False,True,False
+0.37,0.11783333333333335,capacity-building,1,False,True,False
+0.37,0.124,capacity-building,1,False,True,False
+0.37,0.13016666666666665,capacity-building,1,False,True,False
+0.37,0.13633333333333333,capacity-building,1,False,True,False
+0.37,0.14250000000000002,capacity-building,1,False,True,False
+0.37,0.14866666666666667,capacity-building,1,False,True,False
+0.37,0.15483333333333332,capacity-building,1,False,True,False
+0.37,0.161,capacity-building,1,False,True,False
+0.37,0.16716666666666669,capacity-building,1,False,True,False
+0.37,0.17333333333333334,capacity-building,1,False,True,False
+0.37,0.1795,capacity-building,1,False,True,False
+0.37,0.1856666666666667,capacity-building,1,False,True,False
+0.37,0.19183333333333336,capacity-building,1,False,True,False
+0.37,0.198,capacity-building,1,False,True,False
+0.37,0.20416666666666666,capacity-building,1,False,True,False
+0.37,0.21033333333333332,capacity-building,1,False,True,False
+0.37,0.21650000000000003,capacity-building,1,False,True,False
+0.37,0.22266666666666668,capacity-building,1,False,True,False
+0.37,0.22883333333333333,capacity-building,1,False,True,False
+0.37,0.235,capacity-building,1,False,True,False
+0.37,0.2411666666666667,capacity-building,1,False,True,False
+0.37,0.24733333333333335,capacity-building,1,False,True,False
+0.37,0.2535,capacity-building,1,False,True,False
+0.37,0.25966666666666666,capacity-building,1,False,True,False
+0.37,0.2658333333333333,capacity-building,1,False,True,False
+0.37,0.272,capacity-building,1,False,True,False
+0.37,0.2781666666666667,capacity-building,1,False,True,False
+0.37,0.2843333333333333,capacity-building,1,False,True,False
+0.37,0.2905,capacity-building,1,False,True,False
+0.37,0.2966666666666667,capacity-building,1,False,True,False
+0.37,0.30283333333333334,capacity-building,1,False,True,False
+0.37,0.309,capacity-building,1,False,True,False
+0.37,0.31516666666666665,capacity-building,1,False,True,False
+0.37,0.32133333333333336,capacity-building,1,False,True,False
 0.37,0.32749999999999996,threshold trap,2,True,True,False
 0.37,0.33366666666666667,threshold trap,2,True,True,False
 0.37,0.3398333333333333,threshold trap,2,True,True,False
@@ -2866,52 +2866,52 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.37,0.4076666666666667,collapse-prone,2,True,True,True
 0.37,0.4138333333333333,collapse-prone,2,True,True,True
 0.37,0.42,collapse-prone,2,True,True,True
-0.375,0.05,bridge region,1,False,True,False
-0.375,0.05616666666666667,bridge region,1,False,True,False
-0.375,0.06233333333333334,bridge region,1,False,True,False
-0.375,0.0685,bridge region,1,False,True,False
-0.375,0.07466666666666667,bridge region,1,False,True,False
-0.375,0.08083333333333334,bridge region,1,False,True,False
-0.375,0.087,bridge region,1,False,True,False
-0.375,0.09316666666666668,bridge region,1,False,True,False
-0.375,0.09933333333333333,bridge region,1,False,True,False
-0.375,0.10550000000000001,bridge region,1,False,True,False
-0.375,0.11166666666666666,bridge region,1,False,True,False
-0.375,0.11783333333333335,bridge region,1,False,True,False
-0.375,0.124,bridge region,1,False,True,False
-0.375,0.13016666666666665,bridge region,1,False,True,False
-0.375,0.13633333333333333,bridge region,1,False,True,False
-0.375,0.14250000000000002,bridge region,1,False,True,False
-0.375,0.14866666666666667,bridge region,1,False,True,False
-0.375,0.15483333333333332,bridge region,1,False,True,False
-0.375,0.161,bridge region,1,False,True,False
-0.375,0.16716666666666669,bridge region,1,False,True,False
-0.375,0.17333333333333334,bridge region,1,False,True,False
-0.375,0.1795,bridge region,1,False,True,False
-0.375,0.1856666666666667,bridge region,1,False,True,False
-0.375,0.19183333333333336,bridge region,1,False,True,False
-0.375,0.198,bridge region,1,False,True,False
-0.375,0.20416666666666666,bridge region,1,False,True,False
-0.375,0.21033333333333332,bridge region,1,False,True,False
-0.375,0.21650000000000003,bridge region,1,False,True,False
-0.375,0.22266666666666668,bridge region,1,False,True,False
-0.375,0.22883333333333333,bridge region,1,False,True,False
-0.375,0.235,bridge region,1,False,True,False
-0.375,0.2411666666666667,bridge region,1,False,True,False
-0.375,0.24733333333333335,bridge region,1,False,True,False
-0.375,0.2535,bridge region,1,False,True,False
-0.375,0.25966666666666666,bridge region,1,False,True,False
-0.375,0.2658333333333333,bridge region,1,False,True,False
-0.375,0.272,bridge region,1,False,True,False
-0.375,0.2781666666666667,bridge region,1,False,True,False
-0.375,0.2843333333333333,bridge region,1,False,True,False
-0.375,0.2905,bridge region,1,False,True,False
-0.375,0.2966666666666667,bridge region,1,False,True,False
-0.375,0.30283333333333334,bridge region,1,False,True,False
-0.375,0.309,bridge region,1,False,True,False
-0.375,0.31516666666666665,bridge region,1,False,True,False
-0.375,0.32133333333333336,bridge region,1,False,True,False
-0.375,0.32749999999999996,bridge region,1,False,True,False
+0.375,0.05,capacity-building,1,False,True,False
+0.375,0.05616666666666667,capacity-building,1,False,True,False
+0.375,0.06233333333333334,capacity-building,1,False,True,False
+0.375,0.0685,capacity-building,1,False,True,False
+0.375,0.07466666666666667,capacity-building,1,False,True,False
+0.375,0.08083333333333334,capacity-building,1,False,True,False
+0.375,0.087,capacity-building,1,False,True,False
+0.375,0.09316666666666668,capacity-building,1,False,True,False
+0.375,0.09933333333333333,capacity-building,1,False,True,False
+0.375,0.10550000000000001,capacity-building,1,False,True,False
+0.375,0.11166666666666666,capacity-building,1,False,True,False
+0.375,0.11783333333333335,capacity-building,1,False,True,False
+0.375,0.124,capacity-building,1,False,True,False
+0.375,0.13016666666666665,capacity-building,1,False,True,False
+0.375,0.13633333333333333,capacity-building,1,False,True,False
+0.375,0.14250000000000002,capacity-building,1,False,True,False
+0.375,0.14866666666666667,capacity-building,1,False,True,False
+0.375,0.15483333333333332,capacity-building,1,False,True,False
+0.375,0.161,capacity-building,1,False,True,False
+0.375,0.16716666666666669,capacity-building,1,False,True,False
+0.375,0.17333333333333334,capacity-building,1,False,True,False
+0.375,0.1795,capacity-building,1,False,True,False
+0.375,0.1856666666666667,capacity-building,1,False,True,False
+0.375,0.19183333333333336,capacity-building,1,False,True,False
+0.375,0.198,capacity-building,1,False,True,False
+0.375,0.20416666666666666,capacity-building,1,False,True,False
+0.375,0.21033333333333332,capacity-building,1,False,True,False
+0.375,0.21650000000000003,capacity-building,1,False,True,False
+0.375,0.22266666666666668,capacity-building,1,False,True,False
+0.375,0.22883333333333333,capacity-building,1,False,True,False
+0.375,0.235,capacity-building,1,False,True,False
+0.375,0.2411666666666667,capacity-building,1,False,True,False
+0.375,0.24733333333333335,capacity-building,1,False,True,False
+0.375,0.2535,capacity-building,1,False,True,False
+0.375,0.25966666666666666,capacity-building,1,False,True,False
+0.375,0.2658333333333333,capacity-building,1,False,True,False
+0.375,0.272,capacity-building,1,False,True,False
+0.375,0.2781666666666667,capacity-building,1,False,True,False
+0.375,0.2843333333333333,capacity-building,1,False,True,False
+0.375,0.2905,capacity-building,1,False,True,False
+0.375,0.2966666666666667,capacity-building,1,False,True,False
+0.375,0.30283333333333334,capacity-building,1,False,True,False
+0.375,0.309,capacity-building,1,False,True,False
+0.375,0.31516666666666665,capacity-building,1,False,True,False
+0.375,0.32133333333333336,capacity-building,1,False,True,False
+0.375,0.32749999999999996,capacity-building,1,False,True,False
 0.375,0.33366666666666667,threshold trap,2,True,True,False
 0.375,0.3398333333333333,threshold trap,2,True,True,False
 0.375,0.346,threshold trap,2,True,True,False
@@ -2927,53 +2927,53 @@ repair_baseline,substitute_damage,regime,stable_count,low_trap_present,high_stat
 0.375,0.4076666666666667,collapse-prone,2,True,True,True
 0.375,0.4138333333333333,collapse-prone,2,True,True,True
 0.375,0.42,collapse-prone,2,True,True,True
-0.38,0.05,bridge region,1,False,True,False
-0.38,0.05616666666666667,bridge region,1,False,True,False
-0.38,0.06233333333333334,bridge region,1,False,True,False
-0.38,0.0685,bridge region,1,False,True,False
-0.38,0.07466666666666667,bridge region,1,False,True,False
-0.38,0.08083333333333334,bridge region,1,False,True,False
-0.38,0.087,bridge region,1,False,True,False
-0.38,0.09316666666666668,bridge region,1,False,True,False
-0.38,0.09933333333333333,bridge region,1,False,True,False
-0.38,0.10550000000000001,bridge region,1,False,True,False
-0.38,0.11166666666666666,bridge region,1,False,True,False
-0.38,0.11783333333333335,bridge region,1,False,True,False
-0.38,0.124,bridge region,1,False,True,False
-0.38,0.13016666666666665,bridge region,1,False,True,False
-0.38,0.13633333333333333,bridge region,1,False,True,False
-0.38,0.14250000000000002,bridge region,1,False,True,False
-0.38,0.14866666666666667,bridge region,1,False,True,False
-0.38,0.15483333333333332,bridge region,1,False,True,False
-0.38,0.161,bridge region,1,False,True,False
-0.38,0.16716666666666669,bridge region,1,False,True,False
-0.38,0.17333333333333334,bridge region,1,False,True,False
-0.38,0.1795,bridge region,1,False,True,False
-0.38,0.1856666666666667,bridge region,1,False,True,False
-0.38,0.19183333333333336,bridge region,1,False,True,False
-0.38,0.198,bridge region,1,False,True,False
-0.38,0.20416666666666666,bridge region,1,False,True,False
-0.38,0.21033333333333332,bridge region,1,False,True,False
-0.38,0.21650000000000003,bridge region,1,False,True,False
-0.38,0.22266666666666668,bridge region,1,False,True,False
-0.38,0.22883333333333333,bridge region,1,False,True,False
-0.38,0.235,bridge region,1,False,True,False
-0.38,0.2411666666666667,bridge region,1,False,True,False
-0.38,0.24733333333333335,bridge region,1,False,True,False
-0.38,0.2535,bridge region,1,False,True,False
-0.38,0.25966666666666666,bridge region,1,False,True,False
-0.38,0.2658333333333333,bridge region,1,False,True,False
-0.38,0.272,bridge region,1,False,True,False
-0.38,0.2781666666666667,bridge region,1,False,True,False
-0.38,0.2843333333333333,bridge region,1,False,True,False
-0.38,0.2905,bridge region,1,False,True,False
-0.38,0.2966666666666667,bridge region,1,False,True,False
-0.38,0.30283333333333334,bridge region,1,False,True,False
-0.38,0.309,bridge region,1,False,True,False
-0.38,0.31516666666666665,bridge region,1,False,True,False
-0.38,0.32133333333333336,bridge region,1,False,True,False
-0.38,0.32749999999999996,bridge region,1,False,True,False
-0.38,0.33366666666666667,bridge region,1,False,True,False
+0.38,0.05,capacity-building,1,False,True,False
+0.38,0.05616666666666667,capacity-building,1,False,True,False
+0.38,0.06233333333333334,capacity-building,1,False,True,False
+0.38,0.0685,capacity-building,1,False,True,False
+0.38,0.07466666666666667,capacity-building,1,False,True,False
+0.38,0.08083333333333334,capacity-building,1,False,True,False
+0.38,0.087,capacity-building,1,False,True,False
+0.38,0.09316666666666668,capacity-building,1,False,True,False
+0.38,0.09933333333333333,capacity-building,1,False,True,False
+0.38,0.10550000000000001,capacity-building,1,False,True,False
+0.38,0.11166666666666666,capacity-building,1,False,True,False
+0.38,0.11783333333333335,capacity-building,1,False,True,False
+0.38,0.124,capacity-building,1,False,True,False
+0.38,0.13016666666666665,capacity-building,1,False,True,False
+0.38,0.13633333333333333,capacity-building,1,False,True,False
+0.38,0.14250000000000002,capacity-building,1,False,True,False
+0.38,0.14866666666666667,capacity-building,1,False,True,False
+0.38,0.15483333333333332,capacity-building,1,False,True,False
+0.38,0.161,capacity-building,1,False,True,False
+0.38,0.16716666666666669,capacity-building,1,False,True,False
+0.38,0.17333333333333334,capacity-building,1,False,True,False
+0.38,0.1795,capacity-building,1,False,True,False
+0.38,0.1856666666666667,capacity-building,1,False,True,False
+0.38,0.19183333333333336,capacity-building,1,False,True,False
+0.38,0.198,capacity-building,1,False,True,False
+0.38,0.20416666666666666,capacity-building,1,False,True,False
+0.38,0.21033333333333332,capacity-building,1,False,True,False
+0.38,0.21650000000000003,capacity-building,1,False,True,False
+0.38,0.22266666666666668,capacity-building,1,False,True,False
+0.38,0.22883333333333333,capacity-building,1,False,True,False
+0.38,0.235,capacity-building,1,False,True,False
+0.38,0.2411666666666667,capacity-building,1,False,True,False
+0.38,0.24733333333333335,capacity-building,1,False,True,False
+0.38,0.2535,capacity-building,1,False,True,False
+0.38,0.25966666666666666,capacity-building,1,False,True,False
+0.38,0.2658333333333333,capacity-building,1,False,True,False
+0.38,0.272,capacity-building,1,False,True,False
+0.38,0.2781666666666667,capacity-building,1,False,True,False
+0.38,0.2843333333333333,capacity-building,1,False,True,False
+0.38,0.2905,capacity-building,1,False,True,False
+0.38,0.2966666666666667,capacity-building,1,False,True,False
+0.38,0.30283333333333334,capacity-building,1,False,True,False
+0.38,0.309,capacity-building,1,False,True,False
+0.38,0.31516666666666665,capacity-building,1,False,True,False
+0.38,0.32133333333333336,capacity-building,1,False,True,False
+0.38,0.32749999999999996,capacity-building,1,False,True,False
+0.38,0.33366666666666667,capacity-building,1,False,True,False
 0.38,0.3398333333333333,threshold trap,2,True,True,False
 0.38,0.346,threshold trap,2,True,True,False
 0.38,0.35216666666666663,threshold trap,2,True,True,False

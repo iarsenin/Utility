@@ -29,18 +29,18 @@ fast subjective payoff formation
 
 ## Current Result
 
-The minimal model supports five reader-facing claims:
+The minimal model supports the current reader-facing claims:
 
 - **Why now:** preferences have always moved, but internet-scale and AI-driven
   payoff formation can move subjective payoffs quickly and synchronously before
   material capacity, institutions, markets, or selection catch up.
-- **Bridge:** the induced substitute lowers pressure while rebuilding the
-  capacity that makes outside options usable.
+- **Capacity-building path:** the induced substitute lowers pressure while
+  rebuilding the capacity that makes outside options usable.
 - **Trap:** the substitute is most attractive when capacity is weak, and using
   it can crowd out the practice or exposure that would rebuild capacity.
 - **Collapse-prone:** sufficiently damaging feedback can pull the capacity
   stock toward a lower boundary in the minimal model.
-- **Alarm limitation:** a signal based only on current improvement or decline
+- **Report-only limitation:** a signal based only on current improvement or decline
   can change speed without changing the long-run states of the minimal model.
 - **Selection metric:** competition preserves capacity only when its score
   favors capacity-preserving rules.
@@ -60,8 +60,9 @@ definition strips, glossary boxes, or lever lists in the main text; later
 sections should use the terms to explain results and evidence.
 
 The abstract should stay readable. Avoid compressed theorem-management phrases
-there. Use plain statements such as bridge, trap, collapse-prone,
-self-correction can fail, and competition selects what its score rewards.
+there. Use plain statements such as capacity-building, threshold trap,
+collapse-prone, self-correction can fail, and competition selects what its
+score rewards.
 
 ## Reproduce Current Outputs
 
@@ -108,6 +109,12 @@ Latest render check:
   `results/figures/article_chart_reset_regime_map_2026-06-29.png`, and
   `results/figures/article_chart_reset_competition_2026-06-29.png` verify the
   three new main-text chart renders.
+- `results/figures/article_huh_coherence_top_chrome_2026-06-30.png`
+  verifies the compressed abstract and opening layout after the HuH? coherence
+  pass.
+- `results/figures/article_huh_coherence_full_chrome_8200_2026-06-30.png`
+  verifies the narrative flow from the abstract through Figure 3 and into the
+  governance section after the chart vocabulary cleanup.
 
 ## Active Next Steps
 

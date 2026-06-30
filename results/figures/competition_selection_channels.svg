@@ -3,11 +3,11 @@
 <rect x="18" y="18" width="904" height="664" rx="0" fill="#ffffff" stroke="#eadfce"/>
 <line x1="18" y1="18" x2="922" y2="18" stroke="#d5412f" stroke-width="5"/>
 <text x="36" y="44" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="22" font-weight="800" fill="#171411">Competition Selects Whatever It Scores</text>
-<text x="36" y="68" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="13" fill="#5f5a52">The same bridge and sink have opposite outcomes when the contest rewards viability versus engagement</text>
+<text x="36" y="68" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="13" fill="#5f5a52">The same capacity-building and capacity-draining rules have opposite outcomes under different scores</text>
 <line x1="36" y1="82" x2="904" y2="82" stroke="#e7dfd3" stroke-width="1"/>
 <text x="78" y="96" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="14" font-weight="800" fill="#171411">A. Competition on material viability</text>
 <rect x="78" y="118" width="373.0" height="190" fill="#ffffff" stroke="#e7dfd3"/>
-<text x="90" y="140" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" font-weight="800" fill="#171411">Bridge share</text>
+<text x="90" y="140" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" font-weight="800" fill="#171411">Building-rule share</text>
 <line x1="78" y1="308.0" x2="451.0" y2="308.0" stroke="#e7dfd3" stroke-width="1"/>
 <text x="67" y="312.0" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="end">0</text>
 <line x1="78" y1="213.0" x2="451.0" y2="213.0" stroke="#e7dfd3" stroke-width="1"/>
@@ -20,7 +20,7 @@
 <line x1="357.8" y1="308" x2="357.8" y2="313" stroke="#5f5a52"/>
 <line x1="451.0" y1="308" x2="451.0" y2="313" stroke="#5f5a52"/>
 <rect x="78" y="366" width="373.0" height="190" fill="#ffffff" stroke="#e7dfd3"/>
-<text x="90" y="388" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" font-weight="800" fill="#171411">Carrier mass</text>
+<text x="90" y="388" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" font-weight="800" fill="#171411">Material scale</text>
 <line x1="78" y1="556.0" x2="451.0" y2="556.0" stroke="#e7dfd3" stroke-width="1"/>
 <text x="67" y="560.0" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="11" fill="#5f5a52" text-anchor="end">0</text>
 <line x1="78" y1="461.0" x2="451.0" y2="461.0" stroke="#e7dfd3" stroke-width="1"/>
@@ -44,7 +44,7 @@
 <text x="264.5" y="606" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" fill="#5f5a52" text-anchor="middle">slow time</text>
 <text x="515.0" y="96" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="14" font-weight="800" fill="#171411">B. Competition on engagement</text>
 <rect x="515.0" y="118" width="373.0" height="190" fill="#ffffff" stroke="#e7dfd3"/>
-<text x="527.0" y="140" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" font-weight="800" fill="#171411">Bridge share</text>
+<text x="527.0" y="140" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" font-weight="800" fill="#171411">Building-rule share</text>
 <line x1="515.0" y1="308.0" x2="888.0" y2="308.0" stroke="#e7dfd3" stroke-width="1"/>
 <line x1="515.0" y1="213.0" x2="888.0" y2="213.0" stroke="#e7dfd3" stroke-width="1"/>
 <line x1="515.0" y1="118.0" x2="888.0" y2="118.0" stroke="#e7dfd3" stroke-width="1"/>
@@ -54,7 +54,7 @@
 <line x1="794.8" y1="308" x2="794.8" y2="313" stroke="#5f5a52"/>
 <line x1="888.0" y1="308" x2="888.0" y2="313" stroke="#5f5a52"/>
 <rect x="515.0" y="366" width="373.0" height="190" fill="#ffffff" stroke="#e7dfd3"/>
-<text x="527.0" y="388" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" font-weight="800" fill="#171411">Carrier mass</text>
+<text x="527.0" y="388" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" font-weight="800" fill="#171411">Material scale</text>
 <line x1="515.0" y1="556.0" x2="888.0" y2="556.0" stroke="#e7dfd3" stroke-width="1"/>
 <line x1="515.0" y1="461.0" x2="888.0" y2="461.0" stroke="#e7dfd3" stroke-width="1"/>
 <line x1="515.0" y1="366.0" x2="888.0" y2="366.0" stroke="#e7dfd3" stroke-width="1"/>
@@ -74,10 +74,10 @@
 <text x="872.0" y="390" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" font-weight="800" fill="#c74332" text-anchor="end">ends at 0.02</text>
 <text x="701.5" y="606" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" fill="#5f5a52" text-anchor="middle">slow time</text>
 <line x1="78" y1="642" x2="110" y2="642" stroke="#007f83" stroke-width="4" stroke-linecap="round"/>
-<text x="120" y="646" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" font-weight="700" fill="#171411">share governed by bridge rule</text>
+<text x="120" y="646" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" font-weight="700" fill="#171411">share under capacity-building rule</text>
 <line x1="398" y1="642" x2="430" y2="642" stroke="#c74332" stroke-width="4" stroke-linecap="round"/>
-<text x="440" y="646" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" font-weight="700" fill="#171411">absolute carrier mass</text>
+<text x="440" y="646" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" font-weight="700" fill="#171411">absolute material scale</text>
 <text x="27" y="213.0" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" fill="#5f5a52" transform="rotate(-90 27 213.0)" text-anchor="middle">share</text>
 <text x="27" y="461.0" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" fill="#5f5a52" transform="rotate(-90 27 461.0)" text-anchor="middle">mass</text>
-<text x="36" y="678" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="10.5" fill="#5f5a52">Bridge and sink start at the same capacity and equal shares. Competition intensity omega = 1.2.</text>
+<text x="36" y="678" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="10.5" fill="#5f5a52">The two rules start at the same capacity and equal shares. Competition intensity omega = 1.2.</text>
 </svg>

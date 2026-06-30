@@ -362,7 +362,7 @@ def regime_label(params: CapacityFeedbackParams) -> tuple[str, dict[str, bool | 
     elif two_basin_trap or low_trap:
         label = "threshold trap"
     elif high_state:
-        label = "bridge region"
+        label = "capacity-building"
     else:
         label = "transition"
     return (
@@ -686,7 +686,7 @@ def write_regime_map_svg(path: Path, rows: list[RegimeGridPoint], baseline: Capa
     cell_width = chart_width / damage_steps
     cell_height = chart_height / repair_steps
     colors = {
-        "bridge region": "#dcebd8",
+        "capacity-building": "#dcebd8",
         "threshold trap": "#f4d7a1",
         "collapse-prone": "#f3b8ae",
         "transition": "#e6e1d8",
@@ -710,7 +710,7 @@ def write_regime_map_svg(path: Path, rows: list[RegimeGridPoint], baseline: Capa
         f'<path d="M 0 0 L 10 4 L 0 8 z" fill="{CHART_INK}"/></marker></defs>',
         *chart_header(
             "What Actually Moves The System",
-            "Repair capacity and damage per substitute use change the regime; a warning alone stays put",
+            "Repair capacity and damage per substitute use change the regime; a report-only signal stays put",
             width,
         ),
     ]
@@ -743,11 +743,11 @@ def write_regime_map_svg(path: Path, rows: list[RegimeGridPoint], baseline: Capa
     elements.append(arrow(base_x - 8, base_y + 6, x_scale(0.105), base_y + 6, CHART_INK))
     elements.append(svg_text(x_scale(0.105), base_y + 25, "reduce damage", font_size=12, font_weight=800, fill=CHART_TEAL, text_anchor="middle"))
     elements.append(f'<circle cx="{base_x + 49:.1f}" cy="{base_y + 38:.1f}" r="19" fill="none" stroke="{CHART_VIOLET}" stroke-width="2.4" stroke-dasharray="4 5"/>')
-    elements.append(svg_text(base_x + 78, base_y + 43, "alarm only: same coordinates", font_size=12, font_weight=800, fill=CHART_VIOLET))
+    elements.append(svg_text(base_x + 78, base_y + 43, "report only: same coordinates", font_size=12, font_weight=800, fill=CHART_VIOLET))
 
     legend_y = top + chart_height + 84
     legend_items = [
-        ("bridge region", colors["bridge region"], CHART_GREEN),
+        ("capacity-building", colors["capacity-building"], CHART_GREEN),
         ("threshold trap", colors["threshold trap"], CHART_AMBER),
         ("collapse-prone", colors["collapse-prone"], CHART_RED),
     ]

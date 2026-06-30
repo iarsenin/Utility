@@ -90,7 +90,7 @@ def write_report(output: dict[str, object]) -> None:
             "damage `L` while holding the remaining trap-calibration parameters fixed.",
             "The baseline point lies in the threshold-trap region. Moving upward",
             "raises repair; moving left lowers damage per substitute use. These",
-            "movements can cross into the bridge region, while weaker repair and",
+            "movements can cross into the capacity-building region, while weaker repair and",
             "higher damage move the system toward collapse-prone dynamics.",
             "",
             "## Baseline Equilibria",

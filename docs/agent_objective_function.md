@@ -42,7 +42,7 @@ The abstract should state the result in plain language:
 
 - fast environments can change what feels worth choosing;
 - today's choice can change tomorrow's material capacity;
-- bridge, trap, and collapse-prone regimes can arise;
+- capacity-building, threshold-trap, and collapse-prone regimes can arise;
 - self-correction can fail if the feedback only reports current movement;
 - competition selects whatever score it rewards.
 
@@ -57,8 +57,8 @@ Use these terms consistently:
 - `subjective payoff`: the criterion used at choice time;
 - `preference-forming rule`: the environment, institution, platform, AI system,
   peer process, or norm that forms the subjective payoff;
-- `substitute behavior`: the quick reward or relief that may either bridge
-  back to capacity or crowd it out;
+- `substitute behavior`: the quick reward or relief that may either rebuild
+  capacity or crowd it out;
 - `material capacity`: the slower stock changed by behavior, such as social
   skill, solvency, health, learning, trust, or institutional competence;
 - `competitive score`: the score that determines which preference-forming rule
@@ -75,8 +75,8 @@ preferences are fake. They are endogenous.
 - Selection is meaningful only after the selected object and competitive score
   are named.
 - Competition can reallocate share toward a better rule; it does not erase a
-  sink rule's own low-capacity equilibrium unless the capacity dynamics also
-  change.
+  capacity-draining rule's own low-capacity equilibrium unless the capacity
+  dynamics also change.
 - The scalar simulations are mechanism checks, not empirical estimates.
 - Real-world examples are candidate tests, not proof that one mechanism
   explains everything.
@@ -112,8 +112,10 @@ appears. Displayed formulas should be numbered automatically in HTML.
 The main body may use at most three salient figures:
 
 - mechanism loop: fast substitute share and slow capacity drift;
-- regime map: repair and damage movements across bridge, trap, and collapse;
-- competition metric: bridge share and carrier mass under alternative scores.
+- regime map: repair and damage movements across capacity-building,
+  threshold-trap, and collapse-prone regions;
+- competition metric: capacity-building share and material scale under
+  alternative scores.
 
 Exposition must drive each figure. Path charts, phase lines, audit tables, and
 robustness diagnostics belong in the appendix unless the main text explicitly
@@ -124,10 +126,14 @@ needs them for a claim.
 Use these roles when an agentic edit cycle is requested:
 
 1. **Editor:** clarity, sequence, style, reader patience.
-2. **Scientist:** theorem scope, model fidelity, no overclaiming.
-3. **Narrator:** examples illuminate the mechanism rather than decorate it.
-4. **Writer:** integrate feedback without flattening the result.
-5. **Rendering:** verify equations, tables, figures, references, and browser
+2. **HuH?:** skeptical intelligent reader. Ask whether a normal reader can
+   follow the story without stopping in confusion. Flag unexplained jumps,
+   stacked metaphors, charts without a reason to exist, math that has no
+   visible job in the argument, and repeated redefinitions.
+3. **Scientist:** theorem scope, model fidelity, no overclaiming.
+4. **Narrator:** examples illuminate the mechanism rather than decorate it.
+5. **Writer:** integrate feedback without flattening the result.
+6. **Rendering:** verify equations, tables, figures, references, and browser
    layout.
 
 Every reader-facing HTML revision must be visually checked in the target

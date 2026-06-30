@@ -4,7 +4,7 @@
 <line x1="18" y1="18" x2="922" y2="18" stroke="#d5412f" stroke-width="5"/>
 <defs><marker id="arrowhead" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M 0 0 L 10 4 L 0 8 z" fill="#171411"/></marker></defs>
 <text x="36" y="44" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="22" font-weight="800" fill="#171411">What Actually Moves The System</text>
-<text x="36" y="68" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="13" fill="#5f5a52">Repair capacity and damage per substitute use change the regime; a warning alone stays put</text>
+<text x="36" y="68" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="13" fill="#5f5a52">Repair capacity and damage per substitute use change the regime; a report-only signal stays put</text>
 <line x1="36" y1="82" x2="904" y2="82" stroke="#e7dfd3" stroke-width="1"/>
 <rect x="94.0" y="539.1" width="13.7" height="9.6" fill="#dcebd8" stroke="none"/>
 <rect x="107.0" y="539.1" width="13.7" height="9.6" fill="#dcebd8" stroke="none"/>
@@ -3025,9 +3025,9 @@
 <line x1="402.8" y1="381.4" x2="211.7" y2="381.4" stroke="#171411" stroke-width="3.2" stroke-linecap="round" marker-end="url(#arrowhead)"/>
 <text x="211.7297297297297" y="400.4166666666667" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" font-weight="800" fill="#007f83" text-anchor="middle">reduce damage</text>
 <circle cx="459.8" cy="413.4" r="19" fill="none" stroke="#7658a5" stroke-width="2.4" stroke-dasharray="4 5"/>
-<text x="488.80000000000007" y="418.4166666666667" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" font-weight="800" fill="#7658a5">alarm only: same coordinates</text>
+<text x="488.80000000000007" y="418.4166666666667" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" font-weight="800" fill="#7658a5">report only: same coordinates</text>
 <rect x="94" y="619" width="22" height="16" rx="2" fill="#dcebd8" stroke="#5e883a" stroke-width="1.2"/>
-<text x="125" y="632" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" font-weight="800" fill="#171411">bridge region</text>
+<text x="125" y="632" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" font-weight="800" fill="#171411">capacity-building</text>
 <rect x="339" y="619" width="22" height="16" rx="2" fill="#f4d7a1" stroke="#c7831f" stroke-width="1.2"/>
 <text x="370" y="632" font-family="Inter, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" font-weight="800" fill="#171411">threshold trap</text>
 <rect x="584" y="619" width="22" height="16" rx="2" fill="#f3b8ae" stroke="#c74332" stroke-width="1.2"/>

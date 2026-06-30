@@ -23,9 +23,9 @@ rule's capacity dynamics. It reallocates population share, capital,
 attention, or institutional prevalence toward rules that score higher
 on the operative competitive score `S`. Absolute material survival is
 tracked separately by material growth `g`. With material-viability
-competition, `S` is aligned with `g` and the capacity-preserving bridge
-wins. With engagement-proxy competition, the sink can win while material
-population mass falls.
+competition, `S` is aligned with `g` and the capacity-building rule
+wins. With engagement-proxy competition, the capacity-draining rule
+can win while material population mass falls.
 
 ## Drift-Signal Equilibria
 
@@ -69,18 +69,18 @@ population mass falls.
 
 ## Competition Summary
 
-| selection_metric | competition_intensity | final_bridge_share | final_bridge_capacity | final_sink_capacity | final_population_mass | final_mean_material_growth | verdict |
+| competitive score | competition omega | final building-rule share | final building-rule capacity | final draining-rule capacity | final material scale | final material growth | readout |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | material viability | 0 | 0.5 | 0.839391 | 0.0854018 | 0.440356 | -0.00878233 | no competition: shares remain fixed |
 | material viability | 0.4 | 0.925285 | 0.839391 | 0.0854018 | 2.19224 | 0.0261671 | competition selects the capacity-preserving rule |
 | material viability | 1.2 | 0.99948 | 0.839391 | 0.0854018 | 5.73441 | 0.0322644 | competition selects the capacity-preserving rule |
 | engagement proxy | 0 | 0.5 | 0.839391 | 0.0854018 | 0.440356 | -0.00878233 | no competition: shares remain fixed |
-| engagement proxy | 0.4 | 4.32425e-13 | 0.839391 | 0.0854018 | 0.0223513 | -0.0498718 | competition selects the high-engagement sink |
-| engagement proxy | 1.2 | 1.56933e-38 | 0.839391 | 0.0854018 | 0.0201918 | -0.0498718 | competition selects the high-engagement sink |
+| engagement proxy | 0.4 | 4.32425e-13 | 0.839391 | 0.0854018 | 0.0223513 | -0.0498718 | competition selects the high-engagement capacity-draining rule |
+| engagement proxy | 1.2 | 1.56933e-38 | 0.839391 | 0.0854018 | 0.0201918 | -0.0498718 | competition selects the high-engagement capacity-draining rule |
 
 ## Interpretation
 
-- Current pain, warnings, or deteriorating flow signals are not enough if
+- Current pain or deteriorating-flow reports are not enough if
   they vanish once the system settles into a low-capacity state.
 - In this diagnostic, automatic correction comes from a persistent
   material state channel, or from competition when the competitive score
