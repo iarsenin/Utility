@@ -558,7 +558,7 @@ def build_article() -> str:
 
   <section>
     <h2>2. The Mechanism</h2>
-    <p>The mechanism is an ordered loop. First, a preference-forming rule maps exposure and current capacity into the subjective payoff used for choice. A platform changes friction. A feed changes salience. An AI system changes responsiveness and perceived risk. The result is the payoff criterion the agent actually uses.</p>
+    <p>The mechanism is an ordered loop. First, a preference-forming rule maps exposure and current capacity into the subjective payoff used for choice. The variables are ordinary costs and rewards, not mysteries. Friction is delay, effort, money, embarrassment, or coordination cost. Salience is what the interface makes prominent at the moment of choice. Responsiveness is how quickly and personally the system answers. Perceived risk is the chance the agent assigns to rejection, loss, punishment, or wasted effort. Lowering the friction and perceived risk of one option, or raising its salience and responsiveness, changes the payoff criterion the agent actually uses.</p>
 
     <p>Second, the agent chooses under that payoff. In a strategic setting, this is where Nash equilibrium belongs: after payoffs have been formed, Nash asks whether each actor is choosing coherently given the others' choices. Coherence at this step does not say whether the environment that formed the payoffs is good for future capacity.</p>
 

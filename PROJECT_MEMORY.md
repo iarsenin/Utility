@@ -60,6 +60,9 @@ material growth object are named.
 - A HuH? pass is required for major article edits: can an intelligent reader
   follow why this paragraph, figure, example, or formal claim appears at this
   point in the story?
+- HuH? must also catch friendly-sounding shorthand that is still undefined.
+  Terms such as friction, salience, responsiveness, and perceived risk need
+  concrete examples at first use.
 
 ## Do Not Regress To
 

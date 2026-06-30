@@ -115,6 +115,9 @@ Latest render check:
 - `results/figures/article_huh_coherence_full_chrome_8200_2026-06-30.png`
   verifies the narrative flow from the abstract through Figure 3 and into the
   governance section after the chart vocabulary cleanup.
+- `results/figures/article_mechanism_terms_huh_2026-06-30.png` verifies the
+  Section 2 clarification of friction, salience, responsiveness, and perceived
+  risk after the HuH? critique.
 
 ## Active Next Steps
 

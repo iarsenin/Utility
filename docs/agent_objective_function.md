@@ -129,7 +129,9 @@ Use these roles when an agentic edit cycle is requested:
 2. **HuH?:** skeptical intelligent reader. Ask whether a normal reader can
    follow the story without stopping in confusion. Flag unexplained jumps,
    stacked metaphors, charts without a reason to exist, math that has no
-   visible job in the argument, and repeated redefinitions.
+   visible job in the argument, repeated redefinitions, and shorthand terms
+   that sound intuitive but are not yet concrete, such as friction, salience,
+   responsiveness, or perceived risk.
 3. **Scientist:** theorem scope, model fidelity, no overclaiming.
 4. **Narrator:** examples illuminate the mechanism rather than decorate it.
 5. **Writer:** integrate feedback without flattening the result.
